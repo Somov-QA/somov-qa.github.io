@@ -73,15 +73,37 @@ footer h5{
 }
 
 .Name{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    font: 16pt Courier New;
-    /*
-    font: 18pt serif;
-    font-style: italic;
-    */
+    position: relative;
+    top: 25%;
+    float: left;
+    font: 24pt Courier New;
+    background-color: rgba(34, 34, 34, 0.7);
     color: #FFFFFF;
+    /*
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #222222;
+    */
+    width: 350px;
+    padding: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.Profession{
+    position: relative;
+    top: 70%;
+    float: right;
+    font: 24pt Courier New;
+    background-color: rgba(34, 34, 34, 0.7);
+    color: #FFFFFF;
+    /*
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #222222;
+    */
+    width: 350px;
+    padding: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .PanelMenu{
