@@ -213,9 +213,15 @@ footer h5{
     padding-left: 15px;
 }
 
-.Contact{
+.Content{
     padding: 25px;
 }
+
+.ContentScroll{
+    padding: 25px;
+    overflow: scroll;
+}
+
 
 .Smallpdf{
     width:100%;
