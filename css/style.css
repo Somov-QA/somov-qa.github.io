@@ -267,3 +267,10 @@ a:active {
     height:450px;
     border: 2px solid #C0C0C0;
 }
+
+.ImageRounding{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
