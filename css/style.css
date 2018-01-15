@@ -82,6 +82,16 @@ a:active {
     border-left: 1px solid #B8B8B8;
 }
 
+.TD25{
+    width:25%;
+    padding: 20px 20px 0px 20px;
+}
+
+.TD75{
+    width:75%;
+    padding: 20px 20px 0px 20px;
+}
+
 .Menu{
     overflow: hidden;
     position:fixed;
@@ -221,15 +231,15 @@ a:active {
 }
 
 .Greeting{
-    padding: 25px;
+    padding-left: 25px;
+    padding-top: 0px;
+    padding-right: 25px;
+    padding-bottom: 0px;
 }
 
 .MyFoto{
-    position: relative;
-    float: left;
-    margin: 25px 15px 0px 20px;
     width: 10em;
-    top: -50px;
+    margin-left: 50px;
 }
 
 .Block{

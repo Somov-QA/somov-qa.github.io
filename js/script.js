@@ -17,10 +17,14 @@ $(document).ready(function(){
 			$(".Content").addClass("ContentScroll");
 			$(".Content").removeClass("Content");
 			return this;
+		}else if($(window).width() <= '770'){
+			$(".PanelMenu").hide();
+			return this;
 		}else{
 			$(".PanelMenu").show();
 			$(".ContentScroll").addClass("Content");
 			$(".ContentScroll").removeClass("ContentScroll");
+			return this;
 		}
 	});
 
