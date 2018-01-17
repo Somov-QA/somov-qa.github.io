@@ -1,0 +1,487 @@
+﻿<html>
+	
+<head>
+	<title>Linux/Unit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("LinuxUnit");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Linux/Unit</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="Ubuntu.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts12">Очень полезные команды Linux на одном листе</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Системная информация</span></p>
+<p class="rvps2"><span class="rvts6">arch </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить архитектуру компьютера</span></p>
+<p class="rvps2"><span class="rvts6">uname -m</span></p>
+<p class="rvps2"><span class="rvts6">uname -r </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить используемую версию ядра</span></p>
+<p class="rvps2"><span class="rvts6">dmidecode -q </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать аппаратные системные компоненты - (SMBIOS / DMI)</span></p>
+<p class="rvps2"><span class="rvts6">hdparm -i /dev/hda </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести характеристики жесткого диска</span></p>
+<p class="rvps2"><span class="rvts6">hdparm -tT /dev/sda </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">протестировать производительность чтения данных с жесткого диска</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/cpuinfo </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить информацию о процессоре</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/interrupts </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать прерывания</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/meminfo </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить использование памяти</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/swaps </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать файл(ы) подкачки</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/version </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести версию ядра</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/net/dev </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать сетевые интерфейсы и статистику по ним</span></p>
+<p class="rvps2"><span class="rvts6">cat /proc/mounts </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить смонтированные файловые системы</span></p>
+<p class="rvps2"><span class="rvts6">lspci -tv </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать в виде дерева PCI устройства</span></p>
+<p class="rvps2"><span class="rvts6">lsusb -tv </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать в виде дерева USB устройства</span></p>
+<p class="rvps2"><span class="rvts6">date </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести системную дату</span></p>
+<p class="rvps2"><span class="rvts6">cal 2007 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести таблицу-календарь 2007-го года</span></p>
+<p class="rvps2"><span class="rvts6">date 041217002007.00 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить системные дату и время ММДДЧЧммГГГГ.СС (МесяцДеньЧасМинутыГод.Секунды)</span></p>
+<p class="rvps2"><span class="rvts6">clock -w</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сохранить системное время в BIOS</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Остановка системы</span></p>
+<p class="rvps2"><span class="rvts6">shutdown -h now </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Остановить систему</span></p>
+<p class="rvps2"><span class="rvts6">init 0</span></p>
+<p class="rvps2"><span class="rvts6">telinit 0</span></p>
+<p class="rvps2"><span class="rvts6">shutdown -h hours:minutes &amp; </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">запланировать остановку системы на указанное время</span></p>
+<p class="rvps2"><span class="rvts6">shutdown -c </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отменить запланированную по расписанию остановку системы</span></p>
+<p class="rvps2"><span class="rvts6">shutdown -r now </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перегрузить систему</span></p>
+<p class="rvps2"><span class="rvts6">reboot</span></p>
+<p class="rvps2"><span class="rvts6">logout </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выйти из системы</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Файлы и директории</span></p>
+<p class="rvps2"><span class="rvts6">cd /home </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в директорию '/home'</span></p>
+<p class="rvps2"><span class="rvts6">cd .. </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в директорию уровнем выше</span></p>
+<p class="rvps2"><span class="rvts6">cd ../.. </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в директорию двумя уровнями выше</span></p>
+<p class="rvps2"><span class="rvts6">cd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в домашнюю директорию</span></p>
+<p class="rvps2"><span class="rvts6">cd ~user </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в домашнюю директорию пользователя user</span></p>
+<p class="rvps2"><span class="rvts6">cd - </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перейти в директорию, в которой находились до перехода в текущую директорию</span></p>
+<p class="rvps2"><span class="rvts6">pwd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать текущюю директорию</span></p>
+<p class="rvps2"><span class="rvts6">ls </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить содержимое текущей директории</span></p>
+<p class="rvps2"><span class="rvts6">ls -F </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить содержимое текущей директории с добавлением к именам символов, храктеризующих тип</span></p>
+<p class="rvps2"><span class="rvts6">ls -l </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать детализированое представление файлов и директорий в текущей директории</span></p>
+<p class="rvps2"><span class="rvts6">ls -a </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать скрытые файлы и директории в текущей директории</span></p>
+<p class="rvps2"><span class="rvts6">ls *[0-9]* </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать файлы и директории содержащие в имени цифры</span></p>
+<p class="rvps2"><span class="rvts6">tree </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать дерево файлов и директорий, начиная от корня (/)</span></p>
+<p class="rvps2"><span class="rvts6">lstree</span></p>
+<p class="rvps2"><span class="rvts6">mkdir dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать директорию с именем 'dir1'</span></p>
+<p class="rvps2"><span class="rvts6">mkdir dir1 dir2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать две директории одновременно</span></p>
+<p class="rvps2"><span class="rvts6">mkdir -p /tmp/dir1/dir2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать дерево директорий</span></p>
+<p class="rvps2"><span class="rvts6">rm -f file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить файл с именем 'file1'</span></p>
+<p class="rvps2"><span class="rvts6">rmdir dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить директорию с именем 'dir1'</span></p>
+<p class="rvps2"><span class="rvts6">rm -rf dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить директорию с именем 'dir1' и рекурсивно всё её содержимое</span></p>
+<p class="rvps2"><span class="rvts6">rm -rf dir1 dir2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить две директории и рекурсивно их содержимое</span></p>
+<p class="rvps2"><span class="rvts6">mv dir1 new_dir </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">переименовать или переместить файл или директорию</span></p>
+<p class="rvps2"><span class="rvts6">cp file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сопировать файл file1 в файл file2</span></p>
+<p class="rvps2"><span class="rvts6">cp dir/* . </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копировать все файлы директории dir в текущую директорию</span></p>
+<p class="rvps2"><span class="rvts6">cp -a /tmp/dir1 . </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копировать директорию dir1 со всем содержимым в текущую директорию</span></p>
+<p class="rvps2"><span class="rvts6">cp -a dir1 dir2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копировать директорию dir1 в директорию dir2</span></p>
+<p class="rvps2"><span class="rvts6">ln -s file1 lnk1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать символическую ссылку на файл или директорию</span></p>
+<p class="rvps2"><span class="rvts6">ln file1 lnk1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать "жёсткую" (физическую) ссылку на файл или директорию</span></p>
+<p class="rvps2"><span class="rvts6">touch -t 0712250000 fileditest </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">модифицировать дату и время создания файла, при его отсутствии, создать файл с указанными датой и временем (YYMMDDhhmm)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Поиск файлов</span></p>
+<p class="rvps2"><span class="rvts6">find / -name file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти файлы и директории с именем file1. Поиск начать с корня (/)</span></p>
+<p class="rvps2"><span class="rvts6">find / -user user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти файл и директорию принадлежащие пользователю user1. Поиск начать с корня (/)</span></p>
+<p class="rvps2"><span class="rvts6">find /home/user1 -name "*.bin" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Найти все файлы и директории, имена которых оканчиваются на '. bin'. Поиск начать с '/ home/user1'</span></p>
+<p class="rvps2"><span class="rvts6">find /usr/bin -type f -atime +100 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти все файлы в '/usr/bin', время последнего обращения к которым более 100 дней</span></p>
+<p class="rvps2"><span class="rvts6">find /usr/bin -type f -mtime -10 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти все файлы в '/usr/bin', созданные или изменённые в течении последних 10 дней</span></p>
+<p class="rvps2"><span class="rvts6">find / -name *.rpm -exec chmod 755 '{}' \; </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти все фалы и директории, имена которых оканчиваются на '.rpm', и изменить права доступа к ним</span></p>
+<p class="rvps2"><span class="rvts6">find / -xdev -name "*.rpm" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти все фалы и директории, имена которых оканчиваются на '.rpm', игнорируя съёмные носители, такие как cdrom, floppy и т.п.</span></p>
+<p class="rvps2"><span class="rvts6">locate "*.ps" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти все файлы, сожержащие в имени '.ps'. Предварительно рекомендуется выполнить команду 'updatedb'</span></p>
+<p class="rvps2"><span class="rvts6">whereis halt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показывает размещение бинарных файлов, исходных кодов и руководств, относящихся к файлу 'halt'</span></p>
+<p class="rvps2"><span class="rvts6">which halt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает полный путь к файлу 'halt'</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Монтирование файловых систем</span></p>
+<p class="rvps2"><span class="rvts6">mount /dev/hda2 /mnt/hda2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтирует раздел 'hda2' в точку монтирования '/mnt/hda2'. Убедитесь в наличии директории-точки монтирования '/mnt/hda2'</span></p>
+<p class="rvps2"><span class="rvts6">umount /dev/hda2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">размонтирует раздел 'hda2'. Перед выполнением, покиньте '/mnt/hda2'</span></p>
+<p class="rvps2"><span class="rvts6">fuser -km /mnt/hda2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">принудительное размонтирование раздела. Применяется в случае, когда раздел занят каким-либо пользователем</span></p>
+<p class="rvps2"><span class="rvts6">umount -n /mnt/hda2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выполнить размонитрование без занесения информации в /etc/mtab. Полезно когда файл имеет атрибуты "только чтение" или недостаточно места на диске</span></p>
+<p class="rvps2"><span class="rvts6">mount /dev/fd0 /mnt/floppy </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтировать флоппи-диск</span></p>
+<p class="rvps2"><span class="rvts6">mount /dev/cdrom /mnt/cdrom </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтировать CD или DVD</span></p>
+<p class="rvps2"><span class="rvts6">mount /dev/hdc /mnt/cdrecorder </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтировать CD-R/CD-RW или DVD-R/DVD-RW(+-)</span></p>
+<p class="rvps2"><span class="rvts6">mount -o loop file.iso /mnt/cdrom </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">смонтировать ISO-образ</span></p>
+<p class="rvps2"><span class="rvts6">mount -t vfat /dev/hda5 /mnt/hda5 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтировать файловую систему Windows FAT32</span></p>
+<p class="rvps2"><span class="rvts6">mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">монтировать сетевую файловую систему Windows (SMB/CIFS)</span></p>
+<p class="rvps2"><span class="rvts6">mount -o bind /home/user/prg /var/ftp/user </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"монтирует" директорию в директорию (binding). Доступна с версии ядра 2.4.0. Полезна, например, для предоставления содержимого пользовательской директории через ftp при работе ftp-сервера в "песочнице" (chroot), когда симлинки сделать невозможно.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Дисковое пространство</span></p>
+<p class="rvps2"><span class="rvts6">df -h </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает информацию о смонтированных разделах с отображением общего, доступного и используемого пространства (Прим.переводчика. ключ -h работает не во всех *nix системах)</span></p>
+<p class="rvps2"><span class="rvts6">ls -lSr |more </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выдаёт список файлов и директорий рекурсивно с сортировкой по возрастанию размера и позволяет осуществлять постраничный просмотр</span></p>
+<p class="rvps2"><span class="rvts6">du -sh dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">подсчитывает и выводит размер, занимаемый директорией 'dir1' (Прим.переводчика. ключ -h работает не во всех *nix системах)</span></p>
+<p class="rvps2"><span class="rvts6">du -sk * | sort -rn </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает размер и имена файлов и директорий, с соритровкой по размеру</span></p>
+<p class="rvps2"><span class="rvts6">rpm -q -a --qf '%10{SIZE}\t%{NAME}\n' | sort -k1,1n </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показывает размер используемого дискового пространства, занимаемое файлами rpm-пакета, с сортировкой по размеру (fedora, redhat и т.п.)</span></p>
+<p class="rvps2"><span class="rvts6">dpkg-query -W -f='${Installed-Size;10}\t${Package}\n' | sort -k1,1n </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показывает размер используемого дискового пространства, занимаемое файлами deb-пакета, с сортировкой по размеру (ubuntu, debian т.п.)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Пользователи и группы</span></p>
+<p class="rvps2"><span class="rvts6">groupadd group_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать новую группу с именем group_name</span></p>
+<p class="rvps2"><span class="rvts6">groupdel group_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить группу group_name</span></p>
+<p class="rvps2"><span class="rvts6">groupmod -n new_group_name old_group_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">переименовать группу old_group_name в new_group_name</span></p>
+<p class="rvps2"><span class="rvts6">useradd -c "Nome Cognome" -g admin -d /home/user1 -s /bin/bash user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать пользователя user1, назначить ему в качестве домашнего каталога /home/user1, в качестве shell'а /bin/bash, включить его в группу admin и добавить комментарий Nome Cognome</span></p>
+<p class="rvps2"><span class="rvts6">useradd user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать пользователя user1</span></p>
+<p class="rvps2"><span class="rvts6">userdel -r user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пользователя user1 и его домашний каталог</span></p>
+<p class="rvps2"><span class="rvts6">usermod -c "User FTP" -g system -d /ftp/user1 -s /bin/nologin user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">изменить атрибуты пользователя</span></p>
+<p class="rvps2"><span class="rvts6">passwd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сменить пароль</span></p>
+<p class="rvps2"><span class="rvts6">passwd user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сменить пароль пользователя user1 (только root)</span></p>
+<p class="rvps2"><span class="rvts6">chage -E 2005-12-31 user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить дату окончания действия учётной записи пользователя user1</span></p>
+<p class="rvps2"><span class="rvts6">pwck </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить корректность системных файлов учётных записей. Проверяются файлы /etc/passwd и /etc/shadow</span></p>
+<p class="rvps2"><span class="rvts6">grpck </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверяет корректность системных файлов учётных записей. Проверяется файл/etc/group</span></p>
+<p class="rvps2"><span class="rvts6">newgrp [-] group_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">изменяет первичную группу текущего пользователя. Если указать "-", ситуация будет идентичной той, в которой пользователь вышил из системы и снова вошёл. Если не указывать группу, первичная группа будет назначена из /etc/passwd</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Выставление/изменение полномочий на файлы</span></p>
+<p class="rvps2"><span class="rvts6">ls -lh </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">просмотр полномочий на файлы и директории в текущей директории</span></p>
+<p class="rvps2"><span class="rvts6">ls /tmp | pr -T5 -W$COLUMNS </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести содержимое директории /tmp и разделить вывод на пять колонок</span></p>
+<p class="rvps2"><span class="rvts6">chmod ugo+rwx directory1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">добавить полномочия на директорию directory1 ugo(User Group Other)+rwx(Read Write eXecute) - всем полные права. Аналогичное можно сделать таким образом "chmod 777 directory1"</span></p>
+<p class="rvps2"><span class="rvts6">chmod go-rwx directory1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобрать у группы и всех остальных все полномочия на директорию directory1.</span></p>
+<p class="rvps2"><span class="rvts6">chown user1 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить владельцем файла file1 пользователя user1</span></p>
+<p class="rvps2"><span class="rvts6">chown -R user1 directory1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить рекурсивно владельцем директории directory1 пользователя user1</span></p>
+<p class="rvps2"><span class="rvts6">chgrp group1 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сменить группу-владельца файла file1 на group1</span></p>
+<p class="rvps2"><span class="rvts6">chown user1:group1 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сменить владельца и группу владельца файла file1</span></p>
+<p class="rvps2"><span class="rvts6">find / -perm -u+s </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти, начиная от корня, все файлы с выставленным SUID</span></p>
+<p class="rvps2"><span class="rvts6">chmod u+s /bin/binary_file </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить SUID-бит файлу /bin/binary_file. Это даёт возможность любому пользователю запускать на выполнение файл с полномочиями владельца файла.</span></p>
+<p class="rvps2"><span class="rvts6">chmod u-s /bin/binary_file </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">снять SUID-бит с файла /bin/binary_file.</span></p>
+<p class="rvps2"><span class="rvts6">chmod g+s /home/public </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить SGID-бит директории /home/public.</span></p>
+<p class="rvps2"><span class="rvts6">chmod g-s /home/public </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">снять SGID-бит с директории /home/public.</span></p>
+<p class="rvps2"><span class="rvts6">chmod o+t /home/public </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить STIKY-бит директории /home/public. Позволяет удалять файлы только владельцам</span></p>
+<p class="rvps2"><span class="rvts6">chmod o-t /home/public </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">снять STIKY-бит с директории /home/public</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Специальные атрибуты файлов</span></p>
+<p class="rvps2"><span class="rvts6">chattr +a file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">позволить открывать файл на запись только в режиме добавления</span></p>
+<p class="rvps2"><span class="rvts6">chattr +c file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">позволяет ядру автоматически сжимать/разжимать содержимое файла.</span></p>
+<p class="rvps2"><span class="rvts6">chattr +d file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">указавет утилите dump игнорировать данный файл во время выполнения backup'а</span></p>
+<p class="rvps2"><span class="rvts6">chattr +i file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">делает файл недоступным для любых изменений: редактирование, удаление, перемещение, создание линков на него.</span></p>
+<p class="rvps2"><span class="rvts6">chattr +s file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">позволяет сделать удаление файла безопасным, т.е. выставленный атрибут s говорит о том, что при удалении файла, место, занимаемое файлом на диске заполняется нулями, что предотвращяет возможность восстановления данных.</span></p>
+<p class="rvps2"><span class="rvts6">chattr +S file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">указывает, что, при сохранении изменений, будет произведена синхронизация, как при выполнении команды sync</span></p>
+<p class="rvps2"><span class="rvts6">chattr +u file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">данный атрибут указывает, что при удалении файла содержимое его будет сохранено и при необходимости пользователь сможет его восстановить</span></p>
+<p class="rvps2"><span class="rvts6">lsattr </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать атрибуты файлов</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Архивирование и сжатие файлов</span></p>
+<p class="rvps2"><span class="rvts6">bunzip2 file1.bz2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разжимает файл 'file1.gz'</span></p>
+<p class="rvps2"><span class="rvts6">gunzip file1.gz</span></p>
+<p class="rvps2"><span class="rvts6">gzip file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сжимает файл 'file1'</span></p>
+<p class="rvps2"><span class="rvts6">bzip2 file1</span></p>
+<p class="rvps2"><span class="rvts6">gzip -9 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сжать файл file1 с максимальным сжатием</span></p>
+<p class="rvps2"><span class="rvts6">rar a file1.rar test_file </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать rar-архив 'file1.rar' и включить в него файл test_file</span></p>
+<p class="rvps2"><span class="rvts6">rar a file1.rar file1 file2 dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать rar-архив 'file1.rar' и включить в него file1, file2 и dir1</span></p>
+<p class="rvps2"><span class="rvts6">unrar x file1.rar </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">распаковать rar-архив</span></p>
+<p class="rvps2"><span class="rvts6">tar -cvf archive.tar file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать tar-архив archive.tar, содержащий файл file1</span></p>
+<p class="rvps2"><span class="rvts6">tar -cvf archive.tar file1 file2 dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать tar-архив archive.tar, содержащий файл file1, file2 и dir1</span></p>
+<p class="rvps2"><span class="rvts6">tar -tf archive.tar </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать содержимое архива</span></p>
+<p class="rvps2"><span class="rvts6">tar -xvf archive.tar </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">распаковать архив</span></p>
+<p class="rvps2"><span class="rvts6">tar -xvf archive.tar -C /tmp </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">распаковать архив в /tmp</span></p>
+<p class="rvps2"><span class="rvts6">tar -cvfj archive.tar.bz2 dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать архив и сжать его с помощью bzip2(Прим.переводчика. ключ -j работает не во всех *nix системах)</span></p>
+<p class="rvps2"><span class="rvts6">tar -xvfj archive.tar.bz2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разжать архив и распаковать его(Прим.переводчика. ключ -j работает не во всех *nix системах)</span></p>
+<p class="rvps2"><span class="rvts6">tar -cvfz archive.tar.gz dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать архив и сжать его с помощью gzip</span></p>
+<p class="rvps2"><span class="rvts6">tar -xvfz archive.tar.gz </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разжать архив и распаковать его</span></p>
+<p class="rvps2"><span class="rvts6">zip file1.zip file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать сжатый zip-архив</span></p>
+<p class="rvps2"><span class="rvts6">zip -r file1.zip file1 file2 dir1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать сжатый zip-архив и со включением в него нескольких файлов и/или директорий</span></p>
+<p class="rvps2"><span class="rvts6">unzip file1.zip </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разжать и распаковать zip-архив</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">RPM пакеты (Fedora, Red Hat и тому подобное)</span></p>
+<p class="rvps2"><span class="rvts6">rpm -ivh package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить пакет с выводом сообщений и прогресс-бара</span></p>
+<p class="rvps2"><span class="rvts6">rpm -ivh --nodeps package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить пакет с выводом сообщений и прогресс-бара без контроля зависимостей</span></p>
+<p class="rvps2"><span class="rvts6">rpm -U package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">обновить пакет без изменений конфигурационных файлов, в случае отсутствия пакета, он будет установлен</span></p>
+<p class="rvps2"><span class="rvts6">rpm -F package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">обновить пакет только если он установлен</span></p>
+<p class="rvps2"><span class="rvts6">rpm -e package_name.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пакет</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qa </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить список всех пакетов, установленных в системе</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qa | grep httpd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени "httpd"</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qi package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести информацию о конкрентном пакете</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qg "System Environment/Daemons" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить пакеты входящие в группу пакетов</span></p>
+<p class="rvps2"><span class="rvts6">rpm -ql package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список файлов, входящих в пакет</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qc package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список конфигурационных файлов, входящих в пакет</span></p>
+<p class="rvps2"><span class="rvts6">rpm -q package_name --whatrequires </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список пакетов, необходимых для установки конкретного пакета по зависимостям</span></p>
+<p class="rvps2"><span class="rvts6">rpm -q package_name --whatprovides </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">show capability provided by a rpm package</span></p>
+<p class="rvps2"><span class="rvts6">rpm -q package_name --scripts </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразит скрипты, запускаемые при установке/удалении пакета</span></p>
+<p class="rvps2"><span class="rvts6">rpm -q package_name --changelog </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести историю ревизий пакета</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qf /etc/httpd/conf/httpd.conf </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить какому пакету принадлежит указанный файл. Указывать следует полный путь и имя файла.</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qp package.rpm -l </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает список файлов, входящих в пакет, но ещё не установленных в систему</span></p>
+<p class="rvps2"><span class="rvts6">rpm --import /media/cdrom/RPM-GPG-KEY </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">ипортировать публичный ключ цифровой подписи</span></p>
+<p class="rvps2"><span class="rvts6">rpm --checksig package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверит подпись пакета</span></p>
+<p class="rvps2"><span class="rvts6">rpm -qa gpg-pubkey </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить целостность установленного содержимого пакета</span></p>
+<p class="rvps2"><span class="rvts6">rpm -V package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить размер, полномочия, тип, владельца, группу, MD5-сумму и дату последнего изменеия пакета</span></p>
+<p class="rvps2"><span class="rvts6">rpm -Va </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить содержимое всех пакеты установленные в систему. Выполняйте с осторожностью!</span></p>
+<p class="rvps2"><span class="rvts6">rpm -Vp package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить пакет, который ещё не установлен в систему</span></p>
+<p class="rvps2"><span class="rvts6">rpm2cpio package.rpm | cpio --extract --make-directories *bin* </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">извлечь из пакета файлы содержащие в своём имени bin</span></p>
+<p class="rvps2"><span class="rvts6">rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить пакет, собранный из исходных кодов</span></p>
+<p class="rvps2"><span class="rvts6">rpmbuild --rebuild package_name.src.rpm </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">собрать пакет из исходных кодов</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">YUM - средство обновления пакетов(Fedora, RedHat и тому подобное)</span></p>
+<p class="rvps2"><span class="rvts6">yum install package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">закачать и установать пакет</span></p>
+<p class="rvps2"><span class="rvts6">yum update </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">обновить все пакеты, установленные в систему</span></p>
+<p class="rvps2"><span class="rvts6">yum update package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">обновить пакет</span></p>
+<p class="rvps2"><span class="rvts6">yum remove package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пакет</span></p>
+<p class="rvps2"><span class="rvts6">yum list </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список всех пакетов, установленных в систему</span></p>
+<p class="rvps2"><span class="rvts6">yum search package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти пакет в репозитории</span></p>
+<p class="rvps2"><span class="rvts6">yum clean packages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">очисть rpm-кэш, удалив закачанные пакеты</span></p>
+<p class="rvps2"><span class="rvts6">yum clean headers </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить все заголовки файлов, которые система использует для разрешения зависимостей</span></p>
+<p class="rvps2"><span class="rvts6">yum clean all </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">очисть rpm-кэш, удалив закачанные пакеты и заголовки</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">DEB пакеты (Debian, Ubuntu и тому подобное)</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -i package.deb </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить / обновить пакет</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -r package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пакет из системы</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -l </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать все пакеты, установленные в систему</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -l | grep httpd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">среди всех пакетов, установленных в системе, найти пакет содержащий в своём имени "httpd"</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -s package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить инфрмацию о конкретном пакете</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -L package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список файлов, входящих в пакет, установленный в систему</span></p>
+<p class="rvps2"><span class="rvts6">dpkg --contents package.deb </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить список файлов, входящих в пакет, который ешё не установлен в систему</span></p>
+<p class="rvps2"><span class="rvts6">dpkg -S /bin/ping </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">найти пакет, в который входит указанный файл.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">APT - средство управление пакетами (Debian, Ubuntu и тому подобное)</span></p>
+<p class="rvps2"><span class="rvts6">apt-get install package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить / обновить пакет</span></p>
+<p class="rvps2"><span class="rvts6">apt-cdrom install package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">установить / обновить пакет с cdrom'а</span></p>
+<p class="rvps2"><span class="rvts6">apt-get update </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">получить обновлённые списки пакетов</span></p>
+<p class="rvps2"><span class="rvts6">apt-get upgrade </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">обновить пакеты, установленные в систему</span></p>
+<p class="rvps2"><span class="rvts6">apt-get remove package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пакет, установленный в систему с сохранением файлов конфигурации</span></p>
+<p class="rvps2"><span class="rvts6">apt-get purge package_name </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пакет, установленный в систему с удалением файлов конфигурации</span></p>
+<p class="rvps2"><span class="rvts6">apt-get check </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить целостность зависимостей</span></p>
+<p class="rvps2"><span class="rvts6">apt-get clean </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить загруженные архивные файлы пакетов</span></p>
+<p class="rvps2"><span class="rvts6">apt-get autoclean </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить старые загруженные архивные файлы пакетов</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Просмотр содержимого файлов</span></p>
+<p class="rvps2"><span class="rvts6">cat file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести содержимое файла file1 на стандартное устройсво вывода</span></p>
+<p class="rvps2"><span class="rvts6">tac file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести содержимое файла file1 на стандартное устройсво вывода в обратном порядке (последняя строка становиться первой и т.д.)</span></p>
+<p class="rvps2"><span class="rvts6">more file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">постраничный вывод содержимого файла file1 на стандартное устройство вывода</span></p>
+<p class="rvps2"><span class="rvts6">less file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">постраничный вывод содержимого файла file1 на стандартное устройство вывода, но с возможностью пролистывания в обе стороны (вверх-вниз), поиска по содержимому и т.п.</span></p>
+<p class="rvps2"><span class="rvts6">head -2 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести первые две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк</span></p>
+<p class="rvps2"><span class="rvts6">tail -2 file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести последние две строки файла file1 на стандартное устройство вывода. По-умолчанию выводится десять строк</span></p>
+<p class="rvps2"><span class="rvts6">tail -f /var/log/messages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выводить содержимое файла /var/log/messages на стандартное устройство вывода по мере появления в нём текста.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Манипуляции с текстом</span></p>
+<p class="rvps2"><span class="rvts6">cat file | grep -i "Criteria" &gt; result.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">общий синтаксис выполнения действий по обработке содержимого файла и вывода результата в новый</span></p>
+<p class="rvps2"><span class="rvts6">cat file | grep -i "Criteria" &gt;&gt; result.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">общий синтаксис выполнения действий по обработке содержимого файла и вывода результата в существующий файл. Если файл не существует, он будет создан</span></p>
+<p class="rvps2"><span class="rvts6">grep Aug /var/log/messages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">из файла '/var/log/messages' отобрать и вывести на стандартное устройство вывода строки, содержащие "Aug"</span></p>
+<p class="rvps2"><span class="rvts6">grep ^Aug /var/log/messages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">из файла '/var/log/messages' отобрать и вывести на стандартное устройство вывода строки, начинающиеся на "Aug"</span></p>
+<p class="rvps2"><span class="rvts6">grep [0-9] /var/log/messages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">из файла '/var/log/messages' отобрать и вывести на стандартное устройство вывода строки, содержащие цифры</span></p>
+<p class="rvps2"><span class="rvts6">grep Aug -R /var/log/* </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобрать и вывести на стандартное устройство вывода строки, содержащие "Aug", во всех файлах, находящихся в директории /var/log и ниже</span></p>
+<p class="rvps2"><span class="rvts6">sed 's/stringa1/stringa2/g' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">в файле example.txt заменить "string1" на "string2", результат вывести на стандартное устройство вывода.</span></p>
+<p class="rvps2"><span class="rvts6">sed '/^$/d' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пустые строки из файла example.txt</span></p>
+<p class="rvps2"><span class="rvts6">sed '/ *#/d; /^$/d' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пустые строки и комментарии из файла example.txt</span></p>
+<p class="rvps2"><span class="rvts6">echo 'test' | tr '[:lower:]' '[:upper:]' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">преобразовать символы из нижнего регистра в верхний</span></p>
+<p class="rvps2"><span class="rvts6">sed -e '1d' result.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить первую строку из файла example.txt</span></p>
+<p class="rvps2"><span class="rvts6">sed -n '/string1/p' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить только строки содержашие "string1"</span></p>
+<p class="rvps2"><span class="rvts6">sed -e 's/ *$//' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить пустые символы в в конце каждой строки</span></p>
+<p class="rvps2"><span class="rvts6">sed -e 's/string1//g' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить строку "string1" из текста не изменяя всего остального</span></p>
+<p class="rvps2"><span class="rvts6">sed -n '1,8p;5q' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">взять из файла с первой по восьмую строки и из них вывести первые пять</span></p>
+<p class="rvps2"><span class="rvts6">sed -n '5p;5q' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести пятую строку</span></p>
+<p class="rvps2"><span class="rvts6">sed -e 's/0*/0/g' example.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">заменить последовательность из любого количества нулей одним нулём</span></p>
+<p class="rvps2"><span class="rvts6">cat -n file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">пронумеровать строки при выводе содержимого файла</span></p>
+<p class="rvps2"><span class="rvts6">cat example.txt | awk 'NR%2==1' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">при выводе содержимого файла, не выводить чётные строки файла</span></p>
+<p class="rvps2"><span class="rvts6">echo a b c | awk '{print $1}' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести первую колонку. Разделение, по-умолчанию, по проблелу/пробелам или символу/символам табуляции</span></p>
+<p class="rvps2"><span class="rvts6">echo a b c | awk '{print $1,$3}' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести первую и треью колонки. Разделение, по-умолчанию, по проблелу/пробелам или символу/символам табуляции</span></p>
+<p class="rvps2"><span class="rvts6">paste file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">объединить содержимое file1 и file2 в виде таблицы: строка 1 из file1 = строка 1 колонка 1-n, строка 1 из file2 = строка 1 колонка n+1-m</span></p>
+<p class="rvps2"><span class="rvts6">paste -d '+' file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">объединить содержимое file1 и file2 в виде таблицы с разделителем "+"</span></p>
+<p class="rvps2"><span class="rvts6">sort file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отсортировать содержимое двух файлов</span></p>
+<p class="rvps2"><span class="rvts6">sort file1 file2 | uniq </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отсортировать содержимое двух файлов, не отображая повторов</span></p>
+<p class="rvps2"><span class="rvts6">sort file1 file2 | uniq -u </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отсортировать содержимое двух файлов, отображая только уникальные строки (строки, встречающиеся в обоих файлах, не выводятся на стандартное устройство вывода)</span></p>
+<p class="rvps2"><span class="rvts6">sort file1 file2 | uniq -d </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отсортировать содержимое двух файлов, отображая только повторяющиеся строки</span></p>
+<p class="rvps2"><span class="rvts6">comm -1 file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сравнить содержимое двух файлов, не отображая строки принадлежащие файлу 'file1'</span></p>
+<p class="rvps2"><span class="rvts6">comm -2 file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сравнить содержимое двух файлов, не отображая строки принадлежащие файлу 'file2'</span></p>
+<p class="rvps2"><span class="rvts6">comm -3 file1 file2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сравнить содержимое двух файлов, удаляя строки встречающиеся в обоих файлах</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Преобразование наборов символов и файловых форматов</span></p>
+<p class="rvps2"><span class="rvts6">dos2unix filedos.txt fileunix.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">конвертировать файл текстового формата из MSDOS в UNIX (разница в символах возврата коретки)</span></p>
+<p class="rvps2"><span class="rvts6">unix2dos fileunix.txt filedos.txt </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">конвертировать файл текстового формата из UNIX в MSDOS (разница в символах возврата коретки)</span></p>
+<p class="rvps2"><span class="rvts6">recode ..HTML &lt; page.txt &gt; page.html </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">конвертировать содержимое тестового файла page.txt в html-файл page.html</span></p>
+<p class="rvps2"><span class="rvts6">recode -l | more </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список доступных форматов</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Анализ файловых систем</span></p>
+<p class="rvps2"><span class="rvts6">badblocks -v /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить раздел hda1 на наличие bad-блоков</span></p>
+<p class="rvps2"><span class="rvts6">fsck /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить/восстановить целостность linux-файловой системы раздела hda1</span></p>
+<p class="rvps2"><span class="rvts6">fsck.ext2 /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить/восстановить целостность файловой системы ext2 раздела hda1</span></p>
+<p class="rvps2"><span class="rvts6">e2fsck /dev/hda1</span></p>
+<p class="rvps2"><span class="rvts6">e2fsck -j /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить/восстановить целостность файловой системы ext3 раздела hda1 с указанием, что журнал расположен там же</span></p>
+<p class="rvps2"><span class="rvts6">fsck.ext3 /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить/восстановить целостность файловой системы ext3 раздела hda1</span></p>
+<p class="rvps2"><span class="rvts6">fsck.vfat /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить/восстановить целостность файловой системы fat раздела hda1</span></p>
+<p class="rvps2"><span class="rvts6">fsck.msdos /dev/hda1</span></p>
+<p class="rvps2"><span class="rvts6">dosfsck /dev/hda1</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Форматирование файловых систем</span></p>
+<p class="rvps2"><span class="rvts6">mkfs /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать linux-файловую систему на разделе hda1</span></p>
+<p class="rvps2"><span class="rvts6">mke2fs /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать файловую систему ext2 на разделе hda1</span></p>
+<p class="rvps2"><span class="rvts6">mke2fs -j /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать журналирующую файловую систему ext3 на разделе hda1</span></p>
+<p class="rvps2"><span class="rvts6">mkfs -t vfat 32 -F /dev/hda1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать файловую систему FAT32 на разделе hda1</span></p>
+<p class="rvps2"><span class="rvts6">fdformat -n /dev/fd0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">форматирование флоппи-диска без проверки</span></p>
+<p class="rvps2"><span class="rvts6">mkswap /dev/hda3 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создание swap-пространства на разделе hda3</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">swap-пространство</span></p>
+<p class="rvps2"><span class="rvts6">mkswap /dev/hda3 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создание swap-пространства на разделе hda3</span></p>
+<p class="rvps2"><span class="rvts6">swapon /dev/hda3 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">активировать swap-пространство, расположенное на разделе hda3</span></p>
+<p class="rvps2"><span class="rvts6">swapon /dev/hda2 /dev/hdb3 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">активировать swap-пространства, расположенные на разделах hda2 и hdb3</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Создание резервных копий (backup)</span></p>
+<p class="rvps2"><span class="rvts6">dump -0aj -f /tmp/home0.bak /home </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать полную резервную копию директории /home в файл /tmp/home0.bak</span></p>
+<p class="rvps2"><span class="rvts6">dump -1aj -f /tmp/home0.bak /home </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать инкрементальную резервную копию директории /home в файл /tmp/home0.bak</span></p>
+<p class="rvps2"><span class="rvts6">restore -if /tmp/home0.bak </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">восстановить из резервной копии /tmp/home0.bak</span></p>
+<p class="rvps2"><span class="rvts6">rsync -rogpav --delete /home /tmp </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">синхронизировать /tmp с /home</span></p>
+<p class="rvps2"><span class="rvts6">rsync -rogpav -e ssh --delete /home ip_address:/tmp </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">синхронизировать через SSH-туннель</span></p>
+<p class="rvps2"><span class="rvts6">rsync -az -e ssh --delete ip_addr:/home/public /home/local </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">синхронизировать локальную директорию с удалённой директорией через ssh-туннель со сжатием</span></p>
+<p class="rvps2"><span class="rvts6">rsync -az -e ssh --delete /home/local ip_addr:/home/public </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">синхронизировать удалённую директорию с локальной директорией через ssh-туннель со сжатием</span></p>
+<p class="rvps2"><span class="rvts6">dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr 'dd of=hda.gz' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">сделать "слепок" локального диска в файл на удалённом компьютере через ssh-туннель</span></p>
+<p class="rvps2"><span class="rvts6">tar -Puf backup.tar /home/user </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать инкрементальную резервную копию директории '/home/user' в файл backup.tar с сохранением полномочий</span></p>
+<p class="rvps2"><span class="rvts6">( cd /tmp/local/ &amp;&amp; tar c . ) | ssh -C user@ip_addr 'cd /home/share/ &amp;&amp; tar x -p' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копирование содержимого /tmp/local на удалённый компьютер через ssh-туннель в /home/share/</span></p>
+<p class="rvps2"><span class="rvts6">( tar c /home ) | ssh -C user@ip_addr 'cd /home/backup-home &amp;&amp; tar x -p' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копирование содержимого /home на удалённый компьютер через ssh-туннель в /home/backup-home</span></p>
+<p class="rvps2"><span class="rvts6">tar cf - . | (cd /tmp/backup ; tar xf - ) </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">копирование одной директории в другую с сохранением полномочий и линков</span></p>
+<p class="rvps2"><span class="rvts6">find /home/user1 -name '*.txt' | \</span></p>
+<p class="rvps2"><span class="rvts6">xargs cp -av --target-directory=/home/backup/ --parents </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">поиск в /home/user1 всех файлов, имена которых оканчиваются на '.txt', и копирование их в другую директорию</span></p>
+<p class="rvps2"><span class="rvts6">find /var/log -name '*.log' | tar cv --files-from=- | bzip2 &gt; log.tar.bz2 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">поиск в /var/log всех файлов, имена которых оканчиваются на '.log', и создание bzip-архива из них</span></p>
+<p class="rvps2"><span class="rvts6">dd if=/dev/hda of=/dev/fd0 bs=512 count=1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создать копию MBR (Master Boot Record) с /dev/hda на флоппи-диск</span></p>
+<p class="rvps2"><span class="rvts6">dd if=/dev/fd0 of=/dev/hda bs=512 count=1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">восстановить MBR с флоппи-диска на /dev/hda</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">CDROM</span></p>
+<p class="rvps2"><span class="rvts6">cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">clean a rewritable cdrom</span></p>
+<p class="rvps2"><span class="rvts6">mkisofs /dev/cdrom &gt; cd.iso </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">create an iso image of cdrom on disk</span></p>
+<p class="rvps2"><span class="rvts6">mkisofs /dev/cdrom | gzip &gt; cd_iso.gz </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">create a compressed iso image of cdrom on disk</span></p>
+<p class="rvps2"><span class="rvts6">mkisofs -J -allow-leading-dots -R -V "Label CD" -iso-level 4 -o ./cd.iso data_cd </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">create an iso image of a directory</span></p>
+<p class="rvps2"><span class="rvts6">cdrecord -v dev=/dev/cdrom cd.iso </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">burn an ISO image</span></p>
+<p class="rvps2"><span class="rvts6">gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom - </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">burn a compressed ISO image</span></p>
+<p class="rvps2"><span class="rvts6">mount -o loop cd.iso /mnt/iso </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">mount an ISO image</span></p>
+<p class="rvps2"><span class="rvts6">cd-paranoia -B </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">rip audio tracks from a CD to wav files</span></p>
+<p class="rvps2"><span class="rvts6">cd-paranoia -- "-3" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">rip first three audio tracks from a CD to wav files</span></p>
+<p class="rvps2"><span class="rvts6">cdrecord --scanbus </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">scan bus to identify the channel scsi</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Сеть (LAN и WiFi)</span></p>
+<p class="rvps2"><span class="rvts6">ifconfig eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать конфигурацию сетевого интерфейса eth0</span></p>
+<p class="rvps2"><span class="rvts6">ifup eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">активировать (поднять) интерфейс eth0</span></p>
+<p class="rvps2"><span class="rvts6">ifdown eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">деактивировать (опустить) интерфейс eth0</span></p>
+<p class="rvps2"><span class="rvts6">ifconfig eth0 192.168.1.1 netmask 255.255.255.0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выставить интерфейсу eth0 ip-адрес и маску подсети</span></p>
+<p class="rvps2"><span class="rvts6">ifconfig eth0 promisc </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перевести интерфейс eth0 в promiscuous-режим для "отлова" пакетов (sniffing)</span></p>
+<p class="rvps2"><span class="rvts6">ifconfig eth0 -promisc </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отключить promiscuous-режим на интерфейсе eth0</span></p>
+<p class="rvps2"><span class="rvts6">dhclient eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">активировать интерфейс eth0 в dhcp-режиме.</span></p>
+<p class="rvps2"><span class="rvts6">route -n </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести локальную таблицу маршрутизации</span></p>
+<p class="rvps2"><span class="rvts6">netstat -rn</span></p>
+<p class="rvps2"><span class="rvts6">route add -net 0/0 gw IP_Gateway </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">задать ip-адрес шлюза по умолчанию (default gateway)</span></p>
+<p class="rvps2"><span class="rvts6">route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">добавить статический маршрут в сеть 192.168.0.0/16 через шлюз с ip-адресом 192.168.1.1</span></p>
+<p class="rvps2"><span class="rvts6">route del 0/0 gw IP_gateway </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить ip-адрес шлюза по умолчанию (default gateway)</span></p>
+<p class="rvps2"><span class="rvts6">echo "1" &gt; /proc/sys/net/ipv4/ip_forward </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разрешить пересылку пакетов (forwarding)</span></p>
+<p class="rvps2"><span class="rvts6">hostname </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить имя компьютера</span></p>
+<p class="rvps2"><span class="rvts6">host www.yandex.ru </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разрешить имя www.yandex.ru хоста в ip-адрес и наоборот</span></p>
+<p class="rvps2"><span class="rvts6">host 93.158.134.3</span></p>
+<p class="rvps2"><span class="rvts6">ip link show </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить состояние всех интерфейсов</span></p>
+<p class="rvps2"><span class="rvts6">mii-tool eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить статус и тип соединения для интерфейса eth0</span></p>
+<p class="rvps2"><span class="rvts6">ethtool eth0 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает статистику интерфеса eth0 с выводом такой информации, как поддерживаемые и текущие режимы соединения</span></p>
+<p class="rvps2"><span class="rvts6">netstat -tupn </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает все установленные сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, обеспечивающих эти соединения</span></p>
+<p class="rvps2"><span class="rvts6">netstat -tupln </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает все сетевые соединения по протоколам TCP и UDP без разрешения имён в ip-адреса и PID'ы и имена процессов, слушающих порты</span></p>
+<p class="rvps2"><span class="rvts6">tcpdump tcp port 80 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить весь трафик на TCP-порт 80 (обычно - HTTP)</span></p>
+<p class="rvps2"><span class="rvts6">iwlist scan </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">просканировать эфир на предмет, доступности беспроводных точек доступа</span></p>
+<p class="rvps2"><span class="rvts6">iwconfig eth1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать конфигурацию беспроводного сетевого интерфейса eth1</span></p>
+<p class="rvps2"><span class="rvts6">traceroute www.ya.ru</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Трассировка маршрута до указанного хоста (www.ya.ru), аналог tracert в Windows. В некоторых дистрибутивах установлен по-умолчанию только traceroute6 и придётся доустанавливать вручную.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Microsoft Windows networks(SAMBA)</span></p>
+<p class="rvps2"><span class="rvts6">nbtscan ip_addr </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">разрешить netbios-имя nbtscan не во всех системах ставится по-умолчанию, возможно, придётся доустанавливать вручную. nmblookup включен в пакет samba.</span></p>
+<p class="rvps2"><span class="rvts6">nmblookup -A ip_addr</span></p>
+<p class="rvps2"><span class="rvts6">smbclient -L ip_addr/hostname </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить ресурсы, предоставленные в общий доступ на windows-машине</span></p>
+<p class="rvps2"><span class="rvts6">smbget -Rr smb://ip_addr/share </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">подобно wget может получить файлы с windows-машин через smb-протокол</span></p>
+<p class="rvps2"><span class="rvts6">mount -t smbfs -o username=user,password=pass //winclient/share /mnt/share </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">смонтировать smb-ресурс, предоставленный на windows-машине, в локальную файловую систему</span></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">IPTABLES (firewall)</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -nL </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить все цепочки правил</span></p>
+<p class="rvps2"><span class="rvts6">iptables -nL</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t nat -L </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить все цепочки правил в NAT-таблице</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -F </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">очистить все цепочки правил в filter-таблице</span></p>
+<p class="rvps2"><span class="rvts6">iptables -F</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t nat -F </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">очистить все цепочки правил в NAT-таблице</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -X </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">удалить все пользовательские цепочки правил в filter-таблице</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">позволить входящее подключение telnet'ом</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -A OUTPUT -p tcp --dport http -j DROP </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">блокировать исходящие HTTP-соединения</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">позволить "прокидывать" (forward) POP3-соединения</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t filter -A INPUT -j LOG --log-prefix "DROP INPUT" </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">включить журналирование ядром пакетов, проходящих через цепочку INPUT, и добавлением к сообщению префикса "DROP INPUT"</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">включить NAT (Network Address Translate) исходящих пакетов на интерфейс eth0. Допустимо при использовании с динамически выделяемыми ip-адресами.</span></p>
+<p class="rvps2"><span class="rvts6">iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp --dport 22 \</span></p>
+<p class="rvps2"><span class="rvts6">-j DNAT --to-destination 10.0.0.2:22 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">перенаправление пакетов, адресованных одному хосту, на другой хост</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Мониторинг и отладка</span></p>
+<p class="rvps2"><span class="rvts6">top </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (с автоматическим обновлением данных)</span></p>
+<p class="rvps2"><span class="rvts6">ps -eafw </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить запущенные процессы, используемые ими ресурсы и другую полезную информацию (единожды)</span></p>
+<p class="rvps2"><span class="rvts6">ps -e -o pid,args --forest </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести PID'ы и процессы в виде дерева</span></p>
+<p class="rvps2"><span class="rvts6">pstree </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить дерево процессов</span></p>
+<p class="rvps2"><span class="rvts6">kill -9 98989 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"убить" процесс с PID 98989 "на смерть" (без соблюдения целостности данных)</span></p>
+<p class="rvps2"><span class="rvts6">kill -KILL 98989</span></p>
+<p class="rvps2"><span class="rvts6">kill -TERM 98989 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">Корректно завершить процесс с PID 98989</span></p>
+<p class="rvps2"><span class="rvts6">kill -1 98989 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">заставить процесс с PID 98989 перепрочитать файл конфигурации</span></p>
+<p class="rvps2"><span class="rvts6">kill -HUP 98989</span></p>
+<p class="rvps2"><span class="rvts6">lsof -p 98989 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить список файлов, открытых процессом с PID 98989</span></p>
+<p class="rvps2"><span class="rvts6">lsof /home/user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить список открытых файлов из директории /home/user1</span></p>
+<p class="rvps2"><span class="rvts6">strace -c ls &gt; /dev/null </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список системных вызовов, созданных и полученных процессом ls</span></p>
+<p class="rvps2"><span class="rvts6">strace -f -e open ls &gt; /dev/null </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести вызовы бибилотек</span></p>
+<p class="rvps2"><span class="rvts6">watch -n1 'cat /proc/interrupts' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображать прерывания в режиме реального времени</span></p>
+<p class="rvps2"><span class="rvts6">last reboot </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить историю перезагрузок системы</span></p>
+<p class="rvps2"><span class="rvts6">last user1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отобразить историю регистрации пользователя user1 в системе и время его нахождения в ней</span></p>
+<p class="rvps2"><span class="rvts6">lsmod </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести загруженные модули ядра</span></p>
+<p class="rvps2"><span class="rvts6">free -m </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">показать состояние оперативной памяти в мегабайтах</span></p>
+<p class="rvps2"><span class="rvts6">smartctl -A /dev/hda </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">контроль состояния жёсткого диска /dev/hda через SMART</span></p>
+<p class="rvps2"><span class="rvts6">smartctl -i /dev/hda </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">проверить доступность SMART на жёстком диске /dev/hda</span></p>
+<p class="rvps2"><span class="rvts6">tail /var/log/dmesg </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести десять последних записей из журнала загрузки ядра</span></p>
+<p class="rvps2"><span class="rvts6">tail /var/log/messages </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести десять последних записей из системного журнала</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Другие полезные команды</span></p>
+<p class="rvps2"><span class="rvts6">apropos …keyword </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">выводит список комманд, которые так или иначе относятся к ключевым словам. Полезно, когда вы знаете что делает программа, но не помните команду</span></p>
+<p class="rvps2"><span class="rvts6">man ping </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вызов руководства по работе с программой, в данном случае, - ping</span></p>
+<p class="rvps2"><span class="rvts6">whatis …keyword </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">отображает описание действий указанной программы</span></p>
+<p class="rvps2"><span class="rvts6">mkbootdisk --device /dev/fd0 `uname -r` </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">создаёт загрузочный флоппи-диск</span></p>
+<p class="rvps2"><span class="rvts6">gpg -c file1 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">шифрует файл file1 с помощью GNU Privacy Guard</span></p>
+<p class="rvps2"><span class="rvts6">gpg file1.gpg </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">дешифрует файл file1 с помощью GNU Privacy Guard</span></p>
+<p class="rvps2"><span class="rvts6">wget -r www.example.com </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">загружает рекурсивно содержимое сайта www.example.com</span></p>
+<p class="rvps2"><span class="rvts6">wget -c www.example.com/file.iso </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">загрузить файл www.example.com/file.iso с возможностью останова и продолжения в последствии</span></p>
+<p class="rvps2"><span class="rvts6">echo 'wget -c www.example.com/files.iso' | at 09:00 </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">начать закачку в указанное время</span></p>
+<p class="rvps2"><span class="rvts6">ldd /usr/bin/ssh </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">вывести список библиотек, необходимых для работы ssh</span></p>
+<p class="rvps2"><span class="rvts6">alias hh='history' </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">назначить алиас hh команде history </span></p>
+<p></p>
+<p class="rvps4"><span class="rvts13">Created with the Personal Edition of HelpNDoc: </span><a class="rvts14" href="http://www.helpndoc.com">Easy Qt Help documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Catfish Studio Games. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

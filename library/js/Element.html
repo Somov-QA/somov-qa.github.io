@@ -1,0 +1,177 @@
+﻿<html>
+	
+<head>
+	<title>Element</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Element");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Element</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptDOM.html">JavaScript DOM</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptDOM.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Document.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Attributes.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Element</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">В HTML DOM, объект Element представляет собой HTML-элемент.</span></p>
+<p class="rvps2"><span class="rvts18">Объекты элемент может иметь дочерние узлы узлов типа элементов, текстовых узлов, или комментарий узлов.</span></p>
+<p class="rvps2"><span class="rvts18">Объект NodeList представляет собой список узлов, как коллекции HTML-элемента дочерних узлов.</span></p>
+<p class="rvps2"><span class="rvts18">Элементы могут также иметь атрибуты. Атрибуты узлов атрибутов (смотрите следующий раздел).</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Свойства и методы</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">accessKey</span><span class="rvts18"> - Устанавливает или возвращает атрибут Accesskey элемента</span></p>
+<p class="rvps2"><span class="rvts7">addEventListener</span><span class="rvts20">(event, function, useCapture)</span><span class="rvts18"> - Прикрепляет обработчик события для указанного элемента</span></p>
+<p class="rvps2"><span class="rvts7">appendChild</span><span class="rvts20">(node)</span><span class="rvts18"> - Добавляет новый дочерний узел, к элементу, в качестве последнего дочернего узла</span></p>
+<p class="rvps2"><span class="rvts20">attributes</span><span class="rvts18"> - Возвращает NamedNodeMap из атрибутов элемента</span></p>
+<p class="rvps2"><span class="rvts7">blur</span><span class="rvts20">()</span><span class="rvts18"> - Удаляет фокус из элемента</span></p>
+<p class="rvps2"><span class="rvts20">childElementCount</span><span class="rvts18"> - Возвращает число дочерних элементов элемент имеет</span></p>
+<p class="rvps2"><span class="rvts20">childNodes</span><span class="rvts18"> - Возвращает коллекцию дочерних узлов Элемент (включая текст и узлы комментариев)</span></p>
+<p class="rvps2"><span class="rvts20">children</span><span class="rvts18"> - Возвращает коллекцию элемента дочернего элемента не давал (за исключением текста и узлы комментариев)</span></p>
+<p class="rvps2"><span class="rvts20">classList</span><span class="rvts18"> - Возвращает имя класса (ов) элемента</span></p>
+<p class="rvps2"><span class="rvts20">className</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута класса элемента</span></p>
+<p class="rvps2"><span class="rvts7">click</span><span class="rvts20">()</span><span class="rvts18"> - Имитирует щелчок мыши на элементе</span></p>
+<p class="rvps2"><span class="rvts20">clientHeight</span><span class="rvts18"> - Возвращает высоту элемента, включая отступы</span></p>
+<p class="rvps2"><span class="rvts20">clientLeft</span><span class="rvts18"> - Возвращает ширину левой границы элемента</span></p>
+<p class="rvps2"><span class="rvts20">clientTop</span><span class="rvts18"> - Возвращает ширину верхней границы элемента</span></p>
+<p class="rvps2"><span class="rvts20">clientWidth</span><span class="rvts18"> - Возвращает ширину элемента, включая отступы</span></p>
+<p class="rvps2"><span class="rvts7">cloneNode</span><span class="rvts20">(deep)</span><span class="rvts18"> - Клоны элемент</span></p>
+<p class="rvps2"><span class="rvts7">compareDocumentPosition</span><span class="rvts20">(node)</span><span class="rvts18"> - Сравнивает положение документа двух элементов</span></p>
+<p class="rvps2"><span class="rvts7">contains</span><span class="rvts20">(node)</span><span class="rvts18"> - Возвращает истину, если узел является потомком узла, в противном случае ложной</span></p>
+<p class="rvps2"><span class="rvts20">contentEditable</span><span class="rvts18"> - Устанавливает или возвращает ли можно редактировать содержимое элемента или нет</span></p>
+<p class="rvps2"><span class="rvts20">dir</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута dir элемента</span></p>
+<p class="rvps2"><span class="rvts20">firstChild</span><span class="rvts18"> - Возвращает первый дочерний узел элемента</span></p>
+<p class="rvps2"><span class="rvts20">firstElementChild</span><span class="rvts18"> - Возвращает первый дочерний элемент элемента</span></p>
+<p class="rvps2"><span class="rvts7">focus</span><span class="rvts20">()</span><span class="rvts18"> - Передает фокус элементу</span></p>
+<p class="rvps2"><span class="rvts7">getAttribute</span><span class="rvts20">(attributename)</span><span class="rvts18"> - Возвращает заданное значение атрибута узла элемента</span></p>
+<p class="rvps2"><span class="rvts7">getAttributeNode</span><span class="rvts20">(attributename)</span><span class="rvts18"> - Возвращает указанный узел атрибута</span></p>
+<p class="rvps2"><span class="rvts7">getElementsByClassName</span><span class="rvts20">(classname)</span><span class="rvts18"> - Возвращает коллекцию всех дочерних элементов с указанным именем класса</span></p>
+<p class="rvps2"><span class="rvts7">getElementsByTagName</span><span class="rvts20">(tagname)</span><span class="rvts18"> - Возвращает коллекцию всех дочерних элементов с указанным именем тега</span></p>
+<p class="rvps2"><span class="rvts7">getFeature</span><span class="rvts20">()</span><span class="rvts18"> - Возвращает объект, который реализует API-интерфейсы для указанной функции</span></p>
+<p class="rvps2"><span class="rvts7">hasAttribute</span><span class="rvts20">(attributename)</span><span class="rvts18"> - Возвращает истину, если элемент имеет указанный атрибут, в противном случае ложной</span></p>
+<p class="rvps2"><span class="rvts7">hasAttributes</span><span class="rvts20">()</span><span class="rvts18"> - Возвращает истину, если элемент имеет какие-либо атрибуты, иначе ложь</span></p>
+<p class="rvps2"><span class="rvts7">hasChildNodes</span><span class="rvts20">()</span><span class="rvts18"> - Возвращает истину, если элемент имеет дочерние узлы, в противном случае ложной</span></p>
+<p class="rvps2"><span class="rvts20">id</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута идентификатор элемента</span></p>
+<p class="rvps2"><span class="rvts20">innerText</span><span class="rvts18"> - Устанавливает или возвращает содержимое элемента текст</span></p>
+<p class="rvps2"><span class="rvts20">innerHTML</span><span class="rvts18"> - Устанавливает или возвращает содержимое элемента</span></p>
+<p class="rvps2"><span class="rvts7">insertBefore</span><span class="rvts20">(newnode, existingnode)</span><span class="rvts18"> - Вставляет новый дочерний узел перед указанным, существующий, дочерний узел</span></p>
+<p class="rvps2"><span class="rvts20">isContentEditable</span><span class="rvts18"> - Возвращает истину, если содержание элемента можно редактировать, в противном случае ложной</span></p>
+<p class="rvps2"><span class="rvts7">isDefaultNamespace</span><span class="rvts20">(namespaceURI)</span><span class="rvts18"> - Возвращает истину, если указанный NamespaceURI по умолчанию, в противном случае ложной</span></p>
+<p class="rvps2"><span class="rvts7">isEqualNode</span><span class="rvts20">(node)</span><span class="rvts18"> - Проверяет, если два элемента равны</span></p>
+<p class="rvps2"><span class="rvts7">isSameNode</span><span class="rvts20">(node)</span><span class="rvts18"> - Проверяет, если два элемента и тот же узел</span></p>
+<p class="rvps2"><span class="rvts7">isSupported</span><span class="rvts20">(feature, version)</span><span class="rvts18"> - Возвращает истину, если указанная функция поддерживается на элементе</span></p>
+<p class="rvps2"><span class="rvts20">lang</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута Ланг элемента</span></p>
+<p class="rvps2"><span class="rvts20">lastChild</span><span class="rvts18"> - Возвращает последний дочерний узел элемента</span></p>
+<p class="rvps2"><span class="rvts20">lastElementChild</span><span class="rvts18"> - Возвращает последний дочерний элемент элемента</span></p>
+<p class="rvps2"><span class="rvts20">namespaceURI</span><span class="rvts18"> - Возвращает URI пространства имен элемента</span></p>
+<p class="rvps2"><span class="rvts20">nextSibling</span><span class="rvts18"> - Возвращает следующий узел на том же уровне дерева узла</span></p>
+<p class="rvps2"><span class="rvts20">nextElementSibling</span><span class="rvts18"> - Возвращает следующий элемент на том же уровне дерева узлов</span></p>
+<p class="rvps2"><span class="rvts20">nodeName</span><span class="rvts18"> - Возвращает имя узла</span></p>
+<p class="rvps2"><span class="rvts20">nodeType</span><span class="rvts18"> - Возвращает тип узла узла</span></p>
+<p class="rvps2"><span class="rvts20">nodeValue</span><span class="rvts18"> - Устанавливает или возвращает значение узла</span></p>
+<p class="rvps2"><span class="rvts7">normalize</span><span class="rvts20">()</span><span class="rvts18"> - соединяет смежных текстовых узлов и удаляет пустые текстовые узлы в элементе</span></p>
+<p class="rvps2"><span class="rvts20">offsetHeight</span><span class="rvts18"> - Возвращает высоту элемента, включая отступы, границы и скроллинга</span></p>
+<p class="rvps2"><span class="rvts20">offsetWidth</span><span class="rvts18"> - Возвращает ширину элемента, включая отступы, границы и скроллинга</span></p>
+<p class="rvps2"><span class="rvts20">offsetLeft</span><span class="rvts18"> - Возвращает горизонтальное смещение позиции элемента</span></p>
+<p class="rvps2"><span class="rvts20">offsetParent</span><span class="rvts18"> - Возвращает смещение контейнера элемента</span></p>
+<p class="rvps2"><span class="rvts20">offsetTop</span><span class="rvts18"> - Возвращает вертикальное смещение позиции элемента</span></p>
+<p class="rvps2"><span class="rvts20">ownerDocument</span><span class="rvts18"> - Возвращает корневой элемент (документ объекта) для элемента</span></p>
+<p class="rvps2"><span class="rvts20">parentNode</span><span class="rvts18"> - Возвращает родительский узел элемента</span></p>
+<p class="rvps2"><span class="rvts20">parentElement</span><span class="rvts18"> - Возвращает родительский элемент узла элемента</span></p>
+<p class="rvps2"><span class="rvts20">previousSibling</span><span class="rvts18"> - Возвращает предыдущий узел на том же уровне дерева узлов</span></p>
+<p class="rvps2"><span class="rvts20">previousElementSibling</span><span class="rvts18"> - Возвращает предыдущий элемент на том же уровне дерева узла</span></p>
+<p class="rvps2"><span class="rvts7">querySelector</span><span class="rvts20">(CSS selectors)</span><span class="rvts18"> - Возвращает первый дочерний элемент, соответствующий селектор CSS указан (ы) элемента</span></p>
+<p class="rvps2"><span class="rvts7">querySelectorAll</span><span class="rvts20">(CSS selectors)</span><span class="rvts18"> - Возвращает все дочерние элементы, который соответствует селектор CSS указано (ы) элемента</span></p>
+<p class="rvps2"><span class="rvts7">removeAttribute</span><span class="rvts20">(attributename)</span><span class="rvts18"> - Удаляет указанный атрибут из элемента</span></p>
+<p class="rvps2"><span class="rvts7">removeAttributeNode</span><span class="rvts20">(attributenode)</span><span class="rvts18"> - Удаляет указанный узел атрибута, и возвращает удаленный узел</span></p>
+<p class="rvps2"><span class="rvts7">removeChild</span><span class="rvts20">(node)</span><span class="rvts18"> - Удаляет дочерний узел из элемента</span></p>
+<p class="rvps2"><span class="rvts7">replaceChild</span><span class="rvts20">(newnode, oldnode)</span><span class="rvts18"> - Заменяет дочерний узел в элементе</span></p>
+<p class="rvps2"><span class="rvts7">removeEventListener</span><span class="rvts20">(event, function, useCapture)</span><span class="rvts18"> - Удаляет обработчик событий, который был присоединен с addEventListener()</span></p>
+<p class="rvps2"><span class="rvts20">scrollHeight</span><span class="rvts18"> - Возвращает всю высоту элемента, включая отступы</span></p>
+<p class="rvps2"><span class="rvts7">scrollIntoView</span><span class="rvts20">(alignTo)</span><span class="rvts18"> - прокручивают указанный элемент в видимой области окна браузера</span></p>
+<p class="rvps2"><span class="rvts20">scrollLeft</span><span class="rvts18"> - Устанавливает или возвращает количество пикселей содержимого элемента прокручивается по горизонтали</span></p>
+<p class="rvps2"><span class="rvts20">scrollTop</span><span class="rvts18"> - Устанавливает или возвращает количество пикселей содержимого элемента прокручивается по вертикали</span></p>
+<p class="rvps2"><span class="rvts20">scrollWidth</span><span class="rvts18"> - Возвращает всю ширину элемента, включая отступы</span></p>
+<p class="rvps2"><span class="rvts7">setAttribute</span><span class="rvts20">(attributename, attributevalue)</span><span class="rvts18"> - Устанавливает или изменяет указанный атрибут, к указанному значению</span></p>
+<p class="rvps2"><span class="rvts7">setAttributeNode</span><span class="rvts20">(attributenode)</span><span class="rvts18"> - Устанавливает или изменяет указанный узел атрибута</span></p>
+<p class="rvps2"><span class="rvts20">style</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута стиля элемента</span></p>
+<p class="rvps2"><span class="rvts20">tabIndex</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута TabIndex элемента</span></p>
+<p class="rvps2"><span class="rvts20">tagName</span><span class="rvts18"> - Возвращает имя тега элемента</span></p>
+<p class="rvps2"><span class="rvts20">textContent</span><span class="rvts18"> - Устанавливает или возвращает текстовое содержимое узла и его потомков</span></p>
+<p class="rvps2"><span class="rvts20">title</span><span class="rvts18"> - Устанавливает или возвращает значение целевого атрибута элемента</span></p>
+<p class="rvps2"><span class="rvts7">toString</span><span class="rvts20">()</span><span class="rvts18"> - Преобразует элемент в строку</span></p>
+<p class="rvps2"><span class="rvts18">&nbsp;</span></p>
+<p class="rvps2"><span class="rvts20">nodelist.</span><span class="rvts7">item</span><span class="rvts20">(index)</span><span class="rvts18"> - Возвращает узел по указанному индексу в NodeList</span></p>
+<p class="rvps2"><span class="rvts20">nodelist.length</span><span class="rvts18"> - Возвращает количество узлов в NodeList</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var btn = document.createElement("button");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var titleBtn = document.createTextNode("Click me");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;btn.appendChild(titleBtn);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;btn.addEventListener("click", onClickButton);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.body.appendChild(btn);</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var h1 = document.createElement("h1");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var att = document.createAttribute("id");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;att.value = "textH1";</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h1.setAttributeNode(att);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.body.appendChild(h1);</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;function onClickButton()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var h1 = document.getElementById("textH1");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if(h1.innerText == ""){</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h1.innerText = "Hello World!!!"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} else {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.querySelector("#textH1").innerHTML = "Heppy New Year!";</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementsByTagName("button")[0].removeEventListener("click", onClickButton);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log("button click");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

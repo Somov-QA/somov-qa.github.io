@@ -1,0 +1,111 @@
+﻿<html>
+	
+<head>
+	<title>Anchor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Anchor");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Anchor</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptHTMLObjects.html">JavaScript HTML Objects</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptHTMLObjects.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="JavaScriptHTMLObjects.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Area.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Anchor</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts21">Свойства</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">accessKey</span><span class="rvts18"> - Устанавливает или возвращает клавишу клавиатуры, чтобы получить доступ к ссылке</span></p>
+<p class="rvps2"><span class="rvts20">charset</span><span class="rvts18"> - Устанавливает или возвращает набор символов связанного ресурса</span></p>
+<p class="rvps2"><span class="rvts20">coords</span><span class="rvts18"> - Устанавливает или возвращает разделенный запятыми список с координатами, определяя активную область геометрии</span></p>
+<p class="rvps2"><span class="rvts20">href</span><span class="rvts18"> - Устанавливает или возвращает URL связанного ресурса</span></p>
+<p class="rvps2"><span class="rvts20">hreflang</span><span class="rvts18"> - Устанавливает или возвращает код языка связанного ресурса</span></p>
+<p class="rvps2"><span class="rvts20">id</span><span class="rvts18"> - Устанавливает или возвращает идентификатор ссылки</span></p>
+<p class="rvps2"><span class="rvts20">innerHTML</span><span class="rvts18"> - Устанавливает или возвращает текст ссылки</span></p>
+<p class="rvps2"><span class="rvts20">name</span><span class="rvts18"> - Задает или возвращает имя ссылки</span></p>
+<p class="rvps2"><span class="rvts20">rel</span><span class="rvts18"> - Устанавливает или возвращает отношение между текущим документом и целевым URL</span></p>
+<p class="rvps2"><span class="rvts20">rev</span><span class="rvts18"> - Устанавливает или возвращает отношение между текущим документом и целевым URL</span></p>
+<p class="rvps2"><span class="rvts20">shape</span><span class="rvts18"> - Устанавливает или возвращает активную область. Координаты задаются координатам</span></p>
+<p class="rvps2"><span class="rvts20">tabIndex</span><span class="rvts18"> - Устанавливает или возвращает индекс, который определяет порядок обхода для канала</span></p>
+<p class="rvps2"><span class="rvts20">target</span><span class="rvts18"> - Устанавливает или возвращает где открыть целевой URL</span></p>
+<p class="rvps2"><span class="rvts20">type</span><span class="rvts18"> - Устанавливает или возвращает тип MIME связанного ресурса</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Методы</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">blur()</span><span class="rvts18"> - Удаляет фокус из ссылки</span></p>
+<p class="rvps2"><span class="rvts20">focus()</span><span class="rvts18"> - Передает фокус на ссылку</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">События</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts16">onBlur</span><span class="rvts6"> - Выполняет некоторый код, когда ссылка теряет фокус</span></p>
+<p class="rvps2"><span class="rvts16">onFocus</span><span class="rvts6"> - Выполняет некоторый код, когда ссылка получает фокус</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function access()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myAnchor').accessKey="a" // горячие клавиши alt + a</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function changeLink()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myLink').innerHTML="W3Schools"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myLink').href="http://www.w3schools.com"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myLink').target="_blank"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("charset:", document.getElementById('myLink').charset);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("coords:", document.getElementById('myLink').coords);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("hreflang:", document.getElementById('myLink').hreflang);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("id:", document.getElementById('myLink').id);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("name:", document.getElementById('myLink').name);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("rel:", document.getElementById('myLink').rel);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("rev:", document.getElementById('myLink').rev);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("shape:", document.getElementById('myLink').shape);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("tabIndex:", document.getElementById('myLink').tabIndex);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("type:", document.getElementById('myLink').type);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function getFocus()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myAnchor').focus()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function loseFocus()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">document.getElementById('myAnchor').blur()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onFocus()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("onFocus: Get focus")</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onBlur()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">console.log("onBlur: Lose focus")</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"access()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;p&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;a </span><span class="rvts23">id=</span><span class="rvts24">"myAnchor" </span><span class="rvts23">href=</span><span class="rvts24">"http://www.w3schools.com" </span><span class="rvts23">onfocus=</span><span class="rvts24">"onFocus()" </span><span class="rvts23">onblur=</span><span class="rvts24">"onBlur()"</span><span class="rvts22">&gt;</span><span class="rvts25">Visit W3Schools</span><span class="rvts22">&lt;/a&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;br /&gt;&lt;br /&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;input </span><span class="rvts23">type=</span><span class="rvts24">"button" </span><span class="rvts23">onclick=</span><span class="rvts24">"getFocus()" </span><span class="rvts23">value=</span><span class="rvts24">"Get focus" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;input </span><span class="rvts23">type=</span><span class="rvts24">"button" </span><span class="rvts23">onclick=</span><span class="rvts24">"loseFocus()" </span><span class="rvts23">value=</span><span class="rvts24">"Lose focus" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22">&lt;/p&gt;</span><br/><span class="rvts22">&lt;p&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;a </span><span class="rvts23">id=</span><span class="rvts24">"myLink" </span><span class="rvts23">name=</span><span class="rvts24">"myLink" </span><span class="rvts23">href=</span><span class="rvts24">"http://www.microsoft.com"</span><span class="rvts22">&gt;</span><span class="rvts25">Microsoft</span><span class="rvts22">&lt;/a&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;br /&gt;&lt;br /&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;input </span><span class="rvts23">type=</span><span class="rvts24">"button" </span><span class="rvts23">onclick=</span><span class="rvts24">"changeLink()" </span><span class="rvts23">value=</span><span class="rvts24">"Change Link" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22">&lt;/p&gt;</span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

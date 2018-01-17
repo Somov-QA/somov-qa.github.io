@@ -1,0 +1,119 @@
+﻿<html>
+	
+<head>
+	<title>Button</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Button");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Button</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser3.html">Phaser</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Phaser3.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Text.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Spritesheet.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Кнопка</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts14">let</span><span class="rvts18"> button: Phaser.Button = </span><span class="rvts14">new</span><span class="rvts18"> Phaser.Button(</span><span class="rvts14">this</span><span class="rvts18">.game, 10, 550, </span><span class="rvts15">'button_end_game'</span><span class="rvts18">, </span><span class="rvts14">this</span><span class="rvts18">.onButtonClick, </span><span class="rvts14">this</span><span class="rvts18">);</span></p>
+<p class="rvps3"><span class="rvts18">button.name = </span><span class="rvts15">'button_end_game'</span><span class="rvts18">;</span></p>
+<p class="rvps3"><span class="rvts18">button.onInputOver.add(</span><span class="rvts14">this</span><span class="rvts18">.onButtonOver, </span><span class="rvts14">this</span><span class="rvts18">);</span></p>
+<p class="rvps3"><span class="rvts18">button.onInputOut.add(</span><span class="rvts14">this</span><span class="rvts18">.onButtonOut, </span><span class="rvts14">this</span><span class="rvts18">);</span></p>
+<p class="rvps3"><span class="rvts14">this</span><span class="rvts18">.stage.addChild(button);</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts18"> onButtonClick(event) {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">switch</span><span class="rvts18"> (event.name) {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">case</span><span class="rvts18"> "</span><span class="rvts15">button_end_game</span><span class="rvts18">":</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">break</span><span class="rvts18">;</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">case</span><span class="rvts18"> "</span><span class="rvts15">button_restart_game</span><span class="rvts18">":</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts18">.stage.removeChildren();</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts18">.game.state.restart(true);</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">break</span><span class="rvts18">;</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">default</span><span class="rvts18">:</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">break</span><span class="rvts18">;</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts18">}</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts18"> onButtonOver(event) {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; event.scale.setTo(0.95, 0.95);</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; event.anchor.x -= 0.025;</span></p>
+<p class="rvps3"><span class="rvts18">}</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts18"> onButtonOut(event) {</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; event.scale.setTo(1, 1);</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; event.anchor.x += 0.025;</span></p>
+<p class="rvps3"><span class="rvts18">}</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeniy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

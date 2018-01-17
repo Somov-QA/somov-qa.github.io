@@ -1,0 +1,94 @@
+﻿<html>
+	
+<head>
+	<title>Base</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Base");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Base</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptHTMLObjects.html">JavaScript HTML Objects</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptHTMLObjects.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Area.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Body.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Base</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">Элемент &lt;base&gt; определен внутри контейнера &lt;head&gt; и инструктирует браузер относительно полного базового адреса текущего документа. Тег &lt;base&gt; предназначен для документов, в которых используется относительный адрес и эти документы могут переноситься в другую папку или даже на другой компьютер без потери связи.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Свойства</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">href</span><span class="rvts18"> - Устанавливает или возвращает базовый URL для документа</span></p>
+<p class="rvps2"><span class="rvts20">id</span><span class="rvts18"> - Устанавливает или возвращает идентификатор базового объекта</span></p>
+<p class="rvps2"><span class="rvts20">target</span><span class="rvts18"> - Устанавливает или возвращает целевой по умолчанию фрейм или окно</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;base </span><span class="rvts23">id=</span><span class="rvts24">"myBase" </span><span class="rvts23">href=</span><span class="rvts24">"http://somov.inf.ua" </span><span class="rvts23">target=</span><span class="rvts24">"_blank" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var myBase = document.getElementById('myBase');</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log("myBase:", myBase.id, myBase.href, myBase.target);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

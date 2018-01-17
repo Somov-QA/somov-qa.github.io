@@ -1,0 +1,287 @@
+﻿<html>
+	
+<head>
+	<title>Style</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Style");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Style</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptDOM.html">JavaScript DOM</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptDOM.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Events.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="JavaScriptHTMLObjects.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Style</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">Объект Style представляет индивидуальный стиль.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">alignContent</span><span class="rvts18"> - Устанавливает или возвращает выравнивание между линиями внутри гибкого контейнера, когда элементы не использовать все доступное пространство</span></p>
+<p class="rvps2"><span class="rvts20">alignItems</span><span class="rvts18"> - Устанавливает или возвращает выравнивание для элементов внутри гибкого контейнера</span></p>
+<p class="rvps2"><span class="rvts20">alignSelf</span><span class="rvts18"> - Устанавливает или возвращает выравнивание для выбранных элементов внутри гибкого контейнера</span></p>
+<p class="rvps2"><span class="rvts20">animation</span><span class="rvts18"> - сокращённое свойство для всех свойств анимации ниже, за исключением имущества animationPlayState</span></p>
+<p class="rvps2"><span class="rvts20">animationDelay</span><span class="rvts18"> - Устанавливает или возвращает, когда анимация начнется</span></p>
+<p class="rvps2"><span class="rvts20">animationDirection</span><span class="rvts18"> - Устанавливает или возвращает, должен ли анимация играть в обратном направлении на альтернативных циклах</span></p>
+<p class="rvps2"><span class="rvts20">animationDuration</span><span class="rvts18"> - Устанавливает или возвращает сколько секунд или миллисекунды анимации требуется, чтобы завершить один цикл</span></p>
+<p class="rvps2"><span class="rvts20">animationFillMode</span><span class="rvts18"> - Устанавливает или возвращает то, что значения, применяемые анимации за пределами времени его выполнения</span></p>
+<p class="rvps2"><span class="rvts20">animationIterationCount</span><span class="rvts18"> - Устанавливает или возвращает число раз анимация должна играть</span></p>
+<p class="rvps2"><span class="rvts20">animationName</span><span class="rvts18"> - Устанавливает или возвращает имя для анимации @keyframes</span></p>
+<p class="rvps2"><span class="rvts20">animationTimingFunction</span><span class="rvts18"> - Устанавливает или возвращает кривую скорости анимации</span></p>
+<p class="rvps2"><span class="rvts20">animationPlayState</span><span class="rvts18"> - Устанавливает или возвращает ли анимация работает или приостановлена</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">background</span><span class="rvts18"> - Устанавливает или возвращает все свойства фона в одной декларации 1</span></p>
+<p class="rvps2"><span class="rvts20">backgroundAttachment</span><span class="rvts18"> - Устанавливает или возвращает ли закреплен фоновое изображение или свитки со страницей</span></p>
+<p class="rvps2"><span class="rvts20">BackgroundColor</span><span class="rvts18"> - Устанавливает или возвращает цвет фона элемента</span></p>
+<p class="rvps2"><span class="rvts20">BackgroundImage</span><span class="rvts18"> - Устанавливает или возвращает фоновое изображение для элемента</span></p>
+<p class="rvps2"><span class="rvts20">backgroundPosition</span><span class="rvts18"> - Устанавливает или возвращает начальную позицию фонового изображения</span></p>
+<p class="rvps2"><span class="rvts20">backgroundRepeat</span><span class="rvts18"> - Устанавливает или возвращает как повторить (плитка) на фоновое изображение</span></p>
+<p class="rvps2"><span class="rvts20">backgroundClip</span><span class="rvts18"> - Устанавливает или возвращает область рисования фона</span></p>
+<p class="rvps2"><span class="rvts20">backgroundOrigin</span><span class="rvts18"> - Устанавливает или возвращает область позиционирования фоновых изображений</span></p>
+<p class="rvps2"><span class="rvts20">backgroundSize</span><span class="rvts18"> - Устанавливает или возвращает размер фонового изображения</span></p>
+<p class="rvps2"><span class="rvts20">backfaceVisibility</span><span class="rvts18"> - Устанавливает или возвращает ли или нет элемент должен быть виден, когда не перед экраном</span></p>
+<p class="rvps2"><span class="rvts20">border</span><span class="rvts18"> - Устанавливает или возвращает BorderWidth, BorderStyle и BorderColor в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">borderBottom</span><span class="rvts18"> - Устанавливает или возвращает все borderBottom * свойства в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">borderBottomColor</span><span class="rvts18"> - Устанавливает или возвращает цвет нижней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderBottomLeftRadius</span><span class="rvts18"> - Устанавливает или возвращает форму границы нижнего левого угла</span></p>
+<p class="rvps2"><span class="rvts20">borderBottomRightRadius</span><span class="rvts18"> - Устанавливает или возвращает форму границы нижнего правого угла</span></p>
+<p class="rvps2"><span class="rvts20">borderBottomStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль нижней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderBottomWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину нижней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderCollapse</span><span class="rvts18"> - Устанавливает или возвращает, должен ли границы таблицы быть свернуты в одну границу, или нет</span></p>
+<p class="rvps2"><span class="rvts20">borderColor</span><span class="rvts18"> - Устанавливает или возвращает цвет рамки элемента (может иметь до четырех значений)</span></p>
+<p class="rvps2"><span class="rvts20">borderImage</span><span class="rvts18"> - сокращённое свойство для установки или возвращения всех borderImage * свойства</span></p>
+<p class="rvps2"><span class="rvts20">borderImageOutset</span><span class="rvts18"> - Устанавливает или возвращает величину, на которую пограничная область изображения выходит за пределы коробки границы</span></p>
+<p class="rvps2"><span class="rvts20">borderImageRepeat</span><span class="rvts18"> - Устанавливает или возвращает, следует ли повторять изображение границы, округлые или растянуты</span></p>
+<p class="rvps2"><span class="rvts20">borderImageSlice</span><span class="rvts18"> - Устанавливает или возвращает внутренности смещения изображения-границы</span></p>
+<p class="rvps2"><span class="rvts20">borderImageSource</span><span class="rvts18"> - Устанавливает или возвращает изображение, которое будет использоваться в качестве границы</span></p>
+<p class="rvps2"><span class="rvts20">borderImageWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину изображения-границы</span></p>
+<p class="rvps2"><span class="rvts20">borderLeft</span><span class="rvts18"> - Устанавливает или возвращает все borderLeft * свойства в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">borderLeftColor</span><span class="rvts18"> - Устанавливает или возвращает цвет левой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderLeftStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль левой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderLeftWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину левой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderRadius</span><span class="rvts18"> - Сокращённое свойство для установки или возвращения всех четырех границы * свойства Радиус</span></p>
+<p class="rvps2"><span class="rvts20">borderRight</span><span class="rvts18"> - Устанавливает или возвращает все borderRight * свойства в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">borderRightColor</span><span class="rvts18"> - Устанавливает или возвращает цвет правой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderRightStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль правой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderRightWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину правой границы</span></p>
+<p class="rvps2"><span class="rvts20">borderSpacing</span><span class="rvts18"> - Устанавливает или возвращает расстояние между ячейками в таблице</span></p>
+<p class="rvps2"><span class="rvts20">borderStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль рамки элемента (может иметь до четырех значений)</span></p>
+<p class="rvps2"><span class="rvts20">borderTop</span><span class="rvts18"> - Устанавливает или возвращает все borderTop * свойства в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">borderTopColor</span><span class="rvts18"> - Устанавливает или возвращает цвет верхней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderTopLeftRadius</span><span class="rvts18"> - Устанавливает или возвращает форму границы в верхнем левом углу</span></p>
+<p class="rvps2"><span class="rvts20">borderTopRightRadius</span><span class="rvts18"> - Устанавливает или возвращает форму границы в верхнем правом углу</span></p>
+<p class="rvps2"><span class="rvts20">borderTopStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль верхней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderTopWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину верхней границы</span></p>
+<p class="rvps2"><span class="rvts20">borderWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину рамки элемента (может иметь до четырех значений)</span></p>
+<p class="rvps2"><span class="rvts20">bottom</span><span class="rvts18"> - Устанавливает или возвращает нижнее положение позиционируемого элемента</span></p>
+<p class="rvps2"><span class="rvts20">boxDecorationBreak</span><span class="rvts18"> - Устанавливает или возвращает поведение фона и границы элемента на странице-брейк, или, в-линии элементов, на разрыв строки.</span></p>
+<p class="rvps2"><span class="rvts20">boxShadow</span><span class="rvts18"> - Прикрепить один или несколько отбрасывание тени к коробке</span></p>
+<p class="rvps2"><span class="rvts20">boxSizing</span><span class="rvts18"> - Позволяет определить некоторые элементы, чтобы соответствовать область определенным образом</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">captionSide</span><span class="rvts18"> - Устанавливает или возвращает позицию заголовка таблицы</span></p>
+<p class="rvps2"><span class="rvts20">clear</span><span class="rvts18"> - Устанавливает или возвращает позицию элемента относительно плавающих объектов</span></p>
+<p class="rvps2"><span class="rvts20">clip</span><span class="rvts18"> - Устанавливает или возвращает какую часть позиционируемого элемента видна</span></p>
+<p class="rvps2"><span class="rvts20">color</span><span class="rvts18"> - Устанавливает или возвращает цвет текста</span></p>
+<p class="rvps2"><span class="rvts20">columnCount</span><span class="rvts18"> - Устанавливает или возвращает количество столбцов элемент должен быть разделен на</span></p>
+<p class="rvps2"><span class="rvts20">columnFill</span><span class="rvts18"> - Устанавливает или возвращает, как заполнять столбцы</span></p>
+<p class="rvps2"><span class="rvts20">columnGap</span><span class="rvts18"> - Устанавливает или возвращает разрыв между колоннами</span></p>
+<p class="rvps2"><span class="rvts20">columnRule</span><span class="rvts18"> - сокращённое свойство для установки или возвращения всех columnRule * свойства</span></p>
+<p class="rvps2"><span class="rvts20">columnRuleColor</span><span class="rvts18"> - Устанавливает или возвращает цвет правила между колоннами</span></p>
+<p class="rvps2"><span class="rvts20">columnRuleStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль правила между колоннами</span></p>
+<p class="rvps2"><span class="rvts20">columnRuleWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину линейки между колонками</span></p>
+<p class="rvps2"><span class="rvts20">columns</span><span class="rvts18"> - сокращённое свойство для установки или возвращения ColumnWidth и ColumnCount</span></p>
+<p class="rvps2"><span class="rvts20">columnSpan</span><span class="rvts18"> - Устанавливает или возвращает количество столбцов элемент должен охватывать через</span></p>
+<p class="rvps2"><span class="rvts20">columnWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину столбцов</span></p>
+<p class="rvps2"><span class="rvts20">content</span><span class="rvts18"> - Используется с: до и: после псевдо-элементов, для вставки генерируемого контента</span></p>
+<p class="rvps2"><span class="rvts20">counterIncrement</span><span class="rvts18"> Приращивает один или несколько счетчиков</span></p>
+<p class="rvps2"><span class="rvts20">counterReset</span><span class="rvts18"> - Создает или сбрасывает один или несколько счетчиков</span></p>
+<p class="rvps2"><span class="rvts20">cursor</span><span class="rvts18"> - Устанавливает или возвращает тип курсора, чтобы отобразить для указателя мыши</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">direction</span><span class="rvts18"> - Устанавливает или возвращает направление текста</span></p>
+<p class="rvps2"><span class="rvts20">display</span><span class="rvts18"> - Устанавливает или возвращает тип отображать элемента</span></p>
+<p class="rvps2"><span class="rvts20">emptyCells</span><span class="rvts18"> - Устанавливает или возвращает ли показывать границу и фон пустых ячеек или нет</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">filter</span><span class="rvts18"> - Устанавливает или возвращает графических фильтров (визуальные эффекты, как размытие и насыщенности)</span></p>
+<p class="rvps2"><span class="rvts20">flex</span><span class="rvts18"> - Устанавливает или возвращает длину элемента, по отношению к остальным</span></p>
+<p class="rvps2"><span class="rvts20">flexBasis</span><span class="rvts18"> - Устанавливает или возвращает первоначальную длину гибкого элемента</span></p>
+<p class="rvps2"><span class="rvts20">flexDirection</span><span class="rvts18"> - Устанавливает или возвращает направление гибких элементов</span></p>
+<p class="rvps2"><span class="rvts20">flexFlow</span><span class="rvts18"> - сокращённое свойство для flexDirection и свойств flexWrap</span></p>
+<p class="rvps2"><span class="rvts20">flexGrow</span><span class="rvts18"> - Устанавливает или возвращает, сколько элемент будет расти по отношению к остальной</span></p>
+<p class="rvps2"><span class="rvts20">flexShrink</span><span class="rvts18"> - Устанавливает или возвращает, как элемент будет уменьшаться по отношению к остальной</span></p>
+<p class="rvps2"><span class="rvts20">flexWrap</span><span class="rvts18"> - Устанавливает или возвращает, должны ли гибкие элементы переноситься или нет</span></p>
+<p class="rvps2"><span class="rvts20">cssFloat</span><span class="rvts18"> - Устанавливает или возвращает горизонтальное выравнивание элемента</span></p>
+<p class="rvps2"><span class="rvts20">font</span><span class="rvts18"> - Устанавливает или возвращает FontStyle, fontVariant, FontWeight, FontSize, LineHeight и FontFamily в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">fontFamily</span><span class="rvts18"> - Устанавливает или возвращает семейство шрифтов для текста</span></p>
+<p class="rvps2"><span class="rvts20">fontSize</span><span class="rvts18"> - Устанавливает или возвращает размер шрифта текста</span></p>
+<p class="rvps2"><span class="rvts20">fontStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль шрифта, является ли нормальным, наклонным или косой</span></p>
+<p class="rvps2"><span class="rvts20">fontVariant</span><span class="rvts18"> - Устанавливает или возвращает ли шрифт должен отображаться в небольших заглавными буквами</span></p>
+<p class="rvps2"><span class="rvts20">fontWeight</span><span class="rvts18"> - Устанавливает или возвращает дерзновение шрифта</span></p>
+<p class="rvps2"><span class="rvts20">fontSizeAdjust</span><span class="rvts18"> - Консервированные читаемость текста, когда происходит резервный шрифт</span></p>
+<p class="rvps2"><span class="rvts20">fontStretch</span><span class="rvts18"> - Выбирает нормальный, плотный или расширенный шрифт из семейства шрифтов</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">hangingPunctuation</span><span class="rvts18"> - Определяет, является ли символ пунктуации может быть размещен за пределами штрафной линии</span></p>
+<p class="rvps2"><span class="rvts20">height</span><span class="rvts18"> - Устанавливает или возвращает высоту элемента</span></p>
+<p class="rvps2"><span class="rvts20">hyphens</span><span class="rvts18"> - Устанавливает, как разделить слова, чтобы улучшить расположение пунктов</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">icon</span><span class="rvts18"> - предоставляет автору возможность стиля элемента с изобразительный эквивалент</span></p>
+<p class="rvps2"><span class="rvts20">imageOrientation</span><span class="rvts18"> - Определяет поворот в правой или по часовой стрелке, что агент пользователя относится к изображению</span></p>
+<p class="rvps2"><span class="rvts20">justifyContent</span><span class="rvts18"> - Устанавливает или возвращает выравнивание между элементами внутри гибкого контейнера, когда элементы не использовать все доступное пространство.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">left</span><span class="rvts18"> - Устанавливает или возвращает левое положение позиционируемого элемента</span></p>
+<p class="rvps2"><span class="rvts20">letterSpacing</span><span class="rvts18"> - Устанавливает или возвращает пространство между символами в тексте</span></p>
+<p class="rvps2"><span class="rvts20">lineHeight</span><span class="rvts18"> - Устанавливает или возвращает расстояние между строками в тексте</span></p>
+<p class="rvps2"><span class="rvts20">listStyle</span><span class="rvts18"> - Устанавливает или возвращает listStyleImage, listStylePosition и listStyleType в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">listStyleImage</span><span class="rvts18"> - Устанавливает или возвращает изображение в качестве элемента списка маркера</span></p>
+<p class="rvps2"><span class="rvts20">listStylePosition</span><span class="rvts18"> - Устанавливает или возвращает позицию элемента списка маркера</span></p>
+<p class="rvps2"><span class="rvts20">listStyleType</span><span class="rvts18"> - Устанавливает или возвращает элемента списка тип маркера</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">margin</span><span class="rvts18"> - Устанавливает или возвращает допустимые пределы элемента (может иметь до четырех значений)</span></p>
+<p class="rvps2"><span class="rvts20">marginBottom</span><span class="rvts18"> - Устанавливает или возвращает нижнюю границу элемента</span></p>
+<p class="rvps2"><span class="rvts20">marginLeft</span><span class="rvts18"> - Устанавливает или возвращает левый край элемента</span></p>
+<p class="rvps2"><span class="rvts20">marginRight</span><span class="rvts18"> - Устанавливает или возвращает правый край элемента</span></p>
+<p class="rvps2"><span class="rvts20">marginTop</span><span class="rvts18"> - Устанавливает или возвращает верхний край элемента</span></p>
+<p class="rvps2"><span class="rvts20">maxHeight</span><span class="rvts18"> - Устанавливает или возвращает максимальную высоту элемента</span></p>
+<p class="rvps2"><span class="rvts20">maxWidth</span><span class="rvts18"> - Устанавливает или возвращает максимальную ширину элемента</span></p>
+<p class="rvps2"><span class="rvts20">minHeight</span><span class="rvts18"> - Устанавливает или возвращает минимальную высоту элемента</span></p>
+<p class="rvps2"><span class="rvts20">minWidth</span><span class="rvts18"> - Устанавливает или возвращает минимальную ширину элемента</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">navDown</span><span class="rvts18"> - Устанавливает или возвращает где для навигации при использовании навигационной клавиши со стрелкой вниз</span></p>
+<p class="rvps2"><span class="rvts20">navIndex</span><span class="rvts18"> - Устанавливает или возвращает порядок табуляции для элемента</span></p>
+<p class="rvps2"><span class="rvts20">navLeft</span><span class="rvts18"> - Устанавливает или возвращает где для навигации при использовании стрелки левой навигационной клавиши</span></p>
+<p class="rvps2"><span class="rvts20">navRight</span><span class="rvts18"> - Устанавливает или возвращает где для навигации при использовании стрелки правой клавиши навигации</span></p>
+<p class="rvps2"><span class="rvts20">navUp</span><span class="rvts18"> - Устанавливает или возвращает где для навигации при использовании со стрелкой вверх навигационной клавиши</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">opacity</span><span class="rvts18"> - Задает или возвращает уровень непрозрачности для элемента</span></p>
+<p class="rvps2"><span class="rvts20">order</span><span class="rvts18"> - Устанавливает или возвращает порядок гибкого элемента, по отношению к остальным</span></p>
+<p class="rvps2"><span class="rvts20">orphans</span><span class="rvts18"> - Устанавливает или возвращает минимальное количество строк для элемента, который должен быть оставлен в нижней части страницы, когда разрыв страницы происходит внутри элемента</span></p>
+<p class="rvps2"><span class="rvts20">outline</span><span class="rvts18"> - Устанавливает или возвращает все свойства контурные в одной декларации</span></p>
+<p class="rvps2"><span class="rvts20">outlineColor</span><span class="rvts18"> - Устанавливает или возвращает цвет контура вокруг элемента</span></p>
+<p class="rvps2"><span class="rvts20">outlineOffset</span><span class="rvts18"> - Смещает контур и рисует его за пределы границы края</span></p>
+<p class="rvps2"><span class="rvts20">outlineStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль контура вокруг элемента</span></p>
+<p class="rvps2"><span class="rvts20">outlineWidth</span><span class="rvts18"> - Устанавливает или возвращает ширину контура вокруг элемента</span></p>
+<p class="rvps2"><span class="rvts20">overflow</span><span class="rvts18"> - Устанавливает или возвращает то, что делать с содержимым, которое делает вне коробки элемента</span></p>
+<p class="rvps2"><span class="rvts20">overflowX</span><span class="rvts18"> - Определяет, что делать с левым / правым краями содержания, если оно переполняет область содержимого элемента</span></p>
+<p class="rvps2"><span class="rvts20">overflowY</span><span class="rvts18"> - Определяет, что делать с верхними / нижними краями содержания, если оно переполняет область содержимого элемента</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">padding</span><span class="rvts18"> - Устанавливает или возвращает заполнение элемента (может иметь до четырех значений)</span></p>
+<p class="rvps2"><span class="rvts20">paddingBottom</span><span class="rvts18"> - Устанавливает или возвращает нижний отступы элемента</span></p>
+<p class="rvps2"><span class="rvts20">paddingLeft</span><span class="rvts18"> - Устанавливает или возвращает левый отступ элемента</span></p>
+<p class="rvps2"><span class="rvts20">paddingRight</span><span class="rvts18"> - Устанавливает или возвращает правильное заполнение элемента</span></p>
+<p class="rvps2"><span class="rvts20">paddingTop</span><span class="rvts18"> - Устанавливает или возвращает верхнего отступа элемента</span></p>
+<p class="rvps2"><span class="rvts20">pageBreakAfter</span><span class="rvts18"> - Устанавливает или возвращает поведение разделённого на страницы после элемента</span></p>
+<p class="rvps2"><span class="rvts20">pageBreakBefore</span><span class="rvts18"> - Устанавливает или возвращает поведение страницы перерыв перед элементом</span></p>
+<p class="rvps2"><span class="rvts20">pageBreakInside</span><span class="rvts18"> - Устанавливает или возвращает поведение разделённого на страницы внутри элемента</span></p>
+<p class="rvps2"><span class="rvts20">perspective</span><span class="rvts18"> - Устанавливает или возвращает перспективу о том, как 3D-элементы просматриваются</span></p>
+<p class="rvps2"><span class="rvts20">perspectiveOrigin</span><span class="rvts18"> - Устанавливает или возвращает нижнее положение 3D-элементов</span></p>
+<p class="rvps2"><span class="rvts20">position</span><span class="rvts18"> - Устанавливает или возвращает тип способа позиционирования, используемый для элемента (статический, относительный, абсолютный или фиксированный)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">quotes</span><span class="rvts18"> - Устанавливает или возвращает тип кавычек для встроенных цитат</span></p>
+<p class="rvps2"><span class="rvts20">resize</span><span class="rvts18"> - Устанавливает или возвращает ли или не изменяемыми пользователем элемент</span></p>
+<p class="rvps2"><span class="rvts20">right</span><span class="rvts18"> - Устанавливает или возвращает правильное положение позиционируемого элемента</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">tableLayout</span><span class="rvts18"> - Устанавливает или возвращает путь к раскладывать ячеек таблицы, строк и столбцов</span></p>
+<p class="rvps2"><span class="rvts20">tabSize</span><span class="rvts18"> - Устанавливает или возвращает длину вкладки-символа</span></p>
+<p class="rvps2"><span class="rvts20">textAlign</span><span class="rvts18"> - Устанавливает или возвращает горизонтальное выравнивание текста</span></p>
+<p class="rvps2"><span class="rvts20">textAlignLast</span><span class="rvts18"> - Устанавливает или возвращает, как последняя строка блока или линии прямо перед принудительным разрывом строки выравнивается, когда выравнивания текста является "оправдать"</span></p>
+<p class="rvps2"><span class="rvts20">textDecoration</span><span class="rvts18"> - Устанавливает или возвращает оформление текста</span></p>
+<p class="rvps2"><span class="rvts20">textDecorationColor</span><span class="rvts18"> - Устанавливает или возвращает цвет текста-украшения</span></p>
+<p class="rvps2"><span class="rvts20">textDecorationLine</span><span class="rvts18"> - Устанавливает или возвращает тип строки в текстовом украшение</span></p>
+<p class="rvps2"><span class="rvts20">textDecorationStyle</span><span class="rvts18"> - Устанавливает или возвращает стиль линии в текстовом украшение</span></p>
+<p class="rvps2"><span class="rvts20">textIndent</span><span class="rvts18"> - Устанавливает или возвращает отступ первой строки текста</span></p>
+<p class="rvps2"><span class="rvts20">textJustify</span><span class="rvts18"> - Устанавливает или возвращает метод обоснования используется, когда выравнивания текста является "оправдать"</span></p>
+<p class="rvps2"><span class="rvts20">textOverflow</span><span class="rvts18"> - Устанавливает или возвращает то, что должно произойти, когда текст переполняет содержащий элемент</span></p>
+<p class="rvps2"><span class="rvts20">textShadow</span><span class="rvts18"> - Устанавливает или возвращает теневой эффект текста</span></p>
+<p class="rvps2"><span class="rvts20">textTransform</span><span class="rvts18"> - Устанавливает или возвращает капитализацию текста</span></p>
+<p class="rvps2"><span class="rvts20">top</span><span class="rvts18"> - Устанавливает или возвращает верхнее положение позиционируемого элемента</span></p>
+<p class="rvps2"><span class="rvts20">transform</span><span class="rvts18"> - Применяет преобразование 2D или 3D трансформацию к элементу</span></p>
+<p class="rvps2"><span class="rvts20">transformOrigin</span><span class="rvts18"> - Устанавливает или возвращает позицию трансформированных элементов</span></p>
+<p class="rvps2"><span class="rvts20">transformStyle</span><span class="rvts18"> - Устанавливает или возвращает хау вложенные элементы отображаются в 3D-пространстве</span></p>
+<p class="rvps2"><span class="rvts20">transition</span><span class="rvts18"> - сокращённое свойство для установки или возвращения четырех свойств перехода</span></p>
+<p class="rvps2"><span class="rvts20">transitionProperty</span><span class="rvts18"> - Устанавливает или возвращает свойство CSS, что переходный эффект для</span></p>
+<p class="rvps2"><span class="rvts20">transitionDuration</span><span class="rvts18"> - Устанавливает или возвращает сколько секунд или миллисекунды эффект перехода требуется для завершения</span></p>
+<p class="rvps2"><span class="rvts20">transitionTimingFunction</span><span class="rvts18"> - Устанавливает или возвращает кривую скорости эффекта перехода</span></p>
+<p class="rvps2"><span class="rvts20">transitionDelay</span><span class="rvts18"> - Устанавливает или возвращает, когда эффект перехода начнется</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">unicodeBidi</span><span class="rvts18"> - Устанавливает или возвращает, должен ли текст быть перекрыты для поддержки нескольких языков в одном документе</span></p>
+<p class="rvps2"><span class="rvts20">verticalAlign</span><span class="rvts18"> - Устанавливает или возвращает вертикальное выравнивание содержимого в элементе</span></p>
+<p class="rvps2"><span class="rvts20">visibility</span><span class="rvts18"> - Устанавливает или возвращает, должен ли элемент быть видимым</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">whiteSpace</span><span class="rvts18"> - Устанавливает или возвращает, как обрабатывать вкладки, разрывы строк и пробелы в тексте</span></p>
+<p class="rvps2"><span class="rvts20">width</span><span class="rvts18"> - Устанавливает или возвращает ширину элемента</span></p>
+<p class="rvps2"><span class="rvts20">wordBreak</span><span class="rvts18"> - Устанавливает или возвращает строки нарушение правил для не CJK скриптов</span></p>
+<p class="rvps2"><span class="rvts20">wordSpacing</span><span class="rvts18"> - Устанавливает или возвращает интервал между словами в тексте</span></p>
+<p class="rvps2"><span class="rvts20">wordWrap</span><span class="rvts18"> - Позволяет длинные, неразрывные слова были сломаны и обернуть на следующую строку</span></p>
+<p class="rvps2"><span class="rvts20">widows</span><span class="rvts18"> - Устанавливает или возвращает минимальное количество строк для элемента, который должен быть виден в верхней части страницы</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">zIndex</span><span class="rvts18"> - Устанавливает или возвращает порядок стека позиционируемого элемента</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#myDiv {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 1px solid black;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;background-color: lightblue;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width: 300px;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;height: 300px;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;position: relative;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;top: 20px;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;left: 10px;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById("myDiv").style.position = "absolute";</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;p&gt;</span><span class="rvts25">Меняем позицию при загрузке тела.</span><span class="rvts22">&lt;/p&gt;</span><br/><span class="rvts22">&lt;div </span><span class="rvts23">id=</span><span class="rvts24">"myDiv"</span><span class="rvts22">&gt;&lt;/div&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Easy Qt Help documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

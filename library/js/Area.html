@@ -1,0 +1,117 @@
+﻿<html>
+	
+<head>
+	<title>Area</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Area");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Area</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptHTMLObjects.html">JavaScript HTML Objects</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptHTMLObjects.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Anchor.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Base.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Area</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">Каждый элемент &lt;area&gt; определяет активные области изображения, которые являются ссылками.</span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Свойства</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">accessKey</span><span class="rvts18"> - Устанавливает или возвращает клавишу клавиатуры для доступа к объекту области</span></p>
+<p class="rvps2"><span class="rvts20">alt</span><span class="rvts18"> - Устанавливает или возвращает альтернативный текст для браузеров, которые не могут показать область</span></p>
+<p class="rvps2"><span class="rvts20">coords</span><span class="rvts18"> - Устанавливает или возвращает разделенный запятыми список длин, который определяет активная область</span></p>
+<p class="rvps2"><span class="rvts20">hash</span><span class="rvts18"> - Устанавливает или возвращает анкерную часть URL (начинается с #)</span></p>
+<p class="rvps2"><span class="rvts20">host</span><span class="rvts18"> - Устанавливает или возвращает имя хоста и порт URL</span></p>
+<p class="rvps2"><span class="rvts20">hostname</span><span class="rvts18"> - Устанавливает или возвращает имя сервера и доменное имя / IP-адрес URL</span></p>
+<p class="rvps2"><span class="rvts20">href</span><span class="rvts18"> - Устанавливает или возвращает весь URL</span></p>
+<p class="rvps2"><span class="rvts20">id</span><span class="rvts18"> - Устанавливает или возвращает идентификатор объекта области (В IE 4 это свойство только для чтения)</span></p>
+<p class="rvps2"><span class="rvts20">noHref</span><span class="rvts18"> - Устанавливает или возвращает, если область должна быть неактивным</span></p>
+<p class="rvps2"><span class="rvts20">pathname</span><span class="rvts18"> - Задает или возвращает имя пути URL</span></p>
+<p class="rvps2"><span class="rvts20">port</span><span class="rvts18"> - Задает или возвращает URL-адрес порта, на котором используется сервер</span></p>
+<p class="rvps2"><span class="rvts20">protocol</span><span class="rvts18"> - Устанавливает или возвращает протокол URL (в том числе первого двоеточия) e.g "HTTP:", "https:"</span></p>
+<p class="rvps2"><span class="rvts20">search</span><span class="rvts18"> - Устанавливает или возвращает раздел URL строки запроса (включая знак вопроса (?))</span></p>
+<p class="rvps2"><span class="rvts20">shape</span><span class="rvts18"> - Устанавливает или возвращает форму области</span></p>
+<p class="rvps2"><span class="rvts20">tabIndex</span><span class="rvts18"> - Устанавливает или возвращает порядок табуляции объекта области</span></p>
+<p class="rvps2"><span class="rvts20">target</span><span class="rvts18"> - Устанавливает или возвращает имя целевого URL ссылки в</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">События</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onClick</span><span class="rvts18"> - Выполняет некоторый код, когда происходит событие Нажмите</span></p>
+<p class="rvps2"><span class="rvts20">onDblClick</span><span class="rvts18"> - Выполняет некоторый код, когда происходит событие Двойное нажатие</span></p>
+<p class="rvps2"><span class="rvts20">onMouseOut</span><span class="rvts18"> - Выполняет некоторый код, когда происходит событие Мышь покидает пределы объекта</span></p>
+<p class="rvps2"><span class="rvts20">onMouseOver</span><span class="rvts18"> - Выполняет некоторый код, когда происходит событие Мышь входит в пределы объекта</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onClick()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementById('image').src="image0.png"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;function onDblClick(id)</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementById('image').src="image" + id + ".png"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;function onMouseOut()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementById('image').src="image0.png"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;function onMouseOver(id)</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.getElementById('image').src="image" + id + ".png"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body&gt;</span><br/><span class="rvts22">&lt;div&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;map </span><span class="rvts23">name=</span><span class="rvts24">"navigation"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">&lt;!--</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;area shape="rect" coords="X1,Y1,X2,Y2" /&gt;</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;area shape="circle" coords="X1,Y1,R" /&gt;</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;area shape="poly" coords="X1,Y1,X2,Y2,XN,YN" /&gt;</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;--&gt;</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;area </span><span class="rvts23">shape=</span><span class="rvts24">"rect" </span><span class="rvts23">coords=</span><span class="rvts24">"18,21,134,124" </span><span class="rvts23">href=</span><span class="rvts24">"" </span><span class="rvts23">alt=</span><span class="rvts24">"" </span><span class="rvts23">id=</span><span class="rvts24">"1" </span></p>
+<p class="rvps7"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">onclick=</span><span class="rvts24">"onClick()" </span><span class="rvts23">ondblclick=</span><span class="rvts24">"onDblClick(this.id)" </span><span class="rvts23">onmouseout=</span><span class="rvts24">"onMouseOut()" </span><span class="rvts23">onmouseover=</span><span class="rvts24">"onMouseOver(this.id)" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;area </span><span class="rvts23">shape=</span><span class="rvts24">"poly" </span><span class="rvts23">coords=</span><span class="rvts24">"167,21,230,21,294,72,230,124,167,124" </span><span class="rvts23">href=</span><span class="rvts24">"" </span><span class="rvts23">alt=</span><span class="rvts24">"" </span><span class="rvts23">id=</span><span class="rvts24">"2" </span></p>
+<p class="rvps7"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">onclick=</span><span class="rvts24">"onClick()" </span><span class="rvts23">ondblclick=</span><span class="rvts24">"onDblClick(this.id)" </span><span class="rvts23">onmouseout=</span><span class="rvts24">"onMouseOut()" </span><span class="rvts23">onmouseover=</span><span class="rvts24">"onMouseOver(this.id)" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;area </span><span class="rvts23">shape=</span><span class="rvts24">"poly" </span><span class="rvts23">coords=</span><span class="rvts24">"13,270,86,153,160,270" </span><span class="rvts23">href=</span><span class="rvts24">"" </span><span class="rvts23">alt=</span><span class="rvts24">"" </span><span class="rvts23">id=</span><span class="rvts24">"3" </span></p>
+<p class="rvps7"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">onclick=</span><span class="rvts24">"onClick()" </span><span class="rvts23">ondblclick=</span><span class="rvts24">"onDblClick(this.id)" </span><span class="rvts23">onmouseout=</span><span class="rvts24">"onMouseOut()" </span><span class="rvts23">onmouseover=</span><span class="rvts24">"onMouseOver(this.id)" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;area </span><span class="rvts23">shape=</span><span class="rvts24">"poly" </span><span class="rvts23">coords=</span><span class="rvts24">"237,150,315,150,355,270,198,270" </span><span class="rvts23">href=</span><span class="rvts24">"" </span><span class="rvts23">alt=</span><span class="rvts24">"" </span><span class="rvts23">id=</span><span class="rvts24">"4" </span></p>
+<p class="rvps7"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts23">onclick=</span><span class="rvts24">"onClick()" </span><span class="rvts23">ondblclick=</span><span class="rvts24">"onDblClick(this.id)" </span><span class="rvts23">onmouseout=</span><span class="rvts24">"onMouseOut()" </span><span class="rvts23">onmouseover=</span><span class="rvts24">"onMouseOver(this.id)" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;/map&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;img </span><span class="rvts23">id=</span><span class="rvts24">"image" </span><span class="rvts23">src=</span><span class="rvts24">"image0.png" </span><span class="rvts23">usemap=</span><span class="rvts24">"#navigation" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22">&lt;/div&gt;</span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

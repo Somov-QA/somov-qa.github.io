@@ -1,0 +1,132 @@
+﻿<html>
+	
+<head>
+	<title>8. Конвертирование FBX в G3DB/G3DJ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("8FBXG3DBG3DJ");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">8. Конвертирование FBX в G3DB/G3DJ</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="libGDX1.html">libGDX</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="libGDX1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="7Obj.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="9G3DJ.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">libGDX не поддерживает формат fbx по этому его нужно конвертировать в формат G3DB или G3DJ.</span></p>
+<p class="rvps2"><span class="rvts6">Разница этих форматов заключается в следующем:</span></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside; list-style-type: disc;">
+<li class="rvps2"><span class="rvts6">G3DB - это закодированный файл с плотно упакованными данными.</span></li>
+<li class="rvps2"><span class="rvts6">G3DJ - это файл в формате json он занимает больше место но позволяет себя редактировать.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">ВАЖНО!!! Файл FBX созданный в Maya при конвертации получается свойство opacity равным 0 что в итоге делает объект невидимым. В связи с этим рекомендуется использовать формат G3DJ для дальнейшего его ручного редактирования с целью исправления ошибки и поиска идентификатора анимации.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Программу конвертирования можно скачать по адресу: </span><a class="rvts11" href="http://libgdx.badlogicgames.com/fbx-conv/" target="_blank">http://libgdx.badlogicgames.com/fbx-conv/</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Исходник этой программы находится в репозитории по адресу: </span><a class="rvts11" href="https://github.com/libgdx/fbx-conv" target="_blank">https://github.com/libgdx/fbx-conv</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Опции / Флаги</span></p>
+<p class="rvps2"><span class="rvts6">-? Display help information.</span></p>
+<p class="rvps2"><span class="rvts6">-o &lt;type&gt; Set the type of the output file to &lt;type&gt;</span></p>
+<p class="rvps2"><span class="rvts6">-f Flip the V texture coordinates.</span></p>
+<p class="rvps2"><span class="rvts6">-p Pack vertex colors to one float.</span></p>
+<p class="rvps2"><span class="rvts6">-m &lt;size&gt; The maximum amount of vertices or indices a mesh may contain (default: 32k)</span></p>
+<p class="rvps2"><span class="rvts6">-b &lt;size&gt; The maximum amount of bones a nodepart can contain (default: 12)</span></p>
+<p class="rvps2"><span class="rvts6">-w &lt;size&gt; The maximum amount of bone weights per vertex (default: 4)</span></p>
+<p class="rvps2"><span class="rvts6">-v Verbose: print additional progress information</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Последовательность действий при конвертации:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1) Скачать и распаковать архив fbx-conv.zip в папку /fbx-conv/</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2) Скопировать полученный fbx файл в папку /fbx-conv/</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">3) В папке /fbx-conv/ открыть консоль (нажать "shift" + "mouse right button", и выбрать "Открыть окно команды")</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">4) Ввести команду конвертации</span></p>
+<p class="rvps2"><span class="rvts6">чтобы текстура правильно распологалась на модели нужно использовать флаг -f</span></p>
+<p class="rvps7"><span class="rvts6">fbx-conv-win32 -f -o G3DJ name_file.fbx</span></p>
+<p class="rvps2"><span class="rvts6">если модель привышает размер вершин 32к нужно указать это в команде следующим образом</span></p>
+<p class="rvps7"><span class="rvts6">fbx-conv-win32 -f -m 50k -o G3DJ name_file.fbx</span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">5) После конвертации в папке /fbx-conv/ появится файл name_file.g3dj Этот файл нужно открыть в текстовом редакторе и заменить строку:</span></p>
+<p class="rvps7"><span class="rvts6">"opacity": &nbsp;0.000000,</span></p>
+<p class="rvps2"><span class="rvts6">на</span></p>
+<p class="rvps7"><span class="rvts6">"opacity": &nbsp;1.000000, </span></p>
+<p class="rvps7"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">6) Если это объект имеет анимацию вам понадобится идентификатор этой анимации, вы можете его найти в этом же файле name_file.g3dj открыв его в текстовом редакторе и найдя такие строки:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps7"><span class="rvts6">"animations": [</span></p>
+<p class="rvps7"><span class="rvts6">{</span></p>
+<p class="rvps7"><span class="rvts6">"id": "Take 001",</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">в данном примере идентификатором анимации является Take 001</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

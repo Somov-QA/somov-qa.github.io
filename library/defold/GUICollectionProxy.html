@@ -1,0 +1,202 @@
+﻿<html>
+	
+<head>
+	<title>GUI и Collection Proxy (гуи и прокси коллекция)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GUICollectionProxy");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GUI и Collection Proxy (гуи и прокси коллекция)</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Defold.html">Defold</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Defold.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="GUI.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="CollectionProxy.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Прокси коллекции меню и окно будут созданы динамически</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<div class="rvps3"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="257" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem10.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem11.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem12.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">Основная коллекция main</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem13.png"></p>
+</td>
+<td width="401" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><span class="rvts8">Окно меню должко показывать окно сообщения при этом теряя фокус передавая его окну сообщения.</span></p>
+<p class="rvps3"><span class="rvts8">Файл: </span><span class="rvts16">main_menu.gui_script</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> init(self)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- получаем фокус</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"focus_off"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"release_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- теряем фокус</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"focus_on"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- получаем фокус</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_input(self, action_id, action)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> action_id == hash(</span><span class="rvts19">"touch"</span><span class="rvts8">) </span><span class="rvts13">and</span><span class="rvts8"> action.pressed </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">local</span><span class="rvts8"> start = gui.get_node(</span><span class="rvts19">"start"</span><span class="rvts8">) </span><span class="rvts14">-- ссылка на кнопку старт</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> gui.pick_node(start, action.x, action.y) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"main:/main_go#script"</span><span class="rvts8">, </span><span class="rvts19">"show_window"</span><span class="rvts8">) </span><span class="rvts14">-- показать окно</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">Окно сообщения при закрытии теряет покус возвращая его в окно меню.</span></p>
+<p class="rvps3"><span class="rvts20">Файл: </span><span class="rvts21">window.gui_script</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> init(self)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- получаем фокус</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"focus_off"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"release_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- теряем фокус</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"focus_on"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts8">) </span><span class="rvts14">-- получаем фокус</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_input(self, action_id, action)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> action_id == hash(</span><span class="rvts19">"touch"</span><span class="rvts8">) </span><span class="rvts13">and</span><span class="rvts8"> action.pressed </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">local</span><span class="rvts8"> start = gui.get_node(</span><span class="rvts19">"start"</span><span class="rvts8">) </span><span class="rvts14">-- ссылка на кнопку старт</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> gui.pick_node(start, action.x, action.y) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"main:/main_go#script", "hide_window"</span><span class="rvts8">) </span><span class="rvts14">-- закрыть окно</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">Основная коллекция main объединяет обе прокси коллецкии и динамически создаёт их.</span></p>
+<p class="rvps3"><span class="rvts20">Файл: </span><span class="rvts21">main.script</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts20"> init(self)</span></p>
+<p class="rvps3"><span class="rvts20"></span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">msg.post(</span><span class="rvts19">"#"</span><span class="rvts20">, </span><span class="rvts19">"create_menu"</span><span class="rvts20">) </span><span class="rvts14">-- сообщение для текущего скрипта</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts20"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts20"> message_id == hash(</span><span class="rvts19">"create_menu"</span><span class="rvts20">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"menu_go#menu_collection_proxy"</span><span class="rvts20">, </span><span class="rvts19">"load"</span><span class="rvts20">) </span><span class="rvts14">--загружаем прокси коллекцию</span></p>
+<p class="rvps3"><span class="rvts20"></span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts20"> message_id == hash(</span><span class="rvts19">"proxy_loaded"</span><span class="rvts20">) </span></p>
+<p class="rvps3"><span class="rvts13">and</span><span class="rvts20"> sender.fragment == hash(</span><span class="rvts19">"menu_collection_proxy"</span><span class="rvts20">) </span><span class="rvts13">then</span><span class="rvts20"> &nbsp; </span></p>
+<p class="rvps3"><span class="rvts14">-- если прокси коллекция загружена</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">-- инициализируем и включаем загруженную прокси коллекцию.</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts19">"init"</span><span class="rvts20">)</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">-- инициализация загруженной прокси коллекции</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts19">"enable"</span><span class="rvts20">) </span><span class="rvts14">-- включение загруженной прокси коллекции</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts20">) </span><span class="rvts14">-- передаём фокус в загруженную коллекцию</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts20"> message_id == hash("proxy_loaded") </span></p>
+<p class="rvps3"><span class="rvts13">and</span><span class="rvts20"> sender.fragment == hash("window_collection_proxy") </span><span class="rvts13">then</span><span class="rvts20"> </span></p>
+<p class="rvps3"><span class="rvts14">-- если прокси коллекция загружена</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, "init")</span><span class="rvts14"> -- инициализация загруженной прокси коллекции</span></p>
+<p class="rvps3"><span class="rvts20"></span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20"> </span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts20"> message_id == hash(</span><span class="rvts19">"show_window"</span><span class="rvts20">) </span><span class="rvts13">then</span><span class="rvts20"> </span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"menu_collection:/main_menu_go#gui"</span><span class="rvts20">, </span><span class="rvts19">"focus_off"</span><span class="rvts20">) </span><span class="rvts14">-- отключаем фокус</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"window_collection:/window_go#gui"</span><span class="rvts20">, </span><span class="rvts19">"focus_on"</span><span class="rvts20">) </span><span class="rvts14">-- включаем фокус</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"main:/menu_go#window_collection_proxy"</span><span class="rvts20">, </span><span class="rvts19">"enable"</span><span class="rvts20">) </span><span class="rvts14">-- включаем коллекцию</span></p>
+<p class="rvps3"><span class="rvts20"></span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20"> </span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">elseif</span><span class="rvts20"> message_id == hash(</span><span class="rvts19">"hide_window"</span><span class="rvts20">) </span><span class="rvts13">then</span><span class="rvts20"> </span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"menu_collection:/main_menu_go#gui"</span><span class="rvts20">, </span><span class="rvts19">"focus_on"</span><span class="rvts20">)</span><span class="rvts14"> -- включаем фокус</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"window_collection:/window_go#gui"</span><span class="rvts20">, </span><span class="rvts19">"focus_off"</span><span class="rvts20">) </span><span class="rvts14">-- отключаем фокус</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(</span><span class="rvts19">"main:/menu_go#window_collection_proxy"</span><span class="rvts20">, </span><span class="rvts19">"disable"</span><span class="rvts20">)</span><span class="rvts14"> -- отключаем коллекцию</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

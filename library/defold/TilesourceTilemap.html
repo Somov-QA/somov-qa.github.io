@@ -1,0 +1,141 @@
+﻿<html>
+	
+<head>
+	<title>Tile source &amp; Tile map (тайлы)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("TilesourceTilemap");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Tile source &amp; Tile map (тайлы)</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Defold.html">Defold</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Defold.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="CollectionProxy.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Createtexture.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Сообщение “set_tile” - позволяет менять текстуры в клитках </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">msg.post(url,</span><span class="rvts19"> “set_tile”</span><span class="rvts8">, { layer_id, position, tile, dx, dy})</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">layer_id - идентификатор слоя</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">position - положение ячейки которую нужно изменить</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">tile - индекс плитки (0 - очистить, по умолчанию, 1 - для первой плитки)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">dx - горизонтальное смещение (по умолчанию 0)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">dy - вертикальное смещение &nbsp;(по умолчанию 0)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<div class="rvps3"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="309" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem14.png"></p>
+</td>
+<td width="349" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> init(self)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"."</span><span class="rvts8">, </span><span class="rvts19">"acquire_input_focus"</span><span class="rvts8">)</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_input(self, action_id, action)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> action_id == hash(</span><span class="rvts19">"touch"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">local</span><span class="rvts8"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), tile = 2, position = pos, dy = 1})</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Примеры сообщений для работы с тайлами</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Координаты указываются через GameObject</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"edit_tile"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), position = go.get_position(), dy = 1})</span></p>
+<p class="rvps7"><span class="rvts14">-- или</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), tile = 1, position = go.get_position(), dy = 1})</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Указываем координаты в ручную</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">if</span><span class="rvts8"> message_id == hash(</span><span class="rvts19">"edit_tile"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">local</span><span class="rvts8"> doorpos = vmath.vector3(430, 365, 0)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), tile = 0, position = doorpos, dy = 1})</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">doorpos = vmath.vector3(500, 360, 0)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), tile = 0, position = doorpos, dy = 1})</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Координаты определяются по нажатию клавиши мыши</span></p>
+<p class="rvps3"><span class="rvts13">function</span><span class="rvts8"> on_input(self, action_id, action)</span></p>
+<p class="rvps6"><span class="rvts13">if</span><span class="rvts8"> action_id == hash(</span><span class="rvts19">"touch"</span><span class="rvts8">) </span><span class="rvts13">then</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">local</span><span class="rvts8"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">msg.post(</span><span class="rvts19">"/test_tile#tilemap"</span><span class="rvts8">, </span><span class="rvts19">"set_tile"</span><span class="rvts8">, {layer_id = hash(</span><span class="rvts19">"layer1"</span><span class="rvts8">), tile = 2, position = pos, dy = 1})</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts13">end</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
