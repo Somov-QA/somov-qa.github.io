@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Models 3D (3D модели)</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Models 3D (3D модели)">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Models 3D (3D модели)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="GameDev" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>GameDev</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#index" id="tab-index" aria-controls="index" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#search" id="tab-search" aria-controls="search" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Models3D3D"
+		  data-hnd-context="238"
+		  data-hnd-title="Models 3D (3D модели)"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="Newtopic21.html">Игровые движки</a></li><li><a href="Defold.html">Defold</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="Defold.html" title="Defold" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="Createtexture.html" title="Create texture (создание текстуры)" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Camera.html" title="Camera (Камера)" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Models 3D (3D модели)</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts6">Компонент материал</span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="244" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem24.png"></p>
+</td>
+<td width="810" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл:</span><span class="rvts27"> test_model_3d_material.vp</span><span class="rvts6"> &nbsp;(Vertex Program)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// view_proj и world устанавливаются как вершины констант</span></p>
+<p class="rvps2"><span class="rvts25">// получим к ним доступ в нашей программе вершинных шейдеров</span></p>
+<p class="rvps2"><span class="rvts25">// объявив их как "uniform".</span></p>
+<p class="rvps2"><span class="rvts25">//</span></p>
+<p class="rvps2"><span class="rvts61">uniform</span><span class="rvts62"> mediump mat4 view_proj;</span></p>
+<p class="rvps2"><span class="rvts61">uniform</span><span class="rvts62"> mediump mat4 world;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// position - занимает исходную позицию вершин.</span></p>
+<p class="rvps2"><span class="rvts68">attribute mediump vec4 position;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// texcoord0 - содержит координаты текстуры для этой вершины.</span></p>
+<p class="rvps2"><span class="rvts68">attribute mediump vec2 texcoord0;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// Определение вариантов которые будет интерполировать координаты текстуры</span></p>
+<p class="rvps2"><span class="rvts25">// между вершинами. Фрагмент шейдер будет будет читать это значение.</span></p>
+<p class="rvps2"><span class="rvts68">varying mediump vec2 var_texcoord0;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts61">void</span><span class="rvts62"> main()</span></p>
+<p class="rvps2"><span class="rvts62">{</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts25">// Умножьте вид, проекцию и мир матриц в одну.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts68">mediump mat4 mvp = view_proj * world;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts25">// Изменяющаяся переменная texcoord0 находится в texcoord0 в положении</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp;// этой вершины.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; </span><span class="rvts68">var_texcoord0 = texcoord0;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts25">// &nbsp;Перевести позицию вершины с матрицей mvp.</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp;// The vec4(position.xyz, 1.0) гарантирует, что &nbsp;w компонента</span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp;// позиция всегда 1.0.</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts68">gl_Position = mvp * vec4(position.xyz, 1.0);</span></p>
+<p class="rvps2"><span class="rvts68">}</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Файл: </span><span class="rvts27">test_model_3d_material.fp</span><span class="rvts6"> &nbsp;(Fragment Program)</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// Координаты текстуры для этого фрагмента варьируется между вершинами</span></p>
+<p class="rvps2"><span class="rvts68">varying mediump vec2 var_texcoord0;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts25">// Данные текстуры для компонента доступна через sampler2D</span></p>
+<p class="rvps2"><span class="rvts69">uniform</span><span class="rvts68"> </span><span class="rvts69">sampler2D</span><span class="rvts68"> diffuse_texture;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts61">void</span><span class="rvts62"> main()</span></p>
+<p class="rvps2"><span class="rvts62">{</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts25">// Просмотр цвет текстуры в этом фрагменте координаты </span></p>
+<p class="rvps2"><span class="rvts25"> &nbsp; &nbsp;// и установить цвет фрагмента к нему..</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts68">gl_FragColor = </span><span class="rvts69">texture2D</span><span class="rvts68">(diffuse_texture, var_texcoord0);</span></p>
+<p class="rvps2"><span class="rvts68">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Компонент Визуализации</span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="256" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem23.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img width="263" height="123" alt="" style="padding : 1px;" src="lib/NewItem22.png"></p>
+</td>
+<td width="798" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: test_model_3d_render.render_script</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.model_pred = render.predicate({</span><span class="rvts64">"model_hoobo"</span><span class="rvts62">}) </span><span class="rvts70">-- добавили предикат</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.tile_pred = render.predicate({</span><span class="rvts64">"tile"</span><span class="rvts62">})</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.gui_pred = render.predicate({</span><span class="rvts64">"gui"</span><span class="rvts62">})</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.text_pred = render.predicate({</span><span class="rvts64">"text"</span><span class="rvts62">})</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.particle_pred = render.predicate({</span><span class="rvts64">"particle"</span><span class="rvts62">})</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color = vmath.vector4(</span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color.x = sys.get_config(</span><span class="rvts64">"render.clear_color_red"</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">.</span><span class="rvts63">1</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color.y = sys.get_config(</span><span class="rvts64">"render.clear_color_green"</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">.</span><span class="rvts63">3</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color.z = sys.get_config(</span><span class="rvts64">"render.clear_color_blue"</span><span class="rvts62">, </span><span class="rvts63">125</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color.w = sys.get_config(</span><span class="rvts64">"render.clear_color_alpha"</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.view = vmath.matrix4()</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> update(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_depth_mask(</span><span class="rvts61">true</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">--render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.clear({[render.BUFFER_COLOR_BIT] = </span><span class="rvts61">self</span><span class="rvts62">.clear_color, [render.BUFFER_DEPTH_BIT] = </span><span class="rvts63">1</span><span class="rvts62">})</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_viewport(</span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">, render.get_window_width(), render.get_window_height())</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_view(</span><span class="rvts61">self</span><span class="rvts62">.view)</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_depth_mask(</span><span class="rvts61">false</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.disable_state(render.STATE_DEPTH_TEST)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">--render.disable_state(render.STATE_STENCIL_TEST)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.enable_state(render.STATE_BLEND)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.disable_state(render.STATE_CULL_FACE)</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_projection(vmath.matrix4_orthographic(</span><span class="rvts63">0</span><span class="rvts62">, render.get_width(), </span><span class="rvts63">0</span><span class="rvts62">, render.get_height(), -</span><span class="rvts63">1</span><span class="rvts62">, </span><span class="rvts63">1</span><span class="rvts62">))</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw(</span><span class="rvts61">self</span><span class="rvts62">.tile_pred)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw(</span><span class="rvts61">self</span><span class="rvts62">.particle_pred)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">-- Для отображения 3D</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_depth_mask(</span><span class="rvts61">true</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.enable_state(render.STATE_DEPTH_TEST)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.enable_state(render.STATE_CULL_FACE)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_projection(vmath.matrix4_orthographic(</span><span class="rvts63">0</span><span class="rvts62">, render.get_width(), </span><span class="rvts63">0</span><span class="rvts62">, render.get_height(), -</span><span class="rvts63">1000</span><span class="rvts62">, </span><span class="rvts63">1000</span><span class="rvts62">))</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw(</span><span class="rvts61">self</span><span class="rvts62">.model_pred)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">-- Для отображения 3D</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw_debug3d()</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_view(vmath.matrix4())</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_projection(vmath.matrix4_orthographic(</span><span class="rvts63">0</span><span class="rvts62">, render.get_window_width(), </span><span class="rvts63">0</span><span class="rvts62">, render.get_window_height(), -</span><span class="rvts63">1</span><span class="rvts62">, </span><span class="rvts63">1</span><span class="rvts62">))</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">--render.enable_state(render.STATE_STENCIL_TEST)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.set_depth_mask(</span><span class="rvts61">false</span><span class="rvts62">)</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- Для отображения 3D</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.disable_state(render.STATE_DEPTH_TEST)</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- Для отображения 3D</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.disable_state(render.STATE_CULL_FACE)</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- Для отображения 3D</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw(</span><span class="rvts61">self</span><span class="rvts62">.gui_pred)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw(</span><span class="rvts61">self</span><span class="rvts62">.text_pred)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">--render.disable_state(render.STATE_STENCIL_TEST)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts70">--render.set_depth_mask(false)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;render.draw_debug2d()</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_message(</span><span class="rvts61">self</span><span class="rvts62">, message_id, message)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> message_id == hash(</span><span class="rvts64">"clear_color"</span><span class="rvts62">) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.clear_color = message.color</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> message_id == hash(</span><span class="rvts64">"set_view_projection"</span><span class="rvts62">) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.view = message.view</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Сцена 3D объектов. Описнаие скриптов взаимодействия с объектами.</span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td width="292" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem21.png"></p>
+</td>
+<td width="762" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Описание файла: script_sylinder_1.script</span></p>
+<p class="rvps2"><span class="rvts6">В данном скрипте мы явно указываем направление движения цилиндра</span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"acquire_input_focus"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"mouse_button_left"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmin = action.screen_x - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmax = action.screen_x + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymin = action.screen_y - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymax = action.screen_y + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> pos = go.get_position()</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> pos.x &gt;= xmin </span><span class="rvts61">and</span><span class="rvts62"> pos.x &lt;= xmax </span><span class="rvts61">and</span><span class="rvts62"> pos.y &gt;= ymin </span><span class="rvts61">and</span><span class="rvts62"> pos.y &lt;= ymax </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.x"</span><span class="rvts62">, pos.x - </span><span class="rvts63">5</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.y"</span><span class="rvts62">, pos.y + </span><span class="rvts63">2</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts62"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"mouse_button_right"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmin = action.screen_x - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmax = action.screen_x + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymin = action.screen_y - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymax = action.screen_y + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> pos = go.get_position(go.get_id())</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> pos.x &gt;= xmin </span><span class="rvts61">and</span><span class="rvts62"> pos.x &lt;= xmax </span><span class="rvts61">and</span><span class="rvts62"> pos.y &gt;= ymin </span><span class="rvts61">and</span><span class="rvts62"> pos.y &lt;= ymax </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.x"</span><span class="rvts62">, pos.x + </span><span class="rvts63">5</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.y"</span><span class="rvts62">, pos.y - </span><span class="rvts63">2</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">Описание файла: script_sylinder_2.script</span></p>
+<p class="rvps2"><span class="rvts6">В данном скрипте цилиндр будет следовать ка указателем мыши</span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"acquire_input_focus"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"mouse_button_left"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmin = action.screen_x - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmax = action.screen_x + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymin = action.screen_y - </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymax = action.screen_y + </span><span class="rvts63">25</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> pos = go.get_position()</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> pos.x &gt;= xmin </span><span class="rvts61">and</span><span class="rvts62"> pos.x &lt;= xmax </span><span class="rvts61">and</span><span class="rvts62"> pos.y &gt;= ymin </span><span class="rvts61">and</span><span class="rvts62"> pos.y &lt;= ymax </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.x"</span><span class="rvts62">, action.screen_x)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.y"</span><span class="rvts62">, action.screen_y)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts29">На форуме был пример кода для взаимодействия с игровым объектом</span></p>
+<p class="rvps2"><span class="rvts29">function on_input(self, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts29"> if action_id == input_mouse and action.pressed then</span></p>
+<p class="rvps2"><span class="rvts29"> </span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local spritePos = go.get_world_position("myGo") </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">-- getting my go position</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local mouseX = action.x &nbsp;-- getting mouse position</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local mouseY = action.y</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local rightBoundary = spritePos.x - 200 &nbsp; --200 is half the width of my go</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local leftBoundary = spritePos.x + 200</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local upperBoundary = spritePos.y + 200</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">local downBoundary = spritePos.y - 200</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">if mouseX &gt;= rightBoundary and mouseX &lt;= leftBoundary </span></p>
+<p class="rvps2"><span class="rvts29">and mouseY &gt;= downBoundary and mouseY &lt;= upperBoundary then</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">print("clicked")</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">else</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">print("outside")</span></p>
+<p class="rvps2"><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">end</span></p>
+<p class="rvps2"><span class="rvts29"> </span></p>
+<p class="rvps2"><span class="rvts29"> end</span></p>
+<p class="rvps2"><span class="rvts29">end</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Так же можно управлять определённый объекто с помощию мыши или клавиатуры (поворот)</span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"acquire_input_focus"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"touch"</span><span class="rvts62">) </span><span class="rvts61">or</span><span class="rvts62"> action_id == hash(</span><span class="rvts64">"mouse_press"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- Where did the user press/touch and how large is the screen?</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> x = action.screen_x</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> y = action.screen_y</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> width = sys.get_config(</span><span class="rvts64">"display.width"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> height = sys.get_config(</span><span class="rvts64">"display.height"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- Translate the interaction position to rotations</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- on X and Y axis.</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / height * y)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> yrot = vmath.quat_rotation_y(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / width * x)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set_rotation(xrot * yrot)</span></p>
+<p class="rvps2"><span class="rvts71"><br/></span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61"><br/></span></p>
+<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> width = sys.get_config(</span><span class="rvts64">"display.width"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> height = sys.get_config(</span><span class="rvts64">"display.height"</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"key_up"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / height * </span><span class="rvts63">100</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set_rotation(xrot)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"key_down"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / height * </span><span class="rvts63">0</span><span class="rvts62">)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set_rotation(xrot)</span></p>
+<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts61">end</span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
