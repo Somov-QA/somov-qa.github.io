@@ -1,41 +1,94 @@
+﻿
 
-
-<!DOCTYPE html> 
-<html> 
+<html>
+	
 <head>
 	<title>app.ts</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/hnd.css" />
-	<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
 	
-	<link rel="stylesheet" href="css/base.css" />
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("appts2");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
 </head>
 
 <body>
 
-	<div data-role="page"> 
+
+
 	
-		<div data-role="header" data-position="fixed">
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">app.ts</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic130.html">Шаблоны проектов</a> &rsaquo;&rsaquo; <a href="PhaserprojectfromGrunt.html">Phaser project from Grunt</a> &rsaquo;&rsaquo; <a href="ts1.html">ts</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
 			
-				<a data-direction="reverse" class="ui-btn ui-btn-left ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-arrow-l" href="Startts.html">
-					Start.ts
-				</a>
+			<div id="topic_header_nav">
+				
+				
+				<a href="ts1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Startts.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="vendor.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
 			
-			<h1>
-				app.ts
-			</h1>
-			
-				<a class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-arrow-r" href="vendor.html">
-					vendor
-				</a>
-			
-		</div>  <!-- /header -->
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
 		
-		<div role="main" class="ui-content">
-			
 <p></p>
 <p class="rvps2"><span class="rvts62">module Game {</span></p>
 <p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
@@ -72,22 +125,20 @@
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
 
-		</div>  <!-- /content -->
+	</div>
+	
+	
+		<div id="topic_footer">
 
-		<div data-role="footer">
-			
-				<h4>Copyright &copy; 2018 by Somov. All Rights Reserved.</h4>
-			
-			<a href="index.html" class="footer-button-left ui-btn ui-btn-left ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-home">
-				Home
-			</a>
-			
-			    <!--class="ui-btn-left ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-home">-->
-		</div>  <!-- /footer -->
-		
-	</div>  <!-- /page -->
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
 	
 </body>
-
+	
 </html>
 
