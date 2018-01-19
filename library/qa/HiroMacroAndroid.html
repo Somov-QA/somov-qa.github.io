@@ -1,0 +1,644 @@
+﻿
+
+<html>
+	
+<head>
+	<title>HiroMacro (Android)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("HiroMacroAndroid");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">HiroMacro (Android)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic8.html">ПО для тестирования</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic8.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="HeidiSQL.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="IETester.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps127"><span class="rvts165">HiroMacro это автокликер для Android устройств с сенсорным управлением</span></p>
+<p class="rvps128"><span class="rvts165">Официальный сайт:&nbsp;</span><a class="rvts179" href="https://play.google.com/store/apps/details?id=com.prohiro.macro&hl=ru">https://play.google.com/store/apps/details?id=com.prohiro.macro&amp;hl=ru</a></p>
+<h1 class="rvps129"><span class="rvts0"><span class="rvts180">Инструкция</span></span></h1>
+<p class="rvps128"><span class="rvts165">1. Установить приложение</span></p>
+<p class="rvps128"><span class="rvts165">2. Запустить приложение</span></p>
+<p class="rvps128"><span class="rvts165">3. Нажать кнопку "Старт"</span></p>
+<p class="rvps128"><img alt="" style="padding : 1px;" src="lib/NewItem80.png"></p>
+<p class="rvps128"><span class="rvts165">4. Для записи действий нужно открыть игру, и нажать кнопку уменьшения звука на устройстве</span></p>
+<p class="rvps128"><span class="rvts165">5. Откроется окно в котором нужно нажать кнопку записть.</span></p>
+<p class="rvps128"><img alt="" style="padding : 1px;" src="lib/NewItem81.png"></p>
+<p class="rvps128"><span class="rvts165">6. Для остановки записи действий нужно повторно нажать кнопку уменьшения звука</span></p>
+<p class="rvps128"><span class="rvts165">7. Для воспроизведения скрипта, необходимо нажать кнопку уменьшения звука и выбрать нужный скрипт.</span></p>
+<h1 class="rvps129"><span class="rvts0"><span class="rvts180">Мануал по скриптам на русском языке</span></span></h1>
+<p class="rvps130"><span class="rvts165">touchDown&nbsp;finger&nbsp;x&nbsp;y</span></p>
+<p class="rvps130"><span class="rvts165">Нажатие&nbsp;на&nbsp;экран&nbsp;Параметры</span></p>
+<p class="rvps130"><span class="rvts165">finger: номер&nbsp;пальца.&nbsp;максимум&nbsp;4,&nbsp;0&nbsp;для&nbsp;рандома&nbsp;x:&nbsp;координаты&nbsp;по&nbsp;x</span></p>
+<p class="rvps130"><span class="rvts165">y:&nbsp;координаты&nbsp;&nbsp;по&nbsp;&nbsp;y&nbsp;пример:</span></p>
+<p class="rvps130"><span class="rvts165">touchDown&nbsp;0&nbsp;100&nbsp;200</span></p>
+<p class="rvps130"><span class="rvts165">touchDown&nbsp;1&nbsp;300&nbsp;300</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">touchMove&nbsp;finger&nbsp;x&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Движение&nbsp;пальца&nbsp;по&nbsp;прямой&nbsp;к&nbsp;указанной&nbsp;координате&nbsp;Параметры&nbsp;те&nbsp;же</span></p>
+<p class="rvps130"><span class="rvts165">пример:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Прикоснемся&nbsp;&nbsp;пальцем&nbsp;&nbsp;0&nbsp;к&nbsp;&nbsp;экрану&nbsp;touchDown&nbsp;0&nbsp;100&nbsp;200</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Прикоснемся&nbsp;&nbsp;пальцем&nbsp;&nbsp;1&nbsp;к&nbsp;&nbsp;экрану&nbsp;touchDown&nbsp;1&nbsp;500&nbsp;500</span></p>
+<p class="rvps130"><span class="rvts165">// Двинем&nbsp;пальцем&nbsp;0&nbsp;к&nbsp;координате&nbsp;30,20&nbsp;touchMove&nbsp;0&nbsp;30&nbsp;20</span></p>
+<p class="rvps130"><span class="rvts165">// Двинем&nbsp;пальцем&nbsp;1&nbsp;к&nbsp;координате&nbsp;0,0&nbsp;touchMove&nbsp;1&nbsp;0&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Поясню.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Мы&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;прикасались&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;к&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;экрану&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;двумя&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;пальцами,&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;условно&nbsp;обозначенными&nbsp;0&nbsp;и &nbsp;1.&nbsp;палец&nbsp;0&nbsp;сдвинулся&nbsp;&nbsp;от &nbsp;100,200&nbsp;к&nbsp;30,20,&nbsp;а &nbsp;палец&nbsp;1&nbsp;-&nbsp;от</span></p>
+<p class="rvps130"><span class="rvts165">500,500&nbsp;к&nbsp;0,0</span></p>
+<p class="rvps130"><span class="rvts165">4.2.3.&nbsp;touchUp&nbsp;finger&nbsp;Отрыв&nbsp;пальца&nbsp;от&nbsp;экрана&nbsp;Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">finger: номер&nbsp;пальца&nbsp;пример:</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Прикоснемся&nbsp;&nbsp;пальцем&nbsp;&nbsp;0&nbsp;к&nbsp;&nbsp;экрану&nbsp;touchDown&nbsp;0&nbsp;100&nbsp;200</span></p>
+<p class="rvps130"><span class="rvts165">// Подождем&nbsp;1&nbsp;секунду&nbsp;(1сек&nbsp;=&nbsp;1000мс)&nbsp;sleep&nbsp;1000</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Сдвинем&nbsp;&nbsp;палец&nbsp;&nbsp;к&nbsp;&nbsp;200,200&nbsp;touchMove&nbsp;0&nbsp;200&nbsp;200</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;И&nbsp;&nbsp;отпустим&nbsp;&nbsp;палец&nbsp;&nbsp;0&nbsp;touchUp&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">touchPress&nbsp;finger&nbsp;x&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Данная&nbsp;&nbsp;функция&nbsp;&nbsp;работает&nbsp;&nbsp;каа&nbsp;&nbsp;если&nbsp;&nbsp;бы&nbsp;&nbsp;вы&nbsp;&nbsp;нажали&nbsp;&nbsp;и&nbsp;&nbsp;отпустили&nbsp;&nbsp;палец&nbsp;(т.е.&nbsp;touchDown&nbsp;и&nbsp;touchUp)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Параметры&nbsp;&nbsp;-&nbsp;finger,&nbsp;x,&nbsp;y.&nbsp;Что&nbsp;&nbsp;это&nbsp;&nbsp;-&nbsp;вы&nbsp;&nbsp;уже&nbsp;&nbsp;знаете&nbsp;Возьмем&nbsp;&nbsp;простой&nbsp;&nbsp;код:</span></p>
+<p class="rvps130"><span class="rvts165">touchDown&nbsp;0&nbsp;100&nbsp;200</span></p>
+<p class="rvps130"><span class="rvts165">touchup&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Его&nbsp;можно&nbsp;записать&nbsp;в&nbsp;одну&nbsp;команду:&nbsp;touchPress&nbsp;0&nbsp;100&nbsp;200</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">С&nbsp;&nbsp;сенсором&nbsp;&nbsp;разобрались.&nbsp;Но&nbsp;&nbsp;у&nbsp;&nbsp;андроида&nbsp;&nbsp;еще&nbsp;&nbsp;есть&nbsp;&nbsp;кнопки&nbsp;&nbsp;и&nbsp;&nbsp;клавиатура.</span></p>
+<p class="rvps130"><img alt="" style="padding : 1px;" src="lib/NewItem82.png"></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps131"><span class="rvts165">Учим&nbsp;следующие&nbsp;команды:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps131"><span class="rvts165">keyDown&nbsp;code</span></p>
+<p class="rvps131"><span class="rvts165">Нажатие&nbsp;кнопки/клавиатуры.&nbsp;Параметры:</span></p>
+<p class="rvps131"><span class="rvts165">code: код&nbsp;кнопки.&nbsp;(см. рис.)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Отпустим &nbsp;&nbsp;кнопку&nbsp;keyUp K_A</span></p>
+<p class="rvps130"><span class="rvts165">sleep&nbsp;1000</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Зажмем&nbsp;&nbsp;SHIFT&nbsp;keyDown&nbsp;K_SHFT_LEFT</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Зажмем&nbsp;букву&nbsp;A&nbsp;keyDown&nbsp;K_A</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Зажмем&nbsp;&nbsp;букву&nbsp;&nbsp;А&nbsp;&nbsp;(т.к.&nbsp;нажат&nbsp;&nbsp;shift,&nbsp;введется&nbsp;&nbsp;заглавная&nbsp;&nbsp;А)&nbsp;keyDown&nbsp;K_A</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Отпустим &nbsp;&nbsp;кнопку&nbsp;keyUp K_A</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Отпустим &nbsp;&nbsp;shift&nbsp;keyUp&nbsp;k_SHIFT_LEFT</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">естественно,&nbsp;у&nbsp;вс&nbsp;должна&nbsp;быть&nbsp;открыта&nbsp;прогамма,&nbsp;в&nbsp;которую&nbsp;можно&nbsp;что-нибудь&nbsp;вводить,&nbsp;например, текстовой&nbsp;редактор.&nbsp;Если&nbsp;вы&nbsp;все&nbsp;сделали&nbsp;правильно,&nbsp;у&nbsp;вас&nbsp;получится&nbsp;"аА".</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">keyUp&nbsp;code</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Мы&nbsp;уже&nbsp;рассматривали&nbsp;эту&nbsp;команду.&nbsp;Она&nbsp;убирает&nbsp;палец&nbsp;с&nbsp;кнопки</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">keyPress&nbsp;code</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Выполняет&nbsp;keyDown,&nbsp;а&nbsp;потом&nbsp;keyUp.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Возьмем&nbsp;код</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">keyDown K_BACK&nbsp;keyUp&nbsp;K_BACK</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">И&nbsp;&nbsp;сократим&nbsp;&nbsp;его&nbsp;keyPress&nbsp;K_BACK</span></p>
+<p class="rvps132"><span class="rvts165">На&nbsp;этом&nbsp;работа&nbsp;с&nbsp;кнопками&nbsp;завершена,&nbsp;идем&nbsp;дальше!</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Sleep time</span></p>
+<p class="rvps130"><span class="rvts165">Задержка&nbsp;(в&nbsp;мс).&nbsp;1&nbsp;секунда&nbsp;-&nbsp;1000мс&nbsp;Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">time: время&nbsp;в&nbsp;мс&nbsp;пример:</span></p>
+<p class="rvps130"><span class="rvts165">// Задержка&nbsp;в&nbsp;1&nbsp;секунду&nbsp;sleep&nbsp;1000</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Var&nbsp;name&nbsp;val</span></p>
+<p class="rvps130"><span class="rvts165">Объявление&nbsp;переменной&nbsp;и&nbsp;присвоение&nbsp;ей&nbsp;значения.&nbsp;Параметры:</span></p>
+<p class="rvps132"><span class="rvts165">name:&nbsp;имя&nbsp;переменной.&nbsp;содежит&nbsp;символ&nbsp;"#"&nbsp;и&nbsp;латинские&nbsp;буквы.&nbsp;например</span></p>
+<p class="rvps132"><span class="rvts165">#a,&nbsp;#lol</span></p>
+<p class="rvps132"><span class="rvts165">val: Числовое&nbsp;значение&nbsp;переменной&nbsp;(0&nbsp;1 2&nbsp;3&nbsp;4&nbsp;5)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">// объявим&nbsp;переменную&nbsp;#abc&nbsp;и&nbsp;присвоем&nbsp;ей&nbsp;значение&nbsp;0</span></p>
+<p class="rvps133"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Var #abc&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Set name val</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Изменяет&nbsp;&nbsp;значение&nbsp;&nbsp;ОБЪЯВЛЕННОЙ(!)&nbsp;переменной&nbsp;Посмотрите&nbsp;на&nbsp;следующий&nbsp;код:</span></p>
+<p class="rvps130"><span class="rvts165">// Объявляем&nbsp;переменную&nbsp;Var #abc&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;метка&nbsp;&nbsp;:start&nbsp;(о&nbsp;&nbsp;них&nbsp;&nbsp;позже)</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">// Изменим&nbsp;переменную&nbsp;#abc на&nbsp;1&nbsp;Set&nbsp;#abc&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">// покажем&nbsp;тост&nbsp;с&nbsp;этой&nbsp;переменной&nbsp;(о&nbsp;них&nbsp;позже)&nbsp;toast&nbsp;#abc</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Метка&nbsp;&nbsp;:end</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Calc&nbsp;var&nbsp;val1&nbsp;option&nbsp;val2</span></p>
+<p class="rvps130"><span class="rvts165">Математические&nbsp;&nbsp;действия&nbsp;&nbsp;над&nbsp;&nbsp;переменными&nbsp;Params</span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;:&nbsp;Переменная,&nbsp;в&nbsp;которую&nbsp;будет&nbsp;записан&nbsp;результат&nbsp;val1: Первая&nbsp;переменная/число</span></p>
+<p class="rvps130"><span class="rvts165">option:&nbsp;+&nbsp;(Сложить),&nbsp;–&nbsp;(Вычесть),&nbsp;/&nbsp;(Разделить),&nbsp;*&nbsp;(Умножить)&nbsp;%&nbsp;(Остаток&nbsp;при&nbsp;делении)</span></p>
+<p class="rvps130"><span class="rvts165">val2: Вторая&nbsp;переменная/число&nbsp;Давайте&nbsp;посчитаем:</span></p>
+<p class="rvps130"><span class="rvts165">// Объявим&nbsp;переменые&nbsp;Var #result&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">Var #abc&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">// Изменим&nbsp;#abc на&nbsp;1&nbsp;Set&nbsp;#abc&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">// Сложим&nbsp;#abc&nbsp;и&nbsp;10&nbsp;и&nbsp;запишем&nbsp;результат&nbsp;в&nbsp;#result&nbsp;calc&nbsp;#result&nbsp;#abc&nbsp;+&nbsp;10</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Покажем&nbsp;&nbsp;результат&nbsp;&nbsp;(должно&nbsp;&nbsp;появится&nbsp;&nbsp;11)&nbsp;toast&nbsp;#result</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Подождем&nbsp;&nbsp;3&nbsp;секунды&nbsp;sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Вычтем&nbsp;&nbsp;из&nbsp;&nbsp;результата&nbsp;&nbsp;5&nbsp;Calc&nbsp;#result&nbsp;#result&nbsp;-&nbsp;5</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Покажем&nbsp;&nbsp;результат</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;#result</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Есть&nbsp;и&nbsp;другой&nbsp;способ.&nbsp;Давайте&nbsp;рассмотрим&nbsp;такой&nbsp;пример:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">// Объявляем&nbsp;переменные&nbsp;Var #result&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">Var #abc&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">Set&nbsp;#abc&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">calc&nbsp;#result&nbsp;#abc&nbsp;+&nbsp;10&nbsp;toast&nbsp;#result</span></p>
+<p class="rvps130"><span class="rvts165">sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">Calc&nbsp;#result&nbsp;#result&nbsp;-&nbsp;5&nbsp;toast&nbsp;#result</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">...&nbsp;И&nbsp;сделаем&nbsp;его&nbsp;&nbsp;попроще</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">#abc&nbsp;=&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;#abc&nbsp;+&nbsp;10&nbsp;toast&nbsp;#result</span></p>
+<p class="rvps130"><span class="rvts165">sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;#result&nbsp;-&nbsp;5&nbsp;toast&nbsp;#result</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Можно&nbsp;даже&nbsp;так:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;(#abc+10-1)*2+(#abc%10)*5</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;#abc+#result-10</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">4.2.13.&nbsp;Rand var min max&nbsp;Рандомные&nbsp;числа.</span></p>
+<p class="rvps130"><span class="rvts165">Параметры</span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;:&nbsp;Переменная&nbsp;куда&nbsp;будет&nbsp;сохранено&nbsp;рандомное&nbsp;число&nbsp;min:&nbsp;Минимальное&nbsp;&nbsp;значени</span></p>
+<p class="rvps130"><span class="rvts165">max:&nbsp;Максимальное&nbsp;&nbsp;значение</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#count&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Больше&nbsp;10&nbsp;но&nbsp;меньше&nbsp;20</span></p>
+<p class="rvps130"><span class="rvts165">rand&nbsp;#count 10&nbsp;20</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;И&nbsp;&nbsp;смотрим&nbsp;&nbsp;наш&nbsp;&nbsp;рандом&nbsp;toast&nbsp;Random&nbsp;is&nbsp;#count</span></p>
+<p class="rvps130"><span class="rvts165">sleep&nbsp;2000</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Делаем&nbsp;&nbsp;бесконечный&nbsp;&nbsp;цикл&nbsp;goto&nbsp;:start</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps127"><span class="rvts165">&nbsp;</span></p>
+<div class="rvps127"><table border="1" cellpadding="8" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">:end</span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps136"><span class="rvts165">4.2.14.&nbsp;If&nbsp;Endif&nbsp;Условия</span></p>
+<p class="rvps136"><span class="rvts165">Делаем&nbsp;&nbsp;наши&nbsp;&nbsp;скрипты&nbsp;&nbsp;чуточку&nbsp;&nbsp;умнее.&nbsp;&nbsp;В&nbsp;&nbsp;условиях</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps137"><span class="rvts165">можно</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps135"><span class="rvts165"><br/></span></p>
+<p class="rvps137"><span class="rvts165">сравнивать</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">переменные&nbsp;и&nbsp;числа. Эти&nbsp;знаки&nbsp;вам&nbsp;помогут:</span></p>
+<p class="rvps136"><span class="rvts165">=&nbsp;или&nbsp;&nbsp;==&nbsp;равенство</span></p>
+<p class="rvps136"><span class="rvts165">!=&nbsp;отличие</span></p>
+<p class="rvps136"><span class="rvts165">&lt;&nbsp;меньше</span></p>
+<p class="rvps136"><span class="rvts165">&gt;&nbsp;больше</span></p>
+<p class="rvps136"><span class="rvts165">&lt;=&nbsp;меньше&nbsp;или&nbsp;равно</span></p>
+<p class="rvps136"><span class="rvts165">=&gt;&nbsp;больше&nbsp;или&nbsp;равно&nbsp;and&nbsp;и</span></p>
+<p class="rvps136"><span class="rvts165">or&nbsp;или</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">А&nbsp;&nbsp;теперь&nbsp;&nbsp;практика:</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">Var&nbsp;#count&nbsp;0</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">:start</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">#count&nbsp;=&nbsp;#count&nbsp;+&nbsp;1</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">//&nbsp;Если&nbsp;#count&nbsp;равен&nbsp;10...</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps134"><span class="rvts165">if&nbsp;#count ==&nbsp;10</span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+<td valign="top" style="border-width : 1px; border-color: #dddddd; border-style: solid; padding: 7px 10px;"><p class="rvps3"><span class="rvts165"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps128"><span class="rvts165">&nbsp;</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps138"><span class="rvts165">//&nbsp;...&nbsp;То&nbsp;&nbsp;покажем&nbsp;&nbsp;"count&nbsp;равен&nbsp;&nbsp;10"!&nbsp;toast&nbsp;count&nbsp;равен&nbsp;&nbsp;10</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps139"><span class="rvts165">//&nbsp;И&nbsp;&nbsp;закроем&nbsp;&nbsp;условие&nbsp;endif</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps139"><span class="rvts165">//&nbsp;#count&nbsp;больше&nbsp;10&nbsp;и&nbsp;меньше&nbsp;20&nbsp;if&nbsp;#count&nbsp;&gt;&nbsp;10&nbsp;and&nbsp;#count&nbsp;&lt;20</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps140"><span class="rvts165">toast&nbsp;20&nbsp;count&nbsp;больше&nbsp;10&nbsp;и&nbsp;меньше&nbsp;20</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps139"><span class="rvts165">endif</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps139"><span class="rvts165">//&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;#count&nbsp;равен&nbsp;5&nbsp;или&nbsp;8</span></p>
+<p class="rvps139"><span class="rvts165">if&nbsp;#count&nbsp;==&nbsp;5&nbsp;or&nbsp;#count&nbsp;==&nbsp;8</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps140"><span class="rvts165">toast&nbsp;The&nbsp;current&nbsp;count&nbsp;is&nbsp;5&nbsp;or&nbsp;8.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps139"><span class="rvts165">endif</span></p>
+<p class="rvps139"><span class="rvts165">:end&nbsp;ElseIF</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Иначе&nbsp;Если...</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">При&nbsp;не&nbsp;выполнении&nbsp;условия&nbsp;if,&nbsp;можно&nbsp;выполнить&nbsp;другое&nbsp;(else if).&nbsp;Чтобы&nbsp;было&nbsp;понятнее,&nbsp;рассмотрите&nbsp;следующий&nbsp;код:</span></p>
+<p class="rvps130"><span class="rvts165">Var&nbsp;#count&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">#count&nbsp;=&nbsp;#count&nbsp;+&nbsp;1</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Если&nbsp;#count&nbsp;равен&nbsp;10&nbsp;if&nbsp;#count ==&nbsp;10</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps141"><span class="rvts165">toast&nbsp;count&nbsp;равен&nbsp;10</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">// Иначе&nbsp;если&nbsp;#count&nbsp;равен&nbsp;15&nbsp;elseif&nbsp;#count ==&nbsp;15</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps141"><span class="rvts165">toast&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;count&nbsp;равен&nbsp;15</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">// Иначе&nbsp;Если&nbsp;#count&nbsp;больше/равен&nbsp;20&nbsp;elseif&nbsp;#count &gt;=&nbsp;20</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps142"><span class="rvts165">toast&nbsp;count&nbsp;больше&nbsp;или&nbsp;равен&nbsp;20</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">endif</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Else</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Если&nbsp;&nbsp;if&nbsp;и&nbsp;&nbsp;все&nbsp;&nbsp;elseIf&nbsp;не&nbsp;&nbsp;были&nbsp;&nbsp;выполнены,&nbsp;то&nbsp;&nbsp;выполняется&nbsp;&nbsp;else.&nbsp;Это&nbsp;&nbsp;как&nbsp;&nbsp;в&nbsp;жизни:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">if&nbsp;я&nbsp;хочу&nbsp;пойти&nbsp;в&nbsp;бар</span></p>
+<p class="rvps130"><span class="rvts165">взять&nbsp;деньги&nbsp;else if денег&nbsp;нет</span></p>
+<p class="rvps130"><span class="rvts165">найти&nbsp;&nbsp;деньги&nbsp;else&nbsp;if&nbsp;не&nbsp;нашел&nbsp;денег</span></p>
+<p class="rvps130"><span class="rvts165">заработать&nbsp;&nbsp;их&nbsp;else&nbsp;ты&nbsp;бомж</span></p>
+<p class="rvps130"><span class="rvts165">endIf</span></p>
+<p class="rvps130"><span class="rvts165">Правда,&nbsp;HiroMacro&nbsp;такое&nbsp;&nbsp;не&nbsp;&nbsp;поймет&nbsp;&nbsp;:D&nbsp;Зато&nbsp;&nbsp;она&nbsp;&nbsp;поймет&nbsp;&nbsp;это:&nbsp;Var&nbsp;#count&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">Var #na&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">#count&nbsp;=&nbsp;#count&nbsp;+&nbsp;1</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">// Вычислим&nbsp;остаток&nbsp;при&nbsp;делении&nbsp;на&nbsp;2</span></p>
+<p class="rvps132"><span class="rvts165">#na&nbsp;=&nbsp;#count&nbsp;%&nbsp;2</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Если&nbsp;значение&nbsp;0&nbsp;if #na&nbsp;==&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps141"><span class="rvts165">toast&nbsp;Count&nbsp;-&nbsp;четное&nbsp;&nbsp;число</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Иначе&nbsp;else</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps141"><span class="rvts165">toast&nbsp;count&nbsp;-&nbsp;нечетное&nbsp;&nbsp;число</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">// End&nbsp;of&nbsp;if statement.&nbsp;endif</span></p>
+<p class="rvps132"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Goto&nbsp;label</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Переход&nbsp;к&nbsp;метке.&nbsp;Метка&nbsp;начинается&nbsp;с&nbsp;двоеточия&nbsp;(:),&nbsp;и&nbsp;может&nbsp;располагаться&nbsp;в&nbsp;любом&nbsp;участке&nbsp;кода,&nbsp;однако&nbsp;метки&nbsp;:start&nbsp;и&nbsp;:end&nbsp;должны&nbsp;быть&nbsp;&nbsp;обязательно.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">var&nbsp;#count 0;</span></p>
+<p class="rvps132"><span class="rvts165">:start</span></p>
+<p class="rvps132"><span class="rvts165">calc&nbsp;#count&nbsp;#count&nbsp;+&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Если&nbsp;count&nbsp;меньше&nbsp;10&nbsp;if&nbsp;#count&nbsp;&lt;&nbsp;10</span></p>
+<p class="rvps143"><span class="rvts165">goto :alabel</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Иначе&nbsp;else</span></p>
+<p class="rvps130"><span class="rvts165">goto :blabel&nbsp;endif</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">:alabel</span></p>
+<p class="rvps130"><span class="rvts165">toast count&nbsp;меньше&nbsp;10!&nbsp;goto&nbsp;:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">:blabel</span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;count&nbsp;не&nbsp;меньше&nbsp;10!</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">getColor&nbsp;var&nbsp;x&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Записывает&nbsp;&nbsp;в&nbsp;&nbsp;var&nbsp;значение&nbsp;&nbsp;цвета&nbsp;&nbsp;на&nbsp;&nbsp;экране&nbsp;&nbsp;по&nbsp;&nbsp;указанным&nbsp;&nbsp;координатам.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Формула&nbsp;рассчета&nbsp;var:&nbsp;blue&nbsp;* 65526 +&nbsp;green&nbsp;*&nbsp;256 +&nbsp;red</span></p>
+<p class="rvps130"><span class="rvts165">Чтобы&nbsp;&nbsp;рассчитать&nbsp;&nbsp;из&nbsp;&nbsp;var&nbsp;красный,&nbsp;зеленый&nbsp;&nbsp;и&nbsp;&nbsp;синий&nbsp;&nbsp;цвета,&nbsp;выполните&nbsp;следующее:</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">red&nbsp;=&nbsp;var&nbsp;%&nbsp;256</span></p>
+<p class="rvps130"><span class="rvts165">green&nbsp;=&nbsp;var&nbsp;/&nbsp;256&nbsp;%&nbsp;256,&nbsp;blue&nbsp;=&nbsp;var&nbsp;/&nbsp;256&nbsp;/&nbsp;256&nbsp;%&nbsp;256</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#color 0</span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#result&nbsp;0</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">getColor&nbsp;#color&nbsp;100&nbsp;200</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">// Рассчитаем&nbsp;красный&nbsp;цвет</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;= #color&nbsp;%&nbsp;256</span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;Красный&nbsp;цвет:&nbsp;#Result&nbsp;sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Теперь&nbsp;&nbsp;зеленый</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;#color&nbsp;/&nbsp;256&nbsp;%&nbsp;256&nbsp;toast&nbsp;Зеленый&nbsp;цвет:&nbsp;#Result&nbsp;sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;И&nbsp;&nbsp;синий</span></p>
+<p class="rvps130"><span class="rvts165">#result&nbsp;=&nbsp;#color&nbsp;/&nbsp;256&nbsp;/&nbsp;256&nbsp;%&nbsp;256&nbsp;toast&nbsp;Синий&nbsp;&nbsp;цвет:&nbsp;#Result</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">getColorGray&nbsp;var&nbsp;x&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Среднее&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;арифметическое&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;цветов&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;в&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;указанных&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;координатах&nbsp;(red+green+blue)/3</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">var: Переменная, куда&nbsp;будут&nbsp;записаны&nbsp;данные&nbsp;x:&nbsp;Координаты&nbsp;по&nbsp;x</span></p>
+<p class="rvps130"><span class="rvts165">y:&nbsp;Координаты&nbsp;&nbsp;по&nbsp;&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#color 0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">getColorGray&nbsp;#color&nbsp;100&nbsp;200&nbsp;toast&nbsp;#color</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">getRGB var1 var2 var3&nbsp;x&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Эту&nbsp;&nbsp;&nbsp;функцию&nbsp;&nbsp;&nbsp;удобно&nbsp;&nbsp;&nbsp;использовать&nbsp;&nbsp;&nbsp;вместо&nbsp;&nbsp;&nbsp;getcolor,&nbsp;&nbsp;т.к.&nbsp;&nbsp;рассчитывать&nbsp;ничего&nbsp;&nbsp;не&nbsp;&nbsp;нужно!</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Параметры</span></p>
+<p class="rvps130"><span class="rvts165">var1:&nbsp;в&nbsp;эту&nbsp;переменную&nbsp;будет&nbsp;записан&nbsp;красный&nbsp;цвет&nbsp;var2:&nbsp;в&nbsp;эту&nbsp;-&nbsp;зеленый</span></p>
+<p class="rvps130"><span class="rvts165">var3:&nbsp;а&nbsp;в&nbsp;эту&nbsp;-&nbsp;синий&nbsp;x:&nbsp;координаты&nbsp;по&nbsp;x&nbsp;y: координаты&nbsp;по&nbsp;y</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#red&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#green&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#blue&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">getRGB #red #green&nbsp;#blue&nbsp;100&nbsp;200&nbsp;toast&nbsp;R:&nbsp;#red&nbsp;G:&nbsp;#green&nbsp;B:&nbsp;#blue</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Никаких&nbsp;расчетов,&nbsp;все&nbsp;уже&nbsp;готово.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">screenLock time</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Блокирует&nbsp;&nbsp;&nbsp;экран&nbsp;&nbsp;&nbsp;на&nbsp;&nbsp;&nbsp;время&nbsp;&nbsp;&nbsp;(экран&nbsp;&nbsp;&nbsp;отключается,&nbsp;&nbsp;при&nbsp;&nbsp;&nbsp;включени&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;вы&nbsp;увидите&nbsp;экран&nbsp;блокировки)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Чтобы&nbsp;&nbsp;эта&nbsp;&nbsp;функция&nbsp;&nbsp;работала,&nbsp;&nbsp;включите&nbsp;&nbsp;HiroMacro&nbsp;&nbsp;в&nbsp;&nbsp;администраторах&nbsp;устройства.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">time:&nbsp;время&nbsp;&nbsp;в&nbsp;&nbsp;мс&nbsp;&nbsp;(1000мс=&nbsp;1&nbsp;секунда)&nbsp;(если&nbsp;&nbsp;указать&nbsp;&nbsp;0&nbsp;то&nbsp;&nbsp;включить&nbsp;&nbsp;экран&nbsp;надо&nbsp;будет&nbsp;самому)</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">// Блокируем&nbsp;экран&nbsp;на&nbsp;10&nbsp;секунд&nbsp;screenLock&nbsp;10000</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">RunApp name</span></p>
+<p class="rvps130"><span class="rvts165">Запуск&nbsp;приложения.&nbsp;Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">name:&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;название&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;ПАКЕТА&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;приложения&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;(com.android.calendar,&nbsp;com.android.crome,&nbsp;&nbsp;com.prohiro.macro,&nbsp;&nbsp;com.supercell.clashofclans)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">//&nbsp;Запустим&nbsp;&nbsp;календарь&nbsp;RunApp&nbsp;com.android.calendar&nbsp;sleep&nbsp;5000</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">WaitApp&nbsp;name</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Ждет&nbsp;&nbsp;запуска&nbsp;&nbsp;приложения.&nbsp;Пока&nbsp;&nbsp;приложение&nbsp;&nbsp;не&nbsp;&nbsp;запустится,&nbsp;скрипт&nbsp;&nbsp;не&nbsp;будет&nbsp;&nbsp;ничего&nbsp;&nbsp;делать</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Параметры:</span></p>
+<p class="rvps130"><span class="rvts165">name: пакетное&nbsp;имя&nbsp;приложения</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">waitApp&nbsp;&nbsp;com.supercell.clashofclans&nbsp;toast&nbsp;clash&nbsp;of&nbsp;clans запущен!</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Запустим&nbsp;скрипт. Ничего&nbsp;не&nbsp;произошло.&nbsp;Но&nbsp;как&nbsp;только&nbsp;вы&nbsp;откроете&nbsp;clash&nbsp;of&nbsp;clans,&nbsp;выскочит&nbsp;тост&nbsp;"clash&nbsp;of&nbsp;clans&nbsp;запущен!"</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">CheckApp&nbsp;var&nbsp;name</span></p>
+<p class="rvps130"><span class="rvts165">Проверяет,&nbsp;запущено&nbsp;ли&nbsp;приложение.&nbsp;Если&nbsp;да,&nbsp;то&nbsp;var&nbsp;=&nbsp;1,&nbsp;нет&nbsp;-&nbsp;0&nbsp;Параметры</span></p>
+<p class="rvps130"><span class="rvts165">var: Переменная, куда&nbsp;будет&nbsp;записан&nbsp;результат&nbsp;name: имя&nbsp;пакета&nbsp;приложения</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#check&nbsp;0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">CheckApp&nbsp;#check&nbsp;com.prohiro.macro&nbsp;if&nbsp;#check&nbsp;== 0</span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;Application is not running&nbsp;elseif&nbsp;#check&nbsp;==&nbsp;1</span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;Application&nbsp;is&nbsp;running&nbsp;endif</span></p>
+<p class="rvps130"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Toast&nbsp;text</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Мы&nbsp;&nbsp;уже&nbsp;&nbsp;использовали&nbsp;&nbsp;эту&nbsp;&nbsp;команду&nbsp;&nbsp;много&nbsp;&nbsp;раз.&nbsp;Тост&nbsp;&nbsp;-&nbsp;это&nbsp;&nbsp;сообщение,&nbsp;которое&nbsp;вылазит&nbsp;внизу&nbsp;экрана&nbsp;на&nbsp;короткое&nbsp;время</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">Params</span></p>
+<p class="rvps130"><span class="rvts165">text:&nbsp;Текст,&nbsp;который&nbsp;будет&nbsp;выведен.&nbsp;Можно&nbsp;использовать&nbsp;переменные.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">var&nbsp;#color 0</span></p>
+<p class="rvps130"><span class="rvts165">:start</span></p>
+<p class="rvps130"><span class="rvts165">toast&nbsp;Это&nbsp;тост!&nbsp;sleep&nbsp;3000</span></p>
+<p class="rvps130"><span class="rvts165">getColor&nbsp;#color&nbsp;100&nbsp;2000&nbsp;toast&nbsp;Цвет&nbsp;-&nbsp;#color</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Log&nbsp;text</span></p>
+<p class="rvps130"><span class="rvts165">Запись&nbsp;в&nbsp;лог.&nbsp;Можно&nbsp;использовать&nbsp;переменные.&nbsp;var&nbsp;#color 0</span></p>
+<p class="rvps132"><span class="rvts165">:start</span></p>
+<p class="rvps132"><span class="rvts165">getColor&nbsp;#color&nbsp;100&nbsp;200</span></p>
+<p class="rvps132"><span class="rvts165">log&nbsp;color(100,200) is&nbsp;#color</span></p>
+<p class="rvps132"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Комментарии&nbsp;&nbsp;(//)</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Если&nbsp;вы&nbsp;хотите&nbsp;дать&nbsp;пояснения&nbsp;функциям&nbsp;в&nbsp;своих&nbsp;скриптах,&nbsp;вы&nbsp;можете&nbsp;использовать&nbsp;комментарии.&nbsp;Строка,&nbsp;начатая&nbsp;с&nbsp;//&nbsp;будет&nbsp;являться&nbsp;комментарием&nbsp;и&nbsp;не&nbsp;будет&nbsp;выполнятся.</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">:start</span></p>
+<p class="rvps132"><span class="rvts165">/&nbsp;/&nbsp;Created by Hiro</span></p>
+<p class="rvps132"><span class="rvts165">/ /&nbsp;Date:&nbsp;April&nbsp;10,&nbsp;2014</span></p>
+<p class="rvps132"><span class="rvts165">:end</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps132"><span class="rvts165">Этот&nbsp;скрипт&nbsp;ничего&nbsp;не&nbsp;сделает</span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps128"><span class="rvts165"><br/></span></p>
+<p class="rvps130"><span class="rvts165">На&nbsp;этом&nbsp;все, теперь&nbsp;вы&nbsp;готовы&nbsp;писать&nbsp;скрипты&nbsp;для&nbsp;HiroMacro!&nbsp;Справку&nbsp;перевёл: 1Senderman1</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,1139 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>QAEngineer- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+			}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				var aNode = $("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId);
+				if (aNode) {
+					aNode.activateSilently();  
+				}
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			
+				<li><a href="#tab-toc">Contents</a></li>
+			
+				<li><a href="#tab-keywords">Index</a></li>
+			
+				<li><a href="#tab-search">Search</a></li>
+			
+		</ul>
+		
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				
+
+						<li class="folder" id="Newtopic9" data="">
+							<a
+							href="Newtopic9.html"
+							target="FrameMain">
+								ПО автоматизированного тестирования
+							</a>
+
+				<ul>
+
+						<li class="folder" id="AndroidSDK" data="">
+							<a
+							href="AndroidSDK.html"
+							target="FrameMain">
+								Android SDK
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidSDK1" data="icon: '16.png'">
+							<a
+							href="AndroidSDK1.html"
+							target="FrameMain">
+								Установка и настройка Android SDK
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic" data="icon: '16.png'">
+							<a
+							href="Newtopic.html"
+							target="FrameMain">
+								Подключение устройств к ПК
+							</a>
+
+				</li>
+
+						<li class="" id="ADB" data="icon: '16.png'">
+							<a
+							href="ADB.html"
+							target="FrameMain">
+								Команды ADB
+							</a>
+
+				</li>
+
+						<li class="" id="Monkey" data="icon: '16.png'">
+							<a
+							href="Monkey.html"
+							target="FrameMain">
+								Тестирование с помощью Monkey
+							</a>
+
+				</li>
+
+						<li class="folder" id="MonkeyRunner" data="">
+							<a
+							href="MonkeyRunner.html"
+							target="FrameMain">
+								Тестирование с помощью MonkeyRunner
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic1" data="icon: '16.png'">
+							<a
+							href="Newtopic1.html"
+							target="FrameMain">
+								Рекордер
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic2" data="icon: '16.png'">
+							<a
+							href="Newtopic2.html"
+							target="FrameMain">
+								Эмулятор
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic3" data="icon: '16.png'">
+							<a
+							href="Newtopic3.html"
+							target="FrameMain">
+								Скрипт
+							</a>
+
+				</li>
+
+						<li class="" id="PythonJythonIDLE" data="icon: '16.png'">
+							<a
+							href="PythonJythonIDLE.html"
+							target="FrameMain">
+								Python / Jython IDLE
+							</a>
+
+				</li>
+
+						<li class="" id="PythonJython1" data="icon: '16.png'">
+							<a
+							href="PythonJython1.html"
+							target="FrameMain">
+								Основы языка Python / Jython
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="geteventsendevent" data="icon: '16.png'">
+							<a
+							href="geteventsendevent.html"
+							target="FrameMain">
+								Тестирование с помощью getevent/sendevent
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic4" data="">
+							<a
+							href="Newtopic4.html"
+							target="FrameMain">
+								Скрипты (примеры)
+							</a>
+
+				<ul>
+
+						<li class="folder" id="ADB1" data="">
+							<a
+							href="ADB1.html"
+							target="FrameMain">
+								Логи (ADB)
+							</a>
+
+				<ul>
+
+						<li class="" id="log_systembat" data="icon: '10.png'">
+							<a
+							href="log_systembat.html"
+							target="FrameMain">
+								Системный лог ( log_system.bat )
+							</a>
+
+				</li>
+
+						<li class="" id="log_gamebat" data="icon: '10.png'">
+							<a
+							href="log_gamebat.html"
+							target="FrameMain">
+								Лог приложения ( log_game.bat )
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="screenshotsMonkeyRunner" data="">
+							<a
+							href="screenshotsMonkeyRunner.html"
+							target="FrameMain">
+								Снять screenshots (MonkeyRunner)
+							</a>
+
+				<ul>
+
+						<li class="" id="scriptbat" data="icon: '10.png'">
+							<a
+							href="scriptbat.html"
+							target="FrameMain">
+								script.bat
+							</a>
+
+				</li>
+
+						<li class="" id="scriptpy" data="icon: '10.png'">
+							<a
+							href="scriptpy.html"
+							target="FrameMain">
+								script.py
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Monkey1" data="">
+							<a
+							href="Monkey1.html"
+							target="FrameMain">
+								Стресс-тестирование (Monkey)
+							</a>
+
+				<ul>
+
+						<li class="" id="adb_shell_monkey_1bat" data="icon: '10.png'">
+							<a
+							href="adb_shell_monkey_1bat.html"
+							target="FrameMain">
+								adb_shell_monkey_1.bat
+							</a>
+
+				</li>
+
+						<li class="" id="adb_shell_monkey_2bat" data="icon: '10.png'">
+							<a
+							href="adb_shell_monkey_2bat.html"
+							target="FrameMain">
+								adb_shell_monkey_2.bat
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="DDMS1" data="">
+							<a
+							href="DDMS1.html"
+							target="FrameMain">
+								Запуск DDMS
+							</a>
+
+				<ul>
+
+						<li class="" id="ddms_runbat" data="icon: '10.png'">
+							<a
+							href="ddms_runbat.html"
+							target="FrameMain">
+								ddms_run.bat
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="MonkeyRunner1" data="">
+							<a
+							href="MonkeyRunner1.html"
+							target="FrameMain">
+								Тестирование (MonkeyRunner)
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidAAPTDUMP" data="icon: '10.png'">
+							<a
+							href="AndroidAAPTDUMP.html"
+							target="FrameMain">
+								Пример от Android (AAPT DUMP)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic5" data="icon: '10.png'">
+							<a
+							href="Newtopic5.html"
+							target="FrameMain">
+								Установка игры и снятия скриншота
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic6" data="icon: '10.png'">
+							<a
+							href="Newtopic6.html"
+							target="FrameMain">
+								Запуск приложение и нажатие кнопки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic7" data="icon: '10.png'">
+							<a
+							href="Newtopic7.html"
+							target="FrameMain">
+								Последовательное выполнение нажатий с задержками и снятие скриншота
+							</a>
+
+				</li>
+
+						<li class="folder" id="Testtutorial" data="">
+							<a
+							href="Testtutorial.html"
+							target="FrameMain">
+								Test tutorial
+							</a>
+
+				<ul>
+
+						<li class="" id="scriptbat1" data="icon: '10.png'">
+							<a
+							href="scriptbat1.html"
+							target="FrameMain">
+								script.bat
+							</a>
+
+				</li>
+
+						<li class="" id="scriptpy1" data="icon: '10.png'">
+							<a
+							href="scriptpy1.html"
+							target="FrameMain">
+								script.py
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="" id="DDMS" data="icon: '16.png'">
+							<a
+							href="DDMS.html"
+							target="FrameMain">
+								DDMS
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="Genie" data="icon: '16.png'">
+							<a
+							href="Genie.html"
+							target="FrameMain">
+								Genie
+							</a>
+
+				</li>
+
+						<li class="folder" id="HiroMacro" data="">
+							<a
+							href="HiroMacro.html"
+							target="FrameMain">
+								HiroMacro
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic13" data="icon: '16.png'">
+							<a
+							href="Newtopic13.html"
+							target="FrameMain">
+								Инструкция
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic12" data="icon: '16.png'">
+							<a
+							href="Newtopic12.html"
+							target="FrameMain">
+								Мануал по скриптам на русском языке
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="Selenium" data="icon: '16.png'">
+							<a
+							href="Selenium.html"
+							target="FrameMain">
+								Selenium
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic8" data="">
+							<a
+							href="Newtopic8.html"
+							target="FrameMain">
+								ПО для тестирования
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Android" data="">
+							<a
+							href="Android.html"
+							target="FrameMain">
+								Android
+							</a>
+
+				<ul>
+
+						<li class="folder" id="ADB2" data="icon: '16.png'">
+							<a
+							href="ADB2.html"
+							target="FrameMain">
+								ADB (снятие системного лога)
+							</a>
+
+				<ul>
+
+						<li class="" id="AndroidSDK2" data="icon: '16.png'">
+							<a
+							href="AndroidSDK2.html"
+							target="FrameMain">
+								Установка и настройка Android SDK
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic10" data="icon: '16.png'">
+							<a
+							href="Newtopic10.html"
+							target="FrameMain">
+								Подключение устройств к ПК
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="DDMS2" data="icon: '16.png'">
+							<a
+							href="DDMS2.html"
+							target="FrameMain">
+								DDMS
+							</a>
+
+				</li>
+
+						<li class="" id="BBQScreenClient" data="icon: '16.png'">
+							<a
+							href="BBQScreenClient.html"
+							target="FrameMain">
+								BBQScreen Client
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="iOS" data="">
+							<a
+							href="iOS.html"
+							target="FrameMain">
+								iOS
+							</a>
+
+				<ul>
+
+						<li class="" id="iBrowse" data="icon: '16.png'">
+							<a
+							href="iBrowse.html"
+							target="FrameMain">
+								iBrowse
+							</a>
+
+				</li>
+
+						<li class="" id="iFunbox" data="icon: '16.png'">
+							<a
+							href="iFunbox.html"
+							target="FrameMain">
+								iFunbox
+							</a>
+
+				</li>
+
+						<li class="" id="iPhoneConfigurationUtility" data="icon: '16.png'">
+							<a
+							href="iPhoneConfigurationUtility.html"
+							target="FrameMain">
+								iPhone Configuration Utility
+							</a>
+
+				</li>
+
+						<li class="" id="iTools" data="icon: '16.png'">
+							<a
+							href="iTools.html"
+							target="FrameMain">
+								iTools
+							</a>
+
+				</li>
+
+						<li class="" id="iTunes" data="icon: '16.png'">
+							<a
+							href="iTunes.html"
+							target="FrameMain">
+								iTunes
+							</a>
+
+				</li>
+
+						<li class="" id="iExplorer" data="icon: '16.png'">
+							<a
+							href="iExplorer.html"
+							target="FrameMain">
+								iExplorer
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Web" data="">
+							<a
+							href="Web.html"
+							target="FrameMain">
+								Web сайт
+							</a>
+
+				<ul>
+
+						<li class="" id="RemoteDebuggingonAndroidwithChro" data="icon: '16.png'">
+							<a
+							href="RemoteDebuggingonAndroidwithChro.html"
+							target="FrameMain">
+								Remote Debugging on Android with Chrome
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="AdobeDebugFlashPlayer" data="icon: '16.png'">
+							<a
+							href="AdobeDebugFlashPlayer.html"
+							target="FrameMain">
+								Adobe Debug Flash Player
+							</a>
+
+				</li>
+
+						<li class="" id="AdobeScoutCC" data="icon: '16.png'">
+							<a
+							href="AdobeScoutCC.html"
+							target="FrameMain">
+								Adobe Scout CC
+							</a>
+
+				</li>
+
+						<li class="" id="AdvancedIPScanner" data="icon: '16.png'">
+							<a
+							href="AdvancedIPScanner.html"
+							target="FrameMain">
+								Advanced IP Scanner
+							</a>
+
+				</li>
+
+						<li class="" id="AndroidSDK3" data="icon: '16.png'">
+							<a
+							href="AndroidSDK3.html"
+							target="FrameMain">
+								Android SDK
+							</a>
+
+				</li>
+
+						<li class="" id="Bandicam" data="icon: '16.png'">
+							<a
+							href="Bandicam.html"
+							target="FrameMain">
+								Bandicam
+							</a>
+
+				</li>
+
+						<li class="" id="BBQScreen" data="icon: '16.png'">
+							<a
+							href="BBQScreen.html"
+							target="FrameMain">
+								BBQScreen
+							</a>
+
+				</li>
+
+						<li class="" id="Charles" data="icon: '16.png'">
+							<a
+							href="Charles.html"
+							target="FrameMain">
+								Charles
+							</a>
+
+				</li>
+
+						<li class="" id="CheatEngine" data="icon: '16.png'">
+							<a
+							href="CheatEngine.html"
+							target="FrameMain">
+								Cheat Engine
+							</a>
+
+				</li>
+
+						<li class="" id="CurrPorts" data="icon: '16.png'">
+							<a
+							href="CurrPorts.html"
+							target="FrameMain">
+								CurrPorts
+							</a>
+
+				</li>
+
+						<li class="" id="DeviceIDAndroid" data="icon: '16.png'">
+							<a
+							href="DeviceIDAndroid.html"
+							target="FrameMain">
+								Device ID (Android)
+							</a>
+
+				</li>
+
+						<li class="" id="Fiddler2" data="icon: '16.png'">
+							<a
+							href="Fiddler2.html"
+							target="FrameMain">
+								Fiddler2
+							</a>
+
+				</li>
+
+						<li class="" id="FileManagerHDFTPAndroid" data="icon: '16.png'">
+							<a
+							href="FileManagerHDFTPAndroid.html"
+							target="FrameMain">
+								File Manager HD(FTP) (Android)
+							</a>
+
+				</li>
+
+						<li class="" id="FreeVideotoGIFConverter" data="icon: '16.png'">
+							<a
+							href="FreeVideotoGIFConverter.html"
+							target="FrameMain">
+								Free Video to GIF Converter
+							</a>
+
+				</li>
+
+						<li class="" id="HeidiSQL" data="icon: '16.png'">
+							<a
+							href="HeidiSQL.html"
+							target="FrameMain">
+								HeidiSQL
+							</a>
+
+				</li>
+
+						<li class="" id="HiroMacroAndroid" data="icon: '16.png'">
+							<a
+							href="HiroMacroAndroid.html"
+							target="FrameMain">
+								HiroMacro (Android)
+							</a>
+
+				</li>
+
+						<li class="" id="IETester" data="icon: '16.png'">
+							<a
+							href="IETester.html"
+							target="FrameMain">
+								IETester
+							</a>
+
+				</li>
+
+						<li class="" id="jython" data="icon: '16.png'">
+							<a
+							href="jython.html"
+							target="FrameMain">
+								jython
+							</a>
+
+				</li>
+
+						<li class="" id="Monosnap" data="icon: '16.png'">
+							<a
+							href="Monosnap.html"
+							target="FrameMain">
+								Monosnap
+							</a>
+
+				</li>
+
+						<li class="" id="NoxAndroid" data="icon: '16.png'">
+							<a
+							href="NoxAndroid.html"
+							target="FrameMain">
+								Nox (эмулятор Android)
+							</a>
+
+				</li>
+
+						<li class="" id="RemoteDebuggingonAndroidwithChr1" data="icon: '16.png'">
+							<a
+							href="RemoteDebuggingonAndroidwithChr1.html"
+							target="FrameMain">
+								Remote Debugging on Android with Chrome
+							</a>
+
+				</li>
+
+						<li class="" id="TheIdentifiersiOS" data="icon: '16.png'">
+							<a
+							href="TheIdentifiersiOS.html"
+							target="FrameMain">
+								The Identifiers (iOS)
+							</a>
+
+				</li>
+
+						<li class="" id="Wireshark" data="icon: '16.png'">
+							<a
+							href="Wireshark.html"
+							target="FrameMain">
+								Wireshark
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic14" data="">
+							<a
+							href="Newtopic14.html"
+							target="FrameMain">
+								Тестирвоание
+							</a>
+
+				<ul>
+
+						<li class="" id="CharlesProxyIAP" data="icon: '16.png'">
+							<a
+							href="CharlesProxyIAP.html"
+							target="FrameMain">
+								Charles Proxy хак IAP
+							</a>
+
+				</li>
+
+						<li class="" id="CharlesUI" data="icon: '16.png'">
+							<a
+							href="CharlesUI.html"
+							target="FrameMain">
+								Charles как проверить быстро UI
+							</a>
+
+				</li>
+
+						<li class="" id="Wireshark1" data="icon: '16.png'">
+							<a
+							href="Wireshark1.html"
+							target="FrameMain">
+								Wireshark тестирвоание трафика
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Jira" data="">
+							<a
+							href="Jira.html"
+							target="FrameMain">
+								Jira
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic15" data="icon: '16.png'">
+							<a
+							href="Newtopic15.html"
+							target="FrameMain">
+								Запросы для построения отчетов
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="QA" data="">
+							<a
+							href="QA.html"
+							target="FrameMain">
+								Языки программирования необходимые для QA
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Python" data="">
+							<a
+							href="Python.html"
+							target="FrameMain">
+								Python
+							</a>
+
+				<ul>
+
+						<li class="" id="PythonJython" data="icon: '16.png'">
+							<a
+							href="PythonJython.html"
+							target="FrameMain">
+								Основы языка Python / Jython
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic69" data="icon: '16.png'">
+							<a
+							href="Newtopic69.html"
+							target="FrameMain">
+								Переменные
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic11" data="icon: '16.png'">
+							<a
+							href="Newtopic11.html"
+							target="FrameMain">
+								Арифметические выражения
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic71" data="icon: '16.png'">
+							<a
+							href="Newtopic71.html"
+							target="FrameMain">
+								Строки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic72" data="icon: '16.png'">
+							<a
+							href="Newtopic72.html"
+							target="FrameMain">
+								Преобразование значений
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic73" data="icon: '16.png'">
+							<a
+							href="Newtopic73.html"
+							target="FrameMain">
+								Списки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic74" data="icon: '16.png'">
+							<a
+							href="Newtopic74.html"
+							target="FrameMain">
+								Кортежи
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic75" data="icon: '16.png'">
+							<a
+							href="Newtopic75.html"
+							target="FrameMain">
+								Множества
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic76" data="icon: '16.png'">
+							<a
+							href="Newtopic76.html"
+							target="FrameMain">
+								Словари
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic77" data="icon: '16.png'">
+							<a
+							href="Newtopic77.html"
+							target="FrameMain">
+								Итерации и циклы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic78" data="icon: '16.png'">
+							<a
+							href="Newtopic78.html"
+							target="FrameMain">
+								Функции
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic79" data="icon: '16.png'">
+							<a
+							href="Newtopic79.html"
+							target="FrameMain">
+								Условные операторы
+							</a>
+
+				</li></ul></li></ul></li>
+				
+				</ul>
+		</div>
+		
+		
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				
+				
+			</ul>
+		</div>
+		
+		
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		
+		
+	</div>
+    
+</body>
+
+</html>
+

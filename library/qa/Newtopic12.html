@@ -1,0 +1,654 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Мануал по скриптам на русском языке</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic12");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Мануал по скриптам на русском языке</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic9.html">ПО автоматизированного тестирования</a> &rsaquo;&rsaquo; <a href="HiroMacro.html">HiroMacro</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="HiroMacro.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic13.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Selenium.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps19"><span class="rvts74">touchDown</span><span class="rvts75"> </span><span class="rvts76">finger</span><span class="rvts75"> </span><span class="rvts74">x</span><span class="rvts75"> </span><span class="rvts74">y</span></p>
+<p class="rvps20"><span class="rvts77">Нажатие</span><span class="rvts78"> </span><span class="rvts77">на</span><span class="rvts78"> </span><span class="rvts77">экран</span><span class="rvts79"> </span><span class="rvts77">Параметры</span></p>
+<p class="rvps21"><span class="rvts77">finger: номер</span><span class="rvts78"> </span><span class="rvts77">пальца</span><span class="rvts80">.</span><span class="rvts77"> максимум</span><span class="rvts78"> </span><span class="rvts81">4,</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> для</span><span class="rvts78"> </span><span class="rvts77">рандома</span><span class="rvts83"> </span><span class="rvts81">x:</span><span class="rvts77"> координаты</span><span class="rvts78"> </span><span class="rvts81">по</span><span class="rvts78"> </span><span class="rvts81">x</span></p>
+<p class="rvps22"><span class="rvts76">y:</span><span class="rvts75"> </span><span class="rvts76">координаты</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">по&nbsp;</span><span class="rvts75"> </span><span class="rvts74">y</span><span class="rvts84"> </span><span class="rvts76">пример:</span></p>
+<p class="rvps23"><span class="rvts81">touchDown</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span></p>
+<p class="rvps23"><span class="rvts81">touchDown</span><span class="rvts77"> </span><span class="rvts81">1</span><span class="rvts77"> </span><span class="rvts81">300</span><span class="rvts77"> </span><span class="rvts81">300</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts74">touchMove</span><span class="rvts75"> </span><span class="rvts76">finger</span><span class="rvts75"> </span><span class="rvts74">x</span><span class="rvts75"> </span><span class="rvts74">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps26"><span class="rvts77">Движение</span><span class="rvts78"> </span><span class="rvts77">пальца</span><span class="rvts78"> </span><span class="rvts81">по</span><span class="rvts78"> </span><span class="rvts77">прямой</span><span class="rvts78"> </span><span class="rvts81">к</span><span class="rvts78"> </span><span class="rvts77">указанной</span><span class="rvts78"> </span><span class="rvts77">координате</span><span class="rvts87"> </span><span class="rvts77">Параметры</span><span class="rvts88"> </span><span class="rvts81">те</span><span class="rvts88"> </span><span class="rvts77">же</span></p>
+<p class="rvps23"><span class="rvts76">пример:</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps27"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Прикоснемся</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">пальцем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts75"> </span><span class="rvts74">к&nbsp;</span><span class="rvts75"> </span><span class="rvts76">экрану</span><span class="rvts90"> </span><span class="rvts74">touchDown</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts75"> </span><span class="rvts74">100</span><span class="rvts75"> </span><span class="rvts74">200</span></p>
+<p class="rvps27"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Прикоснемся</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">пальцем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">1</span><span class="rvts75"> </span><span class="rvts74">к&nbsp;</span><span class="rvts75"> </span><span class="rvts76">экрану</span><span class="rvts90"> </span><span class="rvts74">touchDown</span><span class="rvts75"> </span><span class="rvts74">1</span><span class="rvts75"> </span><span class="rvts74">500</span><span class="rvts75"> </span><span class="rvts74">500</span></p>
+<p class="rvps28"><span class="rvts77">// Двинем</span><span class="rvts78"> </span><span class="rvts77">пальцем</span><span class="rvts78"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts81">к</span><span class="rvts78"> </span><span class="rvts77">координате</span><span class="rvts78"> </span><span class="rvts81">30,20</span><span class="rvts87"> </span><span class="rvts81">touchMove</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts81">30</span><span class="rvts77"> </span><span class="rvts81">20</span></p>
+<p class="rvps27"><span class="rvts77">// Двинем</span><span class="rvts78"> </span><span class="rvts77">пальцем</span><span class="rvts78"> </span><span class="rvts81">1</span><span class="rvts77"> </span><span class="rvts81">к</span><span class="rvts78"> </span><span class="rvts77">координате</span><span class="rvts78"> </span><span class="rvts82">0,0</span><span class="rvts87"> </span><span class="rvts81">touchMove</span><span class="rvts77"> </span><span class="rvts81">1</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts82">0</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps29"><span class="rvts91">Поясню.</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">Мы</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">прикасались</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">к</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">экрану</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">двумя</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">пальцами</span><span class="rvts80">,</span><span class="rvts80"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">условно</span><span class="rvts92"> </span><span class="rvts77">обозначенными</span><span class="rvts93"> </span><span class="rvts82">0</span><span class="rvts94"> </span><span class="rvts81">и &nbsp;1.</span><span class="rvts94"> </span><span class="rvts77">палец</span><span class="rvts93"> </span><span class="rvts82">0</span><span class="rvts94"> </span><span class="rvts77">сдвинулся</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts81">от &nbsp;100,200</span><span class="rvts94"> </span><span class="rvts81">к</span><span class="rvts93"> </span><span class="rvts81">30,20,</span><span class="rvts94"> </span><span class="rvts81">а &nbsp;</span><span class="rvts77">палец</span><span class="rvts93"> </span><span class="rvts81">1</span><span class="rvts94"> </span><span class="rvts82">-</span><span class="rvts94"> </span><span class="rvts81">от</span></p>
+<p class="rvps30"><span class="rvts81">500,500</span><span class="rvts94"> </span><span class="rvts81">к</span><span class="rvts93"> </span><span class="rvts82">0,0</span></p>
+<p class="rvps20"><span class="rvts81">4.2.3.</span><span class="rvts95"> </span><span class="rvts81">touchUp</span><span class="rvts95"> </span><span class="rvts77">finger</span><span class="rvts96"> </span><span class="rvts81">Отрыв</span><span class="rvts78"> </span><span class="rvts77">пальца</span><span class="rvts78"> </span><span class="rvts81">от</span><span class="rvts78"> </span><span class="rvts77">экрана</span><span class="rvts83"> </span><span class="rvts77">Параметры:</span></p>
+<p class="rvps22"><span class="rvts77">finger: номер</span><span class="rvts78"> </span><span class="rvts77">пальца</span><span class="rvts83"> </span><span class="rvts77">пример:</span></p>
+<p class="rvps31"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Прикоснемся</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">пальцем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts75"> </span><span class="rvts74">к&nbsp;</span><span class="rvts75"> </span><span class="rvts76">экрану</span><span class="rvts90"> </span><span class="rvts74">touchDown</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts75"> </span><span class="rvts74">100</span><span class="rvts75"> </span><span class="rvts74">200</span></p>
+<p class="rvps32"><span class="rvts77">// Подождем</span><span class="rvts88"> </span><span class="rvts81">1</span><span class="rvts77"> секунду</span><span class="rvts88"> </span><span class="rvts77">(1сек</span><span class="rvts88"> </span><span class="rvts81">=</span><span class="rvts77"> 1000мс)</span><span class="rvts97"> </span><span class="rvts77">sleep </span><span class="rvts81">1000</span></p>
+<p class="rvps33"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps34"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Сдвинем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">палец</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">к&nbsp;</span><span class="rvts75"> </span><span class="rvts74">200,200</span><span class="rvts87"> </span><span class="rvts74">touchMove</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts75"> </span><span class="rvts74">200</span><span class="rvts75"> </span><span class="rvts74">200</span></p>
+<p class="rvps23"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts74">И&nbsp;</span><span class="rvts75"> </span><span class="rvts76">отпустим</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">палец</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts89">0</span><span class="rvts87"> </span><span class="rvts74">touchUp</span><span class="rvts76"> </span><span class="rvts89">0</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts81">touchPress</span><span class="rvts77"> finger </span><span class="rvts81">x</span><span class="rvts77"> </span><span class="rvts81">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Данная</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">функция</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">работает</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">каа</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">если</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts81">бы&nbsp;</span><span class="rvts88"> </span><span class="rvts77">вы</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">нажали</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts81">и&nbsp;</span><span class="rvts88"> </span><span class="rvts77">отпустили</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">палец</span><span class="rvts99"> </span><span class="rvts77">(т</span><span class="rvts80">.</span><span class="rvts77">е</span><span class="rvts80">.</span><span class="rvts95"> </span><span class="rvts81">touchDown</span><span class="rvts95"> </span><span class="rvts81">и</span><span class="rvts77"> </span><span class="rvts81">touchUp)</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps36"><span class="rvts76">Параметры</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts89">-</span><span class="rvts75"> </span><span class="rvts76">finger</span><span class="rvts100">,</span><span class="rvts75"> </span><span class="rvts74">x,</span><span class="rvts75"> </span><span class="rvts76">y.</span><span class="rvts75"> </span><span class="rvts76">Что</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">это</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts89">-</span><span class="rvts75"> </span><span class="rvts76">вы</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">уже</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">знаете</span><span class="rvts87"> </span><span class="rvts76">Возьмем</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts74">простой&nbsp;</span><span class="rvts101"> </span><span class="rvts76">код:</span></p>
+<p class="rvps23"><span class="rvts81">touchDown</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span></p>
+<p class="rvps23"><span class="rvts81">touchup</span><span class="rvts95"> </span><span class="rvts82">0</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps37"><span class="rvts77">Его</span><span class="rvts78"> </span><span class="rvts77">можно</span><span class="rvts78"> </span><span class="rvts77">записать</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">одну</span><span class="rvts78"> </span><span class="rvts77">команду:</span><span class="rvts102"> </span><span class="rvts81">touchPress</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts74">С&nbsp;</span><span class="rvts103"> </span><span class="rvts76">сенсором</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">разобрались</span><span class="rvts100">.</span><span class="rvts103"> </span><span class="rvts74">Но&nbsp;</span><span class="rvts103"> </span><span class="rvts74">у&nbsp;</span><span class="rvts103"> </span><span class="rvts76">андроида</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts74">еще&nbsp;</span><span class="rvts103"> </span><span class="rvts74">есть&nbsp;</span><span class="rvts103"> </span><span class="rvts76">кнопки</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts74">и&nbsp;</span><span class="rvts103"> </span><span class="rvts76">клавиатура</span><span class="rvts100">.</span></p>
+<p class="rvps38"><span class="rvts104"><br/></span></p>
+<p class="rvps3"><img width="278" height="226" alt="" style="padding : 1px;" src="lib/NewItem44.png"></p>
+<p class="rvps38"><span class="rvts77">Учим</span><span class="rvts88"> </span><span class="rvts77">следующие</span><span class="rvts78"> </span><span class="rvts77">команды:</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps39"><span class="rvts76">keyDown </span><span class="rvts74">code</span></p>
+<p class="rvps40"><span class="rvts77">Нажатие</span><span class="rvts78"> </span><span class="rvts77">кнопки/клавиатуры</span><span class="rvts80">.</span><span class="rvts105"> </span><span class="rvts77">Параметры:</span></p>
+<p class="rvps41"><span class="rvts77">code: код</span><span class="rvts88"> </span><span class="rvts77">кнопки</span><span class="rvts80">.</span><span class="rvts77"> (см. рис.)</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts106"><br/></span></p>
+<p class="rvps3"><span class="rvts106"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts107"><br/></span></p>
+<p class="rvps42"><span class="rvts108">//</span><span class="rvts109"> </span><span class="rvts91">Отпустим &nbsp;</span><span class="rvts110"> </span><span class="rvts108">кнопку</span><span class="rvts111"> </span><span class="rvts108">keyUp K_A</span></p>
+<p class="rvps43"><span class="rvts77">sleep </span><span class="rvts81">1000</span></p>
+<p class="rvps44"><span class="rvts108">//</span><span class="rvts112"> </span><span class="rvts108">Зажмем</span><span class="rvts91">&nbsp;</span><span class="rvts110"> </span><span class="rvts91">SHIFT</span><span class="rvts105"> </span><span class="rvts108">keyDown</span><span class="rvts110"> </span><span class="rvts108">K_SHFT_LEFT</span></p>
+<p class="rvps45"><span class="rvts76">//</span><span class="rvts74"> </span><span class="rvts76">Зажмем</span><span class="rvts113"> </span><span class="rvts76">букву</span><span class="rvts113"> </span><span class="rvts74">A</span><span class="rvts114"> </span><span class="rvts108">keyDown</span><span class="rvts112"> </span><span class="rvts108">K_A</span></p>
+<p class="rvps46"><span class="rvts85"><br/></span></p>
+<p class="rvps47"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Зажмем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">букву</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">А&nbsp;</span><span class="rvts75"> </span><span class="rvts76">(т</span><span class="rvts100">.</span><span class="rvts76">к</span><span class="rvts100">.</span><span class="rvts75"> </span><span class="rvts76">нажат</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">shift,</span><span class="rvts75"> </span><span class="rvts76">введется</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">заглавная</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">А)</span><span class="rvts115"> </span><span class="rvts108">keyDown</span><span class="rvts112"> </span><span class="rvts108">K_A</span></p>
+<p class="rvps48"><span class="rvts108">//</span><span class="rvts109"> </span><span class="rvts91">Отпустим &nbsp;</span><span class="rvts110"> </span><span class="rvts108">кнопку</span><span class="rvts111"> </span><span class="rvts108">keyUp K_A</span></p>
+<p class="rvps48"><span class="rvts108">//</span><span class="rvts110"> </span><span class="rvts91">Отпустим &nbsp;</span><span class="rvts112"> </span><span class="rvts91">shift</span><span class="rvts111"> </span><span class="rvts108">keyUp</span><span class="rvts110"> </span><span class="rvts108">k_SHIFT_LEFT</span></p>
+<p class="rvps33"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps49"><span class="rvts116">естественно,</span><span class="rvts117"> </span><span class="rvts118">у</span><span class="rvts119"> </span><span class="rvts116">вс</span><span class="rvts120"> </span><span class="rvts116">должна</span><span class="rvts119"> </span><span class="rvts118">быть</span><span class="rvts119"> </span><span class="rvts116">открыта</span><span class="rvts120"> </span><span class="rvts116">прогамма</span><span class="rvts121">,</span><span class="rvts117"> </span><span class="rvts118">в</span><span class="rvts119"> </span><span class="rvts116">которую</span><span class="rvts119"> </span><span class="rvts116">можно</span><span class="rvts92"> </span><span class="rvts116">что-нибудь</span><span class="rvts120"> </span><span class="rvts116">вводить</span><span class="rvts121">,</span><span class="rvts116"> например, текстовой</span><span class="rvts120"> </span><span class="rvts116">редактор. </span><span class="rvts118">Если</span><span class="rvts120"> </span><span class="rvts116">вы</span><span class="rvts120"> </span><span class="rvts118">все</span><span class="rvts120"> </span><span class="rvts116">сделали</span><span class="rvts122"> </span><span class="rvts116">правильно,</span><span class="rvts123"> </span><span class="rvts118">у </span><span class="rvts116">вас</span><span class="rvts119"> </span><span class="rvts116">получится</span><span class="rvts119"> </span><span class="rvts116">"аА".</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts76">keyUp </span><span class="rvts74">code</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts77">Мы</span><span class="rvts78"> </span><span class="rvts77">уже</span><span class="rvts78"> </span><span class="rvts77">рассматривали</span><span class="rvts78"> </span><span class="rvts77">эту</span><span class="rvts78"> </span><span class="rvts77">команду. </span><span class="rvts81">Она</span><span class="rvts78"> </span><span class="rvts77">убирает</span><span class="rvts78"> </span><span class="rvts77">палец</span><span class="rvts78"> </span><span class="rvts81">с</span><span class="rvts78"> </span><span class="rvts77">кнопки</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps50"><span class="rvts76">keyPress</span><span class="rvts101"> </span><span class="rvts74">code</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts77">Выполняет</span><span class="rvts94"> </span><span class="rvts77">keyDown</span><span class="rvts80">,</span><span class="rvts77"> </span><span class="rvts81">а</span><span class="rvts94"> </span><span class="rvts81">потом</span><span class="rvts94"> </span><span class="rvts77">keyUp.</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts77">Возьмем</span><span class="rvts78"> </span><span class="rvts77">код</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps51"><span class="rvts108">keyDown K_BACK</span><span class="rvts124"> </span><span class="rvts108">keyUp</span><span class="rvts125"> </span><span class="rvts108">K_BACK</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps52"><span class="rvts74">И&nbsp;</span><span class="rvts75"> </span><span class="rvts76">сократим</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">его</span><span class="rvts92"> </span><span class="rvts108">keyPress</span><span class="rvts112"> </span><span class="rvts108">K_BACK</span></p>
+<p class="rvps53"><span class="rvts81">На</span><span class="rvts78"> </span><span class="rvts77">этом</span><span class="rvts78"> </span><span class="rvts77">работа</span><span class="rvts78"> </span><span class="rvts81">с</span><span class="rvts78"> </span><span class="rvts77">кнопками</span><span class="rvts78"> </span><span class="rvts77">завершена</span><span class="rvts80">,</span><span class="rvts77"> идем</span><span class="rvts78"> </span><span class="rvts77">дальше!</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps50"><span class="rvts77">Sleep time</span></p>
+<p class="rvps54"><span class="rvts77">Задержка</span><span class="rvts78"> </span><span class="rvts77">(в</span><span class="rvts78"> </span><span class="rvts77">мс). </span><span class="rvts81">1</span><span class="rvts77"> секунда</span><span class="rvts78"> </span><span class="rvts82">-</span><span class="rvts77"> 1000мс</span><span class="rvts94"> </span><span class="rvts77">Параметры:</span></p>
+<p class="rvps52"><span class="rvts77">time: время</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">мс</span><span class="rvts94"> </span><span class="rvts77">пример:</span></p>
+<p class="rvps55"><span class="rvts77">// Задержка</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts81">1</span><span class="rvts77"> секунду</span><span class="rvts90"> </span><span class="rvts77">sleep </span><span class="rvts81">1000</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts76">Var</span><span class="rvts75"> </span><span class="rvts76">name</span><span class="rvts75"> </span><span class="rvts76">val</span></p>
+<p class="rvps56"><span class="rvts77">Объявление</span><span class="rvts78"> </span><span class="rvts77">переменной</span><span class="rvts78"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">присвоение</span><span class="rvts78"> </span><span class="rvts77">ей</span><span class="rvts78"> </span><span class="rvts77">значения.</span><span class="rvts105"> </span><span class="rvts77">Параметры:</span></p>
+<p class="rvps53"><span class="rvts77">name:</span><span class="rvts94"> </span><span class="rvts77">имя</span><span class="rvts93"> </span><span class="rvts77">переменной</span><span class="rvts80">.</span><span class="rvts94"> </span><span class="rvts77">содежит</span><span class="rvts93"> </span><span class="rvts77">символ</span><span class="rvts93"> </span><span class="rvts77">"#"</span><span class="rvts94"> </span><span class="rvts81">и</span><span class="rvts93"> </span><span class="rvts77">латинские</span><span class="rvts93"> </span><span class="rvts77">буквы</span><span class="rvts80">.</span><span class="rvts94"> </span><span class="rvts77">например</span></p>
+<p class="rvps53"><span class="rvts77">#a</span><span class="rvts80">,</span><span class="rvts77"> </span><span class="rvts81">#lol</span></p>
+<p class="rvps53"><span class="rvts77">val: Числовое</span><span class="rvts78"> </span><span class="rvts77">значение</span><span class="rvts78"> </span><span class="rvts77">переменной</span><span class="rvts78"> </span><span class="rvts77">(0 </span><span class="rvts81">1 2</span><span class="rvts77"> </span><span class="rvts81">3</span><span class="rvts77"> </span><span class="rvts81">4</span><span class="rvts77"> </span><span class="rvts81">5)</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts77">// объявим</span><span class="rvts78"> </span><span class="rvts77">переменную</span><span class="rvts78"> </span><span class="rvts77">#abc</span><span class="rvts81"> и</span><span class="rvts78"> </span><span class="rvts77">присвоем</span><span class="rvts78"> </span><span class="rvts77">ей</span><span class="rvts78"> </span><span class="rvts77">значение</span><span class="rvts78"> </span><span class="rvts82">0</span></p>
+<p class="rvps57"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps19"><span class="rvts77">Var #abc </span><span class="rvts82">0</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts77">Set name val</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps36"><span class="rvts76">Изменяет</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">значение</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">ОБЪЯВЛЕННОЙ(!)</span><span class="rvts75"> </span><span class="rvts76">переменной</span><span class="rvts126"> </span><span class="rvts77">Посмотрите</span><span class="rvts88"> </span><span class="rvts77">на</span><span class="rvts88"> </span><span class="rvts77">следующий</span><span class="rvts88"> </span><span class="rvts77">код:</span></p>
+<p class="rvps58"><span class="rvts77">// Объявляем</span><span class="rvts94"> </span><span class="rvts77">переменную</span><span class="rvts101"> </span><span class="rvts77">Var #abc </span><span class="rvts82">0</span></p>
+<p class="rvps28"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">метка</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">:start</span><span class="rvts75"> </span><span class="rvts76">(о</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">них</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">позже)</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps59"><span class="rvts77">// Изменим</span><span class="rvts78"> </span><span class="rvts77">переменную</span><span class="rvts78"> </span><span class="rvts77">#abc на</span><span class="rvts78"> </span><span class="rvts81">1</span><span class="rvts127"> </span><span class="rvts77">Set</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">1</span></p>
+<p class="rvps60"><span class="rvts77">// покажем</span><span class="rvts88"> </span><span class="rvts81">тост</span><span class="rvts78"> </span><span class="rvts81">с</span><span class="rvts78"> </span><span class="rvts77">этой</span><span class="rvts88"> </span><span class="rvts77">переменной</span><span class="rvts78"> </span><span class="rvts77">(о</span><span class="rvts78"> </span><span class="rvts77">них</span><span class="rvts78"> </span><span class="rvts77">позже)</span><span class="rvts115"> </span><span class="rvts81">toast</span><span class="rvts94"> </span><span class="rvts77">#abc</span></p>
+<p class="rvps23"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Метка</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">:end</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts76">Calc</span><span class="rvts75"> </span><span class="rvts76">var</span><span class="rvts75"> </span><span class="rvts76">val1</span><span class="rvts75"> </span><span class="rvts76">option</span><span class="rvts75"> </span><span class="rvts76">val2</span></p>
+<p class="rvps61"><span class="rvts77">Математические</span><span class="rvts81"> &nbsp;</span><span class="rvts77">действия</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">над</span><span class="rvts81"> &nbsp;</span><span class="rvts77">переменными</span><span class="rvts128"> </span><span class="rvts77">Params</span></p>
+<p class="rvps60"><span class="rvts77">var </span><span class="rvts81">:</span><span class="rvts77"> Переменная, </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">которую</span><span class="rvts78"> </span><span class="rvts77">будет</span><span class="rvts78"> </span><span class="rvts77">записан</span><span class="rvts78"> </span><span class="rvts77">результат</span><span class="rvts120"> </span><span class="rvts77">val1: Первая</span><span class="rvts88"> </span><span class="rvts77">переменная/число</span></p>
+<p class="rvps62"><span class="rvts77">option:</span><span class="rvts94"> </span><span class="rvts81">+</span><span class="rvts94"> </span><span class="rvts77">(Сложить),</span><span class="rvts94"> </span><span class="rvts81">–</span><span class="rvts78"> </span><span class="rvts77">(Вычесть),</span><span class="rvts94"> </span><span class="rvts81">/</span><span class="rvts94"> </span><span class="rvts77">(Разделить),</span><span class="rvts94"> </span><span class="rvts81">*</span><span class="rvts94"> </span><span class="rvts77">(Умножить)</span><span class="rvts94"> </span><span class="rvts81">%</span><span class="rvts94"> </span><span class="rvts81">(Остаток</span><span class="rvts78"> </span><span class="rvts77">при</span><span class="rvts122"> </span><span class="rvts77">делении)</span></p>
+<p class="rvps63"><span class="rvts77">val2: Вторая</span><span class="rvts88"> </span><span class="rvts77">переменная/число</span><span class="rvts92"> </span><span class="rvts77">Давайте</span><span class="rvts78"> </span><span class="rvts77">посчитаем:</span></p>
+<p class="rvps55"><span class="rvts77">// Объявим</span><span class="rvts94"> </span><span class="rvts77">переменые</span><span class="rvts87"> </span><span class="rvts77">Var #result </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">Var #abc </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps64"><span class="rvts77">// Изменим</span><span class="rvts78"> </span><span class="rvts77">#abc на</span><span class="rvts78"> </span><span class="rvts81">1</span><span class="rvts87"> </span><span class="rvts77">Set</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">1</span></p>
+<p class="rvps60"><span class="rvts77">// Сложим</span><span class="rvts78"> </span><span class="rvts77">#abc </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts77"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">запишем</span><span class="rvts78"> </span><span class="rvts77">результат</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">#result</span><span class="rvts90"> </span><span class="rvts81">calc</span><span class="rvts94"> </span><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">+</span><span class="rvts94"> </span><span class="rvts81">10</span></p>
+<p class="rvps65"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Покажем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">результат</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">(должно</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts74">появится&nbsp;</span><span class="rvts101"> </span><span class="rvts74">11)</span><span class="rvts97"> </span><span class="rvts74">toast</span><span class="rvts103"> </span><span class="rvts76">#result</span></p>
+<p class="rvps66"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Подождем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">3</span><span class="rvts75"> </span><span class="rvts76">секунды</span><span class="rvts129"> </span><span class="rvts76">sleep</span><span class="rvts103"> </span><span class="rvts74">3000</span></p>
+<p class="rvps67"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Вычтем</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">из</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">результата</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts74">5</span><span class="rvts87"> </span><span class="rvts76">Calc</span><span class="rvts75"> </span><span class="rvts76">#result</span><span class="rvts75"> </span><span class="rvts76">#result</span><span class="rvts75"> </span><span class="rvts89">-</span><span class="rvts75"> </span><span class="rvts74">5</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Покажем</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">результат</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps68"><span class="rvts81">toast</span><span class="rvts77"> #result</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps69"><span class="rvts81">Есть</span><span class="rvts88"> </span><span class="rvts81">и</span><span class="rvts88"> </span><span class="rvts77">другой</span><span class="rvts88"> </span><span class="rvts81">способ.</span><span class="rvts77"> Давайте</span><span class="rvts88"> </span><span class="rvts77">рассмотрим</span><span class="rvts88"> </span><span class="rvts77">такой</span><span class="rvts88"> </span><span class="rvts77">пример:</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps70"><span class="rvts77">// Объявляем</span><span class="rvts88"> </span><span class="rvts77">переменные</span><span class="rvts127"> </span><span class="rvts77">Var #result </span><span class="rvts82">0</span></p>
+<p class="rvps71"><span class="rvts77">Var #abc </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps23"><span class="rvts77">Set</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">1</span></p>
+<p class="rvps64"><span class="rvts81">calc</span><span class="rvts94"> </span><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">+</span><span class="rvts94"> </span><span class="rvts81">10</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> #result</span></p>
+<p class="rvps23"><span class="rvts77">sleep </span><span class="rvts81">3000</span></p>
+<p class="rvps64"><span class="rvts76">Calc</span><span class="rvts75"> </span><span class="rvts76">#result</span><span class="rvts75"> </span><span class="rvts76">#result</span><span class="rvts75"> </span><span class="rvts89">-</span><span class="rvts75"> </span><span class="rvts74">5</span><span class="rvts87"> </span><span class="rvts74">toast</span><span class="rvts103"> </span><span class="rvts76">#result</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps72"><span class="rvts89">...</span><span class="rvts75"> </span><span class="rvts74">И</span><span class="rvts113"> </span><span class="rvts76">сделаем</span><span class="rvts113"> </span><span class="rvts76">его</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">попроще</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">=</span><span class="rvts94"> </span><span class="rvts81">1</span></p>
+<p class="rvps64"><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts81">=</span><span class="rvts94"> </span><span class="rvts77">#abc</span><span class="rvts94"> </span><span class="rvts81">+</span><span class="rvts94"> </span><span class="rvts81">10</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> #result</span></p>
+<p class="rvps23"><span class="rvts77">sleep </span><span class="rvts81">3000</span></p>
+<p class="rvps64"><span class="rvts77">#result </span><span class="rvts81">=</span><span class="rvts77"> #result </span><span class="rvts82">-</span><span class="rvts77"> </span><span class="rvts81">5</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> #result</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts77">Можно</span><span class="rvts78"> </span><span class="rvts77">даже</span><span class="rvts78"> </span><span class="rvts77">так:</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps28"><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts81">=</span><span class="rvts94"> </span><span class="rvts77">(#abc+10</span><span class="rvts80">-</span><span class="rvts77">1)*2+(#abc%10)*5</span></p>
+<p class="rvps23"><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts81">=</span><span class="rvts94"> </span><span class="rvts77">#abc+#result</span><span class="rvts80">-</span><span class="rvts77">10</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps22"><span class="rvts81">4.2.13.</span><span class="rvts77"> Rand var min max</span><span class="rvts87"> </span><span class="rvts77">Рандомные</span><span class="rvts93"> </span><span class="rvts77">числа</span><span class="rvts80">.</span></p>
+<p class="rvps23"><span class="rvts76">Параметры</span></p>
+<p class="rvps73"><span class="rvts77">var </span><span class="rvts81">:</span><span class="rvts77"> Переменная</span><span class="rvts78"> </span><span class="rvts77">куда</span><span class="rvts78"> </span><span class="rvts77">будет</span><span class="rvts78"> </span><span class="rvts77">сохранено</span><span class="rvts78"> </span><span class="rvts77">рандомное</span><span class="rvts78"> </span><span class="rvts77">число</span><span class="rvts92"> </span><span class="rvts77">min:</span><span class="rvts94"> </span><span class="rvts77">Минимальное</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">значени</span></p>
+<p class="rvps28"><span class="rvts77">max:</span><span class="rvts94"> </span><span class="rvts77">Максимальное</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">значение</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps28"><span class="rvts77">// </span><span class="rvts81">Больше</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts77"> но</span><span class="rvts78"> </span><span class="rvts77">меньше</span><span class="rvts78"> </span><span class="rvts81">20</span></p>
+<p class="rvps23"><span class="rvts77">rand </span><span class="rvts81">#count 10</span><span class="rvts77"> </span><span class="rvts81">20</span></p>
+<p class="rvps58"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts74">И&nbsp;</span><span class="rvts75"> </span><span class="rvts76">смотрим</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">наш</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">рандом</span><span class="rvts90"> </span><span class="rvts74">toast</span><span class="rvts75"> </span><span class="rvts76">Random</span><span class="rvts75"> </span><span class="rvts76">is</span><span class="rvts75"> </span><span class="rvts74">#count</span></p>
+<p class="rvps23"><span class="rvts77">sleep </span><span class="rvts81">2000</span></p>
+<p class="rvps74"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Делаем</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">бесконечный</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">цикл</span><span class="rvts130"> </span><span class="rvts76">goto</span><span class="rvts101"> </span><span class="rvts76">:start</span></p>
+<p class="rvps33"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<div class="rvps85"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="408" height="136" valign="top" style="padding: 0px;"><p class="rvps75"><span class="rvts131">:end</span></p>
+<p class="rvps76"><span class="rvts132"><br/></span></p>
+<p class="rvps77"><span class="rvts133">4.2.14.</span><span class="rvts131"> </span><span class="rvts133">If</span><span class="rvts131"> Endif</span><span class="rvts134"> </span><span class="rvts131">Условия</span></p>
+<p class="rvps78"><span class="rvts131">Делаем</span><span class="rvts133">&nbsp;</span><span class="rvts135"> </span><span class="rvts131">наши</span><span class="rvts133">&nbsp;</span><span class="rvts135"> </span><span class="rvts131">скрипты</span><span class="rvts133">&nbsp;</span><span class="rvts135"> </span><span class="rvts131">чуточку</span><span class="rvts133">&nbsp;</span><span class="rvts135"> </span><span class="rvts131">умнее.</span><span class="rvts133">&nbsp;</span><span class="rvts134"> </span><span class="rvts133">В&nbsp;</span><span class="rvts135"> </span><span class="rvts131">условиях</span></p>
+</td>
+<td width="60" height="136" valign="top" style="padding: 0px;"><p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps76"><span class="rvts136"><br/></span></p>
+<p class="rvps80"><span class="rvts131">можно</span></p>
+</td>
+<td width="92" height="136" valign="top" style="padding: 0px;"><p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps79"><span class="rvts132"><br/></span></p>
+<p class="rvps76"><span class="rvts136"><br/></span></p>
+<p class="rvps80"><span class="rvts137">сравнивать</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="178" valign="top" style="padding: 0px;"><p class="rvps81"><span class="rvts131">переменные</span><span class="rvts138"> </span><span class="rvts133">и</span><span class="rvts138"> </span><span class="rvts131">числа. Эти</span><span class="rvts138"> </span><span class="rvts131">знаки</span><span class="rvts138"> </span><span class="rvts131">вам</span><span class="rvts138"> </span><span class="rvts131">помогут:</span></p>
+<p class="rvps78"><span class="rvts133">=</span><span class="rvts134"> </span><span class="rvts131">или</span><span class="rvts133">&nbsp;</span><span class="rvts134"> </span><span class="rvts133">==</span><span class="rvts134"> </span><span class="rvts131">равенство</span></p>
+<p class="rvps78"><span class="rvts137">!=</span><span class="rvts139"> </span><span class="rvts137">отличие</span></p>
+<p class="rvps78"><span class="rvts133">&lt;</span><span class="rvts134"> </span><span class="rvts131">меньше</span></p>
+<p class="rvps78"><span class="rvts133">&gt;</span><span class="rvts131"> больше</span></p>
+<p class="rvps78"><span class="rvts133">&lt;=</span><span class="rvts134"> </span><span class="rvts131">меньше</span><span class="rvts135"> </span><span class="rvts131">или</span><span class="rvts135"> </span><span class="rvts131">равно</span></p>
+<p class="rvps82"><span class="rvts133">=&gt;</span><span class="rvts131"> больше</span><span class="rvts138"> </span><span class="rvts131">или</span><span class="rvts138"> </span><span class="rvts131">равно</span><span class="rvts140"> </span><span class="rvts131">and </span><span class="rvts133">и</span></p>
+<p class="rvps78"><span class="rvts133">or</span><span class="rvts131"> или</span></p>
+</td>
+<td width="60" height="178" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="178" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="38" valign="top" style="padding: 0px;"><p class="rvps83"><span class="rvts141">А&nbsp;</span><span class="rvts142"> </span><span class="rvts143">теперь</span><span class="rvts141">&nbsp;</span><span class="rvts142"> </span><span class="rvts143">практика:</span></p>
+</td>
+<td width="60" height="38" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="38" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="28" valign="top" style="padding: 0px;"><p class="rvps83"><span class="rvts131">Var </span><span class="rvts133">#count</span><span class="rvts131"> </span><span class="rvts144">0</span></p>
+</td>
+<td width="60" height="28" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="28" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="19" valign="top" style="padding: 0px;"><p class="rvps84"><span class="rvts131">:start</span></p>
+</td>
+<td width="60" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="19" valign="top" style="padding: 0px;"><p class="rvps84"><span class="rvts133">#count</span><span class="rvts131"> </span><span class="rvts133">=</span><span class="rvts131"> </span><span class="rvts133">#count</span><span class="rvts131"> </span><span class="rvts133">+</span><span class="rvts131"> </span><span class="rvts133">1</span></p>
+</td>
+<td width="60" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="19" valign="top" style="padding: 0px;"><p class="rvps84"><span class="rvts131">// </span><span class="rvts133">Если</span><span class="rvts145"> </span><span class="rvts133">#count</span><span class="rvts131"> равен</span><span class="rvts145"> </span><span class="rvts133">10...</span></p>
+</td>
+<td width="60" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="19" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="408" height="23" valign="top" style="padding: 0px;"><p class="rvps84"><span class="rvts131">if </span><span class="rvts133">#count ==</span><span class="rvts131"> </span><span class="rvts133">10</span></p>
+</td>
+<td width="60" height="23" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+<td width="92" height="23" valign="top" style="padding: 0px;"><p class="rvps3"><span class="rvts85"><br/></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps24"><span class="rvts146"><br/></span></p>
+<p class="rvps86"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts89">...</span><span class="rvts75"> </span><span class="rvts76">То</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">покажем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">"count</span><span class="rvts75"> </span><span class="rvts76">равен</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">10"!</span><span class="rvts96"> </span><span class="rvts74">toast</span><span class="rvts101"> </span><span class="rvts74">count</span><span class="rvts101"> </span><span class="rvts76">равен</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts74">10</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps87"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts74">И&nbsp;</span><span class="rvts75"> </span><span class="rvts76">закроем</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">условие</span><span class="rvts87"> </span><span class="rvts76">endif</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps88"><span class="rvts77">// </span><span class="rvts81">#count</span><span class="rvts77"> больше</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts77"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">меньше</span><span class="rvts78"> </span><span class="rvts81">20</span><span class="rvts87"> </span><span class="rvts77">if </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">&gt;</span><span class="rvts77"> </span><span class="rvts81">10</span><span class="rvts77"> and </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">&lt;20</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps89"><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">20</span><span class="rvts77"> </span><span class="rvts81">count</span><span class="rvts77"> больше</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts77"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">меньше</span><span class="rvts78"> </span><span class="rvts81">20</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps90"><span class="rvts77">endif</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps91"><span class="rvts147">//</span><span class="rvts147"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">#count</span><span class="rvts94"> </span><span class="rvts77">равен</span><span class="rvts78"> </span><span class="rvts81">5</span><span class="rvts94"> </span><span class="rvts77">или</span><span class="rvts78"> </span><span class="rvts81">8</span></p>
+<p class="rvps92"><span class="rvts77">if </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">==</span><span class="rvts77"> </span><span class="rvts81">5</span><span class="rvts77"> </span><span class="rvts81">or</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">==</span><span class="rvts77"> </span><span class="rvts81">8</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps93"><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">The</span><span class="rvts77"> current </span><span class="rvts81">count</span><span class="rvts77"> is </span><span class="rvts81">5</span><span class="rvts77"> </span><span class="rvts81">or</span><span class="rvts77"> </span><span class="rvts81">8.</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps92"><span class="rvts77">endif</span></p>
+<p class="rvps94"><span class="rvts76">:end</span><span class="rvts112"> </span><span class="rvts74">ElseIF</span></p>
+<p class="rvps95"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps19"><span class="rvts77">Иначе</span><span class="rvts88"> </span><span class="rvts77">Если</span><span class="rvts80">...</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps96"><span class="rvts77">При</span><span class="rvts78"> </span><span class="rvts77">не</span><span class="rvts78"> </span><span class="rvts77">выполнении</span><span class="rvts78"> </span><span class="rvts77">условия</span><span class="rvts78"> </span><span class="rvts77">if</span><span class="rvts80">,</span><span class="rvts77"> можно</span><span class="rvts78"> </span><span class="rvts77">выполнить</span><span class="rvts78"> </span><span class="rvts77">другое</span><span class="rvts78"> </span><span class="rvts77">(else if).</span><span class="rvts148"> </span><span class="rvts77">Чтобы</span><span class="rvts88"> </span><span class="rvts77">было</span><span class="rvts88"> </span><span class="rvts77">понятнее</span><span class="rvts80">,</span><span class="rvts77"> рассмотрите</span><span class="rvts88"> </span><span class="rvts77">следующий</span><span class="rvts88"> </span><span class="rvts77">код:</span></p>
+<p class="rvps23"><span class="rvts77">Var </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps23"><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">=</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">+</span><span class="rvts77"> </span><span class="rvts81">1</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps97"><span class="rvts77">// </span><span class="rvts81">Если</span><span class="rvts78"> </span><span class="rvts81">#count</span><span class="rvts77"> равен</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts127"> </span><span class="rvts77">if </span><span class="rvts81">#count ==</span><span class="rvts77"> </span><span class="rvts81">10</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps98"><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">count </span><span class="rvts77">равен</span><span class="rvts78"> </span><span class="rvts81">10</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps99"><span class="rvts77">// Иначе</span><span class="rvts78"> </span><span class="rvts77">если</span><span class="rvts78"> </span><span class="rvts81">#count</span><span class="rvts77"> равен</span><span class="rvts78"> </span><span class="rvts81">15</span><span class="rvts87"> </span><span class="rvts77">elseif </span><span class="rvts81">#count ==</span><span class="rvts77"> </span><span class="rvts81">15</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps100"><span class="rvts74">toast</span><span class="rvts74"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">count</span><span class="rvts94"> </span><span class="rvts77">равен</span><span class="rvts93"> </span><span class="rvts81">15</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps27"><span class="rvts77">// Иначе</span><span class="rvts88"> </span><span class="rvts81">Если</span><span class="rvts88"> </span><span class="rvts81">#count</span><span class="rvts77"> больше/равен</span><span class="rvts88"> </span><span class="rvts81">20</span><span class="rvts87"> </span><span class="rvts77">elseif </span><span class="rvts81">#count &gt;=</span><span class="rvts77"> </span><span class="rvts81">20</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps101"><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">count</span><span class="rvts77"> больше</span><span class="rvts78"> </span><span class="rvts77">или</span><span class="rvts78"> </span><span class="rvts77">равен</span><span class="rvts78"> </span><span class="rvts81">20</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">endif</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts74">Else</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts81">Если&nbsp;</span><span class="rvts94"> </span><span class="rvts77">if</span><span class="rvts88"> </span><span class="rvts81">и&nbsp;</span><span class="rvts94"> </span><span class="rvts81">все&nbsp;</span><span class="rvts94"> </span><span class="rvts77">elseIf</span><span class="rvts88"> </span><span class="rvts77">не</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">были</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">выполнены</span><span class="rvts80">,</span><span class="rvts88"> </span><span class="rvts81">то&nbsp;</span><span class="rvts94"> </span><span class="rvts77">выполняется</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">else</span><span class="rvts80">.</span><span class="rvts88"> </span><span class="rvts77">Это</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">как</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts81">в</span><span class="rvts149"> </span><span class="rvts77">жизни:</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts77">if </span><span class="rvts81">я</span><span class="rvts78"> </span><span class="rvts81">хочу</span><span class="rvts78"> </span><span class="rvts77">пойти</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">бар</span></p>
+<p class="rvps102"><span class="rvts116">взять</span><span class="rvts117"> </span><span class="rvts116">деньги</span><span class="rvts126"> </span><span class="rvts116">else if денег</span><span class="rvts120"> </span><span class="rvts116">нет</span></p>
+<p class="rvps103"><span class="rvts77">найти</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">деньги</span><span class="rvts126"> </span><span class="rvts77">else</span><span class="rvts94"> </span><span class="rvts77">if</span><span class="rvts94"> </span><span class="rvts77">не</span><span class="rvts93"> </span><span class="rvts77">нашел</span><span class="rvts93"> </span><span class="rvts77">денег</span></p>
+<p class="rvps103"><span class="rvts77">заработать</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">их</span><span class="rvts79"> </span><span class="rvts77">else </span><span class="rvts81">ты</span><span class="rvts78"> </span><span class="rvts77">бомж</span></p>
+<p class="rvps23"><span class="rvts77">endIf</span></p>
+<p class="rvps56"><span class="rvts76">Правда</span><span class="rvts100">,</span><span class="rvts75"> </span><span class="rvts76">HiroMacro</span><span class="rvts75"> </span><span class="rvts76">такое</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">не</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">поймет</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">:D</span><span class="rvts75"> </span><span class="rvts74">Зато&nbsp;</span><span class="rvts75"> </span><span class="rvts76">она</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">поймет</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">это:</span><span class="rvts102"> </span><span class="rvts76">Var</span><span class="rvts75"> </span><span class="rvts74">#count</span><span class="rvts75"> </span><span class="rvts89">0</span></p>
+<p class="rvps23"><span class="rvts77">Var #na </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps23"><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">=</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">+</span><span class="rvts77"> </span><span class="rvts81">1</span></p>
+<p class="rvps46"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps104"><span class="rvts77">// Вычислим</span><span class="rvts78"> </span><span class="rvts81">остаток</span><span class="rvts78"> </span><span class="rvts77">при</span><span class="rvts78"> </span><span class="rvts77">делении</span><span class="rvts78"> </span><span class="rvts77">на</span><span class="rvts78"> </span><span class="rvts81">2</span></p>
+<p class="rvps53"><span class="rvts77">#na </span><span class="rvts81">=</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">2</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps105"><span class="rvts116">//</span><span class="rvts123"> </span><span class="rvts118">Если</span><span class="rvts119"> </span><span class="rvts116">значение</span><span class="rvts119"> </span><span class="rvts150">0</span><span class="rvts87"> </span><span class="rvts116">if #na </span><span class="rvts118">==</span><span class="rvts116"> </span><span class="rvts150">0</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps106"><span class="rvts74">toast</span><span class="rvts75"> </span><span class="rvts76">Count</span><span class="rvts75"> </span><span class="rvts89">-</span><span class="rvts75"> </span><span class="rvts76">четное</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">число</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps107"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Иначе</span><span class="rvts127"> </span><span class="rvts76">else</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps106"><span class="rvts74">toast</span><span class="rvts101"> </span><span class="rvts74">count</span><span class="rvts101"> </span><span class="rvts89">-</span><span class="rvts101"> </span><span class="rvts76">нечетное</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">число</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps51"><span class="rvts77">// End </span><span class="rvts81">of</span><span class="rvts77"> if statement</span><span class="rvts80">.</span><span class="rvts105"> </span><span class="rvts77">endif</span></p>
+<p class="rvps108"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps50"><span class="rvts74">Goto</span><span class="rvts75"> </span><span class="rvts76">label</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps109"><span class="rvts77">Переход</span><span class="rvts78"> </span><span class="rvts81">к</span><span class="rvts78"> </span><span class="rvts77">метке</span><span class="rvts80">.</span><span class="rvts93"> </span><span class="rvts77">Метка</span><span class="rvts78"> </span><span class="rvts77">начинается</span><span class="rvts78"> </span><span class="rvts81">с</span><span class="rvts78"> </span><span class="rvts77">двоеточия</span><span class="rvts78"> </span><span class="rvts77">(:),</span><span class="rvts93"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">может</span><span class="rvts120"> </span><span class="rvts77">располагаться</span><span class="rvts94"> </span><span class="rvts81">в</span><span class="rvts94"> </span><span class="rvts77">любом</span><span class="rvts94"> </span><span class="rvts77">участке</span><span class="rvts94"> </span><span class="rvts77">кода</span><span class="rvts80">,</span><span class="rvts88"> </span><span class="rvts77">однако</span><span class="rvts94"> </span><span class="rvts77">метки</span><span class="rvts94"> </span><span class="rvts77">:start</span><span class="rvts88"> </span><span class="rvts81">и</span><span class="rvts94"> </span><span class="rvts77">:end</span><span class="rvts88"> </span><span class="rvts77">должны</span><span class="rvts151"> </span><span class="rvts81">быть&nbsp;</span><span class="rvts94"> </span><span class="rvts77">обязательно.</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps53"><span class="rvts77">var </span><span class="rvts81">#count 0;</span></p>
+<p class="rvps53"><span class="rvts77">:start</span></p>
+<p class="rvps53"><span class="rvts81">calc</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">+</span><span class="rvts77"> </span><span class="rvts81">1</span></p>
+<p class="rvps110"><span class="rvts77">// </span><span class="rvts81">Если</span><span class="rvts88"> </span><span class="rvts81">count</span><span class="rvts77"> меньше</span><span class="rvts88"> </span><span class="rvts81">10</span><span class="rvts87"> </span><span class="rvts77">if </span><span class="rvts81">#count</span><span class="rvts77"> </span><span class="rvts81">&lt;</span><span class="rvts77"> </span><span class="rvts81">10</span></p>
+<p class="rvps111"><span class="rvts77">goto :alabel</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps107"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Иначе</span><span class="rvts127"> </span><span class="rvts76">else</span></p>
+<p class="rvps112"><span class="rvts77">goto :blabel</span><span class="rvts152"> </span><span class="rvts77">endif</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts77">:alabel</span></p>
+<p class="rvps55"><span class="rvts81">toast count </span><span class="rvts77">меньше</span><span class="rvts78"> </span><span class="rvts81">10!</span><span class="rvts96"> </span><span class="rvts77">goto</span><span class="rvts95"> </span><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">:blabel</span></p>
+<p class="rvps28"><span class="rvts81">toast</span><span class="rvts94"> </span><span class="rvts81">count</span><span class="rvts94"> </span><span class="rvts77">не</span><span class="rvts78"> </span><span class="rvts77">меньше</span><span class="rvts78"> </span><span class="rvts81">10!</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts76">getColor</span><span class="rvts75"> </span><span class="rvts76">var</span><span class="rvts75"> </span><span class="rvts74">x</span><span class="rvts75"> </span><span class="rvts74">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps113"><span class="rvts77">Записывает</span><span class="rvts81"> &nbsp;в&nbsp;</span><span class="rvts94"> </span><span class="rvts77">var</span><span class="rvts94"> </span><span class="rvts77">значение</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">цвета</span><span class="rvts81"> &nbsp;</span><span class="rvts77">на</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">экране</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts81">по&nbsp;</span><span class="rvts94"> </span><span class="rvts77">указанным</span><span class="rvts81"> &nbsp;</span><span class="rvts77">координатам.</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps114"><span class="rvts77">Формула</span><span class="rvts78"> </span><span class="rvts77">рассчета</span><span class="rvts78"> </span><span class="rvts77">var: </span><span class="rvts81">blue</span><span class="rvts77"> </span><span class="rvts81">* 65526 + </span><span class="rvts77">green </span><span class="rvts81">*</span><span class="rvts77"> </span><span class="rvts81">256 + </span><span class="rvts77">red</span></p>
+<p class="rvps115"><span class="rvts77">Чтобы</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">рассчитать</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">из</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">var</span><span class="rvts78"> </span><span class="rvts77">красный</span><span class="rvts80">,</span><span class="rvts78"> </span><span class="rvts77">зеленый</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts81">и&nbsp;</span><span class="rvts78"> </span><span class="rvts77">синий</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">цвета</span><span class="rvts80">,</span><span class="rvts78"> </span><span class="rvts77">выполните</span><span class="rvts153"> </span><span class="rvts77">следующее:</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">red </span><span class="rvts81">=</span><span class="rvts77"> var </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">256</span></p>
+<p class="rvps55"><span class="rvts77">green </span><span class="rvts81">=</span><span class="rvts77"> var </span><span class="rvts81">/</span><span class="rvts77"> </span><span class="rvts81">256</span><span class="rvts77"> </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">256,</span><span class="rvts154"> </span><span class="rvts81">blue</span><span class="rvts77"> </span><span class="rvts81">=</span><span class="rvts77"> var </span><span class="rvts81">/</span><span class="rvts77"> </span><span class="rvts81">256</span><span class="rvts77"> </span><span class="rvts81">/</span><span class="rvts77"> </span><span class="rvts81">256</span><span class="rvts77"> </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">256</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> #color 0</span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts94"> </span><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts82">0</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps23"><span class="rvts77">getColor </span><span class="rvts81">#color</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps28"><span class="rvts77">// Рассчитаем</span><span class="rvts78"> </span><span class="rvts77">красный</span><span class="rvts93"> </span><span class="rvts77">цвет</span></p>
+<p class="rvps23"><span class="rvts77">#result</span><span class="rvts94"> </span><span class="rvts81">= #color</span><span class="rvts77"> </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">256</span></p>
+<p class="rvps58"><span class="rvts81">toast</span><span class="rvts77"> Красный</span><span class="rvts88"> </span><span class="rvts77">цвет: </span><span class="rvts81">#Result</span><span class="rvts90"> </span><span class="rvts77">sleep </span><span class="rvts81">3000</span></p>
+<p class="rvps23"><span class="rvts76">//</span><span class="rvts75"> </span><span class="rvts76">Теперь</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">зеленый</span></p>
+<p class="rvps58"><span class="rvts77">#result </span><span class="rvts81">=</span><span class="rvts77"> </span><span class="rvts81">#color</span><span class="rvts77"> </span><span class="rvts81">/</span><span class="rvts77"> </span><span class="rvts81">256</span><span class="rvts77"> </span><span class="rvts81">%</span><span class="rvts77"> </span><span class="rvts81">256</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> Зеленый</span><span class="rvts78"> </span><span class="rvts77">цвет: </span><span class="rvts81">#Result</span><span class="rvts90"> </span><span class="rvts77">sleep </span><span class="rvts81">3000</span></p>
+<p class="rvps23"><span class="rvts108">//</span><span class="rvts112"> </span><span class="rvts91">И&nbsp;</span><span class="rvts110"> </span><span class="rvts108">синий</span></p>
+<p class="rvps74"><span class="rvts76">#result</span><span class="rvts75"> </span><span class="rvts74">=</span><span class="rvts75"> </span><span class="rvts74">#color</span><span class="rvts75"> </span><span class="rvts74">/</span><span class="rvts75"> </span><span class="rvts74">256</span><span class="rvts75"> </span><span class="rvts74">/</span><span class="rvts75"> </span><span class="rvts74">256</span><span class="rvts75"> </span><span class="rvts74">%</span><span class="rvts75"> </span><span class="rvts74">256</span><span class="rvts87"> </span><span class="rvts74">toast</span><span class="rvts75"> </span><span class="rvts76">Синий</span><span class="rvts74">&nbsp;</span><span class="rvts101"> </span><span class="rvts76">цвет:</span><span class="rvts75"> </span><span class="rvts74">#Result</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts76">getColorGray</span><span class="rvts75"> </span><span class="rvts76">var</span><span class="rvts75"> </span><span class="rvts74">x</span><span class="rvts75"> </span><span class="rvts74">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps116"><span class="rvts76">Среднее</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">арифметическое</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">цветов</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts81">в</span><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">указанных</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">координатах</span><span class="rvts79"> </span><span class="rvts77">(red+green+blue)/3</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts76">Параметры:</span></p>
+<p class="rvps117"><span class="rvts77">var: Переменная, куда</span><span class="rvts78"> </span><span class="rvts77">будут</span><span class="rvts78"> </span><span class="rvts77">записаны</span><span class="rvts78"> </span><span class="rvts77">данные</span><span class="rvts87"> </span><span class="rvts81">x:</span><span class="rvts77"> Координаты</span><span class="rvts88"> </span><span class="rvts81">по</span><span class="rvts88"> </span><span class="rvts81">x</span></p>
+<p class="rvps23"><span class="rvts76">y:</span><span class="rvts75"> </span><span class="rvts76">Координаты</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts74">по&nbsp;</span><span class="rvts75"> </span><span class="rvts74">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> #color 0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps58"><span class="rvts76">getColorGray</span><span class="rvts75"> </span><span class="rvts74">#color</span><span class="rvts75"> </span><span class="rvts74">100</span><span class="rvts75"> </span><span class="rvts74">200</span><span class="rvts87"> </span><span class="rvts74">toast</span><span class="rvts103"> </span><span class="rvts74">#color</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts77">getRGB var1 var2 var3 </span><span class="rvts81">x</span><span class="rvts77"> </span><span class="rvts81">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Эту</span><span class="rvts81"> &nbsp;</span><span class="rvts94"> </span><span class="rvts77">функцию</span><span class="rvts81"> &nbsp;</span><span class="rvts94"> </span><span class="rvts77">удобно</span><span class="rvts81"> &nbsp;</span><span class="rvts94"> </span><span class="rvts77">использовать</span><span class="rvts81"> &nbsp;</span><span class="rvts94"> </span><span class="rvts77">вместо</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">getcolor</span><span class="rvts80">,</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">т</span><span class="rvts80">.</span><span class="rvts77">к</span><span class="rvts80">.</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">рассчитывать</span><span class="rvts155"> </span><span class="rvts77">ничего</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">не</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">нужно!</span></p>
+<p class="rvps46"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts107"><br/></span></p>
+<p class="rvps68"><span class="rvts76">Параметры</span></p>
+<p class="rvps118"><span class="rvts77">var1:</span><span class="rvts81"> в</span><span class="rvts93"> </span><span class="rvts77">эту</span><span class="rvts78"> </span><span class="rvts77">переменную</span><span class="rvts93"> </span><span class="rvts77">будет</span><span class="rvts93"> </span><span class="rvts77">записан</span><span class="rvts93"> </span><span class="rvts77">красный</span><span class="rvts93"> </span><span class="rvts77">цвет</span><span class="rvts120"> </span><span class="rvts77">var2: </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">эту</span><span class="rvts78"> </span><span class="rvts81">- </span><span class="rvts77">зеленый</span></p>
+<p class="rvps48"><span class="rvts77">var3: </span><span class="rvts81">а</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">эту</span><span class="rvts78"> </span><span class="rvts82">-</span><span class="rvts77"> синий</span><span class="rvts126"> </span><span class="rvts81">x:</span><span class="rvts77"> координаты</span><span class="rvts78"> </span><span class="rvts81">по</span><span class="rvts78"> </span><span class="rvts81">x</span><span class="rvts87"> </span><span class="rvts77">y: координаты</span><span class="rvts88"> </span><span class="rvts81">по</span><span class="rvts88"> </span><span class="rvts81">y</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> </span><span class="rvts77">#red</span><span class="rvts94"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> </span><span class="rvts77">#green</span><span class="rvts94"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">var </span><span class="rvts81">#blue</span><span class="rvts77"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps59"><span class="rvts77">getRGB #red #green </span><span class="rvts81">#blue</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">R:</span><span class="rvts77"> #red </span><span class="rvts81">G:</span><span class="rvts77"> #green </span><span class="rvts81">B:</span><span class="rvts77"> </span><span class="rvts81">#blue</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps72"><span class="rvts77">Никаких</span><span class="rvts93"> </span><span class="rvts77">расчетов</span><span class="rvts80">,</span><span class="rvts94"> </span><span class="rvts81">все</span><span class="rvts93"> </span><span class="rvts77">уже</span><span class="rvts93"> </span><span class="rvts77">готово.</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts77">screenLock time</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps119"><span class="rvts77">Блокирует</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">экран</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">на</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">время</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">(экран</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">отключается,</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">при</span><span class="rvts81"> &nbsp;</span><span class="rvts88"> </span><span class="rvts77">включени</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">вы</span><span class="rvts156"> </span><span class="rvts77">увидите</span><span class="rvts78"> </span><span class="rvts77">экран</span><span class="rvts78"> </span><span class="rvts77">блокировки)</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Чтобы</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">эта</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">функция</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">работала</span><span class="rvts80">,</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">включите</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">HiroMacro</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts81">в&nbsp;</span><span class="rvts78"> </span><span class="rvts77">администраторах</span><span class="rvts157"> </span><span class="rvts77">устройства</span><span class="rvts80">.</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts76">Параметры:</span></p>
+<p class="rvps115"><span class="rvts77">time:</span><span class="rvts88"> </span><span class="rvts77">время</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts81">в&nbsp;</span><span class="rvts88"> </span><span class="rvts77">мс</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">(1000мс=</span><span class="rvts88"> </span><span class="rvts81">1</span><span class="rvts88"> </span><span class="rvts77">секунда)</span><span class="rvts88"> </span><span class="rvts77">(если</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">указать</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts82">0</span><span class="rvts88"> </span><span class="rvts81">то&nbsp;</span><span class="rvts88"> </span><span class="rvts77">включить</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">экран</span><span class="rvts157"> </span><span class="rvts77">надо</span><span class="rvts88"> </span><span class="rvts77">будет</span><span class="rvts88"> </span><span class="rvts77">самому)</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps31"><span class="rvts77">// Блокируем</span><span class="rvts78"> </span><span class="rvts77">экран</span><span class="rvts78"> </span><span class="rvts77">на</span><span class="rvts78"> </span><span class="rvts81">10</span><span class="rvts77"> секунд</span><span class="rvts75"> </span><span class="rvts77">screenLock </span><span class="rvts81">10000</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts76">RunApp name</span></p>
+<p class="rvps20"><span class="rvts81">Запуск</span><span class="rvts94"> </span><span class="rvts77">приложения.</span><span class="rvts105"> </span><span class="rvts77">Параметры:</span></p>
+<p class="rvps120"><span class="rvts77">name:</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">название</span><span class="rvts77"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts158">ПАКЕТА</span><span class="rvts158"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">приложения</span><span class="rvts76"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">(com</span><span class="rvts100">.</span><span class="rvts76">android.calendar</span><span class="rvts100">,</span><span class="rvts105"> </span><span class="rvts76">com</span><span class="rvts100">.</span><span class="rvts76">android.crome</span><span class="rvts100">,</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">com.prohiro</span><span class="rvts100">.</span><span class="rvts76">macro</span><span class="rvts100">,</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">com</span><span class="rvts100">.</span><span class="rvts76">supercell</span><span class="rvts100">.</span><span class="rvts76">clashofclans)</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps58"><span class="rvts76">//</span><span class="rvts101"> </span><span class="rvts76">Запустим</span><span class="rvts74">&nbsp;</span><span class="rvts103"> </span><span class="rvts76">календарь</span><span class="rvts159"> </span><span class="rvts76">RunApp</span><span class="rvts103"> </span><span class="rvts76">com</span><span class="rvts100">.</span><span class="rvts76">android.calendar</span><span class="rvts96"> </span><span class="rvts76">sleep</span><span class="rvts103"> </span><span class="rvts74">5000</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps46"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts107"><br/></span></p>
+<p class="rvps19"><span class="rvts76">WaitApp</span><span class="rvts75"> </span><span class="rvts76">name</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Ждет</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">запуска</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">приложения.</span><span class="rvts88"> </span><span class="rvts77">Пока</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">приложение</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">не</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">запустится,</span><span class="rvts88"> </span><span class="rvts77">скрипт</span><span class="rvts81">&nbsp;</span><span class="rvts88"> </span><span class="rvts77">не</span><span class="rvts153"> </span><span class="rvts77">будет</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">ничего</span><span class="rvts81">&nbsp;</span><span class="rvts94"> </span><span class="rvts77">делать</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts76">Параметры:</span></p>
+<p class="rvps28"><span class="rvts77">name: пакетное</span><span class="rvts78"> </span><span class="rvts77">имя</span><span class="rvts78"> </span><span class="rvts77">приложения</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps59"><span class="rvts76">waitApp</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">com</span><span class="rvts100">.</span><span class="rvts76">supercell</span><span class="rvts100">.</span><span class="rvts76">clashofclans</span><span class="rvts160"> </span><span class="rvts81">toast</span><span class="rvts77"> </span><span class="rvts81">clash</span><span class="rvts77"> </span><span class="rvts81">of</span><span class="rvts77"> clans запущен!</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Запустим</span><span class="rvts78"> </span><span class="rvts77">скрипт. Ничего</span><span class="rvts78"> </span><span class="rvts77">не</span><span class="rvts78"> </span><span class="rvts77">произошло. </span><span class="rvts81">Но</span><span class="rvts78"> </span><span class="rvts77">как</span><span class="rvts78"> </span><span class="rvts77">только</span><span class="rvts78"> </span><span class="rvts77">вы</span><span class="rvts78"> </span><span class="rvts77">откроете</span><span class="rvts78"> </span><span class="rvts81">clash</span><span class="rvts161"> </span><span class="rvts81">of</span><span class="rvts94"> </span><span class="rvts77">clans,</span><span class="rvts94"> </span><span class="rvts77">выскочит</span><span class="rvts93"> </span><span class="rvts81">тост</span><span class="rvts93"> </span><span class="rvts77">"clash</span><span class="rvts94"> </span><span class="rvts81">of</span><span class="rvts94"> </span><span class="rvts77">clans</span><span class="rvts94"> </span><span class="rvts77">запущен!"</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps25"><span class="rvts76">CheckApp</span><span class="rvts75"> </span><span class="rvts76">var</span><span class="rvts75"> </span><span class="rvts76">name</span></p>
+<p class="rvps121"><span class="rvts77">Проверяет</span><span class="rvts80">,</span><span class="rvts77"> запущено</span><span class="rvts88"> </span><span class="rvts77">ли</span><span class="rvts88"> </span><span class="rvts77">приложение</span><span class="rvts80">.</span><span class="rvts77"> </span><span class="rvts81">Если</span><span class="rvts88"> </span><span class="rvts77">да</span><span class="rvts80">,</span><span class="rvts77"> </span><span class="rvts81">то</span><span class="rvts88"> </span><span class="rvts77">var </span><span class="rvts81">=</span><span class="rvts77"> </span><span class="rvts81">1,</span><span class="rvts77"> нет</span><span class="rvts88"> </span><span class="rvts82">-</span><span class="rvts77"> </span><span class="rvts82">0</span><span class="rvts87"> </span><span class="rvts77">Параметры</span></p>
+<p class="rvps21"><span class="rvts77">var: Переменная, куда</span><span class="rvts78"> </span><span class="rvts77">будет</span><span class="rvts78"> </span><span class="rvts77">записан</span><span class="rvts78"> </span><span class="rvts77">результат</span><span class="rvts120"> </span><span class="rvts77">name: имя</span><span class="rvts78"> </span><span class="rvts77">пакета</span><span class="rvts78"> </span><span class="rvts77">приложения</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> #check</span><span class="rvts77"> </span><span class="rvts82">0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps59"><span class="rvts76">CheckApp</span><span class="rvts101"> </span><span class="rvts74">#check</span><span class="rvts101"> </span><span class="rvts76">com.prohiro</span><span class="rvts100">.</span><span class="rvts76">macro</span><span class="rvts101"> </span><span class="rvts77">if</span><span class="rvts94"> </span><span class="rvts81">#check</span><span class="rvts77"> </span><span class="rvts81">== 0</span></p>
+<p class="rvps122"><span class="rvts81">toast</span><span class="rvts77"> Application is not running</span><span class="rvts124"> </span><span class="rvts77">elseif</span><span class="rvts94"> </span><span class="rvts81">#check</span><span class="rvts77"> </span><span class="rvts81">==</span><span class="rvts94"> </span><span class="rvts81">1</span></p>
+<p class="rvps123"><span class="rvts74">toast</span><span class="rvts75"> </span><span class="rvts76">Application</span><span class="rvts75"> </span><span class="rvts76">is</span><span class="rvts75"> </span><span class="rvts76">running</span><span class="rvts124"> </span><span class="rvts76">endif</span></p>
+<p class="rvps23"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps25"><span class="rvts77">Toast </span><span class="rvts81">text</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps35"><span class="rvts77">Мы</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">уже</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">использовали</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">эту</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">команду</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">много</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">раз</span><span class="rvts80">.</span><span class="rvts93"> </span><span class="rvts81">Тост&nbsp;</span><span class="rvts78"> </span><span class="rvts82">-</span><span class="rvts93"> </span><span class="rvts77">это</span><span class="rvts81">&nbsp;</span><span class="rvts78"> </span><span class="rvts77">сообщение</span><span class="rvts80">,</span><span class="rvts105"> </span><span class="rvts77">которое</span><span class="rvts78"> </span><span class="rvts77">вылазит</span><span class="rvts78"> </span><span class="rvts77">внизу</span><span class="rvts78"> </span><span class="rvts77">экрана</span><span class="rvts78"> </span><span class="rvts77">на</span><span class="rvts78"> </span><span class="rvts77">короткое</span><span class="rvts78"> </span><span class="rvts77">время</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps23"><span class="rvts77">Params</span></p>
+<p class="rvps35"><span class="rvts81">text: </span><span class="rvts77">Текст</span><span class="rvts80">,</span><span class="rvts94"> </span><span class="rvts77">который</span><span class="rvts93"> </span><span class="rvts77">будет</span><span class="rvts93"> </span><span class="rvts77">выведен</span><span class="rvts80">.</span><span class="rvts94"> </span><span class="rvts77">Можно</span><span class="rvts93"> </span><span class="rvts77">использовать</span><span class="rvts93"> </span><span class="rvts77">переменные</span><span class="rvts80">.</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps23"><span class="rvts77">var</span><span class="rvts81"> #color 0</span></p>
+<p class="rvps23"><span class="rvts77">:start</span></p>
+<p class="rvps124"><span class="rvts81">toast</span><span class="rvts77"> Это</span><span class="rvts88"> </span><span class="rvts81">тост!</span><span class="rvts96"> </span><span class="rvts77">sleep </span><span class="rvts81">3000</span></p>
+<p class="rvps66"><span class="rvts77">getColor </span><span class="rvts81">#color</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">2000</span><span class="rvts87"> </span><span class="rvts81">toast</span><span class="rvts77"> Цвет</span><span class="rvts88"> </span><span class="rvts82">-</span><span class="rvts77"> </span><span class="rvts81">#color</span></p>
+<p class="rvps33"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts98"><br/></span></p>
+<p class="rvps125"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts74">Log</span><span class="rvts75"> </span><span class="rvts74">text</span></p>
+<p class="rvps61"><span class="rvts81">Запись</span><span class="rvts78"> </span><span class="rvts81">в</span><span class="rvts78"> </span><span class="rvts77">лог</span><span class="rvts80">.</span><span class="rvts77"> Можно</span><span class="rvts78"> </span><span class="rvts77">использовать</span><span class="rvts78"> </span><span class="rvts77">переменные</span><span class="rvts80">.</span><span class="rvts105"> </span><span class="rvts77">var</span><span class="rvts81"> #color 0</span></p>
+<p class="rvps53"><span class="rvts77">:start</span></p>
+<p class="rvps53"><span class="rvts77">getColor </span><span class="rvts81">#color</span><span class="rvts77"> </span><span class="rvts81">100</span><span class="rvts77"> </span><span class="rvts81">200</span></p>
+<p class="rvps53"><span class="rvts81">log</span><span class="rvts77"> color(100</span><span class="rvts80">,</span><span class="rvts77">200) is </span><span class="rvts81">#color</span></p>
+<p class="rvps53"><span class="rvts77">:end</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps50"><span class="rvts76">Комментарии</span><span class="rvts74">&nbsp;</span><span class="rvts75"> </span><span class="rvts76">(//)</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps109"><span class="rvts81">Если</span><span class="rvts94"> </span><span class="rvts77">вы</span><span class="rvts94"> </span><span class="rvts77">хотите</span><span class="rvts94"> </span><span class="rvts77">дать</span><span class="rvts94"> </span><span class="rvts77">пояснения</span><span class="rvts94"> </span><span class="rvts77">функциям</span><span class="rvts94"> </span><span class="rvts81">в</span><span class="rvts94"> </span><span class="rvts77">своих</span><span class="rvts94"> </span><span class="rvts77">скриптах</span><span class="rvts80">,</span><span class="rvts94"> </span><span class="rvts77">вы</span><span class="rvts94"> </span><span class="rvts77">можете</span><span class="rvts153"> </span><span class="rvts77">использовать</span><span class="rvts93"> </span><span class="rvts77">комментарии</span><span class="rvts80">.</span><span class="rvts94"> </span><span class="rvts77">Строка</span><span class="rvts80">,</span><span class="rvts94"> </span><span class="rvts77">начатая</span><span class="rvts94"> </span><span class="rvts81">с</span><span class="rvts94"> </span><span class="rvts77">//</span><span class="rvts94"> </span><span class="rvts77">будет</span><span class="rvts93"> </span><span class="rvts81">являться</span><span class="rvts97"> </span><span class="rvts77">комментарием</span><span class="rvts78"> </span><span class="rvts81">и</span><span class="rvts78"> </span><span class="rvts77">не</span><span class="rvts78"> </span><span class="rvts77">будет</span><span class="rvts78"> </span><span class="rvts81">выполнятся.</span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps53"><span class="rvts77">:start</span></p>
+<p class="rvps53"><span class="rvts74">/</span><span class="rvts76"> </span><span class="rvts74">/</span><span class="rvts76"> Created by Hiro</span></p>
+<p class="rvps53"><span class="rvts74">/ /</span><span class="rvts75"> </span><span class="rvts74">Date:</span><span class="rvts75"> </span><span class="rvts76">April</span><span class="rvts75"> </span><span class="rvts74">10,</span><span class="rvts75"> </span><span class="rvts74">2014</span></p>
+<p class="rvps53"><span class="rvts77">:end</span></p>
+<p class="rvps24"><span class="rvts85"><br/></span></p>
+<p class="rvps50"><span class="rvts77">Этот</span><span class="rvts78"> </span><span class="rvts77">скрипт</span><span class="rvts78"> </span><span class="rvts77">ничего</span><span class="rvts78"> </span><span class="rvts77">не</span><span class="rvts78"> </span><span class="rvts77">сделает</span></p>
+<p class="rvps3"><span class="rvts85"><br/></span></p>
+<p class="rvps24"><span class="rvts86"><br/></span></p>
+<p class="rvps126"><span class="rvts81">На</span><span class="rvts78"> </span><span class="rvts77">этом</span><span class="rvts78"> </span><span class="rvts77">все, теперь</span><span class="rvts78"> </span><span class="rvts77">вы</span><span class="rvts78"> </span><span class="rvts77">готовы</span><span class="rvts78"> </span><span class="rvts77">писать</span><span class="rvts78"> </span><span class="rvts77">скрипты</span><span class="rvts78"> </span><span class="rvts77">для</span><span class="rvts78"> </span><span class="rvts77">HiroMacro!</span><span class="rvts162"> </span><span class="rvts77">Справку</span><span class="rvts88"> </span><span class="rvts77">перевёл: 1Senderman1</span></p>
+<p class="rvps126"><span class="rvts104"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

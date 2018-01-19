@@ -1,0 +1,159 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Условные операторы</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic79");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Условные операторы</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="QA.html">Языки программирования необходимые для QA</a> &rsaquo;&rsaquo; <a href="Python.html">Python</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Python.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic78.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts73">Условные операторы</span></p>
+<p class="rvps3"><span class="rvts73"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Для простых проверок можно использовать инструкцию if и else</span></p>
+<p class="rvps3"><span class="rvts8">a = 10; b = 5;</span></p>
+<p class="rvps3"><span class="rvts8">if (a &lt; b):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("А меньше Б");</span></p>
+<p class="rvps3"><span class="rvts8">else:</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("А больше Б");</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">для сравнения используются следующие символы:</span></p>
+<p class="rvps3"><span class="rvts8">&lt;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">меньше</span></p>
+<p class="rvps3"><span class="rvts8">&lt;=</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">меньше или равно</span></p>
+<p class="rvps3"><span class="rvts8">&gt;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">больше</span></p>
+<p class="rvps3"><span class="rvts8">&gt;=</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">больше или равно</span></p>
+<p class="rvps3"><span class="rvts8">==</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">равно</span></p>
+<p class="rvps3"><span class="rvts8">!=</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">не равно</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">чтобы создать пустое тело, не выполняющее никаких действий можно использовать инструкцию pass</span></p>
+<p class="rvps3"><span class="rvts8">if (a &lt; b):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;pass # не выполнять никаких действий</span></p>
+<p class="rvps3"><span class="rvts8">else:</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("А больше Б");</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Условия с использованием булевых выражений or, and и not</span></p>
+<p class="rvps3"><span class="rvts8">product = "game";</span></p>
+<p class="rvps3"><span class="rvts8">target = "mob";</span></p>
+<p class="rvps3"><span class="rvts8">year = 2015;</span></p>
+<p class="rvps3"><span class="rvts8">if (product == "game") and (target == "mob") and not (year &lt; 2014 or year &gt; 2015):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("Это наша игра");</span></p>
+<p class="rvps3"><span class="rvts8">else:</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("Это не наша игра");</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Сложные условия. В Pyhton отсутствуют инструкции switch или case, и чтобы выполнить проверку на соответствие нескольких значений используется elif</span></p>
+<p class="rvps3"><span class="rvts8">fileType = ".jpg";</span></p>
+<p class="rvps3"><span class="rvts8">if(fileType == ".bmp"):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("Файл bmp");</span></p>
+<p class="rvps3"><span class="rvts8">elif(fileType == ".jpg"):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("Файл jpg");</span></p>
+<p class="rvps3"><span class="rvts8">elif(fileType == ".png"):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;print("Файл png");</span></p>
+<p class="rvps3"><span class="rvts8">else:</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;raise RuntimeError("Файл неизвестного типа");</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Для определения истинности используется значение True и False типа Boolean</span></p>
+<p class="rvps3"><span class="rvts8">s = 'spam';</span></p>
+<p class="rvps3"><span class="rvts8">if ('spam' in s):</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;has_span = True;</span></p>
+<p class="rvps3"><span class="rvts8">else:</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;has_span = False;</span></p>
+<p class="rvps3"><span class="rvts8">print(has_span);</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
