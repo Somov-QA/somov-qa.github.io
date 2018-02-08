@@ -1,0 +1,194 @@
+﻿
+
+<html>
+	
+<head>
+	<title>ProfileSearch.php</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ProfileSearchphp1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">ProfileSearch.php</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Примеры</a> &rsaquo;&rsaquo; <a href="ComponentProfileSearch.html">Component Profile Search</a> &rsaquo;&rsaquo; <a href="modules1.html">modules</a> &rsaquo;&rsaquo; <a href="admin1.html">admin</a> &rsaquo;&rsaquo; <a href="models4.html">models</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="models4.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Profilephp.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Joomla.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">namespace </span><span class="rvts21">app\modules\admin\models;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">Yii;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\base\Model;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\data\ActiveDataProvider;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">app\modules\admin\models\Profile;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts151">/**</span></p>
+<p class="rvps3"><span class="rvts151"> * ProfileSearch represents the model behind the search form about `app\modules\admin\models\Profile`.</span></p>
+<p class="rvps3"><span class="rvts151"> */</span></p>
+<p class="rvps3"><span class="rvts70">class </span><span class="rvts72">ProfileSearch</span><span class="rvts21"> </span><span class="rvts70">extends </span><span class="rvts72">Profile</span></p>
+<p class="rvps3"><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts151">/**</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; * @inheritdoc</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; */</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> rules()</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">[</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[</span><span class="rvts71">'autoinc_id'</span><span class="rvts21">, </span><span class="rvts71">'id'</span><span class="rvts21">, </span><span class="rvts71">'faction'</span><span class="rvts21">, </span><span class="rvts71">'selected_spaceship_config'</span><span class="rvts21">, </span><span class="rvts71">'exp'</span><span class="rvts21">, </span><span class="rvts71">'card_packs'</span><span class="rvts21">, </span><span class="rvts71">'currency'</span><span class="rvts21">, </span><span class="rvts71">'medals'</span><span class="rvts21">, </span><span class="rvts71">'craft_resources'</span><span class="rvts21">], </span><span class="rvts71">'integer'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[</span><span class="rvts71">'username'</span><span class="rvts21">, </span><span class="rvts71">'last_activity'</span><span class="rvts21">, </span><span class="rvts71">'selected_deck'</span><span class="rvts21">], </span><span class="rvts71">'safe'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[[</span><span class="rvts71">'was_paired'</span><span class="rvts21">], </span><span class="rvts71">'boolean'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;];</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts151">/**</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; * @inheritdoc</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; */</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> scenarios()</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts127">// bypass scenarios() implementation in the parent class</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">Model::</span><span class="rvts73">scenarios</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts151">/**</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; * Creates data provider instance with search query applied</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; *</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; * @param array $params</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; *</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; * @return ActiveDataProvider</span></p>
+<p class="rvps3"><span class="rvts151"> &nbsp; &nbsp; */</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> search($params)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$query = Profile::</span><span class="rvts73">find</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts127">// add conditions that should always apply here</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$dataProvider = </span><span class="rvts70">new </span><span class="rvts72">ActiveDataProvider</span><span class="rvts21">([</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'query' </span><span class="rvts21">=&gt; $query,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;]);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;load($params);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if </span><span class="rvts21">(!$this-&gt;validate()) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts127">// uncomment the following line if you do not want to return any records when validation fails</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts127">// $query-&gt;where('0=1');</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$dataProvider;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts127">// grid filtering conditions</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$query-&gt;andFilterWhere([</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'autoinc_id' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">autoinc_id</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'id' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">id</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'faction' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">faction</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'last_activity' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">last_activity</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'selected_spaceship_config' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">selected_spaceship_config</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'exp' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">exp</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'card_packs' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">card_packs</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'currency' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">currency</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'medals' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">medals</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'craft_resources' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">craft_resources</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'was_paired' </span><span class="rvts21">=&gt; $this-&gt;</span><span class="rvts71">was_paired</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;]);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$query-&gt;andFilterWhere([</span><span class="rvts71">'like'</span><span class="rvts21">, </span><span class="rvts71">'username'</span><span class="rvts21">, $this-&gt;</span><span class="rvts71">username</span><span class="rvts21">])</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;andFilterWhere([</span><span class="rvts71">'like'</span><span class="rvts21">, </span><span class="rvts71">'selected_deck'</span><span class="rvts21">, $this-&gt;</span><span class="rvts71">selected_deck</span><span class="rvts21">]);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$dataProvider;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts83"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

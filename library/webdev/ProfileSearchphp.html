@@ -1,0 +1,163 @@
+﻿
+
+<html>
+	
+<head>
+	<title>ProfileSearch.php</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ProfileSearchphp");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">ProfileSearch.php</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Примеры</a> &rsaquo;&rsaquo; <a href="ComponentProfileSearch.html">Component Profile Search</a> &rsaquo;&rsaquo; <a href="modules1.html">modules</a> &rsaquo;&rsaquo; <a href="admin1.html">admin</a> &rsaquo;&rsaquo; <a href="components1.html">components</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="components1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="searchphp.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="models4.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">namespace </span><span class="rvts21">app\modules\admin\components;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">Yii;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\base\Widget;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\helpers\Url;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">app\modules\admin\components\models\FormProfileSearch;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">app\modules\admin\models\Profile;</span></p>
+<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\helpers\ArrayHelper;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">class </span><span class="rvts72">ProfileSearch</span><span class="rvts21"> </span><span class="rvts70">extends </span><span class="rvts72">Widget</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> run() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$profiles = Profile::</span><span class="rvts73">getProfiles</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$model = </span><span class="rvts70">new </span><span class="rvts72">FormProfileSearch</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if </span><span class="rvts21">($model-&gt;load(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post()) &amp;&amp; $model-&gt;validate()) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post(</span><span class="rvts71">'submitUpdate'</span><span class="rvts21">) === </span><span class="rvts71">'Update'</span><span class="rvts21">){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$profiles = Profile::</span><span class="rvts73">updateProfileCache</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><span class="rvts70">else</span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$profile_id = Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post(</span><span class="rvts71">'FormProfileSearch'</span><span class="rvts21">)[</span><span class="rvts71">'profile'</span><span class="rvts21">];</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$controller_id = Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">controller</span><span class="rvts21">-&gt;</span><span class="rvts71">id</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$controller_search = </span><span class="rvts73">mb_convert_case</span><span class="rvts21">($controller_id, </span><span class="rvts128">MB_CASE_TITLE</span><span class="rvts21">, </span><span class="rvts71">"UTF-8"</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$controller_search = </span><span class="rvts73">str_replace</span><span class="rvts21">(</span><span class="rvts71">"-"</span><span class="rvts21">, </span><span class="rvts71">""</span><span class="rvts21">, $controller_search);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">response</span><span class="rvts21">-&gt;redirect(Url::</span><span class="rvts73">to</span><span class="rvts21">([$controller_id.</span><span class="rvts71">'/index'</span><span class="rvts21">, $controller_search.</span><span class="rvts71">'Search[profile_id]' </span><span class="rvts21">=&gt; $profile_id]));</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'search'</span><span class="rvts21">, [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'model' </span><span class="rvts21">=&gt; </span><span class="rvts161">$model</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'profiles' </span><span class="rvts21">=&gt; </span><span class="rvts161">$profiles</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;]);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts83"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Строка кода </span><span class="rvts158">Yii::</span><span class="rvts162">$app</span><span class="rvts158">-&gt;</span><span class="rvts159">request</span><span class="rvts158">-&gt;post(</span><span class="rvts159">'submitUpdate'</span><span class="rvts158">) === </span><span class="rvts159">'Update'</span><span class="rvts21"> </span><span class="rvts38">определяет какая кнопка была нажата.</span></p>
+<p class="rvps3"><span class="rvts38">В данном случае если нажата кнопка "Обновить"</span></p>
+<p class="rvps3"><span class="rvts38"><br/></span></p>
+<p class="rvps3"><span class="rvts38">Строка кода</span><span class="rvts21"> </span><span class="rvts158">$profiles = Profile::</span><span class="rvts160">updateProfileCache</span><span class="rvts158">();</span><span class="rvts21"> выполняет обновление кэша данными профилей из базы данных</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">Строка кода </span><span class="rvts158">Yii::</span><span class="rvts162">$app</span><span class="rvts158">-&gt;</span><span class="rvts159">response</span><span class="rvts158">-&gt;redirect(Url::</span><span class="rvts160">to</span><span class="rvts158">([$controller_id.</span><span class="rvts159">'/index'</span><span class="rvts158">, $controller_search.</span><span class="rvts159">'Search[profile_id]' </span><span class="rvts158">=&gt; $profile_id]));</span><span class="rvts21"> </span><span class="rvts38">перенаправляет пользователя на страницу отправляя данные поиска в таблице</span></p>
+<p class="rvps3"><span class="rvts38"><br/></span></p>
+<p class="rvps3"><span class="rvts38">Далее идет вызов вида компонента описанного в файле </span><span class="rvts8">search.php</span><span class="rvts21"> </span><span class="rvts152">return </span><span class="rvts158">$this-&gt;render(</span><span class="rvts159">'search'</span><span class="rvts158">, [</span><span class="rvts159">'model' </span><span class="rvts158">=&gt; $model, </span><span class="rvts159">'profiles' </span><span class="rvts158">=&gt; $profiles, ]);</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

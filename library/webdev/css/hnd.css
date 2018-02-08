@@ -851,6 +851,84 @@ span.rvts151
  font-family: 'Consolas';
  color: #3f55bf;
 }
+span.rvts152
+{
+ font-family: 'Consolas';
+ font-weight: bold;
+ color: #7f0055;
+ background-color: #d8d8d8;
+}
+span.rvts153
+{
+ font-family: 'Consolas';
+ font-weight: bold;
+ color: #000000;
+ background-color: #d8d8d8;
+}
+span.rvts154
+{
+ font-family: 'Consolas';
+ font-weight: bold;
+ color: #ff0000;
+ background-color: #d8d8d8;
+}
+span.rvts155
+{
+ font-family: 'Consolas';
+ font-style: italic;
+ font-weight: bold;
+ color: #000000;
+ background-color: #d8d8d8;
+}
+span.rvts156
+{
+ color: #ff0000;
+}
+span.rvts157
+{
+ font-family: 'Consolas';
+ color: #ff0000;
+ background-color: #d8d8d8;
+}
+span.rvts158
+{
+ font-family: 'Consolas';
+ color: #000000;
+ background-color: #d8d8d8;
+}
+span.rvts159
+{
+ font-family: 'Consolas';
+ color: #0000c0;
+ background-color: #d8d8d8;
+}
+span.rvts160
+{
+ font-family: 'Consolas';
+ font-style: italic;
+ color: #000000;
+ background-color: #d8d8d8;
+}
+span.rvts161
+{
+ font-family: 'Consolas';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts162
+{
+ font-family: 'Consolas';
+ font-style: italic;
+ color: #0000c0;
+ background-color: #d8d8d8;
+}
+span.rvts163
+{
+ font-family: 'Consolas';
+ font-weight: bold;
+ color: #22804c;
+ background-color: #d8d8d8;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
