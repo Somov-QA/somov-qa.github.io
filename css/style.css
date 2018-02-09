@@ -75,12 +75,54 @@ a:active {
   border-bottom: 1px dashed;
 }
 
+#tableIcons{
+    position: relative;
+    float: right;
+    width:25%;
+}
+
+
+#tableIcons th{
+
+}
+
+#tableIcons td{
+    width:5%;
+}
+
 #selectPage
 {
     color: #495861;
     background-color: #fafafa;
     border-left: 1px solid #B8B8B8;
 }
+
+.Icons{
+    width: 35px;
+    height: 35px;
+}
+
+.LinkIcons{
+    text-decoration: none;
+    border-bottom: .0em solid;
+}
+.LinkIcons:link {
+  color: #000000;
+  border-bottom: .0em solid;
+}
+.LinkIcons:visited {
+  color: #000000;
+  border-bottom: .0em solid;
+}
+.LinkIcons:hover {
+  color: #000000;
+  border-bottom: .0em solid;
+}
+.LinkIcons:active {
+  color: #000000; 
+  border-bottom: .0em dashed;
+}
+
 
 .TD25{
     width:25%;
