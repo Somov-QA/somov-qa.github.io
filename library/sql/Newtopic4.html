@@ -1,10 +1,14 @@
-﻿<html>
+﻿
+
+<html>
 	
 <head>
-	<title>Многотабличные запросы (соединения)</title>
+	<title>Объединение таблиц</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
+	
+	
 	
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
 	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
@@ -44,40 +48,94 @@
 		});
 	</script>
 	
-	</head>
+	
+</head>
 
 <body>
 
-<div id="topic_header">
+
+
+	
+		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">Многотабличные запросы (соединения)</h1>
+				<h1 id="topic_header_text">Объединение таблиц</h1>
+				
 				
 				<div id="topic_breadcrumb">
-					<a href="SQL2.html">SQL: ВЫБОРКА ДАННЫХ</a> &rsaquo;&rsaquo; </div>
+					<a href="Newtopic.html">[Кратко]</a> &rsaquo;&rsaquo; 
 				</div>
-			<div id="topic_header_nav">
-				<a href="SQL2.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
-				<a href="UNION.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic3.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
 				
 				<a href="Newtopic5.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
-				</div>
+				
+			</div>
+			
 			<div class="clear"></div>
 		</div>
+	
+	
 	<div id="topic_content">
 		
 <p></p>
+<p class="rvps12"><span class="rvts34">Объединение таблиц.</span></p>
+<p class="rvps12"><span class="rvts34"><br/></span></p>
+<p class="rvps12"><span class="rvts33">Объединение вместе двух покий одиночной таюлицы.</span></p>
+<p class="rvps12"><span class="rvts33">Чтобы ссылаться к столбцам внутри запроса, необходимо иметь два различных имени для этой таблицы.</span></p>
+<p class="rvps12"><span class="rvts33">Это можно сделать с помощью определения временных имён, называемых "псевдонимами".</span></p>
+<p class="rvps12"><span class="rvts33">Объединение одной таблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Псевдоним1.Поле, Псевдоним2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM ИмяТаблицы Псевдоним1,</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp; &nbsp; &nbsp;ИмяТаблицы Псевдоним2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Псевдоним1.Поле = Псевдоним2.Поле</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33">ИмяТаблицы - это одна и та же таблица.</span></p>
+<p class="rvps12"><span class="rvts33">-----------------------------------------------------------------</span></p>
+<p class="rvps12"><span class="rvts31">Объединение разных таблиц</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле = Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Внешнее объединение (иногда внутреннее объединение)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле *= Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле *=* Таблица2.Поле</span></p>
 <p></p>
-<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
-</div>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+
+	</div>
 	
-	<div id="topic_footer">
+	
+		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
 		</div>
-	</body>
+	
+	
+
+	
+</body>
 	
 </html>
 

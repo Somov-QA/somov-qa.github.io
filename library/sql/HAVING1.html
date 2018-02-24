@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>HAVING  — Условия отбора групп</title>
+	<title>HAVING  — Условия отбора в подзапросе</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
@@ -39,7 +39,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("HAVING");
+						top.FrameTOC.SelectTocItem("HAVING1");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -58,11 +58,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">HAVING  — Условия отбора групп</h1>
+				<h1 id="topic_header_text">HAVING  — Условия отбора в подзапросе</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Newtopic73.html">Итоговые запросы</a> &rsaquo;&rsaquo; 
+					<a href="Newtopic74.html">Подзапросы и выражения с запросами</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -70,15 +70,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic73.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Newtopic74.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="GROUPBY.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="Newtopic78.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="Newtopic74.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Newtopic79.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,14 +90,18 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts14">HAVING &nbsp;— Условия отбора групп</span></p>
+<p class="rvps2"><span class="rvts14">HAVING &nbsp;— Условия отбора в подзапросе</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps2"><span class="rvts17"><br/></span></p>
-<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, </span><span class="rvts16">AVG</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">GROUP BY</span><span class="rvts17"> elem1</span></p>
-<p class="rvps2"><span class="rvts16">HAVING</span><span class="rvts17"> </span><span class="rvts16">SUM</span><span class="rvts17">(elem2) &gt; 3000.00;</span></p>
-<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1, </span><span class="rvts16">AVG</span><span class="rvts17">(table2.elem1) </span><span class="rvts16">FROM</span><span class="rvts17"> table1, table2</span></p>
+<p class="rvps2"><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 = table2.elem2</span></p>
+<p class="rvps2"><span class="rvts16">GROUP BY</span><span class="rvts17"> table1.elem1</span></p>
+<p class="rvps2"><span class="rvts16">HAVING AVG</span><span class="rvts17">(table2.elem1) &gt; (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT AVG</span><span class="rvts17">(table3.elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table3</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts22"><br/></span></p>
 <p></p>
-<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
 
 	</div>
 	

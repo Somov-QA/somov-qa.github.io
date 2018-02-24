@@ -1,10 +1,14 @@
-﻿<html>
+﻿
+
+<html>
 	
 <head>
-	<title>UPDATE</title>
+	<title>UPDATE  — Обновление строки с данными</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
+	
+	
 	
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
 	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
@@ -44,45 +48,78 @@
 		});
 	</script>
 	
-	</head>
+	
+</head>
 
 <body>
 
-<div id="topic_header">
+
+
+	
+		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">UPDATE</h1>
+				<h1 id="topic_header_text">UPDATE  — Обновление строки с данными</h1>
+				
 				
 				<div id="topic_breadcrumb">
-					<a href="SQL.html">SQL: ОБЩЕЕ</a> &rsaquo;&rsaquo; </div>
+					<a href="Newtopic80.html">Работа с данными</a> &rsaquo;&rsaquo; 
 				</div>
+				
+			</div>
+			
 			<div id="topic_header_nav">
-				<a href="SQL.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
-				<a href="INSERT1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
-				<a href="DELETE1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Newtopic80.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
-				</div>
+				
+				
+				<a href="DELETE1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic81.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
 			<div class="clear"></div>
 		</div>
+	
+	
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts28">Внесение изменений в запись таблицы</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts22">UPDATE ИмяТаблицы SET Поле1 = Значение, Поле2 = Значение </span></p>
-<p class="rvps3"><span class="rvts22">WHERE ПолеID = Значение</span></p>
-<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps2"><span class="rvts14">UPDATE &nbsp;— Обновление строки с данными</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 </span><span class="rvts16">SET</span><span class="rvts17"> elem2 = 'text', elem3 = 150.00 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem1 = 10; </span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Обновление всех строк</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 </span><span class="rvts16">SET</span><span class="rvts17"> elem2 = 'text'; </span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Использование подзапроса в обновлении</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 SET table1.elem2 = 2000 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">IN</span><span class="rvts17"> (</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem2 &gt; 100</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
 <p></p>
-<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
-</div>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
 	
-	<div id="topic_footer">
+	
+		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
 		</div>
-	</body>
+	
+	
+
+	
+</body>
 	
 </html>
 

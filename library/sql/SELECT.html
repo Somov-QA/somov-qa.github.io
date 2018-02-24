@@ -1,10 +1,14 @@
-﻿<html>
+﻿
+
+<html>
 	
 <head>
-	<title>Инструкция SELECT</title>
+	<title>SELECT - Инструкция</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
+	
+	
 	
 	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
 	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
@@ -44,49 +48,88 @@
 		});
 	</script>
 	
-	</head>
+	
+</head>
 
 <body>
 
-<div id="topic_header">
+
+
+	
+		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">Инструкция SELECT</h1>
+				<h1 id="topic_header_text">SELECT - Инструкция</h1>
+				
 				
 				<div id="topic_breadcrumb">
-					<a href="SQL2.html">SQL: ВЫБОРКА ДАННЫХ</a> &rsaquo;&rsaquo; <a href="Newtopic.html">Простые запросы</a> &rsaquo;&rsaquo; </div>
+					<a href="Newtopic68.html">Выборка данных</a> &rsaquo;&rsaquo; 
 				</div>
+				
+			</div>
+			
 			<div id="topic_header_nav">
-				<a href="Newtopic.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
-				<a href="Newtopic.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
-				<a href="Newtopic1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Newtopic68.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
-				</div>
+				
+				
+				<a href="Newtopic68.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="DISTINCTALL.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
 			<div class="clear"></div>
 		</div>
+	
+	
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts13">Инструкция SELECT</span></p>
+<p class="rvps2"><span class="rvts14">SELECT - </span><span class="rvts15">Инструкция</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts15">SELECT ALL</span><span class="rvts16">/</span><span class="rvts15">DISTINCT</span><span class="rvts14"> элементы </span></p>
-<p class="rvps3"><span class="rvts15">FROM</span><span class="rvts14"> таблицы</span></p>
-<p class="rvps3"><span class="rvts15">WHERE</span><span class="rvts14"> условие отбора</span></p>
-<p class="rvps3"><span class="rvts15">GROUP BY</span><span class="rvts14"> столбец для группирования</span></p>
-<p class="rvps3"><span class="rvts15">HAVING</span><span class="rvts14"> условие отбора</span></p>
-<p class="rvps3"><span class="rvts15">ORDER BY</span><span class="rvts14"> условие сортировки</span></p>
+<p class="rvps5"><span class="rvts18">SELECT ALL/DISTINCT</span><span class="rvts22"> </span><span class="rvts21">элементы</span><span class="rvts22"> </span></p>
+<p class="rvps5"><span class="rvts18">FROM</span><span class="rvts22"> </span><span class="rvts21">таблицы</span></p>
+<p class="rvps5"><span class="rvts18">WHERE</span><span class="rvts22"> </span><span class="rvts21">условие отбора</span></p>
+<p class="rvps5"><span class="rvts18">GROUP</span><span class="rvts23"> BY</span><span class="rvts22"> </span><span class="rvts21">столбец для группирования</span></p>
+<p class="rvps5"><span class="rvts18">HAVING</span><span class="rvts22"> </span><span class="rvts21">условие отбора</span></p>
+<p class="rvps6"><span class="rvts20">ORDER BY</span><span class="rvts17"> </span><span class="rvts19">условие сортировки</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Выбрать все строки из таблицы</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> * </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Вычисляемые столбцы. (в столбцах можно производить вычисления.)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> (elem1 – elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Использование констант. (текстовая константа.)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, 'my text', elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
-<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
-</div>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+
+	</div>
 	
-	<div id="topic_footer">
+	
+		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</div>
 		</div>
-	</body>
+	
+	
+
+	
+</body>
 	
 </html>
 

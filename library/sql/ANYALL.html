@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>Многотабличные запросы</title>
+	<title>ANY и ALL – Многократное сравнение</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
@@ -39,7 +39,7 @@
 				{
 					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
 					{
-						top.FrameTOC.SelectTocItem("Newtopic3");
+						top.FrameTOC.SelectTocItem("ANYALL");
 						bTocSelected = true;
 					}
 					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
@@ -58,11 +58,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">Многотабличные запросы</h1>
+				<h1 id="topic_header_text">ANY и ALL – Многократное сравнение</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Newtopic.html">[Кратко]</a> &rsaquo;&rsaquo; 
+					<a href="Newtopic74.html">Подзапросы и выражения с запросами</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -70,15 +70,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Newtopic.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="Newtopic74.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="Newtopic2.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="EXISTS.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="Newtopic4.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Newtopic78.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,13 +90,16 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps12"><span class="rvts34">Многотабличные запросы.</span></p>
-<p class="rvps12"><span class="rvts31"><br/></span></p>
-<p class="rvps12"><span class="rvts31">При обращении можно указать несколько таблиц, а к полям обращаться через точку.</span></p>
-<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
-<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
-<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле &lt; Таблица2.Поле</span></p>
-<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;AND Таблица1.Поле BETWEEN 'к' AND 'с'</span></p>
+<p class="rvps2"><span class="rvts14">ANY и ALL – Многократное сравнение</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Значение выражения сравнивается с каждым из множеств значений, которые возвращаются подзапросом.</span></p>
+<p class="rvps2"><span class="rvts24">ANY – есть ли хоть одно совпадение из столбцов данных</span></p>
+<p class="rvps2"><span class="rvts24">ALL – все значения должны совпадать с столбцом данных.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem1 &lt; </span><span class="rvts16">ANY</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> &nbsp;table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 &lt; 10</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
 
