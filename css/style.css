@@ -15,8 +15,8 @@ body {
 }
 
 header{
-    height: 350px;
-    background-image: url(../img/main.jpg);
+    height: 500px;
+    /*background-image: url(../img/main.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -73,6 +73,18 @@ a:hover {
 a:active {
   color: #497DDD; 
   border-bottom: 1px dashed;
+}
+
+#backgroundImage {
+    position: fixed;
+    background-image: url(../img/main.jpg);
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    height: 100%;
+    width: 100%;
+    z-index: -1000;
 }
 
 #tableIcons{
