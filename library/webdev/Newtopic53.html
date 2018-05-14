@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic56.html">Авторизация</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic56.html">Авторизация</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -98,70 +98,70 @@
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Модель User.php подключается в \config\web.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps20"><span class="rvts71">'user' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'identityClass' </span><span class="rvts21">=&gt; </span><span class="rvts71">'app\models\User'</span><span class="rvts21">,</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'enableAutoLogin' </span><span class="rvts21">=&gt; </span><span class="rvts70">true</span><span class="rvts21">,</span></p>
-<p class="rvps20"><span class="rvts21">],</span></p>
-<p class="rvps20"><span class="rvts8"><br/></span></p>
+<p class="rvps15"><span class="rvts76">'user' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'identityClass' </span><span class="rvts21">=&gt; </span><span class="rvts76">'app\models\User'</span><span class="rvts21">,</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'enableAutoLogin' </span><span class="rvts21">=&gt; </span><span class="rvts53">true</span><span class="rvts21">,</span></p>
+<p class="rvps15"><span class="rvts21">],</span></p>
+<p class="rvps15"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts24"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Авторизация происходит в контроллере \controllers\SiteController.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps20"><span class="rvts147">use </span><span class="rvts133">yii\filters\AccessControl;</span></p>
-<p class="rvps20"><span class="rvts8"><br/></span></p>
-<p class="rvps20"><span class="rvts71">'access' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; AccessControl::</span><span class="rvts73">className</span><span class="rvts21">(),</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'only' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'logout'</span><span class="rvts21">],</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'rules' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;[</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'actions' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'logout'</span><span class="rvts21">],</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'allow' </span><span class="rvts21">=&gt; </span><span class="rvts70">true</span><span class="rvts21">,</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'roles' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'@'</span><span class="rvts21">],</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;],</span></p>
-<p class="rvps20"><span class="rvts21">],</span></p>
+<p class="rvps15"><span class="rvts195">use </span><span class="rvts182">yii\filters\AccessControl;</span></p>
+<p class="rvps15"><span class="rvts8"><br/></span></p>
+<p class="rvps15"><span class="rvts76">'access' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; AccessControl::</span><span class="rvts172">className</span><span class="rvts21">(),</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'only' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'logout'</span><span class="rvts21">],</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'rules' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;[</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'actions' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'logout'</span><span class="rvts21">],</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'allow' </span><span class="rvts21">=&gt; </span><span class="rvts53">true</span><span class="rvts21">,</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'roles' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'@'</span><span class="rvts21">],</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;],</span></p>
+<p class="rvps15"><span class="rvts21">],</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Проверка пользователя в моделе \models\LoginForm.php</span></p>
-<p class="rvps3"><span class="rvts8">Используется обращение </span><span class="rvts133">$this-&gt;</span><span class="rvts134">_user</span><span class="rvts133"> = </span><span class="rvts148">User</span><span class="rvts133">::</span><span class="rvts149">findByUsername</span><span class="rvts133">($this-&gt;</span><span class="rvts134">username</span><span class="rvts133">);</span></p>
+<p class="rvps3"><span class="rvts8">Используется обращение </span><span class="rvts182">$this-&gt;</span><span class="rvts183">_user</span><span class="rvts182"> = </span><span class="rvts196">User</span><span class="rvts182">::</span><span class="rvts197">findByUsername</span><span class="rvts182">($this-&gt;</span><span class="rvts183">username</span><span class="rvts182">);</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Запуск проверки в действии </span><span class="rvts150">actionLogin</span></p>
+<p class="rvps3"><span class="rvts8">Запуск проверки в действии </span><span class="rvts198">actionLogin</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps20"><span class="rvts70">if </span><span class="rvts21">(!Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">user</span><span class="rvts21">-&gt;</span><span class="rvts71">isGuest</span><span class="rvts21">) {</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;goHome();</span></p>
-<p class="rvps20"><span class="rvts21">}</span></p>
-<p class="rvps20"><span class="rvts20"><br/></span></p>
-<p class="rvps20"><span class="rvts21">$model = </span><span class="rvts70">new </span><span class="rvts72">LoginForm</span><span class="rvts21">();</span></p>
-<p class="rvps20"><span class="rvts70">if </span><span class="rvts21">($model-&gt;load(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post()) &amp;&amp; $model-&gt;login()) {</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;goBack();</span></p>
-<p class="rvps20"><span class="rvts21">}</span></p>
-<p class="rvps20"><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'login'</span><span class="rvts21">, [</span></p>
-<p class="rvps20"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'model' </span><span class="rvts21">=&gt; $model,</span></p>
-<p class="rvps20"><span class="rvts21">]);</span></p>
+<p class="rvps15"><span class="rvts53">if </span><span class="rvts21">(!Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">user</span><span class="rvts21">-&gt;</span><span class="rvts76">isGuest</span><span class="rvts21">) {</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$this-&gt;goHome();</span></p>
+<p class="rvps15"><span class="rvts21">}</span></p>
+<p class="rvps15"><span class="rvts20"><br/></span></p>
+<p class="rvps15"><span class="rvts21">$model = </span><span class="rvts53">new </span><span class="rvts171">LoginForm</span><span class="rvts21">();</span></p>
+<p class="rvps15"><span class="rvts53">if </span><span class="rvts21">($model-&gt;load(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">request</span><span class="rvts21">-&gt;post()) &amp;&amp; $model-&gt;login()) {</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$this-&gt;goBack();</span></p>
+<p class="rvps15"><span class="rvts21">}</span></p>
+<p class="rvps15"><span class="rvts53">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts76">'login'</span><span class="rvts21">, [</span></p>
+<p class="rvps15"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'model' </span><span class="rvts21">=&gt; $model,</span></p>
+<p class="rvps15"><span class="rvts21">]);</span></p>
 <p class="rvps3"><span class="rvts21"><br/></span></p>
-<p class="rvps3"><span class="rvts21">Разлогиниться </span><span class="rvts150">actionLogout</span></p>
-<p class="rvps3"><span class="rvts89"><br/></span></p>
-<p class="rvps20"><span class="rvts21">Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">user</span><span class="rvts21">-&gt;logout();</span></p>
-<p class="rvps20"><span class="rvts70">return </span><span class="rvts21">$this-&gt;goHome();</span></p>
+<p class="rvps3"><span class="rvts21">Разлогиниться </span><span class="rvts198">actionLogout</span></p>
+<p class="rvps3"><span class="rvts75"><br/></span></p>
+<p class="rvps15"><span class="rvts21">Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">user</span><span class="rvts21">-&gt;logout();</span></p>
+<p class="rvps15"><span class="rvts53">return </span><span class="rvts21">$this-&gt;goHome();</span></p>
 <p class="rvps3"><span class="rvts21"><br/></span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Проверка авторизации в контроллере. Если пользователь авторизоват ему доступно всё.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> behaviors()</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> behaviors()</span></p>
 <p class="rvps3"><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">[</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'access' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; AccessControl::</span><span class="rvts73">className</span><span class="rvts21">(),</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'rules' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">[</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'access' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; AccessControl::</span><span class="rvts172">className</span><span class="rvts21">(),</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'rules' </span><span class="rvts21">=&gt; [</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'allow' </span><span class="rvts21">=&gt; </span><span class="rvts70">true</span><span class="rvts21">,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'roles' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'@'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'allow' </span><span class="rvts21">=&gt; </span><span class="rvts53">true</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'roles' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'@'</span><span class="rvts21">],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'verbs' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; VerbFilter::</span><span class="rvts73">className</span><span class="rvts21">(),</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'actions' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'delete' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'POST'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'verbs' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; VerbFilter::</span><span class="rvts172">className</span><span class="rvts21">(),</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'actions' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'delete' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'POST'</span><span class="rvts21">],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;];</span></p>

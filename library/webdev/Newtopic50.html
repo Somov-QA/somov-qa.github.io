@@ -3,7 +3,7 @@
 <html>
 	
 <head>
-	<title>Разное</title>
+	<title>Стрелочные функции (=&gt;)</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
 	<meta name="keywords" content="">
@@ -58,11 +58,11 @@
 	
 		<div id="topic_header">
 			<div id="topic_header_content">
-				<h1 id="topic_header_text">Разное</h1>
+				<h1 id="topic_header_text">Стрелочные функции (=&gt;)</h1>
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ECMAScript6.html">ECMAScript 6</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -70,15 +70,15 @@
 			<div id="topic_header_nav">
 				
 				
-				<a href="Yii2.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				<a href="ECMAScript6.html"><img src="img/arrow_up.png" alt="Parent"/></a>
 				
 				
 				
-				<a href="guide.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				<a href="for.html"><img src="img/arrow_left.png" alt="Previous"/></a>
 				
 				
 				
-				<a href="Newtopic45.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="arguments.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,8 +90,72 @@
 	<div id="topic_content">
 		
 <p></p>
+<p class="rvps3"><span class="rvts24">Стрелочные функции</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts72">/**</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*</span><span class="rvts21"> </span><span class="rvts72">Стрелочные</span><span class="rvts21"> </span><span class="rvts72">функции</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*/</span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> add = (x, y) =&gt; x + y;</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, add(5, 2));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> square = x =&gt; x * x;</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, square(3));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> giveMeAnswer = () =&gt; 42;</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, giveMeAnswer());</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> log = () =&gt; console.log(</span><span class="rvts54">'logging'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, log());</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> multiply = (x, y) =&gt; {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">let</span><span class="rvts21"> result = x*y;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> result;</span></p>
+<p class="rvps3"><span class="rvts21">};</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, multiply(5, 5));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> getPerson = () =&gt; ({ name: </span><span class="rvts54">'John'</span><span class="rvts21">});</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, getPerson());</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21">( () =&gt; {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;console.log(</span><span class="rvts54">"Стрелочные функции: IIFE"</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21">} )();</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> numbers = [1,2,3,4,5,6,7,8,9,10];</span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> sum = 0;</span></p>
+<p class="rvps3"><span class="rvts21">numbers.forEach((num) =&gt; sum += num);</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, sum);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> squareMap = numbers.map(n =&gt; n * n);</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">"Стрелочные функции:"</span><span class="rvts21">, squareMap);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> pers = {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;name: </span><span class="rvts54">'Bob'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;greet: () =&gt; {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts54">'Hello my name is'</span><span class="rvts21">, name);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts21">pers.greet();</span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
 <p></p>
-<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
 
 	</div>
 	

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic28.html">Виджиты</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic28.html">Виджиты</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,32 +94,32 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Описание класса компонента </span><span class="rvts21">app\components\TestWidget.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">namespace </span><span class="rvts21">app\components;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">namespace </span><span class="rvts21">app\components;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\base\Widget;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\base\Widget;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">class </span><span class="rvts72">TestWidget</span><span class="rvts21"> </span><span class="rvts70">extends </span><span class="rvts72">Widget</span></p>
+<p class="rvps3"><span class="rvts53">class </span><span class="rvts171">TestWidget</span><span class="rvts21"> </span><span class="rvts53">extends </span><span class="rvts171">Widget</span></p>
 <p class="rvps3"><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts71">$name</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts74">public </span><span class="rvts76">$name</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> init() {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">parent</span><span class="rvts21">::</span><span class="rvts73">init</span><span class="rvts21">();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">($this-&gt;</span><span class="rvts71">name</span><span class="rvts21"> === </span><span class="rvts70">null</span><span class="rvts21">) $this-&gt;</span><span class="rvts71">name</span><span class="rvts21"> = </span><span class="rvts71">'Гость'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> init() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">parent</span><span class="rvts21">::</span><span class="rvts172">init</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">($this-&gt;</span><span class="rvts76">name</span><span class="rvts21"> === </span><span class="rvts53">null</span><span class="rvts21">) $this-&gt;</span><span class="rvts76">name</span><span class="rvts21"> = </span><span class="rvts76">'Гость'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> run() {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts71">"&lt;h1&gt;</span><span class="rvts21">{$this-&gt;</span><span class="rvts71">name</span><span class="rvts21">}</span><span class="rvts71">, Привет‚ Мир!&lt;/h1&gt;"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> run() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts76">"&lt;h1&gt;</span><span class="rvts21">{$this-&gt;</span><span class="rvts76">name</span><span class="rvts21">}</span><span class="rvts76">, Привет‚ Мир!&lt;/h1&gt;"</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Использование виджита в виде</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">app\components\TestWidget;</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> </span><span class="rvts70">echo </span><span class="rvts21">TestWidget::</span><span class="rvts73">widget</span><span class="rvts21">([</span><span class="rvts71">'name' </span><span class="rvts21">=&gt; </span><span class="rvts71">'Иван'</span><span class="rvts21">]); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">app\components\TestWidget;</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> </span><span class="rvts53">echo </span><span class="rvts21">TestWidget::</span><span class="rvts172">widget</span><span class="rvts21">([</span><span class="rvts76">'name' </span><span class="rvts21">=&gt; </span><span class="rvts76">'Иван'</span><span class="rvts21">]); </span><span class="rvts60">?&gt;</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy EBook and documentation generator</a></p>
 

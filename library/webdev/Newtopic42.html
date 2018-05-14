@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -323,18 +323,18 @@
 <p class="rvps8"><span class="rvts34">var obj = {};</span></p>
 <p class="rvps6"><span class="rvts34">Object.defineProperty(obj, “x”, {value: 1, writable: true});</span></p>
 <p class="rvps5"><span class="rvts36">Атрибуты объекта</span></p>
-<p class="rvps5"><span class="rvts75">prototype</span><span class="rvts35"> – атрибут прототипа задает объект, от которого данный объект наследует свойства.</span></p>
+<p class="rvps5"><span class="rvts62">prototype</span><span class="rvts35"> – атрибут прототипа задает объект, от которого данный объект наследует свойства.</span></p>
 <p class="rvps8"><span class="rvts34">var objA = {x:1}</span></p>
 <p class="rvps8"><span class="rvts34">var objB = Object.create(objA);</span></p>
 <p class="rvps8"><span class="rvts34">objA.isPrototypeOf(objB)</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">// true - objB наследует от objA</span></p>
 <p class="rvps8"><span class="rvts34">Object.prototype.isPrototypeOf(objB)</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">// true – для любого объекта</span></p>
-<p class="rvps5"><span class="rvts75">class</span><span class="rvts35"> – атрибут класс содержит строку с информацией о типе объекта.</span></p>
+<p class="rvps5"><span class="rvts62">class</span><span class="rvts35"> – атрибут класс содержит строку с информацией о типе объекта.</span></p>
 <p class="rvps8"><span class="rvts34">Function classof(obj){</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">// возвращает класс объекта</span></p>
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">if(obj === null) return “null”;</span></p>
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">if(obj === undefined) return “undefined”;</span></p>
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">return Object.prototype.toString.call(obj).slice(8, -1);</span></p>
 <p class="rvps8"><span class="rvts34">}</span></p>
-<p class="rvps5"><span class="rvts75">extensible</span><span class="rvts35"> – атрибут расширяемый задает, можно ли добавить в объект новое свойство.</span></p>
+<p class="rvps5"><span class="rvts62">extensible</span><span class="rvts35"> – атрибут расширяемый задает, можно ли добавить в объект новое свойство.</span></p>
 <p class="rvps8"><span class="rvts34">Object.isExtensible()</span><span class="rvts35"> - определить является ли объект расширенным</span></p>
 <p class="rvps8"><span class="rvts34">Object.seal()</span><span class="rvts35"> - делает объект расширяемым</span></p>
 <p class="rvps8"><span class="rvts34">Object.isSealed()</span><span class="rvts35"> - определяет вызывается ли метод seal</span></p>
@@ -610,218 +610,218 @@
 <p class="rvps5"><span class="rvts36">Спецсимволы в регулярном выражении</span></p>
 <div class="rvps3"><table border="0" cellpadding="2" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px; background-color: #dddddd;"><p class="rvps27"><span class="rvts76">Символ</span></p>
+<td width="93" valign="middle" style="padding: 2px; background-color: #dddddd;"><p class="rvps17"><span class="rvts63">Символ</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px; background-color: #dddddd;"><p class="rvps27"><span class="rvts76">Значение</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Для обычных символов - делает их специальными. Например, выражение&nbsp; </span><span class="rvts77">/s/</span><span class="rvts78">&nbsp; ищет просто символ 's'. А если поставить \ перед s, то&nbsp; </span><span class="rvts77">/\s/</span><span class="rvts78">&nbsp; уже обозначает пробельный символ.И наоборот, если символ специальный, например *, то \ сделает его просто обычным символом "звездочка". Например,&nbsp; </span><span class="rvts77">/a*/</span><span class="rvts78">&nbsp; ищет 0 или больше подряд идущих символов 'a'. Чтобы найти а со звездочкой 'a*' - поставим \ перед спец. символом:&nbsp; </span><span class="rvts77">/a\*/</span><span class="rvts78">.</span></p>
+<td width="598" valign="middle" style="padding: 2px; background-color: #dddddd;"><p class="rvps17"><span class="rvts63">Значение</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">^</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает начало входных данных. Если установлен флаг многострочного поиска&nbsp; </span><span class="rvts77">("m")</span><span class="rvts78">, то также сработает при начале новой строки.Например,&nbsp; </span><span class="rvts77">/^A/</span><span class="rvts78">&nbsp; не найдет 'A' в "an A", но найдет первое 'A' в "An A."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">$</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает конец входных данных. Если установлен флаг многострочного поиска, то также сработает в конце строки.Например,&nbsp; </span><span class="rvts77">/t$/</span><span class="rvts78">&nbsp; не найдет 't' в "eater", но найдет - в "eat".</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Для обычных символов - делает их специальными. Например, выражение&nbsp; </span><span class="rvts64">/s/</span><span class="rvts65">&nbsp; ищет просто символ 's'. А если поставить \ перед s, то&nbsp; </span><span class="rvts64">/\s/</span><span class="rvts65">&nbsp; уже обозначает пробельный символ.И наоборот, если символ специальный, например *, то \ сделает его просто обычным символом "звездочка". Например,&nbsp; </span><span class="rvts64">/a*/</span><span class="rvts65">&nbsp; ищет 0 или больше подряд идущих символов 'a'. Чтобы найти а со звездочкой 'a*' - поставим \ перед спец. символом:&nbsp; </span><span class="rvts64">/a\*/</span><span class="rvts65">.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">*</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">^</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает повторение 0 или более раз. Например,&nbsp; </span><span class="rvts77">/bo*/</span><span class="rvts78">&nbsp; найдет 'boooo' в "A ghost booooed" и 'b' в "A bird warbled", но ничего не найдет в "A goat grunted".</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">+</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает повторение 1 или более раз. Эквивалентно&nbsp; </span><span class="rvts77">{1,}</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/a+/</span><span class="rvts78">&nbsp; найдет 'a' в "candy" и все 'a' в "caaaaaaandy".</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает начало входных данных. Если установлен флаг многострочного поиска&nbsp; </span><span class="rvts64">("m")</span><span class="rvts65">, то также сработает при начале новой строки.Например,&nbsp; </span><span class="rvts64">/^A/</span><span class="rvts65">&nbsp; не найдет 'A' в "an A", но найдет первое 'A' в "An A."</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">?</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">$</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает, что элемент может как присутствовать, так и отсутствовать. Например,&nbsp; </span><span class="rvts77">/e?le?/</span><span class="rvts78">&nbsp; найдет 'el' в "angel" и 'le' в "angle."Если используется сразу после одного из&nbsp; </span><span class="rvts77">квантификаторов *</span><span class="rvts78">,&nbsp; </span><span class="rvts77">+</span><span class="rvts78">,&nbsp; </span><span class="rvts77">?</span><span class="rvts78">, или&nbsp; </span><span class="rvts77">{}</span><span class="rvts78">, то задает "нежадный" поиск (повторение минимально возможное количество раз, до ближайшего следующего элемента паттерна), в противоположность "жадному" режиму по умолчанию, при котором количество повторений максимально, даже если следующий элемент паттерна тоже подходит.Кроме того, ? используется в предпросмотре, который описан в таблице под&nbsp; </span><span class="rvts77">(?=)</span><span class="rvts78">,&nbsp; </span><span class="rvts77">(?!)</span><span class="rvts78">, и&nbsp; </span><span class="rvts77">(?: )</span><span class="rvts78">.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">.</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">(Десятичная точка) обозначает любой символ, кроме перевода строки: \n \r \u2028 or \u2029. (</span><span class="rvts77">можно использовать [\s\S] для поиска любого символа, включая переводы строк). Например,&nbsp; /.n/</span><span class="rvts78">&nbsp; найдет 'an' и 'on' в "nay, an apple is on the tree", но не 'nay'.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает конец входных данных. Если установлен флаг многострочного поиска, то также сработает в конце строки.Например,&nbsp; </span><span class="rvts64">/t$/</span><span class="rvts65">&nbsp; не найдет 't' в "eater", но найдет - в "eat".</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">(</span><span class="rvts79">x</span><span class="rvts77">)</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">*</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит&nbsp; </span><span class="rvts79">x</span><span class="rvts78">&nbsp; и запоминает. Это называется "запоминающие скобки". Например,&nbsp; </span><span class="rvts77">/(foo)/</span><span class="rvts78">&nbsp; найдет и запомнит 'foo' в "foo bar." Найденная подстрока хранится в массиве-результате поиска или в предопределенных свойствах объекта RegExp:&nbsp; </span><span class="rvts77">$1, ..., $9</span><span class="rvts78">.Кроме того, скобки объединяют то, что в них находится, в единый элемент паттерна. Например, (abc)* - повторение abc 0 и более раз.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">(?:</span><span class="rvts79">x</span><span class="rvts77">)</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит&nbsp; </span><span class="rvts79">x</span><span class="rvts78">, но не запоминает найденное. Это называется "незапоминающие скобки". Найденная подстрока не сохраняется в массиве результатов и свойствах RegExp.Как и все скобки, объединяют находящееся в них в единый подпаттерн.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает повторение 0 или более раз. Например,&nbsp; </span><span class="rvts64">/bo*/</span><span class="rvts65">&nbsp; найдет 'boooo' в "A ghost booooed" и 'b' в "A bird warbled", но ничего не найдет в "A goat grunted".</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts79">x</span><span class="rvts77">(?=</span><span class="rvts79">y</span><span class="rvts77">)</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">+</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит&nbsp; </span><span class="rvts79">x</span><span class="rvts78">, только если за&nbsp; </span><span class="rvts79">x</span><span class="rvts78">&nbsp; следует&nbsp; </span><span class="rvts79">y</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/Jack(?=Sprat)/</span><span class="rvts78">найдет 'Jack', только если за ним следует 'Sprat'.&nbsp; </span><span class="rvts77">/Jack(?=Sprat|Frost)/</span><span class="rvts78">&nbsp; найдет 'Jack', только если за ним следует 'Sprat' или 'Frost'. Однако, ни 'Sprat' ни 'Frost' не войдут в результат поиска.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts79">x</span><span class="rvts77">(?!</span><span class="rvts79">y</span><span class="rvts77">)</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит&nbsp; </span><span class="rvts79">x</span><span class="rvts78">, только если за&nbsp; </span><span class="rvts79">x</span><span class="rvts78">&nbsp; не следует&nbsp; </span><span class="rvts79">y</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/\d+(?!\.)/</span><span class="rvts78">найдет число, только если за ним не следует десятичная точка.&nbsp; </span><span class="rvts77">/\d+(?!\.)/.exec("3.141")</span><span class="rvts78">&nbsp; найдет 141, но не 3.141.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает повторение 1 или более раз. Эквивалентно&nbsp; </span><span class="rvts64">{1,}</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/a+/</span><span class="rvts65">&nbsp; найдет 'a' в "candy" и все 'a' в "caaaaaaandy".</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts79">x</span><span class="rvts77">|</span><span class="rvts79">y</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">?</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит&nbsp; </span><span class="rvts79">x</span><span class="rvts78">&nbsp; или&nbsp; </span><span class="rvts79">y</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/green|red/</span><span class="rvts78">&nbsp; найдет 'green' в "green apple" и 'red' в "red apple."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">{</span><span class="rvts79">n</span><span class="rvts77">}</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Где n - положительное целое число. Находит ровно n повторений предшествующего элемента. Например,&nbsp; </span><span class="rvts77">/a{2}/</span><span class="rvts78">&nbsp; не найдет 'a' в "candy," но найдет оба a в "caandy," и первые два a в "caaandy."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает, что элемент может как присутствовать, так и отсутствовать. Например,&nbsp; </span><span class="rvts64">/e?le?/</span><span class="rvts65">&nbsp; найдет 'el' в "angel" и 'le' в "angle."Если используется сразу после одного из&nbsp; </span><span class="rvts64">квантификаторов *</span><span class="rvts65">,&nbsp; </span><span class="rvts64">+</span><span class="rvts65">,&nbsp; </span><span class="rvts64">?</span><span class="rvts65">, или&nbsp; </span><span class="rvts64">{}</span><span class="rvts65">, то задает "нежадный" поиск (повторение минимально возможное количество раз, до ближайшего следующего элемента паттерна), в противоположность "жадному" режиму по умолчанию, при котором количество повторений максимально, даже если следующий элемент паттерна тоже подходит.Кроме того, ? используется в предпросмотре, который описан в таблице под&nbsp; </span><span class="rvts64">(?=)</span><span class="rvts65">,&nbsp; </span><span class="rvts64">(?!)</span><span class="rvts65">, и&nbsp; </span><span class="rvts64">(?: )</span><span class="rvts65">.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">{</span><span class="rvts79">n</span><span class="rvts77">,}</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">.</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Где n - положительное целое число. Находит n и более повторений элемента. Например,&nbsp; </span><span class="rvts77">/a{2,}</span><span class="rvts78">&nbsp; не найдет 'a' в "candy", но найдет все 'a' в "caandy" и в "caaaaaaandy."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">{</span><span class="rvts79">n</span><span class="rvts77">,</span><span class="rvts79">m</span><span class="rvts77">}</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Где n и m - положительные целые числа. Находят от n до m повторений элемента.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">(Десятичная точка) обозначает любой символ, кроме перевода строки: \n \r \u2028 or \u2029. (</span><span class="rvts64">можно использовать [\s\S] для поиска любого символа, включая переводы строк). Например,&nbsp; /.n/</span><span class="rvts65">&nbsp; найдет 'an' и 'on' в "nay, an apple is on the tree", но не 'nay'.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">[</span><span class="rvts79">xyz</span><span class="rvts77">]</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">(</span><span class="rvts66">x</span><span class="rvts64">)</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Набор символов. Находит любой из перечисленных символов. Вы можете указать промежуток, используя тире. Например,&nbsp; </span><span class="rvts77">[abcd]</span><span class="rvts78">&nbsp; - то же самое, что&nbsp; </span><span class="rvts77">[a-d]</span><span class="rvts78">. Найдет 'b' в "brisket" и 'c' в "ache".</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">[^</span><span class="rvts79">xyz</span><span class="rvts77">]</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Любой символ, кроме указанных в наборе. Вы также можете указать промежуток. Например,&nbsp; </span><span class="rvts77">[^abc]</span><span class="rvts78">&nbsp; - то же самое, что&nbsp; </span><span class="rvts77">[^a-c]</span><span class="rvts78">. Найдет 'r' в "brisket" и 'h' в "chop."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит&nbsp; </span><span class="rvts66">x</span><span class="rvts65">&nbsp; и запоминает. Это называется "запоминающие скобки". Например,&nbsp; </span><span class="rvts64">/(foo)/</span><span class="rvts65">&nbsp; найдет и запомнит 'foo' в "foo bar." Найденная подстрока хранится в массиве-результате поиска или в предопределенных свойствах объекта RegExp:&nbsp; </span><span class="rvts64">$1, ..., $9</span><span class="rvts65">.Кроме того, скобки объединяют то, что в них находится, в единый элемент паттерна. Например, (abc)* - повторение abc 0 и более раз.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">[\b]</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">(?:</span><span class="rvts66">x</span><span class="rvts64">)</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит символ backspace. (Не путать с&nbsp; </span><span class="rvts77">\b</span><span class="rvts78">.)</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\b</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Находит границу слов (латинских), например пробел. (Не путать с&nbsp; </span><span class="rvts77">[\b]</span><span class="rvts78">). Например,&nbsp; </span><span class="rvts77">/\bn\w/</span><span class="rvts78">&nbsp; найдет 'no' в "noonday";&nbsp; </span><span class="rvts77">/\wy\b/</span><span class="rvts78">&nbsp; найдет 'ly' в "possibly yesterday."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит&nbsp; </span><span class="rvts66">x</span><span class="rvts65">, но не запоминает найденное. Это называется "незапоминающие скобки". Найденная подстрока не сохраняется в массиве результатов и свойствах RegExp.Как и все скобки, объединяют находящееся в них в единый подпаттерн.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\B</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts66">x</span><span class="rvts64">(?=</span><span class="rvts66">y</span><span class="rvts64">)</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Обозначает не границу слов. Например,&nbsp; </span><span class="rvts77">/\w\Bn/</span><span class="rvts78">&nbsp; найдет 'on' в "noonday", а&nbsp; </span><span class="rvts77">/y\B\w/</span><span class="rvts78">&nbsp; найдет 'ye' в "possibly yesterday."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\c</span><span class="rvts79">X</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts79">Где&nbsp; X</span><span class="rvts78">&nbsp; - буква от A до Z. Обозначает контрольный символ в строке. Например,&nbsp; </span><span class="rvts77">/\cM/</span><span class="rvts78">&nbsp; обозначает символ Ctrl-M.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит&nbsp; </span><span class="rvts66">x</span><span class="rvts65">, только если за&nbsp; </span><span class="rvts66">x</span><span class="rvts65">&nbsp; следует&nbsp; </span><span class="rvts66">y</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/Jack(?=Sprat)/</span><span class="rvts65">найдет 'Jack', только если за ним следует 'Sprat'.&nbsp; </span><span class="rvts64">/Jack(?=Sprat|Frost)/</span><span class="rvts65">&nbsp; найдет 'Jack', только если за ним следует 'Sprat' или 'Frost'. Однако, ни 'Sprat' ни 'Frost' не войдут в результат поиска.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\d</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts66">x</span><span class="rvts64">(?!</span><span class="rvts66">y</span><span class="rvts64">)</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">находит цифру из любого алфавита (у нас же юникод). Используйте&nbsp; </span><span class="rvts77">[0-9], чтобы найти только обычные цифры. Например,&nbsp; /\d/</span><span class="rvts78">&nbsp; или&nbsp; </span><span class="rvts77">/[0-9]/</span><span class="rvts78">&nbsp; найдет '2' в "B2 is the suite number."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\D</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет нецифровой символ (все алфавиты).&nbsp; </span><span class="rvts77">[^0-9]</span><span class="rvts78">&nbsp; - эквивалент для обычных цифр. Например,&nbsp; </span><span class="rvts77">/\D/</span><span class="rvts78">&nbsp; или&nbsp; </span><span class="rvts77">/[^0-9]/</span><span class="rvts78">&nbsp; найдет 'B' в "B2 is the suite number."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит&nbsp; </span><span class="rvts66">x</span><span class="rvts65">, только если за&nbsp; </span><span class="rvts66">x</span><span class="rvts65">&nbsp; не следует&nbsp; </span><span class="rvts66">y</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/\d+(?!\.)/</span><span class="rvts65">найдет число, только если за ним не следует десятичная точка.&nbsp; </span><span class="rvts64">/\d+(?!\.)/.exec("3.141")</span><span class="rvts65">&nbsp; найдет 141, но не 3.141.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\f,\r,\n</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts66">x</span><span class="rvts64">|</span><span class="rvts66">y</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Соответствующие спецсимволы form-feed, line-feed, перевод строки.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\s</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет любой пробельный символ, включая пробел, табуляцию, переводы строки и другие юникодные пробельные символы. Например,&nbsp; </span><span class="rvts77">/\s\w*/</span><span class="rvts78">&nbsp; найдет ' bar' в "foo bar."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит&nbsp; </span><span class="rvts66">x</span><span class="rvts65">&nbsp; или&nbsp; </span><span class="rvts66">y</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/green|red/</span><span class="rvts65">&nbsp; найдет 'green' в "green apple" и 'red' в "red apple."</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\S</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">{</span><span class="rvts66">n</span><span class="rvts64">}</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет любой символ, кроме пробельного. Например,&nbsp; </span><span class="rvts77">/\S\w*/</span><span class="rvts78">найдет 'foo' в "foo bar."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\t</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Символ табуляции.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Где n - положительное целое число. Находит ровно n повторений предшествующего элемента. Например,&nbsp; </span><span class="rvts64">/a{2}/</span><span class="rvts65">&nbsp; не найдет 'a' в "candy," но найдет оба a в "caandy," и первые два a в "caaandy."</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\v</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">{</span><span class="rvts66">n</span><span class="rvts64">,}</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Символ вертикальной табуляции.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\w</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет любой словесный (латинский алфавит) символ, включая буквы, цифры и знак подчеркивания. Эквивалентно&nbsp; </span><span class="rvts77">[A-Za-z0-9_]</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/\w/</span><span class="rvts78">&nbsp; найдет 'a' в "apple," '5' в "$5.28," и '3' в "3D."</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Где n - положительное целое число. Находит n и более повторений элемента. Например,&nbsp; </span><span class="rvts64">/a{2,}</span><span class="rvts65">&nbsp; не найдет 'a' в "candy", но найдет все 'a' в "caandy" и в "caaaaaaandy."</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\W</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">{</span><span class="rvts66">n</span><span class="rvts64">,</span><span class="rvts66">m</span><span class="rvts64">}</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет любой не-(лат.)словесный символ. Эквивалентно&nbsp; </span><span class="rvts77">[^A-Za-z0-9_]</span><span class="rvts78">. Например,&nbsp; </span><span class="rvts77">/\W/</span><span class="rvts78">&nbsp; и&nbsp; </span><span class="rvts77">/[^$A-Za-z0-9_]/</span><span class="rvts78">&nbsp; одинаково найдут '%' в "50%."</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\</span><span class="rvts79">n</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">где&nbsp; </span><span class="rvts79">n</span><span class="rvts78">&nbsp; - целое число. Обратная ссылка на n-ю запомненную скобками подстроку. Например,&nbsp; </span><span class="rvts77">/apple(,)\sorange\1/</span><span class="rvts78">&nbsp; найдет 'apple, orange,' в "apple, orange, cherry, peach.". За таблицей есть более полный пример.</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Где n и m - положительные целые числа. Находят от n до m повторений элемента.</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\0</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">[</span><span class="rvts66">xyz</span><span class="rvts64">]</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет символ NUL. Не добавляйте в конец другие цифры.</span></p>
-</td>
-</tr>
-<tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\x</span><span class="rvts79">hh</span></p>
-</td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет символ с кодом&nbsp; </span><span class="rvts79">hh</span><span class="rvts78">&nbsp; (2 шестнадцатиричных цифры)</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Набор символов. Находит любой из перечисленных символов. Вы можете указать промежуток, используя тире. Например,&nbsp; </span><span class="rvts64">[abcd]</span><span class="rvts65">&nbsp; - то же самое, что&nbsp; </span><span class="rvts64">[a-d]</span><span class="rvts65">. Найдет 'b' в "brisket" и 'c' в "ache".</span></p>
 </td>
 </tr>
 <tr valign="top">
-<td width="93" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts77">\u</span><span class="rvts79">hhhh</span></p>
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">[^</span><span class="rvts66">xyz</span><span class="rvts64">]</span></p>
 </td>
-<td width="598" valign="middle" style="padding: 2px;"><p class="rvps28"><span class="rvts78">Найдет символ с кодом&nbsp; </span><span class="rvts79">hhhh</span><span class="rvts78">&nbsp; (4 шестнадцатиричных цифры).</span></p>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Любой символ, кроме указанных в наборе. Вы также можете указать промежуток. Например,&nbsp; </span><span class="rvts64">[^abc]</span><span class="rvts65">&nbsp; - то же самое, что&nbsp; </span><span class="rvts64">[^a-c]</span><span class="rvts65">. Найдет 'r' в "brisket" и 'h' в "chop."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">[\b]</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит символ backspace. (Не путать с&nbsp; </span><span class="rvts64">\b</span><span class="rvts65">.)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\b</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Находит границу слов (латинских), например пробел. (Не путать с&nbsp; </span><span class="rvts64">[\b]</span><span class="rvts65">). Например,&nbsp; </span><span class="rvts64">/\bn\w/</span><span class="rvts65">&nbsp; найдет 'no' в "noonday";&nbsp; </span><span class="rvts64">/\wy\b/</span><span class="rvts65">&nbsp; найдет 'ly' в "possibly yesterday."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\B</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Обозначает не границу слов. Например,&nbsp; </span><span class="rvts64">/\w\Bn/</span><span class="rvts65">&nbsp; найдет 'on' в "noonday", а&nbsp; </span><span class="rvts64">/y\B\w/</span><span class="rvts65">&nbsp; найдет 'ye' в "possibly yesterday."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\c</span><span class="rvts66">X</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts66">Где&nbsp; X</span><span class="rvts65">&nbsp; - буква от A до Z. Обозначает контрольный символ в строке. Например,&nbsp; </span><span class="rvts64">/\cM/</span><span class="rvts65">&nbsp; обозначает символ Ctrl-M.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\d</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">находит цифру из любого алфавита (у нас же юникод). Используйте&nbsp; </span><span class="rvts64">[0-9], чтобы найти только обычные цифры. Например,&nbsp; /\d/</span><span class="rvts65">&nbsp; или&nbsp; </span><span class="rvts64">/[0-9]/</span><span class="rvts65">&nbsp; найдет '2' в "B2 is the suite number."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\D</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет нецифровой символ (все алфавиты).&nbsp; </span><span class="rvts64">[^0-9]</span><span class="rvts65">&nbsp; - эквивалент для обычных цифр. Например,&nbsp; </span><span class="rvts64">/\D/</span><span class="rvts65">&nbsp; или&nbsp; </span><span class="rvts64">/[^0-9]/</span><span class="rvts65">&nbsp; найдет 'B' в "B2 is the suite number."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\f,\r,\n</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Соответствующие спецсимволы form-feed, line-feed, перевод строки.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\s</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет любой пробельный символ, включая пробел, табуляцию, переводы строки и другие юникодные пробельные символы. Например,&nbsp; </span><span class="rvts64">/\s\w*/</span><span class="rvts65">&nbsp; найдет ' bar' в "foo bar."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\S</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет любой символ, кроме пробельного. Например,&nbsp; </span><span class="rvts64">/\S\w*/</span><span class="rvts65">найдет 'foo' в "foo bar."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\t</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Символ табуляции.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\v</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Символ вертикальной табуляции.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\w</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет любой словесный (латинский алфавит) символ, включая буквы, цифры и знак подчеркивания. Эквивалентно&nbsp; </span><span class="rvts64">[A-Za-z0-9_]</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/\w/</span><span class="rvts65">&nbsp; найдет 'a' в "apple," '5' в "$5.28," и '3' в "3D."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\W</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет любой не-(лат.)словесный символ. Эквивалентно&nbsp; </span><span class="rvts64">[^A-Za-z0-9_]</span><span class="rvts65">. Например,&nbsp; </span><span class="rvts64">/\W/</span><span class="rvts65">&nbsp; и&nbsp; </span><span class="rvts64">/[^$A-Za-z0-9_]/</span><span class="rvts65">&nbsp; одинаково найдут '%' в "50%."</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\</span><span class="rvts66">n</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">где&nbsp; </span><span class="rvts66">n</span><span class="rvts65">&nbsp; - целое число. Обратная ссылка на n-ю запомненную скобками подстроку. Например,&nbsp; </span><span class="rvts64">/apple(,)\sorange\1/</span><span class="rvts65">&nbsp; найдет 'apple, orange,' в "apple, orange, cherry, peach.". За таблицей есть более полный пример.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\0</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет символ NUL. Не добавляйте в конец другие цифры.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\x</span><span class="rvts66">hh</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет символ с кодом&nbsp; </span><span class="rvts66">hh</span><span class="rvts65">&nbsp; (2 шестнадцатиричных цифры)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="93" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts64">\u</span><span class="rvts66">hhhh</span></p>
+</td>
+<td width="598" valign="middle" style="padding: 2px;"><p class="rvps18"><span class="rvts65">Найдет символ с кодом&nbsp; </span><span class="rvts66">hhhh</span><span class="rvts65">&nbsp; (4 шестнадцатиричных цифры).</span></p>
 </td>
 </tr>
 </table>
 </div>
-<p class="rvps29"><span class="rvts17"><br/></span></p>
+<p class="rvps19"><span class="rvts17"><br/></span></p>
 <p class="rvps5"><span class="rvts33">JavaScript на стороне клиента</span></p>
 <p class="rvps5"><span class="rvts36">Внедрение кода в HTML-документ</span></p>
 <p class="rvps8"><span class="rvts34">&lt;html&gt;</span></p>
@@ -952,7 +952,7 @@
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">r.send(msg);</span></p>
 <p class="rvps6"><span class="rvts34">}</span></p>
 <p class="rvps5"><span class="rvts36">Получение ответа - </span></p>
-<p class="rvps5"><span class="rvts61">Свойства status и statusText возвращают статус НТТР в числовой и текстовой формах. Эти свойства содержат стандартные значения НТТР, такие как 200 и ОК для успешного ответа или 404 и Not Found</span></p>
+<p class="rvps5"><span class="rvts67">Свойства status и statusText возвращают статус НТТР в числовой и текстовой формах. Эти свойства содержат стандартные значения НТТР, такие как 200 и ОК для успешного ответа или 404 и Not Found</span></p>
 <p class="rvps8"><img alt="" style="padding : 1px;" src="lib/NewItem4.png"><span class="rvts34">function getText(url, callback){</span></p>
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">var r = new &nbsp;XMLHttpRequest();</span></p>
 <p class="rvps8"><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts34">r.open(“GET”, url);</span></p>
@@ -1047,7 +1047,7 @@
 <p class="rvps5"><span class="rvts17">onResize - Выполняет некоторый код, когда происходит событие изменения размера</span></p>
 <p class="rvps5"><span class="rvts17">onUnload - Выполняет некоторый код, когда происходит событие выгрузка</span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
-<p class="rvps29"><span class="rvts33">Windows oбъекты:</span></p>
+<p class="rvps19"><span class="rvts33">Windows oбъекты:</span></p>
 <p class="rvps5"><span class="rvts17">clientInformation - Содержит информацию о браузере</span></p>
 <p class="rvps5"><span class="rvts17">clipboardData - </span></p>
 <p class="rvps5"><span class="rvts17">document - Представляет HTML-объект документа в окне. См объект Document</span></p>
@@ -1058,134 +1058,134 @@
 <p class="rvps5"><span class="rvts17">navigator - содержит информацию о браузере. Показать объект Navigator</span></p>
 <p class="rvps5"><span class="rvts15">screen - содержит информацию о клиента</span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
-<p class="rvps29"><span class="rvts14">Window cвойства:</span></p>
-<p class="rvps5"><span class="rvts80">closed</span><span class="rvts17"> - Возвращает закрытое логическое значение, указывающее, является ли окно было закрыто или нет</span></p>
-<p class="rvps5"><span class="rvts80">defaultStatus</span><span class="rvts17"> - Устанавливает или возвращает текст по умолчанию в статусной окна</span></p>
-<p class="rvps5"><span class="rvts80">document</span><span class="rvts17"> - Возвращает объект Document для окна (См объект Document)</span></p>
-<p class="rvps5"><span class="rvts80">frameElement</span><span class="rvts17"> - Возвращает элемент &lt;IFRAME&gt;, в который вставлен текущее окно</span></p>
-<p class="rvps5"><span class="rvts80">frames</span><span class="rvts17"> - Возвращает все элементы &lt;IFRAME&gt; в текущем окне</span></p>
-<p class="rvps5"><span class="rvts80">history</span><span class="rvts17"> - Возвращает объект истории для окна (см History объект)</span></p>
-<p class="rvps5"><span class="rvts80">innerHeight</span><span class="rvts17"> - Возвращает внутреннюю высоту область содержимого окна</span></p>
-<p class="rvps5"><span class="rvts80">innerWidth</span><span class="rvts17"> - Возвращает внутреннюю ширину область содержимого окна</span></p>
-<p class="rvps5"><span class="rvts80">length</span><span class="rvts17"> - Возвращает количество элементов &lt;IFRAME&gt; в текущем окне</span></p>
-<p class="rvps5"><span class="rvts80">localStorage</span><span class="rvts17"> - Возвращает ссылку на локальный объект хранения, используемого для хранения данных. Сохраняет данные без даты истечения срока</span></p>
-<p class="rvps5"><span class="rvts80">location</span><span class="rvts17"> - Возвращает расположение объекта location для окна (см location объекта)</span></p>
-<p class="rvps5"><span class="rvts80">name</span><span class="rvts17"> - Устанавливает или возвращает имя окна</span></p>
-<p class="rvps5"><span class="rvts80">navigator</span><span class="rvts17"> - Возвращает объект Navigator для окна (см Navigator объект)</span></p>
-<p class="rvps5"><span class="rvts80">opener</span><span class="rvts17"> - Возвращает ссылку на окно, которое создало окно</span></p>
-<p class="rvps5"><span class="rvts80">outerHeight</span><span class="rvts17"> - Возвращает внешнюю высоту окна, в том числе панелей инструментов / скроллинга</span></p>
-<p class="rvps5"><span class="rvts80">outerWidth</span><span class="rvts17"> - Возвращает внешнюю ширину окна, в том числе панелей инструментов / скроллинга</span></p>
-<p class="rvps5"><span class="rvts80">pageXOffset</span><span class="rvts17"> - Возвращает пикселей текущий документ прокручивается (по горизонтали) от верхнего левого угла окна</span></p>
-<p class="rvps5"><span class="rvts80">pageYOffset</span><span class="rvts17"> - Возвращает пикселей текущий документ прокручивается (по вертикали) от верхнего левого угла окна</span></p>
-<p class="rvps5"><span class="rvts80">parent</span><span class="rvts17"> - Возвращает родительское окно текущего окна</span></p>
-<p class="rvps5"><span class="rvts80">screen</span><span class="rvts17"> - Возвращает объект экрана для окна (См объект Screen)</span></p>
-<p class="rvps5"><span class="rvts80">screenLeft</span><span class="rvts17"> - Возвращает горизонтальную координату окна относительно экрана</span></p>
-<p class="rvps5"><span class="rvts80">screenTop</span><span class="rvts17"> - Возвращает вертикальную координату окна относительно экрана</span></p>
-<p class="rvps5"><span class="rvts80">screenX</span><span class="rvts17"> - Возвращает горизонтальную координату окна относительно экрана</span></p>
-<p class="rvps5"><span class="rvts80">screenY</span><span class="rvts17"> - Возвращает вертикальную координату окна относительно экрана</span></p>
-<p class="rvps5"><span class="rvts80">sessionStorage</span><span class="rvts17"> - Возвращает ссылку на локальный объект хранения, используемого для хранения данных. Сохраняет данные для одного сеанса (потеряны, когда вкладка браузер закрыт)</span></p>
-<p class="rvps5"><span class="rvts80">scrollX</span><span class="rvts17"> - Псевдоним из pageXOffset</span></p>
-<p class="rvps5"><span class="rvts80">scrollY</span><span class="rvts17"> - Псевдоним из pageYOffset</span></p>
-<p class="rvps5"><span class="rvts80">self</span><span class="rvts17"> - Возвращает текущее окно</span></p>
-<p class="rvps5"><span class="rvts80">status</span><span class="rvts17"> - Устанавливает или возвращает текст в статусной окна</span></p>
-<p class="rvps5"><span class="rvts80">top</span><span class="rvts17"> - Возвращает верхнее окно браузера</span></p>
-<p class="rvps29"><span class="rvts33">Window методы:</span></p>
-<p class="rvps5"><span class="rvts80">alert</span><span class="rvts17">(message) - Отображает окно предупреждения с сообщением и кнопкой ОК</span></p>
-<p class="rvps5"><span class="rvts80">attachEvent</span><span class="rvts17">(event,pointer) — Обработчик событий</span></p>
-<p class="rvps5"><span class="rvts80">atob</span><span class="rvts17">(encodedStr) - декодирует базовый-64 закодированную строку</span></p>
-<p class="rvps5"><span class="rvts80">blur</span><span class="rvts17">() - Удаляет фокус из текущего окна</span></p>
-<p class="rvps5"><span class="rvts80">btoa</span><span class="rvts17">(str) - Кодирует строку в базе-64</span></p>
-<p class="rvps5"><span class="rvts80">clearInterval</span><span class="rvts17">(id_of_setinterval) - Очищает таймер, установленный с setInterval ()</span></p>
-<p class="rvps5"><span class="rvts80">clearTimeout</span><span class="rvts17">(id_of_settimeout) - Очищает таймер, установленный с setTimeout ()</span></p>
-<p class="rvps5"><span class="rvts80">close</span><span class="rvts17">() - Закрывает текущее окно</span></p>
-<p class="rvps5"><span class="rvts80">confirm</span><span class="rvts17">(message) - Отображает диалоговое окно с сообщением и ОК и кнопку Отмена</span></p>
-<p class="rvps5"><span class="rvts80">createPopup</span><span class="rvts17">(args) - Создает всплывающее окно</span></p>
-<p class="rvps5"><span class="rvts80">execScript</span><span class="rvts17">(code, lang) - Выполняет указанный скрипт.</span></p>
-<p class="rvps5"><span class="rvts80">focus</span><span class="rvts17">() - Устанавливает фокус на текущее окно</span></p>
-<p class="rvps5"><span class="rvts80">getComputedStyle</span><span class="rvts17">(element, pseudoElement) - Возвращает текущие стили CSS вычислен, применяемые к элементу</span></p>
-<p class="rvps5"><span class="rvts80">getSelection</span><span class="rvts17">() - Возвращает объект выбора, представляющий диапазон текста, выбранного пользователем</span></p>
-<p class="rvps5"><span class="rvts80">matchMedia</span><span class="rvts17">(mediaQueryString) - Возвращает объект MediaQueryList, представляющую определенный CSS строку медиа-запроса</span></p>
-<p class="rvps5"><span class="rvts80">moveBy</span><span class="rvts17">(x, y) - перемещает окно относительно его текущей позиции</span></p>
-<p class="rvps5"><span class="rvts80">moveTo</span><span class="rvts17">(x, y) - перемещает окно в заданное положение</span></p>
-<p class="rvps5"><span class="rvts80">navigate</span><span class="rvts17">(URL) - загружает указанный URL в окно</span></p>
-<p class="rvps5"><span class="rvts80">open</span><span class="rvts17">(URL, name, specs, replace) - открывает новое окно браузера</span></p>
-<p class="rvps5"><span class="rvts80">print</span><span class="rvts17">() - выводит содержимое текущего окна</span></p>
-<p class="rvps5"><span class="rvts80">prompt</span><span class="rvts17">(text, defaultText) - Отображает диалоговое окно, предлагающее посетителя для ввода</span></p>
-<p class="rvps5"><span class="rvts80">resizeBy</span><span class="rvts17">(width, height) - Изменяет размер окна с помощью указанных пикселей</span></p>
-<p class="rvps5"><span class="rvts80">resizeTo</span><span class="rvts17">(width, height) - Изменяет размер окна до заданной ширины и высоты</span></p>
-<p class="rvps5"><span class="rvts80">scroll</span><span class="rvts17">() - Устаревшее. Этот метод был заменен методом scrollTo ().</span></p>
-<p class="rvps5"><span class="rvts80">scrollBy</span><span class="rvts17">(xnum, ynum) - прокручивает документ на указанное число пикселей</span></p>
-<p class="rvps5"><span class="rvts80">scrollTo</span><span class="rvts17">(xpos, ypos) - прокручивает документ по указанным координатам</span></p>
-<p class="rvps5"><span class="rvts80">setActive</span><span class="rvts17">() - делает текущий элемент страницы активным без переноса на него фокуса ввода </span></p>
-<p class="rvps5"><span class="rvts80">setInterval</span><span class="rvts17">(function, milliseconds, param1, param2, ...) - Вызывает функцию или вычисляет выражение через определенные промежутки времени (в миллисекундах)</span></p>
-<p class="rvps5"><span class="rvts80">setTimeout</span><span class="rvts17">(function, milliseconds, param1, param2, ...) - Вызывает функцию или вычисляет выражение после определенного количества миллисекунд</span></p>
-<p class="rvps5"><span class="rvts80">stop</span><span class="rvts17">() - Останавливает окно от загрузки</span></p>
-<p class="rvps5"><span class="rvts80">showHelp</span><span class="rvts17">(URL [, contextID]) - Отображает файл справки (должен быть типа .htm или .chm).</span></p>
-<p class="rvps5"><span class="rvts80">showModalDialog</span><span class="rvts17">(URL [, args, list]) - загружает URL в модальном диалоговом окне.</span></p>
-<p class="rvps5"><span class="rvts80">showModelessDialog</span><span class="rvts17">(URL [, args, list]) - загружает URL в диалоговом окне безрежимного.</span></p>
+<p class="rvps19"><span class="rvts14">Window cвойства:</span></p>
+<p class="rvps5"><span class="rvts68">closed</span><span class="rvts17"> - Возвращает закрытое логическое значение, указывающее, является ли окно было закрыто или нет</span></p>
+<p class="rvps5"><span class="rvts68">defaultStatus</span><span class="rvts17"> - Устанавливает или возвращает текст по умолчанию в статусной окна</span></p>
+<p class="rvps5"><span class="rvts68">document</span><span class="rvts17"> - Возвращает объект Document для окна (См объект Document)</span></p>
+<p class="rvps5"><span class="rvts68">frameElement</span><span class="rvts17"> - Возвращает элемент &lt;IFRAME&gt;, в который вставлен текущее окно</span></p>
+<p class="rvps5"><span class="rvts68">frames</span><span class="rvts17"> - Возвращает все элементы &lt;IFRAME&gt; в текущем окне</span></p>
+<p class="rvps5"><span class="rvts68">history</span><span class="rvts17"> - Возвращает объект истории для окна (см History объект)</span></p>
+<p class="rvps5"><span class="rvts68">innerHeight</span><span class="rvts17"> - Возвращает внутреннюю высоту область содержимого окна</span></p>
+<p class="rvps5"><span class="rvts68">innerWidth</span><span class="rvts17"> - Возвращает внутреннюю ширину область содержимого окна</span></p>
+<p class="rvps5"><span class="rvts68">length</span><span class="rvts17"> - Возвращает количество элементов &lt;IFRAME&gt; в текущем окне</span></p>
+<p class="rvps5"><span class="rvts68">localStorage</span><span class="rvts17"> - Возвращает ссылку на локальный объект хранения, используемого для хранения данных. Сохраняет данные без даты истечения срока</span></p>
+<p class="rvps5"><span class="rvts68">location</span><span class="rvts17"> - Возвращает расположение объекта location для окна (см location объекта)</span></p>
+<p class="rvps5"><span class="rvts68">name</span><span class="rvts17"> - Устанавливает или возвращает имя окна</span></p>
+<p class="rvps5"><span class="rvts68">navigator</span><span class="rvts17"> - Возвращает объект Navigator для окна (см Navigator объект)</span></p>
+<p class="rvps5"><span class="rvts68">opener</span><span class="rvts17"> - Возвращает ссылку на окно, которое создало окно</span></p>
+<p class="rvps5"><span class="rvts68">outerHeight</span><span class="rvts17"> - Возвращает внешнюю высоту окна, в том числе панелей инструментов / скроллинга</span></p>
+<p class="rvps5"><span class="rvts68">outerWidth</span><span class="rvts17"> - Возвращает внешнюю ширину окна, в том числе панелей инструментов / скроллинга</span></p>
+<p class="rvps5"><span class="rvts68">pageXOffset</span><span class="rvts17"> - Возвращает пикселей текущий документ прокручивается (по горизонтали) от верхнего левого угла окна</span></p>
+<p class="rvps5"><span class="rvts68">pageYOffset</span><span class="rvts17"> - Возвращает пикселей текущий документ прокручивается (по вертикали) от верхнего левого угла окна</span></p>
+<p class="rvps5"><span class="rvts68">parent</span><span class="rvts17"> - Возвращает родительское окно текущего окна</span></p>
+<p class="rvps5"><span class="rvts68">screen</span><span class="rvts17"> - Возвращает объект экрана для окна (См объект Screen)</span></p>
+<p class="rvps5"><span class="rvts68">screenLeft</span><span class="rvts17"> - Возвращает горизонтальную координату окна относительно экрана</span></p>
+<p class="rvps5"><span class="rvts68">screenTop</span><span class="rvts17"> - Возвращает вертикальную координату окна относительно экрана</span></p>
+<p class="rvps5"><span class="rvts68">screenX</span><span class="rvts17"> - Возвращает горизонтальную координату окна относительно экрана</span></p>
+<p class="rvps5"><span class="rvts68">screenY</span><span class="rvts17"> - Возвращает вертикальную координату окна относительно экрана</span></p>
+<p class="rvps5"><span class="rvts68">sessionStorage</span><span class="rvts17"> - Возвращает ссылку на локальный объект хранения, используемого для хранения данных. Сохраняет данные для одного сеанса (потеряны, когда вкладка браузер закрыт)</span></p>
+<p class="rvps5"><span class="rvts68">scrollX</span><span class="rvts17"> - Псевдоним из pageXOffset</span></p>
+<p class="rvps5"><span class="rvts68">scrollY</span><span class="rvts17"> - Псевдоним из pageYOffset</span></p>
+<p class="rvps5"><span class="rvts68">self</span><span class="rvts17"> - Возвращает текущее окно</span></p>
+<p class="rvps5"><span class="rvts68">status</span><span class="rvts17"> - Устанавливает или возвращает текст в статусной окна</span></p>
+<p class="rvps5"><span class="rvts68">top</span><span class="rvts17"> - Возвращает верхнее окно браузера</span></p>
+<p class="rvps19"><span class="rvts33">Window методы:</span></p>
+<p class="rvps5"><span class="rvts68">alert</span><span class="rvts17">(message) - Отображает окно предупреждения с сообщением и кнопкой ОК</span></p>
+<p class="rvps5"><span class="rvts68">attachEvent</span><span class="rvts17">(event,pointer) — Обработчик событий</span></p>
+<p class="rvps5"><span class="rvts68">atob</span><span class="rvts17">(encodedStr) - декодирует базовый-64 закодированную строку</span></p>
+<p class="rvps5"><span class="rvts68">blur</span><span class="rvts17">() - Удаляет фокус из текущего окна</span></p>
+<p class="rvps5"><span class="rvts68">btoa</span><span class="rvts17">(str) - Кодирует строку в базе-64</span></p>
+<p class="rvps5"><span class="rvts68">clearInterval</span><span class="rvts17">(id_of_setinterval) - Очищает таймер, установленный с setInterval ()</span></p>
+<p class="rvps5"><span class="rvts68">clearTimeout</span><span class="rvts17">(id_of_settimeout) - Очищает таймер, установленный с setTimeout ()</span></p>
+<p class="rvps5"><span class="rvts68">close</span><span class="rvts17">() - Закрывает текущее окно</span></p>
+<p class="rvps5"><span class="rvts68">confirm</span><span class="rvts17">(message) - Отображает диалоговое окно с сообщением и ОК и кнопку Отмена</span></p>
+<p class="rvps5"><span class="rvts68">createPopup</span><span class="rvts17">(args) - Создает всплывающее окно</span></p>
+<p class="rvps5"><span class="rvts68">execScript</span><span class="rvts17">(code, lang) - Выполняет указанный скрипт.</span></p>
+<p class="rvps5"><span class="rvts68">focus</span><span class="rvts17">() - Устанавливает фокус на текущее окно</span></p>
+<p class="rvps5"><span class="rvts68">getComputedStyle</span><span class="rvts17">(element, pseudoElement) - Возвращает текущие стили CSS вычислен, применяемые к элементу</span></p>
+<p class="rvps5"><span class="rvts68">getSelection</span><span class="rvts17">() - Возвращает объект выбора, представляющий диапазон текста, выбранного пользователем</span></p>
+<p class="rvps5"><span class="rvts68">matchMedia</span><span class="rvts17">(mediaQueryString) - Возвращает объект MediaQueryList, представляющую определенный CSS строку медиа-запроса</span></p>
+<p class="rvps5"><span class="rvts68">moveBy</span><span class="rvts17">(x, y) - перемещает окно относительно его текущей позиции</span></p>
+<p class="rvps5"><span class="rvts68">moveTo</span><span class="rvts17">(x, y) - перемещает окно в заданное положение</span></p>
+<p class="rvps5"><span class="rvts68">navigate</span><span class="rvts17">(URL) - загружает указанный URL в окно</span></p>
+<p class="rvps5"><span class="rvts68">open</span><span class="rvts17">(URL, name, specs, replace) - открывает новое окно браузера</span></p>
+<p class="rvps5"><span class="rvts68">print</span><span class="rvts17">() - выводит содержимое текущего окна</span></p>
+<p class="rvps5"><span class="rvts68">prompt</span><span class="rvts17">(text, defaultText) - Отображает диалоговое окно, предлагающее посетителя для ввода</span></p>
+<p class="rvps5"><span class="rvts68">resizeBy</span><span class="rvts17">(width, height) - Изменяет размер окна с помощью указанных пикселей</span></p>
+<p class="rvps5"><span class="rvts68">resizeTo</span><span class="rvts17">(width, height) - Изменяет размер окна до заданной ширины и высоты</span></p>
+<p class="rvps5"><span class="rvts68">scroll</span><span class="rvts17">() - Устаревшее. Этот метод был заменен методом scrollTo ().</span></p>
+<p class="rvps5"><span class="rvts68">scrollBy</span><span class="rvts17">(xnum, ynum) - прокручивает документ на указанное число пикселей</span></p>
+<p class="rvps5"><span class="rvts68">scrollTo</span><span class="rvts17">(xpos, ypos) - прокручивает документ по указанным координатам</span></p>
+<p class="rvps5"><span class="rvts68">setActive</span><span class="rvts17">() - делает текущий элемент страницы активным без переноса на него фокуса ввода </span></p>
+<p class="rvps5"><span class="rvts68">setInterval</span><span class="rvts17">(function, milliseconds, param1, param2, ...) - Вызывает функцию или вычисляет выражение через определенные промежутки времени (в миллисекундах)</span></p>
+<p class="rvps5"><span class="rvts68">setTimeout</span><span class="rvts17">(function, milliseconds, param1, param2, ...) - Вызывает функцию или вычисляет выражение после определенного количества миллисекунд</span></p>
+<p class="rvps5"><span class="rvts68">stop</span><span class="rvts17">() - Останавливает окно от загрузки</span></p>
+<p class="rvps5"><span class="rvts68">showHelp</span><span class="rvts17">(URL [, contextID]) - Отображает файл справки (должен быть типа .htm или .chm).</span></p>
+<p class="rvps5"><span class="rvts68">showModalDialog</span><span class="rvts17">(URL [, args, list]) - загружает URL в модальном диалоговом окне.</span></p>
+<p class="rvps5"><span class="rvts68">showModelessDialog</span><span class="rvts17">(URL [, args, list]) - загружает URL в диалоговом окне безрежимного.</span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
-<p class="rvps29"><span class="rvts33">Document &nbsp;свойства и методы:</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">activeElement</span><span class="rvts17"> - Возвращает сфокусированного в данный момент элемент в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">addEventListener</span><span class="rvts17">(event, function, useCapture) - Прикрепляет обработчик события к документу</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">adoptNode</span><span class="rvts17">(node) - принимает узел из другого документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">anchors</span><span class="rvts17"> - Возвращает коллекцию всех &lt;a&gt; элементов в документе, которые имеют атрибут имени</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">applets</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;APPLET&gt; в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">baseURI</span><span class="rvts17"> - Возвращает абсолютный базовый URI документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">body</span><span class="rvts17"> - Устанавливает или возвращает тело документа (далее &lt;тело&gt; элемент)</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">close</span><span class="rvts17">() - Закрывает выходной поток ранее открытый с document.open()</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">cookie</span><span class="rvts17"> - Возвращает все пары имя / значение куки в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">charset</span><span class="rvts17"> - устарел. Используйте document.character Установить вместо этого. Возвращает кодировку для документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">characterSet</span><span class="rvts17"> - Возвращает кодировку для документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">createAttribute</span><span class="rvts17">(attributename) - Создает узел атрибута</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">createComment</span><span class="rvts17">(text) - Создает комментарий узел с указанным текстом</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">createDocumentFragment</span><span class="rvts17">() - Создает пустой узел DocumentFragment</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">createElement</span><span class="rvts17">(nodename) - Создает узел элемента</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">createTextNode</span><span class="rvts17">(text) - Создает текстовый узел</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">doctype</span><span class="rvts17"> - Возвращает декларацию типа документа, связанного с документом</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">documentElement</span><span class="rvts17"> - Возвращает элемент документа документа (элемент &lt;HTML&gt;)</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">documentMode</span><span class="rvts17"> - Возвращает режим, используемый браузером для отображения документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">documentURI</span><span class="rvts17"> - Устанавливает или возвращает местоположение документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">domain</span><span class="rvts17"> - Возвращает доменное имя сервера, который загружен документ</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">domConfig</span><span class="rvts17"> - устарел. Возвращает конфигурацию DOM документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">embeds</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;код вставки&gt; В этом документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">forms</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;form&gt; в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">getElementById</span><span class="rvts17">(elementID) - Возвращает элемент, который имеет атрибут ID с заданным значением</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">getElementsByClassName</span><span class="rvts17">(classname) - Возвращает NodeList, содержащий все элементы с указанным именем класса</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">getElementsByName</span><span class="rvts17">(name) - Возвращает NodeList, содержащий все элементы с указанным именем</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">getElementsByTagName</span><span class="rvts17">(tagname) - Возвращает NodeList, содержащий все элементы с указанным именем тега</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">hasFocus</span><span class="rvts17">() - Возвращает логическое значение, указывающее, имеет ли документ фокус</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">head</span><span class="rvts17"> - Возвращает элемент &lt;HEAD&gt; документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">images</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;IMG&gt; в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">implementation</span><span class="rvts17"> - Возвращает объект DOMImplementation, который обрабатывает этот документ</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">importNode</span><span class="rvts17">(node, deep) - Импортирует узел из другого документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">inputEncoding</span><span class="rvts17"> - Возвращает кодировку, набор символов, используемый для документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">lastModified</span><span class="rvts17"> - Возвращает дату и время последнего изменения документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">links</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;a&gt; и &lt;область&gt; в документе, которые имеют атрибут HREF</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">normalize</span><span class="rvts17">() - Удаляет пустые узлы Text, и соединяет соседние узлы</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">normalizeDocument</span><span class="rvts17">() - Удаляет пустые узлы Text, и соединяет соседние узлы</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">open</span><span class="rvts17">(MIMEtype, replace) - открывает выходной поток, чтобы собрать выход из write()</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">querySelector</span><span class="rvts17">(CSS selectors) - Возвращает первый элемент, соответствующий заданному селектор(ы) CSS в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">querySelectorAll</span><span class="rvts17">(CSS selectors) - Возвращает статический NodeList, содержащий все элементы, соответствующий селектор (ы) указанный CSS в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">readyState</span><span class="rvts17"> - Возвращает (загрузки) статус документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">referrer</span><span class="rvts17"> - Возвращает URL документа, который загружен текущий документ</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">removeEventListener</span><span class="rvts17">(event, function, useCapture) - Удаляет обработчик событий из документа (который был прикреплен с addEventListener () метод)</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">renameNode</span><span class="rvts17">(node, namespaceURI, nodename) - переименовывает указанный узел</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">scripts</span><span class="rvts17"> - Возвращает коллекцию элементов &lt;SCRIPT&gt; в документе</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">strictErrorChecking</span><span class="rvts17"> - Устанавливает или возвращает ли принудительно проверки ошибок или нет</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">title</span><span class="rvts17"> - Устанавливает или возвращает заголовок документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">URL</span><span class="rvts17"> - Возвращает полный адрес HTML документа</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">write</span><span class="rvts17">(exp1, exp2, exp3, ...) - Записывает HTML выражения или код JavaScript к документу</span></p>
-<p class="rvps5"><span class="rvts17">document.</span><span class="rvts80">writeln</span><span class="rvts17">(exp1, exp2, exp3, ...) - То же самое, как write(), но добавляет символ новой строки после каждого оператора</span></p>
+<p class="rvps19"><span class="rvts33">Document &nbsp;свойства и методы:</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">activeElement</span><span class="rvts17"> - Возвращает сфокусированного в данный момент элемент в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">addEventListener</span><span class="rvts17">(event, function, useCapture) - Прикрепляет обработчик события к документу</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">adoptNode</span><span class="rvts17">(node) - принимает узел из другого документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">anchors</span><span class="rvts17"> - Возвращает коллекцию всех &lt;a&gt; элементов в документе, которые имеют атрибут имени</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">applets</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;APPLET&gt; в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">baseURI</span><span class="rvts17"> - Возвращает абсолютный базовый URI документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">body</span><span class="rvts17"> - Устанавливает или возвращает тело документа (далее &lt;тело&gt; элемент)</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">close</span><span class="rvts17">() - Закрывает выходной поток ранее открытый с document.open()</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">cookie</span><span class="rvts17"> - Возвращает все пары имя / значение куки в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">charset</span><span class="rvts17"> - устарел. Используйте document.character Установить вместо этого. Возвращает кодировку для документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">characterSet</span><span class="rvts17"> - Возвращает кодировку для документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">createAttribute</span><span class="rvts17">(attributename) - Создает узел атрибута</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">createComment</span><span class="rvts17">(text) - Создает комментарий узел с указанным текстом</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">createDocumentFragment</span><span class="rvts17">() - Создает пустой узел DocumentFragment</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">createElement</span><span class="rvts17">(nodename) - Создает узел элемента</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">createTextNode</span><span class="rvts17">(text) - Создает текстовый узел</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">doctype</span><span class="rvts17"> - Возвращает декларацию типа документа, связанного с документом</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">documentElement</span><span class="rvts17"> - Возвращает элемент документа документа (элемент &lt;HTML&gt;)</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">documentMode</span><span class="rvts17"> - Возвращает режим, используемый браузером для отображения документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">documentURI</span><span class="rvts17"> - Устанавливает или возвращает местоположение документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">domain</span><span class="rvts17"> - Возвращает доменное имя сервера, который загружен документ</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">domConfig</span><span class="rvts17"> - устарел. Возвращает конфигурацию DOM документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">embeds</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;код вставки&gt; В этом документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">forms</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;form&gt; в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">getElementById</span><span class="rvts17">(elementID) - Возвращает элемент, который имеет атрибут ID с заданным значением</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">getElementsByClassName</span><span class="rvts17">(classname) - Возвращает NodeList, содержащий все элементы с указанным именем класса</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">getElementsByName</span><span class="rvts17">(name) - Возвращает NodeList, содержащий все элементы с указанным именем</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">getElementsByTagName</span><span class="rvts17">(tagname) - Возвращает NodeList, содержащий все элементы с указанным именем тега</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">hasFocus</span><span class="rvts17">() - Возвращает логическое значение, указывающее, имеет ли документ фокус</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">head</span><span class="rvts17"> - Возвращает элемент &lt;HEAD&gt; документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">images</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;IMG&gt; в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">implementation</span><span class="rvts17"> - Возвращает объект DOMImplementation, который обрабатывает этот документ</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">importNode</span><span class="rvts17">(node, deep) - Импортирует узел из другого документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">inputEncoding</span><span class="rvts17"> - Возвращает кодировку, набор символов, используемый для документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">lastModified</span><span class="rvts17"> - Возвращает дату и время последнего изменения документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">links</span><span class="rvts17"> - Возвращает коллекцию всех элементов &lt;a&gt; и &lt;область&gt; в документе, которые имеют атрибут HREF</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">normalize</span><span class="rvts17">() - Удаляет пустые узлы Text, и соединяет соседние узлы</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">normalizeDocument</span><span class="rvts17">() - Удаляет пустые узлы Text, и соединяет соседние узлы</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">open</span><span class="rvts17">(MIMEtype, replace) - открывает выходной поток, чтобы собрать выход из write()</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">querySelector</span><span class="rvts17">(CSS selectors) - Возвращает первый элемент, соответствующий заданному селектор(ы) CSS в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">querySelectorAll</span><span class="rvts17">(CSS selectors) - Возвращает статический NodeList, содержащий все элементы, соответствующий селектор (ы) указанный CSS в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">readyState</span><span class="rvts17"> - Возвращает (загрузки) статус документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">referrer</span><span class="rvts17"> - Возвращает URL документа, который загружен текущий документ</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">removeEventListener</span><span class="rvts17">(event, function, useCapture) - Удаляет обработчик событий из документа (который был прикреплен с addEventListener () метод)</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">renameNode</span><span class="rvts17">(node, namespaceURI, nodename) - переименовывает указанный узел</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">scripts</span><span class="rvts17"> - Возвращает коллекцию элементов &lt;SCRIPT&gt; в документе</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">strictErrorChecking</span><span class="rvts17"> - Устанавливает или возвращает ли принудительно проверки ошибок или нет</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">title</span><span class="rvts17"> - Устанавливает или возвращает заголовок документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">URL</span><span class="rvts17"> - Возвращает полный адрес HTML документа</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">write</span><span class="rvts17">(exp1, exp2, exp3, ...) - Записывает HTML выражения или код JavaScript к документу</span></p>
+<p class="rvps5"><span class="rvts17">document.</span><span class="rvts68">writeln</span><span class="rvts17">(exp1, exp2, exp3, ...) - То же самое, как write(), но добавляет символ новой строки после каждого оператора</span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
-<p class="rvps29"><span class="rvts33">Screen cвойства:</span></p>
-<p class="rvps5"><span class="rvts80">availHeight</span><span class="rvts17"> - Возвращает высоту экрана (за исключением панели задач Windows)</span></p>
-<p class="rvps5"><span class="rvts80">availWidth</span><span class="rvts17"> - Возвращает ширину экрана (за исключением панели задач Windows)</span></p>
-<p class="rvps5"><span class="rvts80">colorDepth</span><span class="rvts17"> - Возвращает битовую глубину цветовой палитры для отображения изображений</span></p>
-<p class="rvps5"><span class="rvts80">height</span><span class="rvts17"> - Возвращает общую высоту экрана</span></p>
-<p class="rvps5"><span class="rvts80">pixelDepth</span><span class="rvts17"> - Возвращает цветовое разрешение (в битах на пиксель) экрана</span></p>
-<p class="rvps5"><span class="rvts80">width</span><span class="rvts17"> - Возвращает общую ширину экрана</span></p>
+<p class="rvps19"><span class="rvts33">Screen cвойства:</span></p>
+<p class="rvps5"><span class="rvts68">availHeight</span><span class="rvts17"> - Возвращает высоту экрана (за исключением панели задач Windows)</span></p>
+<p class="rvps5"><span class="rvts68">availWidth</span><span class="rvts17"> - Возвращает ширину экрана (за исключением панели задач Windows)</span></p>
+<p class="rvps5"><span class="rvts68">colorDepth</span><span class="rvts17"> - Возвращает битовую глубину цветовой палитры для отображения изображений</span></p>
+<p class="rvps5"><span class="rvts68">height</span><span class="rvts17"> - Возвращает общую высоту экрана</span></p>
+<p class="rvps5"><span class="rvts68">pixelDepth</span><span class="rvts17"> - Возвращает цветовое разрешение (в битах на пиксель) экрана</span></p>
+<p class="rvps5"><span class="rvts68">width</span><span class="rvts17"> - Возвращает общую ширину экрана</span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>
 <p class="rvps5"><span class="rvts16">function onLoad()</span><br/><span class="rvts16">{</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('availHeight:', screen.availHeight);</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('availWidth:', screen.availWidth);</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('colorDepth:', screen.colorDepth);</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('height:', screen.height);</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('pixelDepth:', screen.pixelDepth);</span><br/><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">console.log('width:', screen.width);</span><br/><span class="rvts16">} </span></p>
 <p class="rvps5"><span class="rvts17"><br/></span></p>

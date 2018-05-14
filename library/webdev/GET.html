@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,33 +90,33 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts93">Запрос GET - </span><span class="rvts95">Передача данных</span></p>
+<p class="rvps3"><span class="rvts113">Запрос GET - </span><span class="rvts116">Передача данных</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts94">var x = document.getElementById('tf1').value;</span></p>
-<p class="rvps3"><span class="rvts94">var y = document.getElementById('tf2').value;</span></p>
-<p class="rvps3"><span class="rvts94">xhttp = new XMLHttpRequest();</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.onreadystatechange = function()</span></p>
-<p class="rvps3"><span class="rvts94">{</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">if (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById("ajax").innerHTML = xhttp.responseText;</span></p>
-<p class="rvps3"><span class="rvts94">}</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.open("GET", "add.php?x=" + x + "&amp;y=" + y, true);</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.send();</span></p>
+<p class="rvps3"><span class="rvts114">var x = document.getElementById('tf1').value;</span></p>
+<p class="rvps3"><span class="rvts114">var y = document.getElementById('tf2').value;</span></p>
+<p class="rvps3"><span class="rvts114">xhttp = new XMLHttpRequest();</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.onreadystatechange = function()</span></p>
+<p class="rvps3"><span class="rvts114">{</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">if (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById("ajax").innerHTML = xhttp.responseText;</span></p>
+<p class="rvps3"><span class="rvts114">}</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.open("GET", "add.php?x=" + x + "&amp;y=" + y, true);</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.send();</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts91">Кэширование результата при GET запросах</span><span class="rvts90">.</span></p>
-<p class="rvps3"><span class="rvts62"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Часто ответ полученный в результате GET запроса не является "свежим" ответом, а является копией, которая была сохранена в кэше при предыдущем обращении к серверу.</span></p>
-<p class="rvps3"><span class="rvts62"><br/></span></p>
-<p class="rvps3"><span class="rvts90">К счастью существует способ помогающий избежать этого. Необходимо, чтобы url при GET запросе всегда был уникальным. Передача при запросе в скрипт переменной со случайным значением исключит возможность получения кэшированного значения. &nbsp;</span><span class="rvts56">url?переменная=" + Math.random()</span></p>
+<p class="rvps3"><span class="rvts111">Кэширование результата при GET запросах</span><span class="rvts110">.</span></p>
+<p class="rvps3"><span class="rvts115"><br/></span></p>
+<p class="rvps3"><span class="rvts110">Часто ответ полученный в результате GET запроса не является "свежим" ответом, а является копией, которая была сохранена в кэше при предыдущем обращении к серверу.</span></p>
+<p class="rvps3"><span class="rvts115"><br/></span></p>
+<p class="rvps3"><span class="rvts110">К счастью существует способ помогающий избежать этого. Необходимо, чтобы url при GET запросе всегда был уникальным. Передача при запросе в скрипт переменной со случайным значением исключит возможность получения кэшированного значения. &nbsp;</span><span class="rvts117">url?переменная=" + Math.random()</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts94">xhttp = new XMLHttpRequest();</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.onreadystatechange = function()</span></p>
-<p class="rvps3"><span class="rvts94">{</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">if (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById("result").innerHTML = xhttp.responseText;</span></p>
-<p class="rvps3"><span class="rvts94">}</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.open("GET", "gettime.php?x="+Math.random(), true);</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.send();</span></p>
+<p class="rvps3"><span class="rvts114">xhttp = new XMLHttpRequest();</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.onreadystatechange = function()</span></p>
+<p class="rvps3"><span class="rvts114">{</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">if (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById("result").innerHTML = xhttp.responseText;</span></p>
+<p class="rvps3"><span class="rvts114">}</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.open("GET", "gettime.php?x="+Math.random(), true);</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.send();</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
 

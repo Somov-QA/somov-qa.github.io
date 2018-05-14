@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic24.html">Сессии</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic24.html">Сессии</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,27 +94,27 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Создание ключа и данных в сессии</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts21">Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'login'</span><span class="rvts21">, </span><span class="rvts71">'User'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21">Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'login'</span><span class="rvts21">, </span><span class="rvts76">'User'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Чтение данных из сессии</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts21">Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;get(</span><span class="rvts71">'login'</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts21">Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;get(</span><span class="rvts76">'login'</span><span class="rvts21">)</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Пример:</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> actionSession() {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'login'</span><span class="rvts21">, </span><span class="rvts71">'User'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'password'</span><span class="rvts21">, </span><span class="rvts71">'1234567890'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> actionSession() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'login'</span><span class="rvts21">, </span><span class="rvts76">'User'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'password'</span><span class="rvts21">, </span><span class="rvts76">'1234567890'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">if </span><span class="rvts21">(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;has(</span><span class="rvts71">'login'</span><span class="rvts21">) &amp;&amp; Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;has(</span><span class="rvts71">'password'</span><span class="rvts21">)){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;get(</span><span class="rvts71">'login'</span><span class="rvts21">));</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">session</span><span class="rvts21">-&gt;get(</span><span class="rvts71">'password'</span><span class="rvts21">));</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span><span class="rvts70">else</span><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(</span><span class="rvts71">'В сессии нет login и password'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">if </span><span class="rvts21">(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;has(</span><span class="rvts76">'login'</span><span class="rvts21">) &amp;&amp; Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;has(</span><span class="rvts76">'password'</span><span class="rvts21">)){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;get(</span><span class="rvts76">'login'</span><span class="rvts21">));</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">session</span><span class="rvts21">-&gt;get(</span><span class="rvts76">'password'</span><span class="rvts21">));</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span><span class="rvts53">else</span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(</span><span class="rvts76">'В сессии нет login и password'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'session'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts76">'session'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="jQuery.html">jQuery</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="jQuery.html">jQuery</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,73 +90,73 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts111">Обработчики событий jQuery</span></p>
-<p class="rvps3"><span class="rvts112">Обработчики событий jQuery в действии</span></p>
-<p class="rvps3"><span class="rvts113">$(document).ready(function(){</span></p>
-<p class="rvps20"><span class="rvts113">$("p").mouseover(function(){$("p").css("color","green")});</span></p>
-<p class="rvps20"><span class="rvts113">$("p").mouseout(function(){$("p").css("color","black")});</span></p>
-<p class="rvps20"><span class="rvts113">$("#but1").click(function(){alert("правая кнопка!");});</span></p>
-<p class="rvps20"><span class="rvts113">$("#but2").dblclick(function(){alert("двойной клик!");});</span></p>
-<p class="rvps3"><span class="rvts113">});</span></p>
-<p class="rvps3"><span class="rvts110"><br/></span></p>
-<p class="rvps3"><span class="rvts112">Объект </span><span class="rvts111">event </span><span class="rvts112">содержит информацию о произошедшем событии.</span></p>
-<p class="rvps3"><span class="rvts113">$(document).ready(function(){</span></p>
-<p class="rvps20"><span class="rvts113">$("#square").click(function(event){</span></p>
-<p class="rvps22"><span class="rvts113">$("#coord").css("display","block");</span></p>
-<p class="rvps22"><span class="rvts113">$("#x").html(event.pageX);</span></p>
-<p class="rvps22"><span class="rvts113">$("#y").html(event.pageY);</span></p>
-<p class="rvps20"><span class="rvts113">});</span></p>
-<p class="rvps3"><span class="rvts113">});</span></p>
-<p class="rvps3"><span class="rvts116">Метод Описание</span></p>
-<p class="rvps3"><span class="rvts118">blur() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент перестанет быть активным.</span></p>
-<p class="rvps3"><span class="rvts118">change() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен в случае изменения содержимого выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">click() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда на выбранном элементе будет произведен щелчок мыши.</span></p>
-<p class="rvps3"><span class="rvts118">dblclick() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда на выбранном элементе будет произведен двойной щелчок мыши.</span></p>
-<p class="rvps3"><span class="rvts118">error() </span></p>
-<p class="rvps3"><span class="rvts117">Является устаревшим в jQuery 1.8+. Привязывает или вызывает функцию, код которой выполнится если при загрузке выбранного элемента произойдет ошибка.</span></p>
-<p class="rvps3"><span class="rvts118">focus() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда выбранный элемент станет активным.</span></p>
-<p class="rvps3"><span class="rvts118">focusin() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент или один из его элементов потомков станет активным.</span></p>
-<p class="rvps3"><span class="rvts118">focusout() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент или один из его элементов потомков перестанет быть активным.</span></p>
-<p class="rvps3"><span class="rvts118">hover() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает одну или две функции к выбранному элементу. Код первой привязанной функции выполнится, когда на выбранный элемент будет наведен курсор мыши а второй, когда курсор мыши покинет пределы этого элемента.</span></p>
-<p class="rvps3"><span class="rvts118">keydown() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда на клавиатуре будет нажата клавиша.</span></p>
-<p class="rvps3"><span class="rvts118">keyup() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой выполнится, когда нажатая на клавиатуре клавиша будет отпущена.</span></p>
-<p class="rvps3"><span class="rvts118">load() </span></p>
-<p class="rvps3"><span class="rvts117">Является устаревшим в jQuery 1.8+.Привязывает или вызывает функцию, код которой будет выполнен после загрузки выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">mousedown() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен после нажатия клавиши мыши на выбранном элементе.</span></p>
-<p class="rvps3"><span class="rvts118">mouseenter() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда на выбранный элемент будет наведен указатель мыши.</span></p>
-<p class="rvps3"><span class="rvts118">mouseleave() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда указатель мыши будет выведен из границ выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">mousemove() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен при передвижении указателя мыши в границах выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">mouseout() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда указатель мыши будет выведен из границ выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">mouseover() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда на выбранный элемент будет наведен указатель мыши.</span></p>
-<p class="rvps3"><span class="rvts118">mouseup() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда нажатая кнопка мыши будет отпущена.</span></p>
-<p class="rvps3"><span class="rvts118">ready() </span><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен, когда страница будет полностью загружена.</span></p>
-<p class="rvps3"><span class="rvts118">resize() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен при изменении размера окна браузера.</span></p>
-<p class="rvps3"><span class="rvts118">scroll() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен при прокрутке содержимого элемента.</span></p>
-<p class="rvps3"><span class="rvts118">select() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен при выделении текста выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">submit() </span></p>
-<p class="rvps3"><span class="rvts117">Привязывает или вызывает функцию, код которой будет выполнен при отправлении содержимого выбранной формы.</span></p>
-<p class="rvps3"><span class="rvts118">unload() </span></p>
-<p class="rvps3"><span class="rvts117">Является устаревшим в jQuery 1.8+.Привязывает или вызывает функцию, код которой будет выполнен при выгрузке выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts128">Обработчики событий jQuery</span></p>
+<p class="rvps3"><span class="rvts129">Обработчики событий jQuery в действии</span></p>
+<p class="rvps3"><span class="rvts130">$(document).ready(function(){</span></p>
+<p class="rvps15"><span class="rvts130">$("p").mouseover(function(){$("p").css("color","green")});</span></p>
+<p class="rvps15"><span class="rvts130">$("p").mouseout(function(){$("p").css("color","black")});</span></p>
+<p class="rvps15"><span class="rvts130">$("#but1").click(function(){alert("правая кнопка!");});</span></p>
+<p class="rvps15"><span class="rvts130">$("#but2").dblclick(function(){alert("двойной клик!");});</span></p>
+<p class="rvps3"><span class="rvts130">});</span></p>
+<p class="rvps3"><span class="rvts127"><br/></span></p>
+<p class="rvps3"><span class="rvts129">Объект </span><span class="rvts128">event </span><span class="rvts129">содержит информацию о произошедшем событии.</span></p>
+<p class="rvps3"><span class="rvts130">$(document).ready(function(){</span></p>
+<p class="rvps15"><span class="rvts130">$("#square").click(function(event){</span></p>
+<p class="rvps25"><span class="rvts130">$("#coord").css("display","block");</span></p>
+<p class="rvps25"><span class="rvts130">$("#x").html(event.pageX);</span></p>
+<p class="rvps25"><span class="rvts130">$("#y").html(event.pageY);</span></p>
+<p class="rvps15"><span class="rvts130">});</span></p>
+<p class="rvps3"><span class="rvts130">});</span></p>
+<p class="rvps3"><span class="rvts133">Метод Описание</span></p>
+<p class="rvps3"><span class="rvts135">blur() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент перестанет быть активным.</span></p>
+<p class="rvps3"><span class="rvts135">change() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен в случае изменения содержимого выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">click() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда на выбранном элементе будет произведен щелчок мыши.</span></p>
+<p class="rvps3"><span class="rvts135">dblclick() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда на выбранном элементе будет произведен двойной щелчок мыши.</span></p>
+<p class="rvps3"><span class="rvts135">error() </span></p>
+<p class="rvps3"><span class="rvts134">Является устаревшим в jQuery 1.8+. Привязывает или вызывает функцию, код которой выполнится если при загрузке выбранного элемента произойдет ошибка.</span></p>
+<p class="rvps3"><span class="rvts135">focus() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда выбранный элемент станет активным.</span></p>
+<p class="rvps3"><span class="rvts135">focusin() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент или один из его элементов потомков станет активным.</span></p>
+<p class="rvps3"><span class="rvts135">focusout() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда выбранный элемент или один из его элементов потомков перестанет быть активным.</span></p>
+<p class="rvps3"><span class="rvts135">hover() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает одну или две функции к выбранному элементу. Код первой привязанной функции выполнится, когда на выбранный элемент будет наведен курсор мыши а второй, когда курсор мыши покинет пределы этого элемента.</span></p>
+<p class="rvps3"><span class="rvts135">keydown() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда на клавиатуре будет нажата клавиша.</span></p>
+<p class="rvps3"><span class="rvts135">keyup() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой выполнится, когда нажатая на клавиатуре клавиша будет отпущена.</span></p>
+<p class="rvps3"><span class="rvts135">load() </span></p>
+<p class="rvps3"><span class="rvts134">Является устаревшим в jQuery 1.8+.Привязывает или вызывает функцию, код которой будет выполнен после загрузки выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">mousedown() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен после нажатия клавиши мыши на выбранном элементе.</span></p>
+<p class="rvps3"><span class="rvts135">mouseenter() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда на выбранный элемент будет наведен указатель мыши.</span></p>
+<p class="rvps3"><span class="rvts135">mouseleave() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда указатель мыши будет выведен из границ выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">mousemove() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен при передвижении указателя мыши в границах выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">mouseout() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда указатель мыши будет выведен из границ выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">mouseover() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда на выбранный элемент будет наведен указатель мыши.</span></p>
+<p class="rvps3"><span class="rvts135">mouseup() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда нажатая кнопка мыши будет отпущена.</span></p>
+<p class="rvps3"><span class="rvts135">ready() </span><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен, когда страница будет полностью загружена.</span></p>
+<p class="rvps3"><span class="rvts135">resize() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен при изменении размера окна браузера.</span></p>
+<p class="rvps3"><span class="rvts135">scroll() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен при прокрутке содержимого элемента.</span></p>
+<p class="rvps3"><span class="rvts135">select() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен при выделении текста выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">submit() </span></p>
+<p class="rvps3"><span class="rvts134">Привязывает или вызывает функцию, код которой будет выполнен при отправлении содержимого выбранной формы.</span></p>
+<p class="rvps3"><span class="rvts135">unload() </span></p>
+<p class="rvps3"><span class="rvts134">Является устаревшим в jQuery 1.8+.Привязывает или вызывает функцию, код которой будет выполнен при выгрузке выбранного элемента.</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
 

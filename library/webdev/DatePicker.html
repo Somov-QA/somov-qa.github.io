@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="jQuery1.html">jQuery</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="jQuery1.html">jQuery</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,26 +94,26 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Поле ввода даты</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\widgets\ActiveForm;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\jui\DatePicker;</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\widgets\ActiveForm;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\jui\DatePicker;</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">div</span><span class="rvts20"> </span><span class="rvts22">class</span><span class="rvts21">=</span><span class="rvts23">"profile-form"</span><span class="rvts18">&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts73">begin</span><span class="rvts21">(); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts172">begin</span><span class="rvts21">(); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts71">'last_activity'</span><span class="rvts21">)-&gt;widget(DatePicker::</span><span class="rvts73">className</span><span class="rvts21">(), [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'language' </span><span class="rvts21">=&gt; </span><span class="rvts71">'ru-RU'</span><span class="rvts21">,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'dateFormat' </span><span class="rvts21">=&gt; </span><span class="rvts71">'yyyy-MM-dd'</span><span class="rvts21">,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'clientOptions' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'defaultDate' </span><span class="rvts21">=&gt; </span><span class="rvts71">'2017-01-01'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts76">'last_activity'</span><span class="rvts21">)-&gt;widget(DatePicker::</span><span class="rvts172">className</span><span class="rvts21">(), [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'language' </span><span class="rvts21">=&gt; </span><span class="rvts76">'ru-RU'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'dateFormat' </span><span class="rvts21">=&gt; </span><span class="rvts76">'yyyy-MM-dd'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'clientOptions' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'defaultDate' </span><span class="rvts21">=&gt; </span><span class="rvts76">'2017-01-01'</span><span class="rvts21">,</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'options' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; </span><span class="rvts71">'form-control'</span><span class="rvts21">]</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;]) </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'options' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; </span><span class="rvts76">'form-control'</span><span class="rvts21">]</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;]) </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts73">end</span><span class="rvts21">(); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts172">end</span><span class="rvts21">(); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">div</span><span class="rvts18">&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic61.html">Кэш</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic61.html">Кэш</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -78,7 +78,7 @@
 				
 				
 				
-				<a href="Newtopic10.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Examples.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -94,33 +94,33 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Получить данные из кэша</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts21">$profiles = Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">cache</span><span class="rvts21">-&gt;get(</span><span class="rvts71">'profiles'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21">$profiles = Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">cache</span><span class="rvts21">-&gt;get(</span><span class="rvts76">'profiles'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Записать данные в кэш</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts70">if</span><span class="rvts21">($profiles){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts89">Yii</span><span class="rvts21">::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'profiles'</span><span class="rvts21">, $profiles);</span></p>
+<p class="rvps3"><span class="rvts53">if</span><span class="rvts21">($profiles){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts75">Yii</span><span class="rvts21">::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'profiles'</span><span class="rvts21">, $profiles);</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Пример использования в Моделе (class Profile extends \yii\db\ActiveRecord)</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">static function</span><span class="rvts21"> </span><span class="rvts73">getProfiles</span><span class="rvts21">()</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">static function</span><span class="rvts21"> </span><span class="rvts172">getProfiles</span><span class="rvts21">()</span></p>
 <p class="rvps3"><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$profiles = Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">cache</span><span class="rvts21">-&gt;get(</span><span class="rvts71">'profiles'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">($profiles){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$count = Profile::</span><span class="rvts73">find</span><span class="rvts21">()-&gt;asArray()-&gt;count();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">($count != </span><span class="rvts73">count</span><span class="rvts21">($profiles)){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$query = Profile::</span><span class="rvts73">find</span><span class="rvts21">()-&gt;asArray()-&gt;all();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$profiles = ArrayHelper::</span><span class="rvts73">map</span><span class="rvts21">($query, </span><span class="rvts71">'id'</span><span class="rvts21">, </span><span class="rvts71">'username'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'profiles'</span><span class="rvts21">, $profiles);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$profiles = Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">cache</span><span class="rvts21">-&gt;get(</span><span class="rvts76">'profiles'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">($profiles){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$count = Profile::</span><span class="rvts172">find</span><span class="rvts21">()-&gt;asArray()-&gt;count();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">($count != </span><span class="rvts172">count</span><span class="rvts21">($profiles)){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$query = Profile::</span><span class="rvts172">find</span><span class="rvts21">()-&gt;asArray()-&gt;all();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$profiles = ArrayHelper::</span><span class="rvts172">map</span><span class="rvts21">($query, </span><span class="rvts76">'id'</span><span class="rvts21">, </span><span class="rvts76">'username'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'profiles'</span><span class="rvts21">, $profiles);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span><span class="rvts70">else</span><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$query = Profile::</span><span class="rvts73">find</span><span class="rvts21">()-&gt;asArray()-&gt;all();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$profiles = ArrayHelper::</span><span class="rvts73">map</span><span class="rvts21">($query, </span><span class="rvts71">'id'</span><span class="rvts21">, </span><span class="rvts71">'username'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts71">'profiles'</span><span class="rvts21">, $profiles);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span><span class="rvts53">else</span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$query = Profile::</span><span class="rvts172">find</span><span class="rvts21">()-&gt;asArray()-&gt;all();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$profiles = ArrayHelper::</span><span class="rvts172">map</span><span class="rvts21">($query, </span><span class="rvts76">'id'</span><span class="rvts21">, </span><span class="rvts76">'username'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">cache</span><span class="rvts21">-&gt;set(</span><span class="rvts76">'profiles'</span><span class="rvts21">, $profiles);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$profiles;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$profiles;</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>

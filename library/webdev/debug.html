@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic1.html">Контроллер и вид</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic1.html">Контроллер и вид</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,25 +94,25 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">В контроллере можно создать собственную функцию для дебага</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">namespace </span><span class="rvts21">app\controllers;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">Yii;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\web\Controller;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">namespace </span><span class="rvts21">app\controllers;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">Yii;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\web\Controller;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">class </span><span class="rvts72">TestController</span><span class="rvts21"> </span><span class="rvts70">extends </span><span class="rvts72">Controller</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts53">class </span><span class="rvts171">TestController</span><span class="rvts21"> </span><span class="rvts53">extends </span><span class="rvts171">Controller</span><span class="rvts21"> {</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> debug($values) {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts71">'&lt;pre&gt;' </span><span class="rvts21">. </span><span class="rvts73">print_r</span><span class="rvts21">($values, </span><span class="rvts70">true</span><span class="rvts21">) . </span><span class="rvts71">'&lt;/pre&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> debug($values) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts76">'&lt;pre&gt;' </span><span class="rvts21">. </span><span class="rvts172">print_r</span><span class="rvts21">($values, </span><span class="rvts53">true</span><span class="rvts21">) . </span><span class="rvts76">'&lt;/pre&gt;'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> actionAjax(){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;</span><span class="rvts71">isAjax</span><span class="rvts21">){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> actionAjax(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">request</span><span class="rvts21">-&gt;</span><span class="rvts76">isAjax</span><span class="rvts21">){</span></p>
 <p class="rvps3"><span class="rvts21"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post());</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo $_POST</span><span class="rvts21">[</span><span class="rvts71">'test_data'</span><span class="rvts21">];</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;debug(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">request</span><span class="rvts21">-&gt;post());</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo $_POST</span><span class="rvts21">[</span><span class="rvts76">'test_data'</span><span class="rvts21">];</span></p>
 <p class="rvps3"><span class="rvts21"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><span class="rvts70">else</span><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'ajax'</span><span class="rvts21">); &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><span class="rvts53">else</span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts76">'ajax'</span><span class="rvts21">); &nbsp; &nbsp;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;} &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Newtopic64.html">Примеры</a> &rsaquo;&rsaquo; <a href="Joystick.html">Joystick</a> &rsaquo;&rsaquo; <a href="js.html">js</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Examples1.html">Examples</a> &rsaquo;&rsaquo; <a href="Joystick.html">Joystick</a> &rsaquo;&rsaquo; <a href="js.html">js</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -91,31 +91,31 @@
 		
 <p></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">var</span><span class="rvts21"> Joystick = </span><span class="rvts70">function</span><span class="rvts21">(tagret){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> pressed = </span><span class="rvts70">false</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> speed = 1;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> px = 0;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> py = 0;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> vx = 0;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> vy = 0;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> pointer = {</span></p>
+<p class="rvps3"><span class="rvts53">var</span><span class="rvts21"> Joystick = </span><span class="rvts53">function</span><span class="rvts21">(tagret){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> pressed = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> speed = 1;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> px = 0;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> py = 0;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> vx = 0;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> vy = 0;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> pointer = {</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;x: 0,</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;y: 0,</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;r: 0</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return</span><span class="rvts21"> {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;move: </span><span class="rvts70">function</span><span class="rvts21">(x, y){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;move: </span><span class="rvts53">function</span><span class="rvts21">(x, y){</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vx = x;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vy = y;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">(pressed){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">(pressed){</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pointer.x = px + (vx - px);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pointer.y = py + (vy - py);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">((vx - px) &gt; pointer.r) pointer.x = px + pointer.r;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">else</span><span class="rvts21"> </span><span class="rvts70">if</span><span class="rvts21">((vx - px) &lt; (pointer.r * -1)) pointer.x = px + (pointer.r * -1);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">((vy - py) &gt; pointer.r) pointer.y = py + pointer.r;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">else</span><span class="rvts21"> </span><span class="rvts70">if</span><span class="rvts21">((vy - py) &lt; (pointer.r * -1)) pointer.y = py + (pointer.r * -1);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><span class="rvts70">else</span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">((vx - px) &gt; pointer.r) pointer.x = px + pointer.r;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">else</span><span class="rvts21"> </span><span class="rvts53">if</span><span class="rvts21">((vx - px) &lt; (pointer.r * -1)) pointer.x = px + (pointer.r * -1);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">((vy - py) &gt; pointer.r) pointer.y = py + pointer.r;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">else</span><span class="rvts21"> </span><span class="rvts53">if</span><span class="rvts21">((vy - py) &lt; (pointer.r * -1)) pointer.y = py + (pointer.r * -1);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><span class="rvts53">else</span><span class="rvts21">{</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;px = x;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;py = y;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pointer.x = px;</span></p>
@@ -124,36 +124,36 @@
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;down: </span><span class="rvts70">function</span><span class="rvts21">(){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pressed = </span><span class="rvts70">true</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;down: </span><span class="rvts53">function</span><span class="rvts21">(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pressed = </span><span class="rvts53">true</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;up:</span><span class="rvts70">function</span><span class="rvts21">(){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pressed = </span><span class="rvts70">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;up:</span><span class="rvts53">function</span><span class="rvts21">(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pressed = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;draw: </span><span class="rvts70">function</span><span class="rvts21">(ctx){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">(pressed){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;draw: </span><span class="rvts53">function</span><span class="rvts21">(ctx){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">(pressed){</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.beginPath();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.arc(px, py, 50, 0, 2 * Math.PI, </span><span class="rvts70">false</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.fillStyle = </span><span class="rvts81">"rgba(255, 255, 255, 0.4)"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.arc(px, py, 50, 0, 2 * Math.PI, </span><span class="rvts53">false</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.fillStyle = </span><span class="rvts54">"rgba(255, 255, 255, 0.4)"</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ctx.fill();</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.beginPath();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.arc(pointer.x, pointer.y, pointer.r, 0, 2 * Math.PI, </span><span class="rvts70">false</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.fillStyle = </span><span class="rvts81">"rgba(255, 255, 255, 0.6)"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.arc(pointer.x, pointer.y, pointer.r, 0, 2 * Math.PI, </span><span class="rvts53">false</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.fillStyle = </span><span class="rvts54">"rgba(255, 255, 255, 0.6)"</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;context.fill();</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">((vx - px) &lt; 0) tagret.centerX = tagret.centerX - speed;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">else</span><span class="rvts21"> </span><span class="rvts70">if</span><span class="rvts21">((vx - px) &gt; 0) tagret.centerX = tagret.centerX + speed;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">((vy - py) &lt; 0) tagret.centerY = tagret.centerY - speed;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">else</span><span class="rvts21"> </span><span class="rvts70">if</span><span class="rvts21">((vy - py) &gt; 0) tagret.centerY = tagret.centerY + speed;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">((vx - px) &lt; 0) tagret.centerX = tagret.centerX - speed;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">else</span><span class="rvts21"> </span><span class="rvts53">if</span><span class="rvts21">((vx - px) &gt; 0) tagret.centerX = tagret.centerX + speed;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">((vy - py) &lt; 0) tagret.centerY = tagret.centerY - speed;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">else</span><span class="rvts21"> </span><span class="rvts53">if</span><span class="rvts21">((vy - py) &gt; 0) tagret.centerY = tagret.centerY + speed;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts83"><br/></span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
 

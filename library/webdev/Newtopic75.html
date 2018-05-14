@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="DATABASE.html">DATABASE</a> &rsaquo;&rsaquo; <a href="SQL.html">SQL</a> &rsaquo;&rsaquo; <a href="Newtopic74.html">Подзапросы и выражения с запросами</a> &rsaquo;&rsaquo; 
+					<a href="Database.html">Database</a> &rsaquo;&rsaquo; <a href="SQL.html">SQL</a> &rsaquo;&rsaquo; <a href="Newtopic74.html">Подзапросы и выражения с запросами</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,24 +90,24 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts48">Подчинённые запросы выступают в качестве части предложения WHERE или HAVING</span></p>
+<p class="rvps3"><span class="rvts212">Подчинённые запросы выступают в качестве части предложения WHERE или HAVING</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts50">SELECT</span><span class="rvts51"> table1.elem1, table1.elem2 </span><span class="rvts50">FROM</span><span class="rvts51"> table1 </span></p>
-<p class="rvps3"><span class="rvts50">WHERE</span><span class="rvts51"> table1.elem2 &gt; (</span></p>
-<p class="rvps20"><span class="rvts50">SELECT</span><span class="rvts51"> </span><span class="rvts50">SUM</span><span class="rvts51">(table2.elem2) </span><span class="rvts50">FROM</span><span class="rvts51"> table2 </span><span class="rvts50">WHERE</span><span class="rvts51"> table2.elem1 = 10</span></p>
-<p class="rvps3"><span class="rvts51">);</span></p>
+<p class="rvps3"><span class="rvts214">SELECT</span><span class="rvts215"> table1.elem1, table1.elem2 </span><span class="rvts214">FROM</span><span class="rvts215"> table1 </span></p>
+<p class="rvps3"><span class="rvts214">WHERE</span><span class="rvts215"> table1.elem2 &gt; (</span></p>
+<p class="rvps15"><span class="rvts214">SELECT</span><span class="rvts215"> </span><span class="rvts214">SUM</span><span class="rvts215">(table2.elem2) </span><span class="rvts214">FROM</span><span class="rvts215"> table2 </span><span class="rvts214">WHERE</span><span class="rvts215"> table2.elem1 = 10</span></p>
+<p class="rvps3"><span class="rvts215">);</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts58">Правила:</span></p>
+<p class="rvps3"><span class="rvts221">Правила:</span></p>
 <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
-<li value="1" style="margin-left: 0px" class="rvps22"><span class="rvts58">В большинстве случаев результаты подзапросов всегда состоят из одного столбца. (в запросе всегда указывается только один элемент списка выбора)</span></li>
+<li value="1" style="margin-left: 0px" class="rvps25"><span class="rvts221">В большинстве случаев результаты подзапросов всегда состоят из одного столбца. (в запросе всегда указывается только один элемент списка выбора)</span></li>
 </ol>
-<p class="rvps22"><span class="rvts58"><br/></span></p>
+<p class="rvps25"><span class="rvts221"><br/></span></p>
 <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
-<li value="2" style="margin-left: 0px" class="rvps22"><span class="rvts58">ORDER BY используется в подзапросах крайне редко, его использование отрицательно сказывается на производительности.</span></li>
+<li value="2" style="margin-left: 0px" class="rvps25"><span class="rvts221">ORDER BY используется в подзапросах крайне редко, его использование отрицательно сказывается на производительности.</span></li>
 </ol>
-<p class="rvps22"><span class="rvts58"><br/></span></p>
+<p class="rvps25"><span class="rvts221"><br/></span></p>
 <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
-<li value="3" style="margin-left: 0px" class="rvps22"><span class="rvts58">Имена столбцов в подзапросе могут ссылаться на столбцы таблиц главного запроса. (внешние ссылки)</span></li>
+<li value="3" style="margin-left: 0px" class="rvps25"><span class="rvts221">Имена столбцов в подзапросе могут ссылаться на столбцы таблиц главного запроса. (внешние ссылки)</span></li>
 </ol>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
 <p></p>

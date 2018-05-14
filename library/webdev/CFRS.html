@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic12.html">Безопасность</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic12.html">Безопасность</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -92,13 +92,13 @@
 <p></p>
 <p class="rvps3"><span class="rvts24">Отключение проверки CFRS</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8">Отключить проверку можно в контроллере </span><span class="rvts46">\controllers\SiteController.php</span></p>
+<p class="rvps3"><span class="rvts8">Отключить проверку можно в контроллере </span><span class="rvts140">\controllers\SiteController.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> beforeAction($action){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">if</span><span class="rvts21">($action-&gt;</span><span class="rvts71">id</span><span class="rvts21"> == </span><span class="rvts71">'index'</span><span class="rvts21">){</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;</span><span class="rvts71">enableCsrfValidation</span><span class="rvts21"> = </span><span class="rvts70">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> beforeAction($action){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21">($action-&gt;</span><span class="rvts76">id</span><span class="rvts21"> == </span><span class="rvts76">'index'</span><span class="rvts21">){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$this-&gt;</span><span class="rvts76">enableCsrfValidation</span><span class="rvts21"> = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return parent</span><span class="rvts21">::</span><span class="rvts73">beforeAction</span><span class="rvts21">($action);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return parent</span><span class="rvts21">::</span><span class="rvts172">beforeAction</span><span class="rvts21">($action);</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>

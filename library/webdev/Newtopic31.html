@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic25.html">База данных</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic25.html">База данных</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,42 +94,42 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Создание пагинатора происходит в контроллере</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\data\Pagination;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\data\Pagination;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> actionDatabase() {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$query = TestDB::</span><span class="rvts73">find</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> actionDatabase() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$query = TestDB::</span><span class="rvts172">find</span><span class="rvts21">();</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$pagination = </span><span class="rvts70">new </span><span class="rvts72">Pagination</span><span class="rvts21">([</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'defaultPageSize' </span><span class="rvts21">=&gt; 5,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'totalCount' </span><span class="rvts21">=&gt; $query-&gt;count()</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$pagination = </span><span class="rvts53">new </span><span class="rvts171">Pagination</span><span class="rvts21">([</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'defaultPageSize' </span><span class="rvts21">=&gt; 5,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'totalCount' </span><span class="rvts21">=&gt; $query-&gt;count()</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;]);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dataTable = $query-&gt;orderBy(</span><span class="rvts71">'name'</span><span class="rvts21">)</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;offset($pagination-&gt;</span><span class="rvts71">offset</span><span class="rvts21">)</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;limit($pagination-&gt;</span><span class="rvts71">limit</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dataTable = $query-&gt;orderBy(</span><span class="rvts76">'name'</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;offset($pagination-&gt;</span><span class="rvts76">offset</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;limit($pagination-&gt;</span><span class="rvts76">limit</span><span class="rvts21">)</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-&gt;all();</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'database'</span><span class="rvts21">, [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'dataTable' </span><span class="rvts21">=&gt; $dataTable,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'pagination' </span><span class="rvts21">=&gt; $pagination</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts76">'database'</span><span class="rvts21">, [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'dataTable' </span><span class="rvts21">=&gt; $dataTable,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'pagination' </span><span class="rvts21">=&gt; $pagination</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;]);</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Отображение пагинатора и данных в виде</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\helpers\Html;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\widgets\LinkPager;</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\helpers\Html;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\widgets\LinkPager;</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">ul</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?php</span><span class="rvts21"> </span><span class="rvts70">foreach </span><span class="rvts21">($dataTable </span><span class="rvts70">as </span><span class="rvts21">$value): </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?php</span><span class="rvts21"> </span><span class="rvts53">foreach </span><span class="rvts21">($dataTable </span><span class="rvts53">as </span><span class="rvts21">$value): </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">li</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts73">encode</span><span class="rvts21">(</span><span class="rvts71">"</span><span class="rvts21">{$value-&gt;</span><span class="rvts71">name</span><span class="rvts21">}</span><span class="rvts71"> (</span><span class="rvts21">{$value-&gt;</span><span class="rvts71">code</span><span class="rvts21">}</span><span class="rvts71">)"</span><span class="rvts21">); </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> $value-&gt;</span><span class="rvts71">population</span><span class="rvts21"> </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts172">encode</span><span class="rvts21">(</span><span class="rvts76">"</span><span class="rvts21">{$value-&gt;</span><span class="rvts76">name</span><span class="rvts21">}</span><span class="rvts76"> (</span><span class="rvts21">{$value-&gt;</span><span class="rvts76">code</span><span class="rvts21">}</span><span class="rvts76">)"</span><span class="rvts21">); </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> $value-&gt;</span><span class="rvts76">population</span><span class="rvts21"> </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;/</span><span class="rvts19">li</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?php</span><span class="rvts21"> </span><span class="rvts70">endforeach</span><span class="rvts21">; </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?php</span><span class="rvts21"> </span><span class="rvts53">endforeach</span><span class="rvts21">; </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">ul</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?=</span><span class="rvts21"> LinkPager::</span><span class="rvts73">widget</span><span class="rvts21">([</span><span class="rvts71">'pagination' </span><span class="rvts21">=&gt; $pagination]) </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?=</span><span class="rvts21"> LinkPager::</span><span class="rvts172">widget</span><span class="rvts21">([</span><span class="rvts76">'pagination' </span><span class="rvts21">=&gt; $pagination]) </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p></p>

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic21.html">Локализация</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic21.html">Локализация</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -92,24 +92,24 @@
 <p></p>
 <p class="rvps3"><span class="rvts24">Язык всего приложения</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts8">Указать язык приложения можно в конфиге </span><span class="rvts46">\config\web.php</span></p>
+<p class="rvps3"><span class="rvts8">Указать язык приложения можно в конфиге </span><span class="rvts140">\config\web.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts21">$params = </span><span class="rvts70">require</span><span class="rvts21">(</span><span class="rvts128">__DIR__</span><span class="rvts21"> . </span><span class="rvts71">'/params.php'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21">$db = </span><span class="rvts70">require</span><span class="rvts21">(</span><span class="rvts128">__DIR__</span><span class="rvts21"> . </span><span class="rvts71">'/db.php'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts21">$params = </span><span class="rvts53">require</span><span class="rvts21">(</span><span class="rvts178">__DIR__</span><span class="rvts21"> . </span><span class="rvts76">'/params.php'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21">$db = </span><span class="rvts53">require</span><span class="rvts21">(</span><span class="rvts178">__DIR__</span><span class="rvts21"> . </span><span class="rvts76">'/db.php'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts21">$config = [</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;...</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts71">'language' </span><span class="rvts21">=&gt; </span><span class="rvts71">'ru'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts76">'language' </span><span class="rvts21">=&gt; </span><span class="rvts76">'ru'</span><span class="rvts21">,</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;...</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;];</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">return </span><span class="rvts21">$config;</span></p>
-<p class="rvps3"><span class="rvts83"><br/></span></p>
-<p class="rvps3"><span class="rvts8">Так же необходимо указать язык в габлоне </span><span class="rvts46">views\layouts\main.php</span></p>
+<p class="rvps3"><span class="rvts53">return </span><span class="rvts21">$config;</span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Так же необходимо указать язык в габлоне </span><span class="rvts140">views\layouts\main.php</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">html</span><span class="rvts20"> </span><span class="rvts22">lang</span><span class="rvts21">=</span><span class="rvts20">"</span><span class="rvts69">&lt;?=</span><span class="rvts21"> </span><span class="rvts89">Yii</span><span class="rvts21">::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">language</span><span class="rvts21"> </span><span class="rvts69">?&gt;</span><span class="rvts20">"</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">html</span><span class="rvts20"> </span><span class="rvts22">lang</span><span class="rvts21">=</span><span class="rvts20">"</span><span class="rvts60">&lt;?=</span><span class="rvts21"> </span><span class="rvts75">Yii</span><span class="rvts21">::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">language</span><span class="rvts21"> </span><span class="rvts60">?&gt;</span><span class="rvts20">"</span><span class="rvts18">&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>

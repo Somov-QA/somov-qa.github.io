@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,58 +90,58 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts93">AJAX: JSON / XML</span></p>
-<p class="rvps3"><span class="rvts90">JSON расшифровывается JavaScript Object Notation.</span></p>
-<p class="rvps3"><span class="rvts90">Формат JSON может использоваться с AJAX вместо XML. Поддержка формата JSON встроена в JavaScript. Синтаксис JSON - включает в себя следующие структуры:</span></p>
-<p class="rvps3"><span class="rvts90">Массив</span></p>
-<p class="rvps18"><span class="rvts94">[ значение1, значение2, значениеN ]</span></p>
-<p class="rvps18"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Объект</span></p>
-<p class="rvps18"><span class="rvts94">{ имя1:значение1, имя2:значение2, имяN:значениеN }</span></p>
-<p class="rvps18"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Литералы: (Строка; Число; Логическое значение; Значение null).</span></p>
-<p class="rvps18"><span class="rvts94">{ имя1:"строка", имя2:1000, имя3:true, имя4:false, имя5:null }</span></p>
+<p class="rvps3"><span class="rvts113">AJAX: JSON / XML</span></p>
+<p class="rvps3"><span class="rvts110">JSON расшифровывается JavaScript Object Notation.</span></p>
+<p class="rvps3"><span class="rvts110">Формат JSON может использоваться с AJAX вместо XML. Поддержка формата JSON встроена в JavaScript. Синтаксис JSON - включает в себя следующие структуры:</span></p>
+<p class="rvps3"><span class="rvts110">Массив</span></p>
+<p class="rvps26"><span class="rvts114">[ значение1, значение2, значениеN ]</span></p>
+<p class="rvps26"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts110">Объект</span></p>
+<p class="rvps26"><span class="rvts114">{ имя1:значение1, имя2:значение2, имяN:значениеN }</span></p>
+<p class="rvps26"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts110">Литералы: (Строка; Число; Логическое значение; Значение null).</span></p>
+<p class="rvps26"><span class="rvts114">{ имя1:"строка", имя2:1000, имя3:true, имя4:false, имя5:null }</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts98">Пример JSON</span></p>
-<p class="rvps18"><span class="rvts97">{"menu": {</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;"id": "file",</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;"value": "File",</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;"popup": {</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp;"menuitem": [</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp; &nbsp;{"value": "New", "onclick": "CreateNewDoc()"},</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp; &nbsp;{"value": "Open", "onclick": "OpenDoc()"},</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp; &nbsp;{"value": "Close", "onclick": "CloseDoc()"}</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp;]</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;}</span></p>
-<p class="rvps33"><span class="rvts97">}}</span></p>
-<p class="rvps3"><span class="rvts98">Пример XML</span></p>
-<p class="rvps18"><span class="rvts97">&lt;menu id="file" value="File"&gt;</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;&lt;popup&gt;</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp;&lt;menuitem value="New" onclick="CreateNewDoc()" /&gt;</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp;&lt;menuitem value="Open" onclick="OpenDoc()" /&gt;</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp; &nbsp;&lt;menuitem value="Close" onclick="CloseDoc()" /&gt;</span></p>
-<p class="rvps32"><span class="rvts97"> &nbsp;&lt;/popup&gt;</span></p>
-<p class="rvps33"><span class="rvts97">&lt;/menu&gt;</span></p>
-<p class="rvps3"><span class="rvts93">Использование JSON</span></p>
-<p class="rvps3"><span class="rvts94">xhttp = new XMLHttpRequest();</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.open('GET', 'bookbase.json', true);</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.send();</span></p>
-<p class="rvps3"><span class="rvts94">xhttp.onreadystatechange = function()</span></p>
-<p class="rvps3"><span class="rvts94">{</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">if (xhttp.readyState == 4)</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">{</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">// Принятое содержимое json файла </span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">// должно быть вначале обработано функцией eval </span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">var json = eval( '(' + xhttp.responseText + ')' );</span></p>
+<p class="rvps3"><span class="rvts120">Пример JSON</span></p>
+<p class="rvps26"><span class="rvts119">{"menu": {</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;"id": "file",</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;"value": "File",</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;"popup": {</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp;"menuitem": [</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp; &nbsp;{"value": "New", "onclick": "CreateNewDoc()"},</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp; &nbsp;{"value": "Open", "onclick": "OpenDoc()"},</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp; &nbsp;{"value": "Close", "onclick": "CloseDoc()"}</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp;]</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;}</span></p>
+<p class="rvps30"><span class="rvts119">}}</span></p>
+<p class="rvps3"><span class="rvts120">Пример XML</span></p>
+<p class="rvps26"><span class="rvts119">&lt;menu id="file" value="File"&gt;</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;&lt;popup&gt;</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp;&lt;menuitem value="New" onclick="CreateNewDoc()" /&gt;</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp;&lt;menuitem value="Open" onclick="OpenDoc()" /&gt;</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp; &nbsp;&lt;menuitem value="Close" onclick="CloseDoc()" /&gt;</span></p>
+<p class="rvps29"><span class="rvts119"> &nbsp;&lt;/popup&gt;</span></p>
+<p class="rvps30"><span class="rvts119">&lt;/menu&gt;</span></p>
+<p class="rvps3"><span class="rvts113">Использование JSON</span></p>
+<p class="rvps3"><span class="rvts114">xhttp = new XMLHttpRequest();</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.open('GET', 'bookbase.json', true);</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.send();</span></p>
+<p class="rvps3"><span class="rvts114">xhttp.onreadystatechange = function()</span></p>
+<p class="rvps3"><span class="rvts114">{</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">if (xhttp.readyState == 4)</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">{</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">// Принятое содержимое json файла </span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">// должно быть вначале обработано функцией eval </span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">var json = eval( '(' + xhttp.responseText + ')' );</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">//Далее мы можем спокойно использовать данные</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById('wrap').style.dislay = 'block';</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById('res1').innerHTML = json.bookbase[1].title;</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById('res2').innerHTML = json.bookbase[1].author;</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById('res3').innerHTML = json.bookbase[1].cost;</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">document.getElementById('res4').innerHTML = json.bookbase[1].quantity;</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">}</span></p>
-<p class="rvps3"><span class="rvts94">}</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">//Далее мы можем спокойно использовать данные</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById('wrap').style.dislay = 'block';</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById('res1').innerHTML = json.bookbase[1].title;</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById('res2').innerHTML = json.bookbase[1].author;</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById('res3').innerHTML = json.bookbase[1].cost;</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">document.getElementById('res4').innerHTML = json.bookbase[1].quantity;</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">}</span></p>
+<p class="rvps3"><span class="rvts114">}</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
 

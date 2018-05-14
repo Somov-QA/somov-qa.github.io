@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="jQuery.html">jQuery</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="jQuery.html">jQuery</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,71 +90,71 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts111">Работа с DOM</span></p>
-<p class="rvps3"><span class="rvts112">Изменение содержимого элементов с помощью jQuery</span></p>
-<p class="rvps3"><span class="rvts111"><br/></span></p>
-<p class="rvps3"><span class="rvts111">html</span><span class="rvts112">() - можно изменить или узнать внутреннее содержимое выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts113">$(document).ready(function(){</span></p>
-<p class="rvps20"><span class="rvts113">$("#but1").click(function(){</span></p>
-<p class="rvps20"><span class="rvts113">$("#par1").html("&lt;b&gt;Это jQuery&lt;/b&gt;");</span></p>
-<p class="rvps22"><span class="rvts113">alert($("#par1").html());</span></p>
-<p class="rvps20"><span class="rvts113">});</span></p>
-<p class="rvps3"><span class="rvts113">});</span></p>
-<p class="rvps3"><span class="rvts120"><br/></span></p>
-<p class="rvps3"><span class="rvts111">append</span><span class="rvts112">() - вставить произвольный текст после внутреннего содержимого выбранногоэлемента.</span></p>
-<p class="rvps3"><span class="rvts120"><br/></span></p>
-<p class="rvps3"><span class="rvts111">prepend</span><span class="rvts112">() - вставить произвольный текст перед внутренним содержимым выбранногоэлемента.</span></p>
-<p class="rvps3"><span class="rvts113">$("#par1").prepend("&lt;b&gt;jQuery&lt;/b&gt; - это ");</span></p>
-<p class="rvps3"><span class="rvts113">$("#par1").append(" значительно упрощающая написание кода.");</span></p>
-<p class="rvps3"><span class="rvts120"><br/></span></p>
-<p class="rvps3"><span class="rvts111">attr</span><span class="rvts112">() - узнать или изменить содержимое указанного атрибута у выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts111"><br/></span></p>
-<p class="rvps3"><span class="rvts111">removeAttr</span><span class="rvts112">() - удалить указанный атрибут у выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts113">$("#anchor1").attr("href","http://www.wisdomweb.ru/JQ/");</span></p>
-<p class="rvps3"><span class="rvts113">$("#anchor1").removeAttr("href");</span></p>
-<p class="rvps3"><span class="rvts120"><br/></span></p>
-<p class="rvps3"><span class="rvts111">wrap</span><span class="rvts112">() - позволяет "обернуть" выбранный элемент указанными тэгами.</span></p>
-<p class="rvps3"><span class="rvts113">$("#par3").wrap("&lt;div id='wrap1'&gt;&lt;/div&gt;");</span></p>
-<p class="rvps3"><span class="rvts119">Метод Описание</span></p>
-<p class="rvps3"><span class="rvts118">add() </span><span class="rvts117">Добавляет указанный элемент к группе выбранных элементов.</span></p>
-<p class="rvps3"><span class="rvts118">addClass() </span><span class="rvts117">Добавляет указанный класс или классы выбранному элементу.</span></p>
-<p class="rvps3"><span class="rvts118">after() </span><span class="rvts117">Вставляет указанное содержимое после выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">append() </span><span class="rvts117">Вставляет указанное содержимое в конце содержимого выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">appendTo() </span><span class="rvts117">Вставляет указанное содержимое в конце содержимого выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">attr() </span><span class="rvts117">Вставляет новое или возвращает текущее значение указанного атрибута выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">before() </span><span class="rvts117">Вставляет указанное содержимое перед выбранным элементом.</span></p>
-<p class="rvps3"><span class="rvts118">children() </span><span class="rvts117">Возвращает все элементы потомки указанного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">contents() </span><span class="rvts117">Возвращает все элементы потомки указанного элемента включая текстовые узлы и узлы комментарии.</span></p>
-<p class="rvps3"><span class="rvts118">clone() </span><span class="rvts117">Позволяет скопировать выбранный элемент.</span></p>
-<p class="rvps3"><span class="rvts118">detach() </span><span class="rvts117">Удаляет выбранный элемент (при этом сохраняя его копию).</span></p>
-<p class="rvps3"><span class="rvts118">empty() </span><span class="rvts117">Удаляет содержимое выбранного элемента и всех его элементов потомков.</span></p>
-<p class="rvps3"><span class="rvts118">eq() </span><span class="rvts117">Позволяет выбрать элемент из группы элементов по его порядковому номеру.</span></p>
-<p class="rvps3"><span class="rvts118">first() </span><span class="rvts117">Возвращает первый элемент из группы выбранных элементов.</span></p>
-<p class="rvps3"><span class="rvts118">hasClass() </span><span class="rvts117">Проверяет содержит ли выбранный элемент класс с указанным именем.</span></p>
-<p class="rvps3"><span class="rvts118">html() </span><span class="rvts117">Устанавливает новое или возвращает текущее содержимое выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">insertAfter() </span><span class="rvts117">Вставляет новый (или перемещает существующий) элемент после выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">insertBefore() </span><span class="rvts117">Вставляет новый (или перемещает существующий) элемент перед выбранным элементом.</span></p>
-<p class="rvps3"><span class="rvts118">last() </span><span class="rvts117">Возвращает последний элемент из группы выбранных элементов.</span></p>
-<p class="rvps3"><span class="rvts118">next() </span><span class="rvts117">Возвращает следующий элемент брат за выбранным элементом.</span></p>
-<p class="rvps3"><span class="rvts118">nextAll() </span><span class="rvts117">Возвращает все элементы братья, которые следуют за выбранным элементом.</span></p>
-<p class="rvps3"><span class="rvts118">parent() </span><span class="rvts117">Возвращает родительский элемент выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">prev() </span><span class="rvts117">Возвращает предыдущий элемент брат выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">prevAll() </span><span class="rvts117">Возвращает все элементы братья, которые следуют перед выбранным элементом.</span></p>
-<p class="rvps3"><span class="rvts118">prepend() </span><span class="rvts117">Вставляет указанное содержимое в начало содержимого выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">prependTo() </span><span class="rvts117">Вставляет указанное содержимое в начало содержимого выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">remove() </span><span class="rvts117">Удаляет выбранный элемент.</span></p>
-<p class="rvps3"><span class="rvts118">removeAttr() </span><span class="rvts117">Удаляет указанный атрибут у выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">removeClass() </span><span class="rvts117">Удаляет у выбранного элемента один класс или более.</span></p>
-<p class="rvps3"><span class="rvts118">replaceAll() </span><span class="rvts117">Заменяет текущий элемент новым содержимым.</span></p>
-<p class="rvps3"><span class="rvts118">replaceWith() </span><span class="rvts117">Заменяет текущий элемент новым содержимым.</span></p>
-<p class="rvps3"><span class="rvts118">siblings() </span><span class="rvts117">Возвращает все элементы братья указанного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">text() </span><span class="rvts117">Устанавливает новое или возвращает текущее текстовое содержимое выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">toggleClass() </span><span class="rvts117">Поочередно присваивает указанные классы выбранному элементу.</span></p>
-<p class="rvps3"><span class="rvts118">unwrap() </span><span class="rvts117">Удаляет родительский элемент выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">val() </span><span class="rvts117">Устанавливает новое или возвращает текущее содержимое атрибута value выбранного элемента.</span></p>
-<p class="rvps3"><span class="rvts118">wrap() </span><span class="rvts117">Оборачивает каждый выбранный элемент указанным тэгом (или группой тэгов).</span></p>
-<p class="rvps3"><span class="rvts118">wrapAll() </span><span class="rvts117">Оборачивает группу выбранных элементов указанным тэгом (или группой тэгов).</span></p>
-<p class="rvps3"><span class="rvts118">wrapInner() </span><span class="rvts117">Оборачивает содержимое каждого выбранного элемента указанным тэгом (или группой тэгов).</span></p>
+<p class="rvps3"><span class="rvts128">Работа с DOM</span></p>
+<p class="rvps3"><span class="rvts129">Изменение содержимого элементов с помощью jQuery</span></p>
+<p class="rvps3"><span class="rvts128"><br/></span></p>
+<p class="rvps3"><span class="rvts128">html</span><span class="rvts129">() - можно изменить или узнать внутреннее содержимое выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts130">$(document).ready(function(){</span></p>
+<p class="rvps15"><span class="rvts130">$("#but1").click(function(){</span></p>
+<p class="rvps15"><span class="rvts130">$("#par1").html("&lt;b&gt;Это jQuery&lt;/b&gt;");</span></p>
+<p class="rvps25"><span class="rvts130">alert($("#par1").html());</span></p>
+<p class="rvps15"><span class="rvts130">});</span></p>
+<p class="rvps3"><span class="rvts130">});</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts128">append</span><span class="rvts129">() - вставить произвольный текст после внутреннего содержимого выбранногоэлемента.</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts128">prepend</span><span class="rvts129">() - вставить произвольный текст перед внутренним содержимым выбранногоэлемента.</span></p>
+<p class="rvps3"><span class="rvts130">$("#par1").prepend("&lt;b&gt;jQuery&lt;/b&gt; - это ");</span></p>
+<p class="rvps3"><span class="rvts130">$("#par1").append(" значительно упрощающая написание кода.");</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts128">attr</span><span class="rvts129">() - узнать или изменить содержимое указанного атрибута у выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts128"><br/></span></p>
+<p class="rvps3"><span class="rvts128">removeAttr</span><span class="rvts129">() - удалить указанный атрибут у выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts130">$("#anchor1").attr("href","http://www.wisdomweb.ru/JQ/");</span></p>
+<p class="rvps3"><span class="rvts130">$("#anchor1").removeAttr("href");</span></p>
+<p class="rvps3"><span class="rvts137"><br/></span></p>
+<p class="rvps3"><span class="rvts128">wrap</span><span class="rvts129">() - позволяет "обернуть" выбранный элемент указанными тэгами.</span></p>
+<p class="rvps3"><span class="rvts130">$("#par3").wrap("&lt;div id='wrap1'&gt;&lt;/div&gt;");</span></p>
+<p class="rvps3"><span class="rvts136">Метод Описание</span></p>
+<p class="rvps3"><span class="rvts135">add() </span><span class="rvts134">Добавляет указанный элемент к группе выбранных элементов.</span></p>
+<p class="rvps3"><span class="rvts135">addClass() </span><span class="rvts134">Добавляет указанный класс или классы выбранному элементу.</span></p>
+<p class="rvps3"><span class="rvts135">after() </span><span class="rvts134">Вставляет указанное содержимое после выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">append() </span><span class="rvts134">Вставляет указанное содержимое в конце содержимого выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">appendTo() </span><span class="rvts134">Вставляет указанное содержимое в конце содержимого выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">attr() </span><span class="rvts134">Вставляет новое или возвращает текущее значение указанного атрибута выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">before() </span><span class="rvts134">Вставляет указанное содержимое перед выбранным элементом.</span></p>
+<p class="rvps3"><span class="rvts135">children() </span><span class="rvts134">Возвращает все элементы потомки указанного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">contents() </span><span class="rvts134">Возвращает все элементы потомки указанного элемента включая текстовые узлы и узлы комментарии.</span></p>
+<p class="rvps3"><span class="rvts135">clone() </span><span class="rvts134">Позволяет скопировать выбранный элемент.</span></p>
+<p class="rvps3"><span class="rvts135">detach() </span><span class="rvts134">Удаляет выбранный элемент (при этом сохраняя его копию).</span></p>
+<p class="rvps3"><span class="rvts135">empty() </span><span class="rvts134">Удаляет содержимое выбранного элемента и всех его элементов потомков.</span></p>
+<p class="rvps3"><span class="rvts135">eq() </span><span class="rvts134">Позволяет выбрать элемент из группы элементов по его порядковому номеру.</span></p>
+<p class="rvps3"><span class="rvts135">first() </span><span class="rvts134">Возвращает первый элемент из группы выбранных элементов.</span></p>
+<p class="rvps3"><span class="rvts135">hasClass() </span><span class="rvts134">Проверяет содержит ли выбранный элемент класс с указанным именем.</span></p>
+<p class="rvps3"><span class="rvts135">html() </span><span class="rvts134">Устанавливает новое или возвращает текущее содержимое выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">insertAfter() </span><span class="rvts134">Вставляет новый (или перемещает существующий) элемент после выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">insertBefore() </span><span class="rvts134">Вставляет новый (или перемещает существующий) элемент перед выбранным элементом.</span></p>
+<p class="rvps3"><span class="rvts135">last() </span><span class="rvts134">Возвращает последний элемент из группы выбранных элементов.</span></p>
+<p class="rvps3"><span class="rvts135">next() </span><span class="rvts134">Возвращает следующий элемент брат за выбранным элементом.</span></p>
+<p class="rvps3"><span class="rvts135">nextAll() </span><span class="rvts134">Возвращает все элементы братья, которые следуют за выбранным элементом.</span></p>
+<p class="rvps3"><span class="rvts135">parent() </span><span class="rvts134">Возвращает родительский элемент выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">prev() </span><span class="rvts134">Возвращает предыдущий элемент брат выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">prevAll() </span><span class="rvts134">Возвращает все элементы братья, которые следуют перед выбранным элементом.</span></p>
+<p class="rvps3"><span class="rvts135">prepend() </span><span class="rvts134">Вставляет указанное содержимое в начало содержимого выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">prependTo() </span><span class="rvts134">Вставляет указанное содержимое в начало содержимого выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">remove() </span><span class="rvts134">Удаляет выбранный элемент.</span></p>
+<p class="rvps3"><span class="rvts135">removeAttr() </span><span class="rvts134">Удаляет указанный атрибут у выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">removeClass() </span><span class="rvts134">Удаляет у выбранного элемента один класс или более.</span></p>
+<p class="rvps3"><span class="rvts135">replaceAll() </span><span class="rvts134">Заменяет текущий элемент новым содержимым.</span></p>
+<p class="rvps3"><span class="rvts135">replaceWith() </span><span class="rvts134">Заменяет текущий элемент новым содержимым.</span></p>
+<p class="rvps3"><span class="rvts135">siblings() </span><span class="rvts134">Возвращает все элементы братья указанного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">text() </span><span class="rvts134">Устанавливает новое или возвращает текущее текстовое содержимое выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">toggleClass() </span><span class="rvts134">Поочередно присваивает указанные классы выбранному элементу.</span></p>
+<p class="rvps3"><span class="rvts135">unwrap() </span><span class="rvts134">Удаляет родительский элемент выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">val() </span><span class="rvts134">Устанавливает новое или возвращает текущее содержимое атрибута value выбранного элемента.</span></p>
+<p class="rvps3"><span class="rvts135">wrap() </span><span class="rvts134">Оборачивает каждый выбранный элемент указанным тэгом (или группой тэгов).</span></p>
+<p class="rvps3"><span class="rvts135">wrapAll() </span><span class="rvts134">Оборачивает группу выбранных элементов указанным тэгом (или группой тэгов).</span></p>
+<p class="rvps3"><span class="rvts135">wrapInner() </span><span class="rvts134">Оборачивает содержимое каждого выбранного элемента указанным тэгом (или группой тэгов).</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
 

@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic16.html">Формы</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic16.html">Формы</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -94,31 +94,31 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Создание формы в контроллере на основе модели с последующей отправков в вид.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts88">public </span><span class="rvts70">function</span><span class="rvts21"> actionForm(){</span></p>
-<p class="rvps20"><span class="rvts21">$model = </span><span class="rvts70">new </span><span class="rvts72">TestForm</span><span class="rvts21">();</span></p>
-<p class="rvps20"><span class="rvts70">if </span><span class="rvts21">($model-&gt;load(Yii::</span><span class="rvts128">$app</span><span class="rvts21">-&gt;</span><span class="rvts71">request</span><span class="rvts21">-&gt;post()) &amp;&amp; $model-&gt;validate()) {</span></p>
-<p class="rvps22"><span class="rvts70">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts71">'form'</span><span class="rvts21">, [</span><span class="rvts71">'model' </span><span class="rvts21">=&gt; $model]);</span></p>
-<p class="rvps20"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts74">public </span><span class="rvts53">function</span><span class="rvts21"> actionForm(){</span></p>
+<p class="rvps15"><span class="rvts21">$model = </span><span class="rvts53">new </span><span class="rvts171">TestForm</span><span class="rvts21">();</span></p>
+<p class="rvps15"><span class="rvts53">if </span><span class="rvts21">($model-&gt;load(Yii::</span><span class="rvts178">$app</span><span class="rvts21">-&gt;</span><span class="rvts76">request</span><span class="rvts21">-&gt;post()) &amp;&amp; $model-&gt;validate()) {</span></p>
+<p class="rvps25"><span class="rvts53">return </span><span class="rvts21">$this-&gt;render(</span><span class="rvts76">'form'</span><span class="rvts21">, [</span><span class="rvts76">'model' </span><span class="rvts21">=&gt; $model]);</span></p>
+<p class="rvps15"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Для отображения формы используется View. В данном примере форма имеет два поля и кнопку.</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\helpers\Html;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\widgets\ActiveForm;</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts73">begin</span><span class="rvts21">(); </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts71">'name'</span><span class="rvts21">); </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts71">'email'</span><span class="rvts21">); </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts73">submitButton</span><span class="rvts21">(</span><span class="rvts71">Отправить</span><span class="rvts21">, [</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; </span><span class="rvts71">'btn btn-primary'</span><span class="rvts21">]) </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts73">end</span><span class="rvts21">(); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\helpers\Html;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\widgets\ActiveForm;</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60"><br/></span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts172">begin</span><span class="rvts21">(); </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts76">'name'</span><span class="rvts21">); </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?=</span><span class="rvts21"> $form-&gt;field($model, </span><span class="rvts76">'email'</span><span class="rvts21">); </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts172">submitButton</span><span class="rvts21">(</span><span class="rvts76">Отправить</span><span class="rvts21">, [</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; </span><span class="rvts76">'btn btn-primary'</span><span class="rvts21">]) </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts172">end</span><span class="rvts21">(); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Передача опций в форму</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts73">begin</span><span class="rvts21">([</span><span class="rvts137">'option'</span><span class="rvts21"> = &gt; [</span><span class="rvts137">'class'</span><span class="rvts21">=&gt;</span><span class="rvts137">'form-horizontal'</span><span class="rvts21">, </span><span class="rvts137">'id'</span><span class="rvts21">=&gt;</span><span class="rvts137">'testform'</span><span class="rvts21">]]); </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts136">...</span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts73">end</span><span class="rvts21">(); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> $form = ActiveForm::</span><span class="rvts172">begin</span><span class="rvts21">([</span><span class="rvts186">'option'</span><span class="rvts21"> = &gt; [</span><span class="rvts186">'class'</span><span class="rvts21">=&gt;</span><span class="rvts186">'form-horizontal'</span><span class="rvts21">, </span><span class="rvts186">'id'</span><span class="rvts21">=&gt;</span><span class="rvts186">'testform'</span><span class="rvts21">]]); </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts185">...</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> ActiveForm::</span><span class="rvts172">end</span><span class="rvts21">(); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>

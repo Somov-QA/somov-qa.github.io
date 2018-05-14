@@ -1,0 +1,160 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Классы в ES6</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ES7");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Классы в ES6</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ECMAScript6.html">ECMAScript 6</a> &rsaquo;&rsaquo; <a href="Newtopic95.html">Классы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic95.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ES5.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="class.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Классы в ES6</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts72">/**</span><span class="rvts21"> </span><span class="rvts72">======================================</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*</span><span class="rvts21"> </span><span class="rvts72">Класс.</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">=========================================</span><span class="rvts21"> </span><span class="rvts72">*/</span></p>
+<p class="rvps3"><span class="rvts53">class</span><span class="rvts21"> MyClass {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;constructor(title) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">._title = title;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">._done = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;MyClass.count += 1;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;get title(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> </span><span class="rvts53">this</span><span class="rvts21">._title;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;set title(value){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">._title = value;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;complete() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">._done = </span><span class="rvts53">true</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">static</span><span class="rvts21"> getDefaultTitel(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> </span><span class="rvts54">"Test class"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21">Task.count = 0;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts72">/**</span><span class="rvts21"> </span><span class="rvts72">======================================</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*</span><span class="rvts21"> </span><span class="rvts72">Подкласс. Наследование.</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">=========================================</span><span class="rvts21"> </span><span class="rvts72">*/</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts53">class</span><span class="rvts21"> MySubClass </span><span class="rvts53">extends</span><span class="rvts21"> MyClass {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;constructor(title, parent) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">super</span><span class="rvts21">(title);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">._parent = parent;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">// Проверяем -------------------------------</span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> mc = </span><span class="rvts53">new</span><span class="rvts21"> MyClass(</span><span class="rvts54">'Создается основной класс'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> msc = </span><span class="rvts53">new</span><span class="rvts21"> MySubClass(</span><span class="rvts54">'Создается подкласс'</span><span class="rvts21">, mc);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(mc);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(msc);</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

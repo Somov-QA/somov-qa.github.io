@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="PHP.html">PHP</a> &rsaquo;&rsaquo; <a href="Newtopic65.html">Примеры</a> &rsaquo;&rsaquo; <a href="Parser.html">Parser (парсер)</a> &rsaquo;&rsaquo; 
+					<a href="PHP.html">PHP</a> &rsaquo;&rsaquo; <a href="Examples2.html">Examples</a> &rsaquo;&rsaquo; <a href="Parser.html">Parser (парсер)</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -78,7 +78,7 @@
 				
 				
 				
-				<a href="JAVASCRIPT.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				<a href="Frameworks.html"><img src="img/arrow_right.png" alt="Next"/></a>
 				
 				
 			</div>
@@ -90,38 +90,38 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts70">if</span><span class="rvts21">(!</span><span class="rvts70">isset</span><span class="rvts21">(</span><span class="rvts70">$_POST</span><span class="rvts21">[</span><span class="rvts71">'type'</span><span class="rvts21">])) </span><span class="rvts70">exit</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts53">if</span><span class="rvts21">(!</span><span class="rvts53">isset</span><span class="rvts21">(</span><span class="rvts53">$_POST</span><span class="rvts21">[</span><span class="rvts76">'type'</span><span class="rvts21">])) </span><span class="rvts53">exit</span><span class="rvts21">();</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">if</span><span class="rvts21">(</span><span class="rvts70">$_POST</span><span class="rvts21">[</span><span class="rvts71">'type'</span><span class="rvts21">] === </span><span class="rvts71">'dom_document'</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts53">if</span><span class="rvts21">(</span><span class="rvts53">$_POST</span><span class="rvts21">[</span><span class="rvts76">'type'</span><span class="rvts21">] === </span><span class="rvts76">'dom_document'</span><span class="rvts21">)</span></p>
 <p class="rvps3"><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts71">'&lt;h3&gt;Это обработка страницы с помощью DOMDocument&lt;/h3&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts76">'&lt;h3&gt;Это обработка страницы с помощью DOMDocument&lt;/h3&gt;'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom = </span><span class="rvts70">new </span><span class="rvts72">DOMDocument</span><span class="rvts21">();</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom-&gt;loadHTMLFile(</span><span class="rvts71">'index.php'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom-&gt;</span><span class="rvts71">preserveWhiteSpace</span><span class="rvts21"> = </span><span class="rvts70">false</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$table = $dom-&gt;getElementsByTagName(</span><span class="rvts71">'table'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$rows = $table-&gt;item(0)-&gt;getElementsByTagName(</span><span class="rvts71">'tr'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">foreach </span><span class="rvts21">($rows </span><span class="rvts70">as </span><span class="rvts21">$row)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom = </span><span class="rvts53">new </span><span class="rvts171">DOMDocument</span><span class="rvts21">();</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom-&gt;loadHTMLFile(</span><span class="rvts76">'index.php'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$dom-&gt;</span><span class="rvts76">preserveWhiteSpace</span><span class="rvts21"> = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$table = $dom-&gt;getElementsByTagName(</span><span class="rvts76">'table'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$rows = $table-&gt;item(0)-&gt;getElementsByTagName(</span><span class="rvts76">'tr'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">foreach </span><span class="rvts21">($rows </span><span class="rvts53">as </span><span class="rvts21">$row)</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$col = $row-&gt;getElementsByTagName(</span><span class="rvts71">'td'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts21">$col-&gt;item(0)-&gt;</span><span class="rvts71">nodeValue</span><span class="rvts21">.</span><span class="rvts71">'&lt;br&gt;'</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts21">$col-&gt;item(1)-&gt;</span><span class="rvts71">nodeValue</span><span class="rvts21">.</span><span class="rvts71">'&lt;br&gt;'</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts71">'&lt;hr&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;$col = $row-&gt;getElementsByTagName(</span><span class="rvts76">'td'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts21">$col-&gt;item(0)-&gt;</span><span class="rvts76">nodeValue</span><span class="rvts21">.</span><span class="rvts76">'&lt;br&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts21">$col-&gt;item(1)-&gt;</span><span class="rvts76">nodeValue</span><span class="rvts21">.</span><span class="rvts76">'&lt;br&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts76">'&lt;hr&gt;'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>
-<p class="rvps3"><span class="rvts70">elseif </span><span class="rvts21">(</span><span class="rvts70">$_POST</span><span class="rvts21">[</span><span class="rvts71">'type'</span><span class="rvts21">] === </span><span class="rvts71">'file_get_html'</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts53">elseif </span><span class="rvts21">(</span><span class="rvts53">$_POST</span><span class="rvts21">[</span><span class="rvts76">'type'</span><span class="rvts21">] === </span><span class="rvts76">'file_get_html'</span><span class="rvts21">)</span></p>
 <p class="rvps3"><span class="rvts21">{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts71">'&lt;h3&gt;Это обработка страницы с помощью PHP Simple HTML DOM Parser&lt;/h3&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts76">'&lt;h3&gt;Это обработка страницы с помощью PHP Simple HTML DOM Parser&lt;/h3&gt;'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">require_once </span><span class="rvts71">'./simple_html_dom.php'</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$page = </span><span class="rvts73">file_get_html</span><span class="rvts21">(</span><span class="rvts71">'index.php'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$links = $page-&gt;find(</span><span class="rvts71">'a'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">foreach </span><span class="rvts21">($links </span><span class="rvts70">as </span><span class="rvts21">$row)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">require_once </span><span class="rvts76">'./simple_html_dom.php'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$page = </span><span class="rvts172">file_get_html</span><span class="rvts21">(</span><span class="rvts76">'index.php'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;$links = $page-&gt;find(</span><span class="rvts76">'a'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">foreach </span><span class="rvts21">($links </span><span class="rvts53">as </span><span class="rvts21">$row)</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;{</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts21">$row-&gt;</span><span class="rvts71">title</span><span class="rvts21">.</span><span class="rvts71">"&lt;br&gt;"</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts21">$row-&gt;</span><span class="rvts71">href</span><span class="rvts21">.</span><span class="rvts71">"&lt;br&gt;"</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">echo </span><span class="rvts71">'&lt;hr&gt;'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts21">$row-&gt;</span><span class="rvts76">title</span><span class="rvts21">.</span><span class="rvts76">"&lt;br&gt;"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts21">$row-&gt;</span><span class="rvts76">href</span><span class="rvts21">.</span><span class="rvts76">"&lt;br&gt;"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">echo </span><span class="rvts76">'&lt;hr&gt;'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
 <p class="rvps3"><span class="rvts21">}</span></p>

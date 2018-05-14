@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="DATABASE.html">DATABASE</a> &rsaquo;&rsaquo; <a href="SQL.html">SQL</a> &rsaquo;&rsaquo; <a href="Newtopic79.html">Выражения</a> &rsaquo;&rsaquo; 
+					<a href="Database.html">Database</a> &rsaquo;&rsaquo; <a href="SQL.html">SQL</a> &rsaquo;&rsaquo; <a href="Newtopic79.html">Выражения</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,30 +90,30 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts48">CASE &nbsp;— Ограничение возможности принятия решения в выражении (аналог условия)</span></p>
+<p class="rvps3"><span class="rvts212">CASE &nbsp;— Ограничение возможности принятия решения в выражении (аналог условия)</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
-<p class="rvps3"><span class="rvts51"><br/></span></p>
-<p class="rvps3"><span class="rvts50">SELECT</span><span class="rvts51"> elem1,</span></p>
-<p class="rvps20"><span class="rvts50">CASE</span><span class="rvts51"> </span></p>
-<p class="rvps22"><span class="rvts50">WHEN</span><span class="rvts51"> elem2 &gt; 1000 </span><span class="rvts50">THEN</span><span class="rvts51"> 'A'</span></p>
-<p class="rvps22"><span class="rvts50">WHEN</span><span class="rvts51"> elem2 &gt; 5000 </span><span class="rvts50">THEN</span><span class="rvts51"> 'B'</span></p>
-<p class="rvps22"><span class="rvts50">ELSE</span><span class="rvts51"> 'C'</span></p>
-<p class="rvps20"><span class="rvts50">END AS</span><span class="rvts51"> elem2_case</span></p>
-<p class="rvps3"><span class="rvts50">FROM</span><span class="rvts51"> table1;</span></p>
-<p class="rvps3"><span class="rvts56"><br/></span></p>
-<p class="rvps3"><span class="rvts50">SELECT</span><span class="rvts51"> table1.elem1, table2.elem1 </span><span class="rvts50">FROM</span><span class="rvts51"> table1, table2</span></p>
-<p class="rvps3"><span class="rvts50">WHERE</span><span class="rvts51"> table1.elem2 = </span></p>
-<p class="rvps3"><span class="rvts50">CASE</span></p>
-<p class="rvps20"><span class="rvts50">WHEN</span><span class="rvts51"> (table2.elem2 </span><span class="rvts50">IS NOT NULL</span><span class="rvts51">) </span><span class="rvts50">THEN</span><span class="rvts51"> table.elem2</span></p>
-<p class="rvps3"><span class="rvts50">END</span></p>
-<p class="rvps3"><span class="rvts56"><br/></span></p>
-<p class="rvps3"><span class="rvts50">SELECT</span><span class="rvts51"> elem1, elem2,</span></p>
-<p class="rvps20"><span class="rvts50">CASE</span><span class="rvts51"> elem3</span></p>
-<p class="rvps22"><span class="rvts50">WHEN</span><span class="rvts51"> 11 </span><span class="rvts50">THEN</span><span class="rvts51"> 'A'</span></p>
-<p class="rvps22"><span class="rvts50">WHEN</span><span class="rvts51"> 12 </span><span class="rvts50">THEN</span><span class="rvts51"> 'B'</span></p>
-<p class="rvps20"><span class="rvts50">END AS</span><span class="rvts51"> elem3_case</span></p>
-<p class="rvps3"><span class="rvts50">FROM</span><span class="rvts51"> table1</span></p>
-<p class="rvps18"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts215"><br/></span></p>
+<p class="rvps3"><span class="rvts214">SELECT</span><span class="rvts215"> elem1,</span></p>
+<p class="rvps15"><span class="rvts214">CASE</span><span class="rvts215"> </span></p>
+<p class="rvps25"><span class="rvts214">WHEN</span><span class="rvts215"> elem2 &gt; 1000 </span><span class="rvts214">THEN</span><span class="rvts215"> 'A'</span></p>
+<p class="rvps25"><span class="rvts214">WHEN</span><span class="rvts215"> elem2 &gt; 5000 </span><span class="rvts214">THEN</span><span class="rvts215"> 'B'</span></p>
+<p class="rvps25"><span class="rvts214">ELSE</span><span class="rvts215"> 'C'</span></p>
+<p class="rvps15"><span class="rvts214">END AS</span><span class="rvts215"> elem2_case</span></p>
+<p class="rvps3"><span class="rvts214">FROM</span><span class="rvts215"> table1;</span></p>
+<p class="rvps3"><span class="rvts117"><br/></span></p>
+<p class="rvps3"><span class="rvts214">SELECT</span><span class="rvts215"> table1.elem1, table2.elem1 </span><span class="rvts214">FROM</span><span class="rvts215"> table1, table2</span></p>
+<p class="rvps3"><span class="rvts214">WHERE</span><span class="rvts215"> table1.elem2 = </span></p>
+<p class="rvps3"><span class="rvts214">CASE</span></p>
+<p class="rvps15"><span class="rvts214">WHEN</span><span class="rvts215"> (table2.elem2 </span><span class="rvts214">IS NOT NULL</span><span class="rvts215">) </span><span class="rvts214">THEN</span><span class="rvts215"> table.elem2</span></p>
+<p class="rvps3"><span class="rvts214">END</span></p>
+<p class="rvps3"><span class="rvts117"><br/></span></p>
+<p class="rvps3"><span class="rvts214">SELECT</span><span class="rvts215"> elem1, elem2,</span></p>
+<p class="rvps15"><span class="rvts214">CASE</span><span class="rvts215"> elem3</span></p>
+<p class="rvps25"><span class="rvts214">WHEN</span><span class="rvts215"> 11 </span><span class="rvts214">THEN</span><span class="rvts215"> 'A'</span></p>
+<p class="rvps25"><span class="rvts214">WHEN</span><span class="rvts215"> 12 </span><span class="rvts214">THEN</span><span class="rvts215"> 'B'</span></p>
+<p class="rvps15"><span class="rvts214">END AS</span><span class="rvts215"> elem3_case</span></p>
+<p class="rvps3"><span class="rvts214">FROM</span><span class="rvts215"> table1</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
 

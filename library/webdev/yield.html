@@ -1,0 +1,199 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Генераторы (yield)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("yield");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Генераторы (yield)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ECMAScript6.html">ECMAScript 6</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ECMAScript6.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Symboliterator.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Symbol.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Генераторы</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts72">/**</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*</span><span class="rvts21"> </span><span class="rvts72">Генераторы</span></p>
+<p class="rvps3"><span class="rvts21"> </span><span class="rvts72">*/</span></p>
+<p class="rvps3"><span class="rvts53">function</span><span class="rvts21"> *generate() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;console.log(</span><span class="rvts54">'Генератор:'</span><span class="rvts21">, </span><span class="rvts54">'Start'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> 1;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> 2;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> 3;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;console.log(</span><span class="rvts54">'Генератор:'</span><span class="rvts21">, </span><span class="rvts54">'Finish'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> iteratorGenerator = generate();</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator.next()); &nbsp;</span><span class="rvts70">// Start, 1</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator.next()); &nbsp;</span><span class="rvts70">// 2</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator.next()); &nbsp;</span><span class="rvts70">// 3</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator.next()); &nbsp;</span><span class="rvts70">// Finish</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">// создание итератора</span></p>
+<p class="rvps3"><span class="rvts53">function</span><span class="rvts21"> generate2() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">let</span><span class="rvts21"> currunt = 1;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;console.log(</span><span class="rvts54">'Генератор:'</span><span class="rvts21">, </span><span class="rvts54">'Start'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;[Symbol.iterator]() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;next() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">let</span><span class="rvts21"> result = { value: </span><span class="rvts53">undefined</span><span class="rvts21">, done: </span><span class="rvts53">true</span><span class="rvts21"> };</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">if</span><span class="rvts21"> (currunt &lt;= 3) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result.value = </span><span class="rvts53">this</span><span class="rvts21">.current;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;result.done = </span><span class="rvts53">false</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;currunt++;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} </span><span class="rvts53">else</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts54">'Генератор:'</span><span class="rvts21">, </span><span class="rvts54">'Finish'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> result;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> iteratorGenerator2 = generate2()[Symbol.iterator]();</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator2.next()); &nbsp;</span><span class="rvts70">// Start, 1</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator2.next()); &nbsp;</span><span class="rvts70">// 2</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator2.next()); &nbsp;</span><span class="rvts70">// 3</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, iteratorGenerator2.next()); &nbsp;</span><span class="rvts70">// Finish</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> numbersGenerator = {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;*range(start, end) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">let</span><span class="rvts21"> current = start;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">while</span><span class="rvts21"> (current &lt;= end) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> current++;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">};</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">for</span><span class="rvts21"> (</span><span class="rvts53">let</span><span class="rvts21"> num </span><span class="rvts53">of</span><span class="rvts21"> numbersGenerator.range(1, 10)) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;console.log(</span><span class="rvts54">'Генератор'</span><span class="rvts21">, num);</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts70">// делегирование генератора</span></p>
+<p class="rvps3"><span class="rvts53">function</span><span class="rvts21"> *dGenerator(){</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">try</span><span class="rvts21"> {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> 42;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21">* [1, 2, 3];</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">yield</span><span class="rvts21"> 43;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;} </span><span class="rvts53">catch</span><span class="rvts21"> (error) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;console.error(error);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts53">let</span><span class="rvts21"> dIterator = dGenerator();</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.next().value);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.next().value);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.next().value);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.next().value);</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.next().value);</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.</span><span class="rvts53">return</span><span class="rvts21">()); &nbsp; </span><span class="rvts70">// остановить генератор</span></p>
+<p class="rvps3"><span class="rvts21">console.log(</span><span class="rvts54">'Генератор (делегирование)'</span><span class="rvts21">, dIterator.</span><span class="rvts53">throw</span><span class="rvts21">(</span><span class="rvts53">new</span><span class="rvts21"> Error(</span><span class="rvts54">'This is error'</span><span class="rvts21">)));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

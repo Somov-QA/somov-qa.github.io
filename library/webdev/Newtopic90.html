@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic10.html">Примеры</a> &rsaquo;&rsaquo; <a href="ComponentProfileSearch.html">Component Profile Search</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Examples.html">Examples</a> &rsaquo;&rsaquo; <a href="ComponentProfileSearch.html">Component Profile Search</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -93,7 +93,7 @@
 <p class="rvps3"><span class="rvts24">Описание примера</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Использование и модификация Bootstrap компонента Input groups - Button addons</span></p>
-<p class="rvps3"><span class="rvts8">Ссылка: </span><a class="rvts41" href="https://getbootstrap.com/docs/3.3/components/#input-groups-buttons" target="_blank">https://getbootstrap.com/docs/3.3/components/#input-groups-buttons</a></p>
+<p class="rvps3"><span class="rvts8">Ссылка: </span><a class="rvts52" href="https://getbootstrap.com/docs/3.3/components/#input-groups-buttons" target="_blank">https://getbootstrap.com/docs/3.3/components/#input-groups-buttons</a></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">В нашем случае мы используем компонент как фильтр по профилю. В компонент будет добавлена кнопка "обновить"</span></p>
 <p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem9.png"></p>
@@ -118,44 +118,44 @@
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8">Пример использования данного компонента</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\helpers\Html;</span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">yii\grid\GridView;</span></p>
-<p class="rvps3"><span class="rvts152">use </span><span class="rvts153">app\modules\admin\components\ProfileSearch;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\helpers\Html;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">yii\grid\GridView;</span></p>
+<p class="rvps3"><span class="rvts200">use </span><span class="rvts201">app\modules\admin\components\ProfileSearch;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts127">/* @var $this yii\web\View */</span></p>
-<p class="rvps3"><span class="rvts127">/* @var $searchModel app\modules\admin\models\AccountSteamSearch */</span></p>
-<p class="rvps3"><span class="rvts127">/* @var $dataProvider yii\data\ActiveDataProvider */</span></p>
+<p class="rvps3"><span class="rvts177">/* @var $this yii\web\View */</span></p>
+<p class="rvps3"><span class="rvts177">/* @var $searchModel app\modules\admin\models\AccountSteamSearch */</span></p>
+<p class="rvps3"><span class="rvts177">/* @var $dataProvider yii\data\ActiveDataProvider */</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts71">title</span><span class="rvts21"> = </span><span class="rvts71">'Account Steams'</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts71">params</span><span class="rvts21">[</span><span class="rvts71">'breadcrumbs'</span><span class="rvts21">][] = [</span><span class="rvts71">'label' </span><span class="rvts21">=&gt; </span><span class="rvts71">'Admin'</span><span class="rvts21">, </span><span class="rvts71">'url' </span><span class="rvts21">=&gt; [</span><span class="rvts71">'default/index'</span><span class="rvts21">]];</span></p>
-<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts71">params</span><span class="rvts21">[</span><span class="rvts71">'breadcrumbs'</span><span class="rvts21">][] = $this-&gt;</span><span class="rvts71">title</span><span class="rvts21">;</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts76">title</span><span class="rvts21"> = </span><span class="rvts76">'Account Steams'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts76">params</span><span class="rvts21">[</span><span class="rvts76">'breadcrumbs'</span><span class="rvts21">][] = [</span><span class="rvts76">'label' </span><span class="rvts21">=&gt; </span><span class="rvts76">'Admin'</span><span class="rvts21">, </span><span class="rvts76">'url' </span><span class="rvts21">=&gt; [</span><span class="rvts76">'default/index'</span><span class="rvts21">]];</span></p>
+<p class="rvps3"><span class="rvts21">$this-&gt;</span><span class="rvts76">params</span><span class="rvts21">[</span><span class="rvts76">'breadcrumbs'</span><span class="rvts21">][] = $this-&gt;</span><span class="rvts76">title</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">div</span><span class="rvts20"> </span><span class="rvts22">class</span><span class="rvts21">=</span><span class="rvts23">"account-steam-index"</span><span class="rvts18">&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">h1</span><span class="rvts18">&gt;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts73">encode</span><span class="rvts21">($this-&gt;</span><span class="rvts71">title</span><span class="rvts21">) </span><span class="rvts69">?&gt;</span><span class="rvts18">&lt;/</span><span class="rvts19">h1</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?php</span><span class="rvts21"> </span><span class="rvts127">// echo $this-&gt;render('_search', ['model' =&gt; $searchModel]); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">h1</span><span class="rvts18">&gt;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts172">encode</span><span class="rvts21">($this-&gt;</span><span class="rvts76">title</span><span class="rvts21">) </span><span class="rvts60">?&gt;</span><span class="rvts18">&lt;/</span><span class="rvts19">h1</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?php</span><span class="rvts21"> </span><span class="rvts177">// echo $this-&gt;render('_search', ['model' =&gt; $searchModel]); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">p</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts73">a</span><span class="rvts21">(</span><span class="rvts71">'Create Account Steam'</span><span class="rvts21">, [</span><span class="rvts71">'create'</span><span class="rvts21">], [</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; </span><span class="rvts71">'btn btn-success'</span><span class="rvts21">]) </span><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts154">&lt;?=</span><span class="rvts153"> ProfileSearch::</span><span class="rvts155">widget</span><span class="rvts153">(); </span><span class="rvts154">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> Html::</span><span class="rvts172">a</span><span class="rvts21">(</span><span class="rvts76">'Create Account Steam'</span><span class="rvts21">, [</span><span class="rvts76">'create'</span><span class="rvts21">], [</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; </span><span class="rvts76">'btn btn-success'</span><span class="rvts21">]) </span><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts202">&lt;?=</span><span class="rvts201"> ProfileSearch::</span><span class="rvts203">widget</span><span class="rvts201">(); </span><span class="rvts202">?&gt;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts18">&lt;/</span><span class="rvts19">p</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts69">&lt;?=</span><span class="rvts21"> GridView::</span><span class="rvts73">widget</span><span class="rvts21">([</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'dataProvider' </span><span class="rvts21">=&gt; $dataProvider,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'filterModel' </span><span class="rvts21">=&gt; $searchModel,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'columns' </span><span class="rvts21">=&gt; [</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; </span><span class="rvts71">'yii\grid\SerialColumn'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts60">&lt;?=</span><span class="rvts21"> GridView::</span><span class="rvts172">widget</span><span class="rvts21">([</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'dataProvider' </span><span class="rvts21">=&gt; $dataProvider,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'filterModel' </span><span class="rvts21">=&gt; $searchModel,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'columns' </span><span class="rvts21">=&gt; [</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; </span><span class="rvts76">'yii\grid\SerialColumn'</span><span class="rvts21">],</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'steam_id'</span><span class="rvts21">,</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">'profile_id'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'steam_id'</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts76">'profile_id'</span><span class="rvts21">,</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</span><span class="rvts71">'class' </span><span class="rvts21">=&gt; </span><span class="rvts71">'yii\grid\ActionColumn'</span><span class="rvts21">],</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[</span><span class="rvts76">'class' </span><span class="rvts21">=&gt; </span><span class="rvts76">'yii\grid\ActionColumn'</span><span class="rvts21">],</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;],</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;]); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;]); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">div</span><span class="rvts18">&gt;</span></p>
-<p class="rvps3"><span class="rvts83"><br/></span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
 

@@ -1,0 +1,122 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Отладка с помощию Redux DevTools</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ReduxDevTools");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Отладка с помощию Redux DevTools</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ReactRedux.html">React &amp; Redux</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ReactRedux.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="reactredux1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="combineReducers.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Отладка с помощию Redux DevTools</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts13">Плагин для Chrome:</span><br/><a class="rvts160" href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ru" target="_blank">https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ru</a></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">const</span><span class="rvts98"> store = createStore(playList, window.__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; window.__REDUX_DEVTOOLS_EXTENSION__({</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;serialize: </span><span class="rvts97">true</span></p>
+<p class="rvps26"><span class="rvts98">}));</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Данный плагин работает если приложение запущено через сервер http-server</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

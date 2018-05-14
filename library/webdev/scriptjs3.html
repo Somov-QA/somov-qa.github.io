@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Newtopic64.html">Примеры</a> &rsaquo;&rsaquo; <a href="Clickbutton.html">Click (button)</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Examples1.html">Examples</a> &rsaquo;&rsaquo; <a href="Clickbutton.html">Click (button)</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,29 +90,29 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts81">'use strict'</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts54">'use strict'</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts21">(</span><span class="rvts70">function</span><span class="rvts21"> () {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> emptyButton = document.getElementById(</span><span class="rvts81">'emptyButton'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;emptyButton.addEventListener(</span><span class="rvts81">'click'</span><span class="rvts21">, </span><span class="rvts70">function</span><span class="rvts21"> () {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> element = document.createElement(</span><span class="rvts81">'div'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;element.setAttribute(</span><span class="rvts81">'id'</span><span class="rvts21">, </span><span class="rvts81">'emptyWindow'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;element.innerHTML = </span><span class="rvts81">"&lt;div class='EmptyWindow'&gt;\n\</span></p>
-<p class="rvps3"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class='EmptyWindowTitle'&gt;Empty window&lt;/div&gt;\n\</span></p>
-<p class="rvps3"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class='EmptyWindowContent'&gt;Content&lt;/div&gt;\n\</span></p>
-<p class="rvps3"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;br&gt;&lt;button id='emptyButtonClose' class='EmptyButtonClose'&gt;Close&lt;/button&gt;\n\</span></p>
-<p class="rvps3"><span class="rvts81"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;"</span><span class="rvts21">;</span></p>
+<p class="rvps3"><span class="rvts21">(</span><span class="rvts53">function</span><span class="rvts21"> () {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> emptyButton = document.getElementById(</span><span class="rvts54">'emptyButton'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;emptyButton.addEventListener(</span><span class="rvts54">'click'</span><span class="rvts21">, </span><span class="rvts53">function</span><span class="rvts21"> () {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> element = document.createElement(</span><span class="rvts54">'div'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;element.setAttribute(</span><span class="rvts54">'id'</span><span class="rvts21">, </span><span class="rvts54">'emptyWindow'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;element.innerHTML = </span><span class="rvts54">"&lt;div class='EmptyWindow'&gt;\n\</span></p>
+<p class="rvps3"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class='EmptyWindowTitle'&gt;Empty window&lt;/div&gt;\n\</span></p>
+<p class="rvps3"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;div class='EmptyWindowContent'&gt;Content&lt;/div&gt;\n\</span></p>
+<p class="rvps3"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;br&gt;&lt;button id='emptyButtonClose' class='EmptyButtonClose'&gt;Close&lt;/button&gt;\n\</span></p>
+<p class="rvps3"><span class="rvts54"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;"</span><span class="rvts21">;</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;document.body.appendChild(element);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> emptyButtonClose = document.getElementById(</span><span class="rvts81">'emptyButtonClose'</span><span class="rvts21">);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;emptyButtonClose.addEventListener(</span><span class="rvts81">'click'</span><span class="rvts21">, </span><span class="rvts70">function</span><span class="rvts21"> () {</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">var</span><span class="rvts21"> element = document.getElementById(</span><span class="rvts81">'emptyWindow'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> emptyButtonClose = document.getElementById(</span><span class="rvts54">'emptyButtonClose'</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;emptyButtonClose.addEventListener(</span><span class="rvts54">'click'</span><span class="rvts21">, </span><span class="rvts53">function</span><span class="rvts21"> () {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">var</span><span class="rvts21"> element = document.getElementById(</span><span class="rvts54">'emptyWindow'</span><span class="rvts21">);</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;document.body.removeChild(element);</span></p>
-<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;emptyButtonClose.removeEventListener(</span><span class="rvts81">'click'</span><span class="rvts21">, </span><span class="rvts70">function</span><span class="rvts21"> (){});</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;emptyButtonClose.removeEventListener(</span><span class="rvts54">'click'</span><span class="rvts21">, </span><span class="rvts53">function</span><span class="rvts21"> (){});</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
 <p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;});</span></p>
 <p class="rvps3"><span class="rvts21">}());</span></p>
-<p class="rvps3"><span class="rvts83"><br/></span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
 

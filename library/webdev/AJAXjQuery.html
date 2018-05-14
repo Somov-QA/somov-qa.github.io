@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="JAVASCRIPT.html">JAVASCRIPT</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Ajax.html">Ajax</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -90,71 +90,71 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps3"><span class="rvts93">AJAX: jQuery</span></p>
-<p class="rvps3"><span class="rvts90">Создание AJAX запросов с помощью jQuery (библиотека JavaScript позволяющая ускорить написание кода).</span></p>
-<p class="rvps3"><span class="rvts62"><br/></span></p>
-<p class="rvps3"><span class="rvts90">$("селектор").</span><span class="rvts93">load</span><span class="rvts90">(</span><span class="rvts92">url, данные, функция</span><span class="rvts90">)</span></p>
-<p class="rvps18"><span class="rvts92">селектор</span><span class="rvts90"> - выбирает элемент, в котором будет отображен результат AJAX запроса.</span></p>
-<p class="rvps18"><span class="rvts92">url</span><span class="rvts90"> - адрес, на который будет отправлен AJAX запрос.</span></p>
-<p class="rvps18"><span class="rvts92">данные</span><span class="rvts90"> - является необязательным параметром. Данные, которые будут переданы вместе с запросом.</span></p>
-<p class="rvps18"><span class="rvts92">функция</span><span class="rvts90"> - является необязательным параметром. Функция, которая будет вызвана после выполнения запроса.</span></p>
-<p class="rvps3"><span class="rvts90">Способ удаленного использования библиотеки предоставленный компанией Google.</span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts94">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="rvps3"><span class="rvts113">AJAX: jQuery</span></p>
+<p class="rvps3"><span class="rvts110">Создание AJAX запросов с помощью jQuery (библиотека JavaScript позволяющая ускорить написание кода).</span></p>
+<p class="rvps3"><span class="rvts115"><br/></span></p>
+<p class="rvps3"><span class="rvts110">$("селектор").</span><span class="rvts113">load</span><span class="rvts110">(</span><span class="rvts112">url, данные, функция</span><span class="rvts110">)</span></p>
+<p class="rvps26"><span class="rvts112">селектор</span><span class="rvts110"> - выбирает элемент, в котором будет отображен результат AJAX запроса.</span></p>
+<p class="rvps26"><span class="rvts112">url</span><span class="rvts110"> - адрес, на который будет отправлен AJAX запрос.</span></p>
+<p class="rvps26"><span class="rvts112">данные</span><span class="rvts110"> - является необязательным параметром. Данные, которые будут переданы вместе с запросом.</span></p>
+<p class="rvps26"><span class="rvts112">функция</span><span class="rvts110"> - является необязательным параметром. Функция, которая будет вызвана после выполнения запроса.</span></p>
+<p class="rvps3"><span class="rvts110">Способ удаленного использования библиотеки предоставленный компанией Google.</span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts114">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Пример чтение текстового файла</span></p>
-<p class="rvps3"><span class="rvts90"><br/></span></p>
-<p class="rvps3"><span class="rvts94">$(document).ready(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#but1").click(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#but1").load("testfile.txt");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Пример передачи параметров в php файл</span></p>
-<p class="rvps3"><span class="rvts90"><br/></span></p>
-<p class="rvps3"><span class="rvts94">$(document).ready(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#but1").click(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#but1").load("add.php", "x=4&amp;y=5");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts93">Сопровождающие функции</span></p>
-<p class="rvps3"><span class="rvts90">Функция </span><span class="rvts93">ajaxSend</span><span class="rvts90">() - выполнит переданный в нее код во время отправления AJAX запроса.</span></p>
-<p class="rvps3"><span class="rvts90">Функция </span><span class="rvts93">ajaxComplete</span><span class="rvts90"> - выполнит переданный в нее код, когда выполнение AJAX запроса будет завершено, при этом неважно произошла при этом ошибка или нет.</span></p>
-<p class="rvps3"><span class="rvts90">Функция </span><span class="rvts93">ajaxSuccess</span><span class="rvts90"> - выполнит переданный в него код, если выполнение AJAX запроса будет завершено успешно.</span></p>
-<p class="rvps3"><span class="rvts90">Функция </span><span class="rvts93">ajaxError</span><span class="rvts90"> - выполнит переданный в него код, если выполнение AJAX запроса будет завершено с ошибкой.</span></p>
+<p class="rvps3"><span class="rvts110">Пример чтение текстового файла</span></p>
+<p class="rvps3"><span class="rvts110"><br/></span></p>
+<p class="rvps3"><span class="rvts114">$(document).ready(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#but1").click(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#but1").load("testfile.txt");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts110">Пример передачи параметров в php файл</span></p>
+<p class="rvps3"><span class="rvts110"><br/></span></p>
+<p class="rvps3"><span class="rvts114">$(document).ready(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#but1").click(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#but1").load("add.php", "x=4&amp;y=5");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts113">Сопровождающие функции</span></p>
+<p class="rvps3"><span class="rvts110">Функция </span><span class="rvts113">ajaxSend</span><span class="rvts110">() - выполнит переданный в нее код во время отправления AJAX запроса.</span></p>
+<p class="rvps3"><span class="rvts110">Функция </span><span class="rvts113">ajaxComplete</span><span class="rvts110"> - выполнит переданный в нее код, когда выполнение AJAX запроса будет завершено, при этом неважно произошла при этом ошибка или нет.</span></p>
+<p class="rvps3"><span class="rvts110">Функция </span><span class="rvts113">ajaxSuccess</span><span class="rvts110"> - выполнит переданный в него код, если выполнение AJAX запроса будет завершено успешно.</span></p>
+<p class="rvps3"><span class="rvts110">Функция </span><span class="rvts113">ajaxError</span><span class="rvts110"> - выполнит переданный в него код, если выполнение AJAX запроса будет завершено с ошибкой.</span></p>
 <p class="rvps3"><span class="rvts13"><br/></span></p>
-<p class="rvps3"><span class="rvts94">$(document).ready(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").ajaxSend(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#img1").css("display", "block");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").ajaxComplete(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#img1").css("display", "none");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").ajaxError(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">alert("Выполнение AJAX запроса завершено с ошибкой.");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").ajaxSuccess(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">alert("AJAX запрос успешно выполнен!");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#but1").click(function(){</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").load("add.php", "x=10&amp;y=100");</span></p>
-<p class="rvps3"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94">});</span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts94"><br/></span></p>
-<p class="rvps3"><span class="rvts93">Низкоуровневые AJAX запросы - </span><span class="rvts90">предоставляюn более широкую функциональность, но более сложны в использовании</span></p>
-<p class="rvps3"><span class="rvts90"><br/></span></p>
-<p class="rvps3"><span class="rvts90">Синтаксис:</span></p>
-<p class="rvps18"><span class="rvts94">$.ajax({</span></p>
-<p class="rvps18"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">url:"add.php", </span></p>
-<p class="rvps18"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">data:"x=4&amp;y=5", </span></p>
-<p class="rvps18"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">success:function(result){</span></p>
-<p class="rvps18"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">$("#par1").html(result);</span></p>
-<p class="rvps18"><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94">}</span></p>
-<p class="rvps18"><span class="rvts94">});</span></p>
+<p class="rvps3"><span class="rvts114">$(document).ready(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").ajaxSend(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#img1").css("display", "block");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").ajaxComplete(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#img1").css("display", "none");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").ajaxError(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">alert("Выполнение AJAX запроса завершено с ошибкой.");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").ajaxSuccess(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">alert("AJAX запрос успешно выполнен!");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#but1").click(function(){</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").load("add.php", "x=10&amp;y=100");</span></p>
+<p class="rvps3"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114">});</span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts114"><br/></span></p>
+<p class="rvps3"><span class="rvts113">Низкоуровневые AJAX запросы - </span><span class="rvts110">предоставляюn более широкую функциональность, но более сложны в использовании</span></p>
+<p class="rvps3"><span class="rvts110"><br/></span></p>
+<p class="rvps3"><span class="rvts110">Синтаксис:</span></p>
+<p class="rvps26"><span class="rvts114">$.ajax({</span></p>
+<p class="rvps26"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">url:"add.php", </span></p>
+<p class="rvps26"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">data:"x=4&amp;y=5", </span></p>
+<p class="rvps26"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">success:function(result){</span></p>
+<p class="rvps26"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">$("#par1").html(result);</span></p>
+<p class="rvps26"><span class="rvts114"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts114">}</span></p>
+<p class="rvps26"><span class="rvts114">});</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
 

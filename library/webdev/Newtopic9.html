@@ -62,7 +62,7 @@
 				
 				
 				<div id="topic_breadcrumb">
-					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Newtopic50.html">Разное</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Стили и скрипты</a> &rsaquo;&rsaquo; 
+					<a href="Frameworks.html">Frameworks</a> &rsaquo;&rsaquo; <a href="Yii2.html">Yii2</a> &rsaquo;&rsaquo; <a href="Guide.html">Guide</a> &rsaquo;&rsaquo; <a href="Newtopic5.html">Стили и скрипты</a> &rsaquo;&rsaquo; 
 				</div>
 				
 			</div>
@@ -93,19 +93,19 @@
 <p class="rvps3"><span class="rvts24">Подключение скриптов и стилей в шаблоне</span><span class="rvts8"> (используется деректива)</span></p>
 <hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span></p>
-<p class="rvps3"><span class="rvts127">/* @var $this \yii\web\View */</span></p>
-<p class="rvps3"><span class="rvts127">/* @var $content string */</span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span></p>
+<p class="rvps3"><span class="rvts177">/* @var $this \yii\web\View */</span></p>
+<p class="rvps3"><span class="rvts177">/* @var $content string */</span></p>
 <p class="rvps3"><span class="rvts20"><br/></span></p>
-<p class="rvps3"><span class="rvts70">use </span><span class="rvts21">app\assets\AppAsset;</span></p>
-<p class="rvps3"><span class="rvts21">AppAsset::</span><span class="rvts73">register</span><span class="rvts21">($this);</span></p>
-<p class="rvps3"><span class="rvts69">?&gt;</span></p>
-<p class="rvps3"><span class="rvts69"><br/></span></p>
-<p class="rvps3"><span class="rvts69">&lt;?php</span><span class="rvts21"> $this-&gt;registerJsFile(</span><span class="rvts71">'@web/js/script.js'</span><span class="rvts21">); </span><span class="rvts69">?&gt;</span></p>
+<p class="rvps3"><span class="rvts53">use </span><span class="rvts21">app\assets\AppAsset;</span></p>
+<p class="rvps3"><span class="rvts21">AppAsset::</span><span class="rvts172">register</span><span class="rvts21">($this);</span></p>
+<p class="rvps3"><span class="rvts60">?&gt;</span></p>
+<p class="rvps3"><span class="rvts60"><br/></span></p>
+<p class="rvps3"><span class="rvts60">&lt;?php</span><span class="rvts21"> $this-&gt;registerJsFile(</span><span class="rvts76">'@web/js/script.js'</span><span class="rvts21">); </span><span class="rvts60">?&gt;</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
 <p class="rvps3"><span class="rvts8">Чтобы файл подключался после подключения jQuery</span></p>
 <p class="rvps3"><span class="rvts8"><br/></span></p>
-<p class="rvps3"><span class="rvts132">&lt;?php</span><span class="rvts133"> $this-&gt;registerJsFile(</span><span class="rvts134">'@web/js/script.js'</span><span class="rvts133">, [</span><span class="rvts134">'depends'</span><span class="rvts133">=&gt;</span><span class="rvts134">'yii\web\YiiAssets'</span><span class="rvts133">]); </span><span class="rvts132">?&gt;</span></p>
+<p class="rvps3"><span class="rvts181">&lt;?php</span><span class="rvts182"> $this-&gt;registerJsFile(</span><span class="rvts183">'@web/js/script.js'</span><span class="rvts182">, [</span><span class="rvts183">'depends'</span><span class="rvts182">=&gt;</span><span class="rvts183">'yii\web\YiiAssets'</span><span class="rvts182">]); </span><span class="rvts181">?&gt;</span></p>
 <p></p>
 <p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
 

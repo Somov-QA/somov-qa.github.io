@@ -1,0 +1,130 @@
+﻿
+
+<html>
+	
+<head>
+	<title>package.json</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("packagejson");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">package.json</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="Nodejs.html">Node.js</a> &rsaquo;&rsaquo; <a href="npm.html">npm</a> &rsaquo;&rsaquo; <a href="Webpack.html">Webpack</a> &rsaquo;&rsaquo; <a href="1.html">Пример №1 (сборка без конфига)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="indexjs.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="packagelockjson.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"name"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"test-webpack"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"version"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"1.0.0"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"description"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"Test webpack"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"main"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"index.js"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"scripts"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts22">"test"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts21">},</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"keywords"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts21">[],</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"author"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">""</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"license"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"ISC"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"devDependencies"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts21">{</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts22">"webpack"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"^4.5.0"</span><span class="rvts21">,</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp; &nbsp;</span><span class="rvts22">"webpack-cli"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts23">"^2.0.14"</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts21">},</span></p>
+<p class="rvps3"><span class="rvts20"> &nbsp;</span><span class="rvts22">"dependencies"</span><span class="rvts21">:</span><span class="rvts20"> </span><span class="rvts21">{}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts55"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
