@@ -90,58 +90,58 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts62">module MyGame {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">export</span><span class="rvts62"> </span><span class="rvts61">class</span><span class="rvts62"> Preload </span><span class="rvts61">extends</span><span class="rvts62"> Phaser.State {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> </span><span class="rvts61">static</span><span class="rvts62"> Name: string = </span><span class="rvts84">'preload'</span><span class="rvts62">;</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> name: string = Preload.Name;</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;constructor() {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">super</span><span class="rvts62">();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> preload(): void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onLoadStart.add(</span><span class="rvts61">this</span><span class="rvts62">.onPreloadStart, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onFileComplete.add(</span><span class="rvts61">this</span><span class="rvts62">.onPreloadedFile, </span><span class="rvts61">this</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onLoadComplete.add(</span><span class="rvts61">this</span><span class="rvts62">.onPreloadEnd, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Images.preloadList.forEach((assetName: string) =&gt; {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.image(assetName, </span><span class="rvts84">'assets/images/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.png'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Atlases.preloadList.forEach((assetName: string) =&gt; {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.atlas(assetName, </span><span class="rvts84">'assets/atlas/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.png'</span><span class="rvts62">, </span><span class="rvts84">'assets/atlas/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.json'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sounds.preloadList.forEach((assetName: string) =&gt; {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.audio(assetName, [</span><span class="rvts84">'assets/sound/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.mp3'</span><span class="rvts62">, </span><span class="rvts84">'assets/sound/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.ogg'</span><span class="rvts62">, </span><span class="rvts84">'assets/sound/'</span><span class="rvts62"> + assetName + </span><span class="rvts84">'.m4a'</span><span class="rvts62">]);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onPreloadStart(): void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts84">'[PRELOADER]: start'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onPreloadedFile(progress: number): void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts84">'[PRELOADER]: load'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onPreloadEnd(): void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts84">'[PRELOADER]: end'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts83">//Do some audio decoding before continuing;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sounds.preloadList.forEach((assetName: string) =&gt; {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.add.audio(assetName);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.sound.setDecodedCallback(Sounds.preloadList, </span><span class="rvts61">this</span><span class="rvts62">.startGameAfterDecodingAudio, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> startGameAfterDecodingAudio(): void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts84">'[PRELOADER]: decoding audio complete'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.state.start(Start.Name);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62">}</span></p>
+<p class="rvps2"><span class="rvts63">module MyGame {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">export</span><span class="rvts63"> </span><span class="rvts62">class</span><span class="rvts63"> Preload </span><span class="rvts62">extends</span><span class="rvts63"> Phaser.State {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> </span><span class="rvts62">static</span><span class="rvts63"> Name: string = </span><span class="rvts85">'preload'</span><span class="rvts63">;</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> name: string = Preload.Name;</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;constructor() {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">super</span><span class="rvts63">();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> preload(): void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onLoadStart.add(</span><span class="rvts62">this</span><span class="rvts63">.onPreloadStart, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onFileComplete.add(</span><span class="rvts62">this</span><span class="rvts63">.onPreloadedFile, </span><span class="rvts62">this</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onLoadComplete.add(</span><span class="rvts62">this</span><span class="rvts63">.onPreloadEnd, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Images.preloadList.forEach((assetName: string) =&gt; {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.image(assetName, </span><span class="rvts85">'assets/images/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.png'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Atlases.preloadList.forEach((assetName: string) =&gt; {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.atlas(assetName, </span><span class="rvts85">'assets/atlas/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.png'</span><span class="rvts63">, </span><span class="rvts85">'assets/atlas/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.json'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sounds.preloadList.forEach((assetName: string) =&gt; {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.audio(assetName, [</span><span class="rvts85">'assets/sound/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.mp3'</span><span class="rvts63">, </span><span class="rvts85">'assets/sound/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.ogg'</span><span class="rvts63">, </span><span class="rvts85">'assets/sound/'</span><span class="rvts63"> + assetName + </span><span class="rvts85">'.m4a'</span><span class="rvts63">]);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onPreloadStart(): void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts85">'[PRELOADER]: start'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onPreloadedFile(progress: number): void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts85">'[PRELOADER]: load'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onPreloadEnd(): void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts85">'[PRELOADER]: end'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts84">//Do some audio decoding before continuing;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sounds.preloadList.forEach((assetName: string) =&gt; {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.add.audio(assetName);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.sound.setDecodedCallback(Sounds.preloadList, </span><span class="rvts62">this</span><span class="rvts63">.startGameAfterDecodingAudio, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> startGameAfterDecodingAudio(): void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts85">'[PRELOADER]: decoding audio complete'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.state.start(Start.Name);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63">}</span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
 
@@ -151,7 +151,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

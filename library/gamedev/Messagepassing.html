@@ -108,13 +108,13 @@
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">path - идентификатор экземпляра</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">fragment - идентификатор компонента</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts66">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"#my_component"</span><span class="rvts15">)</span></p>
-<p class="rvps2"><span class="rvts66">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"my_collection:/my_sub_collection/my_instance#my_component"</span><span class="rvts15">)</span></p>
-<p class="rvps2"><span class="rvts66">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"my_socket:"</span><span class="rvts15">)</span></p>
+<p class="rvps2"><span class="rvts67">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"#my_component"</span><span class="rvts15">)</span></p>
+<p class="rvps2"><span class="rvts67">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"my_collection:/my_sub_collection/my_instance#my_component"</span><span class="rvts15">)</span></p>
+<p class="rvps2"><span class="rvts67">local</span><span class="rvts15"> my_url = msg.url(</span><span class="rvts16">"my_socket:"</span><span class="rvts15">)</span></p>
 <p class="rvps2"><span class="rvts15"><br/></span></p>
 <p class="rvps2"><span class="rvts27">Конструкция URL</span></p>
 <p class="rvps2"><span class="rvts15"><br/></span></p>
-<p class="rvps2"><span class="rvts66">local</span><span class="rvts15"> url = msg.url()</span></p>
+<p class="rvps2"><span class="rvts67">local</span><span class="rvts15"> url = msg.url()</span></p>
 <p class="rvps2"><span class="rvts15">url.socket = </span><span class="rvts16">"main_collection"</span></p>
 <p class="rvps2"><span class="rvts15">url.path = hash(</span><span class="rvts16">"/my_collection/my_gameobject"</span><span class="rvts15">)</span></p>
 <p class="rvps2"><span class="rvts15">url.fragment = "my_script"</span></p>
@@ -132,23 +132,23 @@
 <p class="rvps2"><span class="rvts27">msg.post</span><span class="rvts6">(</span><span class="rvts24">"file1#script"</span><span class="rvts6">, </span><span class="rvts24">"name_action"</span><span class="rvts6">)</span></p>
 <p class="rvps2"><span class="rvts15"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Получатель файл file1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"name_action"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"name_action"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 <td style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Отправить сообщение с данными в скрипт file1.script</span></p>
 <p class="rvps2"><span class="rvts27">msg.post</span><span class="rvts6">(</span><span class="rvts24">"file1#script"</span><span class="rvts6">, </span><span class="rvts24">"set_stats"</span><span class="rvts6">, { score = 100, stars = 2, health = 4 })</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Получатель файл file1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"set_stats"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"set_stats"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">pprint(message.score)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">pprint(message.stars)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">pprint(message.health)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -159,15 +159,15 @@
 <tr valign="top">
 <td width="337" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><br/>
 </td>
-<td width="717" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<td width="717" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"#"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST #"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -179,22 +179,22 @@
 <td width="338" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem11.png"></p>
 </td>
 <td width="716" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: test1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(".", "test_message")</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash("test_message") </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash("test_message") </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST .1"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test2.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash("test_message") </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash("test_message") </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST .2"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -206,16 +206,16 @@
 <td width="341" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem10.png"></p>
 </td>
 <td width="713" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: test1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"main:/test_go_1#test_script_2"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test2.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">if message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">if message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -227,16 +227,16 @@
 <td width="338" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem9.png"></p>
 </td>
 <td width="716" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: test1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"main:/test_go_2#test_script_2"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test2.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -248,26 +248,26 @@
 <td width="337" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem8.png"></p>
 </td>
 <td width="717" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: test1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"main:/testCollection2/test_go#test_script_2"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST - 1"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test2.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"main:/testCollection1/test_go#test_script_1"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST - 2"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -294,48 +294,48 @@
 <p class="rvps10"><img alt="" style="padding : 1px;" src="lib/NewItem5.png"></p>
 </td>
 <td width="664" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Файл: main.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"#"</span><span class="rvts6">, </span><span class="rvts24">"create_collection_proxy"</span><span class="rvts6">) </span><span class="rvts25">-- сообщение для текущего скрипта</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"create_collection_proxy"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"create_collection_proxy"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"test_go#test_collection_proxy_1"</span><span class="rvts6">,</span><span class="rvts24"> "load"</span><span class="rvts6">)</span><span class="rvts25"> --загружаем прокси коллекцию</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"test_go#test_collection_proxy_2"</span><span class="rvts6">, </span><span class="rvts24">"load"</span><span class="rvts6">) </span><span class="rvts25">--загружаем прокси коллекцию</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">elseif</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts6">) </span><span class="rvts65">and</span><span class="rvts6"> sender.fragment == hash(</span><span class="rvts24">"test_collection_proxy_1"</span><span class="rvts6">) </span><span class="rvts65">then</span><span class="rvts6"> </span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">elseif</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts6">) </span><span class="rvts66">and</span><span class="rvts6"> sender.fragment == hash(</span><span class="rvts24">"test_collection_proxy_1"</span><span class="rvts6">) </span><span class="rvts66">then</span><span class="rvts6"> </span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- если прокси коллекция загружена</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(sender, "init")</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- инициализация загруженной прокси коллекции</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(sender, "enable")</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- включение загруженной прокси коллекции</span></p>
 <p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; </span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">elseif</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts6">) </span><span class="rvts65">and</span><span class="rvts6"> sender.fragment == hash(</span><span class="rvts24">"test_collection_proxy_2"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">elseif</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts6">) </span><span class="rvts66">and</span><span class="rvts6"> sender.fragment == hash(</span><span class="rvts24">"test_collection_proxy_2"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- если прокси коллекция загружена</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(sender, "init")</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- инициализация загруженной прокси коллекции</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> </span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(sender, "enable")</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- включение загруженной прокси коллекции</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test1.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"test_collection_2:/test_go#test_script_2"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> nction on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> nction on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST .1"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Файл: test2.script</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"test_collection_1:/test_go#test_script_1"</span><span class="rvts6">, </span><span class="rvts24">"test_message"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"test_message"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">print(</span><span class="rvts24">"MESSAGE: TEST .2"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -353,7 +353,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

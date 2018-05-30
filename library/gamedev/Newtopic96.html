@@ -106,102 +106,102 @@
 <p class="rvps2"><span class="rvts15"><br/></span></p>
 <p class="rvps2"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">field: </span><span class="rvts17">Array</span><span class="rvts15">&lt;</span><span class="rvts17">Array</span><span class="rvts15">&lt;</span><span class="rvts17">DiceButton</span><span class="rvts15">&gt;&gt;;</span></p>
 <p class="rvps2"><span class="rvts36"><br/></span></p>
-<p class="rvps2"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">create() {</span></p>
-<p class="rvps2"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> diceData: </span><span class="rvts46">any</span><span class="rvts44">[] = [</span></p>
-<p class="rvps8"><span class="rvts44">[635, 260, </span><span class="rvts47">'dice_black_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dice6063'</span><span class="rvts44">, 660, 260, </span><span class="rvts47">'+'</span><span class="rvts44">],</span></p>
-<p class="rvps8"><span class="rvts44">[670, 260, </span><span class="rvts47">'dice_black_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dice1012'</span><span class="rvts44">, 695, 260, </span><span class="rvts47">': +7'</span><span class="rvts44">],</span></p>
-<p class="rvps8"><span class="rvts44">[635, 290, </span><span class="rvts47">'dice_black_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dice5051'</span><span class="rvts44">, 660, 290, </span><span class="rvts47">'+'</span><span class="rvts44">],</span></p>
-<p class="rvps8"><span class="rvts44">[670, 290, </span><span class="rvts47">'dice_black_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dice1016'</span><span class="rvts44">, 695, 290, </span><span class="rvts47">'+'</span><span class="rvts44">],</span></p>
-<p class="rvps8"><span class="rvts44">[705, 290, </span><span class="rvts47">'dice_black_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dice1012'</span><span class="rvts44">, 730, 290, </span><span class="rvts47">': +15'</span><span class="rvts44">],</span></p>
-<p class="rvps8"><span class="rvts44">[635, 500, </span><span class="rvts47">'dice_win_atlas'</span><span class="rvts44">, </span><span class="rvts47">'dicewin02'</span><span class="rvts44">, 660, 500, </span><span class="rvts47">' 10, 20, 35, 60, 100'</span><span class="rvts44">]</span></p>
-<p class="rvps7"><span class="rvts44">];</span></p>
-<p class="rvps2"><span class="rvts44"><br/></span></p>
-<p class="rvps2"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">var</span><span class="rvts44"> sprite: </span><span class="rvts46">Phaser</span><span class="rvts44">.Sprite;</span></p>
-<p class="rvps2"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> count: number = diceData.length;</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">for</span><span class="rvts44"> (</span><span class="rvts45">var</span><span class="rvts44"> i = 0; i &lt; count; i++) {</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps8"><span class="rvts44">sprite = </span><span class="rvts45">new</span><span class="rvts44"> Phaser.Sprite(</span><span class="rvts45">this</span><span class="rvts44">.game, diceData[i][0], diceData[i][1], diceData[i][2], diceData[i][3]);</span></p>
-<p class="rvps8"><span class="rvts44">sprite.scale.setTo(0.5, 0.5);</span></p>
-<p class="rvps8"><span class="rvts45">this</span><span class="rvts44">.stage.addChild(sprite);</span></p>
-<p class="rvps2"><span class="rvts44"><br/></span></p>
-<p class="rvps8"><span class="rvts44">text = </span><span class="rvts45">new</span><span class="rvts44"> Phaser.Text(</span><span class="rvts45">this</span><span class="rvts44">.game, diceData[i][4], diceData[i][5], diceData[i][6], { font: </span><span class="rvts47">'18px Arial', fill: '#FFFFFF'</span><span class="rvts44"> });</span></p>
-<p class="rvps8"><span class="rvts45">this</span><span class="rvts44">.stage.addChild(text);</span></p>
-<p class="rvps8"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44">}</span></p>
-<p class="rvps2"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">}</span></p>
-<p class="rvps2"><span class="rvts44"><br/></span></p>
-<p class="rvps2"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">createField() {</span></p>
-<p class="rvps2"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> diceValues = {</span></p>
-<p class="rvps8"><span class="rvts47">"1"</span><span class="rvts44">: [[1, 5, 4, 6], [1, 3, 4, 2], [1, 6, 4, 5], [1, 2, 4, 3]],</span></p>
-<p class="rvps8"><span class="rvts47">"2"</span><span class="rvts44">: [[2, 5, 3, 6], [2, 1, 3, 4], [2, 6, 3, 5], [2, 4, 3, 1]],</span></p>
-<p class="rvps8"><span class="rvts47">"3"</span><span class="rvts44">: [[3, 5, 2, 6], [3, 4, 2, 1], [3, 6, 2, 5], [3, 1, 2, 4]],</span></p>
-<p class="rvps8"><span class="rvts47">"4"</span><span class="rvts44">: [[4, 5, 1, 6], [4, 2, 1, 3], [4, 6, 1, 5], [4, 3, 1, 2]],</span></p>
-<p class="rvps8"><span class="rvts47">"5"</span><span class="rvts44">: [[5, 1, 6, 4], [5, 2, 6, 3], [5, 4, 6, 1], [5, 3, 6, 2]],</span></p>
-<p class="rvps8"><span class="rvts47">"6"</span><span class="rvts44">: [[6, 1, 5, 4], [6, 3, 5, 2], [6, 4, 5, 1], [6, 2, 5, 3]]</span></p>
-<p class="rvps7"><span class="rvts44">};</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">this</span><span class="rvts44">.</span><span class="rvts48">field</span><span class="rvts44"> = [];</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> dice: </span><span class="rvts46">DiceButton</span><span class="rvts44">;</span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> diceType: number;</span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> nextValue: number;</span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> </span><span class="rvts48">rows</span><span class="rvts44">: </span><span class="rvts46">Array</span><span class="rvts44">&lt;</span><span class="rvts46">DiceButton</span><span class="rvts44">&gt;;</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts45">for</span><span class="rvts44"> (</span><span class="rvts45">var</span><span class="rvts44"> col = 0; col &lt; 5; col++) {</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps8"><span class="rvts48">rows</span><span class="rvts44"> = [];</span></p>
-<p class="rvps8"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">for</span><span class="rvts44"> (</span><span class="rvts45">var</span><span class="rvts44"> row = 0; row &lt; 10; row++) {</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps7"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice = </span><span class="rvts45">new</span><span class="rvts44"> DiceButton(</span><span class="rvts45">this</span><span class="rvts44">.game, 305 + (50 * col), 200 + (40 * row), 'dice_black_atlas', this.onFieldDiceClick, </span><span class="rvts45">this</span><span class="rvts44">);</span></p>
-<p class="rvps7"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice.diceType = diceType;</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">if</span><span class="rvts44"> (row &lt; 9) dice.inputEnabled = false;</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice.diceValues = diceValues[this.randomValue(6)][</span><span class="rvts45">this</span><span class="rvts44">.randomValue(3)];</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice.diceIndex = 1;</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice.diceValue = dice.diceValues[dice.diceIndex];</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">nextValue = dice.diceIndex === 3 ? 0 : (dice.diceIndex + 1);</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">dice.frameName = </span><span class="rvts47">"dice"</span><span class="rvts44"> + dice.diceValue + </span><span class="rvts47">"0"</span><span class="rvts44"> + dice.diceValue + dice.diceValues[nextValue];</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">this</span><span class="rvts44">.stage.addChild(dice);</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts48">rows</span><span class="rvts44">.push(dice);</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">}</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">this</span><span class="rvts44">.</span><span class="rvts48">field</span><span class="rvts44">.push(rows);</span></p>
-<p class="rvps7"><span class="rvts44">}</span></p>
-<p class="rvps5"><span class="rvts44">}</span></p>
-<p class="rvps5"><span class="rvts44"><br/></span></p>
-<p class="rvps5"><span class="rvts44">checkVariant() {</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">var</span><span class="rvts44"> col: number = 0;</span></p>
-<p class="rvps7"><span class="rvts45">var</span><span class="rvts44"> row: number = 0;</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">var</span><span class="rvts44"> values: number[];</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">var</span><span class="rvts44"> count: number = </span><span class="rvts45">this</span><span class="rvts44">.</span><span class="rvts48">field</span><span class="rvts44">.length;</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps5"><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">for</span><span class="rvts44"> (col = 0; col &lt; count; col++) {</span></p>
-<p class="rvps5"><span class="rvts44"><br/></span></p>
-<p class="rvps5"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts44">row = </span><span class="rvts45">this</span><span class="rvts44">.</span><span class="rvts48">field</span><span class="rvts44">[col].length - 1;</span></p>
-<p class="rvps5"><span class="rvts44"><br/></span></p>
-<p class="rvps8"><span class="rvts44">values.push(</span><span class="rvts45">this</span><span class="rvts44">.</span><span class="rvts48">field</span><span class="rvts44">[col][row].diceValue);</span></p>
-<p class="rvps8"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44">}</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44">values.sort(</span><span class="rvts45">function</span><span class="rvts44"> (valueA, valueB) {</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">return</span><span class="rvts44"> valueB - valueA;</span></p>
-<p class="rvps7"><span class="rvts44">});</span></p>
-<p class="rvps7"><span class="rvts44"><br/></span></p>
-<p class="rvps7"><span class="rvts44">count = values.length;</span></p>
-<p class="rvps7"><span class="rvts45">for</span><span class="rvts44"> (col = 0; col &lt; count; col++) {</span></p>
-<p class="rvps7"><span class="rvts44"></span><span class="rvts44"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps7"><span class="rvts44">}</span></p>
-<p class="rvps5"><span class="rvts44">}</span></p>
+<p class="rvps2"><span class="rvts36"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">create() {</span></p>
+<p class="rvps2"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> diceData: </span><span class="rvts47">any</span><span class="rvts45">[] = [</span></p>
+<p class="rvps8"><span class="rvts45">[635, 260, </span><span class="rvts48">'dice_black_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dice6063'</span><span class="rvts45">, 660, 260, </span><span class="rvts48">'+'</span><span class="rvts45">],</span></p>
+<p class="rvps8"><span class="rvts45">[670, 260, </span><span class="rvts48">'dice_black_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dice1012'</span><span class="rvts45">, 695, 260, </span><span class="rvts48">': +7'</span><span class="rvts45">],</span></p>
+<p class="rvps8"><span class="rvts45">[635, 290, </span><span class="rvts48">'dice_black_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dice5051'</span><span class="rvts45">, 660, 290, </span><span class="rvts48">'+'</span><span class="rvts45">],</span></p>
+<p class="rvps8"><span class="rvts45">[670, 290, </span><span class="rvts48">'dice_black_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dice1016'</span><span class="rvts45">, 695, 290, </span><span class="rvts48">'+'</span><span class="rvts45">],</span></p>
+<p class="rvps8"><span class="rvts45">[705, 290, </span><span class="rvts48">'dice_black_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dice1012'</span><span class="rvts45">, 730, 290, </span><span class="rvts48">': +15'</span><span class="rvts45">],</span></p>
+<p class="rvps8"><span class="rvts45">[635, 500, </span><span class="rvts48">'dice_win_atlas'</span><span class="rvts45">, </span><span class="rvts48">'dicewin02'</span><span class="rvts45">, 660, 500, </span><span class="rvts48">' 10, 20, 35, 60, 100'</span><span class="rvts45">]</span></p>
+<p class="rvps7"><span class="rvts45">];</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">var</span><span class="rvts45"> sprite: </span><span class="rvts47">Phaser</span><span class="rvts45">.Sprite;</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> count: number = diceData.length;</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">for</span><span class="rvts45"> (</span><span class="rvts46">var</span><span class="rvts45"> i = 0; i &lt; count; i++) {</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps8"><span class="rvts45">sprite = </span><span class="rvts46">new</span><span class="rvts45"> Phaser.Sprite(</span><span class="rvts46">this</span><span class="rvts45">.game, diceData[i][0], diceData[i][1], diceData[i][2], diceData[i][3]);</span></p>
+<p class="rvps8"><span class="rvts45">sprite.scale.setTo(0.5, 0.5);</span></p>
+<p class="rvps8"><span class="rvts46">this</span><span class="rvts45">.stage.addChild(sprite);</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps8"><span class="rvts45">text = </span><span class="rvts46">new</span><span class="rvts45"> Phaser.Text(</span><span class="rvts46">this</span><span class="rvts45">.game, diceData[i][4], diceData[i][5], diceData[i][6], { font: </span><span class="rvts48">'18px Arial', fill: '#FFFFFF'</span><span class="rvts45"> });</span></p>
+<p class="rvps8"><span class="rvts46">this</span><span class="rvts45">.stage.addChild(text);</span></p>
+<p class="rvps8"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45">}</span></p>
+<p class="rvps2"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">}</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">createField() {</span></p>
+<p class="rvps2"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> diceValues = {</span></p>
+<p class="rvps8"><span class="rvts48">"1"</span><span class="rvts45">: [[1, 5, 4, 6], [1, 3, 4, 2], [1, 6, 4, 5], [1, 2, 4, 3]],</span></p>
+<p class="rvps8"><span class="rvts48">"2"</span><span class="rvts45">: [[2, 5, 3, 6], [2, 1, 3, 4], [2, 6, 3, 5], [2, 4, 3, 1]],</span></p>
+<p class="rvps8"><span class="rvts48">"3"</span><span class="rvts45">: [[3, 5, 2, 6], [3, 4, 2, 1], [3, 6, 2, 5], [3, 1, 2, 4]],</span></p>
+<p class="rvps8"><span class="rvts48">"4"</span><span class="rvts45">: [[4, 5, 1, 6], [4, 2, 1, 3], [4, 6, 1, 5], [4, 3, 1, 2]],</span></p>
+<p class="rvps8"><span class="rvts48">"5"</span><span class="rvts45">: [[5, 1, 6, 4], [5, 2, 6, 3], [5, 4, 6, 1], [5, 3, 6, 2]],</span></p>
+<p class="rvps8"><span class="rvts48">"6"</span><span class="rvts45">: [[6, 1, 5, 4], [6, 3, 5, 2], [6, 4, 5, 1], [6, 2, 5, 3]]</span></p>
+<p class="rvps7"><span class="rvts45">};</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">this</span><span class="rvts45">.</span><span class="rvts49">field</span><span class="rvts45"> = [];</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> dice: </span><span class="rvts47">DiceButton</span><span class="rvts45">;</span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> diceType: number;</span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> nextValue: number;</span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> </span><span class="rvts49">rows</span><span class="rvts45">: </span><span class="rvts47">Array</span><span class="rvts45">&lt;</span><span class="rvts47">DiceButton</span><span class="rvts45">&gt;;</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts46">for</span><span class="rvts45"> (</span><span class="rvts46">var</span><span class="rvts45"> col = 0; col &lt; 5; col++) {</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps8"><span class="rvts49">rows</span><span class="rvts45"> = [];</span></p>
+<p class="rvps8"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">for</span><span class="rvts45"> (</span><span class="rvts46">var</span><span class="rvts45"> row = 0; row &lt; 10; row++) {</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice = </span><span class="rvts46">new</span><span class="rvts45"> DiceButton(</span><span class="rvts46">this</span><span class="rvts45">.game, 305 + (50 * col), 200 + (40 * row), 'dice_black_atlas', this.onFieldDiceClick, </span><span class="rvts46">this</span><span class="rvts45">);</span></p>
+<p class="rvps7"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice.diceType = diceType;</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">if</span><span class="rvts45"> (row &lt; 9) dice.inputEnabled = false;</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice.diceValues = diceValues[this.randomValue(6)][</span><span class="rvts46">this</span><span class="rvts45">.randomValue(3)];</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice.diceIndex = 1;</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice.diceValue = dice.diceValues[dice.diceIndex];</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">nextValue = dice.diceIndex === 3 ? 0 : (dice.diceIndex + 1);</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">dice.frameName = </span><span class="rvts48">"dice"</span><span class="rvts45"> + dice.diceValue + </span><span class="rvts48">"0"</span><span class="rvts45"> + dice.diceValue + dice.diceValues[nextValue];</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">this</span><span class="rvts45">.stage.addChild(dice);</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts49">rows</span><span class="rvts45">.push(dice);</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">}</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">this</span><span class="rvts45">.</span><span class="rvts49">field</span><span class="rvts45">.push(rows);</span></p>
+<p class="rvps7"><span class="rvts45">}</span></p>
+<p class="rvps5"><span class="rvts45">}</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45">checkVariant() {</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">var</span><span class="rvts45"> col: number = 0;</span></p>
+<p class="rvps7"><span class="rvts46">var</span><span class="rvts45"> row: number = 0;</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">var</span><span class="rvts45"> values: number[];</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">var</span><span class="rvts45"> count: number = </span><span class="rvts46">this</span><span class="rvts45">.</span><span class="rvts49">field</span><span class="rvts45">.length;</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">for</span><span class="rvts45"> (col = 0; col &lt; count; col++) {</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps5"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">row = </span><span class="rvts46">this</span><span class="rvts45">.</span><span class="rvts49">field</span><span class="rvts45">[col].length - 1;</span></p>
+<p class="rvps5"><span class="rvts45"><br/></span></p>
+<p class="rvps8"><span class="rvts45">values.push(</span><span class="rvts46">this</span><span class="rvts45">.</span><span class="rvts49">field</span><span class="rvts45">[col][row].diceValue);</span></p>
+<p class="rvps8"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45">}</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45">values.sort(</span><span class="rvts46">function</span><span class="rvts45"> (valueA, valueB) {</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">return</span><span class="rvts45"> valueB - valueA;</span></p>
+<p class="rvps7"><span class="rvts45">});</span></p>
+<p class="rvps7"><span class="rvts45"><br/></span></p>
+<p class="rvps7"><span class="rvts45">count = values.length;</span></p>
+<p class="rvps7"><span class="rvts46">for</span><span class="rvts45"> (col = 0; col &lt; count; col++) {</span></p>
+<p class="rvps7"><span class="rvts45"></span><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts45">}</span></p>
+<p class="rvps5"><span class="rvts45">}</span></p>
 <p class="rvps2"><span class="rvts15"><br/></span></p>
 <p class="rvps2"><span class="rvts15">}</span></p>
 <p></p>
@@ -213,7 +213,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

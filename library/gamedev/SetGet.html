@@ -90,42 +90,42 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts52">/* Класс ячейки */</span></p>
-<p class="rvps2"><span class="rvts52">var Cell = function()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">var graphics = new PIXI.Graphics();</span></p>
-<p class="rvps5"><span class="rvts52">graphics.lineStyle(2, 0xFF00FF, 1);</span></p>
-<p class="rvps5"><span class="rvts52">graphics.beginFill(0xFF00BB, 0.25);</span></p>
-<p class="rvps5"><span class="rvts52">graphics.drawRoundedRect(150, 450, 300, 100, 15);</span></p>
-<p class="rvps5"><span class="rvts52">graphics.endFill();</span></p>
-<p class="rvps5"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">var cellType = "CELL_TYPE_CLEAR";</span></p>
-<p class="rvps5"><span class="rvts52">var that = {</span></p>
-<p class="rvps7"><span class="rvts52">getCellGraphics: function()</span></p>
-<p class="rvps7"><span class="rvts52">{</span></p>
-<p class="rvps8"><span class="rvts52">if(cellType == "CELL_TYPE_EMPTY") graphics = new PIXI.Graphics();</span></p>
-<p class="rvps9"><span class="rvts52">return graphics;</span></p>
-<p class="rvps7"><span class="rvts52">},</span></p>
-<p class="rvps7"><span class="rvts52">getCellType: function()</span></p>
-<p class="rvps7"><span class="rvts52">{</span></p>
-<p class="rvps8"><span class="rvts52">return cellType;</span></p>
-<p class="rvps7"><span class="rvts52">},</span></p>
-<p class="rvps7"><span class="rvts52">setCellType: function(value)</span></p>
-<p class="rvps7"><span class="rvts52">{</span></p>
-<p class="rvps8"><span class="rvts52">cellType = value;</span></p>
-<p class="rvps7"><span class="rvts52">}</span></p>
-<p class="rvps5"><span class="rvts52">};</span></p>
-<p class="rvps5"><span class="rvts52">return that;</span></p>
-<p class="rvps2"><span class="rvts52">};</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">Создание экземпляра класса и обращение к переменным</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">var cell = new Cell();</span></p>
-<p class="rvps2"><span class="rvts52">cell.setCellType("CELL_TYPE_EMPTY");</span></p>
-<p class="rvps2"><span class="rvts52">stage.addChild(cell.getCellGraphics());</span></p>
-<p class="rvps2"><span class="rvts52">console.log(cell.getCellType());</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
+<p class="rvps2"><span class="rvts53">/* Класс ячейки */</span></p>
+<p class="rvps2"><span class="rvts53">var Cell = function()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">var graphics = new PIXI.Graphics();</span></p>
+<p class="rvps5"><span class="rvts53">graphics.lineStyle(2, 0xFF00FF, 1);</span></p>
+<p class="rvps5"><span class="rvts53">graphics.beginFill(0xFF00BB, 0.25);</span></p>
+<p class="rvps5"><span class="rvts53">graphics.drawRoundedRect(150, 450, 300, 100, 15);</span></p>
+<p class="rvps5"><span class="rvts53">graphics.endFill();</span></p>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">var cellType = "CELL_TYPE_CLEAR";</span></p>
+<p class="rvps5"><span class="rvts53">var that = {</span></p>
+<p class="rvps7"><span class="rvts53">getCellGraphics: function()</span></p>
+<p class="rvps7"><span class="rvts53">{</span></p>
+<p class="rvps8"><span class="rvts53">if(cellType == "CELL_TYPE_EMPTY") graphics = new PIXI.Graphics();</span></p>
+<p class="rvps9"><span class="rvts53">return graphics;</span></p>
+<p class="rvps7"><span class="rvts53">},</span></p>
+<p class="rvps7"><span class="rvts53">getCellType: function()</span></p>
+<p class="rvps7"><span class="rvts53">{</span></p>
+<p class="rvps8"><span class="rvts53">return cellType;</span></p>
+<p class="rvps7"><span class="rvts53">},</span></p>
+<p class="rvps7"><span class="rvts53">setCellType: function(value)</span></p>
+<p class="rvps7"><span class="rvts53">{</span></p>
+<p class="rvps8"><span class="rvts53">cellType = value;</span></p>
+<p class="rvps7"><span class="rvts53">}</span></p>
+<p class="rvps5"><span class="rvts53">};</span></p>
+<p class="rvps5"><span class="rvts53">return that;</span></p>
+<p class="rvps2"><span class="rvts53">};</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">Создание экземпляра класса и обращение к переменным</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var cell = new Cell();</span></p>
+<p class="rvps2"><span class="rvts53">cell.setCellType("CELL_TYPE_EMPTY");</span></p>
+<p class="rvps2"><span class="rvts53">stage.addChild(cell.getCellGraphics());</span></p>
+<p class="rvps2"><span class="rvts53">console.log(cell.getCellType());</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
 
@@ -135,7 +135,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

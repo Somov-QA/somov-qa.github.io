@@ -99,15 +99,15 @@
 <td width="315" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Загружаем прокси коллекцию</span></p>
 <p class="rvps2"><span class="rvts29">msg.post(</span><span class="rvts24">"menu_go#menu_collection_proxy"</span><span class="rvts29">, </span><span class="rvts24">"load"</span><span class="rvts29">)</span></p>
 <p class="rvps2"><span class="rvts29"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts29"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts29"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts29">) </span></p>
-<p class="rvps2"><span class="rvts65">and</span><span class="rvts29"> sender.fragment == hash(</span><span class="rvts24">"menu_collection_proxy"</span><span class="rvts29">) </span><span class="rvts65">then</span><span class="rvts29"> &nbsp; </span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts29"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts29"> message_id == hash(</span><span class="rvts24">"proxy_loaded"</span><span class="rvts29">) </span></p>
+<p class="rvps2"><span class="rvts66">and</span><span class="rvts29"> sender.fragment == hash(</span><span class="rvts24">"menu_collection_proxy"</span><span class="rvts29">) </span><span class="rvts66">then</span><span class="rvts29"> &nbsp; </span></p>
 <p class="rvps2"><span class="rvts25">-- если прокси коллекция загружена</span></p>
 <p class="rvps2"><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- инициализируем и включаем загруженную прокси коллекцию.</span></p>
 <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts24">"init"</span><span class="rvts29">)</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">-- инициализация загруженной прокси коллекции</span></p>
 <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts24">"enable"</span><span class="rvts29">) </span><span class="rvts25">-- включение загруженной прокси коллекции</span></p>
 <p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;msg.post(sender, </span><span class="rvts24">"acquire_input_focus"</span><span class="rvts29">) </span><span class="rvts25">-- передаём фокус в загруженную коллекцию</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -121,7 +121,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

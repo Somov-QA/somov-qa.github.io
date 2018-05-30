@@ -90,60 +90,60 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts62">module MortalKombatCards {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">export</span><span class="rvts62"> </span><span class="rvts61">interface</span><span class="rvts62"> IPreloaderConfig {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;nextStage: string;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;preloadHandler: () =&gt; void;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">export</span><span class="rvts62"> </span><span class="rvts61">class</span><span class="rvts62"> Preloader </span><span class="rvts61">extends</span><span class="rvts62"> Phaser.State{</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> </span><span class="rvts61">static</span><span class="rvts62"> Name: string = </span><span class="rvts84">"preloader"</span><span class="rvts62">;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> name: string = Preloader.Name;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> preloadText: Phaser.Text;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> config: IPreloaderConfig;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> loadPercent: number = 0;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;constructor() {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">super</span><span class="rvts62">();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> init(config: IPreloaderConfig) {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.config = config;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> preload() {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.add.sprite(0,0, Images.PreloaderImage);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onLoadStart.add(</span><span class="rvts61">this</span><span class="rvts62">.onLoadStart, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onFileComplete.add(</span><span class="rvts61">this</span><span class="rvts62">.onFileComplete, </span><span class="rvts61">this</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.load.onLoadComplete.add(</span><span class="rvts61">this</span><span class="rvts62">.onLoadComplete, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.config.preloadHandler();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (</span><span class="rvts61">this</span><span class="rvts62">.game.load.totalQueuedFiles() === 0) {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.onLoadComplete();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onLoadStart() {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.preloadText = </span><span class="rvts61">this</span><span class="rvts62">.game.add.text(310, 490, </span><span class="rvts84">"ЗАГРУЗКА 0%"</span><span class="rvts62">, {font: </span><span class="rvts84">"24px Georgia"</span><span class="rvts62">, fill: </span><span class="rvts84">"#000000"</span><span class="rvts62">});</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onFileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.loadPercent = Math.round(progress &nbsp;* 0.1);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62">(</span><span class="rvts61">this</span><span class="rvts62">.loadPercent &lt;= 0) </span><span class="rvts61">this</span><span class="rvts62">.loadPercent = 1;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (</span><span class="rvts61">this</span><span class="rvts62">.preloadText !== </span><span class="rvts61">null</span><span class="rvts62">) {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.preloadText.text = </span><span class="rvts84">"ЗАГРУЗКА "</span><span class="rvts62"> + </span><span class="rvts61">this</span><span class="rvts62">.loadPercent + </span><span class="rvts84">"0 %"</span><span class="rvts62">;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; </span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onLoadComplete() {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.stage.removeChildren();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.game.state.start(</span><span class="rvts61">this</span><span class="rvts62">.config.nextStage, </span><span class="rvts61">true</span><span class="rvts62">, </span><span class="rvts61">false</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;} &nbsp; </span></p>
-<p class="rvps2"><span class="rvts62">}</span></p>
+<p class="rvps2"><span class="rvts63">module MortalKombatCards {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">export</span><span class="rvts63"> </span><span class="rvts62">interface</span><span class="rvts63"> IPreloaderConfig {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;nextStage: string;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;preloadHandler: () =&gt; void;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">export</span><span class="rvts63"> </span><span class="rvts62">class</span><span class="rvts63"> Preloader </span><span class="rvts62">extends</span><span class="rvts63"> Phaser.State{</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> </span><span class="rvts62">static</span><span class="rvts63"> Name: string = </span><span class="rvts85">"preloader"</span><span class="rvts63">;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> name: string = Preloader.Name;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> preloadText: Phaser.Text;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> config: IPreloaderConfig;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> loadPercent: number = 0;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;constructor() {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">super</span><span class="rvts63">();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> init(config: IPreloaderConfig) {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.config = config;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> preload() {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.add.sprite(0,0, Images.PreloaderImage);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onLoadStart.add(</span><span class="rvts62">this</span><span class="rvts63">.onLoadStart, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onFileComplete.add(</span><span class="rvts62">this</span><span class="rvts63">.onFileComplete, </span><span class="rvts62">this</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.load.onLoadComplete.add(</span><span class="rvts62">this</span><span class="rvts63">.onLoadComplete, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.config.preloadHandler();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> (</span><span class="rvts62">this</span><span class="rvts63">.game.load.totalQueuedFiles() === 0) {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.onLoadComplete();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onLoadStart() {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.preloadText = </span><span class="rvts62">this</span><span class="rvts63">.game.add.text(310, 490, </span><span class="rvts85">"ЗАГРУЗКА 0%"</span><span class="rvts63">, {font: </span><span class="rvts85">"24px Georgia"</span><span class="rvts63">, fill: </span><span class="rvts85">"#000000"</span><span class="rvts63">});</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onFileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.loadPercent = Math.round(progress &nbsp;* 0.1);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63">(</span><span class="rvts62">this</span><span class="rvts63">.loadPercent &lt;= 0) </span><span class="rvts62">this</span><span class="rvts63">.loadPercent = 1;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> (</span><span class="rvts62">this</span><span class="rvts63">.preloadText !== </span><span class="rvts62">null</span><span class="rvts63">) {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.preloadText.text = </span><span class="rvts85">"ЗАГРУЗКА "</span><span class="rvts63"> + </span><span class="rvts62">this</span><span class="rvts63">.loadPercent + </span><span class="rvts85">"0 %"</span><span class="rvts63">;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onLoadComplete() {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.stage.removeChildren();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.game.state.start(</span><span class="rvts62">this</span><span class="rvts63">.config.nextStage, </span><span class="rvts62">true</span><span class="rvts63">, </span><span class="rvts62">false</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;} &nbsp; </span></p>
+<p class="rvps2"><span class="rvts63">}</span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
 
@@ -153,7 +153,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

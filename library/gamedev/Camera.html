@@ -100,25 +100,25 @@
 </td>
 <td width="810" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts6">Описание файла camera.script который позволяет изменить положение камеры.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;msg.post(</span><span class="rvts64">"#camera"</span><span class="rvts62">, </span><span class="rvts64">"acquire_camera_focus"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"acquire_input_focus"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> width = sys.get_config(</span><span class="rvts64">"display.width"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> height = sys.get_config(</span><span class="rvts64">"display.height"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"key_up"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / height * </span><span class="rvts63">100</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set_rotation(xrot)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"key_down"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts63">2</span><span class="rvts62"> / height * </span><span class="rvts63">0</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set_rotation(xrot)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"touch"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">--print(go.get_id())</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> init(</span><span class="rvts62">self</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;msg.post(</span><span class="rvts65">"#camera"</span><span class="rvts63">, </span><span class="rvts65">"acquire_camera_focus"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;msg.post(</span><span class="rvts65">"."</span><span class="rvts63">, </span><span class="rvts65">"acquire_input_focus"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> on_input(</span><span class="rvts62">self</span><span class="rvts63">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> width = sys.get_config(</span><span class="rvts65">"display.width"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> height = sys.get_config(</span><span class="rvts65">"display.height"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> (action_id == hash(</span><span class="rvts65">"key_up"</span><span class="rvts63">)) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts64">2</span><span class="rvts63"> / height * </span><span class="rvts64">100</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">go.set_rotation(xrot)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">elseif</span><span class="rvts63"> (action_id == hash(</span><span class="rvts65">"key_down"</span><span class="rvts63">)) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> xrot = vmath.quat_rotation_x(math.pi * </span><span class="rvts64">2</span><span class="rvts63"> / height * </span><span class="rvts64">0</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">go.set_rotation(xrot)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">elseif</span><span class="rvts63"> (action_id == hash(</span><span class="rvts65">"touch"</span><span class="rvts63">)) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">--print(go.get_id())</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
 </td>
 </tr>
 </table>
@@ -132,7 +132,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

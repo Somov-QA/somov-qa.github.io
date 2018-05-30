@@ -107,74 +107,74 @@
 </td>
 <td width="852" style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">Скрипт test_physics_box.script позволяет перемещать объект с учётом притяжения.</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts61">local</span><span class="rvts62"> gravity = -</span><span class="rvts63">20</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> init(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"acquire_input_focus"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.position = go.get_position() </span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- расположение</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.velocity = vmath.vector3(</span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">, </span><span class="rvts63">0</span><span class="rvts62">) </span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- скорость</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.ground_contact = </span><span class="rvts61">false</span><span class="rvts62"> </span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- контакт с землёй</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> final(</span><span class="rvts61">self</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">msg.post(</span><span class="rvts64">"."</span><span class="rvts62">, </span><span class="rvts64">"release_input_focus"</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> update(</span><span class="rvts61">self</span><span class="rvts62">, dt)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> gravity = vmath.vector3(</span><span class="rvts63">0</span><span class="rvts62">, gravity, </span><span class="rvts63">0</span><span class="rvts62">)</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> </span><span class="rvts61">not</span><span class="rvts62"> </span><span class="rvts61">self</span><span class="rvts62">.ground_contact </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.velocity = </span><span class="rvts61">self</span><span class="rvts62">.velocity + gravity </span><span class="rvts70">-- ускорение скорости падения</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;go.set_position(go.get_position() + </span><span class="rvts61">self</span><span class="rvts62">.velocity * dt) </span><span class="rvts70">-- новые координаты объекта</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.correction = vmath.vector3() </span><span class="rvts70">-- коррекция</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.ground_contact = </span><span class="rvts61">false</span><span class="rvts62"> </span><span class="rvts70">-- контакт с землёй</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">local</span><span class="rvts62"> </span><span class="rvts61">function</span><span class="rvts62"> handle_geometry_contact(</span><span class="rvts61">self</span><span class="rvts62">, normal, distance)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">-- производим коррекцию расположения объекта</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> proj = vmath.dot(</span><span class="rvts61">self</span><span class="rvts62">.correction, normal)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> comp = (distance - proj) * normal</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.correction = </span><span class="rvts61">self</span><span class="rvts62">.correction + comp</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;go.set_position(go.get_position() + comp)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> normal.y &gt; </span><span class="rvts63">0</span><span class="rvts62">.</span><span class="rvts63">7</span><span class="rvts62"> </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.ground_contact = </span><span class="rvts61">true</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;proj = vmath.dot(</span><span class="rvts61">self</span><span class="rvts62">.velocity, normal)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> proj &lt; </span><span class="rvts63">0</span><span class="rvts62"> </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">self</span><span class="rvts62">.velocity = </span><span class="rvts61">self</span><span class="rvts62">.velocity - proj * normal</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_message(</span><span class="rvts61">self</span><span class="rvts62">, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> message_id == hash(</span><span class="rvts64">"contact_point_response"</span><span class="rvts62">) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> message.group == hash(</span><span class="rvts64">"ground"</span><span class="rvts62">) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;handle_geometry_contact(</span><span class="rvts61">self</span><span class="rvts62">, message.normal, message.distance)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">elseif</span><span class="rvts62"> message.group == hash(</span><span class="rvts64">"box"</span><span class="rvts62">) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;handle_geometry_contact(</span><span class="rvts61">self</span><span class="rvts62">, message.normal, message.distance)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts61">function</span><span class="rvts62"> on_input(</span><span class="rvts61">self</span><span class="rvts62">, action_id, action)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> (action_id == hash(</span><span class="rvts64">"touch"</span><span class="rvts62">)) </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmin = action.screen_x - </span><span class="rvts63">50</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> xmax = action.screen_x + </span><span class="rvts63">50</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymin = action.screen_y - </span><span class="rvts63">50</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> ymax = action.screen_y + </span><span class="rvts63">50</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">local</span><span class="rvts62"> pos = go.get_position()</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">if</span><span class="rvts62"> pos.x &gt;= xmin </span><span class="rvts61">and</span><span class="rvts62"> pos.x &lt;= xmax </span><span class="rvts61">and</span><span class="rvts62"> pos.y &gt;= ymin </span><span class="rvts61">and</span><span class="rvts62"> pos.y &lt;= ymax </span><span class="rvts61">then</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.x"</span><span class="rvts62">, action.screen_x)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">go.set(go.get_id(), </span><span class="rvts64">"position.y"</span><span class="rvts62">, action.screen_y)</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">end</span></p>
-<p class="rvps2"><span class="rvts61">end</span></p>
+<p class="rvps2"><span class="rvts62">local</span><span class="rvts63"> gravity = -</span><span class="rvts64">20</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> init(</span><span class="rvts62">self</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">msg.post(</span><span class="rvts65">"."</span><span class="rvts63">, </span><span class="rvts65">"acquire_input_focus"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.position = go.get_position() </span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">-- расположение</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.velocity = vmath.vector3(</span><span class="rvts64">0</span><span class="rvts63">, </span><span class="rvts64">0</span><span class="rvts63">, </span><span class="rvts64">0</span><span class="rvts63">) </span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">-- скорость</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.ground_contact = </span><span class="rvts62">false</span><span class="rvts63"> </span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">-- контакт с землёй</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> final(</span><span class="rvts62">self</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">msg.post(</span><span class="rvts65">"."</span><span class="rvts63">, </span><span class="rvts65">"release_input_focus"</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> update(</span><span class="rvts62">self</span><span class="rvts63">, dt)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> gravity = vmath.vector3(</span><span class="rvts64">0</span><span class="rvts63">, gravity, </span><span class="rvts64">0</span><span class="rvts63">)</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> </span><span class="rvts62">not</span><span class="rvts63"> </span><span class="rvts62">self</span><span class="rvts63">.ground_contact </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.velocity = </span><span class="rvts62">self</span><span class="rvts63">.velocity + gravity </span><span class="rvts71">-- ускорение скорости падения</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;go.set_position(go.get_position() + </span><span class="rvts62">self</span><span class="rvts63">.velocity * dt) </span><span class="rvts71">-- новые координаты объекта</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.correction = vmath.vector3() </span><span class="rvts71">-- коррекция</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.ground_contact = </span><span class="rvts62">false</span><span class="rvts63"> </span><span class="rvts71">-- контакт с землёй</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">local</span><span class="rvts63"> </span><span class="rvts62">function</span><span class="rvts63"> handle_geometry_contact(</span><span class="rvts62">self</span><span class="rvts63">, normal, distance)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts71">-- производим коррекцию расположения объекта</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> proj = vmath.dot(</span><span class="rvts62">self</span><span class="rvts63">.correction, normal)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> comp = (distance - proj) * normal</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.correction = </span><span class="rvts62">self</span><span class="rvts63">.correction + comp</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;go.set_position(go.get_position() + comp)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> normal.y &gt; </span><span class="rvts64">0</span><span class="rvts63">.</span><span class="rvts64">7</span><span class="rvts63"> </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.ground_contact = </span><span class="rvts62">true</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;proj = vmath.dot(</span><span class="rvts62">self</span><span class="rvts63">.velocity, normal)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> proj &lt; </span><span class="rvts64">0</span><span class="rvts63"> </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">self</span><span class="rvts63">.velocity = </span><span class="rvts62">self</span><span class="rvts63">.velocity - proj * normal</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> on_message(</span><span class="rvts62">self</span><span class="rvts63">, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> message_id == hash(</span><span class="rvts65">"contact_point_response"</span><span class="rvts63">) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> message.group == hash(</span><span class="rvts65">"ground"</span><span class="rvts63">) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;handle_geometry_contact(</span><span class="rvts62">self</span><span class="rvts63">, message.normal, message.distance)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">elseif</span><span class="rvts63"> message.group == hash(</span><span class="rvts65">"box"</span><span class="rvts63">) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;handle_geometry_contact(</span><span class="rvts62">self</span><span class="rvts63">, message.normal, message.distance)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts62">function</span><span class="rvts63"> on_input(</span><span class="rvts62">self</span><span class="rvts63">, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> (action_id == hash(</span><span class="rvts65">"touch"</span><span class="rvts63">)) </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> xmin = action.screen_x - </span><span class="rvts64">50</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> xmax = action.screen_x + </span><span class="rvts64">50</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> ymin = action.screen_y - </span><span class="rvts64">50</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> ymax = action.screen_y + </span><span class="rvts64">50</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">local</span><span class="rvts63"> pos = go.get_position()</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">if</span><span class="rvts63"> pos.x &gt;= xmin </span><span class="rvts62">and</span><span class="rvts63"> pos.x &lt;= xmax </span><span class="rvts62">and</span><span class="rvts63"> pos.y &gt;= ymin </span><span class="rvts62">and</span><span class="rvts63"> pos.y &lt;= ymax </span><span class="rvts62">then</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">go.set(go.get_id(), </span><span class="rvts65">"position.x"</span><span class="rvts63">, action.screen_x)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">go.set(go.get_id(), </span><span class="rvts65">"position.y"</span><span class="rvts63">, action.screen_y)</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">end</span></p>
+<p class="rvps2"><span class="rvts62">end</span></p>
 </td>
 </tr>
 </table>
@@ -188,7 +188,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

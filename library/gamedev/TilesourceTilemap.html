@@ -104,16 +104,16 @@
 <tr valign="top">
 <td width="309" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem17.png"></p>
 </td>
-<td width="349" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> init(self)</span></p>
+<td width="349" style="border-color: #000000; border-style: solid; padding: 1px; border-top: none; border-right: none; border-bottom: none; border-left: none;"><p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> init(self)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"."</span><span class="rvts6">, </span><span class="rvts24">"acquire_input_focus"</span><span class="rvts6">)</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_input(self, action_id, action)</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> action_id == hash(</span><span class="rvts24">"touch"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">local</span><span class="rvts6"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_input(self, action_id, action)</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> action_id == hash(</span><span class="rvts24">"touch"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">local</span><span class="rvts6"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
 <p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), tile = 2, position = pos, dy = 1})</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 </td>
 </tr>
 </table>
@@ -122,31 +122,31 @@
 <p class="rvps2"><span class="rvts6">Примеры сообщений для работы с тайлами</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Координаты указываются через GameObject</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"edit_tile"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"edit_tile"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), position = go.get_position(), dy = 1})</span></p>
 <p class="rvps7"><span class="rvts25">-- или</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), tile = 1, position = go.get_position(), dy = 1})</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Указываем координаты в ручную</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"edit_tile"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">local</span><span class="rvts6"> doorpos = vmath.vector3(430, 365, 0)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_message(self, message_id, message, sender)</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">if</span><span class="rvts6"> message_id == hash(</span><span class="rvts24">"edit_tile"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">local</span><span class="rvts6"> doorpos = vmath.vector3(430, 365, 0)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), tile = 0, position = doorpos, dy = 1})</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">doorpos = vmath.vector3(500, 360, 0)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), tile = 0, position = doorpos, dy = 1})</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p class="rvps2"><span class="rvts6">Координаты определяются по нажатию клавиши мыши</span></p>
-<p class="rvps2"><span class="rvts65">function</span><span class="rvts6"> on_input(self, action_id, action)</span></p>
-<p class="rvps5"><span class="rvts65">if</span><span class="rvts6"> action_id == hash(</span><span class="rvts24">"touch"</span><span class="rvts6">) </span><span class="rvts65">then</span></p>
-<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">local</span><span class="rvts6"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
+<p class="rvps2"><span class="rvts66">function</span><span class="rvts6"> on_input(self, action_id, action)</span></p>
+<p class="rvps5"><span class="rvts66">if</span><span class="rvts6"> action_id == hash(</span><span class="rvts24">"touch"</span><span class="rvts6">) </span><span class="rvts66">then</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">local</span><span class="rvts6"> pos = vmath.vector3(action.x, action.y - 64, 0)</span></p>
 <p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">msg.post(</span><span class="rvts24">"/test_tile#tilemap"</span><span class="rvts6">, </span><span class="rvts24">"set_tile"</span><span class="rvts6">, {layer_id = hash(</span><span class="rvts24">"layer1"</span><span class="rvts6">), tile = 2, position = pos, dy = 1})</span></p>
-<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts65">end</span></p>
-<p class="rvps2"><span class="rvts65">end</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts66">end</span></p>
+<p class="rvps2"><span class="rvts66">end</span></p>
 <p class="rvps2"><span class="rvts6"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
@@ -157,7 +157,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

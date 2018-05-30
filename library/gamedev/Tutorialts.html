@@ -90,59 +90,59 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts62">module Fabrique {</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;</span><span class="rvts61">export</span><span class="rvts62"> </span><span class="rvts61">class</span><span class="rvts62"> Tutorial </span><span class="rvts61">extends</span><span class="rvts62"> Phaser.Sprite {</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> text:string;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;constructor(game:Phaser.Game, text:string){</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">super</span><span class="rvts62">(game, 0, 0, Atlases.VideoHelp, 0);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.text = text;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.init();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> init():void{</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">let</span><span class="rvts62"> graphics:Phaser.Graphics = </span><span class="rvts61">this</span><span class="rvts62">.game.add.graphics(0, 0);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(10, 0x000000, 1);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(0,0,400,116);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0.6);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(1, 0x000000, 1);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(150,0,250,116);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0.5);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(2, 0xFFFFFF, 0.5);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(0,0,400,116);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.addChild(graphics);</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">let</span><span class="rvts62"> messageText: Phaser.Text = </span><span class="rvts61">this</span><span class="rvts62">.game.add.text(175, 10, </span><span class="rvts61">this</span><span class="rvts62">.text, { font: </span><span class="rvts84">"18px Georgia"</span><span class="rvts62">, fill: </span><span class="rvts84">"#FFFFFF"</span><span class="rvts62">, align: </span><span class="rvts84">"left"</span><span class="rvts62"> });</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">this</span><span class="rvts62">.addChild(messageText);</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">let</span><span class="rvts62"> anim: Phaser.Animation = </span><span class="rvts61">this</span><span class="rvts62">.animations.add(Atlases.VideoHelp);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;anim.onComplete.add(</span><span class="rvts61">this</span><span class="rvts62">.onCompleteVideo, </span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;anim.play(10, </span><span class="rvts61">true</span><span class="rvts62">, </span><span class="rvts61">false</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">private</span><span class="rvts62"> onCompleteVideo():void {</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">public</span><span class="rvts62"> show(x:number, y:number):void {</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts61">let</span><span class="rvts62"> tween: Phaser.Tween = </span><span class="rvts61">this</span><span class="rvts62">.game.add.tween(</span><span class="rvts61">this</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tween.to({ x: x, y:y}, 500, </span><span class="rvts84">'Linear'</span><span class="rvts62">);</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tween.start();</span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62"> &nbsp; &nbsp;}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts62">}</span></p>
+<p class="rvps2"><span class="rvts63">module Fabrique {</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;</span><span class="rvts62">export</span><span class="rvts63"> </span><span class="rvts62">class</span><span class="rvts63"> Tutorial </span><span class="rvts62">extends</span><span class="rvts63"> Phaser.Sprite {</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> text:string;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;constructor(game:Phaser.Game, text:string){</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">super</span><span class="rvts63">(game, 0, 0, Atlases.VideoHelp, 0);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.text = text;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.init();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> init():void{</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">let</span><span class="rvts63"> graphics:Phaser.Graphics = </span><span class="rvts62">this</span><span class="rvts63">.game.add.graphics(0, 0);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(10, 0x000000, 1);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(0,0,400,116);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0.6);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(1, 0x000000, 1);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(150,0,250,116);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.beginFill(0x000000, 0.5);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.lineStyle(2, 0xFFFFFF, 0.5);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.drawRect(0,0,400,116);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.endFill();</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.addChild(graphics);</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">let</span><span class="rvts63"> messageText: Phaser.Text = </span><span class="rvts62">this</span><span class="rvts63">.game.add.text(175, 10, </span><span class="rvts62">this</span><span class="rvts63">.text, { font: </span><span class="rvts85">"18px Georgia"</span><span class="rvts63">, fill: </span><span class="rvts85">"#FFFFFF"</span><span class="rvts63">, align: </span><span class="rvts85">"left"</span><span class="rvts63"> });</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">this</span><span class="rvts63">.addChild(messageText);</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">let</span><span class="rvts63"> anim: Phaser.Animation = </span><span class="rvts62">this</span><span class="rvts63">.animations.add(Atlases.VideoHelp);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;anim.onComplete.add(</span><span class="rvts62">this</span><span class="rvts63">.onCompleteVideo, </span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;anim.play(10, </span><span class="rvts62">true</span><span class="rvts63">, </span><span class="rvts62">false</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">private</span><span class="rvts63"> onCompleteVideo():void {</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">public</span><span class="rvts63"> show(x:number, y:number):void {</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts62">let</span><span class="rvts63"> tween: Phaser.Tween = </span><span class="rvts62">this</span><span class="rvts63">.game.add.tween(</span><span class="rvts62">this</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tween.to({ x: x, y:y}, 500, </span><span class="rvts85">'Linear'</span><span class="rvts63">);</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tween.start();</span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts63">}</span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
 
@@ -152,7 +152,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

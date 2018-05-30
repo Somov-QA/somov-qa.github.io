@@ -15,7 +15,7 @@
       var sTopic = "";
       if (top.location.href.lastIndexOf("?") > 0)
         sTopic = top.location.href.substring(top.location.href.lastIndexOf("?") + 1, top.location.href.length);
-      if (sTopic == "") sTopic = "Newtopic.html";
+      if (sTopic == "") sTopic = "vscode.html";
 	  sTopic = escapeHtml(sTopic);
       document.write('<frameset cols="300,*">');
       document.write('<frame src="toc.html" name="FrameTOC">');
@@ -28,7 +28,7 @@
 <noscript>
 	<frameset cols="300,*">
 		<frame src="toc.html" name="FrameTOC">
-		<frame src="Newtopic.html" name="FrameMain">
+		<frame src="vscode.html" name="FrameMain">
 	</frameset>
 </noscript>
 

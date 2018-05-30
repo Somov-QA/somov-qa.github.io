@@ -90,82 +90,82 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts52">var stage = new PIXI.Container();</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">var menuStage;</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">var styleTextButton = {</span></p>
-<p class="rvps5"><span class="rvts52">font : 'bold 12px Arial',</span></p>
-<p class="rvps5"><span class="rvts52">fill : '#F7EDCA',</span></p>
-<p class="rvps5"><span class="rvts52">stroke : '#500000',</span></p>
-<p class="rvps5"><span class="rvts52">strokeThickness : 3,</span></p>
-<p class="rvps5"><span class="rvts52">wordWrap : true,</span></p>
-<p class="rvps5"><span class="rvts52">wordWrapWidth : 440</span></p>
-<p class="rvps2"><span class="rvts52">};</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function menuShow()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">var button;</span></p>
-<p class="rvps5"><span class="rvts52">var textButton;</span></p>
-<p class="rvps5"><span class="rvts52">var textButtonsRus = ["Кнопка 1","Кнопка 2","Кнопка 3"];</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">menuStage = new PIXI.Container();</span></p>
-<p class="rvps5"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">for(var i = 0; i &lt; textButtonsRus.length; i++)</span></p>
-<p class="rvps5"><span class="rvts52">{</span></p>
-<p class="rvps7"><span class="rvts52">textButton = new PIXI.</span><span class="rvts54">Text</span><span class="rvts52">(textButtonsRus[i], styleTextButton);</span></p>
-<p class="rvps7"><span class="rvts52">textButton.x = (170 / 2) - (textButton.width / 2);</span></p>
-<p class="rvps7"><span class="rvts52">textButton.y = 20;</span></p>
-<p class="rvps7"><span class="rvts52"><br/></span></p>
-<p class="rvps7"><span class="rvts52">button = new PIXI.</span><span class="rvts54">Sprite</span><span class="rvts52">(buttonTexture);</span></p>
-<p class="rvps7"><span class="rvts52">button.name = "button" + i;</span></p>
-<p class="rvps7"><span class="rvts52">button.position.x = (MAIN_WIDTH / 2) - (170 / 2);</span></p>
-<p class="rvps7"><span class="rvts52">button.position.y = (MAIN_HEIGH / 3) + (55 * i);</span></p>
-<p class="rvps7"><span class="rvts52">button.</span><span class="rvts54">interactive</span><span class="rvts52"> = true;</span></p>
-<p class="rvps7"><span class="rvts52"><br/></span></p>
-<p class="rvps7"><span class="rvts52">/* события */</span></p>
-<p class="rvps7"><span class="rvts52">button.tap = onMenuButtonClick;</span></p>
-<p class="rvps7"><span class="rvts52">button.click = onMenuButtonClick;</span></p>
-<p class="rvps7"><span class="rvts52">button.on('mousedown', onMenuButtonDown);</span></p>
-<p class="rvps7"><span class="rvts52">button.on('touchstart', onMenuButtonDown);</span></p>
-<p class="rvps7"><span class="rvts52">button.on('mouseup', onMenuButtonUp);</span></p>
-<p class="rvps7"><span class="rvts52">button.on('touchend', onMenuButtonUp);</span></p>
-<p class="rvps7"><span class="rvts52">button.on('mouseupoutside', onMenuButtonUp);</span></p>
-<p class="rvps7"><span class="rvts52">button.on('touchendoutside', onMenuButtonUp);</span></p>
-<p class="rvps7"><span class="rvts52">button.addChild(textButton);</span></p>
-<p class="rvps7"><span class="rvts52"><br/></span></p>
-<p class="rvps7"><span class="rvts52">menuStage.addChild(button);</span></p>
-<p class="rvps5"><span class="rvts52">}</span></p>
-<p class="rvps5"><span class="rvts52">stage.addChild(menuStage);</span></p>
-<p class="rvps5"><span class="rvts52">console.log("Create window: menu");</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onMenuButtonDown()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">this.isdown = true;</span></p>
-<p class="rvps5"><span class="rvts52">this.scale.set(0.95);</span></p>
-<p class="rvps5"><span class="rvts52">this.position.x += 5; </span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onMenuButtonUp()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">if(this.isdown)</span></p>
-<p class="rvps5"><span class="rvts52">{</span></p>
-<p class="rvps7"><span class="rvts52">this.isdown = false;</span></p>
-<p class="rvps7"><span class="rvts52">this.scale.set(1.0);</span></p>
-<p class="rvps7"><span class="rvts52">this.position.x -= 5;</span></p>
-<p class="rvps5"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onMenuButtonClick() </span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">if(this.name == "button0")</span></p>
-<p class="rvps5"><span class="rvts52">{</span></p>
-<p class="rvps7"><span class="rvts52">stage.removeChild(menuStage);</span></p>
-<p class="rvps5"><span class="rvts52">}</span></p>
-<p class="rvps5"><span class="rvts52">console.log("Menu click button: " + this.name);</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var stage = new PIXI.Container();</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var menuStage;</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var styleTextButton = {</span></p>
+<p class="rvps5"><span class="rvts53">font : 'bold 12px Arial',</span></p>
+<p class="rvps5"><span class="rvts53">fill : '#F7EDCA',</span></p>
+<p class="rvps5"><span class="rvts53">stroke : '#500000',</span></p>
+<p class="rvps5"><span class="rvts53">strokeThickness : 3,</span></p>
+<p class="rvps5"><span class="rvts53">wordWrap : true,</span></p>
+<p class="rvps5"><span class="rvts53">wordWrapWidth : 440</span></p>
+<p class="rvps2"><span class="rvts53">};</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function menuShow()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">var button;</span></p>
+<p class="rvps5"><span class="rvts53">var textButton;</span></p>
+<p class="rvps5"><span class="rvts53">var textButtonsRus = ["Кнопка 1","Кнопка 2","Кнопка 3"];</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">menuStage = new PIXI.Container();</span></p>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">for(var i = 0; i &lt; textButtonsRus.length; i++)</span></p>
+<p class="rvps5"><span class="rvts53">{</span></p>
+<p class="rvps7"><span class="rvts53">textButton = new PIXI.</span><span class="rvts55">Text</span><span class="rvts53">(textButtonsRus[i], styleTextButton);</span></p>
+<p class="rvps7"><span class="rvts53">textButton.x = (170 / 2) - (textButton.width / 2);</span></p>
+<p class="rvps7"><span class="rvts53">textButton.y = 20;</span></p>
+<p class="rvps7"><span class="rvts53"><br/></span></p>
+<p class="rvps7"><span class="rvts53">button = new PIXI.</span><span class="rvts55">Sprite</span><span class="rvts53">(buttonTexture);</span></p>
+<p class="rvps7"><span class="rvts53">button.name = "button" + i;</span></p>
+<p class="rvps7"><span class="rvts53">button.position.x = (MAIN_WIDTH / 2) - (170 / 2);</span></p>
+<p class="rvps7"><span class="rvts53">button.position.y = (MAIN_HEIGH / 3) + (55 * i);</span></p>
+<p class="rvps7"><span class="rvts53">button.</span><span class="rvts55">interactive</span><span class="rvts53"> = true;</span></p>
+<p class="rvps7"><span class="rvts53"><br/></span></p>
+<p class="rvps7"><span class="rvts53">/* события */</span></p>
+<p class="rvps7"><span class="rvts53">button.tap = onMenuButtonClick;</span></p>
+<p class="rvps7"><span class="rvts53">button.click = onMenuButtonClick;</span></p>
+<p class="rvps7"><span class="rvts53">button.on('mousedown', onMenuButtonDown);</span></p>
+<p class="rvps7"><span class="rvts53">button.on('touchstart', onMenuButtonDown);</span></p>
+<p class="rvps7"><span class="rvts53">button.on('mouseup', onMenuButtonUp);</span></p>
+<p class="rvps7"><span class="rvts53">button.on('touchend', onMenuButtonUp);</span></p>
+<p class="rvps7"><span class="rvts53">button.on('mouseupoutside', onMenuButtonUp);</span></p>
+<p class="rvps7"><span class="rvts53">button.on('touchendoutside', onMenuButtonUp);</span></p>
+<p class="rvps7"><span class="rvts53">button.addChild(textButton);</span></p>
+<p class="rvps7"><span class="rvts53"><br/></span></p>
+<p class="rvps7"><span class="rvts53">menuStage.addChild(button);</span></p>
+<p class="rvps5"><span class="rvts53">}</span></p>
+<p class="rvps5"><span class="rvts53">stage.addChild(menuStage);</span></p>
+<p class="rvps5"><span class="rvts53">console.log("Create window: menu");</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onMenuButtonDown()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">this.isdown = true;</span></p>
+<p class="rvps5"><span class="rvts53">this.scale.set(0.95);</span></p>
+<p class="rvps5"><span class="rvts53">this.position.x += 5; </span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onMenuButtonUp()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">if(this.isdown)</span></p>
+<p class="rvps5"><span class="rvts53">{</span></p>
+<p class="rvps7"><span class="rvts53">this.isdown = false;</span></p>
+<p class="rvps7"><span class="rvts53">this.scale.set(1.0);</span></p>
+<p class="rvps7"><span class="rvts53">this.position.x -= 5;</span></p>
+<p class="rvps5"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onMenuButtonClick() </span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">if(this.name == "button0")</span></p>
+<p class="rvps5"><span class="rvts53">{</span></p>
+<p class="rvps7"><span class="rvts53">stage.removeChild(menuStage);</span></p>
+<p class="rvps5"><span class="rvts53">}</span></p>
+<p class="rvps5"><span class="rvts53">console.log("Menu click button: " + this.name);</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
 
@@ -175,7 +175,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

@@ -90,196 +90,196 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts85">// Available variables which can be used inside of strings.</span></p>
-<p class="rvps2"><span class="rvts85">// ${workspaceRoot}: the root folder of the team</span></p>
-<p class="rvps2"><span class="rvts85">// ${file}: the current opened file</span></p>
-<p class="rvps2"><span class="rvts85">// ${fileBasename}: the current opened file's basename</span></p>
-<p class="rvps2"><span class="rvts85">// ${fileDirname}: the current opened file's dirname</span></p>
-<p class="rvps2"><span class="rvts85">// ${fileExtname}: the current opened file's extension</span></p>
-<p class="rvps2"><span class="rvts85">// ${cwd}: the current working directory of the spawned process</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// A task runner that calls the Typescript compiler (tsc) and</span></p>
-<p class="rvps2"><span class="rvts85">// Compiles a HelloWorld.ts program</span></p>
-<p class="rvps2"><span class="rvts62">{</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"version"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts78">"0.1.0"</span><span class="rvts62">,</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The command is tsc. Assumes that tsc has been installed using npm install -g typescript</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"command"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts78">"tsc"</span><span class="rvts62">,</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The command is a shell script</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"isShellCommand"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts79">true</span><span class="rvts62">,</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"showOutput"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts78">"silent"</span><span class="rvts62">,</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// args is the HelloWorld program to compile.</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"args"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts62">[</span><span class="rvts78">"--out"</span><span class="rvts62">,</span><span class="rvts78">"bin/game.js"</span><span class="rvts62">],</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// use the standard tsc problem matcher to find compile problems</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// in the output.</span></p>
-<p class="rvps2"><span class="rvts71"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts77">"problemMatcher"</span><span class="rvts62">:</span><span class="rvts71"> </span><span class="rvts78">"$tsc"</span></p>
-<p class="rvps2"><span class="rvts62">}</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// A task runner that calls the Typescript compiler (tsc) and</span></p>
-<p class="rvps2"><span class="rvts85">// compiles based on a tsconfig.json file that is present in</span></p>
-<p class="rvps2"><span class="rvts85">// the root of the folder open in VSCode</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The command is tsc. Assumes that tsc has been installed using npm install -g typescript</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "tsc",</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The command is a shell script</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isShellCommand": true,</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Tell the tsc compiler to use the tsconfig.json from the open folder.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"args": ["-p", "."],</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// use the standard tsc problem matcher to find compile problems</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// in the output.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": "$tsc"</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// A task runner configuration for gulp. Gulp provides a less task</span></p>
-<p class="rvps2"><span class="rvts85">// which compiles less to css.</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "gulp",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isShellCommand": true,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"tasks": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskName": "less",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Make this the default build command.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isBuildCommand": true,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Use the standard less compilation problem matcher.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": "$lessCompile"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// Uncomment the following section to use jake to build a workspace</span></p>
-<p class="rvps2"><span class="rvts85">// cloned from https://github.com/Microsoft/TypeScript.git</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Task runner is jake</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "jake",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Need to be executed in shell / cmd</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isShellCommand": true,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"tasks": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// TS build command is local.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskName": "local",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Make this the default build command.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isBuildCommand": true,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Use the redefined Typescript output problem matcher.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"$tsc"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// Uncomment the section below to use msbuild and generate problems</span></p>
-<p class="rvps2"><span class="rvts85">// for csc, cpp, tsc and vb. The configuration assumes that msbuild</span></p>
-<p class="rvps2"><span class="rvts85">// is available on the path and a solution file exists in the</span></p>
-<p class="rvps2"><span class="rvts85">// workspace folder root.</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "msbuild",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"args": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Ask msbuild to generate full paths for file names.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"/property:GenerateFullPaths=true"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">],</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskSelector": "/t:",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"tasks": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskName": "build",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Use the standard MS compiler pattern to detect errors, warnings</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// and infos in the output.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": "$msCompile"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
-<p class="rvps2"><span class="rvts71"><br/></span></p>
-<p class="rvps2"><span class="rvts85">// Uncomment the following section to use msbuild which compiles Typescript</span></p>
-<p class="rvps2"><span class="rvts85">// and less files.</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "msbuild",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"args": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Ask msbuild to generate full paths for file names.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"/property:GenerateFullPaths=true"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">],</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskSelector": "/t:",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"tasks": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"taskName": "build",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Show the output window only if unrecognized errors occur.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// Use the standard MS compiler pattern to detect errors, warnings</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// and infos in the output.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": [</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"$msCompile",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"$lessCompile"</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">]</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
-<p class="rvps2"><span class="rvts85">// A task runner example that defines a problemMatcher inline instead of using</span></p>
-<p class="rvps2"><span class="rvts85">// a predefined one.</span></p>
-<p class="rvps2"><span class="rvts85">/*</span></p>
-<p class="rvps2"><span class="rvts85">{</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"version": "0.1.0",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"command": "tsc",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"isShellCommand": true,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"args": ["HelloWorld.ts"],</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"showOutput": "silent",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"problemMatcher": {</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The problem is owned by the typescript language service. Ensure that the problems</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// are merged with problems produced by Visual Studio's language service.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"owner": "typescript",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The file name for reported problems is relative to the current working directory.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"fileLocation": ["relative", "${cwd}"],</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The actual pattern to match problems in the output.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"pattern": {</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The regular expression. Matches HelloWorld.ts(2,10): error TS2339: Property 'logg' does not exist on type 'Console'.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"regexp": "^([^\\s].*)\\((\\d+|\\d+,\\d+|\\d+,\\d+,\\d+,\\d+)\\):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The match group that denotes the file containing the problem.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"file": 1,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The match group that denotes the problem location.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"location": 2,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The match group that denotes the problem's severity. Can be omitted.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"severity": 3,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The match group that denotes the problem code. Can be omitted.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"code": 4,</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">// The match group that denotes the problem's message.</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">"message": 5</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">}</span></p>
-<p class="rvps2"><span class="rvts85">*/</span></p>
+<p class="rvps2"><span class="rvts86">// Available variables which can be used inside of strings.</span></p>
+<p class="rvps2"><span class="rvts86">// ${workspaceRoot}: the root folder of the team</span></p>
+<p class="rvps2"><span class="rvts86">// ${file}: the current opened file</span></p>
+<p class="rvps2"><span class="rvts86">// ${fileBasename}: the current opened file's basename</span></p>
+<p class="rvps2"><span class="rvts86">// ${fileDirname}: the current opened file's dirname</span></p>
+<p class="rvps2"><span class="rvts86">// ${fileExtname}: the current opened file's extension</span></p>
+<p class="rvps2"><span class="rvts86">// ${cwd}: the current working directory of the spawned process</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// A task runner that calls the Typescript compiler (tsc) and</span></p>
+<p class="rvps2"><span class="rvts86">// Compiles a HelloWorld.ts program</span></p>
+<p class="rvps2"><span class="rvts63">{</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"version"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts79">"0.1.0"</span><span class="rvts63">,</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The command is tsc. Assumes that tsc has been installed using npm install -g typescript</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"command"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts79">"tsc"</span><span class="rvts63">,</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The command is a shell script</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"isShellCommand"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts80">true</span><span class="rvts63">,</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"showOutput"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts79">"silent"</span><span class="rvts63">,</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// args is the HelloWorld program to compile.</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"args"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts63">[</span><span class="rvts79">"--out"</span><span class="rvts63">,</span><span class="rvts79">"bin/game.js"</span><span class="rvts63">],</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// use the standard tsc problem matcher to find compile problems</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// in the output.</span></p>
+<p class="rvps2"><span class="rvts72"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts78">"problemMatcher"</span><span class="rvts63">:</span><span class="rvts72"> </span><span class="rvts79">"$tsc"</span></p>
+<p class="rvps2"><span class="rvts63">}</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// A task runner that calls the Typescript compiler (tsc) and</span></p>
+<p class="rvps2"><span class="rvts86">// compiles based on a tsconfig.json file that is present in</span></p>
+<p class="rvps2"><span class="rvts86">// the root of the folder open in VSCode</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The command is tsc. Assumes that tsc has been installed using npm install -g typescript</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "tsc",</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The command is a shell script</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isShellCommand": true,</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Tell the tsc compiler to use the tsconfig.json from the open folder.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"args": ["-p", "."],</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// use the standard tsc problem matcher to find compile problems</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// in the output.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": "$tsc"</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// A task runner configuration for gulp. Gulp provides a less task</span></p>
+<p class="rvps2"><span class="rvts86">// which compiles less to css.</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "gulp",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isShellCommand": true,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"tasks": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskName": "less",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Make this the default build command.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isBuildCommand": true,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Use the standard less compilation problem matcher.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": "$lessCompile"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// Uncomment the following section to use jake to build a workspace</span></p>
+<p class="rvps2"><span class="rvts86">// cloned from https://github.com/Microsoft/TypeScript.git</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Task runner is jake</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "jake",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Need to be executed in shell / cmd</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isShellCommand": true,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"tasks": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// TS build command is local.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskName": "local",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Make this the default build command.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isBuildCommand": true,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Use the redefined Typescript output problem matcher.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"$tsc"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// Uncomment the section below to use msbuild and generate problems</span></p>
+<p class="rvps2"><span class="rvts86">// for csc, cpp, tsc and vb. The configuration assumes that msbuild</span></p>
+<p class="rvps2"><span class="rvts86">// is available on the path and a solution file exists in the</span></p>
+<p class="rvps2"><span class="rvts86">// workspace folder root.</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "msbuild",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"args": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Ask msbuild to generate full paths for file names.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"/property:GenerateFullPaths=true"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">],</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskSelector": "/t:",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"tasks": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskName": "build",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Use the standard MS compiler pattern to detect errors, warnings</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// and infos in the output.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": "$msCompile"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
+<p class="rvps2"><span class="rvts72"><br/></span></p>
+<p class="rvps2"><span class="rvts86">// Uncomment the following section to use msbuild which compiles Typescript</span></p>
+<p class="rvps2"><span class="rvts86">// and less files.</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "msbuild",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"args": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Ask msbuild to generate full paths for file names.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"/property:GenerateFullPaths=true"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">],</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskSelector": "/t:",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"tasks": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"taskName": "build",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Show the output window only if unrecognized errors occur.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// Use the standard MS compiler pattern to detect errors, warnings</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// and infos in the output.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": [</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"$msCompile",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"$lessCompile"</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">]</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
+<p class="rvps2"><span class="rvts86">// A task runner example that defines a problemMatcher inline instead of using</span></p>
+<p class="rvps2"><span class="rvts86">// a predefined one.</span></p>
+<p class="rvps2"><span class="rvts86">/*</span></p>
+<p class="rvps2"><span class="rvts86">{</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"version": "0.1.0",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"command": "tsc",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"isShellCommand": true,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"args": ["HelloWorld.ts"],</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"showOutput": "silent",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"problemMatcher": {</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The problem is owned by the typescript language service. Ensure that the problems</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// are merged with problems produced by Visual Studio's language service.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"owner": "typescript",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The file name for reported problems is relative to the current working directory.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"fileLocation": ["relative", "${cwd}"],</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The actual pattern to match problems in the output.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"pattern": {</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The regular expression. Matches HelloWorld.ts(2,10): error TS2339: Property 'logg' does not exist on type 'Console'.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"regexp": "^([^\\s].*)\\((\\d+|\\d+,\\d+|\\d+,\\d+,\\d+,\\d+)\\):\\s+(error|warning|info)\\s+(TS\\d+)\\s*:\\s*(.*)$",</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The match group that denotes the file containing the problem.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"file": 1,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The match group that denotes the problem location.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"location": 2,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The match group that denotes the problem's severity. Can be omitted.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"severity": 3,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The match group that denotes the problem code. Can be omitted.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"code": 4,</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">// The match group that denotes the problem's message.</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">"message": 5</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">}</span></p>
+<p class="rvps2"><span class="rvts86">*/</span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
 
@@ -289,7 +289,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

@@ -90,46 +90,46 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts52">var stage = new PIXI.Container();</span></p>
-<p class="rvps2"><span class="rvts52">var windowSprite;</span></p>
-<p class="rvps2"><span class="rvts52">var windowStage;</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function createWindow()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">windowSprite = new PIXI.Sprite(bgTexture);</span></p>
-<p class="rvps5"><span class="rvts52">windowSprite.name = "windowSprite";</span></p>
-<p class="rvps5"><span class="rvts52">windowSprite.position.x = 800;</span></p>
-<p class="rvps5"><span class="rvts52">windowSprite.position.y = (600 / 3.6);</span></p>
-<p class="rvps5"><span class="rvts52">stage.addChild(windowSprite);</span></p>
-<p class="rvps5"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">windowStage = new PIXI.Container();</span></p>
-<p class="rvps5"><span class="rvts52">windowStage.addChild(windowSprite);</span></p>
-<p class="rvps5"><span class="rvts52">stage.addChild(windowStage);</span></p>
-<p class="rvps5"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">startTween();</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function startTween()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">createjs.Tween.get(windowSprite, {loop: false})</span></p>
-<p class="rvps7"><span class="rvts52">.to({x: 580}, 1000, createjs.Ease.getPowInOut(4));</span></p>
-<p class="rvps7"><span class="rvts52">.to({alpha: 0, y: 75}, 500, createjs.Ease.getPowInOut(2))</span></p>
-<p class="rvps7"><span class="rvts52">.to({alpha: 0, y: 125}, 100)</span></p>
-<p class="rvps7"><span class="rvts52">.to({alpha: 1, y: 100}, 500, createjs.Ease.getPowInOut(2))</span></p>
-<p class="rvps7"><span class="rvts52">.to({x: 100}, 800, createjs.Ease.getPowInOut(2));</span></p>
-<p class="rvps7"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">createjs.Tween.get(windowStage, {loop: false})</span></p>
-<p class="rvps7"><span class="rvts52">.to({x: 0, y: -1250}, 5000, createjs.Ease.getPowInOut(1));</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">createjs.Ticker.setFPS(60);</span></p>
-<p class="rvps5"><span class="rvts52">createjs.Ticker.addEventListener("tick", stage);</span></p>
-<p class="rvps2"><span class="rvts52">},</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function tweenStop()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">createjs.Tween.removeTweens(windowSprite);</span></p>
-<p class="rvps2"><span class="rvts52">},</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var stage = new PIXI.Container();</span></p>
+<p class="rvps2"><span class="rvts53">var windowSprite;</span></p>
+<p class="rvps2"><span class="rvts53">var windowStage;</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function createWindow()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">windowSprite = new PIXI.Sprite(bgTexture);</span></p>
+<p class="rvps5"><span class="rvts53">windowSprite.name = "windowSprite";</span></p>
+<p class="rvps5"><span class="rvts53">windowSprite.position.x = 800;</span></p>
+<p class="rvps5"><span class="rvts53">windowSprite.position.y = (600 / 3.6);</span></p>
+<p class="rvps5"><span class="rvts53">stage.addChild(windowSprite);</span></p>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">windowStage = new PIXI.Container();</span></p>
+<p class="rvps5"><span class="rvts53">windowStage.addChild(windowSprite);</span></p>
+<p class="rvps5"><span class="rvts53">stage.addChild(windowStage);</span></p>
+<p class="rvps5"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">startTween();</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function startTween()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">createjs.Tween.get(windowSprite, {loop: false})</span></p>
+<p class="rvps7"><span class="rvts53">.to({x: 580}, 1000, createjs.Ease.getPowInOut(4));</span></p>
+<p class="rvps7"><span class="rvts53">.to({alpha: 0, y: 75}, 500, createjs.Ease.getPowInOut(2))</span></p>
+<p class="rvps7"><span class="rvts53">.to({alpha: 0, y: 125}, 100)</span></p>
+<p class="rvps7"><span class="rvts53">.to({alpha: 1, y: 100}, 500, createjs.Ease.getPowInOut(2))</span></p>
+<p class="rvps7"><span class="rvts53">.to({x: 100}, 800, createjs.Ease.getPowInOut(2));</span></p>
+<p class="rvps7"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">createjs.Tween.get(windowStage, {loop: false})</span></p>
+<p class="rvps7"><span class="rvts53">.to({x: 0, y: -1250}, 5000, createjs.Ease.getPowInOut(1));</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">createjs.Ticker.setFPS(60);</span></p>
+<p class="rvps5"><span class="rvts53">createjs.Ticker.addEventListener("tick", stage);</span></p>
+<p class="rvps2"><span class="rvts53">},</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function tweenStop()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">createjs.Tween.removeTweens(windowSprite);</span></p>
+<p class="rvps2"><span class="rvts53">},</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
 
@@ -139,7 +139,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	

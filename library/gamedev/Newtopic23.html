@@ -90,85 +90,85 @@
 	<div id="topic_content">
 		
 <p></p>
-<p class="rvps2"><span class="rvts52">var bgTexture; </span><span class="rvts52"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts52"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts52">// background.jpg</span></p>
-<p class="rvps2"><span class="rvts52">var buttonTexture; </span><span class="rvts52"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts52">// button.png</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">/* game.json */</span></p>
-<p class="rvps2"><span class="rvts52">var bgCharacterWindowTexture; // character_background_small.png</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">/* blood.json */</span></p>
-<p class="rvps2"><span class="rvts52">var animTexBlood = [];</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">var bgPreloaderSprite;</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function preloaderShow()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">var loader = new PIXI.loaders.</span><span class="rvts54">Loader</span><span class="rvts52">();</span></p>
-<p class="rvps5"><span class="rvts52">loader.add('preloaderImage',"./assets/image/preloader.jpg");</span></p>
-<p class="rvps5"><span class="rvts52">loader.once('complete',onPreloaderLoaded);</span></p>
-<p class="rvps5"><span class="rvts52">loader.load();</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onPreloaderLoaded(loader, res) </span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">bgPreloaderSprite = new PIXI.Sprite(res.preloaderImage.texture);</span></p>
-<p class="rvps5"><span class="rvts52">bgPreloaderSprite.position.x = 0;</span></p>
-<p class="rvps5"><span class="rvts52">bgPreloaderSprite.position.y = 0;</span></p>
-<p class="rvps5"><span class="rvts52">stage.addChild(bgPreloaderSprite);</span></p>
-<p class="rvps5"><span class="rvts52">console.log("Preloader: show");</span></p>
-<p class="rvps5"><span class="rvts52">loadAssets();</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function loadAssets()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">var loader = new PIXI.loaders.Loader();</span></p>
-<p class="rvps5"><span class="rvts52">loader.add('bgImage','./assets/image/background.jpg');</span></p>
-<p class="rvps5"><span class="rvts52">loader.add('buttonImage','./assets/image/button.png');</span></p>
-<p class="rvps5"><span class="rvts52">loader.add('gameAtlas','./assets/image/quest/atlas/game.json');</span></p>
-<p class="rvps5"><span class="rvts52">loader.add('bloodAtlas','./assets/image/quest/atlas/blood.json');</span></p>
-<p class="rvps5"><span class="rvts52">loader.once('complete',onAssetsLoaded);</span></p>
-<p class="rvps5"><span class="rvts52">loader.once('progress',onProgressLoad);</span></p>
-<p class="rvps5"><span class="rvts52">loader.load();</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onProgressLoad()</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">console.log("Progress load!");</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function onAssetsLoaded(loader, res) </span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">bgTexture = res.bgImage.texture; /* background.jpg */</span></p>
-<p class="rvps5"><span class="rvts52">buttonTexture = res.buttonImage.texture; /* button.png */</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">/* game.json (Атлас различных текстур)*/</span></p>
-<p class="rvps5"><span class="rvts52">bgCharacterWindowTexture = PIXI.Texture.fromFrame('character_background_small.png');</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps5"><span class="rvts52">/* blood.json (Атлас анимации)*/</span></p>
-<p class="rvps5"><span class="rvts52">animTexBlood = loadAnimationTextures(14, 'blood_');</span></p>
-<p class="rvps5"><span class="rvts52">console.log("Load all assets - complete!");</span></p>
-<p class="rvps5"><span class="rvts52">stage.removeChild(bgPreloaderSprite);</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52">function loadAnimationTextures(countFrame, nameFrame)</span></p>
-<p class="rvps2"><span class="rvts52">{</span></p>
-<p class="rvps5"><span class="rvts52">var nameTexture;</span></p>
-<p class="rvps5"><span class="rvts52">var animTextures = [];</span></p>
-<p class="rvps5"><span class="rvts52">for(var i = 1; i &lt; countFrame; i++)</span></p>
-<p class="rvps5"><span class="rvts52">{</span></p>
-<p class="rvps7"><span class="rvts52">if(i &lt; 10)</span></p>
-<p class="rvps7"><span class="rvts52">{</span></p>
-<p class="rvps8"><span class="rvts52">nameTexture = nameFrame + '0' + i + '.png'</span></p>
-<p class="rvps7"><span class="rvts52">}else{</span></p>
-<p class="rvps8"><span class="rvts52">nameTexture = nameFrame + i + '.png'</span></p>
-<p class="rvps7"><span class="rvts52">}</span></p>
-<p class="rvps7"><span class="rvts52">var texture = PIXI.Texture.fromFrame(nameTexture);</span></p>
-<p class="rvps7"><span class="rvts52">animTextures.push(texture);</span></p>
-<p class="rvps5"><span class="rvts52">}</span></p>
-<p class="rvps5"><span class="rvts52">return animTextures;</span></p>
-<p class="rvps2"><span class="rvts52">}</span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
-<p class="rvps2"><span class="rvts52"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var bgTexture; </span><span class="rvts53"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">// background.jpg</span></p>
+<p class="rvps2"><span class="rvts53">var buttonTexture; </span><span class="rvts53"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">// button.png</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">/* game.json */</span></p>
+<p class="rvps2"><span class="rvts53">var bgCharacterWindowTexture; // character_background_small.png</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">/* blood.json */</span></p>
+<p class="rvps2"><span class="rvts53">var animTexBlood = [];</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">var bgPreloaderSprite;</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function preloaderShow()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">var loader = new PIXI.loaders.</span><span class="rvts55">Loader</span><span class="rvts53">();</span></p>
+<p class="rvps5"><span class="rvts53">loader.add('preloaderImage',"./assets/image/preloader.jpg");</span></p>
+<p class="rvps5"><span class="rvts53">loader.once('complete',onPreloaderLoaded);</span></p>
+<p class="rvps5"><span class="rvts53">loader.load();</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onPreloaderLoaded(loader, res) </span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">bgPreloaderSprite = new PIXI.Sprite(res.preloaderImage.texture);</span></p>
+<p class="rvps5"><span class="rvts53">bgPreloaderSprite.position.x = 0;</span></p>
+<p class="rvps5"><span class="rvts53">bgPreloaderSprite.position.y = 0;</span></p>
+<p class="rvps5"><span class="rvts53">stage.addChild(bgPreloaderSprite);</span></p>
+<p class="rvps5"><span class="rvts53">console.log("Preloader: show");</span></p>
+<p class="rvps5"><span class="rvts53">loadAssets();</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function loadAssets()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">var loader = new PIXI.loaders.Loader();</span></p>
+<p class="rvps5"><span class="rvts53">loader.add('bgImage','./assets/image/background.jpg');</span></p>
+<p class="rvps5"><span class="rvts53">loader.add('buttonImage','./assets/image/button.png');</span></p>
+<p class="rvps5"><span class="rvts53">loader.add('gameAtlas','./assets/image/quest/atlas/game.json');</span></p>
+<p class="rvps5"><span class="rvts53">loader.add('bloodAtlas','./assets/image/quest/atlas/blood.json');</span></p>
+<p class="rvps5"><span class="rvts53">loader.once('complete',onAssetsLoaded);</span></p>
+<p class="rvps5"><span class="rvts53">loader.once('progress',onProgressLoad);</span></p>
+<p class="rvps5"><span class="rvts53">loader.load();</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onProgressLoad()</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">console.log("Progress load!");</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function onAssetsLoaded(loader, res) </span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">bgTexture = res.bgImage.texture; /* background.jpg */</span></p>
+<p class="rvps5"><span class="rvts53">buttonTexture = res.buttonImage.texture; /* button.png */</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">/* game.json (Атлас различных текстур)*/</span></p>
+<p class="rvps5"><span class="rvts53">bgCharacterWindowTexture = PIXI.Texture.fromFrame('character_background_small.png');</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps5"><span class="rvts53">/* blood.json (Атлас анимации)*/</span></p>
+<p class="rvps5"><span class="rvts53">animTexBlood = loadAnimationTextures(14, 'blood_');</span></p>
+<p class="rvps5"><span class="rvts53">console.log("Load all assets - complete!");</span></p>
+<p class="rvps5"><span class="rvts53">stage.removeChild(bgPreloaderSprite);</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53">function loadAnimationTextures(countFrame, nameFrame)</span></p>
+<p class="rvps2"><span class="rvts53">{</span></p>
+<p class="rvps5"><span class="rvts53">var nameTexture;</span></p>
+<p class="rvps5"><span class="rvts53">var animTextures = [];</span></p>
+<p class="rvps5"><span class="rvts53">for(var i = 1; i &lt; countFrame; i++)</span></p>
+<p class="rvps5"><span class="rvts53">{</span></p>
+<p class="rvps7"><span class="rvts53">if(i &lt; 10)</span></p>
+<p class="rvps7"><span class="rvts53">{</span></p>
+<p class="rvps8"><span class="rvts53">nameTexture = nameFrame + '0' + i + '.png'</span></p>
+<p class="rvps7"><span class="rvts53">}else{</span></p>
+<p class="rvps8"><span class="rvts53">nameTexture = nameFrame + i + '.png'</span></p>
+<p class="rvps7"><span class="rvts53">}</span></p>
+<p class="rvps7"><span class="rvts53">var texture = PIXI.Texture.fromFrame(nameTexture);</span></p>
+<p class="rvps7"><span class="rvts53">animTextures.push(texture);</span></p>
+<p class="rvps5"><span class="rvts53">}</span></p>
+<p class="rvps5"><span class="rvts53">return animTextures;</span></p>
+<p class="rvps2"><span class="rvts53">}</span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
+<p class="rvps2"><span class="rvts53"><br/></span></p>
 <p></p>
 <p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
 
@@ -178,7 +178,7 @@
 		<div id="topic_footer">
 
 			<div id="topic_footer_content">
-				Copyright &copy; 2018 by Somov. All Rights Reserved.
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.
 			</div>
 		</div>
 	
