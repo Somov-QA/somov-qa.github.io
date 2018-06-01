@@ -242,7 +242,7 @@ a:active {
 }
 
 .SectionWhite{
-    border-top: 10px solid #666666;
+    border-top: 10px solid #555555;
     background-color: #FFFFFF;
     background-image: url(../img/triangle-gray.png);
     background-position-x: center;
@@ -262,7 +262,7 @@ a:active {
 
 .SectionBlack{
     border-top: 10px solid #FFFFFF;
-    background-color: #666666;
+    background-color: #555555;
     background-image: url(../img/triangle-white.png);
     background-position-x: center;
     background-repeat: no-repeat;
