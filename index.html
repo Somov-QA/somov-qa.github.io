@@ -11,9 +11,11 @@
 </head>
 <body>
 	<!-- MENU -->
-	<nav class="Menu">
-		<div class="PanelMenu">
-			<ul>
+	<nav>
+		<div class="menu-wrapper">
+			<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
+			<input type="checkbox" name="menu-check" id="menuCheck">
+			<ul class="menu">
 				<li><a href="index.html" id="selectPage">Обо мне</a></li>
 				<li><a href="portfolio.html">Портфолио</a></li>
 				<li><a href="qa.html">Тестирование</a></li>
@@ -24,450 +26,438 @@
 		</div>
 	</nav>
 
-
+	
 	<!-- HEADER -->
 	<header>
 		<div id="backgroundImage"></div>
-		<div class="Name">Somov Engeniy</div>
-		<div class="Profession">Quality Assurance</div>
+		<div class="header-profession">
+			<div class="header-greeting">
+				<div class="header-photo">
+					<img src="./img/foto.png" alt="Somov Evgeniy - Foto" class="my-foto">
+				</div>
+				<div class="header-description">
+					Добро пожаловать на сайт. 
+					<br>Меня зовут <b>Сомов Евгений Павлович</b>, QA Middle специалист в области QA/QC тестирования программного обеспечения с пятилетним стажем работы. 
+					<br>В данное время занимаю должность <b>QA Engineer</b> в компании <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>.
+					<br>В свободное время от работы веду активную разработку и продвижение собственного проекта <a href="https://catfishstudio.github.io/" target="_blank">Catfish Studio Games</a>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<!-- CONTENT -->
-	<section class="SectionStart">
-		<div class="PageTitle">Основная информация</div>
-		<div class="Greeting">
-			<table>
-				<tr>
-					<td class="TD25">
-						<img src="./img/foto.png" alt="Somov Evgeniy - Foto" class="MyFoto">
-					</td>
-					<td class="TD75">
-						Добро пожаловать на сайт. 
-						<br>Меня зовут <b>Сомов Евгений Павлович</b>. 
-						<br>Я специалист в области QA/QC тестирования программного обеспечения с пятилетним стажем работы. 
-						<br>В данное время занимаю должность <b>QA Engineer</b> в компании <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>.
-						<br>В свободное время от работы веду активную разработку и продвижение собственного проекта <a href="https://catfishstudio.github.io/" target="_blank">Catfish Studio Games</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<br>
-		<div class="Content">
-			<h2 class="TitleBlack">Информация | Специализация | Навыки | Технологии </h2>
-			<table>
-				<tr>
-					<td>
-						<p>
-						<h3>Общая информация:</h3>
-						<br>
-						<div class="Block">
-							<b>ФИО:</b> Сомов Евгений Павлович
-							<br><b>Дата рождения:</b> 11.01.1984
-							<br><b>Образование:</b> высшее 
-							<br><b>Специальность:</b> компьютерная инженерия 
-							<br><b>Место работы:</b> компания <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
-							<br><b>Должность:</b> QA Engineer.
-							<br><b>Опыт работы:</b> 5-ть лет.
-							<br>
-							<form action="./pdf/resume-somov-qa.pdf" target="_blank">
-							<input type="submit" value="Скачать резюме" class="Button">
-							</form>
-						</div>
-						<br>
-						<h3>Специализация: тестирование программного обеспечения</h3>
-						<br>
-						<div class="Block">
-							<h4>Навыки:</h4>
-							<div class="Block">
-							- Разработка тестовой документации;
-							<br>- Планирование процесса тестирования
-							<br>- Оптимизация процесса тестирования;
-							<br>- Создание методик тестирования и тестовых наборов;
-							<br>- Написание отчетов и выводов о тестировании;
-							<br>- Работа с технической документацией;
-							<br>- Составления чек-листов и тест-кейсов;
-							<br>- Работа с баг-трекером Jira, Redmine;
-							<br>
-							<br>- Связь и взаимодействие со всеми участниками проекта;
-							<br>- Совместная работа с геймдизайнерами;
-							<br>- Контроль выполнения всех пунктов технического задания;
-							<br>- Контроль исправления ошибок;
-							<br>- Проверка требований к продукту и оценка рисков;
-							<br>- Контроль качества продукта
-							<br>
-							<br>- Знание процессов и методов тестирования;
-							<br>- Знание технологий разработки ПО.
-							<br>- Понимание жизненного цикла программных продуктов;
-							<br>- Практические знания в разработке 2D и 3D приложений;
-							<br>
-							<br>- Тестирования мобильных, браузерных и настольных приложений;
-							<br>- Автоматизация тестирования;
-							<br>- Разработка автоматических тестов, доработка существующих, их поддержка и актуализация;
-							<br>
-							<br>- Просмотр кода на наличие очевидных ошибок, уязвимостей, потенциальных угроз, неоптимальная работа алгоритма;
-							<br>- Тестирование Unity приложений в отладчике;
-							<br>- Тестирование трафика входящих и исходящих данных приложения;
-							<br>- Разработка SQL запросов для тестирование серверных данных;
-							<br>
-							<br>- Использование систем контроля версий Git;
-							<br>- Работа в операционных системах Windows, Linux\Unix, Mac OS.
-							</div>
-						</div>
-						<br>
-						<br>
-						<div class="Block">
-							<b>Уровень английского языка:</b> Beginner elementary.
-						</div>
-						</p>
-						<br>
-						<br>
-					</td>
-					<td>
-						<h3>Технологии тестирования:</h3>
-						<br>
-						<div class="Block">
-							<p>
-							<b>JUnit, PHPUnit, NUnit, TestNG</b>
-							<div class="Block">
-						 		Модульное тестирование программного обеспечения.
-							</div>
-							<b>Android Debug Bridge (Android SDK)</b>
-							<div class="Block">
-						 		Широкое применение автоматизации в тестировании мобильных Android приложений. Разработка скриптов на языке Python.
-							</div>
-							<b>Selenium</b>
-							<div class="Block">
-						 		Автоматизация тестирования Web приложений.
-							</div>
-							<b>Appium, SeeTestAutomation, HiroMacro</b>
-							<div class="Block">
-						 		Автоматизация тестирования Mobile приложений.
-							</div>
-							<b>Genie</b>
-							<div class="Block">
-						 		Автоматизация тестирования Flash приложений.
-							</div>
-							</p>
-						</div>
-						<br>
-						<h3>Программные средства тестирования:</h3>
-						<br>
-						<div class="Block">
-							<p>
-							<b>Cheat Engine, Freedom, GameCIH.</b>
-							<div class="Block">
-						 		Тестирование безопасности, проведение взлом тестов.
-							</div>
-							<b>Adobe Scout CC.</b>
-							<div class="Block">
-						 		Проведение анализа Flash приложений.
-							</div>
-							<b>Charles, Fiddler2.</b>
-							<div class="Block">
-						 		Тестирование трафика входящих и исходящих данных приложения используя снифферы.
-							</div>
-							</p>
-						</div>
-						<br>
-						<h3>Технологии разработки 2D и 3D games:</h3>
-						<div class="Block">
-							<p>
-							<br><b>Unity</b>
-							<div class="Block">
-						 		Базовые знания разработки. Опыт тестирования мобильных и настольных приложений.
-							</div>
-							<b>Starling</b> (Flash)
-							<div class="Block">
-								Базовые знания разработки. Опыт тестирования браузерных приложений.
-							</div>
-							<b>PixiJS, Phaser</b> (API Canvas, WebGL)
-							<div class="Block">
-								Продвинутые знания разработки. Опыт разработки и тестирования кроссплатформенных приложений.
-							</div>
-							<b>LibGDX, Defold</b>
-							<div class="Block">
-								Базовые знания разработки. Опыт разработки и тестирования кроссплатформенных приложений.
-							</div>
-							</p>
-						</div>
-						<br>
-						<h3>Технологии разработки Web приложений:</h3>
-						<div class="Block">
-							<p>
-							<br><b> AJAX, jQuery, Node.js, Yii2</b>
-							<div class="Block">
-						 		Базовые знания разработки. Опыт разработки и тестирования браузерных приложений.
-							</div>
-							</p>
-						</div>
-						<br>
-						<h3>Системы управления базами данных:</h3>
-						<div class="Block">
-							<p>
-							<br><b>MySQL, Microsoft SQL Server.</b>
-							<div class="Block">
-						 		Продвинутые знания. Опыт разработки SQL запросов и проектирования баз данных. Опыт тестирования целостности данных.
-							</div>
-							</p>
-						</div>
-						<br>
-						<h3>Языки программирования:</h3>
-						<div class="Block">
-							<p>
-							<br><b>C#, PHP, Java, JavaScript/TypeScript, Python, ActionScript, Lua</b>
-							<div class="Block">
-						 		Базовые знания популярных языков программирования.
-							</div>
-							</p>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</section>
-	
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Образование - Высшее (Компьютерная инженерия)</h2>
-			<table>
-				<tr>
-					<td>
-						Восточноукраинский университет им. В.Даля, Украина, г. Луганск. (бывш. ЛМСИ)<br>
-						Факультет: Компьютерных систем и информационных технологий.<br>
-						Направление подготовки: Компьютерная инженерия.<br>
-						Специальность: Компьютерные системы и сети.<br>
-						Степень: Бакалавр (2014 г.) 
-					</td>
-					<td>
-						<object class="Smallpdf" data="pdf/diploma.pdf" type="application/pdf"></object>
-					</td>
-				</tr>
-			</table>
-
-			<table>
-				<tr>
-					<td>
-						<h4>Центр сертификации Certification.Mail.Ru «HTML5»</h4>
-						<br>
-						<br><a href="https://certification.mail.ru/certificates/496e3259-63a9-4f02-8b51-b866f9fe78bf/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
-					</td>
-					<td>
-						<img src="img/certificate_html.png" alt="Сертификат HTML" width="100%">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Центр сертификации Certification.Mail.Ru «CSS 3»</h4>
-						<br>
-						<br><a href="https://certification.mail.ru/certificates/b0f4e6f1-fe35-43bf-b408-8db2d496cd70/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
-					</td>
-					<td>
-						<img src="img/certificate_css.png" alt="Сертификт CSS" width="100%">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Центр сертификации Certification.Mail.Ru «PHP 5.5 в стандартной конфигурации»</h4>
-						<br>
-						<br><a href="https://certification.mail.ru/certificates/0de01d4a-5d01-4733-8d25-36512496294c/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
-					</td>
-					<td>
-						<img src="img/certificate_php.png" alt="Сертификат PHP 5.5 в стандартной конфигурации" width="100%">
-					</td>
-				</tr>
-			</table>
-	</section>
-
-	<section class="SectionWhite">
-		<div class="Content">
-			<br>
-			<h2 class="TitleBlack">Опыт работы: 5-ть лет</h2>
-			<p>
-				<table>
-				<tr>
-					<th>Компания / Период</th>
-					<th>Описание</th>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/ilogos.png" alt="iLogos"><br>
-						<b>Компания:</b>  <a href="http://ilogosdev.com/" target="_blank">iLogos</a>
-						<br><b>Период работы:</b> 15.04.2013 - 1.10.2013
-					</td>
-					<td>
-						<br><b>Должность:</b> QA.
-						<br><b>Обязанности:</b>
-						<div class="Block">
-							<br>- Ручное тестирование
-							<br>- Тестирование мобильных и социальных приложений
-							<br>- Создание чек-листов и тест-кейсов
-							<br>- Работа в баг трекере Redmine
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/nika.png" alt="nikaent"><br>
-						<b>Компания:</b> <a href="http://nikaent.com" target="_blank">Nika Entertainment</a>
-						<br><b>Период работы:</b> 1.10.2013 - 1.04.2015
-					</td>
-					<td>
-						<br><b>Должность:</b> QA Mobile.
-						<br><b>Обязанности:</b>
-						<div class="Block">
-							<br>- Тестирование мобильных и социальных приложений
-							<br>- Создание чек-листов и тест-кейсов
-							<br>- Использование снифферов: Charles, Fiddler2
-							<br>- Профилирование Flash приложений средством Adobe Scout CC
-							<br>- Автоматизированное тестирование Flash приложений с помощью Genie
-							<br>- Работа в баг трекере Redmine
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/ilogos.png" alt="iLogos"><br>
-						<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
-						<br><b>Период работы:</b> 1.04.2015 - 1.04.2016
-					</td>
-					<td>
+	<section class="section-start">
+		<div class="page-title">Основная информация</div>
+		<div class="content">
+			<h2 class="title-black">Информация | Специализация | Навыки | Технологии </h2>
+			<div class="content-left"><div class="block">
+				<p>
+					<h3>Общая информация:</h3>
+					<br>
+					<div class="block">
+						<b>ФИО:</b> Сомов Евгений Павлович
+						<br><b>Дата рождения:</b> 11.01.1984
+						<br><b>Образование:</b> высшее 
+						<br><b>Специальность:</b> компьютерная инженерия 
+						<br><b>Место работы:</b> компания <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
 						<br><b>Должность:</b> QA Engineer.
-						<br><b>Обязанности:</b>
-						<div class="Block">
-							<br>- Тестирование мобильных Android и iOS приложения
-							<br>- Использование снифферов: Charles, Fiddler2
-							<br>- Автоматизированное тестирование средствами AndroidSDK, HiroMacro
-							<br>- Написание скриптов на языке Python
-							<br>- Проведение взлом тестов средствами: Cheat Engine, Freedom, GameCIH
-							<br>- Создание чек-листов и тест-кейсов
-							<br>- Анализ процессов и потоков при тестировании с помощью DDMS
-							<br>- Отладка Web content средством Remote Debugging on Android with Chrome
-							<br>- Работа в баг трекере Jira
+						<br><b>Опыт работы:</b> 5-ть лет.
+						<br><br>
+						<form action="./pdf/resume-somov-qa.pdf" target="_blank">
+						<input type="submit" value="Скачать резюме" class="button">
+						</form>
+					</div>
+					<br>
+					<h3>Специализация: тестирование программного обеспечения</h3>
+					<br>
+					<div class="block">
+						<h4>Навыки:</h4>
+						<div>
+							<ul>
+								<li>Разработка тестовой документации</li>
+								<li>Планирование процесса тестирования</li>
+								<li>Оптимизация процесса тестирования</li>
+								<li>Создание методик тестирования и тестовых наборов</li>
+								<li>Разработка отчетов и выводов о тестировании</li>
+								<li>Работа с технической документацией</li>
+								<li>Составления чек-листов и тест-кейсов</li>
+								<li>Работа с баг-трекером Jira, Redmine</li>
+								<br />
+								<li>Связь и взаимодействие со всеми участниками проекта</li>
+								<li>Совместная работа с геймдизайнерами</li>
+								<li>Контроль выполнения всех пунктов технического задания</li>
+								<li>Контроль исправления ошибок</li>
+								<li>Проверка требований к продукту и оценка рисков</li>
+								<li>Контроль качества продукта</li>
+								<br />
+								<li>Знание процессов и методов тестирования</li>
+								<li>Знание технологий разработки ПО</li>
+								<li>Понимание жизненного цикла программных продуктов;</li>
+								<li>Практические знания в разработке 2D и 3D приложений</li>
+								<br />
+								<li>Тестирования мобильных, браузерных и настольных приложений</li>
+								<li>Автоматизация тестирования</li>
+								<li>Разработка автоматических тестов, доработка существующих, их поддержка и актуализация;</li>
+								<li>Модульное тестирование</li>
+								<li>Просмотр кода на наличие очевидных ошибок, уязвимостей, потенциальных угроз, неоптимальная работа алгоритма</li>
+								<br />
+								<li>Тестирование Unity приложений в отладчике</li>
+								<li>Тестирование трафика входящих и исходящих данных приложения через Web Api (REST клиент)</li>
+								<li>Разработка SQL запросов для тестирование серверных данных</li>
+								<li>Использование систем контроля версий Git</li>
+								<li>Работа в операционных системах Windows, Linux\Unix, Mac OS</li>
+							</ul>
 						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/ilogos-dev.png" alt="iLogos"><br>
-						<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
-						<br><b>Период работы:</b> 1.04.2016 - 23.01.2017
-					</td>
-					<td>
-						<br><b>Должность:</b> Developer.
-						<br><b>Обязанности:</b>
-						<div class="Block">
-							<br>- Портирование Flash игр на HTML5 с применением движка Phaser.
-							<br>- Портирование логики с PHP на NodeJS.
-							<br>- Работа с сервером Redis.
-							<br>- Сборка проекта с использованием Grunt.
-							<br>- Язык программирования: TypeScript / JavaScript.
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/ilogos-global.png" alt="iLogos"><br>
-						<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
-						<br><b>Период работы:</b> 23.01.2017 - настоящее время
-					</td>
-					<td>
-						<br><b>Должность:</b> QA Engineer.
-						<br><b>Обязанности:</b>
-						<div class="Block">
-							<br>- Планирование задач тестирования на Sprint
-							<br>- Распределение задач между тестировщиками в рамках проекта
-							<br>- Ведение документации по проекту в Confluence
-							<br>- Предоставление отчетности по багам на каждый Sprint
-							<br>- Прямое взаимодействие с данными базы данных проекта
-							<br>- Разработка "Админки" для проекта на языке PHP под MySQL
-							<br>- Отладка и сборка билдов в среде разработки Unity
-							<br>- Разработка C# скриптов автоматического тестирования в среде Unity.
-							<br>- Ручное тестирование мобильных Android и iOS приложения
-							<br>- Автоматизированное тестирование средствами AndroidSDK
-							<br>- Ручное тестирование Desktop приложения для Steam
-							<br>- Работа в баг трекере Jira (конструирование запросов для вывода отчетов)
-						</div>
-					</td>
-				</tr>
-			</table>
-			</p>
+					</div>
+					<br>
+					<div class="block">
+						<b>Уровень английского языка:</b> Beginner elementary.
+					</div>
+				</p>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<h3>Технологии тестирования:</h3>
+				<br>
+				<div class="block">
+					<p>
+					<b>XUnit, NUnit, JUnit, PHPUnit, TestNG</b>
+					<div class="block">
+				 		Модульное тестирование программного обеспечения.
+					</div>
+					<b>Android Debug Bridge (Android SDK)</b>
+					<div class="block">
+				 		Широкое применение автоматизации в тестировании мобильных Android приложений. Разработка скриптов на языке Python.
+					</div>
+					<b>Selenium</b>
+					<div class="block">
+				 		Автоматизация тестирования Web приложений.
+					</div>
+					<b>Appium, SeeTestAutomation, HiroMacro</b>
+					<div class="block">
+				 		Автоматизация тестирования Mobile приложений.
+					</div>
+					<b>Genie</b>
+					<div class="block">
+				 		Автоматизация тестирования Flash приложений.
+					</div>
+					</p>
+				</div>
+				<br>
+				<h3>Программные средства тестирования:</h3>
+				<br>
+				<div class="block">
+					<p>
+					<b>Cheat Engine, Freedom, GameCIH.</b>
+					<div class="block">
+				 		Тестирование безопасности, проведение взлом тестов.
+					</div>
+					<b>Adobe Scout CC.</b>
+					<div class="block">
+				 		Проведение анализа Flash приложений.
+					</div>
+					<b>Charles, Fiddler2.</b>
+					<div class="block">
+				 		Тестирование трафика входящих и исходящих данных приложения используя снифферы.
+					</div>
+					</p>
+				</div>
+				<br>
+				<h3>Технологии разработки 2D и 3D games:</h3>
+				<div class="block">
+					<p>
+					<br><b>Unity</b>
+					<div class="block">
+				 		Базовые знания разработки. Опыт тестирования мобильных и настольных приложений.
+					</div>
+					<b>Starling</b> (Flash)
+					<div class="block">
+						Базовые знания разработки. Опыт тестирования браузерных приложений.
+					</div>
+					<b>PixiJS, Phaser</b> (API Canvas, WebGL)
+					<div class="block">
+						Продвинутые знания разработки. Опыт разработки и тестирования кроссплатформенных приложений.
+					</div>
+					<b>LibGDX, Defold</b>
+					<div class="block">
+						Базовые знания разработки. Опыт разработки и тестирования кроссплатформенных приложений.
+					</div>
+					</p>
+				</div>
+				<br>
+				<h3>Технологии разработки Web приложений:</h3>
+				<div class="block">
+					<p>
+					<br><b> AJAX, jQuery, Node.js, Yii2</b>
+					<div class="block">
+				 		Базовые знания разработки. Опыт разработки и тестирования браузерных приложений.
+					</div>
+					</p>
+				</div>
+				<br>
+				<h3>Системы управления базами данных:</h3>
+				<div class="block">
+					<p>
+					<br><b>MySQL, Microsoft SQL Server.</b>
+					<div class="block">
+				 		Продвинутые знания. Опыт разработки SQL запросов и проектирования баз данных. Опыт тестирования целостности данных.
+					</div>
+					</p>
+				</div>
+				<br>
+				<h3>Языки программирования:</h3>
+				<div class="block">
+					<p>
+					<br><b>C#, PHP, Java, JavaScript/TypeScript, Python, ActionScript, Lua</b>
+					<div class="Block">
+				 		Базовые знания популярных языков программирования.
+					</div>
+					</p>
+				</div>
+			</div></div>
 		</div>
 	</section>
 
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Дополнительные знания и навыки</h2>
-			<table>
-				<tr>
-					<td>
-						<b>Знания языков программирования</b>
-						<div class="Block">
-							<br>- Основные языки: C#, PHP, JavaScript/TypeScript, ActionScript, SQL.
-							<br>- Дополнительные языки: Java, Lua, Python.
-						</div>
-						<br>
-						<b>Системное администрирование</b>
-						<div class="Block">
-							<br>- Администрирование серверов Windows Server и Linux Server.
-							<br>- Администрирование баз данных SQL Server и MySQL.
-						</div>
-					</td>
-					<td><b>Навыки в разработке:</b>
-						<div class="Block">
-							<br>Microsoft .NET Framework
-							<br>Разработка клиент-серверных приложений.
-							<br>
-							<br>Microsoft SQL Server, MySQL. 
-							<br>Программирование запросов и проектирование баз данных.
-							<br>
-							<br>Phaser, PixiJS. 
-							<br>Разработка браузерных 2D приложений.
-						</div>
-					</td>
-				</tr>
-			</table>
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Образование</h2>
+			<div class="content-left"><div class="block">
+				<p class="block">
+				<br />
+				Луганский государственный университет им. В.Даля, ЛНР г. Луганск.<br />
+				Факультет: Компьютерных систем и информационных технологий.<br />
+				Направление подготовки: Компьютерная инженерия.<br />
+				Специальность: Компьютерные системы и сети.<br />
+				Степень: Магистр (2015 г.) <br />
+				<br />
+				Восточноукраинский университет им. В.Даля, Украина, г. Луганск. (бывш. ЛМСИ)<br />
+				Факультет: Компьютерных систем и информационных технологий.<br />
+				Направление подготовки: Компьютерная инженерия.<br />
+				Специальность: Компьютерные системы и сети.<br />
+				Степень: Бакалавр (2014 г.) <br />
+				</p>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<object class="small-pdf" data="pdf/diploma.pdf" type="application/pdf"></object>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<br>
+				<h4>Центр сертификации Certification.Mail.Ru «HTML5»</h4>
+				<br>
+				<br><a href="https://certification.mail.ru/certificates/496e3259-63a9-4f02-8b51-b866f9fe78bf/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<img src="img/certificate_html.png" alt="Сертификат HTML" width="100%">
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<br>
+				<h4>Центр сертификации Certification.Mail.Ru «CSS3»</h4>
+				<br>
+				<br><a href="https://certification.mail.ru/certificates/b0f4e6f1-fe35-43bf-b408-8db2d496cd70/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<img src="img/certificate_css.png" alt="Сертификт CSS" width="100%">
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<br>
+				<h4>Центр сертификации Certification.Mail.Ru «PHP 5.5 в стандартной конфигурации»</h4>
+				<br>
+				<br><a href="https://certification.mail.ru/certificates/0de01d4a-5d01-4733-8d25-36512496294c/" target="_blank">Сертификат на сайте Центр сертификации Certification.Mail.Ru</a>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<img src="img/certificate_php.png" alt="Сертификат PHP 5.5 в стандартной конфигурации" width="100%">
+			</div></div>
 		</div>
-		<br>
 	</section>
+
+	<section class="section-white">
+		<div class="content">
+			<h2 class="title-black">Опыт работы</h2>
+			<div class="content-left"><div class="block">
+				<img src="img/ilogos.png" alt="iLogos"><br>
+				<b>Компания:</b>  <a href="http://ilogosdev.com/" target="_blank">iLogos</a>
+				<br><b>Период работы:</b> 15.04.2013 - 1.10.2013
+			</div></div>
+			<div class="content-right"><div class="block">
+				<br><b>Должность:</b> QA.
+				<br><b>Обязанности:</b>
+				<div class="block">
+					<ul>
+						<li>Ручное тестирование</li>
+						<li>Тестирование мобильных и социальных приложений</li>
+						<li>Создание чек-листов и тест-кейсов</li>
+						<li>Работа в баг трекере Redmine</li>
+					</ul>
+				</div>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<img src="img/nika.png" alt="nikaent"><br>
+				<b>Компания:</b> <a href="http://nikaent.com" target="_blank">Nika Entertainment</a>
+				<br><b>Период работы:</b> 1.10.2013 - 1.04.2015
+			</div></div>
+			<div class="content-right"><div class="block">
+				<br><b>Должность:</b> QA Mobile.
+				<br><b>Обязанности:</b>
+				<div class="block">
+					<ul>
+						<li>Тестирование мобильных и социальных приложений</li>
+						<li>Создание чек-листов и тест-кейсов</li>
+						<li>Использование снифферов: Charles, Fiddler2</li>
+						<li>Профилирование Flash приложений средством Adobe Scout CC</li>
+						<li>Автоматизированное тестирование Flash приложений с помощью Genie</li>
+						<li>Работа в баг трекере Redmine</li>
+					</ul>
+				</div>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<br><br>
+				<img src="img/ilogos.png" alt="iLogos"><br>
+				<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
+				<br><b>Период работы:</b> 1.04.2015 - 1.04.2016
+			</div></div>
+			<div class="content-right"><div class="block">
+				<br><b>Должность:</b> QA Engineer.
+				<br><b>Обязанности:</b>
+				<div class="block">
+					<ul>
+						<li>Тестирование мобильных Android и iOS приложения</li>
+						<li>Использование снифферов: Charles, Fiddler2</li>
+						<li>Автоматизированное тестирование средствами AndroidSDK, HiroMacro</li>
+						<li>Написание скриптов на языке Python</li>
+						<li>Проведение взлом тестов средствами: Cheat Engine, Freedom, GameCIH</li>
+						<li>Создание чек-листов и тест-кейсов</li>
+						<li>Анализ процессов и потоков при тестировании с помощью DDMS</li>
+						<li>Отладка Web content средством Remote Debugging on Android with Chrome</li>
+						<li>Работа в баг трекере Jira</li>
+					</ul>
+				</div>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<img src="img/ilogos-dev.png" alt="iLogos"><br>
+				<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
+				<br><b>Период работы:</b> 1.04.2016 - 23.01.2017
+			</div></div>
+			<div class="content-right"><div class="block">
+				<br><b>Должность:</b> Developer.
+				<br><b>Обязанности:</b>
+				<div class="block">
+					<ul>
+						<li>Портирование Flash игр на HTML5 с применением движка Phaser</li>
+						<li>Портирование логики с PHP на NodeJS</li>
+						<li>Работа с сервером Redis</li>
+						<li>Сборка проекта с использованием Grunt</li>
+						<li>Язык программирования: TypeScript / JavaScript</li>
+					</ul>
+				</div>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<br><br>
+				<img src="img/ilogos-global.png" alt="iLogos"><br>
+				<b>Компания:</b> <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>
+				<br><b>Период работы:</b> 23.01.2017 - настоящее время
+			</div></div>
+			<div class="content-right"><div class="block">
+				<br><b>Должность:</b> QA Engineer.
+				<br><b>Обязанности:</b>
+				<div class="block">
+					<ul>
+						<li>Планирование задач тестирования на Sprint</li>
+						<li>Распределение задач между тестировщиками в рамках проекта</li>
+						<li>Ведение документации по проекту в Confluence (Jira)</li>
+						<li>Отчетности по багам на каждый Sprint</li>
+						<li>Прямое взаимодействие с данными в базе данных проекта</li>
+						<li>Разработка "админки" для проекта на языке PHP под MySQL (фреймворк Yii2)</li>
+						<li>Отладка и сборка билдов в среде разработки Unity</li>
+						<li>Разработка C# скриптов автоматического тестирования в среде Unity.</li>
+						<li>Разработка unit-тестов для тестирования сервера (XUnit) и клиента (NUnit)</li>
+						<li>Автоматизированное тестирование средствами AndroidSDK</li>
+						<li>Ручное тестирование мобильных Android и iOS приложения</li>
+						<li>Ручное тестирование Desktop приложения для Steam</li>
+						<li>Работа в баг трекере Jira (конструирование запросов для вывода отчетов)</li>
+					</ul>
+				</div>
+			</div></div>
+		</div>
+	</section>
+
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Дополнительные знания и навыки</h2>
+			<div class="content-left"><div class="block">
+				<b>Знания языков программирования</b>
+				<div class="block">
+					<ul>
+						<li>Основные языки: HTML5, CSS, JavaScript, TypeScript, PHP, C#, SQL</li>
+						<li>Дополнительные языки: Java, Lua, Python, ActionScript</li>
+					</ul>
+				</div>
+				<br>
+				<b>Системное администрирование</b>
+				<div class="block">
+					<ul>
+						<li>Администрирование серверов Windows Server и Linux Server</li>
+						<li>Администрирование баз данных SQL Server и MySQL</li>
+					</ul>
+				</div>
+			</div></div>
+			<div class="content-right"><div class="block">
+				Microsoft .NET Framework<br>
+				Разработка клиент-серверных приложений.<br>
+				<br>
+				Microsoft SQL Server, MySQL.<br>
+				Программирование запросов и проектирование баз данных.<br>
+				<br>
+				Phaser, PixiJS.<br>
+				Разработка браузерных 2D приложений.
+			</div></div>
+		</div>
+	</section>
+
 
 	<!-- FOOTER -->
 	<footer>
 		<table id="tableIcons">
 			<tr>
-				<td><a href="https://github.com/Somov-QA" class="LinkIcons" target="_blank">
-						<img src="img/icons/git.png" alt="GitHub" class="Icons">
+				<td><a href="https://github.com/SomovStudio" class="link-icons" target="_blank">
+						<img src="img/icons/git.png" alt="GitHub" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="LinkIcons" target="_blank">
-						<img src="img/icons/youtube.png" alt="email" class="Icons">
+					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="link-icons" target="_blank">
+						<img src="img/icons/youtube.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://vk.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/vk.png" alt="VK" class="Icons">
+					<a href="https://vk.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/vk.png" alt="VK" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.facebook.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/f.png" alt="facebook" class="Icons">
+					<a href="https://www.facebook.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/f.png" alt="facebook" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov@i.ua" class="LinkIcons" target="_blank">
-						<img src="img/icons/em.png" alt="email" class="Icons">
+					<a href="mailto:somov@i.ua" class="link-icons" target="_blank">
+						<img src="img/icons/em.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov.studio@gmail.com" class="LinkIcons" target="_blank">
-						<img src="img/icons/g+.png" alt="Google" class="Icons">
+					<a href="mailto:somov.studio@gmail.com" class="link-icons" target="_blank">
+						<img src="img/icons/g+.png" alt="Google" class="icons">
 					</a>
 				</td>
 			</tr>
 		</table>
-		<h5>2013 - 2018 © Сомов Евгений Павлович</h5>
+		<div class="footer-author">
+			<h5>2018 © Сомов Евгений Павлович</h5>
+		</div>
 	</footer>
 </body>
 </html>

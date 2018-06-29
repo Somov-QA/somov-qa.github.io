@@ -11,9 +11,11 @@
 </head>
 <body>
 	<!-- MENU -->
-	<nav class="Menu">
-		<div class="PanelMenu">
-			<ul>
+	<nav>
+		<div class="menu-wrapper">
+			<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
+			<input type="checkbox" name="menu-check" id="menuCheck">
+			<ul class="menu">
 				<li><a href="index.html">Обо мне</a></li>
 				<li><a href="portfolio.html">Портфолио</a></li>
 				<li><a href="qa.html">Тестирование</a></li>
@@ -24,260 +26,234 @@
 		</div>
 	</nav>
 
-
+	
 	<!-- HEADER -->
 	<header>
 		<div id="backgroundImage"></div>
-		<div class="Name">Somov Engeniy</div>
-		<div class="Profession">Quality Assurance</div>
+		<div class="header-profession">
+			<div class="header-greeting">
+				<div class="header-photo">
+					<img src="./img/foto.png" alt="Somov Evgeniy - Foto" class="my-foto">
+				</div>
+				<div class="header-description">
+					Добро пожаловать на сайт. 
+					<br>Меня зовут <b>Сомов Евгений Павлович</b>, QA Middle специалист в области QA/QC тестирования программного обеспечения с пятилетним стажем работы. 
+					<br>В данное время занимаю должность <b>QA Engineer</b> в компании <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>.
+					<br>В свободное время от работы веду активную разработку и продвижение собственного проекта <a href="https://catfishstudio.github.io/" target="_blank">Catfish Studio Games</a>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<!-- CONTENT -->
-	<section class="SectionStart">
-		<div class="PageTitle">Автоматизация</div>
-		<div class="Content">
-			<h2 class="TitleBlack">Вебинар: Автоматизация тестирования Android Debug Bridge.</h2>
-			<table>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами Android SDK </h4>Рассматривается Android SDK как средство автоматизированного тестирования Android приложений.  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/k_-APOs100g" frameborder="0" allowfullscreen></iframe>
-						<br><br>
-						<p>
-						Пример использования Monkeyrunner входящего в пакет Android SDK.
-						</p>
-						<br>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/X_sJOdiWyUs" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
+	<section class="section-start">
+		<div class="page-title">Автоматизация</div>
+		<div class="content">
+			<h2 class="title-black">Вебинар: Автоматизация тестирования Android Debug Bridge</h2>
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами Android SDK </h4>Рассматривается Android SDK как средство автоматизированного тестирования Android приложений.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/k_-APOs100g" frameborder="0" allowfullscreen></iframe>
+				<br><br>
+				<p>
+				Пример использования Monkeyrunner входящего в пакет Android SDK.
+				</p>
+				<br>
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/X_sJOdiWyUs" frameborder="0" allowfullscreen></iframe>
+			</div></div>
 		</div>
 	</section>
 
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Модульное тестирование: JUnit, PHPUnit, NUnit, TestNG</h2>
-			<table>
-				<tr>
-					<td>
-						<h4>Модульное тестирование средствами .Net Framework </h4>Пример использования NUnit в среде SharpDevelop (C#).  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/vouJHv5kZyI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Модульное тестирование средствами Java </h4>Пример использования JUnit в среде IntelliJ IDEA (Java).  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/iTaenQPEGiM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Модульное тестирование средствами PHP </h4>Пример использования PHPUnit в среде NetBeans (PHP)
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/aIxXd0s7ARA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Модульное тестирование: JUnit, PHPUnit, NUnit, TestNG</h2>
+			<div class="content-left"><div class="block">
+				<h4>Модульное тестирование средствами .Net Framework </h4>Пример использования NUnit в среде SharpDevelop (C#).
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/vouJHv5kZyI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
 
+			<div class="content-left"><div class="block">
+				<h4>Модульное тестирование средствами Java </h4>Пример использования JUnit в среде IntelliJ IDEA (Java).
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/iTaenQPEGiM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<h4>Модульное тестирование средствами PHP </h4>Пример использования PHPUnit в среде NetBeans (PHP)
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/aIxXd0s7ARA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
+		</div>
 	</section>
 
-	<section class="SectionWhite">
-		<div class="Content">
-			<br>
-			<h2 class="TitleBlack">Автоматизация тестирования: Selenium и Appium</h2>
-			<table>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами Selenium </h4>Пример использования Selenium в среде SharpDevelop (C#).  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/yUv1EEa5Wp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами Selenium </h4>Пример использования Selenium в среде IntelliJ IDEA (Java).  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/dIoXtbXnQVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами Appium </h4>Пример использования Appium + Selenium в среде IntelliJ IDEA (Java).  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/pQ1I5xbcmw4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами Appium </h4>Пример использования Appium + UiAutomator 2. Поиск элементов тестирования.  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/CeYJFX1jqc8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
+	<section class="section-white">
+		<div class="content">
+			<h2 class="title-black">Автоматизация тестирования: Selenium и Appium</h2>
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами Selenium </h4>Пример использования Selenium в среде SharpDevelop (C#).
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/yUv1EEa5Wp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
 
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами Selenium </h4>Пример использования Selenium в среде IntelliJ IDEA (Java).
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/dIoXtbXnQVE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами Appium </h4>Пример использования Appium + Selenium в среде IntelliJ IDEA (Java).
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/pQ1I5xbcmw4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами Appium </h4>Пример использования Appium + UiAutomator 2. Поиск элементов тестирования.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/CeYJFX1jqc8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div></div>
+		</div>
 	</section>
+
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Автоматизация тестирования: SeeTestAutomation</h2>
+			<div class="content-left"><div class="block">
+				<h4>Автоматизация тестирования средствами SeeTestAutomation </h4>Рассматривается SeeTestAutomation как средство автоматизированного тестирования Android приложений.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/Xi6R4Vf5Q_s" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+		</div>
+	</section>
+
+	<section class="section-white">
+		<div class="content">
+			<h2 class="title-black">Автоматизация тестирования: Genie</h2>
+			<div class="content-left"><div class="block">
+				Automated UI Tester for Adobe® ActionScript® is a pure ActionScript 3.0 SWF automation testing tool with the capability of recording user actions on an SWF file and playing them back with high fidelity. The API for this tool is provided with name “Genie.”
+			</div></div>
+			<div class="content-right"><div class="block">
+				Genie: Необходимое ПО
+				<h5>1. Скачать Genie (архив Genie-binary.zip)</h5>
+				Официальный сайт: <a href="http://sourceforge.net/adobe/genie/wiki/Home/" target="_blank">перейти</a>
+				<br>
+				<h5>2. Установить дебажный Flash плеер.</h5>
+				Официальный сайт: <a href="http://www.adobe.com/support/flashplayer/downloads.html" target="_blank">перейти</a>
+				<br>
+				<h5>3. Установить JDK - Java Development Kit</h5>
+				Официальный сайт: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">перейти</a>
+				<br>
+				<h5>4. Скачать среду разработки Eclipse</h5>
+				Официальный сайт: <a href="http://www.eclipse.org/downloads/" target="_blank">перейти</a>
+				<br>
+				<h5>5. Настройка Global Security Settings panel для Flash преера</h5>
+				Официальный сайт Flash Player Help: <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html" target="_blank">перейти</a>
+				<br>
+				<br>Genie: Документация.<a href="doc/UserGuide.pdf" target="_blank">UserGuide.pdf</a>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				Genie: Развёртывание.
+				<h5>Процесс установки и настройки Genie</h5>
+				<br><br>Main class: com.adobe.genie.executor.Executor
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/ykucu_Kr3ec" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				Genie: Как использовать.
+				<h5>На видео показано как получить скрипт, а затем запустить его на выполнение. </h5>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/2bZhTdfAWUg" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				Genie: Два дела одновременно.
+				<h5>Можно одновременно тестировать в ручном и автоматическом режиме два разных проекта. </h5>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/SZ7pVEBimUI" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				Genie: Два бота одновременно.
+				<h5>Существует возможность записи скрипта для нескольких проектов одновременно.</h5>
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/qFHdj5174sw" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+
+			<div class="content-left"><div class="block">
+				Genie: Работа с нативными окнами.
+				<h5>Игра "Загадки Атлантиды" вызов "Колеса фортуны" и его прокрут за деньги. </h5>
+				<br>
+				<br>Скрипт обращается к картинкам и выполняет поиск
+				<br>
+				<br>SWFApp app1=connectToApp("[object PreloaderSA]"); 
+				<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\001.png", 10); 
+				<br>Thread.sleep(2500); 
+				<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\002.png", 10); 
+				<br>Thread.sleep(5000); 
+				<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\003.png", 10);
+			</div></div>
+			<div class="content-right"><div class="block">
+				<iframe class="contant-iframe" src="https://www.youtube.com/embed/1J62lWrkf9U" frameborder="0" allowfullscreen></iframe>
+			</div></div>
+		</div>
+	</section>
+
 	
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Автоматизация тестирования: SeeTestAutomation</h2>
-			<table>
-				<tr>
-					<td>
-						<h4>Автоматизация тестирования средствами SeeTestAutomation </h4>Рассматривается SeeTestAutomation как средство автоматизированного тестирования Android приложений.  
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Xi6R4Vf5Q_s" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
-
-	</section>
-
-	<section class="SectionWhite">
-		<div class="Content">
-			<br>
-			<h2 class="TitleBlack">Автоматизация тестирования: Genie</h2>
-			<table>
-				<tr>
-					<td>
-						Automated UI Tester for Adobe® ActionScript® is a pure ActionScript 3.0 SWF automation testing tool with the capability of recording user actions on an SWF file and playing them back with high fidelity. The API for this tool is provided with name “Genie.”
-					</td>
-					<td>
-						<br>Genie: Необходимое ПО
-						<h5>1. Скачать Genie (архив Genie-binary.zip)</h5>
-						<br>Официальный сайт: <a href="http://sourceforge.net/adobe/genie/wiki/Home/" target="_blank">перейти</a>
-						<br>
-						<br>
-						<h5>2. Установить дебажный Flash плеер.</h5>
-						<br>Официальный сайт: <a href="http://www.adobe.com/support/flashplayer/downloads.html" target="_blank">перейти</a>
-						<br>
-						<br>
-						<h5>3. Установить JDK - Java Development Kit</h5>
-						<br>Официальный сайт: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">перейти</a>
-						<br>
-						<br>
-						<h5>4. Скачать среду разработки Eclipse</h5>
-						<br>Официальный сайт: <a href="http://www.eclipse.org/downloads/" target="_blank">перейти</a>
-						<br>
-						<br>
-						<h5>5. Настройка Global Security Settings panel для Flash преера</h5>
-						<br>Официальный сайт Flash Player Help: <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html" target="_blank">перейти</a>
-						<br>
-						<br>Genie: Документация.
-						<h5>Официальная документация.</h5>
-						<a href="doc/UserGuide.pdf" target="_blank">UserGuide.pdf</a>
-						<br><br><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Genie: Развёртывание.
-						<h5>Процесс установки и настройки Genie</h5>
-						<br><br>Main class: com.adobe.genie.executor.Executor
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/ykucu_Kr3ec" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Genie: Как использовать.
-						<h5>На видео показано как получить скрипт, а затем запустить его на выполнение. </h5>
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/2bZhTdfAWUg" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Genie: Два дела одновременно.
-						<h5>Можно одновременно тестировать в ручном и автоматическом режиме два разных проекта. </h5>
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/SZ7pVEBimUI" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Genie: Два бота одновременно.
-						<h5>Существует возможность записи скрипта для нескольких проектов одновременно.</h5>
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/qFHdj5174sw" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Genie: Работа с нативными окнами.
-						<h5>Игра "Загадки Атлантиды" вызов "Колеса фортуны" и его прокрут за деньги. </h5>
-						<br>
-						<br>Скрипт обращается к картинкам и выполняет поиск
-						<br>
-						<br>SWFApp app1=connectToApp("[object PreloaderSA]"); 
-						<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\001.png", 10); 
-						<br>Thread.sleep(2500); 
-						<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\002.png", 10); 
-						<br>Thread.sleep(5000); 
-						<br>new UIImage().clickImageHotSpot("<br>C:\\GENIE\\Genie\\images\\003.png", 10);
-					</td>
-					<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/1J62lWrkf9U" frameborder="0" allowfullscreen></iframe>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</section>
 
 	<!-- FOOTER -->
 	<footer>
 		<table id="tableIcons">
 			<tr>
-				<td><a href="https://github.com/Somov-QA" class="LinkIcons" target="_blank">
-						<img src="img/icons/git.png" alt="GitHub" class="Icons">
+				<td><a href="https://github.com/SomovStudio" class="link-icons" target="_blank">
+						<img src="img/icons/git.png" alt="GitHub" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="LinkIcons" target="_blank">
-						<img src="img/icons/youtube.png" alt="email" class="Icons">
+					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="link-icons" target="_blank">
+						<img src="img/icons/youtube.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://vk.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/vk.png" alt="VK" class="Icons">
+					<a href="https://vk.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/vk.png" alt="VK" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.facebook.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/f.png" alt="facebook" class="Icons">
+					<a href="https://www.facebook.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/f.png" alt="facebook" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov@i.ua" class="LinkIcons" target="_blank">
-						<img src="img/icons/em.png" alt="email" class="Icons">
+					<a href="mailto:somov@i.ua" class="link-icons" target="_blank">
+						<img src="img/icons/em.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov.studio@gmail.com" class="LinkIcons" target="_blank">
-						<img src="img/icons/g+.png" alt="Google" class="Icons">
+					<a href="mailto:somov.studio@gmail.com" class="link-icons" target="_blank">
+						<img src="img/icons/g+.png" alt="Google" class="icons">
 					</a>
 				</td>
 			</tr>
 		</table>
-		<h5>2013 - 2018 © Сомов Евгений Павлович</h5>
+		<div class="footer-author">
+			<h5>2018 © Сомов Евгений Павлович</h5>
+		</div>
 	</footer>
 </body>
 </html>

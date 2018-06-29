@@ -11,434 +11,388 @@
 </head>
 <body>
 	<!-- MENU -->
-	<nav class="Menu">
-		<div class="PanelMenu">
-			<ul>
-				<li><a href="index.html">Обо мне</a></li>
+	<nav>
+		<div class="menu-wrapper">
+			<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
+			<input type="checkbox" name="menu-check" id="menuCheck">
+			<ul class="menu">
+				<li><a href="index.html" id="selectPage">Обо мне</a></li>
 				<li><a href="portfolio.html">Портфолио</a></li>
 				<li><a href="qa.html">Тестирование</a></li>
 				<li><a href="auto.html">Автоматизация</a></li>
-				<li><a href="lib.html" id="selectPage">Библиотека</a></li>
+				<li><a href="lib.html">Библиотека</a></li>
 				<li><a href="contact.html">Контакты</a></li>
 			</ul>
 		</div>
 	</nav>
 
-
+	
 	<!-- HEADER -->
 	<header>
 		<div id="backgroundImage"></div>
-		<div class="Name">Somov Engeniy</div>
-		<div class="Profession">Quality Assurance</div>
+		<div class="header-profession">
+			<div class="header-greeting">
+				<div class="header-photo">
+					<img src="./img/foto.png" alt="Somov Evgeniy - Foto" class="my-foto">
+				</div>
+				<div class="header-description">
+					Добро пожаловать на сайт. 
+					<br>Меня зовут <b>Сомов Евгений Павлович</b>, QA Middle специалист в области QA/QC тестирования программного обеспечения с пятилетним стажем работы. 
+					<br>В данное время занимаю должность <b>QA Engineer</b> в компании <a href="http://www.ilogos.biz/" target="_blank">iLogos</a>.
+					<br>В свободное время от работы веду активную разработку и продвижение собственного проекта <a href="https://catfishstudio.github.io/" target="_blank">Catfish Studio Games</a>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<!-- CONTENT -->
-	<section class="SectionStart">
-		<div class="PageTitle">Библиотека</div>
-		<div class="Content">
-			<h2 class="TitleBlack">Общие справочники</h2>
-			<table>
-				<tr>
-					<td>
-						<h4><a href="library/qa/index.html" target="_blank">Quality Assurance</a></h4>
-						Справочная информация по тестированию программного обеспечения.
-						<br><br>
-						<h4><a href="library/gamedev/index.html" target="_blank">Game Development</a></h4>
-						Справочник информация по разработке игр.
-						<br><br>
-						<h4><a href="library/webdev/index.html" target="_blank">Web Development</a></h4>
-						Справочная информация по разработке Веб-приложений.
-						<br><br>
-					</td>
-					<td>
-						<h4><a href="library/git/index.html" target="_blank">Git</a></h4>
-						Справочник команд для работы с Git.
-						<br><br>
-						<h4><a href="library/linux/index.html" target="_blank">Linux</a></h4>
-						Справочник команд для работы в консоли Linux.
-						<br><br>
-						<h4><a href="library/msdos/index.html" target="_blank">MsDos</a></h4>
-						Справочник команд для работы в консоли MsDos.
-						<br><br>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</section>
-	
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Справочники по языкам программирования</h2>
-			<table>
-				<tr>
-					<td>
-						<h4><a href="library/php/index.html" target="_blank">PHP</a></h4>
-						Препроцессор гипертекста, инструменты для создания персональных веб-страниц, скриптовый язык.
-						<br><br>
-						<h4><a href="library/js/index.html" target="_blank">JavaScript</a></h4>
-						Прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.
-						<br><br>
-						<h4><a href="library/ts/index.html" target="_blank">TypeScript</a></h4>
-						Язык программирования, представленный Microsoft в 2012 году и позиционируемый как средство разработки веб-приложений, расширяющее возможности JavaScript.
-						<br><br>
-					</td>
-					<td>
-						<h4><a href="library/csharp/index.html" target="_blank">C#</a></h4>
-						Объектно-ориентированный язык программирования. Язык для разработки приложений на платформе Microsoft .NET Framework.
-						<br><br>
-						<h4><a href="library/as3/index.html" target="_blank">ActionScript3</a></h4>
-						Объектно-ориентированный язык программирования, один из диалектов ECMAScript, который добавляет интерактивность, обработку данных и многое другое в содержимое Flash-приложений.
-						<br><br>
-						<h4><a href="library/sql/index.html" target="_blank">SQL</a></h4>
-						Формальный непроцедурный язык программирования, применяемый для создания, модификации и управления данными в произвольной реляционной базе данных, управляемой соответствующей системой управления базами данных.
-						<br><br>
-					</td>
-				</tr>
-			</table>
-	</section>
-
-	<section class="SectionWhite">
-		<div class="Content">
-			<br>
-			<h2 class="TitleBlack">Технологические справочники</h2>
-			<table>
-				<tr>
-					<td>
-						<h4><a href="library/phaser/index.html" target="_blank">Phaser</a></h4>
-						Фреймворк для создания игр под html5.
-						<br><br>
-						<h4><a href="library/pixijs/index.html" target="_blank">PixiJS</a></h4>
-						Фреймворк для создания игр под html5.
-						<br><br>
-						<h4><a href="library/defold/index.html" target="_blank">Defold</a></h4>
-						Мультиплатформенный 2D игровой движок от компании King.
-						<br><br>
-					</td>
-					<td>
-						<h4><a href="library/libgdx/index.html" target="_blank">libGDX</a></h4>
-						Фреймворк для создания игр и приложений, написанный на Java с использованием C и C++ (для более быстрой работы). Он позволяет писать кроссплатформенные игры и приложения используя один код.
-						<br><br>
-						<h4><a href="library/ajax/index.html" target="_blank">AJAX</a></h4>
-						Асинхронный JavaScript и XML. Это эффективный способ совместного использования HTML, CSS, JavaScript и DOM.
-						<br><br>
-					</td>
-				</tr>
-			</table>
+	<section class="section-start">
+		<div class="page-title">Библиотека</div>
+		<div class="content">
+			<h2 class="title-black">Общие справочники</h2>
+			<div class="content-left"><div class="block">
+				<h4><a href="library/qa/index.html" target="_blank">Quality Assurance</a></h4>
+				Справочная информация по тестированию программного обеспечения.
+				<br><br>
+				<h4><a href="library/gamedev/index.html" target="_blank">Game Development</a></h4>
+				Справочник информация по разработке игр.
+				<br><br>
+				<h4><a href="library/webdev/index.html" target="_blank">Web Development</a></h4>
+				Справочная информация по разработке Веб-приложений.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<h4><a href="library/git/index.html" target="_blank">Git</a></h4>
+				Справочник команд для работы с Git.
+				<br><br>
+				<h4><a href="library/linux/index.html" target="_blank">Linux</a></h4>
+				Справочник команд для работы в консоли Linux.
+				<br><br>
+				<h4><a href="library/msdos/index.html" target="_blank">MsDos</a></h4>
+				Справочник команд для работы в консоли MsDos.
+			</div></div>
 		</div>
 	</section>
 
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Технологии автоматизированного тестирования</h2>
-			<table>
-				<tr>
-					<td>
-						<a href="http://www.seleniumhq.org/" target="_blank">SeleniumHQ</a>
-						Selenium automates browsers. That's it! What you do with that power is entirely up to you. 
-						<br>
-						<a href="http://www.seleniumhq.org/download/" target="_blank">Selenium - Download</a>
-						Selenium Client & WebDriver Language Bindings. Third Party Drivers, Bindings, and Plugins.
-						<br>
-						<a href="http://chromedriver.storage.googleapis.com/index.html" target="_blank">ChromeDriver for Selenium</a>
-						Драйвер для Selenium для работе тестов в браузере Chrome.
-						<br>
-						<a href="https://github.com/mozilla/geckodriver/releases" target="_blank">GeckoDriver for Selenium</a>
-						Драйвер для Selenium для работе тестов в браузере FireFox.
-						<br>
-						<a href="http://www.seleniumhq.org/docs/03_webdriver.jsp" target="_blank">Selenium dependency for Maven</a>
-						Подключение Selenium в Intellij IDEA для проекта Maven (Java).
-						<br>
-						<a href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">Maven Repository from Selenium Java</a>
-						Подключение Selenium Java в Maven проекте.
-						<br>
-						<br>
-						<a href="http://appium.io/" target="_blank">Appium</a>
-						Appium is an open source test automation framework for use with native, hybrid and mobile web apps. It drives iOS, Android, and Windows apps using the WebDriver protocol. 
-						<br>
-						<a href="https://github.com/appium/appium-desktop/releases/" target="_blank">Appium Desktop</a>
-						Репозиторий desktop версии Appium. 
-						<br>
-						<a href="https://github.com/appium/appium-uiautomator2-driver" target="_blank">Appium UiAutomator2</a>
-						Репозиторий UiAutomator2 для Appium.
-						<br>
-						<a href="http://mvnrepository.com/artifact/io.appium/java-client" target="_blank">Maven Java Client</a>
-						Подключение Java Client в Maven проекте.
-						<br>
-						<a href="http://mvnrepository.com/artifact/junit/junit" target="_blank">Maven JUnit</a>
-						Подключение JUnit в Maven проекте.
-						<br>
-						<a href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">Maven Selenium Java</a>
-						Подключение Selenium Java в Maven проекте.
-						<br>
-						<br>
-						<a href="http://junit.org/junit5/" target="_blank">jUnit 5</a>
-						JUnit 5 is the next generation of JUnit.
-						<br>
-						<a href="https://phpunit.de/" target="_blank">PHPUnit</a>
-						PHPUnit is a programmer-oriented testing framework for PHP.
-						<br>
-						<a href="http://nunit.org/" target="_blank">NUnit</a>
-						NUnit is a unit-testing framework for all .Net languages.
-						<br>
-						<a href="http://testng.org/" target="_blank">TestNG</a>
-						TestNG is designed to cover all categories of tests:  unit, functional, end-to-end, integration, etc...
-						<br>
-						<a href="http://testng.org/doc/maven.html" target="_blank">TestNG dependency for Maven</a>
-						Подключение TestNG в Intellij IDEA для проекта Maven (Java).
-						<br>
-						<br>
-						<a href="https://experitest.com/mobile-test-automation/seetest-automation/" target="_blank">SeeTestAutomation</a>
-						Develop and execute robust automated tests using the SeeTest client Integrate into any testing framework and IDE. 
-						<br>
-					</td>
-				</tr>
-			</table>
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Справочники по языкам программирования</h2>
+			<div class="content-left"><div class="block">
+				<h4><a href="library/php/index.html" target="_blank">PHP</a></h4>
+				Препроцессор гипертекста, инструменты для создания персональных веб-страниц, скриптовый язык.
+				<br><br>
+				<h4><a href="library/js/index.html" target="_blank">JavaScript</a></h4>
+				Прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.
+				<br><br>
+				<h4><a href="library/ts/index.html" target="_blank">TypeScript</a></h4>
+				Язык программирования, представленный Microsoft в 2012 году и позиционируемый как средство разработки веб-приложений, расширяющее возможности JavaScript.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<h4><a href="library/csharp/index.html" target="_blank">C#</a></h4>
+				Объектно-ориентированный язык программирования. Язык для разработки приложений на платформе Microsoft .NET Framework.
+				<br><br>
+				<h4><a href="library/as3/index.html" target="_blank">ActionScript3</a></h4>
+				Объектно-ориентированный язык программирования, один из диалектов ECMAScript, который добавляет интерактивность, обработку данных и многое другое в содержимое Flash-приложений.
+				<br><br>
+				<h4><a href="library/sql/index.html" target="_blank">SQL</a></h4>
+				Формальный непроцедурный язык программирования, применяемый для создания, модификации и управления данными в произвольной реляционной базе данных, управляемой соответствующей системой управления базами данных.
+			</div></div>
 		</div>
 	</section>
 
-	<section class="SectionWhite">
-		<div class="Content">
-			<br>
-			<h2 class="TitleBlack">Ссылки на информационные ресурсы</h2>
-			<table>
-				<tr>
-					<td>
-						<a href="http://mvnrepository.com/artifact/junit/junit/4.12" target="_blank">JUnit dependency for Maven</a>
-						Подключение JUnit в Intellij IDEA из репозиторя Maven.
-						<br>
-						<a href="http://www.seleniumhq.org/docs/" target="_blank">SeleniumHQ Docs</a>
-						Официальное руководство по работе с Selenium.
-						<br>
-						<a href="https://www.gitbook.com/book/kreisfahrer/selenium-webdriver/details" target="_blank">Selenium Webdriver - GitBook</a>
-						Перевод официального руководства по работе с Selenium.
-						<br>
-						<a href="https://selenium2.ru/docs.html" target="_blank">Selenium2.ru</a>
-						Это перевод на русский язык документации Selenium, опубликованной на официальном сайте
-						<br>
-						<a href="http://appium.io/docs/en/about-appium/getting-started/" target="_blank">Appium Getting Started</a>
-						Официальное руководство по Appium. 
-						<br>
-						<a href="https://github.com/appium/appium-desktop" target="_blank">Appium Desktop</a>
-						Официальное руководство по Appium Desktop. 
-						<br>
-						<a href="http://appium.io/docs/en/drivers/android-uiautomator2/index.html" target="_blank">Appium UiAutomator2</a>
-						Официальное руководство по UiAutomator2 Driver for Android. 
-						<br>
-						<a href="http://appium.io/docs/en/writing-running-appium/server-args/index.html" target="_blank">Appium server arguments</a>
-						Официальное руководство по серверу Appium. 
-						<br>
-						<a href="http://getbug.ru/rukovodstvo-po-appium-dlya-testirovaniya-ustroystv-pod-andoid-i-ios/" target="_blank">Appium - gitbug</a>
-						Руководство по Appium для тестирования устройств под Andoid и iOS
-						<br>
-						<a href="https://developer.android.com/studio/run/managing-avds.html" target="_blank">AVD Manager</a>
-						Официальное руководство управления эмулятором устройств в Android Studio
-						<br>
-					</td>
-				</tr>
-			</table>
+	<section class="section-white">
+		<div class="content">
+			<h2 class="title-black">Технологические справочники</h2>
+			<div class="content-left"><div class="block">
+				<h4><a href="library/phaser/index.html" target="_blank">Phaser</a></h4>
+				Фреймворк для создания игр под html5.
+				<br><br>
+				<h4><a href="library/pixijs/index.html" target="_blank">PixiJS</a></h4>
+				Фреймворк для создания игр под html5.
+				<br><br>
+				<h4><a href="library/defold/index.html" target="_blank">Defold</a></h4>
+				Мультиплатформенный 2D игровой движок от компании King.
+			</div></div>
+			<div class="content-right"><div class="block">
+				<h4><a href="library/libgdx/index.html" target="_blank">libGDX</a></h4>
+				Фреймворк для создания игр и приложений, написанный на Java с использованием C и C++ (для более быстрой работы). Он позволяет писать кроссплатформенные игры и приложения используя один код.
+				<br><br>
+				<h4><a href="library/ajax/index.html" target="_blank">AJAX</a></h4>
+				Асинхронный JavaScript и XML. Это эффективный способ совместного использования HTML, CSS, JavaScript и DOM.
+			</div></div>
 		</div>
 	</section>
 
-	<section class="SectionBlack">
-		<div class="Content">
-			<br>
-			<h2 class="TitleWhite">Программное обеспечение</h2>
-			<br>
-			<p>
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Технологии автоматизированного тестирования</h2>
+			<div class="content-full"><div class="block">
+				<a href="http://www.seleniumhq.org/" target="_blank">SeleniumHQ</a>
+				Selenium automates browsers. That's it! What you do with that power is entirely up to you. 
+				<br>
+				<a href="http://www.seleniumhq.org/download/" target="_blank">Selenium - Download</a>
+				Selenium Client & WebDriver Language Bindings. Third Party Drivers, Bindings, and Plugins.
+				<br>
+				<a href="http://chromedriver.storage.googleapis.com/index.html" target="_blank">ChromeDriver for Selenium</a>
+				Драйвер для Selenium для работе тестов в браузере Chrome.
+				<br>
+				<a href="https://github.com/mozilla/geckodriver/releases" target="_blank">GeckoDriver for Selenium</a>
+				Драйвер для Selenium для работе тестов в браузере FireFox.
+				<br>
+				<a href="http://www.seleniumhq.org/docs/03_webdriver.jsp" target="_blank">Selenium dependency for Maven</a>
+				Подключение Selenium в Intellij IDEA для проекта Maven (Java).
+				<br>
+				<a href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">Maven Repository from Selenium Java</a>
+				Подключение Selenium Java в Maven проекте.
+				<br>
+				<br>
+				<a href="http://appium.io/" target="_blank">Appium</a>
+				Appium is an open source test automation framework for use with native, hybrid and mobile web apps. It drives iOS, Android, and Windows apps using the WebDriver protocol. 
+				<br>
+				<a href="https://github.com/appium/appium-desktop/releases/" target="_blank">Appium Desktop</a>
+				Репозиторий desktop версии Appium. 
+				<br>
+				<a href="https://github.com/appium/appium-uiautomator2-driver" target="_blank">Appium UiAutomator2</a>
+				Репозиторий UiAutomator2 для Appium.
+				<br>
+				<a href="http://mvnrepository.com/artifact/io.appium/java-client" target="_blank">Maven Java Client</a>
+				Подключение Java Client в Maven проекте.
+				<br>
+				<a href="http://mvnrepository.com/artifact/junit/junit" target="_blank">Maven JUnit</a>
+				Подключение JUnit в Maven проекте.
+				<br>
+				<a href="http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java" target="_blank">Maven Selenium Java</a>
+				Подключение Selenium Java в Maven проекте.
+				<br>
+				<br>
+				<a href="http://junit.org/junit5/" target="_blank">jUnit 5</a>
+				JUnit 5 is the next generation of JUnit.
+				<br>
+				<a href="https://phpunit.de/" target="_blank">PHPUnit</a>
+				PHPUnit is a programmer-oriented testing framework for PHP.
+				<br>
+				<a href="http://nunit.org/" target="_blank">NUnit</a>
+				NUnit is a unit-testing framework for all .Net languages.
+				<br>
+				<a href="http://testng.org/" target="_blank">TestNG</a>
+				TestNG is designed to cover all categories of tests:  unit, functional, end-to-end, integration, etc...
+				<br>
+				<a href="http://testng.org/doc/maven.html" target="_blank">TestNG dependency for Maven</a>
+				Подключение TestNG в Intellij IDEA для проекта Maven (Java).
+				<br>
+				<br>
+				<a href="https://experitest.com/mobile-test-automation/seetest-automation/" target="_blank">SeeTestAutomation</a>
+				Develop and execute robust automated tests using the SeeTest client Integrate into any testing framework and IDE. 
+			</div></div>
+		</div>
+	</section>
+
+	<section class="section-white">
+		<div class="content">
+			<h2 class="title-black">Ссылки на информационные ресурсы</h2>
+			<div class="content-full"><div class="block">
+				<a href="http://mvnrepository.com/artifact/junit/junit/4.12" target="_blank">JUnit dependency for Maven</a>
+				Подключение JUnit в Intellij IDEA из репозиторя Maven.
+				<br>
+				<a href="http://www.seleniumhq.org/docs/" target="_blank">SeleniumHQ Docs</a>
+				Официальное руководство по работе с Selenium.
+				<br>
+				<a href="https://www.gitbook.com/book/kreisfahrer/selenium-webdriver/details" target="_blank">Selenium Webdriver - GitBook</a>
+				Перевод официального руководства по работе с Selenium.
+				<br>
+				<a href="https://selenium2.ru/docs.html" target="_blank">Selenium2.ru</a>
+				Это перевод на русский язык документации Selenium, опубликованной на официальном сайте
+				<br>
+				<a href="http://appium.io/docs/en/about-appium/getting-started/" target="_blank">Appium Getting Started</a>
+				Официальное руководство по Appium. 
+				<br>
+				<a href="https://github.com/appium/appium-desktop" target="_blank">Appium Desktop</a>
+				Официальное руководство по Appium Desktop. 
+				<br>
+				<a href="http://appium.io/docs/en/drivers/android-uiautomator2/index.html" target="_blank">Appium UiAutomator2</a>
+				Официальное руководство по UiAutomator2 Driver for Android. 
+				<br>
+				<a href="http://appium.io/docs/en/writing-running-appium/server-args/index.html" target="_blank">Appium server arguments</a>
+				Официальное руководство по серверу Appium. 
+				<br>
+				<a href="http://getbug.ru/rukovodstvo-po-appium-dlya-testirovaniya-ustroystv-pod-andoid-i-ios/" target="_blank">Appium - gitbug</a>
+				Руководство по Appium для тестирования устройств под Andoid и iOS
+				<br>
+				<a href="https://developer.android.com/studio/run/managing-avds.html" target="_blank">AVD Manager</a>
+				Официальное руководство управления эмулятором устройств в Android Studio
+			</div></div>
+		</div>
+	</section>
+
+	<section class="section-black">
+		<div class="content">
+			<h2 class="title-white">Программное обеспечение</h2>
+			<div class="content-full"><div class="block">
 				<h3>IDE: Интегрированная среда разработки</h3>
-				<table>
-					<tr>
-						<td>
-							<a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a>
-							Интегрированная среда разработки программного обеспечения для многих языков программирования, в частности Java, JavaScript, Python, разработанная компанией JetBrains.
-							<br>
-							<a href="https://developer.android.com/studio/" target="_blank">Android Studio</a>
-							Интегрированная среда разработки (IDE) для работы с платформой Android.
-							<br>
-							<a href="http://www.eclipse.org/" target="_blank">Eclipse</a>
-							Свободная интегрированная среда разработки модульных кроссплатформенных приложений.
-							<br>
-							<a href="https://www.eclipse.org/pdt/" target="_blank">PHP Development Tools (PDT)</a>
-							Интегрированная среда разработки приложений на языке программирования PHP, разработанная на основе Eclipse, распространяемая на условиях лицензии Eclipse Public License..
-							<br>
-							<a href="https://netbeans.org/" target="_blank">NetBeans</a>
-							Свободная интегрированная среда разработки приложений.
-							<br>
-							<a href="https://www.visualstudio.com/ru/vs/visual-studio-express/" target="_blank">Visual Studio Express</a>
-							Линейка бесплатных интегрированных сред разработки.
-							<br>
-							<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
-							Кроссплатформенный редактор исходного кода.
-							<br>
-							<a href="http://www.icsharpcode.net/OpenSource/SD/Default.aspx" target="_blank">SharpDevelop</a>
-							Свободная среда разработки.
-							<br>
-							<a href="http://flashdevelop.org/" target="_blank">FlashDevelop</a>
-							Свободная среда разработки и редактор, позволяющий создавать Flash-приложения.
-							<br>
-							<a href="https://www.sublimetext.com/3" target="_blank">Sublime Text</a>
-							Кроссплатформенный проприетарный текстовый редактор.
-							<br>
-						</td>
-					</tr>
-				</table>
-			</p>
+				<div class="block">
+					<a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a>
+					Интегрированная среда разработки программного обеспечения для многих языков программирования, в частности Java, JavaScript, Python, разработанная компанией JetBrains.
+					<br>
+					<a href="https://developer.android.com/studio/" target="_blank">Android Studio</a>
+					Интегрированная среда разработки (IDE) для работы с платформой Android.
+					<br>
+					<a href="http://www.eclipse.org/" target="_blank">Eclipse</a>
+					Свободная интегрированная среда разработки модульных кроссплатформенных приложений.
+					<br>
+					<a href="https://www.eclipse.org/pdt/" target="_blank">PHP Development Tools (PDT)</a>
+					Интегрированная среда разработки приложений на языке программирования PHP, разработанная на основе Eclipse, распространяемая на условиях лицензии Eclipse Public License..
+					<br>
+					<a href="https://netbeans.org/" target="_blank">NetBeans</a>
+					Свободная интегрированная среда разработки приложений.
+					<br>
+					<a href="https://www.visualstudio.com/ru/vs/visual-studio-express/" target="_blank">Visual Studio Express</a>
+					Линейка бесплатных интегрированных сред разработки.
+					<br>
+					<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+					Кроссплатформенный редактор исходного кода.
+					<br>
+					<a href="http://www.icsharpcode.net/OpenSource/SD/Default.aspx" target="_blank">SharpDevelop</a>
+					Свободная среда разработки.
+					<br>
+					<a href="http://flashdevelop.org/" target="_blank">FlashDevelop</a>
+					Свободная среда разработки и редактор, позволяющий создавать Flash-приложения.
+					<br>
+					<a href="https://www.sublimetext.com/3" target="_blank">Sublime Text</a>
+					Кроссплатформенный проприетарный текстовый редактор.
+				</div>
 
-			<br>
-
-			<p>
+				<br />
 				<h3>WAMP/LAMP: «Windows/Linux, Apache, MySQL и PHP»</h3>
-				<table>
-					<tr>
-						<td>
-							<a href="http://help.ubuntu.ru/wiki/lamp" target="_blank">LAMP Ubuntu</a>
-							Платформы для веб-разработки под Linux: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
-							<br>
-							<a href="https://www.debian.org/" target="_blank">LAMP Debian</a>
-							Платформы для веб-разработки под Linux: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
-							<br>
-							<a href="http://www.wampserver.com/ru/" target="_blank">WAMP Server</a>
-							Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
-							<br>
-							<a href="https://www.ampps.com/" target="_blank">AMPPS</a>
-							Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
-							<br>
-							<a href="https://www.apachefriends.org" target="_blank">XAMPP</a>
-							Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP+Perl и базы данных MariaDB.
-							<br>
-							<a href="https://ospanel.io/" target="_blank">Open Server</a>
-							Портативная серверная платформа и программная среда под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
-							<br>
-							<a href="https://httpd.apache.org/" target="_blank">Apache</a>
-							Сервер Http, свободный веб-сервер.
-							<br>
-							<a href="https://www.mysql.com/" target="_blank">MySQL</a>
-							Свободная реляционная система управления базами данных.
-							<br>
-							<a href="http://php.net/" target="_blank">PHP</a>
-							Препроцессор гипертекста, скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений.
-							<br>
-							<a href="https://nodejs.org/en/" target="_blank">Node.js</a>
-							Программная платформа, основанная на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения.
-							<br>
-						</td>
-					</tr>
-				</table>
-			</p>
+				<div class="block">
+					<a href="http://help.ubuntu.ru/wiki/lamp" target="_blank">LAMP Ubuntu</a>
+					Платформы для веб-разработки под Linux: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
+					<br>
+					<a href="https://www.debian.org/" target="_blank">LAMP Debian</a>
+					Платформы для веб-разработки под Linux: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
+					<br>
+					<a href="http://www.wampserver.com/ru/" target="_blank">WAMP Server</a>
+					Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
+					<br>
+					<a href="https://www.ampps.com/" target="_blank">AMPPS</a>
+					Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
+					<br>
+					<a href="https://www.apachefriends.org" target="_blank">XAMPP</a>
+					Платформы для веб-разработки под Windows: сервер Apache, интерпретатора скриптов PHP+Perl и базы данных MariaDB.
+					<br>
+					<a href="https://ospanel.io/" target="_blank">Open Server</a>
+					Портативная серверная платформа и программная среда под Windows: сервер Apache, интерпретатора скриптов PHP и базы данных MySQL.
+					<br>
+					<a href="https://httpd.apache.org/" target="_blank">Apache</a>
+					Сервер Http, свободный веб-сервер.
+					<br>
+					<a href="https://www.mysql.com/" target="_blank">MySQL</a>
+					Свободная реляционная система управления базами данных.
+					<br>
+					<a href="http://php.net/" target="_blank">PHP</a>
+					Препроцессор гипертекста, скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений.
+					<br>
+					<a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+					Программная платформа, основанная на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения.
+				</div>
 
-			<br>
-			
-			<p>
+				<br />
 				<h3>Frameworks: Технологии</h3>
-				<table>
-					<tr>
-						<td>
-							<a href="http://www.pixijs.com/" target="_blank">PixiJS</a>
-							Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
-							<br>
-							<a href="https://phaser.io/" target="_blank">Phaser</a>
-							A fast, free and fun open source framework for Canves and WebGL powered browser games.
-							<br>
-							<a href="https://createjs.com/" target="_blank">CreateJS</a>
-							A suite of modular libraries and tools which work together or independently to enable rich interactive content on open web technologies via HTML5.
-							<br>
-							<a href="https://threejs.org/" target="_blank">TreeJS</a>
-							A suite of modular libraries and tools which work together or independently to enable rich interactive content on open web technologies via HTML5.
-							<br>
-							<a href="http://www.yiiframework.com/" target="_blank">Yii2</a>
-							Oбъектно-ориентированный компонентный фреймворк, написанный на PHP и реализующий парадигму MVC.
-							<br>
-							<a href="https://www.joomla.org/" target="_blank">Joomla</a>
-							Система управления содержимым, использующая в качестве хранилища базы данных СУБД MySQL или другие стандартные промышленные реляционные СУБД.
-							<br>
-							<a href="https://ru.wordpress.org/" target="_blank">WordPress</a>
-							Система управления содержимым сайта с открытым исходным кодом.
-							<br>
-							<a href="https://www.microsoft.com/net" target="_blank">.NET Framework</a>
-							Программная платформа, выпущенная компанией Microsoft.
-							<br>				
-						</td>
-					</tr>
-				</table>
-			</p>
+				<div class="block">
+					<a href="http://www.pixijs.com/" target="_blank">PixiJS</a>
+					Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
+					<br>
+					<a href="https://phaser.io/" target="_blank">Phaser</a>
+					A fast, free and fun open source framework for Canves and WebGL powered browser games.
+					<br>
+					<a href="https://createjs.com/" target="_blank">CreateJS</a>
+					A suite of modular libraries and tools which work together or independently to enable rich interactive content on open web technologies via HTML5.
+					<br>
+					<a href="https://threejs.org/" target="_blank">TreeJS</a>
+					A suite of modular libraries and tools which work together or independently to enable rich interactive content on open web technologies via HTML5.
+					<br>
+					<a href="http://www.yiiframework.com/" target="_blank">Yii2</a>
+					Oбъектно-ориентированный компонентный фреймворк, написанный на PHP и реализующий парадигму MVC.
+					<br>
+					<a href="https://www.joomla.org/" target="_blank">Joomla</a>
+					Система управления содержимым, использующая в качестве хранилища базы данных СУБД MySQL или другие стандартные промышленные реляционные СУБД.
+					<br>
+					<a href="https://ru.wordpress.org/" target="_blank">WordPress</a>
+					Система управления содержимым сайта с открытым исходным кодом.
+					<br>
+					<a href="https://www.microsoft.com/net" target="_blank">.NET Framework</a>
+					Программная платформа, выпущенная компанией Microsoft.
+				</div>
 
-			<br>
-			
-			<p>
+				<br />
 				<h3>Soft: Разное</h3>
-				<table>
-					<tr>
-						<td>
-							<a href="https://nodejs.org" target="_blank">NodeJS</a>
-							Программная платформа, основанная на движке V8 (транслирующем JavaScript в машинный код), превращающая JavaScript из узкоспециализированного языка в язык общего назначения.
-							<br>
-							<a href="https://getcomposer.org/" target="_blank">Composer</a>
-							Пакетный менеджер уровня приложений для языка программирования PHP, который предоставляет средства по управлению зависимостями в PHP-приложении.
-							<br>
-							<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java Platform (JDK)</a>
-							Бесплатно распространяемый компанией Oracle Corporation комплект разработчика приложений на языке Java.
-							<br>
-							<br>
-							<a href="https://www.mysql.com/products/workbench/" target="_blank">MySQL Workbench</a>
-							Инструмент для визуального проектирования баз данных, интегрирующий проектирование, моделирование, создание и эксплуатацию БД в единое бесшовное окружение для системы баз данных MySQL.
-							<br>
-							<a href="https://www.heidisql.com/" target="_blank">HeidiSQL</a>
-							Полезный и надежный инструмент, предназначенный для веб-разработчиков с использованием популярного MySQL-сервера, баз данных Microsoft SQL и PostgreSQL.
-							<br>	
-							<a href="https://doublecmd.sourceforge.io/" target="_blank">Double Commander</a>
-							Кросс платформенный open source файл менеджер, с двумя панелями.
-							<br>
-							<a href="http://filezilla.ru/" target="_blank">FileZilla</a>
-							Один из лучших бесплатных FTP-менеджеров, который поможет вам скачать и загрузить файлы с FTP-серверов.
-							<br>
-							<a href="https://www.helpndoc.com/" target="_blank">HelpNDoc</a>
-							Программа для создания справочной документации в разнообразных форматах, включая CHM, HTML, PDF или совместимых с Word.
-							<br>
-						</td>
-					</tr>
-				</table>
-			</p>
+				<div class="block">
+					<a href="https://nodejs.org" target="_blank">NodeJS</a>
+					Программная платформа, основанная на движке V8 (транслирующем JavaScript в машинный код), превращающая JavaScript из узкоспециализированного языка в язык общего назначения.
+					<br>
+					<a href="https://getcomposer.org/" target="_blank">Composer</a>
+					Пакетный менеджер уровня приложений для языка программирования PHP, который предоставляет средства по управлению зависимостями в PHP-приложении.
+					<br>
+					<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java Platform (JDK)</a>
+					Бесплатно распространяемый компанией Oracle Corporation комплект разработчика приложений на языке Java.
+					<br>
+					<br>
+					<a href="https://www.mysql.com/products/workbench/" target="_blank">MySQL Workbench</a>
+					Инструмент для визуального проектирования баз данных, интегрирующий проектирование, моделирование, создание и эксплуатацию БД в единое бесшовное окружение для системы баз данных MySQL.
+					<br>
+					<a href="https://www.heidisql.com/" target="_blank">HeidiSQL</a>
+					Полезный и надежный инструмент, предназначенный для веб-разработчиков с использованием популярного MySQL-сервера, баз данных Microsoft SQL и PostgreSQL.
+					<br>	
+					<a href="https://doublecmd.sourceforge.io/" target="_blank">Double Commander</a>
+					Кросс платформенный open source файл менеджер, с двумя панелями.
+					<br>
+					<a href="http://filezilla.ru/" target="_blank">FileZilla</a>
+					Один из лучших бесплатных FTP-менеджеров, который поможет вам скачать и загрузить файлы с FTP-серверов.
+					<br>
+					<a href="https://www.helpndoc.com/" target="_blank">HelpNDoc</a>
+					Программа для создания справочной документации в разнообразных форматах, включая CHM, HTML, PDF или совместимых с Word.
+				</div>	
+			</div></div>
 		</div>
 	</section>
+
 
 	<!-- FOOTER -->
 	<footer>
 		<table id="tableIcons">
 			<tr>
-				<td><a href="https://github.com/Somov-QA" class="LinkIcons" target="_blank">
-						<img src="img/icons/git.png" alt="GitHub" class="Icons">
+				<td><a href="https://github.com/SomovStudio" class="link-icons" target="_blank">
+						<img src="img/icons/git.png" alt="GitHub" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="LinkIcons" target="_blank">
-						<img src="img/icons/youtube.png" alt="email" class="Icons">
+					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="link-icons" target="_blank">
+						<img src="img/icons/youtube.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://vk.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/vk.png" alt="VK" class="Icons">
+					<a href="https://vk.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/vk.png" alt="VK" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="https://www.facebook.com/e.p.somov" class="LinkIcons" target="_blank">
-						<img src="img/icons/f.png" alt="facebook" class="Icons">
+					<a href="https://www.facebook.com/e.p.somov" class="link-icons" target="_blank">
+						<img src="img/icons/f.png" alt="facebook" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov@i.ua" class="LinkIcons" target="_blank">
-						<img src="img/icons/em.png" alt="email" class="Icons">
+					<a href="mailto:somov@i.ua" class="link-icons" target="_blank">
+						<img src="img/icons/em.png" alt="email" class="icons">
 					</a>
 				</td>
 				<td>
-					<a href="mailto:somov.studio@gmail.com" class="LinkIcons" target="_blank">
-						<img src="img/icons/g+.png" alt="Google" class="Icons">
+					<a href="mailto:somov.studio@gmail.com" class="link-icons" target="_blank">
+						<img src="img/icons/g+.png" alt="Google" class="icons">
 					</a>
 				</td>
 			</tr>
 		</table>
-		<h5>2013 - 2018 © Сомов Евгений Павлович</h5>
+		<div class="footer-author">
+			<h5>2018 © Сомов Евгений Павлович</h5>
+		</div>
 	</footer>
 </body>
 </html>
