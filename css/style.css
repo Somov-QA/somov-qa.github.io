@@ -388,7 +388,12 @@ header{
     color: #636363;
 }
 
-.languages li {
+
+.list-icons ul {
+    margin-left: 0px;
+}
+
+.list-icons li {
     display: inline-block;
     text-align: center;
     font-family: "PT Sans",sans-serif;
@@ -396,7 +401,7 @@ header{
 
 }
 
-.languages li img {
+.list-icons li img {
     display: block;
     border-radius: 5px;
     margin: 5px;
@@ -441,18 +446,6 @@ header{
     top: 5px;
 }
 
-#bitrixLink{
-    text-decoration: none;
-    border: none;
-}
-
-#bitrixLink img{
-    position: relative;
-    top: 5px;
-    width: ;
-    height:27px;
-}
-
 .work-image {
     margin: 0 15%;
 }
@@ -463,6 +456,21 @@ header{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     max-width: 100%;
+}
+
+.single-icon {
+    display: inline-block;
+    width: 64px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.single-description {
+    display: inline-block;
+    margin-top: 5px;
+    min-width: 75%;
 }
 
 .content-left{
