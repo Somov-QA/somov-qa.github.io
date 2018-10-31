@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Календарь</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="">
+
+
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Календарь">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Календарь" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Help1C" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.3.6/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.2/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.2/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Help1C</h1>
+    
+  </header>
+
+  <nav class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#index" id="tab-index" aria-controls="index" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#search" id="tab-search" aria-controls="search" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Newtopic139"
+		  data-hnd-context="124"
+		  data-hnd-title="Календарь"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="1C77.html">1C Предприятие 7.7</a></li><li><a href="Newtopic138.html">Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="Newtopic138.html" title="Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="Newtopic138.html" title="Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Newtopic140.html" title="Виды расчетов и Группы расчетов" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Календарь</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps3"><span class="rvts20">Календарь</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts35">1) При создании календаря настраиваются поля:</span></p>
+<p class="rvps3"><span class="rvts28">Стартовая дата</span><span class="rvts32"> - &nbsp;любой понедельник.</span></p>
+<p class="rvps3"><span class="rvts28">Длина дня</span><span class="rvts32"> - состоит как правило из 7-ми значений (7 дней) например:</span></p>
+<p class="rvps5"><span class="rvts35">8.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, понедельник.</span></p>
+<p class="rvps5"><span class="rvts35">8.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, вторник.</span></p>
+<p class="rvps5"><span class="rvts35">8.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, среда.</span></p>
+<p class="rvps5"><span class="rvts35">8.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, четверг.</span></p>
+<p class="rvps5"><span class="rvts35">8.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, пятница</span></p>
+<p class="rvps5"><span class="rvts35">0.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, субота (выходной)</span></p>
+<p class="rvps5"><span class="rvts35">0.00</span><span class="rvts35"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">восемь часов, воскресение (выходной)</span></p>
+<p class="rvps3"><span class="rvts29"><br/></span></p>
+<p class="rvps3"><span class="rvts32">2) Чтобы выполнить </span><span class="rvts52">автозаполнение</span><span class="rvts32"> календаря, нужно в 1С:Предприятие7.7 , в меню </span><span class="rvts28">Операции</span><span class="rvts32"> -&gt; </span><span class="rvts28">Календарь </span><span class="rvts32">(кнопка Автозаполнение)</span></p>
+<p class="rvps3"><span class="rvts35">Чтобы произвести ручное заполнение календаря нужно тутже выбрать день и ввести количество рабочих дней.</span></p>
+<p class="rvps3"><span class="rvts29"><br/></span></p>
+<p class="rvps3"><span class="rvts32">3) Ввести празнечные дни можно в &nbsp;меню </span><span class="rvts28">Операции</span><span class="rvts32"> -&gt; </span><span class="rvts28">Праздники</span><span class="rvts32"> и задать "особые" дни.</span></p>
+<p class="rvps3"><span class="rvts32">тут указывается </span><span class="rvts28">дата </span><span class="rvts32">празднечного для , и </span><span class="rvts28">количество </span><span class="rvts32">рабочих часов в этот день.</span></p>
+<p class="rvps3"><span class="rvts46"><br/></span></p>
+<p class="rvps3"><span class="rvts32">Но тогда в </span><span class="rvts52">автозаполнении</span><span class="rvts32"> календаря нужно установить флажок Учитывать праздники (эти праздники тоже </span><span class="rvts37">будут выделены красным)</span></p>
+<p class="rvps3"><span class="rvts32">Пример: </span><span class="rvts28">Заполнение</span><span class="rvts32"> календаря программным способом.</span></p>
+<p class="rvps3"><span class="rvts31">Календарь</span><span class="rvts30"> = Календари.</span><span class="rvts31">Пятидневка</span><span class="rvts30">;</span></p>
+<p class="rvps3"><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts34">Автозаполнение</span><span class="rvts30">(</span><span class="rvts31">ДатаНач</span><span class="rvts30">, </span><span class="rvts31">ДатаКон</span><span class="rvts30">); </span><span class="rvts33">//Выполняет автозаполнение календаря в заданном периоде</span></p>
+<p class="rvps3"><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts34">ВыбратьДаты</span><span class="rvts30">(</span><span class="rvts31">ДатаНач</span><span class="rvts30">, </span><span class="rvts31">ДатаКон</span><span class="rvts30">); </span><span class="rvts33">//Открывает выборку записей календаря.</span></p>
+<p class="rvps3"><span class="rvts30">Пока </span><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts34">СледующаяДата</span><span class="rvts30">() = </span><span class="rvts32">1</span><span class="rvts30"> Цикл</span></p>
+<p class="rvps5"><span class="rvts31">ТекДата</span><span class="rvts30"> = </span><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts31">Дата</span><span class="rvts30">; // получаем дату текущей строки календаря</span></p>
+<p class="rvps5"><span class="rvts31">ДеньНедели</span><span class="rvts30"> = НомерДняНедели(</span><span class="rvts31">ТекДата</span><span class="rvts30">); &nbsp;</span><span class="rvts33"> //Возвращает порядковый номер дня недели для заданной даты</span></p>
+<p class="rvps5"><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts34">УчитыватьПраздники</span><span class="rvts30">(</span><span class="rvts32">1</span><span class="rvts30">); &nbsp; &nbsp; &nbsp; &nbsp;//Учитывать праздники которые введены нами</span></p>
+<p class="rvps5"><span class="rvts30">Если (</span><span class="rvts31">ДеньНедели</span><span class="rvts30"> = </span><span class="rvts32">6</span><span class="rvts30">) или (</span><span class="rvts31">ДеньНедели</span><span class="rvts30"> = </span><span class="rvts32">7</span><span class="rvts30">) Тогда</span></p>
+<p class="rvps6"><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts31">УстановитьАтрибут</span><span class="rvts30">(</span><span class="rvts32">"Значение"</span><span class="rvts30">, </span><span class="rvts32">0</span><span class="rvts30">); </span><span class="rvts33">//Установить значение атрибута по имени идентификатора</span></p>
+<p class="rvps5"><span class="rvts30">Иначе &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts33">// атрибуты (Дата - только чтение) и (Значение)</span></p>
+<p class="rvps6"><span class="rvts31">Календарь</span><span class="rvts30">.</span><span class="rvts31">УстановитьАтрибут</span><span class="rvts30">(</span><span class="rvts32">"Значение"</span><span class="rvts30">, </span><span class="rvts32">8</span><span class="rvts30">);</span></p>
+<p class="rvps5"><span class="rvts30">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts30">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts29"><br/></span></p>
+<p class="rvps3"><span class="rvts32">Пример: </span><span class="rvts28">получение</span><span class="rvts32"> данных из календаря. (Дней, Часов)</span></p>
+<p class="rvps3"><span class="rvts30">Сообщить(</span><span class="rvts32">"Количество рабочих дней по календарю пятидневной рабочей недели за "</span><span class="rvts30"> + ДатаМесяц(</span><span class="rvts31">ДатаНач</span><span class="rvts30">) + </span><span class="rvts32">" месяц. :"</span><span class="rvts30"> + Календари.</span><span class="rvts31">Пятидневка</span><span class="rvts30">.</span><span class="rvts34">Дней</span><span class="rvts30">(</span><span class="rvts31">ДатаНач</span><span class="rvts30">, </span><span class="rvts31">ДатаКон</span><span class="rvts30">));</span></p>
+<p class="rvps3"><span class="rvts30">Сообщить(</span><span class="rvts32">"Количество рабочих часов по календарю пятидневной рабочей недели за "</span><span class="rvts30"> + ДатаМесяц(</span><span class="rvts31">ДатаНач</span><span class="rvts30">) + </span><span class="rvts32">" месяц. :"</span><span class="rvts30"> + Календари.</span><span class="rvts31">Пятидневка</span><span class="rvts30">.</span><span class="rvts34">Часов</span><span class="rvts30">(</span><span class="rvts31">ДатаНач</span><span class="rvts30">, </span><span class="rvts31">ДатаКон</span><span class="rvts30">));</span></p>
+<p class="rvps3"><span class="rvts29"><br/></span></p>
+<p class="rvps3"><span class="rvts32">Пример: работа с объектом "</span><span class="rvts28">Праздники</span><span class="rvts32">"</span></p>
+<p class="rvps3"><span class="rvts31">Пр</span><span class="rvts30"> = СоздатьОбъект(</span><span class="rvts32">"Праздники"</span><span class="rvts30">);</span></p>
+<p class="rvps3"><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Новый</span><span class="rvts30">(</span><span class="rvts32">'23.02.2009'</span><span class="rvts30">,</span><span class="rvts32">0</span><span class="rvts30">);</span></p>
+<p class="rvps3"><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Новый</span><span class="rvts30">(</span><span class="rvts32">'07.03.2009'</span><span class="rvts30">,</span><span class="rvts32">4</span><span class="rvts30">);</span></p>
+<p class="rvps3"><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Новый</span><span class="rvts30">(</span><span class="rvts32">'08.03.2009'</span><span class="rvts30">,</span><span class="rvts32">0</span><span class="rvts30">);</span></p>
+<p class="rvps3"><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">ВыбратьДаты</span><span class="rvts30">(</span><span class="rvts31">ДатаНач</span><span class="rvts30">, </span><span class="rvts31">ДатаКон</span><span class="rvts30">);</span></p>
+<p class="rvps3"><span class="rvts30">Пока </span><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">СледующаяДата</span><span class="rvts30">() = </span><span class="rvts32">1</span><span class="rvts30"> Цикл</span></p>
+<p class="rvps5"><span class="rvts30">Если </span><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Значение</span><span class="rvts30"> =</span><span class="rvts32"> 0 </span><span class="rvts30">Тогда</span></p>
+<p class="rvps6"><span class="rvts30">Сообщить(</span><span class="rvts32">"Праздник "</span><span class="rvts30"> + </span><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Дата</span><span class="rvts30">);</span></p>
+<p class="rvps5"><span class="rvts30">Иначе</span></p>
+<p class="rvps6"><span class="rvts30">Сообщить(</span><span class="rvts32">"Предпразничный день "</span><span class="rvts30"> + </span><span class="rvts31">Пр</span><span class="rvts30">.</span><span class="rvts31">Дата</span><span class="rvts30">);</span></p>
+<p class="rvps5"><span class="rvts30">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts30">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts29"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-1.11.3/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+  <script src="vendors/fastclick-1.0.6/fastclick.min.js"></script>
+  <script src="vendors/markjs-8.8.3/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.18.9/uri.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="vendors/bootstrap-3.3.6/js/ie10-viewport-bug-workaround.js"></script>
+  
+  <!-- Headroom -->
+  <script src="vendors/headroom-0.9.3/headroom.min.js"></script>
+  <script src="vendors/headroom-0.9.3/jquery.headroom.min.js"></script>
+
+  <!-- JsTree -->
+  <script src="vendors/jstree-3.3.2/jstree.min.js"></script>
+
+  <!-- HelpNDoc scripts -->
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    $(function() {
+      // Instanciate FastClick
+      Origami.fastclick(document.body);
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
