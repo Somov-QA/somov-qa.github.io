@@ -210,7 +210,7 @@ header{
 }
 
 .header-greeting a:link {
-  color: #497DDD;
+  color: #EF7D55;
   border-bottom: 1px dashed; 
 }
 .header-greeting a:visited {
@@ -221,7 +221,7 @@ header{
   border-bottom: .07em solid;
 }
 .header-greeting a:active {
-  color: #497DDD; 
+  color: #EF7D55; 
   border-bottom: 1px dashed;
 }
 
