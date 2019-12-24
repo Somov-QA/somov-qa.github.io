@@ -548,6 +548,10 @@ header{
         width: 95%;
         height: 75%;
     }
+
+    #vk_groups {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -584,6 +588,10 @@ header{
     .content-sidebar-right{
         display: block;
         width: 100%;
+    }
+
+    #vk_groups {
+        display: none;
     }
 }
 /** -- SECTION -- **/
@@ -659,3 +667,8 @@ footer{
     }
 }
 /** -- FOOTER -- **/
+
+/** -- VK Widget -- **/
+#vk_groups {
+    min-height: 800px;
+}
