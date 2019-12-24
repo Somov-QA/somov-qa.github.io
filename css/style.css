@@ -541,6 +541,17 @@ header{
     clear: both;
 }
 
+@media screen and (max-width: 1024px){
+    .content-sidebar-right{
+        display: block;
+        width: 100%;
+    }
+
+    #vk_groups {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 850px){
     .contant-iframe{
         width: 95%;
@@ -556,6 +567,7 @@ header{
         display: none;
     }
 }
+
 
 @media screen and (max-width: 500px){
     .contant-iframe{
