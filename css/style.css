@@ -530,8 +530,11 @@ header{
 
 .contant-iframe-video{
     padding: 25px;
-    width: 35em;
+    width: 45em;
     height: 25em;
+    background: linear-gradient(to left, #111111, #FFFFFF);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .section-clear {
