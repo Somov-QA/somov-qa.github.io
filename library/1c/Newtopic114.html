@@ -1,0 +1,126 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Работа с временными итогами</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic114");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Работа с временными итогами</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic100.html">Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic111.html">БухгалтерскиеИтоги</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic111.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic113.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic115.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Работа с временными итогами</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Рассчитать</span><span class="rvts34">(&lt;</span><span class="rvts35">НачалоПериода</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">КонецПериода</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФильтрПоСчетам</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТолькоСинтетика</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ПланСчетов</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">РазделительУчета</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">Актуальность</span><span class="rvts34">(&lt;</span><span class="rvts35">Флаг</span><span class="rvts34">&gt;) &nbsp;</span><span class="rvts37">// Устанавливает или сбрасывает признак актуальности временных итогов (флаг = 1 или 0)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">ПРИМЕР: Получение остатка товара на складе на текущую дату.</span></p>
+<p class="rvps3"><span class="rvts34"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Если ТекущаяДата() &lt; </span><span class="rvts38">КонецРассчитанногоПериодаБИ</span><span class="rvts34">() Тогда </span><span class="rvts37">// Возвращает последнюю дату рассчитанных бухгалтерских итогов</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">Рассчитать</span><span class="rvts34">(,ТекущаяДата(), </span><span class="rvts37">"28.1"</span><span class="rvts34">); </span><span class="rvts37">// Расчет временных итогов</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Остаток: "</span><span class="rvts34"> + </span><span class="rvts35">Товар</span><span class="rvts34"> + </span><span class="rvts36">" на складе: " </span><span class="rvts34">+</span><span class="rvts36"> </span><span class="rvts35">Склад</span><span class="rvts36"> </span><span class="rvts34">+</span><span class="rvts36"> " "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">СКД</span><span class="rvts34">(</span><span class="rvts36">"28.1"</span><span class="rvts34">,</span><span class="rvts36">"К"</span><span class="rvts34">,,</span><span class="rvts35">Товар</span><span class="rvts34">,</span><span class="rvts35"> Склад</span><span class="rvts34">)); </span><span class="rvts37">// Товар - это "Реквизит диалога" с типом "Справочник.Товары"</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free PDF documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

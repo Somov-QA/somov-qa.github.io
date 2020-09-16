@@ -1,0 +1,218 @@
+﻿
+
+<html>
+	
+<head>
+	<title>state - состояние компонента</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("state");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">state - состояние компонента</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="React.html">React</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="React.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic96.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="CreateReactApp.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">JSX: Состояние компонента</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Состояние хранится в state компонента созданного с помощью React.Component</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Пример таймера (взять с официального сайта)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts53">class</span><span class="rvts21"> Timer </span><span class="rvts53">extends</span><span class="rvts21"> React.Component {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;constructor(props) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">super</span><span class="rvts21">(props);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">.state = { seconds: 0 };</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;tick() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">.setState(prevState =&gt; ({</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;seconds: prevState.seconds + 1</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}));</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;componentDidMount() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">.interval = setInterval(() =&gt; </span><span class="rvts53">this</span><span class="rvts21">.tick(), 1000);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;componentWillUnmount() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;clearInterval(</span><span class="rvts53">this</span><span class="rvts21">.interval);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;render() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> (</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Seconds: {</span><span class="rvts53">this</span><span class="rvts21">.state.seconds}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21">ReactDOM.render(&lt;Timer /&gt;, </span><span class="rvts142">mountNode</span><span class="rvts21">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Пример состояния для компонента счетчик</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts53">class</span><span class="rvts21"> Counter </span><span class="rvts53">extends</span><span class="rvts21"> React.Component {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;constructor(props) {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">super</span><span class="rvts21">(props);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">.state = {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;count: 1</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;handleClick() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts70">//this.setState(prevState =&gt; ({ count: prevState.count + 1 }));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">this</span><span class="rvts21">.setState((prevState, props) =&gt; ({</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;count: prevState.count + 1</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;}));</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts54">'CLICK!'</span><span class="rvts21">, </span><span class="rvts53">this</span><span class="rvts21">.state.count);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;render() {</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts53">return</span><span class="rvts21"> (</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div className=</span><span class="rvts54">"container"</span><span class="rvts21"> &gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div className=</span><span class="rvts54">"count"</span><span class="rvts21">&gt;{</span><span class="rvts53">this</span><span class="rvts21">.state.count}&lt;/div&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;img src={</span><span class="rvts53">this</span><span class="rvts21">.props.imageUrl} onClick={</span><span class="rvts53">this</span><span class="rvts21">.handleClick.bind(</span><span class="rvts53">this</span><span class="rvts21">)} </span><span class="rvts54">/&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;h1&gt;{</span><span class="rvts53">this</span><span class="rvts21">.props.title}&lt;/h1&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;p&gt;{</span><span class="rvts53">this</span><span class="rvts21">.props.subtitle}&lt;/p&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div &gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts21">}</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts21">ReactDOM.render(</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;(&lt;div&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;Counter title=</span><span class="rvts54">"React"</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;subtitle=</span><span class="rvts54">"Фреймворк от Facebook"</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imageUrl=</span><span class="rvts54">"http://localhost:8080/example/img/react.png"</span><span class="rvts21"> </span><span class="rvts54">/&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;Counter title=</span><span class="rvts54">"Angular 2"</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;subtitle=</span><span class="rvts54">"Фреймворк от Google"</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imageUrl=</span><span class="rvts54">"http://localhost:8080/example/img/angular.png"</span><span class="rvts21"> </span><span class="rvts54">/&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;&lt;/div&gt;),</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp;document.getElementById(</span><span class="rvts54">'root'</span><span class="rvts21">));</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Запуск скрипта на странице</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts18">&lt;!</span><span class="rvts19">DOCTYPE</span><span class="rvts20"> </span><span class="rvts18">html&gt;</span></p>
+<p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">html</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">head</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">meta</span><span class="rvts20"> </span><span class="rvts22">charset</span><span class="rvts21">=</span><span class="rvts23">"UTF-8"</span><span class="rvts20"> </span><span class="rvts18">/&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">title</span><span class="rvts18">&gt;</span><span class="rvts21">Test React State</span><span class="rvts18">&lt;/</span><span class="rvts19">title</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">link</span><span class="rvts20"> </span><span class="rvts22">rel</span><span class="rvts21">=</span><span class="rvts23">"stylesheet"</span><span class="rvts20"> </span><span class="rvts22">href</span><span class="rvts21">=</span><span class="rvts23">"./src/style.css"</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">script</span><span class="rvts20"> </span><span class="rvts22">src</span><span class="rvts21">=</span><span class="rvts23">"https://unpkg.com/react@16/umd/react.development.js"</span><span class="rvts18">&gt;&lt;/</span><span class="rvts19">script</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">script</span><span class="rvts20"> </span><span class="rvts22">src</span><span class="rvts21">=</span><span class="rvts23">"https://unpkg.com/react-dom@16/umd/react-dom.development.js"</span><span class="rvts18">&gt;&lt;/</span><span class="rvts19">script</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">script</span><span class="rvts20"> </span><span class="rvts22">src</span><span class="rvts21">=</span><span class="rvts23">"https://unpkg.com/babel-standalone@6.15.0/babel.min.js"</span><span class="rvts18">&gt;&lt;/</span><span class="rvts19">script</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">head</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts18">&lt;</span><span class="rvts19">body</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">div</span><span class="rvts20"> </span><span class="rvts22">id</span><span class="rvts21">=</span><span class="rvts23">"mountNode"</span><span class="rvts18">&gt;</span><span class="rvts21">Загрузка...</span><span class="rvts18">&lt;/</span><span class="rvts19">div</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">div</span><span class="rvts20"> </span><span class="rvts22">id</span><span class="rvts21">=</span><span class="rvts23">"root"</span><span class="rvts18">&gt;</span><span class="rvts21">Загрузка...</span><span class="rvts18">&lt;/</span><span class="rvts19">div</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp;</span><span class="rvts18">&lt;</span><span class="rvts19">script</span><span class="rvts20"> </span><span class="rvts22">type</span><span class="rvts21">=</span><span class="rvts23">"text/babel"</span><span class="rvts20"> </span><span class="rvts22">src</span><span class="rvts21">=</span><span class="rvts23">"./src/state.jsx"</span><span class="rvts18">&gt;&lt;/</span><span class="rvts19">script</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">body</span><span class="rvts18">&gt;</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts18">&lt;/</span><span class="rvts19">html</span><span class="rvts18">&gt;</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

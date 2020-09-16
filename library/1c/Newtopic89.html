@@ -1,0 +1,144 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Пример:  запрос который выбирает документы опираясь на справочник</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic89");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Пример:  запрос который выбирает документы опираясь на справочник</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic62.html">Запросы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic62.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic88.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic90.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Пример: &nbsp;запрос который выбирает документы опираясь на справочник</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts41"> </span><span class="rvts34">=</span><span class="rvts41"> </span><span class="rvts36">" //{{ЗАПРОС(Тест)</span></p>
+<p class="rvps3"><span class="rvts39">|Период с ВыбНачПериода по ВыбКонПериода;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|ТоргПредставитель = Справочник.Контрагенты.ТоргПредставитель;</span></p>
+<p class="rvps3"><span class="rvts39">|КонтрСпр = Справочник.Контрагенты.Наименование;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|ДокВН = Документ.ВозвратнаяНакладная.ТекущийДокумент;</span></p>
+<p class="rvps3"><span class="rvts39">|КонтрагентВН = Документ.ВозвратнаяНакладная.Контрагент;</span></p>
+<p class="rvps3"><span class="rvts39">|ТМЦВН = Документ.ВозвратнаяНакладная.ТМЦ;</span></p>
+<p class="rvps3"><span class="rvts39">|ВидТогр = Документ.ВозвратнаяНакладная.ВидТорговли;</span></p>
+<p class="rvps3"><span class="rvts39">|Кво = Документ.ВозвратнаяНакладная.Кво;</span></p>
+<p class="rvps3"><span class="rvts39">|Коэффициент = Документ.ВозвратнаяНакладная.Коэффициент;</span></p>
+<p class="rvps3"><span class="rvts39">|СуммаСНДС = Документ.ВозвратнаяНакладная.СуммаСНДС;</span></p>
+<p class="rvps3"><span class="rvts39">|ДокРНвВН = Документ.ВозвратнаяНакладная.Заказ;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|Функция КвоСумма = Сумма(Кво*Коэффициент);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция СуммаСНДССумма = Сумма(СуммаСНДС);</span></p>
+<p class="rvps3"><span class="rvts39">|Группировка ТМЦВН Без групп;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|Условие(ТоргПредставитель в ВыбТоргПредст);</span></p>
+<p class="rvps3"><span class="rvts39">|Условие(КонтрагентВН в КонтрСпр);</span></p>
+<p class="rvps3"><span class="rvts39">|Условие(ВидТогр в ВыбВидТорг);</span></p>
+<p class="rvps3"><span class="rvts36">|"</span><span class="rvts34">;</span><span class="rvts37">//}}ЗАПРОС</span></p>
+<p class="rvps3"><span class="rvts37">// Если ошибка в запросе, то выход из процедуры</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">) = </span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Возврат;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

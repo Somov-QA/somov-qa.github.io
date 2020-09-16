@@ -1,0 +1,133 @@
+﻿<html>
+	
+<head>
+	<title>Date</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Date");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Date</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptReference.html">JavaScript Reference</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptReference.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Boolean.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Math.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">Date</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts7">Date</span><span class="rvts16">()</span><span class="rvts6"> - возвращает текущую дату и время. </span></p>
+<p class="rvps2"><span class="rvts7">getDate</span><span class="rvts16">()</span><span class="rvts6"> - возвращает день месяца.</span></p>
+<p class="rvps2"><span class="rvts7">getDay</span><span class="rvts16">() </span><span class="rvts6">- возвращает число, представляющее день недели.</span></p>
+<p class="rvps2"><span class="rvts7">getMonth</span><span class="rvts16">()</span><span class="rvts6"> - возвращает месяц, как число.</span></p>
+<p class="rvps2"><span class="rvts7">getFullYear</span><span class="rvts16">()</span><span class="rvts6"> - возвращает четырехзначный номер, представляющий год.</span></p>
+<p class="rvps2"><span class="rvts7">getYear</span><span class="rvts16">()</span><span class="rvts6"> - &nbsp;возвращает год, как двухзначным или четырехзначным номер.</span></p>
+<p class="rvps2"><span class="rvts7">getHours</span><span class="rvts16">()</span><span class="rvts6"> - возвращает час.</span></p>
+<p class="rvps2"><span class="rvts7">getMinutes</span><span class="rvts16">()</span><span class="rvts6"> - возвращает минуты.</span></p>
+<p class="rvps2"><span class="rvts7">getSeconds</span><span class="rvts16">() </span><span class="rvts6">- возвращает секунды.</span></p>
+<p class="rvps2"><span class="rvts7">getMilliseconds</span><span class="rvts16">()</span><span class="rvts6"> - возвращает миллисекунды</span></p>
+<p class="rvps2"><span class="rvts7">getTime</span><span class="rvts16">()</span><span class="rvts6"> - возвращает количество миллисекунд, прошедших с полуночи 1 января 1970 года.</span></p>
+<p class="rvps2"><span class="rvts7">getTimezoneOffset</span><span class="rvts16">()</span><span class="rvts6"> - возвращает разницу в минутах между местным временем и временем по Гринвичу (GMT).</span></p>
+<p class="rvps2"><span class="rvts7">getUTCDate</span><span class="rvts16">()</span><span class="rvts6"> - возвращает день месяца согласно UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCDay</span><span class="rvts16">() </span><span class="rvts6">- &nbsp;возвращает число, представляющее день недели UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCMonth</span><span class="rvts16">() </span><span class="rvts6">- возвращает число, которое представляет месяц UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCFullYear</span><span class="rvts16">()</span><span class="rvts6"> - возвращает четырехзначный номер, представляющий год UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCHours</span><span class="rvts16">()</span><span class="rvts6"> - возвращает час времени UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCMinutes</span><span class="rvts16">()</span><span class="rvts6"> - вовзращает минуты UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCSeconds</span><span class="rvts16">()</span><span class="rvts6"> - возвращает секунды UTC.</span></p>
+<p class="rvps2"><span class="rvts7">getUTCMilliseconds</span><span class="rvts16">()</span><span class="rvts6"> - возвращает миллисекунды UTC.</span></p>
+<p class="rvps2"><span class="rvts7">parse</span><span class="rvts16">(datestring)</span><span class="rvts6"> - принимает строку даты и возвращает количество миллисекунд, прошедших с полуночи 1 января 1970 года.</span></p>
+<p class="rvps2"><span class="rvts7">setDate</span><span class="rvts16">(day)</span><span class="rvts6"> - установить день месяца.</span></p>
+<p class="rvps2"><span class="rvts7">setMonth</span><span class="rvts16">(month,day)</span><span class="rvts6"> - установить месяц.</span></p>
+<p class="rvps2"><span class="rvts7">setFullYear</span><span class="rvts16">(year,month,day)</span><span class="rvts6"> &nbsp;- установка даты.</span></p>
+<p class="rvps2"><span class="rvts7">setYear</span><span class="rvts16">(year)</span><span class="rvts6"> - установки года.</span></p>
+<p class="rvps2"><span class="rvts7">setHours</span><span class="rvts16">(hour,min,sec,millisec)</span><span class="rvts6"> - установка часов заданного времени.</span></p>
+<p class="rvps2"><span class="rvts7">setMinutes</span><span class="rvts16">(min,sec,millisec)</span><span class="rvts6"> - установка минут</span></p>
+<p class="rvps2"><span class="rvts7">setSeconds</span><span class="rvts16">(sec,millisec) </span><span class="rvts6">- установка секунд</span></p>
+<p class="rvps2"><span class="rvts7">setMilliseconds</span><span class="rvts16">(millisec)</span><span class="rvts6"> - установка миллисекунд.</span></p>
+<p class="rvps2"><span class="rvts7">setTime</span><span class="rvts16">(millisec)</span><span class="rvts6"> - расчет даты и времени путем сложения или вычитания определенного количества миллисекунд до / с полуночи 1 января 1970 года.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCDate</span><span class="rvts16">(day)</span><span class="rvts6"> - установить день месяца UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCMonth</span><span class="rvts16">(month,day)</span><span class="rvts6"> - установить месяц UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCFullYear</span><span class="rvts16">(year,month,day)</span><span class="rvts6"> - установить дату UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCHours</span><span class="rvts16">(hour,min,sec,millisec)</span><span class="rvts6"> - установить час UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCMinutes</span><span class="rvts16">(min,sec,millisec)</span><span class="rvts6"> - установить минуты UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCSeconds</span><span class="rvts16">(sec,millisec)</span><span class="rvts6"> - установить секунды UTC.</span></p>
+<p class="rvps2"><span class="rvts7">setUTCMilliseconds</span><span class="rvts16">(millisec) </span><span class="rvts6">- установить миллисекунды UTC.</span></p>
+<p class="rvps2"><span class="rvts7">toSource</span><span class="rvts16">()</span><span class="rvts6"> - метод представляет собой исходный код объекта.</span></p>
+<p class="rvps2"><span class="rvts7">toString</span><span class="rvts16">()</span><span class="rvts6"> - преобразует в строку.</span></p>
+<p class="rvps2"><span class="rvts7">toGMTString</span><span class="rvts16">()</span><span class="rvts6"> - преобразует дату GMT в строку.</span></p>
+<p class="rvps2"><span class="rvts7">toUTCString</span><span class="rvts16">()</span><span class="rvts6"> - преобразует дату UTC в строку.</span></p>
+<p class="rvps2"><span class="rvts7">toLocaleString</span><span class="rvts16">()</span><span class="rvts6"> - преобразует дату по местному времени в строку.</span></p>
+<p class="rvps2"><span class="rvts7">UTC</span><span class="rvts16">(year,month,day,hours,minutes,seconds,ms)</span><span class="rvts6"> - принимает дату и возвращает количество миллисекунд, прошедших с полуночи 1 января 1970 года.</span></p>
+<p class="rvps2"><span class="rvts7">valueOf</span><span class="rvts16">()</span><span class="rvts6"> - возвращает примитивное значение объекта Date.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">constructor</span><span class="rvts6"> - свойство конструктора является ссылкой на функцию, которая создала объект.</span></p>
+<p class="rvps2"><span class="rvts16">prototype</span><span class="rvts6"> - позволяет добавлять свойства и методы к объекту.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

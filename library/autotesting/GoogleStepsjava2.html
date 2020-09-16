@@ -1,0 +1,113 @@
+﻿
+
+<html>
+	
+<head>
+	<title>GoogleSteps.java</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GoogleStepsjava2");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GoogleSteps.java</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="CucumberJava.html">Cucumber (Java)</a> &rsaquo;&rsaquo; <a href="IntelliJIDEA2.html">Проект в IntelliJ IDEA</a> &rsaquo;&rsaquo; <a href="Project3.html">Project</a> &rsaquo;&rsaquo; <a href="src2.html">src</a> &rsaquo;&rsaquo; <a href="test2.html">test</a> &rsaquo;&rsaquo; <a href="java3.html">java</a> &rsaquo;&rsaquo; <a href="StepsObject1.html">StepsObject</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="StepsObject1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="StepsObject1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="testRunner.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps5"><span class="rvts18">package </span><span class="rvts17">StepsObject</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">import </span><span class="rvts17">Helper.Selenium</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">java.util.List</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">io.cucumber.java.en.*</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.junit.Assert</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.openqa.selenium.By</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.openqa.selenium.Keys</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.openqa.selenium.WebDriver</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.openqa.selenium.WebElement</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.openqa.selenium.chrome.ChromeDriver</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">public class </span><span class="rvts17">GoogleSteps {</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@Given</span><span class="rvts17">(</span><span class="rvts20">"I launch chrome browser"</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">public void </span><span class="rvts22">i_launch_chrome_browser</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;Selenium.</span><span class="rvts19">initWebDriver</span><span class="rvts17">()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">Selenium.</span><span class="rvts21">driver </span><span class="rvts17">= </span><span class="rvts18">new </span><span class="rvts17">ChromeDriver()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@When</span><span class="rvts17">(</span><span class="rvts20">"I open google page"</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">public void </span><span class="rvts22">i_open_google_page</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.manage().window().maximize()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.get(</span><span class="rvts20">"https://www.google.com/"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@Then</span><span class="rvts17">(</span><span class="rvts20">"I set value in search"</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">public void </span><span class="rvts22">i_set_value_in_search</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;By inputSearch = By.</span><span class="rvts19">name</span><span class="rvts17">(</span><span class="rvts20">"q"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">WebElement element = Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.findElement(inputSearch)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">element.sendKeys(</span><span class="rvts20">"GeForce 1650"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">element.sendKeys(Keys.</span><span class="rvts21">ENTER</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@Then</span><span class="rvts17">(</span><span class="rvts20">"I verify that the amount result is not zero"</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">public void </span><span class="rvts22">i_verify_that_the_amount_result_is_not_zero</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;By searchResult = By.</span><span class="rvts19">className</span><span class="rvts17">(</span><span class="rvts20">"g"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">List&lt;WebElement&gt; elements = Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.findElements(searchResult)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;int </span><span class="rvts17">result = elements.size()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">Assert.</span><span class="rvts19">assertNotEquals</span><span class="rvts17">(</span><span class="rvts25">0</span><span class="rvts18">, </span><span class="rvts17">result)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@And</span><span class="rvts17">(</span><span class="rvts20">"Close browser"</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">public void </span><span class="rvts22">close_browser</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.close()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">Selenium.</span><span class="rvts21">driver</span><span class="rvts17">.quit()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17">}</span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring environment</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2020 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

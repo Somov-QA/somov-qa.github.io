@@ -1,0 +1,163 @@
+﻿<html>
+	
+<head>
+	<title>Интерфейс (JS / TS)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("JSTS");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Интерфейс (JS / TS)</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScript.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic68.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="JSTS1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts17">Интерфейс</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<div class="rvps2"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts16">JavaScript</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts16">TypeScript</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts14">var</span><span class="rvts6"> Fabrique;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">(</span><span class="rvts14">function</span><span class="rvts6"> (Fabrique) {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;</span><span class="rvts14">var</span><span class="rvts6"> Dice = (</span><span class="rvts14">function</span><span class="rvts6"> () {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">function</span><span class="rvts6"> Dice() {</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts6">.dices = [];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">for</span><span class="rvts6"> (</span><span class="rvts14">var</span><span class="rvts6"> i = 0; i &lt; numberDicesField; i++) {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">var</span><span class="rvts6"> diceObj = {};</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.id = i;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.type = </span><span class="rvts14">false</span><span class="rvts6">;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.star = </span><span class="rvts14">false</span><span class="rvts6">;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.enable = </span><span class="rvts14">false</span><span class="rvts6">;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.remove = </span><span class="rvts14">false</span><span class="rvts6">;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.values = </span><span class="rvts14">this</span><span class="rvts6">.diceValues[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.framesField = </span><span class="rvts14">this</span><span class="rvts6">.diceFieldFrames[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.framesActual = </span><span class="rvts14">this</span><span class="rvts6">.diceActualFrames[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.indexFace = 0;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;diceObj.inField = </span><span class="rvts14">true</span><span class="rvts6">;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts6">.dices.push(diceObj);</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">return</span><span class="rvts6"> Dice;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;}());</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;Fabrique.Dice = Dice;</span></p>
+<p class="rvps2"><span class="rvts6">})(Fabrique || (Fabrique = {}));</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts6">module Fabrique {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; export interface IDiceObject {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; id: number;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; type: boolean;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; star: boolean;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; enable?:boolean;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; remove?:boolean;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; values: number[];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; framesField: string[];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; framesActual: string[];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; indexFace:number;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; inField:boolean</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; }</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; </span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; export class Dice {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; private dices: any[] = [];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; constructor(){</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for(let i:number = 0; i &lt; numberDicesField; i++){</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let diceObj: IDiceObject = &lt;IDiceObject&gt;{};</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.id = i;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.type = false;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.star = false;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.enable = false;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.remove = false;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.values = this.diceValues[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.framesField = this.diceFieldFrames[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.framesActual = this.diceActualFrames[indexValue][indexGroup];</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.indexFace = 0;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; diceObj.inField = true;</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.dices.push(diceObj);</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps2"><span class="rvts6">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

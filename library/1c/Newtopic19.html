@@ -1,0 +1,338 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Справочники</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic19");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Справочники</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic18.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic20.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Справочники</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Для работы с постоянной и условно постоянной информацией с некоторым множеством значений.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Проверка заполненности</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПроверкаЗаполненияНаСерере</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">.</span><span class="rvts15">ПустаяСсылка</span><span class="rvts14">());</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПроверкаЗаполненияНаклиенте</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">ПроверкаЗаполненияНаСерере</span><span class="rvts14">();</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14">.</span><span class="rvts15">Пустая</span><span class="rvts14">());</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(НЕ </span><span class="rvts15">ЗначениеЗаполнено</span><span class="rvts14">(</span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14">));</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Проверка пренадлежности элемента определённой группе</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПринадлежностьНаСервере</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">ПредопределённаяГруппа</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">ОсновнаяГруппа</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">Основной</span><span class="rvts14">.</span><span class="rvts15">ПринадлежитЭлементу</span><span class="rvts14">(</span><span class="rvts15">ПредопределённаяГруппа</span><span class="rvts14">));</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Поиск по справочнику</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПоискПоСправочнику</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Ссылка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">.</span><span class="rvts15">НайтиПоНаименованию</span><span class="rvts14">(</span><span class="rvts16">"Стул"</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Ссылка</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">Тест</span><span class="rvts14">(Команда) </span><span class="rvts18">// кнопка</span></p>
+<p class="rvps6"><span class="rvts15">ПоискПоСправочнику</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Копировать элемент справочника</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">КопироватьНаСервере</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14"> = </span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14">.</span><span class="rvts15">Скопировать</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> = </span><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> + </span><span class="rvts16">" (Копия)"</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Изменение значений реквизитов элемента справочника</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ИзменитьНаименования</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Выборка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">.</span><span class="rvts15">Выбрать</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts14">Пока </span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">Следующий</span><span class="rvts14">() Цикл</span></p>
+<p class="rvps7"><span class="rvts15">СпрОбъект</span><span class="rvts14"> = </span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">ПолучитьОбъект</span><span class="rvts14">();</span></p>
+<p class="rvps7"><span class="rvts15">СпрОбъект</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> = </span><span class="rvts15">СпрОбъект</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> + </span><span class="rvts8">"."</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">СпрОбъект</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Пометить на удаление</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПометитьНаУдалениеНаСервере</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">СпрОбъект</span><span class="rvts14"> = </span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14">.</span><span class="rvts15">ПолучитьОбъект</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">СпрОбъект</span><span class="rvts14">.</span><span class="rvts15">ПометкаУдаления</span><span class="rvts14"> = Истина;</span></p>
+<p class="rvps6"><span class="rvts15">СпрОбъект</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Проверка является тип реквилита ссылкой на справочник</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПроверкаСервер</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">ТипВсеСсылки</span><span class="rvts14">().</span><span class="rvts15">СодержитТип</span><span class="rvts14">(</span><span class="rvts15">ТипЗнч</span><span class="rvts14">(</span><span class="rvts15">РеквизитСпрНоменклатура</span><span class="rvts14">)));</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Получить идентификатор группы или элемента (например предопределённые группы и элименты)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ИдентификаторЭлемента</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">ОсновнаяГруппа</span><span class="rvts14">.</span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">());</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">Основной</span><span class="rvts14">.</span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">());</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Работа со справочником в обработке</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПолучитьКонтрагентИзВыборки</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Выборка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Контрагенты</span><span class="rvts14">.</span><span class="rvts15">Выбрать</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts14">Если </span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">Следующий</span><span class="rvts14">() Тогда</span></p>
+<p class="rvps7"><span class="rvts15">СправочникКонтрагент</span><span class="rvts14"> = </span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">Ссылка</span><span class="rvts14">;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПолучитьКонтрагентПоИмени</span><span class="rvts14">(</span><span class="rvts15">Имя</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts15">Фирма</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Контрагенты</span><span class="rvts14">.</span><span class="rvts15">НайтиПоНаименованию</span><span class="rvts14">(</span><span class="rvts15">Имя</span><span class="rvts14">, Истина,,);</span></p>
+<p class="rvps6"><span class="rvts15">СправочникКонтрагент</span><span class="rvts14"> = </span><span class="rvts15">Фирма</span><span class="rvts14">.</span><span class="rvts15">Ссылка</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">СоздатьНовыйЭлементСправочника</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Элемент</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">.</span><span class="rvts15">СоздатьЭлемент</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">Элемент</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> = </span><span class="rvts8">"Шкаф"</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">Элемент</span><span class="rvts14">.</span><span class="rvts15">Поставщик</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Контрагенты</span><span class="rvts14">.</span><span class="rvts15">Фирма</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts14">Если </span><span class="rvts15">Элемент</span><span class="rvts14">.</span><span class="rvts15">ПроверитьЗаполнение</span><span class="rvts14">() Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Элемент</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps7"><span class="rvts15">НаименованиеСпр</span><span class="rvts14"> = </span><span class="rvts15">Элемент</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14">;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Модуль объекта (НаСервере)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ОбработкаЗаполнения</span><span class="rvts14">(</span><span class="rvts15">ДанныеЗаполнения</span><span class="rvts14">, </span><span class="rvts15">ТекстЗаполнения</span><span class="rvts14">, </span><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14"> = Ложь;</span></p>
+<p class="rvps6"><span class="rvts15">Поставщик</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Контрагенты</span><span class="rvts14">.</span><span class="rvts15">ПустаяСсылка</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПередЗаписью</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts15">СтароеЗначение</span><span class="rvts14"> = </span><span class="rvts15">Ссылка</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">НовоеЗначение</span><span class="rvts14"> = </span><span class="rvts15">Наименование</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПриУстановкеНовогоКода</span><span class="rvts14">(</span><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14">, </span><span class="rvts15">Префикс</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts15">Префикс</span><span class="rvts14"> = </span><span class="rvts8">"НОМ"</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">МойМетодВОбъекте</span><span class="rvts14">() Экспорт</span></p>
+<p class="rvps6"><span class="rvts18">// Экспортируеммый метод</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Обратится к экспортному методу модуля объекта из обработки (Фирма - это предопределенный элемент)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ОбратитсяКЭкспортномуМетоду</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Контрагенты</span><span class="rvts14">.</span><span class="rvts15">Фирма</span><span class="rvts14">.</span><span class="rvts15">ПолучитьОбъект</span><span class="rvts14">().</span><span class="rvts15">МойМетодВОбъекте</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Модуль менеджера (НаСервере, НаКлиенте)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">МойМетодВМенеджере</span><span class="rvts14">() Экспорт</span></p>
+<p class="rvps6"><span class="rvts18">// Экспортируемый метод</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Обратится к экспортному методу модуля менеджер из обработки</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">.</span><span class="rvts15">МойМетодВМенеджере</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Работа с уникальным идентификатором в Модуле Объекта</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПередЗаписью</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts14">Если </span><span class="rvts15">ЭтоНовый</span><span class="rvts14">() Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Ключ</span><span class="rvts14"> = Новый </span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">НоваяСсылка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">ПолучитьСсылку</span><span class="rvts14">(</span><span class="rvts15">Ключ</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts15">УстановитьСсылкуНового</span><span class="rvts14">(</span><span class="rvts15">НоваяСсылка</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Работа с уникальным идентификатором в Обработке</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">НовыйЭлементИНовымУД</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Ключ</span><span class="rvts14"> = Новый </span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">НоваяСсылка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">ПолучитьСсылку</span><span class="rvts14">(</span><span class="rvts15">Ключ</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Склады</span><span class="rvts14">.</span><span class="rvts15">СоздатьЭлемент</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">УстановитьСсылкуНового</span><span class="rvts14">(</span><span class="rvts15">НоваяСсылка</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> =</span><span class="rvts8"> "Оптовый"</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">("Ключ: " + </span><span class="rvts15">Ключ</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">("ID: " + </span><span class="rvts15">НовыйЭлемент</span><span class="rvts14">.</span><span class="rvts15">Ссылка</span><span class="rvts14">.</span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">());</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Подчинённые справочники. (Создаём Клиента и его Контакное лицо)</span></p>
+<p class="rvps3"><span class="rvts8">1) Справочник "Клиенты" реквизит "КонтактноеЛицо" (тип ссылка на справочник КонтактныеЛица) реквизит на форме "НовоеКонтактноеЛицо" (тип строка)</span></p>
+<p class="rvps3"><span class="rvts8">2) Справочник "КонтактныеЛица", иерархический, владельцы (справочник "Клиенты", подчинения: группам и элементам)</span></p>
+<p class="rvps3"><span class="rvts8">3) Справочник "Клиенты" форма элемента, функция ПередЗаписьюНаСервере</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПередЗаписьюНаСервере</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">, </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">, </span><span class="rvts15">ПараметрыЗаписи</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts14">Если </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">ЭтоНовый</span><span class="rvts14">() Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Ключ</span><span class="rvts14"> = Новый </span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">НоваяСсылка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">Клиенты</span><span class="rvts14">.</span><span class="rvts15">ПолучитьСсылку</span><span class="rvts14">(</span><span class="rvts15">Ключ</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">УстановитьСсылкуНового</span><span class="rvts14">(</span><span class="rvts15">НоваяСсылка</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts15">КЛ</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">КонтактныеЛица</span><span class="rvts14">.</span><span class="rvts15">СоздатьЭлемент</span><span class="rvts14">();</span></p>
+<p class="rvps7"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> = </span><span class="rvts15">НовоеКонтактноеЛицо</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Владелец</span><span class="rvts14"> = </span><span class="rvts15">НоваяСсылка</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">КонтактноеЛицо</span><span class="rvts14"> = </span><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Ссылка</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Второй способ (форма элемента)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Перем </span><span class="rvts15">НоваяСсылка</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПередЗаписьюНаСервере</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">, </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">, </span><span class="rvts15">ПараметрыЗаписи</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts14">Если </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">ЭтоНовый</span><span class="rvts14">() Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Ключ</span><span class="rvts14"> = Новый </span><span class="rvts15">УникальныйИдентификатор</span><span class="rvts14">;</span></p>
+<p class="rvps7"><span class="rvts15">НоваяСсылка</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">КонтактныеЛица</span><span class="rvts14">.</span><span class="rvts15">ПолучитьСсылку</span><span class="rvts14">(</span><span class="rvts15">Ключ</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">КонтактноеЛицо</span><span class="rvts14"> = </span><span class="rvts15">НоваяСсылка</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ПриЗаписиНаСервере</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">, </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">, </span><span class="rvts15">ПараметрыЗаписи</span><span class="rvts14">)</span></p>
+<p class="rvps6"><span class="rvts15">КЛ</span><span class="rvts14"> = </span><span class="rvts15">Справочники</span><span class="rvts14">.</span><span class="rvts15">КонтактныеЛица</span><span class="rvts14">.</span><span class="rvts15">СоздатьЭлемент</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">УстановитьСсылкуНового</span><span class="rvts14">(</span><span class="rvts15">НоваяСсылка</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14"> = </span><span class="rvts15">НовоеКонтактноеЛицо</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Владелец</span><span class="rvts14"> = </span><span class="rvts15">ТекущийОбъект</span><span class="rvts14">.</span><span class="rvts15">Ссылка</span><span class="rvts14">;</span></p>
+<p class="rvps6"><span class="rvts15">КЛ</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"> </span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

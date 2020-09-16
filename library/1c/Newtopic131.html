@@ -1,0 +1,166 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Методы регистров остатков. Получение остатков.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic131");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Методы регистров остатков. Получение остатков.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic130.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic132.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Методы регистров остатков. Получение остатков.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Остаток</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерен1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерен2</span><span class="rvts34">&gt;...,&lt;</span><span class="rvts35">ИмяРесурса</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Возвращает значение остатка заданного ресурса регистра.</span></p>
+<p class="rvps3"><span class="rvts35">СводныйОстаток</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерен1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерен2</span><span class="rvts34">&gt;...,&lt;</span><span class="rvts35">ИмяРесурса</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Возвращает значение сводного остатка заданного ресурса регистра.</span></p>
+<p class="rvps3"><span class="rvts35">Остатки</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерение1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерение2</span><span class="rvts34">&gt;...) </span><span class="rvts36">- Извлечь все ресурсы по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">СводныеОстатки</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерение1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерение2</span><span class="rvts34">&gt;...)</span><span class="rvts36"> - Извлечь сводные ресурсы по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">ОстаткиПолучить</span><span class="rvts34">()</span><span class="rvts36"> - Получить все ресурсы по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьДвиженияСОстатками</span><span class="rvts34">(&lt;</span><span class="rvts35">ДатаКонца</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ГрафаОтбора</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Выбрать все движения регистра с остатками.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Примеры: получение остатков.</span></p>
+<p class="rvps3"><span class="rvts34">Функция </span><span class="rvts35">ОстатокПоРегистру</span><span class="rvts34">(ТекТов)</span></p>
+<p class="rvps5"><span class="rvts37">// получить кличество остатка товара на складе.</span></p>
+<p class="rvps5"><span class="rvts35">ОстР</span><span class="rvts34"> = </span><span class="rvts45">Регистр</span><span class="rvts34">.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">Остаток</span><span class="rvts34">(</span><span class="rvts35">ТекТов</span><span class="rvts34">, </span><span class="rvts35">Склад</span><span class="rvts34">, </span><span class="rvts36">"Количество"</span><span class="rvts34">); </span><span class="rvts37">// ОстаткиТоваров - это идентификатов регистра.</span></p>
+<p class="rvps5"><span class="rvts37">// Остаток(&lt;Измерен1&gt;,&lt;Измерен2&gt;...,&lt;ИмяРесурса&gt;) &nbsp;// &lt;ИмяРесурса&gt; - название требуемого ресурса регистра.</span></p>
+<p class="rvps5"><span class="rvts34">Возврат </span><span class="rvts35">ОстР</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">КонецФункции</span></p>
+<p class="rvps3"><span class="rvts36">если не указывать "Склад" то получим остатки товара на </span><span class="rvts32">всех складах</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts36"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получение количественного и суммового остатко товара на складе</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">Остатки</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">,</span><span class="rvts35"> Склад</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Колво</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстатокТоваров</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts35">Сумма</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстатокТоваров</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получим значение остатка из "Ресурса" по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">Остаток</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">, </span><span class="rvts35">Склад</span><span class="rvts34">, </span><span class="rvts36">"Количество"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получаем значение сводного остатка из "Ресурса" по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">СводныйОстаток</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">, </span><span class="rvts35">Склад</span><span class="rvts34">, </span><span class="rvts36">"Количество"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получим значения сводных остатков по регистру.</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">СводныеОстатки</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">, </span><span class="rvts35">Склад</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получаем все ресурсы регистра по измерениям содержащимся в атрибутах.</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts35">Склад</span><span class="rvts34"> = </span><span class="rvts35">Склады</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts35">Товар</span><span class="rvts34"> = </span><span class="rvts35">Товары</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts38">ОстаткиПолучить</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОстаткиТоваров</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: произведем выбор всех движений регистра в указанном интервале дат.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Регистр.ОстаткиТоваров"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВременныйРасчет</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьЗначениеФильтра</span><span class="rvts34">(</span><span class="rvts36">"Склад"</span><span class="rvts34">,</span><span class="rvts35">Склад</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">РассчитатьРегистрыНа(</span><span class="rvts35">ДатаНач</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts38">ВыбратьДвиженияСОстатками</span><span class="rvts34">(</span><span class="rvts35">ДатаКон</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДвижение</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">ТМЦ </span><span class="rvts34">= </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">Товар</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts35">КолВо</span><span class="rvts34"> = </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(Строка(</span><span class="rvts35">ТМЦ</span><span class="rvts34">) + ": &nbsp;" + Строка(</span><span class="rvts35">КолВо</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

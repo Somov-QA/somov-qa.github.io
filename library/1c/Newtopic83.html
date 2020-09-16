@@ -1,0 +1,153 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Функции</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic83");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Функции</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic62.html">Запросы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic62.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic82.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic84.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Функции</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts39">синтаксис: </span><span class="rvts38">Функция</span><span class="rvts36"> &lt;ИмяФункции&gt; </span><span class="rvts35">=</span><span class="rvts41"> </span><span class="rvts32">&lt;ТипФункции&gt;</span><span class="rvts36"> (&lt;Параметр&gt;) [</span><span class="rvts38">Когда</span><span class="rvts41"> (&lt;Условие&gt;)];</span></p>
+<p class="rvps3"><span class="rvts39">&lt;ТипФункции&gt; - </span><span class="rvts38">Сумма</span><span class="rvts41">, </span><span class="rvts38">Среднее</span><span class="rvts41">, </span><span class="rvts38">Минимум</span><span class="rvts41">, </span><span class="rvts38">Максимум</span><span class="rvts41">, </span><span class="rvts38">Счётчик</span><span class="rvts36">,</span><span class="rvts38"> &lt;ВнутренняяПеременнаяТипЧисло&gt;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts40">Сумма.</span><span class="rvts32"> </span><span class="rvts36">В строку итогов будет выведена общая сумма по всем выбранным строкам</span></p>
+<p class="rvps3"><span class="rvts36"><br/></span></p>
+<p class="rvps3"><span class="rvts36"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// внутр. Переменной "</span><span class="rvts42">Цена</span><span class="rvts37">" присваивается "</span><span class="rvts42">ОтпускнаяЦена</span><span class="rvts37">" из элемента</span></p>
+<p class="rvps3"><span class="rvts37">// Функция возвращает сумму из внутр. Переменной "</span><span class="rvts42">Цена</span><span class="rvts37">"</span></p>
+<p class="rvps3"><span class="rvts37">// В функции можно производить вычисления</span><span class="rvts39"> |Функция СуммаЦена = Сумма(Цена / 2);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts41"> </span><span class="rvts34">=</span><span class="rvts36"> " //{{ЗАПРОС(Тест)</span></p>
+<p class="rvps5"><span class="rvts39">|Период С НачДата По КонДата;</span></p>
+<p class="rvps5"><span class="rvts39">|Тов = Справочник.Товары.ТекущийЭлемент;</span></p>
+<p class="rvps5"><span class="rvts39">|Цена = Справочник.Товары.ОтпускнаяЦена;</span></p>
+<p class="rvps5"><span class="rvts39">|</span><span class="rvts32">Функция</span><span class="rvts36"> СуммаЦена = </span><span class="rvts32">Сумма</span><span class="rvts36">(Цена);</span></p>
+<p class="rvps5"><span class="rvts39">|Группировка Тов Без Групп;</span></p>
+<p class="rvps5"><span class="rvts39">|"</span><span class="rvts34">;</span><span class="rvts41"> </span><span class="rvts37">//}}ЗАПРОС</span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts32">Среднее</span><span class="rvts36">, </span><span class="rvts32">Минимум</span><span class="rvts36">, </span><span class="rvts32">Максимум</span><span class="rvts36">. В строку итогов будет выведено соответствующее значение.</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">|Функция СуммаЦена = </span><span class="rvts32">Среднее</span><span class="rvts36">(Цена);</span></p>
+<p class="rvps3"><span class="rvts36">|Функция СуммаЦена = </span><span class="rvts32">Минимум</span><span class="rvts36">(Цена);</span></p>
+<p class="rvps3"><span class="rvts36">|Функция СуммаЦена = </span><span class="rvts32">Максимум</span><span class="rvts36">(Цена);</span></p>
+<p class="rvps3"><span class="rvts40"><br/></span></p>
+<p class="rvps3"><span class="rvts40">Счётчик.</span><span class="rvts32"> </span><span class="rvts36">В строке итогов выводится число полученных строк.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts41"> </span><span class="rvts34">=</span><span class="rvts36"> " //{{ЗАПРОС(Тест)</span></p>
+<p class="rvps5"><span class="rvts39">|Период С НачДата По КонДата;</span></p>
+<p class="rvps5"><span class="rvts39">|Тов = Справочник.Товары.ТекущийЭлемент;</span></p>
+<p class="rvps5"><span class="rvts39">|Группировка Тов Без Групп;</span></p>
+<p class="rvps5"><span class="rvts39">|Функция КоличествоЭлементов = </span><span class="rvts49">Счётчик</span><span class="rvts41">();</span></p>
+<p class="rvps5"><span class="rvts39">|"</span><span class="rvts34">;</span><span class="rvts41"> </span><span class="rvts37">//}}ЗАПРОС</span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

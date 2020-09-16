@@ -1,0 +1,169 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Последовательности документов.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic137");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Последовательности документов.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic136.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic138.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Последовательности документов.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Групповое перепроведение документов можно выполнить в монопольном режиме</span></p>
+<p class="rvps3"><span class="rvts36">в меню </span><span class="rvts32">Операции</span><span class="rvts36"> -&gt; </span><span class="rvts32">Проведение документов</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts36">(тут же на закладке последовательности можно узнать </span><span class="rvts32">границу последовательности</span><span class="rvts36">) эта закладка отобразится если в конфигурации есть хоть одна последовательность документа.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Создание последовательности досументов.</span></p>
+<p class="rvps3"><span class="rvts32">Последовательность документов</span><span class="rvts36"> - это объект метаданных, который используется совместно с</span></p>
+<p class="rvps3"><span class="rvts36">компонентами "Бухгалтерский учет" и "Оперативный учет" для отслеживания проведения документов в хронологическом порядке.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">В разделе метаданных </span><span class="rvts56">Документы</span><span class="rvts36"> использовать подраздел </span><span class="rvts56">Последовательность</span><span class="rvts36"> для создания новой последовательности.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Методы:</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьПозицию</span><span class="rvts34">()</span><span class="rvts36"> - Получить позицию Границы Последовательности</span></p>
+<p class="rvps3"><span class="rvts35">Получить</span><span class="rvts34">() </span><span class="rvts36">- Получить строку описания Границы Последовательности.</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьДокумент</span><span class="rvts34">()</span><span class="rvts36"> - Получить документ Границы Последовательности</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьДату</span><span class="rvts34">()</span><span class="rvts36"> - Получить дату Границы Последовательности.</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьВремя</span><span class="rvts34">(&lt;</span><span class="rvts35">Часы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Минуты</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Секунды</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Прочитать время Границы Последовательности.</span></p>
+<p class="rvps3"><span class="rvts35">Установить</span><span class="rvts34">(&lt;</span><span class="rvts35">ПоложениеГП</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Установить ГП (границу последовательности) на новую дату, документ или позицию.</span></p>
+<p class="rvps3"><span class="rvts35">Сравнить</span><span class="rvts34">(&lt;</span><span class="rvts35">Докум</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Сравнить ГП (границу последовательности) с датой, документом или позицией.</span></p>
+<p class="rvps3"><span class="rvts35">ПринадлежитПоследовательности</span><span class="rvts34">(&lt;</span><span class="rvts35">Докум</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Определить, принадлежит ли последовательности заданный документ или вид, заданный строкой.</span></p>
+<p class="rvps3"><span class="rvts35">Проверить</span><span class="rvts34">(&lt;</span><span class="rvts35">Докум</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Проверяет, является ли последовательность непрерывной от ГП (границы последовательности) до заданного документа.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Методы глобального атрибута:</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(&lt;</span><span class="rvts35">ИмяПоследовательности</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Получить значение последовательности по имени. Возвращает значение последовательности.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получить границы последовательности.</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Граница последовательности: "</span><span class="rvts34"> + Последовательность.</span><span class="rvts35">Основная</span><span class="rvts34">.</span><span class="rvts38">Получить</span><span class="rvts34">() + Последовательность.</span><span class="rvts35">Основная</span><span class="rvts34">.</span><span class="rvts38">ПолучитьДокумент</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Позиция границы последовательности: "</span><span class="rvts34"> + Последовательность.</span><span class="rvts35">Основная</span><span class="rvts34">.</span><span class="rvts38">ПолучитьПозицию</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Установка границы последовательности на текущую дату.</span></p>
+<p class="rvps3"><span class="rvts34">Последовательность.</span><span class="rvts35">Основная</span><span class="rvts34">.</span><span class="rvts38">Установить</span><span class="rvts34">(ТекущаяДата());</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Восстановление последовательности.</span></p>
+<p class="rvps3"><span class="rvts35">Послед</span><span class="rvts34"> = Последовательность.</span><span class="rvts35">Основная</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts35">Док</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Документ"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДокументы</span><span class="rvts34">(</span><span class="rvts35">Послед</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПозицию</span><span class="rvts34">(),);</span></p>
+<p class="rvps3"><span class="rvts34">Пока (</span><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДокумент</span><span class="rvts34">()&gt;0) Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">Проведен</span><span class="rvts34">() = 0 Тогда &nbsp;Продолжить; КонецЕсли;</span><span class="rvts37">// 0 - значит не проведен</span></p>
+<p class="rvps6"><span class="rvts35">ТекДок</span><span class="rvts34"> = </span><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">Послед</span><span class="rvts34">.</span><span class="rvts38">ПринадлежитПоследовательности</span><span class="rvts34">(</span><span class="rvts35">ТекДок</span><span class="rvts34">) &gt; 0 Тогда</span></p>
+<p class="rvps7"><span class="rvts35">Объект</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Документ"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Объект</span><span class="rvts34">.</span><span class="rvts35">НайтиДокумент</span><span class="rvts34">(</span><span class="rvts35">ТекДок</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps7"><span class="rvts34">Попытка</span></p>
+<p class="rvps9"><span class="rvts34">Если </span><span class="rvts35">Объект</span><span class="rvts34">.</span><span class="rvts35">Провести</span><span class="rvts34">() = 0 Тогда</span></p>
+<p class="rvps13"><span class="rvts34">Прервать;</span></p>
+<p class="rvps9"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts34">Исключение</span></p>
+<p class="rvps9"><span class="rvts34">Сообщить(</span><span class="rvts36">"Не удалось провести документ "</span><span class="rvts34"> + Строка(</span><span class="rvts35">Объект</span><span class="rvts34">) + </span><span class="rvts36">" Ошибка: "</span><span class="rvts34"> + </span><span class="rvts45">ОписаниеОшибки</span><span class="rvts34">());</span></p>
+<p class="rvps7"><span class="rvts34">КонецПопытки;</span></p>
+<p class="rvps3"><span class="rvts34"><br/></span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(Строка(</span><span class="rvts35">ТекДок</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create PDF Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

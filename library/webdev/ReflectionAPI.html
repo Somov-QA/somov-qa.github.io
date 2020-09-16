@@ -1,0 +1,182 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Прокси-объекты и Reflection API</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ReflectionAPI");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Прокси-объекты и Reflection API</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ECMAScript6.html">ECMAScript 6</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ECMAScript6.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Promise1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic104.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Прокси-объекты и Reflection API</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px" class="rvps25"><span class="rvts13">Proxy() - создает прокси-объект для использования вместо другого объекта.</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts13">Reflection API — программный интерфейс представлен объектом Reflect — коллекцией методов преобразования</span></li>
+</ul>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Создание простого прокси-объекта</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> target = {};</span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> proxy = </span><span class="rvts97">new</span><span class="rvts98"> Proxy(target, {});</span></p>
+<p class="rvps26"><span class="rvts98">proxy.name = </span><span class="rvts99">"proxy_name"</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts98">console.log(proxy.name === target.name);</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// true</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Проверка свойств с помощью ловушки </span><span class="rvts101">set()</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> target = { name: </span><span class="rvts99">"target"</span><span class="rvts98"> };</span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> proxy = </span><span class="rvts97">new</span><span class="rvts98"> Proxy(target, {</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">set(trapTarget, key, value, receiver){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// игнорировать существующие свойства</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">if</span><span class="rvts98">(!trapTarget.hasOwnProperty(key)){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">if</span><span class="rvts98">(isNaN(value)){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">throw</span><span class="rvts98"> </span><span class="rvts97">new</span><span class="rvts98"> TypeError(</span><span class="rvts99">"Свойство не число"</span><span class="rvts98">);</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">}</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">}</span></p>
+<p class="rvps26"><span class="rvts97"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> Reflect.set(trapTarget, key, value, receiver);</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">}</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps26"><span class="rvts98">});</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts98">proxy.count = 1;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// корректно (это число)</span></p>
+<p class="rvps26"><span class="rvts98">proxy.name = </span><span class="rvts99">"proxy"</span><span class="rvts98">;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// корректно (это свойство изначально)</span></p>
+<p class="rvps26"><span class="rvts98">proxy.anotherName = </span><span class="rvts99">"abc"</span><span class="rvts98">;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// ошибка (новое свойство не число)</span></p>
+<p class="rvps3"><span class="rvts13">Проверка формы объектов с помощью ловушки </span><span class="rvts101">get()</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> target = { };</span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> proxy = </span><span class="rvts97">new</span><span class="rvts98"> Proxy(target, {</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">get(trapTarget, key, receiver){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">if</span><span class="rvts98">(!(key </span><span class="rvts97">in</span><span class="rvts98"> receiver)){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">throw</span><span class="rvts98"> </span><span class="rvts97">new</span><span class="rvts98"> TypeError(</span><span class="rvts99">"Propetry "</span><span class="rvts98"> + key + </span><span class="rvts99">" doesn't exist."</span><span class="rvts98">);</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">}</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> Reflect.get(trapTarget, key, receiver); </span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98">}</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps26"><span class="rvts98">});</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts98">proxy.name = </span><span class="rvts99">"proxy"</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts98">console.log(proxy.name);</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// корректно</span></p>
+<p class="rvps26"><span class="rvts98">console.log(proxy.nme);</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// вернет ошибку</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: disc;">
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">has()</span><span class="rvts13"> - сокрытие свойств с помощью </span><span class="rvts102">Reflect.has()</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">deleteProperty()</span><span class="rvts13"> - предотвращает удаление свойств</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">setPropertyOf()</span><span class="rvts13"> и </span><span class="rvts102">getPropertyOf()</span><span class="rvts13"> - ловушки операций с прототипами</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">isExtensible()</span><span class="rvts13"> и </span><span class="rvts102">preventExtensible()</span><span class="rvts13"> - ловушки расширяемости объектов</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">getOwnPropertyDescriptor()</span><span class="rvts13"> - ловушки операций с дескрипторами</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">ownKeys()</span><span class="rvts13"> - перехватывает метод [ [</span><span class="rvts102">OwnPropertyKeys</span><span class="rvts13">] ]</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">apply()</span><span class="rvts13"> и </span><span class="rvts102">construct()</span><span class="rvts13"> - перехватывают [[</span><span class="rvts102">Call</span><span class="rvts13">]] и [[</span><span class="rvts102">Construct</span><span class="rvts13">]]</span></li>
+<li style="margin-left: 0px" class="rvps25"><span class="rvts102">defineProperty</span></li>
+</ul>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Отключение прокси-объектов </span><span class="rvts103">Proxy.revocable()</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> target = { name: </span><span class="rvts99">"target"</span><span class="rvts98"> };</span></p>
+<p class="rvps26"><span class="rvts97">let</span><span class="rvts98"> {proxy, revoke} = Proxy.revocable(target, {});</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts98">console.log(proxy.name);</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// target</span></p>
+<p class="rvps26"><span class="rvts98">revoke();</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// отключение прокси</span></p>
+<p class="rvps26"><span class="rvts98">console.log(proxy.name);</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts100">// ошибка</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,217 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Автоматическое заполнение ,таблицы значений (с произвольно полученными реквизитами), всеми &quot;Группами&quot; и &quot;Элементами&quot;</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic152");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Автоматическое заполнение ,таблицы значений (с произвольно полученными реквизитами), всеми &quot;Группами&quot; и &quot;Элементами&quot;</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic147.html">Решение задач особого назначения</a> &rsaquo;&rsaquo; <a href="Newtopic149.html">Таблица Значений</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic149.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic151.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic153.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Автоматическое заполнение ,таблицы значений (с произвольно полученными реквизитами), всеми "Группами" и "Элементами"</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts39">Из справочника.</span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">Заполнить</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts35">спр</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Справочник."</span><span class="rvts34"> + Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),</span><span class="rvts36">""</span><span class="rvts34">)));</span></p>
+<p class="rvps5"><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьДату</span><span class="rvts34">(</span><span class="rvts35">ДатаВыгрузки</span><span class="rvts34">);</span><span class="rvts37"> //используем дату для периодических реквизитов.</span></p>
+<p class="rvps5"><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ВыборГруппы</span><span class="rvts34">(</span><span class="rvts44">1</span><span class="rvts34">); </span><span class="rvts37">//производим выбор групп</span></p>
+<p class="rvps5"><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ВыбратьЭлементы</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЭлемент</span><span class="rvts34">() =</span><span class="rvts44"> 1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ЭтоГруппа</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts37">//создаем запись ГРУППЫ ------------------------</span></p>
+<p class="rvps7"><span class="rvts35">СТР</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> = </span><span class="rvts36">"ГРУППА"</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps7"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps7"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = 5 по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл </span><span class="rvts37">//заполняем таблицу с пятой колонки</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps9"><span class="rvts38">ИД</span><span class="rvts45"> = </span><span class="rvts38">ТЗ</span><span class="rvts45">.ПолучитьПараметрыКолонки(</span><span class="rvts38">ном</span><span class="rvts45">);</span><span class="rvts34"> </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps9"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">УстановитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СТР</span><span class="rvts45"> + </span><span class="rvts32">1</span><span class="rvts45">, </span><span class="rvts38">ном</span><span class="rvts45">, Строка(</span><span class="rvts38">спр</span><span class="rvts45">.</span><span class="rvts38">получитьАтрибут</span><span class="rvts45">(</span><span class="rvts38">ИД</span><span class="rvts45">)));</span></p>
+<p class="rvps7"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps6"><span class="rvts34">Иначе</span></p>
+<p class="rvps7"><span class="rvts37">//создаем запись ЭЛЕМЕНТА ---------------------</span></p>
+<p class="rvps7"><span class="rvts35">СТР</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> = </span><span class="rvts36">"ЭЛЕМЕНТ"</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34"> = </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps7"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps7"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = 5 по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл </span><span class="rvts37">//заполняем таблицу с пятой колонки</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps9"><span class="rvts38">ИД</span><span class="rvts45"> = </span><span class="rvts38">ТЗ</span><span class="rvts45">.ПолучитьПараметрыКолонки(</span><span class="rvts38">ном</span><span class="rvts45">);</span><span class="rvts34"> </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps9"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">УстановитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СТР</span><span class="rvts45"> + </span><span class="rvts32">1</span><span class="rvts45">, </span><span class="rvts38">ном</span><span class="rvts45">, Строка(</span><span class="rvts38">спр</span><span class="rvts45">.</span><span class="rvts38">получитьАтрибут</span><span class="rvts45">(</span><span class="rvts38">ИД</span><span class="rvts45">)));</span></p>
+<p class="rvps7"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts44">Из </span><span class="rvts55">подчиненного</span><span class="rvts44"> справочника</span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ЗаполнитьПодчиненныйСпр</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts37">// используем справочник ВЛАДЕЛЕЦ</span></p>
+<p class="rvps5"><span class="rvts38">спрВлад</span><span class="rvts45"> = СоздатьОбъект(</span><span class="rvts32">"Справочник."</span><span class="rvts45"> + Строка(</span><span class="rvts38">СправочникВладелец</span><span class="rvts45">.</span><span class="rvts38">ПолучитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СправочникВладелец</span><span class="rvts45">.</span><span class="rvts38">ТекущаяСтрока</span><span class="rvts45">(),</span><span class="rvts32">""</span><span class="rvts45">)));</span></p>
+<p class="rvps5"><span class="rvts37">// используем ПОДЧИНЕННЫЙ справочник</span></p>
+<p class="rvps5"><span class="rvts38">спрПодч </span><span class="rvts45">= СоздатьОбъект(</span><span class="rvts32">"Справочник."</span><span class="rvts45"> + Строка(</span><span class="rvts38">СправочникДляВыгрузки</span><span class="rvts45">.</span><span class="rvts38">ПолучитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СправочникДляВыгрузки</span><span class="rvts45">.</span><span class="rvts38">ТекущаяСтрока</span><span class="rvts45">(),</span><span class="rvts32">""</span><span class="rvts45">)));</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts35">спрВлад</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьДату</span><span class="rvts34">(</span><span class="rvts35">ДатаВыгрузки</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">спрВлад</span><span class="rvts34">.</span><span class="rvts35">ВыбратьЭлементы</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">спрВлад</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЭлемент</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps6"><span class="rvts38">спрПодч</span><span class="rvts45">.</span><span class="rvts38">ИспользоватьВладельца</span><span class="rvts45">(</span><span class="rvts38">спрВлад</span><span class="rvts45">.</span><span class="rvts38">ТекущийЭлемент</span><span class="rvts45">());</span></p>
+<p class="rvps6"><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьДату</span><span class="rvts34">(</span><span class="rvts35">ДатаВыгрузки</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">ВыбратьЭлементы</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">Пока </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЭлемент</span><span class="rvts34">() &gt; </span><span class="rvts35">0 </span><span class="rvts34">Цикл</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">ЭтоГруппа</span><span class="rvts34">() = </span><span class="rvts35">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts37">//создаем запись ГРУППЫ ------------------------</span></p>
+<p class="rvps9"><span class="rvts35">СТР</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">();</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> = </span><span class="rvts36">"ГРУППА"</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps9"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = </span><span class="rvts35">5</span><span class="rvts34"> по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл </span><span class="rvts37">//заполняем таблицу с пятой колонки</span></p>
+<p class="rvps13"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps13"><span class="rvts35">ИД</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПараметрыКолонки</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">); </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps13"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">УстановитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СТР</span><span class="rvts45"> + </span><span class="rvts38">1</span><span class="rvts45">, </span><span class="rvts38">ном</span><span class="rvts45">, Строка(</span><span class="rvts38">спрПодч</span><span class="rvts45">.</span><span class="rvts38">получитьАтрибут</span><span class="rvts45">(</span><span class="rvts38">ИД</span><span class="rvts45">)));</span></p>
+<p class="rvps9"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts37">//для подчиненных справочников</span></p>
+<p class="rvps9"><span class="rvts34">Если </span><span class="rvts35">Фл1</span><span class="rvts34"> = </span><span class="rvts35">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps13"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">Владелец</span><span class="rvts45"> = </span><span class="rvts38">спрПодч</span><span class="rvts45">.</span><span class="rvts38">Владелец</span><span class="rvts45">;</span></p>
+<p class="rvps9"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts34">Иначе</span></p>
+<p class="rvps9"><span class="rvts37">//создаем запись ЭЛЕМЕНТА ---------------------</span></p>
+<p class="rvps9"><span class="rvts35">СТР</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">();</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> = </span><span class="rvts36">"ЭЛЕМЕНТ"</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34"> = </span><span class="rvts35">спрПодч</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps9"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = </span><span class="rvts35">5</span><span class="rvts34"> по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл </span><span class="rvts37">//заполняем таблицу с пятой колонки</span></p>
+<p class="rvps13"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps13"><span class="rvts35">ИД</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПараметрыКолонки</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">); </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps13"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">УстановитьЗначение</span><span class="rvts45">(</span><span class="rvts38">СТР</span><span class="rvts45"> + </span><span class="rvts38">1</span><span class="rvts45">, </span><span class="rvts38">ном</span><span class="rvts45">, Строка(</span><span class="rvts38">спрПодч</span><span class="rvts45">.</span><span class="rvts38">получитьАтрибут</span><span class="rvts45">(</span><span class="rvts38">ИД</span><span class="rvts45">)));</span></p>
+<p class="rvps9"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps9"><span class="rvts37">//для подчиненных справочников</span></p>
+<p class="rvps9"><span class="rvts34">Если </span><span class="rvts35">Фл1</span><span class="rvts34"> = </span><span class="rvts35">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps13"><span class="rvts38">ТЗ</span><span class="rvts45">.</span><span class="rvts38">Владелец</span><span class="rvts45"> = </span><span class="rvts38">спрПодч</span><span class="rvts45">.</span><span class="rvts38">Владелец</span><span class="rvts45">;</span></p>
+<p class="rvps9"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли; &nbsp; </span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

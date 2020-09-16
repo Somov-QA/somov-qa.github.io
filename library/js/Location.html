@@ -1,0 +1,106 @@
+﻿<html>
+	
+<head>
+	<title>Location</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Location");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Location</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptBrowserBOM.html">JavaScript Browser BOM</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptBrowserBOM.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="History.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="JavaScriptDOM.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">BOM Location</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">Объект местоположения содержит информацию о текущем URL.</span></p>
+<p class="rvps2"><span class="rvts18">Объект расположение является частью объекта окна, и доступ через свойство window.location.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Свойства</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">hash</span><span class="rvts18"> - Устанавливает или возвращает анкерную часть (#) от URL</span></p>
+<p class="rvps2"><span class="rvts20">host</span><span class="rvts18"> - Устанавливает или возвращает имя хоста и номер порта в URL</span></p>
+<p class="rvps2"><span class="rvts20">hostname</span><span class="rvts18"> - Задает или возвращает имя хоста в URL</span></p>
+<p class="rvps2"><span class="rvts20">href</span><span class="rvts18"> - Устанавливает или возвращает весь URL</span></p>
+<p class="rvps2"><span class="rvts20">origin</span><span class="rvts18"> - Возвращает протокол, имя хоста и номер порта в URL</span></p>
+<p class="rvps2"><span class="rvts20">pathname</span><span class="rvts18"> - Устанавливает путь к файлу или возвращает имя пути в URL</span></p>
+<p class="rvps2"><span class="rvts20">port</span><span class="rvts18"> - Устанавливает или возвращает номер порта URL</span></p>
+<p class="rvps2"><span class="rvts20">protocol</span><span class="rvts18"> - Устанавливает или возвращает протокол в URL</span></p>
+<p class="rvps2"><span class="rvts20">search</span><span class="rvts18"> - Устанавливает или возвращает строку запроса часть URL</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Методы</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">assign(URL)</span><span class="rvts18"> - Загружает новый документ</span></p>
+<p class="rvps2"><span class="rvts20">reload(forceGet)</span><span class="rvts18"> - Перезагружает текущий документ</span></p>
+<p class="rvps2"><span class="rvts20">replace(newURL) </span><span class="rvts18">- Заменяет текущий документ на новым</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('hash:', location.hash);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('host:', location.host);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('hostname:', location.hostname);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('href:', location.href);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('origin:', location.origin);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('pathname:', location.pathname);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('port:', location.port);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('protocol:', location.protocol);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('search:', location.search);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;location.assign("http://www.w3schools.com");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;location.reload();</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;location.replace("http://www.w3schools.com");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

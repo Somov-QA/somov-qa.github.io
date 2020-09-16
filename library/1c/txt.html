@@ -1,0 +1,194 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Перенос данных *.txt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("txt");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Перенос данных *.txt</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C77.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="OLEAutomation.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic143.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Перенос данных *.txt</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts39">Перенос данных из одной базы данных в другую базу данных при помощи текстового файла. (с помещением элементов в папки)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts39">Перем СсылкаНаТекущуюГруппу;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">//-------------------------------------------</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">Процедура Выгрузка()</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"> &nbsp; &nbsp;Текст = СоздатьОбъект("Текст");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список = СоздатьОбъект("СписокЗначений");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр = СоздатьОбъект("Справочник.Сотрудники");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">спр.ИспользоватьДату(РабочаяДата());</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.ВыборГруппы(1);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.ВыбратьЭлементы(1);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Пока Спр.ПолучитьЭлемент() = 1 Цикл</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Если Спр.ЭтоГруппа() = 1 Тогда</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение("Я сам группа");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение(Спр.Код);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение(Спр.Наименование);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Текст.ДобавитьСтроку(Список.ВСтрокуСРазделителями());</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Иначе</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение("Я элемент");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение(Спр.Наименование);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ДобавитьЗначение(Спр.Родитель);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//...............</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Текст.ДобавитьСтроку(Список.ВСтрокуСРазделителями());</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЕсли;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.УдалитьВсе();</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЦикла;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Текст.Записать("C:\экспорт_Сотрудники.txt");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Предупреждение("Выгрузка прошла успешно!");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">КонецПроцедуры</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">//-------------------------------------------</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">Процедура Загрузка()</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр = СоздатьОбъект("Справочник.Сотрудники");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Текст = СоздатьОбъект("Текст");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список = СоздатьОбъект("СписокЗначений");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Текст.Открыть("C:\экспорт_Сотрудники.txt");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">// Переносим группы (папки) -------------------------------------------</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Для Ном1 = 1 По Текст.КоличествоСтрок() Цикл</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Стр = Текст.ПолучитьСтроку(Ном1);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ИзСтрокиСРазделителями(Стр);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Если Список.ПолучитьЗначение(1) = "Я сам группа" Тогда</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">спр.НоваяГруппа();</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">спр.Наименование = Список.ПолучитьЗначение(3);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">спр.Записать();</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">// текущая папка</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">СсылкаНаТекущуюГруппу = Спр.ТекущийЭлемент();</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">// Переносим элементы и помещаем их в папки ------------------</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Для Ном2 = 1 По Текст.КоличествоСтрок() Цикл</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Стр = Текст.ПолучитьСтроку(Ном2);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Список.ИзСтрокиСРазделителями(Стр);</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Если (Список.ПолучитьЗначение(1) = "Я элемент") и (Строка(СсылкаНаТекущуюГруппу) = Строка(Список.ПолучитьЗначение(3))) &nbsp;Тогда</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.Новый();</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.ИспользоватьДату(РабочаяДата());</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.Наименование = Список.ПолучитьЗначение(2);</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.Родитель = СсылкаНаТекущуюГруппу;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//........</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//........</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//........</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//........</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">//........</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Спр.Записать();</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">// просмотр хода перенисения данных</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Сообщить(Строка(СсылкаНаТекущуюГруппу) + " &nbsp;" + Спр.ТекущийЭлемент() );</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЕсли;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЦикла;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЕсли;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">КонецЦикла;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39"></span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">Предупреждение("Загрузка прошла успешно!");</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts39">КонецПроцедуры</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

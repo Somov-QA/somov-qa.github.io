@@ -1,0 +1,335 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Метод combineReducers</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("combineReducers");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Метод combineReducers</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ReactRedux.html">React &amp; Redux</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ReactRedux.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ReduxDevTools.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic102.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Метод combineReducers</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts13">Данный пример показывает комбинацию редьюсеров.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">1. Установка пакета create-react-app</span></p>
+<p class="rvps26"><span class="rvts103">$ npm install -g create-react-app</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">2. Создание проекта на основе пакета create-react-app</span></p>
+<p class="rvps26"><span class="rvts103">$ create-react-app project_name</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">3. Установите redux</span></p>
+<p class="rvps26"><span class="rvts103">npm install --save redux</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">4. Установите react-redux</span></p>
+<p class="rvps26"><span class="rvts103">npm install --save react-redux</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">1. Запуск сервера</span></p>
+<p class="rvps26"><span class="rvts103">$ npm start</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">2. Запуск в тестовом режиме</span></p>
+<p class="rvps26"><span class="rvts103">npm test</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">3. Сборка билда</span></p>
+<p class="rvps26"><span class="rvts103">npm run build</span></p>
+<p class="rvps26"><span class="rvts103"><br/></span></p>
+<p class="rvps3"><span class="rvts13">4. Копировать все конфиги и транзитивные зависимости (Webpack, Babel, ESLint и т. д.)</span></p>
+<p class="rvps26"><span class="rvts103">npm run eject</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">После того как проект будет создан, необходимо создать папку </span><span class="rvts143">./src/reducers </span><span class="rvts13">в которой будут хранится редюсеры приложения.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">В этой папке </span><span class="rvts143">./src/reducers</span><span class="rvts13"> создайте файл </span><span class="rvts161">index.js</span><span class="rvts13"> который служит контейнером редюсеров.</span></p>
+<p class="rvps26"><span class="rvts13">Подключается библиотека redux и два редюсера tracks и lists</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> { combineReducers } from </span><span class="rvts99">'redux'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> tracks from </span><span class="rvts99">'./tracks'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> lists from </span><span class="rvts99">'./lists'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">export</span><span class="rvts98"> </span><span class="rvts97">default</span><span class="rvts98"> combineReducers({</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;tracks,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;lists</span></p>
+<p class="rvps26"><span class="rvts98">});</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">В папке </span><span class="rvts143">./src/reducers</span><span class="rvts13"> создайте файл </span><span class="rvts161">tracks.js</span><span class="rvts13"> который является редюсером треков</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">const</span><span class="rvts98"> initialState = [</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts99">'Track 1'</span><span class="rvts98">,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts99">'Track 2'</span></p>
+<p class="rvps26"><span class="rvts98">];</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">export</span><span class="rvts98"> </span><span class="rvts97">default</span><span class="rvts98"> </span><span class="rvts97">function</span><span class="rvts98"> playList(state = initialState, action){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">if</span><span class="rvts98">(action.type === </span><span class="rvts99">'ADD_TRACK'</span><span class="rvts98">){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> [</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...state,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;action.payload</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;]</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;}</span><span class="rvts97">else</span><span class="rvts98"> </span><span class="rvts97">if</span><span class="rvts98">(action.type === </span><span class="rvts99">'DELETE_TRACK'</span><span class="rvts98">){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> state;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> state;</span></p>
+<p class="rvps26"><span class="rvts98">}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">В папке </span><span class="rvts143">./src/reducers</span><span class="rvts13"> создайте файл </span><span class="rvts161">lists.js</span><span class="rvts13"> который является редюсером листов</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">const</span><span class="rvts98"> initialState = [</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts99">'List 1'</span><span class="rvts98">,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts99">'List 2'</span></p>
+<p class="rvps26"><span class="rvts98">];</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">export</span><span class="rvts98"> </span><span class="rvts97">default</span><span class="rvts98"> </span><span class="rvts97">function</span><span class="rvts98"> playList(state = initialState, action){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">if</span><span class="rvts98">(action.type === </span><span class="rvts99">'ADD_LIST'</span><span class="rvts98">){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> [</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...state,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;action.payload</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;]</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;}</span><span class="rvts97">else</span><span class="rvts98"> </span><span class="rvts97">if</span><span class="rvts98">(action.type === </span><span class="rvts99">'DELETE_LIST'</span><span class="rvts98">){</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> state;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> state;</span></p>
+<p class="rvps26"><span class="rvts98">}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Оба редюсера добавляют данные в хранилища, каждый в свой массив tracks и lists.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Отредактируем файл </span><span class="rvts161">index.js</span><span class="rvts13"> в папке </span><span class="rvts143">./src </span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts13">Подключим библиотеку redux, подключим ранее созданные редюсеры, создадим хранилице. В визуализации &lt;App /&gt; обернем в провайдер в который передадим хранилище.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts100">/* Подключаем react */</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> React from </span><span class="rvts99">'react'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> ReactDOM from </span><span class="rvts99">'react-dom'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> </span><span class="rvts99">'./index.css'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> App from </span><span class="rvts99">'./App'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> registerServiceWorker from </span><span class="rvts99">'./registerServiceWorker'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts100">/* Подключаем redux */</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> { createStore } from </span><span class="rvts99">'redux'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> { Provider } from </span><span class="rvts99">'react-redux'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts100">/* Подключаем наши редюсеры и создаем хранилище */</span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> reducer from </span><span class="rvts99">'./reducers'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts97">const</span><span class="rvts98"> store = createStore(reducer);</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts100">/* Визуализация компонента через провайдер с передачей в него хранилища */</span></p>
+<p class="rvps26"><span class="rvts98">ReactDOM.render(</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;&lt;Provider store={store}&gt;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;App /&gt;</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;&lt;/Provider&gt;,</span></p>
+<p class="rvps26"><span class="rvts98"> &nbsp; &nbsp;document.getElementById(</span><span class="rvts99">'root'</span><span class="rvts98">)</span></p>
+<p class="rvps26"><span class="rvts98">);</span></p>
+<p class="rvps26"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts98">registerServiceWorker();</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Дальше необходимо создать компонент для отображения и ввода данные в хранилище.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Создаем папку </span><span class="rvts143">./src/components </span><span class="rvts13">в которой будет описан компонент TrackList</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">В папке </span><span class="rvts143">./src/components</span><span class="rvts13"> создайте файл </span><span class="rvts161">TrackList.js</span><span class="rvts13"> </span></p>
+<p class="rvps3"><span class="rvts13">Компонент будет отображать текстовое поле с двумя кнопками добавления треков и лостов</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem11.png"></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Создаем компонент на основе React предварительно импортировав эту библиотеку.</span></p>
+<p class="rvps3"><span class="rvts13">Замет импортируем connect для объединения React с Redux. Вызываем конструктор. Описываем действия для кнопок (обе кнопки вызывают функции добавления данных в хранилище) Так же мы с помощью ref получаем объект Input и сохраняем его в переменную.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts97">import</span><span class="rvts98"> React, { Component } from </span><span class="rvts99">'react'</span><span class="rvts98">;</span></p>
+<p class="rvps3"><span class="rvts97">import</span><span class="rvts98"> { connect } from </span><span class="rvts99">'react-redux'</span><span class="rvts98">;</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts97">class</span><span class="rvts98"> TrackList </span><span class="rvts97">extends</span><span class="rvts98"> Component {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;constructor(props) {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">super</span><span class="rvts98">(props);</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;onTrackButtonClick(event) {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.props.onAddTrack(</span><span class="rvts97">this</span><span class="rvts98">.trackInput.value);</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.trackInput.value = </span><span class="rvts99">''</span><span class="rvts98">;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;onListButtonClick(event){</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.props.onAddList(</span><span class="rvts97">this</span><span class="rvts98">.trackInput.value);</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.trackInput.value = </span><span class="rvts99">''</span><span class="rvts98">;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;getInput(input) {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.trackInput = input;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;render() {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts97">this</span><span class="rvts98">.props.store);</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> (</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;input type=</span><span class="rvts99">"text"</span><span class="rvts98"> ref={</span><span class="rvts97">this</span><span class="rvts98">.getInput.bind(</span><span class="rvts97">this</span><span class="rvts98">)} </span><span class="rvts99">/&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;button onClick={</span><span class="rvts97">this</span><span class="rvts98">.onTrackButtonClick.bind(</span><span class="rvts97">this</span><span class="rvts98">)}&gt;Add track&lt;/button&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;button onClick={</span><span class="rvts97">this</span><span class="rvts98">.onListButtonClick.bind(</span><span class="rvts97">this</span><span class="rvts98">)}&gt;Add list&lt;/button&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;table&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;thead&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;th&gt;Tracks&lt;/th&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;th&gt;Lists&lt;/th&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/tr&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/thead&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tbody&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;tr&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ul&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.props.</span><span class="rvts162">store</span><span class="rvts98">.</span><span class="rvts162">tracks</span><span class="rvts98">.map((value, index) =&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li key={index}&gt;{value}&lt;/li&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ul&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/td&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ul&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts97">this</span><span class="rvts98">.props.</span><span class="rvts162">store</span><span class="rvts98">.</span><span class="rvts162">lists</span><span class="rvts98">.map((value, index) =&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li key={index}&gt;{value}&lt;/li&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ul&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/td&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/tr&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/tbody&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/table&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98">}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts100">/* Получаем данные из хранилища */</span></p>
+<p class="rvps3"><span class="rvts97">const</span><span class="rvts98"> mapStateToProps = (state, ownProps) =&gt; {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;store: state</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;};</span></p>
+<p class="rvps3"><span class="rvts98">}</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts100">/* Обновляем данные в хранилище */</span></p>
+<p class="rvps3"><span class="rvts97">const</span><span class="rvts98"> mapDispatchToProps = (dispatch) =&gt; {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;</span><span class="rvts97">return</span><span class="rvts98"> {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;onAddTrack: (trackName) =&gt; {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts99">'ADD_TRACK'</span><span class="rvts98">, payload: trackName });</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;onAddList: (listName) =&gt; {</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts99">'ADD_LIST'</span><span class="rvts98">, payload: listName });</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts98">};</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts100">/* Соединяем компонент с хранилищем */</span></p>
+<p class="rvps3"><span class="rvts97">export</span><span class="rvts98"> </span><span class="rvts97">default</span><span class="rvts98"> connect(mapStateToProps, mapDispatchToProps)(TrackList);</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">В визуализации отображаются данные находящиеся в хранилище. </span></p>
+<p class="rvps3"><span class="rvts13">В конце скрипта мы экспортируем ранее импортируемую функцию connect в которой передаем для обработчика и сам компонент с непосредственным вызовом этой функции.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">mapStateToProps – получает хранилище целиком, то есть все его данные. (это объект состоящий из двух массивов &nbsp;tracks и lists).</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">mapDispatchToProps – вызывает метод dispatch который необходим для работы с данными в хранилище (добавление, изменение и удаление). В качестве параметров передается тип и данные.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13">Отредактируем файл </span><span class="rvts161">App.js</span><span class="rvts13"> в папке </span><span class="rvts143">./src</span><span class="rvts13">.</span><span class="rvts143"> </span><span class="rvts13">Импортируем и вызываем компонент.</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps26"><span class="rvts97">import</span><span class="rvts98"> TrackList from </span><span class="rvts99">'./components/TrackList'</span><span class="rvts98">;</span></p>
+<p class="rvps26"><span class="rvts98">&lt;TrackList /&gt;</span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p class="rvps3"><span class="rvts13"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

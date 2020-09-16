@@ -1,0 +1,146 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Подбор товара для накладных из справочника &quot;Товары&quot;</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic51");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Подбор товара для накладных из справочника &quot;Товары&quot;</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic45.html">Документ</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic45.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic50.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic53.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Подбор товара для накладных из справочника "Товары"</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">Подбор</span><span class="rvts34">() </span><span class="rvts37">// кнопка "Подбор" отвечает за подбор товара.</span></p>
+<p class="rvps5"><span class="rvts35">ОткрытьПодбор</span><span class="rvts34">(</span><span class="rvts36">"Справочник.Товары"</span><span class="rvts34">, </span><span class="rvts36">"ДляПодбора"</span><span class="rvts34">); </span><span class="rvts37">//Открыть Форму подбора значений.</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ОбработкаПодбора</span><span class="rvts34">(</span><span class="rvts35">ВыбрТовар</span><span class="rvts34">, </span><span class="rvts35">КонтФормы</span><span class="rvts34">) </span><span class="rvts37">//предопределенная процедура в модуле формы (&lt;ЭлементСправочника&gt;,&lt;КонтекстФормыИзКоторойШелПодбор&gt;)</span></p>
+<p class="rvps5"><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = 1 Цикл</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">ВыбрТовар</span><span class="rvts34"> = </span><span class="rvts35">Товар</span><span class="rvts34"> Тогда </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts34">Сообщить(</span><span class="rvts36">"Товар уже выбран: " "" </span><span class="rvts34">+ СокрП(</span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">) + </span><span class="rvts36">""" в строке номер"</span><span class="rvts34"> + </span><span class="rvts35">НомерСтроки</span><span class="rvts34">,</span><span class="rvts36">"!"</span><span class="rvts34">); </span><span class="rvts37">// НомерСтроки - это номер текущей строки таблицы значений.</span></p>
+<p class="rvps7"><span class="rvts34">СтатусВозврата(</span><span class="rvts36">0</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts34">Возврат;</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts37">//Вызов диалога для ввода числа. (количества)</span></p>
+<p class="rvps5"><span class="rvts35">Кол</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts34">Если ВвестиЧисло(</span><span class="rvts35">Кол</span><span class="rvts34">, </span><span class="rvts36">"Введите количество"</span><span class="rvts34">, </span><span class="rvts36">15</span><span class="rvts34">, </span><span class="rvts36">0</span><span class="rvts34">) = </span><span class="rvts36">0</span><span class="rvts34"> Тогда </span><span class="rvts37">// если нажата кнопка ОТМЕНА</span></p>
+<p class="rvps6"><span class="rvts34">Возврат;</span></p>
+<p class="rvps5"><span class="rvts34">ИначеЕсли </span><span class="rvts35">Кол</span><span class="rvts34"> =</span><span class="rvts36"> 0</span><span class="rvts34"> Тогда </span><span class="rvts37">//если количество проставлено 0</span></p>
+<p class="rvps6"><span class="rvts34">Возврат;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts37">// создаем новую строку в табличной части данного документа.</span></p>
+<p class="rvps5"><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts35">Товар</span><span class="rvts34"> = </span><span class="rvts35">ВыбрТовар</span><span class="rvts34">; </span><span class="rvts37">//поле "Товар" </span></p>
+<p class="rvps5"><span class="rvts35">Количество</span><span class="rvts34"> = </span><span class="rvts35">Кол</span><span class="rvts34">; </span><span class="rvts37">//поле "Количество".</span></p>
+<p class="rvps5"><span class="rvts35">АктивизироватьСтроку</span><span class="rvts34">(); </span><span class="rvts43">//Установить курсор на указанной строке &nbsp;многострочной части документа</span></p>
+<p class="rvps5"><span class="rvts35">Пересчет</span><span class="rvts34">(</span><span class="rvts44">1</span><span class="rvts34">); </span><span class="rvts43">//вызываем процедуру которая пересчитавает (Цена,НДС,Сумма,Всего)</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Выбран товар """</span><span class="rvts34"> + </span><span class="rvts35">ВыбрТовар</span><span class="rvts34"> + </span><span class="rvts36">"""."</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

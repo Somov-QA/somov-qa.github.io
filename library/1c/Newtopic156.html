@@ -1,0 +1,145 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Загружаем все данные в Таблицу значений из текстового файла.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic156");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Загружаем все данные в Таблицу значений из текстового файла.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic147.html">Решение задач особого назначения</a> &rsaquo;&rsaquo; <a href="Newtopic154.html">Таблица Значений и периодические реквизиты в &quot;списке значений&quot;</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic154.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic155.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic157.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Загружаем все данные в Таблицу значений из текстового файла.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ОткрытьФайл</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts34">Перем </span><span class="rvts35">Имя_Файла</span><span class="rvts34">, </span><span class="rvts35">Имя_Папки</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts35">Текст</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Текст"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">Список</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"СписокЗначений"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts37">//Открываем ранее созданный текстовый файл.</span></p>
+<p class="rvps5"><span class="rvts34">Если ФС.</span><span class="rvts35">ВыбратьФайл</span><span class="rvts34">(</span><span class="rvts36">0</span><span class="rvts34">,</span><span class="rvts35">Имя_Файла</span><span class="rvts34">, </span><span class="rvts35">Имя_Папки</span><span class="rvts34">, </span><span class="rvts36">"ЗАГРУЗКА ДАННЫХ"</span><span class="rvts34">, </span><span class="rvts36">"Файл БД (*.txt)|*.txt"</span><span class="rvts34">, </span><span class="rvts36">"*.txt"</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">Открыть</span><span class="rvts34">(</span><span class="rvts35">Имя_Папки</span><span class="rvts34"> + </span><span class="rvts35">Имя_Файла</span><span class="rvts34">); </span><span class="rvts37">//открываем файл в агр. Объекте "Текст"</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps6"><span class="rvts37">// Заполняем "таблицу значений"(ТЗ) при помощи "списка значений"(Список)</span></p>
+<p class="rvps6"><span class="rvts34">Для </span><span class="rvts35">Ном1</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По </span><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">() Цикл</span></p>
+<p class="rvps7"><span class="rvts35">Стр</span><span class="rvts34"> = </span><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">(</span><span class="rvts35">Ном1</span><span class="rvts34">); </span><span class="rvts37">//получаем строку из таблицы значений.</span></p>
+<p class="rvps7"><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ИзСтрокиСРазделителями</span><span class="rvts34">(</span><span class="rvts35">Стр</span><span class="rvts34">); </span><span class="rvts37">//помещаем полученную строку в список значений</span></p>
+<p class="rvps7"><span class="rvts37">//создаем запись &nbsp;------------------------</span></p>
+<p class="rvps7"><span class="rvts35">СТР</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоСтрок</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяСтрока</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> = </span><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> = </span><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts36">2</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts36">3</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">Родитель</span><span class="rvts34"> = </span><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts36">4</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps7"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps7"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = </span><span class="rvts36">5</span><span class="rvts34"> по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл </span><span class="rvts37">//заполняем таблицу с пятой колонки</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps9"><span class="rvts35">ИД</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПараметрыКолонки</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">); </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps9"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">УстановитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СТР</span><span class="rvts34"> + </span><span class="rvts36">1</span><span class="rvts34">, </span><span class="rvts35">ном</span><span class="rvts34">, Строка(</span><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">)));</span></p>
+<p class="rvps7"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

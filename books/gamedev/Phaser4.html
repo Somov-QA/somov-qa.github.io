@@ -1,0 +1,142 @@
+﻿<html>
+	
+<head>
+	<title>Phaser проект</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Phaser4");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Phaser проект</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Nodejs.html">Node.js</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Nodejs.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Nodejs.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="vscode.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts37">ИНСТРУКЦИЯ: </span><a class="rvts52" href="http://divillysausages.com/2015/06/09/using-phaser-with-visual-studio-code/" target="_blank">http://divillysausages.com/2015/06/09/using-phaser-with-visual-studio-code/</a></p>
+<p class="rvps2"><span class="rvts37"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts50">Установка:</span></p>
+<p class="rvps2"><span class="rvts50"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1. Посетить сайт TypeScript </span><a class="rvts11" href="http://www.typescriptlang.org/" target="_blank">http://www.typescriptlang.org/</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2. Скачайте и установите Node.js </span><a class="rvts11" href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">3. Установить TypeScript для Node.js</span><br/><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts47">npm install -g typescript</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">4. Скачайте и установите Visual Studio Code </span><a class="rvts11" href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts50">Создание проекта:</span></p>
+<p class="rvps2"><span class="rvts50"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1. Создать папку проекта [project]. В ней создать папки:</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">[bin]</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">[assets]</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">[js]</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">[src]</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">[tsDefinitions]</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2. Создать файл</span><span class="rvts37"> </span><span class="rvts47">tsconfig.json</span><span class="rvts6"> и вставить код</span></p>
+<p class="rvps2"><span class="rvts6">{</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"compilerOptions": {</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"target": "ES5",</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"module": "commonjs",</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"sourceMap": false</span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">}</span></p>
+<p class="rvps2"><span class="rvts6">}</span></p>
+<p class="rvps2"><span class="rvts6"> </span></p>
+<p class="rvps2"><span class="rvts6">3. Копируем файлы Phaser из папки </span><span class="rvts47">...\phaser-2.4.6\typescript\ </span><span class="rvts6">в папку </span><span class="rvts47">...\tsDefinitions\</span></p>
+<p class="rvps5"><span class="rvts14">p2.d.ts</span></p>
+<p class="rvps5"><span class="rvts14">phaser.comments.d.ts</span></p>
+<p class="rvps5"><span class="rvts14">phaser.d.ts</span></p>
+<p class="rvps5"><span class="rvts14">pixi.comments.d.ts</span></p>
+<p class="rvps5"><span class="rvts14">pixi.d.ts</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">4. Скопиравать файл </span><span class="rvts47">phaser.js</span><span class="rvts6"> в папку </span><span class="rvts47">...\bin\js\</span></p>
+<p class="rvps2"><span class="rvts48"><br/></span></p>
+<p class="rvps2"><span class="rvts6">5. Скопировать файл </span><span class="rvts47">ds_logo.png</span><span class="rvts6"> в папку </span><span class="rvts47">...\bin\assets\</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">6. Создать файл</span><span class="rvts47"> game.ts</span><span class="rvts6"> в папке </span><span class="rvts47">...\src\&nbsp;</span><span class="rvts48"> и вставить код.</span></p>
+<p class="rvps2"><span class="rvts48"><br/></span></p>
+<p class="rvps2"><span class="rvts48">7. </span><span class="rvts6">Создать файл</span><span class="rvts47"> index.html</span><span class="rvts6"> в папке </span><span class="rvts47">...\bin\&nbsp;</span><span class="rvts48"> и вставить код.</span></p>
+<p class="rvps2"><span class="rvts48"><br/></span></p>
+<p class="rvps2"><span class="rvts48">8. Отладим проект </span><span class="rvts47">Ctrl+Shift+B</span><span class="rvts48"> в результате чего в папке </span><span class="rvts47">...\.vscode\</span><span class="rvts48"> &nbsp;будет создан файл </span><span class="rvts47">tasks.json</span><span class="rvts48"> в котором необходимо извенить строку </span><span class="rvts47">"args": ["--out","bin/js/game.js"]</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">9. </span><span class="rvts48">Отладим проект </span><span class="rvts47">Ctrl+Shift+B</span><span class="rvts48"> в результате получим скомпилированный файл </span><span class="rvts47">game.js</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts50">Создаём систему запуска сервера</span></p>
+<p class="rvps2"><span class="rvts50"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1. Нажимаем F5 в результате чего будет создан в папке </span><span class="rvts47">...\.vscode\</span><span class="rvts48">&nbsp;</span><span class="rvts6"> файл </span><span class="rvts47">launch.json</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2. В файле должно быть описаны следующие опции</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"program": "app.js"</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6">"stopOnEntry": false</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts50">Устанавливаем node-static</span></p>
+<p class="rvps2"><span class="rvts50"><br/></span></p>
+<p class="rvps2"><span class="rvts6">1. Чтобы выполнить установку необходимо открыть папку проекта и удерживая shift открыть контекстное меню в котором выбрать </span><span class="rvts51">"Открыть окно команд"</span><span class="rvts6"> и &nbsp;выполнить команду: </span><span class="rvts47">npm install node-static</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">2. Создать в папке </span><span class="rvts48">проекта &nbsp;файл </span><span class="rvts47">app.js</span><span class="rvts48"> в который вставить код работы сервера.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">3. Нажимаем </span><span class="rvts47">F5</span><span class="rvts6"> открываем браузер и вводим адрес </span><span class="rvts47">localhost:5858</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

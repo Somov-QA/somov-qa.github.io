@@ -1,0 +1,177 @@
+﻿<html>
+	
+<head>
+	<title>14. Работа с 2D Spine анимацией</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "libGDX.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("142DSpine");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">14. Работа с 2D Spine анимацией</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="libGDX5.html">Практика libGDX</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="libGDX5.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="13spinelibgdx.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="15.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Данный пример был взят из официального репозитория пакета spine-libgdx </span><a class="rvts22" href="https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-libgdx/spine-libgdx-tests/src/com/esotericsoftware/spine/SimpleTest1.java" target="_blank">https://github.com/EsotericSoftware/spine-runtimes/blob/master/spine-libgdx/spine-libgdx-tests/src/com/esotericsoftware/spine/SimpleTest1.java</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">1) Необходимо в проект добавить пакет spine-libgdx, если вы этого еще не сделали прочтите раздел </span><a class="rvts22" href="13spinelibgdx.html">13. Добавление в проект пакета spine-libgdx</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">2) Получаем все необходимые файлы 2D Spine анимации и копируем их в папку assets </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem41.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3) Создаём новую папку testSpine и новый класс TestSpine интерфейс которого Screen</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem42.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4) Класс TestSpine в конструкторе создаёт камеру и загружает объект анимации.</span></p>
+<p class="rvps3"><span class="rvts8">Создаем переменную визуализации скелетной анимации и настраиваем её</span></p>
+<p class="rvps10"><span class="rvts8">SkeletonRenderer renderer;</span></p>
+<p class="rvps10"><span class="rvts8">renderer = new SkeletonRenderer();</span></p>
+<p class="rvps10"><span class="rvts8">renderer.setPremultipliedAlpha(true);// PMA приводит к правильному смешивания без очертаний. </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Создаем переменную дебажной визуализации </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">SkeletonRendererDebug debugRenderer;</span></p>
+<p class="rvps10"><span class="rvts8">debugRenderer = new SkeletonRendererDebug();</span></p>
+<p class="rvps10"><span class="rvts8">debugRenderer.setBoundingBoxes(false);</span></p>
+<p class="rvps10"><span class="rvts8">debugRenderer.setRegionAttachments(false);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Загружаем атлас</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">atlas = new TextureAtlas(Gdx.files.internal("spine/spineboy-pma.atlas"));</span></p>
+<p class="rvps10"><span class="rvts8">Загружает данные JSON скелета и устанавливаем масштаб в 60 %</span></p>
+<p class="rvps10"><span class="rvts8">SkeletonJson json = new SkeletonJson(atlas);</span></p>
+<p class="rvps10"><span class="rvts8">json.setScale(0.6f);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Создаем переменную данных скелета из json файла</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("spine/spineboy.json"));</span></p>
+<p class="rvps10"><span class="rvts8">Создаем основной объект скелета</span></p>
+<p class="rvps10"><span class="rvts8">skeleton = new Skeleton(skeletonData);</span></p>
+<p class="rvps10"><span class="rvts8">skeleton.setPosition(250, 20);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Создаем анимацию, добавляем переключения между анимациями.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">AnimationStateData stateData = new AnimationStateData(skeletonData);</span></p>
+<p class="rvps10"><span class="rvts8">stateData.setMix("run", "jump", 0.2f);</span></p>
+<p class="rvps10"><span class="rvts8">stateData.setMix("jump", "run", 0.2f);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Содержит состояние анимации для скелета (текущей анимации, времени и т.д.).</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">state = new AnimationState(stateData);</span></p>
+<p class="rvps10"><span class="rvts8">state.setTimeScale(0.5f);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Очередь анимации на дорожке 0.</span></p>
+<p class="rvps10"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">state.setAnimation(0, "run", true);</span></p>
+<p class="rvps10"><span class="rvts8">state.addAnimation(0, "jump", false, 2); // Jump after 2 seconds.</span></p>
+<p class="rvps10"><span class="rvts8">state.addAnimation(0, "run", true, 0); // Run after the jump.</span></p>
+<p class="rvps3"><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts16">Визуализация</span></p>
+<p class="rvps3"><span class="rvts8">Устанавливаем время визуализации</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">state.update(Gdx.graphics.getDeltaTime());</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Позы скелета с использованием текущей анимации. Устанавливает локальную SRT кости.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">state.apply(skeleton);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Использует локальную SRT кости ", чтобы вычислить их мир SRT.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">skeleton.updateWorldTransform();</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Настройка камеры, SpriteBatch, и скелетона видео обработки Debug</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">camera.update();</span></p>
+<p class="rvps10"><span class="rvts8">batch.getProjectionMatrix().set(camera.combined);</span></p>
+<p class="rvps10"><span class="rvts8">debugRenderer.getShapeRenderer().setProjectionMatrix(camera.combined);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Отображение скелетного изображения</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">batch.begin();</span></p>
+<p class="rvps10"><span class="rvts8">renderer.draw(batch, skeleton);</span></p>
+<p class="rvps10"><span class="rvts8">batch.end();</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Отображение отладочной (дебажной) линии</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts8">debugRenderer.draw(skeleton);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Полный код примера:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts24">package </span><span class="rvts25">com.mygdx.game.testSpine</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.Gdx</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.Screen</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.GL20</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.OrthographicCamera</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g2d.SpriteBatch</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g2d.TextureAtlas</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.AnimationState</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.AnimationStateData</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.Skeleton</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.SkeletonData</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.SkeletonJson</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.SkeletonRenderer</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.esotericsoftware.spine.SkeletonRendererDebug</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.mygdx.game.MyGdxGame</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts29">/**</span><br/><span class="rvts29"> * Created by Cartish on 12.10.2016.</span><br/><span class="rvts29"> */</span><br/><span class="rvts29"></span><br/><span class="rvts24">public class </span><span class="rvts25">TestSpine </span><span class="rvts24">implements </span><span class="rvts25">Screen {</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts24">final </span><span class="rvts25">MyGdxGame </span><span class="rvts27">game</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">OrthographicCamera </span><span class="rvts27">camera</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">SpriteBatch </span><span class="rvts27">batch</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">SkeletonRenderer </span><span class="rvts27">renderer</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">SkeletonRendererDebug </span><span class="rvts27">debugRenderer</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">TextureAtlas </span><span class="rvts27">atlas</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">Skeleton </span><span class="rvts27">skeleton</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">AnimationState </span><span class="rvts27">state</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp;public </span><span class="rvts26">TestSpine</span><span class="rvts25">(</span><span class="rvts24">final </span><span class="rvts25">MyGdxGame myGdxGame) {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">game </span><span class="rvts25">= myGdxGame</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">OrthographicCamera()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">batch </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">SpriteBatch()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">renderer </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">SkeletonRenderer()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">renderer</span><span class="rvts25">.setPremultipliedAlpha(</span><span class="rvts24">true</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">debugRenderer </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">SkeletonRendererDebug()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">debugRenderer</span><span class="rvts25">.setBoundingBoxes(</span><span class="rvts24">false</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">debugRenderer</span><span class="rvts25">.setRegionAttachments(</span><span class="rvts24">false</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">atlas </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">TextureAtlas(Gdx.</span><span class="rvts30">files</span><span class="rvts25">.internal(</span><span class="rvts31">"spine/spineboy-pma.atlas"</span><span class="rvts25">))</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">SkeletonJson json = </span><span class="rvts24">new </span><span class="rvts25">SkeletonJson(</span><span class="rvts27">atlas</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">json.setScale(</span><span class="rvts28">0.6f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">SkeletonData skeletonData = json.readSkeletonData(Gdx.</span><span class="rvts30">files</span><span class="rvts25">.internal(</span><span class="rvts31">"spine/spineboy.json"</span><span class="rvts25">))</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">skeleton </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">Skeleton(skeletonData)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">skeleton</span><span class="rvts25">.setPosition(</span><span class="rvts28">250</span><span class="rvts24">, </span><span class="rvts28">20</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">AnimationStateData stateData = </span><span class="rvts24">new </span><span class="rvts25">AnimationStateData(skeletonData)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">stateData.setMix(</span><span class="rvts31">"run"</span><span class="rvts24">, </span><span class="rvts31">"jump"</span><span class="rvts24">, </span><span class="rvts28">0.2f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">stateData.setMix(</span><span class="rvts31">"jump"</span><span class="rvts24">, </span><span class="rvts31">"run"</span><span class="rvts24">, </span><span class="rvts28">0.2f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">AnimationState(stateData)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.setTimeScale(</span><span class="rvts28">0.5f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.setAnimation(</span><span class="rvts28">0</span><span class="rvts24">, </span><span class="rvts31">"run"</span><span class="rvts24">, true</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.addAnimation(</span><span class="rvts28">0</span><span class="rvts24">, </span><span class="rvts31">"jump"</span><span class="rvts24">, false, </span><span class="rvts28">2</span><span class="rvts25">)</span><span class="rvts24">; </span><span class="rvts33">// Jump after 2 seconds.</span><br/><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.addAnimation(</span><span class="rvts28">0</span><span class="rvts24">, </span><span class="rvts31">"run"</span><span class="rvts24">, true, </span><span class="rvts28">0</span><span class="rvts25">)</span><span class="rvts24">; </span><span class="rvts33">// Run after the jump.</span><br/><span class="rvts33"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">show</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">render</span><span class="rvts25">(</span><span class="rvts24">float </span><span class="rvts25">delta) {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.update(Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getDeltaTime())</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">Gdx.</span><span class="rvts30">gl</span><span class="rvts25">.glClear(GL20.</span><span class="rvts30">GL_COLOR_BUFFER_BIT</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">state</span><span class="rvts25">.apply(</span><span class="rvts27">skeleton</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">skeleton</span><span class="rvts25">.updateWorldTransform()</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.update()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">batch</span><span class="rvts25">.getProjectionMatrix().set(</span><span class="rvts27">camera</span><span class="rvts25">.</span><span class="rvts27">combined</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">debugRenderer</span><span class="rvts25">.getShapeRenderer().setProjectionMatrix(</span><span class="rvts27">camera</span><span class="rvts25">.</span><span class="rvts27">combined</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">batch</span><span class="rvts25">.begin()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">renderer</span><span class="rvts25">.draw(</span><span class="rvts27">batch</span><span class="rvts24">, </span><span class="rvts27">skeleton</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">batch</span><span class="rvts25">.end()</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">debugRenderer</span><span class="rvts25">.draw(</span><span class="rvts27">skeleton</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">resize</span><span class="rvts25">(</span><span class="rvts24">int </span><span class="rvts25">width</span><span class="rvts24">, int </span><span class="rvts25">height) {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.setToOrtho(</span><span class="rvts24">false</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">pause</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">resume</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">hide</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">dispose</span><span class="rvts25">() {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">atlas</span><span class="rvts25">.dispose()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25">}</span></p>
+<p class="rvps9"><span class="rvts25"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Если всё было сделано правильно в результате вы увидите 2D Spine анимацию.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem43.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

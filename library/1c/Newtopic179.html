@@ -1,0 +1,149 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Остатки</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic179");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Остатки</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="185.html">1С Предприятие 8.3 - Регистры</a> &rsaquo;&rsaquo; <a href="Newtopic160.html">Регистр накопления</a> &rsaquo;&rsaquo; <a href="Newtopic166.html">Практика</a> &rsaquo;&rsaquo; <a href="Newtopic178.html">Отчеты</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic178.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic178.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic180.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">ОСТАТКИ</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts19">Конструктор запроса</span></p>
+<p class="rvps10"><span class="rvts8">РегистрыНакопления -&gt; ТоварыОстаткиИОборот</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Наборы данных:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts15">ВЫБРАТЬ</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">ТоварОстаткиИОбороты.Номенклатура,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">ТоварОстаткиИОбороты.КоличествоНачальныйОстаток </span><span class="rvts15">КАК</span><span class="rvts8"> ОстатокНаНачало,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">ТоварОстаткиИОбороты.КоличествоПриход </span><span class="rvts15">КАК</span><span class="rvts8"> Приход,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">ТоварОстаткиИОбороты.КоличествоРасход </span><span class="rvts15">КАК</span><span class="rvts8"> Расход,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">ТоварОстаткиИОбороты.КоличествоКонечныйОстаток </span><span class="rvts15">КАК</span><span class="rvts8"> ОстатокНаКонец</span></p>
+<p class="rvps3"><span class="rvts15">ИЗ</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">РегистрНакопления.Товар.ОстаткиИОбороты </span><span class="rvts15">КАК</span><span class="rvts8"> ТоварОстаткиИОбороты</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Ресурсы:</span></p>
+<p class="rvps10"><span class="rvts20">ОстаткиНаКонец</span><span class="rvts8">: выражение: Сумма(ОстаткиНаКонец)</span></p>
+<p class="rvps10"><span class="rvts20">ОстаткиНаНачало</span><span class="rvts8">: выражение: Сумма(ОстаткиНаНачало)</span></p>
+<p class="rvps10"><span class="rvts20">Приход</span><span class="rvts8">: выражение: Сумма(Приход)</span></p>
+<p class="rvps10"><span class="rvts20">Расход</span><span class="rvts8">: выражение: Сумма(Расход)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Параметры:</span></p>
+<p class="rvps10"><span class="rvts20">НачалоПериода</span><span class="rvts8">: тип: Дата;</span></p>
+<p class="rvps10"><span class="rvts20">КонецПериода</span><span class="rvts8">: тип: Дата; выражение: КонецПериода(&amp;КонецПериода, "День")</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

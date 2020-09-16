@@ -1,0 +1,153 @@
+﻿<html>
+	
+<head>
+	<title>Загрузка ассетов</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic7");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Загрузка ассетов</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="PixiJS.html">PixiJS</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="PixiJS.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic6.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic21.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts24">var bgTexture; </span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">// background.jpg</span></p>
+<p class="rvps2"><span class="rvts24">var buttonTexture; </span><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">// button.png</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">/* game.json */</span></p>
+<p class="rvps2"><span class="rvts24">var bgCharacterWindowTexture; // character_background_small.png</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">/* blood.json */</span></p>
+<p class="rvps2"><span class="rvts24">var animTexBlood = [];</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">var bgPreloaderSprite;</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function preloaderShow()</span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">var loader = new PIXI.loaders.</span><span class="rvts26">Loader</span><span class="rvts24">();</span></p>
+<p class="rvps5"><span class="rvts24">loader.add('preloaderImage',"./assets/image/preloader.jpg");</span></p>
+<p class="rvps5"><span class="rvts24">loader.once('complete',onPreloaderLoaded);</span></p>
+<p class="rvps5"><span class="rvts24">loader.load();</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function onPreloaderLoaded(loader, res) </span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">bgPreloaderSprite = new PIXI.Sprite(res.preloaderImage.texture);</span></p>
+<p class="rvps5"><span class="rvts24">bgPreloaderSprite.position.x = 0;</span></p>
+<p class="rvps5"><span class="rvts24">bgPreloaderSprite.position.y = 0;</span></p>
+<p class="rvps5"><span class="rvts24">stage.addChild(bgPreloaderSprite);</span></p>
+<p class="rvps5"><span class="rvts24">console.log("Preloader: show");</span></p>
+<p class="rvps5"><span class="rvts24">loadAssets();</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function loadAssets()</span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">var loader = new PIXI.loaders.Loader();</span></p>
+<p class="rvps5"><span class="rvts24">loader.add('bgImage','./assets/image/background.jpg');</span></p>
+<p class="rvps5"><span class="rvts24">loader.add('buttonImage','./assets/image/button.png');</span></p>
+<p class="rvps5"><span class="rvts24">loader.add('gameAtlas','./assets/image/quest/atlas/game.json');</span></p>
+<p class="rvps5"><span class="rvts24">loader.add('bloodAtlas','./assets/image/quest/atlas/blood.json');</span></p>
+<p class="rvps5"><span class="rvts24">loader.once('complete',onAssetsLoaded);</span></p>
+<p class="rvps5"><span class="rvts24">loader.once('progress',onProgressLoad);</span></p>
+<p class="rvps5"><span class="rvts24">loader.load();</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function onProgressLoad()</span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">console.log("Progress load!");</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function onAssetsLoaded(loader, res) </span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">bgTexture = res.bgImage.texture; /* background.jpg */</span></p>
+<p class="rvps5"><span class="rvts24">buttonTexture = res.buttonImage.texture; /* button.png */</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps5"><span class="rvts24">/* game.json (Атлас различных текстур)*/</span></p>
+<p class="rvps5"><span class="rvts24">bgCharacterWindowTexture = PIXI.Texture.fromFrame('character_background_small.png');</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps5"><span class="rvts24">/* blood.json (Атлас анимации)*/</span></p>
+<p class="rvps5"><span class="rvts24">animTexBlood = loadAnimationTextures(14, 'blood_');</span></p>
+<p class="rvps5"><span class="rvts24">console.log("Load all assets - complete!");</span></p>
+<p class="rvps5"><span class="rvts24">stage.removeChild(bgPreloaderSprite);</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24">function loadAnimationTextures(countFrame, nameFrame)</span></p>
+<p class="rvps2"><span class="rvts24">{</span></p>
+<p class="rvps5"><span class="rvts24">var nameTexture;</span></p>
+<p class="rvps5"><span class="rvts24">var animTextures = [];</span></p>
+<p class="rvps5"><span class="rvts24">for(var i = 1; i &lt; countFrame; i++)</span></p>
+<p class="rvps5"><span class="rvts24">{</span></p>
+<p class="rvps7"><span class="rvts24">if(i &lt; 10)</span></p>
+<p class="rvps7"><span class="rvts24">{</span></p>
+<p class="rvps8"><span class="rvts24">nameTexture = nameFrame + '0' + i + '.png'</span></p>
+<p class="rvps7"><span class="rvts24">}else{</span></p>
+<p class="rvps8"><span class="rvts24">nameTexture = nameFrame + i + '.png'</span></p>
+<p class="rvps7"><span class="rvts24">}</span></p>
+<p class="rvps7"><span class="rvts24">var texture = PIXI.Texture.fromFrame(nameTexture);</span></p>
+<p class="rvps7"><span class="rvts24">animTextures.push(texture);</span></p>
+<p class="rvps5"><span class="rvts24">}</span></p>
+<p class="rvps5"><span class="rvts24">return animTextures;</span></p>
+<p class="rvps2"><span class="rvts24">}</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

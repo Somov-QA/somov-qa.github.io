@@ -1,0 +1,142 @@
+﻿
+
+<html>
+	
+<head>
+	<title>СписокЗначений</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic12");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">СписокЗначений</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic17.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic14.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Список значений</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Представляет собой список значений</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">СписокЗнач</span><span class="rvts8"> </span><span class="rvts14">= Новый</span><span class="rvts8"> </span><span class="rvts15">СписокЗначений</span><span class="rvts8">;</span></p>
+<p class="rvps5"><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts16">"Понедельник"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts16">"Вторник"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts16">"Среда"</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts14">Для Каждого </span><span class="rvts15">Элемент</span><span class="rvts14"> Из </span><span class="rvts15">СписокЗнач</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Элемент</span><span class="rvts14">);</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">НайденоеЗначение</span><span class="rvts14"> = </span><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">НайтиПоЗначению</span><span class="rvts14">(</span><span class="rvts16">"Среда"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">НайденоеЗначение</span><span class="rvts14">.</span><span class="rvts15">Пометка</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Показать модельное окно с выбором</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">Значение</span><span class="rvts14"> = </span><span class="rvts15">Строка</span><span class="rvts14">(</span><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">ВыбратьЭлемент</span><span class="rvts14">(</span><span class="rvts8">"День недели"</span><span class="rvts14">, </span><span class="rvts15">НайденоеЗначение</span><span class="rvts14">));</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Показать можельное окно с отметками</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">СписокЗнач</span><span class="rvts14">.</span><span class="rvts15">ОтметитьЭлементы</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts8">Загрузить список значений в список значений расположенный на форме в качестве реквизита.</span></p>
+<p class="rvps5"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts15">СписокЗначенийНаФорме</span><span class="rvts14"> = </span><span class="rvts15">СписокЗнач</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

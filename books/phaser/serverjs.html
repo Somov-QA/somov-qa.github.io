@@ -1,0 +1,100 @@
+﻿<html>
+	
+<head>
+	<title>server.js</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Phaser.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("serverjs");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">server.js</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="261.html">Шаблон проекта (версия 2.6.1)</a> &rsaquo;&rsaquo; <a href="vscode1.html">.vscode</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="vscode1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="launchjson1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="tasksjson1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">// import our modules</span></p>
+<p class="rvps3"><span class="rvts8">var nodeStatic &nbsp; &nbsp; &nbsp; &nbsp;= require( 'node-static' ); &nbsp; &nbsp; &nbsp; &nbsp;// used for serving static files</span></p>
+<p class="rvps3"><span class="rvts8">var http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= require( 'http' ); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// default node http server</span></p>
+<p class="rvps3"><span class="rvts8">var port &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 5858; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// NOTE: this is the same port as specified in launch.json</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">// create our file server config</span></p>
+<p class="rvps3"><span class="rvts8">var file = new nodeStatic.Server( 'bin', { &nbsp; &nbsp; &nbsp; &nbsp;// anything in the bin/ folder is served</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; cache:0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// no cache (only for testing)</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; gzip:true &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// gzip our assets</span></p>
+<p class="rvps3"><span class="rvts8">});</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">// create our basic server</span></p>
+<p class="rvps3"><span class="rvts8">http.createServer( function( request, response ) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; request.addListener( 'end', function() {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; file.serve( request, response ); // any url asked for, just try and serve the file from bin/</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }).resume();</span></p>
+<p class="rvps3"><span class="rvts8">}).listen( port );</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeniy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

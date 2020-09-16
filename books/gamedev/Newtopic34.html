@@ -1,0 +1,172 @@
+﻿<html>
+	
+<head>
+	<title>Взаимодействие объектов друг с другом (персонаж и звёзды)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic34");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Взаимодействие объектов друг с другом (персонаж и звёзды)</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser.html">Phaser</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScript1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="keyboard.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic35.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> worldGroup;</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> player;</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> starsGroup;</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> cursors;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts29"> create() </span></p>
+<p class="rvps2"><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">game.physics.startSystem(Phaser.Physics.ARCADE);</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// ---------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">game.physics.startSystem(Phaser.Physics.ARCADE); </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts35">// Используем аркадную физику</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">worldGroup = game.add.group();</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">worldGroup.enableBody = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// Включаем физику для всех объектов группы</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">var</span><span class="rvts14"> obj1 = worldGroup.create(0, game.world.heigh - 64, '</span><span class="rvts29">ground</span><span class="rvts14">');</span></p>
+<p class="rvps5"><span class="rvts14">obj1.scale.setTo(2, 2);</span></p>
+<p class="rvps5"><span class="rvts14">obj1.body.immovable = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// включение тела объекта</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts15">var</span><span class="rvts14"> obj2 = worldGroup.create(400, 400, '</span><span class="rvts29">ledge</span><span class="rvts14">');</span></p>
+<p class="rvps5"><span class="rvts14">obj2.body.immovable = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// включение тела объекта</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts15">var</span><span class="rvts14"> obj3 = worldGroup.create(-150, 250, '</span><span class="rvts29">ledge</span><span class="rvts14">');</span></p>
+<p class="rvps5"><span class="rvts14">obj3.body.immovable = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// включение тела объекта</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// ---------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">player = game.add.sprite(32, game.world.height - 150, '</span><span class="rvts29">man'</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">game.physics.arcade.enable(player);</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// включаем физику персонажа</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">// свойства физики персонажа. (включаем небольшой отскок)</span></p>
+<p class="rvps5"><span class="rvts14">player.body.bounce.y = 0.2;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// отскок</span></p>
+<p class="rvps5"><span class="rvts14">player.body.gravity.y = 300;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// гравитация (сила притяжения)</span></p>
+<p class="rvps5"><span class="rvts14">player.body.collideWorldBounds = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// сталкивание с границами мира</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">// две анимации: хотьба влево и вправо</span></p>
+<p class="rvps5"><span class="rvts14">player.animations.add('left', [0, 1, 2, 3], 10, true);</span></p>
+<p class="rvps5"><span class="rvts14">player.animations.add('right', [5, 6, 7, 8], 10, true);</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// ---------------------------------------------</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">starsGroup = game.add.group(); </span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// объединяем все звёзды в группу</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">starsGroup.enableBody = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// включаем физику для всех объектов группы</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts17">// &nbsp;Создание звёзд и их равномерноя расстановка</span></p>
+<p class="rvps5"><span class="rvts14">for (var i = 0; i &lt; 12; i++)</span></p>
+<p class="rvps5"><span class="rvts14">{</span></p>
+<p class="rvps7"><span class="rvts14">var star = starsGroup.create(i * 70, 0, 'star');</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// &nbsp;Создаём звезду внутри группы</span></p>
+<p class="rvps7"><span class="rvts14">star.body.gravity.y = 300;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// &nbsp;добавляем гравитацию (силу притяжения)</span></p>
+<p class="rvps7"><span class="rvts14">star.body.bounce.y = 0.7 + Math.random() * 0.2;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// &nbsp;отскок от поверхности</span></p>
+<p class="rvps5"><span class="rvts14">}</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// ---------------------------------------------</span></p>
+<p class="rvps5"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts14">cursors = game.input.keyboard.createCursorKeys();</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// Управление</span></p>
+<p class="rvps2"><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts29"> update() </span></p>
+<p class="rvps2"><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// проверка столкновений объектов(воспроизведение физики)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">game.physics.arcade.</span><span class="rvts33">collide</span><span class="rvts29">(player, </span><span class="rvts14">worldGroup</span><span class="rvts29">);</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// персонаж</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">game.physics.arcade.</span><span class="rvts33">collide</span><span class="rvts29">(</span><span class="rvts14">starsGroup</span><span class="rvts29">, </span><span class="rvts14">worldGroup</span><span class="rvts29">);</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// звёзды</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// проверка перекрытия персонажа и звезд (для того чтобы удалить звезду)</span></p>
+<p class="rvps2"><span class="rvts29"></span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">game.physics.arcade.</span><span class="rvts33">overlap</span><span class="rvts29">(player, </span><span class="rvts14">starsGroup</span><span class="rvts29">, </span><span class="rvts33">removeStar</span><span class="rvts29">, null, this);</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.body.velocity.x = 0;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// остановка объекта</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// движение персонажа</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">if</span><span class="rvts29"> (cursors.left.isDown) </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// движение влево (нажата кнопка влево)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.body.velocity.x = -150;</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.animations.play('left');</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">else if</span><span class="rvts29"> (cursors.right.isDown)</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// движение вправо (нажата кнопка вправо)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.body.velocity.x = 150;</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.animations.play('right');</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">else</span><span class="rvts29"> </span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// останавливается</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.animations.stop();</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.frame = 4;</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// &nbsp;прыжок (нажатие кнопки вверх)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">if</span><span class="rvts29"> (cursors.up.isDown </span><span class="rvts15">&amp;&amp;</span><span class="rvts29"> player.body.touching.down)</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">{</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">player.body.velocity.y = -350;</span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29">}</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts29"> removeStar (player, star) </span></p>
+<p class="rvps2"><span class="rvts29">{</span></p>
+<p class="rvps5"><span class="rvts29">star.</span><span class="rvts33">kill</span><span class="rvts29">();</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// Удаляем звезду</span></p>
+<p class="rvps2"><span class="rvts29">}</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

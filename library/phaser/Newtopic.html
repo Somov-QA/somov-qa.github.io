@@ -1,0 +1,160 @@
+﻿<html>
+	
+<head>
+	<title>Атласы и Анимация спрайта</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Атласы и Анимация спрайта</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser3.html">Phaser</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Phaser3.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Phaser3.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic9.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Атласы / Анимация спрайта</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Класс хранит перечень загружаемых звуков в игре</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">class</span><span class="rvts8"> Atlases {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;</span><span class="rvts14">public</span><span class="rvts8"> </span><span class="rvts14">static</span><span class="rvts8"> OtherArt:string = </span><span class="rvts15">"otherArt"</span><span class="rvts8">;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;</span><span class="rvts14">public static</span><span class="rvts8"> preloadList: string[] = [</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Atlases.OtherArt</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;];</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Загрузка атласов </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">this</span><span class="rvts8">.game.state.start(Fabrique.PreSplash.Name, true, false, {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;preloadHandler: (): </span><span class="rvts14">void</span><span class="rvts8"> =&gt; {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Atlases.preloadList.forEach((assetName:string) =&gt;{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.game.load.atlas(assetName, </span><span class="rvts15">'assets/atlas/'</span><span class="rvts8"> + assetName +</span><span class="rvts15"> '.png','assets/atlas/'</span><span class="rvts8"> + assetName + </span><span class="rvts15">'.json'</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8">});</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Использование текстуры из атласа </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> banner: Phaser.Sprite;</span></p>
+<p class="rvps3"><span class="rvts14">this</span><span class="rvts8">.banner = </span><span class="rvts14">this</span><span class="rvts8">.game.add.sprite(0, 0, Atlases.OtherArt,</span><span class="rvts15"> "back_banner.png"</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts14">this</span><span class="rvts8">.banner.anchor.set(0.5);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts16">Анимация спрайта</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> animatedDice: Phaser.Sprite;</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> anim: Phaser.Animation;</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> createAnimatedDice(){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">let</span><span class="rvts8"> randomFrame: number = Utils.getRandomRange(1, 16);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">let</span><span class="rvts8"> frameName: string;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">if</span><span class="rvts8">(randomFrame &lt; 10){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;frameName =</span><span class="rvts15"> 'button/roll0'</span><span class="rvts8"> + randomFrame +</span><span class="rvts15"> '.png'</span><span class="rvts8">;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span><span class="rvts14">else</span><span class="rvts8">{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;frameName =</span><span class="rvts15"> 'button/roll' </span><span class="rvts8">+ randomFrame + </span><span class="rvts15">'.png'</span><span class="rvts8">;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.animatedDice = </span><span class="rvts14">this</span><span class="rvts8">.game.add.sprite(0, 0, Atlases.Dice, frameName);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.addChild(</span><span class="rvts14">this</span><span class="rvts8">.animatedDice);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">let</span><span class="rvts8"> animationFrameList:string[] = [];</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">for</span><span class="rvts8"> (</span><span class="rvts14">let</span><span class="rvts8"> i = 0; i &lt; 16; i++) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">let</span><span class="rvts8"> frameNum:string = (i+1).toString();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="rvts14"> if </span><span class="rvts8">(i+1 &lt; 10) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; frameNum = </span><span class="rvts15">"0"</span><span class="rvts8">+ (i+1).toString();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;animationFrameList.push(</span><span class="rvts15">"button/roll"</span><span class="rvts8"> + frameNum +</span><span class="rvts15"> ".png"</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.anim = </span><span class="rvts14">this</span><span class="rvts8">.animatedDice.animations.add(</span><span class="rvts15">"rollButtonAnimation"</span><span class="rvts8">, animationFrameList, 0, true);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.events.onInputOver.add(()=&gt;{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.playAnimation();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }, </span><span class="rvts14">this</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.events.onInputOut.add(()=&gt;{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.stopAnimation();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }, </span><span class="rvts14">this</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">public</span><span class="rvts8"> playAnimation(){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">if</span><span class="rvts8">(</span><span class="rvts14">this</span><span class="rvts8">.animatedDice){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.anim.play();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">public</span><span class="rvts8"> stopAnimation(){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">if</span><span class="rvts8">(</span><span class="rvts14">this</span><span class="rvts8">.animatedDice){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.anim.stop();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">public</span><span class="rvts8"> removeAnimatedDice(){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> if</span><span class="rvts8">(</span><span class="rvts14">this</span><span class="rvts8">.animatedDice){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.animatedDice.kill();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeniy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

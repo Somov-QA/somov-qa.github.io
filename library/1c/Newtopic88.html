@@ -1,0 +1,126 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Доступ к функциям</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic88");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Доступ к функциям</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic62.html">Запросы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic62.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic87.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic89.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Доступ к функциям</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts41"> </span><span class="rvts34">=</span><span class="rvts36"> " //{{ЗАПРОС(Тест)</span></p>
+<p class="rvps5"><span class="rvts39">|Период С НачДата По КонДата;</span></p>
+<p class="rvps5"><span class="rvts39">|Тов = Справочник.Товары.ТекущийЭлемент;</span></p>
+<p class="rvps5"><span class="rvts39">|Цена = Справочник.Товары.ОтпускнаяЦена;</span></p>
+<p class="rvps5"><span class="rvts32">|Функция СуммаЦена = Сумма(Цена);</span></p>
+<p class="rvps5"><span class="rvts39">|Группировка Тов Без Групп;</span></p>
+<p class="rvps5"><span class="rvts39">|"</span><span class="rvts34">;</span><span class="rvts41"> </span><span class="rvts37">//}}ЗАПРОС</span></p>
+<p class="rvps3"><span class="rvts35">СЦ</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts38">СуммаЦена</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

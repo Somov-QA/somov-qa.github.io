@@ -1,0 +1,115 @@
+﻿<html>
+	
+<head>
+	<title>Запрос POST</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("POST");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Запрос POST</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic.html">Запрос</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="GET.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts11">Запрос POST</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14">xhttp = </span><span class="rvts15">new</span><span class="rvts14"> XMLHttpRequest();</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.onreadystatechange = </span><span class="rvts15">function</span><span class="rvts14">()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps5"><span class="rvts15">if</span><span class="rvts14"> (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
+<p class="rvps6"><span class="rvts14">document.getElementById(</span><span class="rvts16">"result"</span><span class="rvts14">).innerHTML = xhttp.responseText;</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.open(</span><span class="rvts16">"POST"</span><span class="rvts14">, </span><span class="rvts16">"testfile.txt"</span><span class="rvts14">, </span><span class="rvts15">true</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.send();</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">Обратите внимание: чтобы отправить данные в формате, в котором передаются данные с HTML форм необходимо задать соответствующий HTTP заголовок с помощью setRequestHeader.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">setRequestHeader</span><span class="rvts6">(заголовок,значение) - Добавляет к запросу HTTP заголовок.</span></p>
+<p class="rvps5"><span class="rvts17">заголовок -</span><span class="rvts6"> имя HTTP заголовка.</span></p>
+<p class="rvps5"><span class="rvts17">значение -</span><span class="rvts6"> значение HTTP заголовка.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> x = document.getElementById(</span><span class="rvts16">'tf1'</span><span class="rvts14">).value;</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> y = document.getElementById(</span><span class="rvts16">'tf2'</span><span class="rvts14">).value;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">xhttp = </span><span class="rvts15">new</span><span class="rvts14"> XMLHttpRequest();</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.onreadystatechange = </span><span class="rvts15">function</span><span class="rvts14">()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps5"><span class="rvts15">if</span><span class="rvts14"> (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
+<p class="rvps6"><span class="rvts14">document.getElementById(</span><span class="rvts16">"result"</span><span class="rvts14">).innerHTML = xhttp.responseText;</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.open(</span><span class="rvts16">'POST'</span><span class="rvts14">, </span><span class="rvts16">'addpost.php'</span><span class="rvts14">, </span><span class="rvts15">true</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.setRequestHeader(</span><span class="rvts16">'Content-type'</span><span class="rvts14">, </span><span class="rvts16">'application/x-www-form-urlencoded'</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> str = </span><span class="rvts16">'x=' </span><span class="rvts14">+ x + </span><span class="rvts16">'&amp;y=' </span><span class="rvts14">+ y;</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.send(str);</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Free Web Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

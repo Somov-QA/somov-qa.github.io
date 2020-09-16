@@ -1,0 +1,168 @@
+﻿<html>
+	
+<head>
+	<title>Масштабирование Desktop / Mobile</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Phaser.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("DesktopMobile");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Масштабирование Desktop / Mobile</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic1.html">Примеры</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic9.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic5.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts16">Масштабирование Desktop / Mobile</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Включить масштабирование. (Применяется в Boot.ts)</span></p>
+<p class="rvps3"><span class="rvts13">if</span><span class="rvts8"> (</span><span class="rvts13">this</span><span class="rvts8">.game.device.desktop) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;</span><span class="rvts19"> // это исправит ошибку в IE Edge</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.stage.disableVisibilityChange = true;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts19">// автоматически масштабирует игру, но сохраняет исходное соотношение сторон</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.scale.pageAlignHorizontally = true;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.game.scale.windowConstraints.bottom = </span><span class="rvts14">'visual'</span><span class="rvts8">;</span></p>
+<p class="rvps3"><span class="rvts8">} </span><span class="rvts13">else</span><span class="rvts8"> {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts19">// пользовательский масштаб для мобильных устройств, чтобы сохранить пользовательские окна просмотра</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp;</span><span class="rvts19"> // изменить размер</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; window.addEventListener(</span><span class="rvts14">'resize'</span><span class="rvts8">, (e: Event) =&gt; </span><span class="rvts13">this</span><span class="rvts8">.mobileResizeCallback(</span><span class="rvts13">this</span><span class="rvts8">.game.scale));</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.game.scale.onSizeChange.add(() =&gt; {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">this</span><span class="rvts8">.game.state.getCurrentState().resize();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }, </span><span class="rvts13">this</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts13">this</span><span class="rvts8">.mobileResizeCallback(</span><span class="rvts13">this</span><span class="rvts8">.game.scale);</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Размеры и масштабирование игры</span></p>
+<p class="rvps3"><span class="rvts8">Стартовые размеры игры 1980х1024 , определяются в классе Constants (Data\Constants.ts)</span></p>
+<p class="rvps3"><span class="rvts8">Размеры игры масштабируются, под разрешение устройства юзера.</span></p>
+<p class="rvps3"><span class="rvts8">Параметры масштабирования изначально задаются в SunsetSolitaire.Boot.init() Отдельно для десктопа и для мобильных устройств.</span></p>
+<p class="rvps3"><span class="rvts8">Для десктопа используется стандартный scale mode Phaser http://phaser.io/docs/2.4.7/Phaser.ScaleManager.html#.SHOW_ALL</span></p>
+<p class="rvps3"><span class="rvts8">Для мобильных устройств - кастомный http://phaser.io/docs/2.4.7/Phaser.ScaleManager.html#.USER_SCALE</span></p>
+<p class="rvps3"><span class="rvts8">this.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;</span></p>
+<p class="rvps3"><span class="rvts8">//resize because it's better than any of the phaser provided resizes</span></p>
+<p class="rvps3"><span class="rvts8">window.addEventListener('resize', (e: Event) =&gt; this.mobileResizeCallback(this.game.scale));</span></p>
+<p class="rvps3"><span class="rvts8">this.game.scale.onSizeChange.add(() =&gt; {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;this.game.state.getCurrentState().resize();</span></p>
+<p class="rvps3"><span class="rvts8">}, this);</span></p>
+<p class="rvps3"><span class="rvts8">this.mobileResizeCallback(this.game.scale);</span></p>
+<p class="rvps3"><span class="rvts8">mobileResizeCallback ресайзит игру на основе ratio девайса.</span></p>
+<p class="rvps3"><span class="rvts8">Для события изменения размера окна - назначен слушатель, для каждого стейта отдельный.</span></p>
+<p class="rvps3"><span class="rvts8">this.game.scale.onSizeChange</span></p>
+<p class="rvps3"><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Масштабирование графики</span></p>
+<p class="rvps3"><span class="rvts8">Кроме описаного выше масштабирования, посредством плагина, используются так же различные кастомные методы.</span></p>
+<p class="rvps3"><span class="rvts8">в FunnySplash.ts используется scaleFactor, который вычисляется на основе соотношения сторон девайса.</span></p>
+<p class="rvps3"><span class="rvts8">public getScale(): number {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;if (!this.game.device.desktop) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;if (this.game.width &lt; this.game.height) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return (this.game.width / 6 * 4) / FunnyGamesSplash.IdealWidth;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;} else {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return (this.game.width / 6 * 3) / FunnyGamesSplash.IdealWidth;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;} else {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;if (this.game.width &lt; FunnyGamesSplash.IdealWidth * 1.5) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return (this.game.width / 6 * 4) / FunnyGamesSplash.IdealWidth;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;return 1;</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8">Полученое значение используется как для масштабирования, так и для относительного позиционирования.</span></p>
+<p class="rvps3"><span class="rvts8">Пример</span></p>
+<p class="rvps3"><span class="rvts8">this.preloadText.x = this.game.width / 2;</span></p>
+<p class="rvps3"><span class="rvts8">this.preloadText.y = this.game.height / 2 + 230 * this.scaleFactor;</span></p>
+<p class="rvps3"><span class="rvts8">this.preloadText.scale.set(this.scaleFactor);</span></p>
+<p class="rvps3"><span class="rvts8">При построении игровой сцены, для масштабирования объектов используются магические числа (возможно не дописан код)</span></p>
+<p class="rvps3"><span class="rvts8">Примеры:</span></p>
+<p class="rvps3"><span class="rvts8">this.deckCard.scale.set(1.35, 1.35);</span></p>
+<p class="rvps3"><span class="rvts8">back.scale.set(2, 2);</span></p>
+<p class="rvps3"><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Размеры и масштабирование игры</span></p>
+<p class="rvps3"><span class="rvts8">Стартовые размеры игры 1980х1024 , определяются в классе Constants (Data\Constants.ts)</span></p>
+<p class="rvps3"><span class="rvts8">Размеры игры масштабируются, под разрешение устройства юзера.</span></p>
+<p class="rvps3"><span class="rvts8">Параметры масштабирования изначально задаются в SunsetSolitaire.Boot.init() Отдельно для десктопа и для мобильных устройств.</span></p>
+<p class="rvps3"><span class="rvts8">Для десктопа используется стандартный scale mode Phaser http://phaser.io/docs/2.4.7/Phaser.ScaleManager.html#.SHOW_ALL</span></p>
+<p class="rvps3"><span class="rvts8">Для мобильных устройств - кастомный http://phaser.io/docs/2.4.7/Phaser.ScaleManager.html#.USER_SCALE</span></p>
+<p class="rvps3"><span class="rvts8">this.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;</span></p>
+<p class="rvps3"><span class="rvts8">//resize because it's better than any of the phaser provided resizes</span></p>
+<p class="rvps3"><span class="rvts8">window.addEventListener('resize', (e: Event) =&gt; this.mobileResizeCallback(this.game.scale));</span></p>
+<p class="rvps3"><span class="rvts8">this.game.scale.onSizeChange.add(() =&gt; {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp;this.game.state.getCurrentState().resize();</span></p>
+<p class="rvps3"><span class="rvts8">}, this);</span></p>
+<p class="rvps3"><span class="rvts8">this.mobileResizeCallback(this.game.scale);</span></p>
+<p class="rvps3"><span class="rvts8">mobileResizeCallback ресайзит игру на основе ratio девайса.</span></p>
+<p class="rvps3"><span class="rvts8">Для события изменения размера окна - назначен слушатель, для каждого стейта отдельный.</span></p>
+<p class="rvps3"><span class="rvts8">this.game.scale.onSizeChange</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeniy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

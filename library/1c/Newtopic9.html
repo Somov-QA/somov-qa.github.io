@@ -1,0 +1,146 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Системные оповещения</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic9");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Системные оповещения</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic15.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic18.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Системные оповещения и сообщения</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Ознакомительные сообщения</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts9">Сообщить</span><span class="rvts14">(</span><span class="rvts8">"Привет Мир!"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts9">ПоказатьОповещениеПользователя</span><span class="rvts14">(</span><span class="rvts16">"Текст"</span><span class="rvts14">,</span><span class="rvts16"> "НавигационнаяСсылка"</span><span class="rvts14">,</span><span class="rvts16"> "Пояснение"</span><span class="rvts14">,</span><span class="rvts16"> </span><span class="rvts15">Картинка</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<p class="rvps3"><span class="rvts16">Терминирующие сообщения</span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<p class="rvps5"><span class="rvts9">Предупреждение</span><span class="rvts14">(</span><span class="rvts16">"Текст"</span><span class="rvts14">,</span><span class="rvts16"> 0</span><span class="rvts14">,</span><span class="rvts16"> "Заголоок"</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<p class="rvps3"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">&amp;НаКлиенте</span></p>
+<p class="rvps5"><span class="rvts14">Процедура</span><span class="rvts16"> </span><span class="rvts15">ДиалогВопрос</span><span class="rvts14">()</span></p>
+<p class="rvps6"><span class="rvts15">Текст</span><span class="rvts16"> = "Текст вопроса";</span></p>
+<p class="rvps6"><span class="rvts15">Кнопки</span><span class="rvts16"> = РежимДиалогаВопрос.ДаНет;</span></p>
+<p class="rvps6"><span class="rvts15">Таймер</span><span class="rvts16"> = 0;</span></p>
+<p class="rvps6"><span class="rvts15">Заголовок</span><span class="rvts16"> = "Мой заколовок";</span></p>
+<p class="rvps6"><span class="rvts15">Ответ</span><span class="rvts16"> = </span><span class="rvts9">Вопрос</span><span class="rvts14">(</span><span class="rvts15">Текст</span><span class="rvts14">, </span><span class="rvts15">Кнопки</span><span class="rvts14">, </span><span class="rvts15">Таймер</span><span class="rvts14">, , </span><span class="rvts15">Заголовок</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts14">Если</span><span class="rvts16"> </span><span class="rvts15">Ответ</span><span class="rvts16"> </span><span class="rvts14">=</span><span class="rvts16"> </span><span class="rvts15">КодВозвратаДиалога</span><span class="rvts14">.</span><span class="rvts15">Да</span><span class="rvts16"> </span><span class="rvts14">Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts8">"ДА"</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts14">Иначе</span></p>
+<p class="rvps7"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts16">"НЕТ"</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps8"><span class="rvts16">Примичание!!! Для использования Вопрос() необходимо в свойствах конфигурации включить Режим использования модальности</span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<p class="rvps3"><span class="rvts16"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts15">СообщПольз</span><span class="rvts16"> </span><span class="rvts14">= Новый</span><span class="rvts16"> </span><span class="rvts9">СообщениеПользователю</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts15">СообщПольз</span><span class="rvts14">.</span><span class="rvts15">Текст</span><span class="rvts16"> </span><span class="rvts14">=</span><span class="rvts16"> </span><span class="rvts15">Значение</span><span class="rvts14">;</span><span class="rvts16"> </span><span class="rvts18">// Значение - это реквизит на форме</span></p>
+<p class="rvps5"><span class="rvts15">СообщПольз</span><span class="rvts14">.</span><span class="rvts15">Поле</span><span class="rvts14"> =</span><span class="rvts16"> </span><span class="rvts15">Значение</span><span class="rvts14">; </span><span class="rvts18">// Значение - это реквизит на форме</span></p>
+<p class="rvps5"><span class="rvts15">СообщПольз</span><span class="rvts14">.</span><span class="rvts15">Сообщить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<p class="rvps3"><span class="rvts16"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

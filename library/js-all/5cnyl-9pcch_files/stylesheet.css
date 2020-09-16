@@ -1,0 +1,255 @@
+.calibre {
+    background-color: #f1f1f1;
+    color: #000;
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre1 {
+    border-collapse: separate;
+    border-spacing: 2px;
+    display: table;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0
+    }
+.calibre2 {
+    display: table-row;
+    vertical-align: middle
+    }
+.calibre3 {
+    font-weight: bold
+    }
+.calibre4 {
+    display: block
+    }
+.calibre5 {
+    display: table-cell;
+    font-family: verdana, helvetica, arial, sans-serif;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: inherit;
+    vertical-align: inherit
+    }
+.calibre6 {
+    background-color: #FFF;
+    border-collapse: separate;
+    border-spacing: 2px;
+    display: table;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0
+    }
+.calibre7 {
+    background-color: transparent;
+    color: #000;
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.67em;
+    page-break-before: always
+    }
+.calibre8 {
+    background-color: transparent;
+    border-bottom-color: currentColor;
+    border-bottom-style: inset;
+    border-bottom-width: 1px;
+    border-left-color: currentColor;
+    border-left-style: inset;
+    border-left-width: 1px;
+    border-right-color: currentColor;
+    border-right-style: inset;
+    border-right-width: 1px;
+    border-top-color: currentColor;
+    border-top-style: inset;
+    border-top-width: 1px;
+    color: #000;
+    display: block;
+    height: 1px;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em
+    }
+.calibre9 {
+    background-color: transparent;
+    color: #000;
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    page-break-before: always
+    }
+.calibre10 {
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre11 {
+    display: block;
+    font-family: "Courier New", monospace;
+    font-size: 1.125em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    white-space: pre
+    }
+.calibre12 {
+    height: 80px;
+    width: 84px
+    }
+.calibre13 {
+    font-style: italic
+    }
+.calibre14 {
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    list-style-type: disc;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre15 {
+    display: list-item
+    }
+.calibre16 {
+    background-color: transparent;
+    color: #000;
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre17 {
+    display: table-cell;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-weight: bold;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: left;
+    vertical-align: inherit
+    }
+.calibre18 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super
+    }
+.calibre19 {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em
+    }
+.calibre20 {
+    height: auto;
+    width: auto
+    }
+.content {
+    background-color: #f1f1f1;
+    color: #900B09;
+    display: table-cell;
+    font-family: verdana, helvetica, arial, sans-serif;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: inherit;
+    vertical-align: inherit
+    }
+.ex {
+    background-color: #f1f1f1;
+    border-collapse: separate;
+    border-spacing: 2px;
+    color: #000;
+    display: table;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-indent: 0
+    }
+.intro {
+    background-color: transparent;
+    color: #000;
+    display: block;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px
+    }
+.pcalibre4:visited {
+    background-color: transparent;
+    color: #900B09
+    }
+.pcalibre:visited {
+    background-color: transparent;
+    color: black;
+    text-decoration: none
+    }
+.pcalibre1:link {
+    background-color: transparent;
+    color: black;
+    text-decoration: none
+    }
+.pcalibre5:link {
+    background-color: transparent;
+    color: #900B09
+    }
+.pcalibre3:hover {
+    background-color: transparent;
+    color: #900B09;
+    text-decoration: underline
+    }
+.pcalibre7:hover {
+    background-color: transparent;
+    color: #F00
+    }
+.pcalibre2:active {
+    background-color: transparent;
+    color: #900B09;
+    text-decoration: underline
+    }
+.pcalibre6:active {
+    background-color: transparent;
+    color: #F00
+    }

@@ -1,0 +1,130 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Поиск элемента справочника.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic36");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Поиск элемента справочника.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic34.html">Справочник</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic34.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic35.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic37.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Поиск элемента справочника.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Функция </span><span class="rvts35">БазоваяВалюта</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts35">спр</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Справочник.Валюты"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts38">НайтиПоКоду</span><span class="rvts34">(</span><span class="rvts36">810</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда </span><span class="rvts37">// найти элемент справочника по коду.</span></p>
+<p class="rvps6"><span class="rvts34">Возврат </span><span class="rvts35">спр</span><span class="rvts34">.</span><span class="rvts35">ТекущийЭлемент</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецФункции</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts39">Получение ссылки на элемент справочника.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// проверяем, задано ли значение в константе "БазоваяВалютаР", если нет зададим её при помощи функции "БазоваяВалюта"</span></p>
+<p class="rvps3"><span class="rvts34">Если Константа.</span><span class="rvts35">БазоваяВалютаР</span><span class="rvts34">.</span><span class="rvts38">Выбран</span><span class="rvts34">() = </span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts37">// используем функцию описанную выше.</span></p>
+<p class="rvps5"><span class="rvts34">Константа.</span><span class="rvts35">БазоваяВалютаР</span><span class="rvts34"> = </span><span class="rvts38">БазоваяВалюта</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

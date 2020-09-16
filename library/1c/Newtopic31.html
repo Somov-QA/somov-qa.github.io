@@ -1,0 +1,153 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Показать в агрегатном объекте &quot;Текст&quot; все не периодические константы.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic31");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Показать в агрегатном объекте &quot;Текст&quot; все не периодические константы.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic28.html">Константа</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic28.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic30.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic32.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Показать в агрегатном объекте "Текст" все не периодические константы.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Перем </span><span class="rvts35">КолКонстант</span><span class="rvts34">, </span><span class="rvts35">ИденКонст</span><span class="rvts34">, </span><span class="rvts35">СинонимКонст</span><span class="rvts34">, </span><span class="rvts35">КоментКонст</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Перем </span><span class="rvts35">Текст</span><span class="rvts34">; </span><span class="rvts37">// объект агрегатного типа данных.</span></p>
+<p class="rvps3"><span class="rvts34">Перем </span><span class="rvts35">ЗначКонст</span><span class="rvts34">; </span><span class="rvts37">// значение константы.</span></p>
+<p class="rvps3"><span class="rvts37">//********************************************</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ПоказатьТекст</span><span class="rvts34">() </span><span class="rvts37">// кнопка </span></p>
+<p class="rvps5"><span class="rvts35">Номер</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts35">Текст</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Текст"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">КолКонстант</span><span class="rvts34"> = Метаданные.Константа(); </span><span class="rvts37">// получаем число количества констант.</span></p>
+<p class="rvps5"><span class="rvts34">Для </span><span class="rvts35">НЦ</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По </span><span class="rvts35">КолКонстант</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps6"><span class="rvts35">ИденКонст</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Константа</span><span class="rvts34">(</span><span class="rvts35">НЦ</span><span class="rvts34">).</span><span class="rvts35">Идентификатор</span><span class="rvts34">; </span><span class="rvts37">// идентификатор константы.</span></p>
+<p class="rvps6"><span class="rvts35">СинонимКонст</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Константа</span><span class="rvts34">(</span><span class="rvts35">НЦ</span><span class="rvts34">).</span><span class="rvts35">Синоним</span><span class="rvts34">; </span><span class="rvts37">// синоним константы.</span></p>
+<p class="rvps6"><span class="rvts35">КоментКонст</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Константа</span><span class="rvts34">(</span><span class="rvts35">НЦ</span><span class="rvts34">).</span><span class="rvts35">Комментарий</span><span class="rvts34">; </span><span class="rvts37">// комментарий константы.</span></p>
+<p class="rvps6"><span class="rvts34">Если Метаданные.</span><span class="rvts35">Константа</span><span class="rvts34">(</span><span class="rvts35">НЦ</span><span class="rvts34">).</span><span class="rvts38">Периодический</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34"> Тогда </span><span class="rvts37">// если константа НЕ периодическая мы её отобразим</span></p>
+<p class="rvps7"><span class="rvts35">Номер </span><span class="rvts34">=</span><span class="rvts35"> Номер </span><span class="rvts34">+</span><span class="rvts35"> 1</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"Данная константа не переодическая..."</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"ИДЕНТИФИКАТОР__________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " </span><span class="rvts34">+</span><span class="rvts35"> ИденКонст</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"_______________________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"СИНОНИМ________________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " </span><span class="rvts34">+</span><span class="rvts35"> СинонимКонст</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"_______________________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"КОМЕНТАРИЙ_____________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " </span><span class="rvts34">+</span><span class="rvts35"> КоментКонст</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"_______________________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"ЗНАЧЕНИЕ_______________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">ЗначКонст </span><span class="rvts34">=</span><span class="rvts35"> Константа</span><span class="rvts34">.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">ИденКонст</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " </span><span class="rvts34">+ </span><span class="rvts35">ЗначКонст</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">"_______________________________"</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(</span><span class="rvts35">" "</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ДобавитьСтроку</span><span class="rvts34">(Строка(</span><span class="rvts35">Номер</span><span class="rvts34">) +</span><span class="rvts35">") " </span><span class="rvts34">+</span><span class="rvts35"> "ИДЕНТИФИКАТОР = " </span><span class="rvts34">+</span><span class="rvts35"> ИденКонст </span><span class="rvts34">+</span><span class="rvts35"> "СИНОНИМ = " </span><span class="rvts34">+</span><span class="rvts35"> СинонимКонст </span><span class="rvts34">+</span><span class="rvts35"> "КОМЕНТАРИЙ = " </span><span class="rvts34">+</span><span class="rvts35"> КоментКонст </span><span class="rvts34">+</span><span class="rvts35"> "ЗНАЧЕНИЕ = " </span><span class="rvts34">+</span><span class="rvts35"> ЗначКонст</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">ТолькоПросмотр</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts35">Текст</span><span class="rvts34">.</span><span class="rvts35">Показать</span><span class="rvts34">(</span><span class="rvts36">"Просмотр констант"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры </span></p>
+<p class="rvps3"><span class="rvts8"> </span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

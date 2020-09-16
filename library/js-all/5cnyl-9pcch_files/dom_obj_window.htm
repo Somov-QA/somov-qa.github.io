@@ -1,0 +1,1858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>HTML DOM Window Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="page_styles.css" rel="stylesheet" type="text/css"/>
+
+  
+
+
+<link href="calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../5cnyl-9pcch.html">Pocket CHM
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Unknown
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="dom_obj_textarea.htm" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="dom_reference.htm" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+<table border="0" cellpadding="0" cellspacing="3" class="calibre1">
+<tr class="calibre2">
+<td width="137" class="content" valign="top">
+<b class="calibre3">JS Reference</b><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="default.htm">JS Overview</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_array.htm">JS Array</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_boolean.htm">JS Boolean</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_date.htm">JS Date</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_math.htm">JS Math</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_string.htm">JS String</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_obj_global.htm">JS Functions</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="jsref_events.htm">JS Events</a><br class="calibre4"/>
+<br class="calibre4"/>
+<b class="calibre3">DOM Objects</b>
+<br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_anchor.htm">DOM Anchor</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_applet.htm">DOM Applet</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_area.htm">DOM Area</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_base.htm">DOM Base</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_basefont.htm">DOM Basefont</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_body.htm">DOM Body</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_document.htm">DOM Document</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_event.htm">DOM Event</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_form.htm">DOM Form</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_frame.htm">DOM Frame</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_frameset.htm">DOM Frameset</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_history.htm">DOM History</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_iframe.htm">DOM Iframe</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_image.htm">DOM Image</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_button.htm">DOM Input Button</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_checkbox.htm">DOM Input Checkbox</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_fileupload.htm">DOM Input File</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_hidden.htm">DOM Input Hidden</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_password.htm">DOM Input Password</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_radio.htm">DOM Input Radio</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_reset.htm">DOM Input Reset</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_submit.htm">DOM Input Submit</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_text.htm">DOM Input Text</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_link.htm">DOM Link</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_location.htm">DOM Location</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_meta.htm">DOM Meta</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_navigator.htm">DOM Navigator</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_object.htm">DOM Object</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_option.htm">DOM Option</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_screen.htm">DOM Screen</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_select.htm">DOM Select</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_style.htm">DOM Style</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_table.htm">DOM Table</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_tabledata.htm">DOM TableData</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_tableheader.htm">DOM TableHeader</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_tablerow.htm">DOM TableRow</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_textarea.htm">DOM Textarea</a><br class="calibre4"/>
+<a class="pcalibre3 pcalibre pcalibre2 pcalibre1" target="_top" href="dom_obj_window.htm">DOM Window</a><br class="calibre4"/>
+<br class="calibre4"/>
+</td>
+<td width="490" valign="top" class="calibre5">
+<table width="100%" border="1" cellpadding="5" cellspacing="0" class="calibre6">
+<tr class="calibre2">
+<td class="calibre5">
+<h1 class="calibre7">HTML DOM Window Object</h1>
+<hr class="calibre8"/>
+<h2 class="calibre9">Window Object</h2>
+<p class="calibre10">The Window object corresponds to the browser window. A Window object is created automatically with every instance 
+of a &lt;body&gt; or &lt;frame&gt; tag.</p>
+<p class="calibre10">The Window object's collections, objects, properties, methods, and events are described below:</p>
+<p class="calibre10"><b class="calibre3">Browser support:</b> IE: Internet Explorer, F: Firefox, N: Netscape, W3C: 
+World Wide Web Consortium (Internet Standard).</p>
+<h3 class="calibre16">Collections</h3>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<th width="30%" class="calibre17">Collection</th>
+<th width="50%" class="calibre17">Description</th>
+<th width="5%" class="calibre17">IE</th>
+<th width="4%" class="calibre17">F</th>
+<th width="4%" class="calibre17">N</th>
+<th width="7%" class="calibre17">W3C</th>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">frames[]</td>
+<td valign="top" class="calibre5">Returns all named frames in the window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+</table>
+<h3 class="calibre16">Objects</h3>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<th width="30%" class="calibre17">Object</th>
+<th width="50%" class="calibre17">Description</th>
+<th width="5%" class="calibre17">IE </th>
+<th width="4%" class="calibre17">F</th>
+<th width="4%" class="calibre17">N</th>
+<th width="7%" class="calibre17">W3C</th>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">clientInformation</td>
+<td valign="top" class="calibre5">Contains information about the browser</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">clipboardData</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">document</td>
+<td valign="top" class="calibre5">Represents the HTML document object in the window.
+    <a href="dom_obj_document.htm" class="pcalibre7 pcalibre6 pcalibre5 pcalibre4">See Document object</a></td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">event</td>
+<td valign="top" class="calibre5">Represents the state of an event</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">external</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">history</td>
+<td valign="top" class="calibre5">Contains the URLs visited from the window.
+    <a href="dom_obj_history.htm" class="pcalibre7 pcalibre6 pcalibre5 pcalibre4">See History object</a></td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">location</td>
+<td valign="top" class="calibre5">Contains the current URL of the window.
+    <a href="dom_obj_location.htm" class="pcalibre7 pcalibre6 pcalibre5 pcalibre4">See Location object</a></td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">navigator</td>
+<td valign="top" class="calibre5">Contains information about the browser.
+    <a href="dom_obj_navigator.htm" class="pcalibre7 pcalibre6 pcalibre5 pcalibre4">See Navigator object</a></td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">screen</td>
+<td valign="top" class="calibre5">Contains information about the client's screen.
+    <a href="dom_obj_screen.htm" class="pcalibre7 pcalibre6 pcalibre5 pcalibre4">See Screen object</a></td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+</table>
+<h3 class="calibre16">Properties</h3>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<th width="30%" class="calibre17">Property</th>
+<th width="50%" class="calibre17">Description</th>
+<th width="5%" class="calibre17">IE </th>
+<th width="4%" class="calibre17">F</th>
+<th width="4%" class="calibre17">N</th>
+<th width="7%" class="calibre17">W3C</th>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">closed</td>
+<td valign="top" class="calibre5">Returns a Boolean value that specifies whether the 
+    referenced window has been closed</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">defaultStatus</td>
+<td valign="top" class="calibre5">Sets or returns the default text in the statusbar of the 
+    windows (will be 
+    displayed when the page loads)</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogArguments</td>
+<td valign="top" class="calibre5">Returns all variables passed into the modal dialog window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogHeight</td>
+<td valign="top" class="calibre5">Sets or returns the height of the modal dialog window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogLeft</td>
+<td valign="top" class="calibre5">Sets or returns the left coordinates of the modal dialog 
+    window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogTop</td>
+<td valign="top" class="calibre5">Sets or returns the top coordinates of the modal dialog 
+    window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogWidth</td>
+<td valign="top" class="calibre5">Sets or returns the width of the modal dialog window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">frameElement</td>
+<td valign="top" class="calibre5">Returns the frame/iframe object that is hosting the window 
+    in the parent document</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">length</td>
+<td valign="top" class="calibre5">Sets or returns the number of frames in the window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">6</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">name</td>
+<td valign="top" class="calibre5">Sets or returns the name of the window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">offscreenBuffering</td>
+<td valign="top" class="calibre5">Sets or returns a Boolean value that specifies whether the 
+    window is drawn offscreen before being visible to the user</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">opener</td>
+<td valign="top" class="calibre5">Sets or returns a reference to the window that created the 
+    window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">parent</td>
+<td valign="top" class="calibre5">Returns the parent window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">returnValue</td>
+<td valign="top" class="calibre5">Sets or returns the value returned from the modal dialog 
+    window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">screenLeft</td>
+<td valign="top" class="calibre5">Returns the x-coordinate of the upper left corner of the 
+    browser - relative to the upper left corner of the screen</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">screenTop</td>
+<td valign="top" class="calibre5">Returns the y-coordinate of the top corner of the browser - 
+    relative to the top corner of the screen</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">self</td>
+<td valign="top" class="calibre5">Returns a reference to the current window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">status</td>
+<td valign="top" class="calibre5">Sets or returns the text in the statusbar of the window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">top</td>
+<td valign="top" class="calibre5">Returns the topmost ancestor window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+</table>
+<h3 class="calibre16">Methods</h3>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<th width="30%" valign="top" class="calibre17">Method</th>
+<th width="50%" valign="top" class="calibre17">Description</th>
+<th width="5%" valign="top" class="calibre17">IE</th>
+<th width="4%" valign="top" class="calibre17">F</th>
+<th width="4%" valign="top" class="calibre17">N</th>
+<th width="7%" valign="top" class="calibre17">W3C</th>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">alert("msg")</td>
+<td valign="top" class="calibre5">Displays an alert box with a message and an OK button</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">attachEvent("event",pointer)</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">blur()</td>
+<td valign="top" class="calibre5">Removes focus from the current window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">clearInterval(ID)</td>
+<td valign="top" class="calibre5">Cancels a timeout that is set with the setInterval() method</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">clearTimeout(ID)</td>
+<td valign="top" class="calibre5">Cancels a timeout that is set with the setTimeout() method</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">close()</td>
+<td valign="top" class="calibre5">Closes the current window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">confirm("msg")</td>
+<td valign="top" class="calibre5">Displays a dialog box with a message, a Cancel, and an OK 
+    button</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">createPopup([args])</td>
+<td valign="top" class="calibre5">Creates a pop-up window</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">execScript("code", "lang")</td>
+<td valign="top" class="calibre5"><p class="calibre10">Executes a specified script. The arguments can take the following values:
+    </p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">code</td>
+<td valign="top" class="calibre5">Required. The code to be executed</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">lang</td>
+<td valign="top" class="calibre5">Required. JScript | VBScript | JavaScript</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">focus()</td>
+<td valign="top" class="calibre5">Sets focus on the current window</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">moveBy(x,y)</td>
+<td valign="top" class="calibre5">Moves the window a specified number of pixels in relation 
+    to its current co-ordinates</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">moveTo(x,y)</td>
+<td valign="top" class="calibre5">Moves the window's left and top edge to the specified co-ordinates</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">navigate("URL")</td>
+<td valign="top" class="calibre5">Loads the specified URL into the window</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">open(["URL", "name", "specs", replace])</td>
+<td valign="top" class="calibre5">Opens a new browser window. The arguments can take the 
+    following values:
+    <p class="calibre10">"URL" - Optional. Specifies the URL of the page to display 
+    if no URL is specified, a new window with about:blank is displayed)</p>
+<p class="calibre10">"name" - Optional. Specifies the value for the target attribute on a form or a link. 
+    The following values are supported:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">_blank</td>
+<td valign="top" class="calibre5">URL is loaded into a new window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">_media</td>
+<td valign="top" class="calibre5">URL is loaded into the content area of the Media Bar (IE6+)</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">_parent</td>
+<td valign="top" class="calibre5">URL is loaded into the parent frame</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">_search</td>
+<td valign="top" class="calibre5">URL is opened in the browser's search pane (IE5+)</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">_self</td>
+<td valign="top" class="calibre5">URL replaces the current page</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">_top</td>
+<td valign="top" class="calibre5">URL replaces any framesets that may be loaded</td>
+</tr>
+</table>
+<p class="calibre10">"specs" - Optional. A comma-separated list of items. The following 
+    values are supported:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">channelmode = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the window in theater mode. Default is no</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">directories = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to add directory buttons. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">fullscreen = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the browser in full-screen mode. Default is no. A window in full-screen mode must also be in theater mode</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">height = number</td>
+<td valign="top" class="calibre5">the height of the window, in pixels. Min. value is 100</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">left = number</td>
+<td valign="top" class="calibre5">the left position, in pixels</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">location = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the address field. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">menubar = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the menu bar. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">resizable = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether the window is resizable. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scrollbars = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display scroll bars. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">status = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to add a status bar. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">titlebar = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the title bar. Ignored unless the calling application is an HTML Application or a trusted dialog box. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">toolbar = yes | no | 1 | 0</td>
+<td valign="top" class="calibre5">whether to display the browser toolbar. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">top = number</td>
+<td valign="top" class="calibre5">the top position, in pixels</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">width = number</td>
+<td valign="top" class="calibre5">the width of the window, in pixels. Min. value is 100</td>
+</tr>
+</table>
+<p class="calibre10">replace - Optional.Specifies whether the URL creates a new entry or replaces the current entry in the history list. 
+    The following values are supported:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">true</td>
+<td valign="top" class="calibre5">URL replaces the current document in the history list</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">false</td>
+<td valign="top" class="calibre5">URL creates a new entry in the history list</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">print()</td>
+<td valign="top" class="calibre5">Prints the contents of the current window</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">prompt(["msg", "default"])</td>
+<td valign="top" class="calibre5"><p class="calibre10">Displays a dialog box prompting the user for input. The arguments can take the following values:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">msg</td>
+<td valign="top" class="calibre5">Optional. The message to display in the dialog box. Default 
+    is ""</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">default</td>
+<td valign="top" class="calibre5">Optional. The default text in the input field</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">resizeBy(x,y)</td>
+<td valign="top" class="calibre5">Resizes the window by the specified pixels. <b class="calibre3">Note:</b> 
+    This method does not work on dialog windows</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">resizeTo(width, height)</td>
+<td valign="top" class="calibre5">Resizes the window to the specified width and height. <b class="calibre3">
+    Note:</b> This method does not work on dialog windows</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scroll(x,y)</td>
+<td valign="top" class="calibre5">Deprecated. Use scrollTo() instead.</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scrollBy(x,y)</td>
+<td valign="top" class="calibre5">Scrolls the content by the specified number 
+    of pixels. <b class="calibre3">Note:</b> The visible property of the window's scrollbar must 
+    be set to true if using this method</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scrollTo(x,y)</td>
+<td valign="top" class="calibre5">Scrolls the content to the specified co-ordinates</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">setActive()</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">setInterval(code, millisec[, "lang"])</td>
+<td valign="top" class="calibre5"><p class="calibre10">Calls a function / evaluate an expression every time a specified 
+    interval (in milliseconds) has been reached. The arguments can take the following values:
+    </p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">code</td>
+<td valign="top" class="calibre5">Required. A pointer to a function or the code to be executed</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">millisec</td>
+<td valign="top" class="calibre5">Required. The number of milliseconds</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">lang</td>
+<td valign="top" class="calibre5">Optional. JScript | VBScript | JavaScript</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">setTimeout(code, millisec[, "lang"])</td>
+<td valign="top" class="calibre5"><p class="calibre10">Calls a function / evaluate an expression after a specified 
+    number of milliseconds. The arguments can take the following values:
+    </p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">code</td>
+<td valign="top" class="calibre5">Required. A pointer to a function or the code to be executed</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">millisec</td>
+<td valign="top" class="calibre5">Required. The number of milliseconds</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">lang</td>
+<td valign="top" class="calibre5">Optional. JScript | VBScript | JavaScript</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">showHelp("URL"[, contextID])</td>
+<td valign="top" class="calibre5"><p class="calibre10">Displays a Help file (must be of type .htm or .chm). When 
+    using this method, a second Help box appears when pressing F1 or when 
+    clicking Help on the menu bar. To prevent the default Help box from 
+    appearing set returnValue to false. The arguments can take the following values:
+    </p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">URL</td>
+<td valign="top" class="calibre5">Required. The URL of a Help file</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">contextID</td>
+<td valign="top" class="calibre5">Optional. A string or integer that specifies a context 
+    identifier in the Help file</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">showModalDialog("URL"[, args, "list"])</td>
+<td valign="top" class="calibre5">Loads a URL in a modal dialog box. A modal dialog box 
+    retains focus while open. The user CANNOT switch windows until the dialog 
+    box is closed. The arguments can take the following values:
+    <p class="calibre10">"URL" - Required. The URL of the document to display.</p>
+<p class="calibre10">args - Optional. The arguments to use when displaying the URL. Use this parameter to pass a value of any type, including an 
+    array of values. The dialog box can extract the values from the dialogArguments property of the window object.</p>
+<p class="calibre10">"list" - Optional. Specifies the window ornaments for the dialog box, using one or more of the following semicolon-delimited values:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogHeight : number</td>
+<td valign="top" class="calibre5">the  height* of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogLeft : number</td>
+<td valign="top" class="calibre5">the left position of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogTop : number</td>
+<td valign="top" class="calibre5">the top position of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogWidth : number</td>
+<td valign="top" class="calibre5">the  width* of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">center : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether to center the dialog window within the desktop. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogHide : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window is hidden when printing. Only available when a dialog box is opened from a trusted application. Default is no</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">edge : sunken | raised</td>
+<td valign="top" class="calibre5">the edge style of the dialog window. Default is raised</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">help : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays the Help icon. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">resizable : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window is resizable. Default is no</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scroll : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays scrollbars. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">status : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays a status bar. Default is yes for untrusted dialog windows and no for trusted dialog windows</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">unadorned : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays the border window chrome. Only available when a dialog window is opened from a trusted application. Default is no</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">showModelessDialog("URL"[, args, "list"])</td>
+<td valign="top" class="calibre5">Loads a URL in a modeless dialog box. The modeless dialog 
+    box displays even when the user switches focus to another window (useful for 
+    menus and Help systems). The arguments can take the following values:
+    <p class="calibre10">"URL" - Required. The URL of the document to display.</p>
+<p class="calibre10">args - Optional. The arguments to use when displaying the URL. Use this parameter to pass a value of any type, including an 
+    array of values. The dialog box can extract the values from the dialogArguments property of the window object.</p>
+<p class="calibre10">"list" - Optional. Specifies the window ornaments for the dialog box, using one or more of the following semicolon-delimited values:</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogHeight : number</td>
+<td valign="top" class="calibre5">the  height* of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogLeft : number</td>
+<td valign="top" class="calibre5">the left position of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogTop : number</td>
+<td valign="top" class="calibre5">the top position of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogWidth : number</td>
+<td valign="top" class="calibre5">the  width* of the dialog window</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">center : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether to center the dialog window within the desktop. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">dialogHide : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window is hidden when printing. Only available when a dialog box is opened from a trusted application. Default is no</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">edge : sunken | raised</td>
+<td valign="top" class="calibre5">the edge style of the dialog window. Default is raised</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">help : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays the Help icon. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">resizable : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window is resizable. Default is no</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">scroll : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays scrollbars. Default is yes</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">status : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays a status bar. Default is yes for untrusted dialog windows and no for trusted dialog windows</td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">unadorned : yes | no | 1 | 0 | on | off</td>
+<td valign="top" class="calibre5">whether the dialog window displays the border window chrome. Only available when a dialog window is opened from a trusted application. Default is no</td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td>
+<td valign="top" class="calibre5">5</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+</table>
+<p class="calibre10">* The default unit of measure for dialogHeight and dialogWidth in IE4 is 
+em; in IE5 it is px. Other values to use: cm, mm, in, pt, pc, or ex. For consistent results, use px! <b class="calibre3">Note:</b> 
+The min. dialogHeight you can specify is 100px.</p>
+<h3 class="calibre16">Events </h3>
+<p class="calibre10">Syntax: window.event_name="someJavaScriptCode"</p>
+<table class="ex" cellspacing="0" border="1" width="100%">
+<tr class="calibre2">
+<th width="30%" valign="top" class="calibre17">Event</th>
+<th width="50%" valign="top" class="calibre17">Description</th>
+<th width="5%" valign="top" class="calibre17">IE</th>
+<th width="4%" valign="top" class="calibre17">F</th>
+<th width="4%" valign="top" class="calibre17">N</th>
+<th width="7%" valign="top" class="calibre17">W3C</th>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onBlur</td>
+<td valign="top" class="calibre5">Executes some code when a Blur event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onError</td>
+<td valign="top" class="calibre5">Executes some code when an Error event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onFocus</td>
+<td valign="top" class="calibre5">Executes some code when a Focus event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">3</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onLoad</td>
+<td valign="top" class="calibre5">Executes some code when an Load event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onResize</td>
+<td valign="top" class="calibre5">Executes some code when a Resize event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">4</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+<tr class="calibre2">
+<td valign="top" class="calibre5">onUnload</td>
+<td valign="top" class="calibre5">Executes some code when an Unload event occurs</td>
+<td valign="top" class="calibre5"> </td>
+<td valign="top" class="calibre5">1</td>
+<td valign="top" class="calibre5">2</td>
+<td valign="top" class="calibre5"> </td>
+</tr>
+</table>
+<br class="calibre4"/>
+</td></tr></table>
+</td></tr></table>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../5cnyl-9pcch.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href=".">javascript</a>
+      <ul>
+        <li>
+          <a href=".">htmldom</a>
+          <ul>
+            <li>
+              <a href="coll_doc_anchors.htm">The anchors collection</a>
+            </li>
+            <li>
+              <a href="coll_doc_forms.htm">The forms collection</a>
+            </li>
+            <li>
+              <a href="coll_doc_images.htm">The images collection</a>
+            </li>
+            <li>
+              <a href="default.htm">HTML DOM Tutorial</a>
+            </li>
+            <li>
+              <a href="dom_example.htm">HTML DOM Example</a>
+            </li>
+            <li>
+              <a href="dom_intro.htm">HTML DOM Introduction</a>
+            </li>
+            <li>
+              <a href="dom_obj_anchor.htm">HTML DOM Anchor Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_applet.htm">HTML DOM Applet Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_area.htm">HTML DOM Area Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_base.htm">HTML DOM Base Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_basefont.htm">HTML DOM BaseFont Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_body.htm">HTML DOM Body Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_button.htm">HTML DOM Button Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_checkbox.htm">HTML DOM Checkbox Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_document.htm">HTML DOM Document Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_event.htm">HTML DOM Event Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_fileupload.htm">HTML DOM FileUpload Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_form.htm">HTML DOM Form Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_frame.htm">HTML DOM Frame Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_frameset.htm">HTML DOM Frameset Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_hidden.htm">HTML DOM Hidden Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_history.htm">HTML DOM History Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_iframe.htm">HTML DOM IFrame Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_image.htm">HTML DOM Image Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_link.htm">HTML DOM Link Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_location.htm">HTML DOM Location Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_meta.htm">HTML DOM Meta Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_navigator.htm">HTML DOM Navigator Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_object.htm">HTML DOM Object Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_option.htm">HTML DOM Option Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_password.htm">HTML DOM Password Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_radio.htm">HTML DOM Radio Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_reset.htm">HTML DOM Reset Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_screen.htm">HTML DOM Screen Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_select.htm">HTML DOM Select Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_style.htm">HTML DOM Style object</a>
+            </li>
+            <li>
+              <a href="dom_obj_submit.htm">HTML DOM Submit Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_table.htm">HTML DOM Table Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_tabledata.htm">HTML DOM TableData Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_tableheader.htm">HTML DOM TableHeader Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_tablerow.htm">HTML DOM TableRow Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_text.htm">HTML DOM Text Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_textarea.htm">HTML DOM Textarea Object</a>
+            </li>
+            <li>
+              <a href="dom_obj_window.htm">HTML DOM Window Object</a>
+            </li>
+            <li>
+              <a href="dom_reference.htm">HTML DOM Reference</a>
+            </li>
+            <li>
+              <a href="met_anchor_blur.htm">The blur() method</a>
+            </li>
+            <li>
+              <a href="met_anchor_focus.htm">The focus() method</a>
+            </li>
+            <li>
+              <a href="met_doc_close.htm">The close() method</a>
+            </li>
+            <li>
+              <a href="met_doc_getelementbyid.htm">The getElementById() method</a>
+            </li>
+            <li>
+              <a href="met_doc_getelementsbyname.htm">The getElementsByName() method</a>
+            </li>
+            <li>
+              <a href="met_doc_open.htm">The open() method</a>
+            </li>
+            <li>
+              <a href="met_doc_write.htm">The write() method</a>
+            </li>
+            <li>
+              <a href="met_form_reset.htm">The reset() Method</a>
+            </li>
+            <li>
+              <a href="met_form_submit.htm">The submit() Method</a>
+            </li>
+            <li>
+              <a href="met_loc_reload.htm">The reload() method</a>
+            </li>
+            <li>
+              <a href="met_text_focus.htm">The focus() method</a>
+            </li>
+            <li>
+              <a href="met_text_select.htm">The select() method</a>
+            </li>
+            <li>
+              <a href="prop_anchor_accesskey.htm">The accessKey Property</a>
+            </li>
+            <li>
+              <a href="prop_anchor_href.htm">The href Property</a>
+            </li>
+            <li>
+              <a href="prop_anchor_innerhtml.htm">The innerHTML Property</a>
+            </li>
+            <li>
+              <a href="prop_anchor_target.htm">The target Property</a>
+            </li>
+            <li>
+              <a href="prop_button_disabled.htm">The disabled Property</a>
+            </li>
+            <li>
+              <a href="prop_button_id.htm">The id Property</a>
+            </li>
+            <li>
+              <a href="prop_button_type.htm">The type Property</a>
+            </li>
+            <li>
+              <a href="prop_button_value.htm">The value Property</a>
+            </li>
+            <li>
+              <a href="prop_check_checked.htm">The checked Property</a>
+            </li>
+            <li>
+              <a href="prop_doc_domain.htm">The domain Property</a>
+            </li>
+            <li>
+              <a href="prop_doc_referrer.htm">The referrer Property</a>
+            </li>
+            <li>
+              <a href="prop_doc_title.htm">The title Property</a>
+            </li>
+            <li>
+              <a href="prop_doc_url.htm">The URL Property</a>
+            </li>
+            <li>
+              <a href="prop_form_action.htm">The action Property</a>
+            </li>
+            <li>
+              <a href="prop_form_method.htm">The method Property</a>
+            </li>
+            <li>
+              <a href="prop_frame_noresize.htm">The noResize Property</a>
+            </li>
+            <li>
+              <a href="prop_frame_scrolling.htm">The scrolling Property</a>
+            </li>
+            <li>
+              <a href="prop_frame_src.htm">The src Property</a>
+            </li>
+            <li>
+              <a href="prop_iframe_src.htm">The src Property</a>
+            </li>
+            <li>
+              <a href="prop_img_height.htm">The height Property</a>
+            </li>
+            <li>
+              <a href="prop_img_src.htm">The src Property</a>
+            </li>
+            <li>
+              <a href="prop_img_width.htm">The width Property</a>
+            </li>
+            <li>
+              <a href="prop_loc_hash.htm">The hash Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_appcodename.htm">The appCodeName Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_appminorversion.htm">The appMinorVersion Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_appname.htm">The appName Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_appversion.htm">The appVersion Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_browserlanguage.htm">The browserLanguage Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_cookieenabled.htm">The cookieEnabled Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_cpuclass.htm">The cpuClass Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_online.htm">The onLine Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_platform.htm">The platform Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_systemlanguage.htm">The systemLanguage Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_useragent.htm">The userAgent Property</a>
+            </li>
+            <li>
+              <a href="prop_nav_userlanguage.htm">The userLanguage Property</a>
+            </li>
+            <li>
+              <a href="prop_option_form.htm">The form Property</a>
+            </li>
+            <li>
+              <a href="prop_option_text.htm">The text Property</a>
+            </li>
+            <li>
+              <a href="prop_radio_value.htm">The value Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_availheight.htm">The availHeight Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_availwidth.htm">The availWidth Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_bufferdepth.htm">The bufferDepth Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_colordepth.htm">The colorDepth Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_height.htm">The height Property</a>
+            </li>
+            <li>
+              <a href="prop_screen_width.htm">The width Property</a>
+            </li>
+            <li>
+              <a href="prop_select_disabled.htm">The disabled Property</a>
+            </li>
+            <li>
+              <a href="prop_text_accesskey.htm">The accessKey Property</a>
+            </li>
+            <li>
+              <a href="prop_text_maxlength.htm">The maxLength Property</a>
+            </li>
+            <li>
+              <a href="prop_text_tabindex.htm">The tabIndex Property</a>
+            </li>
+            <li>
+              <a href="prop_text_value.htm">The value Property</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="default.htm">JavaScript Reference</a>
+        </li>
+        <li>
+          <a href="jsref_abs.htm">The abs() method</a>
+        </li>
+        <li>
+          <a href="jsref_acos.htm">The acos() method</a>
+        </li>
+        <li>
+          <a href="jsref_anchor.htm">The anchor() method</a>
+        </li>
+        <li>
+          <a href="jsref_asin.htm">The asin() method</a>
+        </li>
+        <li>
+          <a href="jsref_atan.htm">The atan() and atan2() methods</a>
+        </li>
+        <li>
+          <a href="jsref_big.htm">The big() method</a>
+        </li>
+        <li>
+          <a href="jsref_blink.htm">The blink() method</a>
+        </li>
+        <li>
+          <a href="jsref_bold.htm">The bold() method</a>
+        </li>
+        <li>
+          <a href="jsref_ceil.htm">The ceil() method</a>
+        </li>
+        <li>
+          <a href="jsref_charAt.htm">The charAt() method</a>
+        </li>
+        <li>
+          <a href="jsref_charCodeAt.htm">The charCodeAt() method</a>
+        </li>
+        <li>
+          <a href="jsref_concat_array.htm">The concat() method</a>
+        </li>
+        <li>
+          <a href="jsref_concat_string.htm">The concat() method</a>
+        </li>
+        <li>
+          <a href="jsref_constructor_array.htm">The constructor property</a>
+        </li>
+        <li>
+          <a href="jsref_constructor_boolean.htm">The constructor property</a>
+        </li>
+        <li>
+          <a href="jsref_constructor_date.htm">The constructor property</a>
+        </li>
+        <li>
+          <a href="jsref_constructor_math.htm">The constructor property</a>
+        </li>
+        <li>
+          <a href="jsref_constructor_string.htm">The constructor property</a>
+        </li>
+        <li>
+          <a href="jsref_cos.htm">The cos() method</a>
+        </li>
+        <li>
+          <a href="jsref_Date.htm">The Date() method</a>
+        </li>
+        <li>
+          <a href="jsref_decodeURI.htm">The decodeURI() method</a>
+        </li>
+        <li>
+          <a href="jsref_decodeURIComponent.htm">The decodeURIComponent() method</a>
+        </li>
+        <li>
+          <a href="jsref_encodeURI.htm">The encodeURI() method</a>
+        </li>
+        <li>
+          <a href="jsref_encodeURIComponent.htm">The encodeURIComponent() method</a>
+        </li>
+        <li>
+          <a href="jsref_escape.htm">The escape() method</a>
+        </li>
+        <li>
+          <a href="jsref_eval.htm">The eval() method</a>
+        </li>
+        <li>
+          <a href="jsref_events.htm">JavaScript Event Reference</a>
+        </li>
+        <li>
+          <a href="jsref_exp.htm">The exp() method</a>
+        </li>
+        <li>
+          <a href="jsref_fixed.htm">The fixed() method</a>
+        </li>
+        <li>
+          <a href="jsref_floor.htm">The floor() method</a>
+        </li>
+        <li>
+          <a href="jsref_fontcolor.htm">The fontcolor() method</a>
+        </li>
+        <li>
+          <a href="jsref_fontsize.htm">The fontsize() method</a>
+        </li>
+        <li>
+          <a href="jsref_fromCharCode.htm">The fromCharCode() method</a>
+        </li>
+        <li>
+          <a href="jsref_getDate.htm">The getDate() method</a>
+        </li>
+        <li>
+          <a href="jsref_getDay.htm">The getDay() method</a>
+        </li>
+        <li>
+          <a href="jsref_getFullYear.htm">The getFullYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_getHours.htm">The getHours() method</a>
+        </li>
+        <li>
+          <a href="jsref_getMilliseconds.htm">The getMilliseconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_getMinutes.htm">The getMinutes() method</a>
+        </li>
+        <li>
+          <a href="jsref_getMonth.htm">The getMonth() method</a>
+        </li>
+        <li>
+          <a href="jsref_getSeconds.htm">The getSeconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_getTime.htm">The getTime() method</a>
+        </li>
+        <li>
+          <a href="jsref_getTimezoneOffset.htm">The getTimezoneOffset() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCDate.htm">The getUTCDate() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCDay.htm">The getUTCDay() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCFullYear.htm">The getUTCFullYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCHours.htm">The getUTCHours() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCMilliseconds.htm">The getUTCMilliseconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCMinutes.htm">The getUTCMinutes() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCMonth.htm">The getUTCMonth() method</a>
+        </li>
+        <li>
+          <a href="jsref_getUTCSeconds.htm">The getUTCSeconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_getYear.htm">The getYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_indexOf.htm">The indexOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_infinity.htm">The infinity Property</a>
+        </li>
+        <li>
+          <a href="jsref_isFinite.htm">The isFinite() method</a>
+        </li>
+        <li>
+          <a href="jsref_isNaN.htm">The isNaN() method</a>
+        </li>
+        <li>
+          <a href="jsref_italics.htm">The italics() method</a>
+        </li>
+        <li>
+          <a href="jsref_join.htm">The join() method</a>
+        </li>
+        <li>
+          <a href="jsref_lastIndexOf.htm">The lastIndexOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_length_array.htm">The length property</a>
+        </li>
+        <li>
+          <a href="jsref_length_string.htm">The length property</a>
+        </li>
+        <li>
+          <a href="jsref_link.htm">The link() method</a>
+        </li>
+        <li>
+          <a href="jsref_log.htm">The log() method</a>
+        </li>
+        <li>
+          <a href="jsref_match.htm">The match() method</a>
+        </li>
+        <li>
+          <a href="jsref_max.htm">The max() method</a>
+        </li>
+        <li>
+          <a href="jsref_min.htm">The min() method</a>
+        </li>
+        <li>
+          <a href="jsref_NaN.htm">The NaN Property</a>
+        </li>
+        <li>
+          <a href="jsref_Number.htm">The Number() method</a>
+        </li>
+        <li>
+          <a href="jsref_obj_array.htm">JavaScript Array Object Reference</a>
+        </li>
+        <li>
+          <a href="jsref_obj_boolean.htm">JavaScript Boolean Object Reference</a>
+        </li>
+        <li>
+          <a href="jsref_obj_date.htm">JavaScript Date Object Reference</a>
+        </li>
+        <li>
+          <a href="jsref_obj_global.htm">JavaScript Function Reference</a>
+        </li>
+        <li>
+          <a href="jsref_obj_math.htm">JavaScript Math Object Reference</a>
+        </li>
+        <li>
+          <a href="jsref_obj_string.htm">JavaScript String Object Reference</a>
+        </li>
+        <li>
+          <a href="jsref_onabort.htm">The onabort event</a>
+        </li>
+        <li>
+          <a href="jsref_onblur.htm">The onblur event</a>
+        </li>
+        <li>
+          <a href="jsref_onchange.htm">The onchange event</a>
+        </li>
+        <li>
+          <a href="jsref_onclick.htm">The onclick event</a>
+        </li>
+        <li>
+          <a href="jsref_ondblclick.htm">The ondblclick event</a>
+        </li>
+        <li>
+          <a href="jsref_onerror.htm">The onerror event</a>
+        </li>
+        <li>
+          <a href="jsref_onfocus.htm">The onfocus event</a>
+        </li>
+        <li>
+          <a href="jsref_onkeydown.htm">The onkeydown event</a>
+        </li>
+        <li>
+          <a href="jsref_onkeypress.htm">The onkeypress event</a>
+        </li>
+        <li>
+          <a href="jsref_onkeyup.htm">The onKeyDown event</a>
+        </li>
+        <li>
+          <a href="jsref_onload.htm">The onload event</a>
+        </li>
+        <li>
+          <a href="jsref_onmousedown.htm">The onmousedown event</a>
+        </li>
+        <li>
+          <a href="jsref_onmousemove.htm">The onmousemove event</a>
+        </li>
+        <li>
+          <a href="jsref_onmouseout.htm">The onmouseout event</a>
+        </li>
+        <li>
+          <a href="jsref_onmouseover.htm">The onmouseover event</a>
+        </li>
+        <li>
+          <a href="jsref_onmouseup.htm">The onmouseup event</a>
+        </li>
+        <li>
+          <a href="jsref_onreset.htm">The onreset event</a>
+        </li>
+        <li>
+          <a href="jsref_onresize.htm">The onresize event</a>
+        </li>
+        <li>
+          <a href="jsref_onselect.htm">The onselect event</a>
+        </li>
+        <li>
+          <a href="jsref_onsubmit.htm">The onsubmit event</a>
+        </li>
+        <li>
+          <a href="jsref_onunload.htm">The onunload event</a>
+        </li>
+        <li>
+          <a href="jsref_parse.htm">The parse() method</a>
+        </li>
+        <li>
+          <a href="jsref_parseFloat.htm">The parseFloat() method</a>
+        </li>
+        <li>
+          <a href="jsref_parseInt.htm">The parseInt() method</a>
+        </li>
+        <li>
+          <a href="jsref_pop.htm">The pop() method</a>
+        </li>
+        <li>
+          <a href="jsref_pow.htm">The pow() method</a>
+        </li>
+        <li>
+          <a href="jsref_prototype_array.htm">The prototype property</a>
+        </li>
+        <li>
+          <a href="jsref_prototype_boolean.htm">The prototype property</a>
+        </li>
+        <li>
+          <a href="jsref_prototype_date.htm">The prototype property</a>
+        </li>
+        <li>
+          <a href="jsref_prototype_math.htm">The prototype property</a>
+        </li>
+        <li>
+          <a href="jsref_prototype_string.htm">The prototype property</a>
+        </li>
+        <li>
+          <a href="jsref_push.htm">The push() method</a>
+        </li>
+        <li>
+          <a href="jsref_random.htm">The random() method</a>
+        </li>
+        <li>
+          <a href="jsref_replace.htm">The replace() method</a>
+        </li>
+        <li>
+          <a href="jsref_reverse.htm">The reverse() method</a>
+        </li>
+        <li>
+          <a href="jsref_round.htm">The round() method</a>
+        </li>
+        <li>
+          <a href="jsref_search.htm">The search() method</a>
+        </li>
+        <li>
+          <a href="jsref_setDate.htm">The setDate() method</a>
+        </li>
+        <li>
+          <a href="jsref_setFullYear.htm">The setFullYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_setHours.htm">The setHours() method</a>
+        </li>
+        <li>
+          <a href="jsref_setMilliseconds.htm">The setMilliseconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_setMinutes.htm">The setMinutes() method</a>
+        </li>
+        <li>
+          <a href="jsref_setMonth.htm">The setMonth() method</a>
+        </li>
+        <li>
+          <a href="jsref_setSeconds.htm">The setSeconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_setTime.htm">The setTime() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCDate.htm">The setUTCDate() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCFullYear.htm">The setUTCFullYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCHours.htm">The setUTCHours() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCMilliseconds.htm">The setUTCMilliseconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCMinutes.htm">The setUTCMinutes() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCMonth.htm">The setUTCMonth() method</a>
+        </li>
+        <li>
+          <a href="jsref_setUTCSeconds.htm">The setUTCSeconds() method</a>
+        </li>
+        <li>
+          <a href="jsref_setYear.htm">The setYear() method</a>
+        </li>
+        <li>
+          <a href="jsref_shift.htm">The shift() method</a>
+        </li>
+        <li>
+          <a href="jsref_sin.htm">The sin() method</a>
+        </li>
+        <li>
+          <a href="jsref_slice_array.htm">The slice() method</a>
+        </li>
+        <li>
+          <a href="jsref_slice_string.htm">The slice() method</a>
+        </li>
+        <li>
+          <a href="jsref_small.htm">The small() method</a>
+        </li>
+        <li>
+          <a href="jsref_sort.htm">The sort() method</a>
+        </li>
+        <li>
+          <a href="jsref_splice.htm">The splice() method</a>
+        </li>
+        <li>
+          <a href="jsref_split.htm">The split() method</a>
+        </li>
+        <li>
+          <a href="jsref_sqrt.htm">The sqrt() method</a>
+        </li>
+        <li>
+          <a href="jsref_strike.htm">The strike() method</a>
+        </li>
+        <li>
+          <a href="jsref_String.htm">The String() method</a>
+        </li>
+        <li>
+          <a href="jsref_sub.htm">The sub() method</a>
+        </li>
+        <li>
+          <a href="jsref_substr.htm">The substr() method</a>
+        </li>
+        <li>
+          <a href="jsref_substring.htm">The substring() method</a>
+        </li>
+        <li>
+          <a href="jsref_sup.htm">The sup() method</a>
+        </li>
+        <li>
+          <a href="jsref_tan.htm">The tan() method</a>
+        </li>
+        <li>
+          <a href="jsref_toGMTString.htm">The toGMTString() method</a>
+        </li>
+        <li>
+          <a href="jsref_toLocaleString.htm">The toLocaleString() method</a>
+        </li>
+        <li>
+          <a href="jsref_toLowerCase.htm">The toLowerCase() method</a>
+        </li>
+        <li>
+          <a href="jsref_toSource_array.htm">The toSource() method</a>
+        </li>
+        <li>
+          <a href="jsref_toSource_boolean.htm">The toSource() method</a>
+        </li>
+        <li>
+          <a href="jsref_toSource_date.htm">The toSource() method</a>
+        </li>
+        <li>
+          <a href="jsref_toSource_math.htm">The toSource() method</a>
+        </li>
+        <li>
+          <a href="jsref_toSource_string.htm">The toSource() method</a>
+        </li>
+        <li>
+          <a href="jsref_toString_array.htm">The toString() method</a>
+        </li>
+        <li>
+          <a href="jsref_toString_boolean.htm">The toString() method</a>
+        </li>
+        <li>
+          <a href="jsref_toString_date.htm">The toString() method</a>
+        </li>
+        <li>
+          <a href="jsref_toUpperCase.htm">The toUpperCase() method</a>
+        </li>
+        <li>
+          <a href="jsref_toUTCString.htm">The toUTCString() method</a>
+        </li>
+        <li>
+          <a href="jsref_undefined.htm">The undefined Property</a>
+        </li>
+        <li>
+          <a href="jsref_unescape.htm">The unescape() method</a>
+        </li>
+        <li>
+          <a href="jsref_unshift.htm">The unshift() method</a>
+        </li>
+        <li>
+          <a href="jsref_utc.htm">The UTC() method</a>
+        </li>
+        <li>
+          <a href="jsref_valueOf_array.htm">The valueOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_valueOf_boolean.htm">The valueOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_valueOf_date.htm">The valueOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_valueOf_math.htm">The valueOf() method</a>
+        </li>
+        <li>
+          <a href="jsref_valueOf_string.htm">The valueOf() method</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="dom_obj_textarea.htm" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../5cnyl-9pcch.html" class="calibreAHome"> start</a>
+
+    
+      <a href="dom_reference.htm" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

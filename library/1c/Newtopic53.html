@@ -1,0 +1,145 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Процедура которая наступает в момент выбора &quot;Товара&quot; в табличной части, или с помощью подбора</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic53");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Процедура которая наступает в момент выбора &quot;Товара&quot; в табличной части, или с помощью подбора</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic45.html">Документ</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic45.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic51.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic56.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Процедура которая наступает в момент выбора "Товара" в табличной части, или с помощью подбора</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">Пересчет</span><span class="rvts34">(</span><span class="rvts35">ФлагПодбора</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34">)</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">Выбран</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Тогда </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">Если (</span><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">() = </span><span class="rvts36">"Товар"</span><span class="rvts34">) ИЛИ (</span><span class="rvts35">ФлагПодбора</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34">) Тогда </span><span class="rvts42">// вводим "Товар"</span></p>
+<p class="rvps7"><span class="rvts35">Цена</span><span class="rvts34"> = </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">ОтпускнаяЦена</span><span class="rvts34">.</span><span class="rvts35">Получить</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">);</span><span class="rvts37"> // "Цена" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Количество</span><span class="rvts34"> = ?(</span><span class="rvts35">Количество</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34">, </span><span class="rvts36">1</span><span class="rvts34">, </span><span class="rvts35">Количество</span><span class="rvts34">); </span><span class="rvts37">// "Количество" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Сумма</span><span class="rvts34"> = </span><span class="rvts35">Цена</span><span class="rvts34"> * </span><span class="rvts35">Количество</span><span class="rvts34">; </span><span class="rvts37">// "Сумма" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">НДС</span><span class="rvts34"> = Окр(</span><span class="rvts35">Сумма</span><span class="rvts34"> * </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">СтавкаНДС</span><span class="rvts34">.</span><span class="rvts35">Получить</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">).</span><span class="rvts35">Ставка</span><span class="rvts34"> / </span><span class="rvts36">100</span><span class="rvts34">,</span><span class="rvts36">2</span><span class="rvts34">,</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// "НДС" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Всего</span><span class="rvts34"> = </span><span class="rvts35">Сумма</span><span class="rvts34"> + </span><span class="rvts35">НДС</span><span class="rvts34">; </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">ИначеЕсли </span><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">() = </span><span class="rvts36">"Количество" </span><span class="rvts34">Тогда </span><span class="rvts42">// вводим "Количество"</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">Количество</span><span class="rvts34"> &gt; </span><span class="rvts35">Ф_О</span><span class="rvts34"> Тогда </span><span class="rvts37">// Ф_О - это поле табличной части документа (фактический остаток)</span></p>
+<p class="rvps9"><span class="rvts34">Сообщить(</span><span class="rvts36">"Заявка по данной позиции превышает остаток на складе!"</span><span class="rvts34">,</span><span class="rvts36">"!"</span><span class="rvts34">);</span></p>
+<p class="rvps9"><span class="rvts35">Количество</span><span class="rvts34"> = </span><span class="rvts35">Ф_О</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts35">Сумма</span><span class="rvts34"> = </span><span class="rvts35">Цена</span><span class="rvts34"> * </span><span class="rvts35">Количество</span><span class="rvts34">; </span><span class="rvts37">// "Сумма" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">НДС</span><span class="rvts34"> = Окр(</span><span class="rvts35">Сумма</span><span class="rvts34"> * </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">СтавкаНДС</span><span class="rvts34">.</span><span class="rvts35">Получить</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">).</span><span class="rvts35">Ставка</span><span class="rvts34"> / </span><span class="rvts36">100</span><span class="rvts34">,</span><span class="rvts36">2</span><span class="rvts34">,</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// "НДС" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Всего</span><span class="rvts34"> = </span><span class="rvts35">Сумма</span><span class="rvts34"> + </span><span class="rvts35">НДС</span><span class="rvts34">; </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">ИначеЕсли </span><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">() = </span><span class="rvts36">"Цена"</span><span class="rvts34"> Тогда </span><span class="rvts42">// вводим "Цена"</span></p>
+<p class="rvps7"><span class="rvts35">Сумма</span><span class="rvts34"> = </span><span class="rvts35">Цена</span><span class="rvts34"> * </span><span class="rvts35">Количество</span><span class="rvts34">; </span><span class="rvts37">// "Сумма" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">НДС</span><span class="rvts34"> = Окр(</span><span class="rvts35">Сумма</span><span class="rvts34"> * </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">СтавкаНДС</span><span class="rvts34">.</span><span class="rvts35">Получить</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">).</span><span class="rvts35">Ставка</span><span class="rvts34"> / </span><span class="rvts36">100</span><span class="rvts34">,</span><span class="rvts36">2</span><span class="rvts34">,</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// "НДС" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Всего</span><span class="rvts34"> = </span><span class="rvts35">Сумма</span><span class="rvts34"> + </span><span class="rvts35">НДС</span><span class="rvts34">; </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">ИначеЕсли </span><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">() = </span><span class="rvts36">"Сумма"</span><span class="rvts34"> Тогда </span><span class="rvts37">/</span><span class="rvts42">/ вводим "Сумма"</span></p>
+<p class="rvps7"><span class="rvts35">Цена</span><span class="rvts34"> = ?(</span><span class="rvts35">Количество</span><span class="rvts34"> = 0, </span><span class="rvts35">Сумма</span><span class="rvts34">, </span><span class="rvts35">Сумма</span><span class="rvts34"> / </span><span class="rvts35">Количество</span><span class="rvts34">); </span></p>
+<p class="rvps7"><span class="rvts35">НДС</span><span class="rvts34"> = Окр(</span><span class="rvts35">Сумма</span><span class="rvts34"> * </span><span class="rvts35">Товар</span><span class="rvts34">.</span><span class="rvts35">СтавкаНДС</span><span class="rvts34">.</span><span class="rvts35">Получить</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">).</span><span class="rvts35">Ставка</span><span class="rvts34"> / </span><span class="rvts36">100</span><span class="rvts34">,</span><span class="rvts36">2</span><span class="rvts34">,</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// "НДС" это поле табличной части данного документа</span></p>
+<p class="rvps7"><span class="rvts35">Всего</span><span class="rvts34"> = </span><span class="rvts35">Сумма</span><span class="rvts34"> + </span><span class="rvts35">НДС</span><span class="rvts34">; </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">ИначеЕсли </span><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">() = </span><span class="rvts36">"НДС"</span><span class="rvts34"> Тогда</span><span class="rvts42"> // вводим "НДС"</span></p>
+<p class="rvps7"><span class="rvts35">Всего</span><span class="rvts34"> = </span><span class="rvts35">Сумма</span><span class="rvts34"> + </span><span class="rvts35">НДС</span><span class="rvts34">; </span><span class="rvts37">// "Товар" это поле табличной части данного документа</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

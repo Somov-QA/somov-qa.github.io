@@ -1,0 +1,117 @@
+﻿<html>
+	
+<head>
+	<title>Блокирующее окно</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic57");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Блокирующее окно</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser.html">Phaser</a> &rsaquo;&rsaquo; <a href="TypeScript1.html">TypeScript</a> &rsaquo;&rsaquo; <a href="Newtopic53.html">Примеры кода</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic53.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic54.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="ThreeJS.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts18">group</span><span class="rvts14">: </span><span class="rvts16">Phaser</span><span class="rvts14">.Group = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Group(</span><span class="rvts15">this</span><span class="rvts14">.game, </span><span class="rvts15">this</span><span class="rvts14">.stage);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> sprite: </span><span class="rvts16">Phaser</span><span class="rvts14">.Sprite = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Sprite(</span><span class="rvts15">this</span><span class="rvts14">.game, 50, 50, </span><span class="rvts21">'image'</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">this.group.addChild(sprite);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> button1: </span><span class="rvts16">Phaser</span><span class="rvts14">.Button = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Button(</span><span class="rvts15">this</span><span class="rvts14">.game, 50, 150, </span><span class="rvts21">'button_image'</span><span class="rvts14">, </span><span class="rvts15">this</span><span class="rvts14">.onButtonClick, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">button1.name = </span><span class="rvts21">'start_button'</span><span class="rvts14">;</span></p>
+<p class="rvps2"><span class="rvts14">button1.onInputOver.add(this.onButtonOver, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">button1.onInputOut.add(this.onButtonOut, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">this.group.addChild(button1);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts46">/* </span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps5"><span class="rvts46">Добавляем разделяющее поле которое блокирует нажатие кнопок находящихся под ним</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts46">(кнопка button1 становится не активной)</span></p>
+<p class="rvps2"><span class="rvts46">*/</span></p>
+<p class="rvps2"><span class="rvts46"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> graphicOverlay: </span><span class="rvts16">Phaser</span><span class="rvts14">.Graphics = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Graphics(</span><span class="rvts15">this</span><span class="rvts14">.game, 0, 0);</span></p>
+<p class="rvps2"><span class="rvts14">graphicOverlay.beginFill(0x000000, 0.5);</span></p>
+<p class="rvps2"><span class="rvts14">graphicOverlay.drawRect(0, 0, </span><span class="rvts15">this</span><span class="rvts14">.game.width, </span><span class="rvts15">this</span><span class="rvts14">.game.height);</span></p>
+<p class="rvps2"><span class="rvts14">graphicOverlay.endFill();</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> image: Phaser.Image = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Image(</span><span class="rvts15">this</span><span class="rvts14">.game, 0, 0, graphicOverlay.generateTexture());</span></p>
+<p class="rvps2"><span class="rvts14">image.</span><span class="rvts36">inputEnabled</span><span class="rvts14"> = </span><span class="rvts36">true</span><span class="rvts14">;</span></p>
+<p class="rvps2"><span class="rvts14">this.group.addChild(image);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts46">/* Добавляем кнопку которая будет активна */</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> button2: </span><span class="rvts16">Phaser</span><span class="rvts14">.Button = </span><span class="rvts15">new</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Button(</span><span class="rvts15">this</span><span class="rvts14">.game, 250, 50, </span><span class="rvts21">'button_back'</span><span class="rvts14">, </span><span class="rvts15">this</span><span class="rvts14">.onButtonClick, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">button2.name = </span><span class="rvts21">'button_back'</span><span class="rvts14">;</span></p>
+<p class="rvps2"><span class="rvts14">button2.onInputOver.add(</span><span class="rvts15">this</span><span class="rvts14">.onButtonOver, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">button2.onInputOut.add(</span><span class="rvts15">this</span><span class="rvts14">.onButtonOut, </span><span class="rvts15">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">this.group.addChild(button2);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">this.stage.addChild(this.group);</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14">ПРИ СМЕНЕ СЦЕНЫ НУЖНО ОЩИЧАТЬ ГРУППУ</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">this</span><span class="rvts14">.group.removeChildren();</span></p>
+<p class="rvps2"><span class="rvts15">this</span><span class="rvts14">.game.state.start(</span><span class="rvts21">"Scene2"</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

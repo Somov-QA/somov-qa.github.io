@@ -1,0 +1,188 @@
+﻿<html>
+	
+<head>
+	<title>Двумерный массив типом класс</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic54");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Двумерный массив типом класс</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser.html">Phaser</a> &rsaquo;&rsaquo; <a href="TypeScript1.html">TypeScript</a> &rsaquo;&rsaquo; <a href="Newtopic53.html">Примеры кода</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic53.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic58.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic57.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">class</span><span class="rvts14"> </span><span class="rvts18">DiceButton</span><span class="rvts14"> </span><span class="rvts15">extends</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.Button {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;diceType: number;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;diceValue: number;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;diceValues: Array&lt;number&gt;;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;diceIndex: number;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;constructor(game: </span><span class="rvts16">Phaser</span><span class="rvts14">.Game, x?: number, y?: number, key?: string, callback?: Function, callbackContext?: any, overFrame?: string | number, outFrame?: string | number, downFrame?: string | number, upFrame?: string | number) {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">super</span><span class="rvts14">(game, x, y, key, callback, callbackContext, overFrame, outFrame, downFrame, upFrame);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">class</span><span class="rvts14"> </span><span class="rvts18">levelState</span><span class="rvts14"> </span><span class="rvts15">extends</span><span class="rvts14"> </span><span class="rvts16">Phaser</span><span class="rvts14">.State {</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">field: </span><span class="rvts16">Array</span><span class="rvts14">&lt;</span><span class="rvts16">Array</span><span class="rvts14">&lt;</span><span class="rvts16">DiceButton</span><span class="rvts14">&gt;&gt;;</span></p>
+<p class="rvps2"><span class="rvts29"><br/></span></p>
+<p class="rvps2"><span class="rvts29"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">create() {</span></p>
+<p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> diceData: </span><span class="rvts43">any</span><span class="rvts41">[] = [</span></p>
+<p class="rvps8"><span class="rvts41">[635, 260, </span><span class="rvts44">'dice_black_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dice6063'</span><span class="rvts41">, 660, 260, </span><span class="rvts44">'+'</span><span class="rvts41">],</span></p>
+<p class="rvps8"><span class="rvts41">[670, 260, </span><span class="rvts44">'dice_black_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dice1012'</span><span class="rvts41">, 695, 260, </span><span class="rvts44">': +7'</span><span class="rvts41">],</span></p>
+<p class="rvps8"><span class="rvts41">[635, 290, </span><span class="rvts44">'dice_black_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dice5051'</span><span class="rvts41">, 660, 290, </span><span class="rvts44">'+'</span><span class="rvts41">],</span></p>
+<p class="rvps8"><span class="rvts41">[670, 290, </span><span class="rvts44">'dice_black_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dice1016'</span><span class="rvts41">, 695, 290, </span><span class="rvts44">'+'</span><span class="rvts41">],</span></p>
+<p class="rvps8"><span class="rvts41">[705, 290, </span><span class="rvts44">'dice_black_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dice1012'</span><span class="rvts41">, 730, 290, </span><span class="rvts44">': +15'</span><span class="rvts41">],</span></p>
+<p class="rvps8"><span class="rvts41">[635, 500, </span><span class="rvts44">'dice_win_atlas'</span><span class="rvts41">, </span><span class="rvts44">'dicewin02'</span><span class="rvts41">, 660, 500, </span><span class="rvts44">' 10, 20, 35, 60, 100'</span><span class="rvts41">]</span></p>
+<p class="rvps7"><span class="rvts41">];</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">var</span><span class="rvts41"> sprite: </span><span class="rvts43">Phaser</span><span class="rvts41">.Sprite;</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> count: number = diceData.length;</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">for</span><span class="rvts41"> (</span><span class="rvts42">var</span><span class="rvts41"> i = 0; i &lt; count; i++) {</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps8"><span class="rvts41">sprite = </span><span class="rvts42">new</span><span class="rvts41"> Phaser.Sprite(</span><span class="rvts42">this</span><span class="rvts41">.game, diceData[i][0], diceData[i][1], diceData[i][2], diceData[i][3]);</span></p>
+<p class="rvps8"><span class="rvts41">sprite.scale.setTo(0.5, 0.5);</span></p>
+<p class="rvps8"><span class="rvts42">this</span><span class="rvts41">.stage.addChild(sprite);</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps8"><span class="rvts41">text = </span><span class="rvts42">new</span><span class="rvts41"> Phaser.Text(</span><span class="rvts42">this</span><span class="rvts41">.game, diceData[i][4], diceData[i][5], diceData[i][6], { font: </span><span class="rvts44">'18px Arial', fill: '#FFFFFF'</span><span class="rvts41"> });</span></p>
+<p class="rvps8"><span class="rvts42">this</span><span class="rvts41">.stage.addChild(text);</span></p>
+<p class="rvps8"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41">}</span></p>
+<p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">}</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps2"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">createField() {</span></p>
+<p class="rvps2"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> diceValues = {</span></p>
+<p class="rvps8"><span class="rvts44">"1"</span><span class="rvts41">: [[1, 5, 4, 6], [1, 3, 4, 2], [1, 6, 4, 5], [1, 2, 4, 3]],</span></p>
+<p class="rvps8"><span class="rvts44">"2"</span><span class="rvts41">: [[2, 5, 3, 6], [2, 1, 3, 4], [2, 6, 3, 5], [2, 4, 3, 1]],</span></p>
+<p class="rvps8"><span class="rvts44">"3"</span><span class="rvts41">: [[3, 5, 2, 6], [3, 4, 2, 1], [3, 6, 2, 5], [3, 1, 2, 4]],</span></p>
+<p class="rvps8"><span class="rvts44">"4"</span><span class="rvts41">: [[4, 5, 1, 6], [4, 2, 1, 3], [4, 6, 1, 5], [4, 3, 1, 2]],</span></p>
+<p class="rvps8"><span class="rvts44">"5"</span><span class="rvts41">: [[5, 1, 6, 4], [5, 2, 6, 3], [5, 4, 6, 1], [5, 3, 6, 2]],</span></p>
+<p class="rvps8"><span class="rvts44">"6"</span><span class="rvts41">: [[6, 1, 5, 4], [6, 3, 5, 2], [6, 4, 5, 1], [6, 2, 5, 3]]</span></p>
+<p class="rvps7"><span class="rvts41">};</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">this</span><span class="rvts41">.</span><span class="rvts45">field</span><span class="rvts41"> = [];</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> dice: </span><span class="rvts43">DiceButton</span><span class="rvts41">;</span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> diceType: number;</span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> nextValue: number;</span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> </span><span class="rvts45">rows</span><span class="rvts41">: </span><span class="rvts43">Array</span><span class="rvts41">&lt;</span><span class="rvts43">DiceButton</span><span class="rvts41">&gt;;</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts42">for</span><span class="rvts41"> (</span><span class="rvts42">var</span><span class="rvts41"> col = 0; col &lt; 5; col++) {</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps8"><span class="rvts45">rows</span><span class="rvts41"> = [];</span></p>
+<p class="rvps8"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">for</span><span class="rvts41"> (</span><span class="rvts42">var</span><span class="rvts41"> row = 0; row &lt; 10; row++) {</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice = </span><span class="rvts42">new</span><span class="rvts41"> DiceButton(</span><span class="rvts42">this</span><span class="rvts41">.game, 305 + (50 * col), 200 + (40 * row), 'dice_black_atlas', this.onFieldDiceClick, </span><span class="rvts42">this</span><span class="rvts41">);</span></p>
+<p class="rvps7"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice.diceType = diceType;</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">if</span><span class="rvts41"> (row &lt; 9) dice.inputEnabled = false;</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice.diceValues = diceValues[this.randomValue(6)][</span><span class="rvts42">this</span><span class="rvts41">.randomValue(3)];</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice.diceIndex = 1;</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice.diceValue = dice.diceValues[dice.diceIndex];</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">nextValue = dice.diceIndex === 3 ? 0 : (dice.diceIndex + 1);</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">dice.frameName = </span><span class="rvts44">"dice"</span><span class="rvts41"> + dice.diceValue + </span><span class="rvts44">"0"</span><span class="rvts41"> + dice.diceValue + dice.diceValues[nextValue];</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">this</span><span class="rvts41">.stage.addChild(dice);</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts45">rows</span><span class="rvts41">.push(dice);</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">}</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">this</span><span class="rvts41">.</span><span class="rvts45">field</span><span class="rvts41">.push(rows);</span></p>
+<p class="rvps7"><span class="rvts41">}</span></p>
+<p class="rvps5"><span class="rvts41">}</span></p>
+<p class="rvps5"><span class="rvts41"><br/></span></p>
+<p class="rvps5"><span class="rvts41">checkVariant() {</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">var</span><span class="rvts41"> col: number = 0;</span></p>
+<p class="rvps7"><span class="rvts42">var</span><span class="rvts41"> row: number = 0;</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">var</span><span class="rvts41"> values: number[];</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">var</span><span class="rvts41"> count: number = </span><span class="rvts42">this</span><span class="rvts41">.</span><span class="rvts45">field</span><span class="rvts41">.length;</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">for</span><span class="rvts41"> (col = 0; col &lt; count; col++) {</span></p>
+<p class="rvps5"><span class="rvts41"><br/></span></p>
+<p class="rvps5"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41">row = </span><span class="rvts42">this</span><span class="rvts41">.</span><span class="rvts45">field</span><span class="rvts41">[col].length - 1;</span></p>
+<p class="rvps5"><span class="rvts41"><br/></span></p>
+<p class="rvps8"><span class="rvts41">values.push(</span><span class="rvts42">this</span><span class="rvts41">.</span><span class="rvts45">field</span><span class="rvts41">[col][row].diceValue);</span></p>
+<p class="rvps8"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41">}</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41">values.sort(</span><span class="rvts42">function</span><span class="rvts41"> (valueA, valueB) {</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts42">return</span><span class="rvts41"> valueB - valueA;</span></p>
+<p class="rvps7"><span class="rvts41">});</span></p>
+<p class="rvps7"><span class="rvts41"><br/></span></p>
+<p class="rvps7"><span class="rvts41">count = values.length;</span></p>
+<p class="rvps7"><span class="rvts42">for</span><span class="rvts41"> (col = 0; col &lt; count; col++) {</span></p>
+<p class="rvps7"><span class="rvts41"></span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps7"><span class="rvts41">}</span></p>
+<p class="rvps5"><span class="rvts41">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

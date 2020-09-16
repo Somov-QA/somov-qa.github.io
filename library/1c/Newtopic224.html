@@ -1,0 +1,197 @@
+﻿
+
+<html>
+	
+<head>
+	<title>НачислениеЗарплаты</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic224");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">НачислениеЗарплаты</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="185.html">1С Предприятие 8.3 - Регистры</a> &rsaquo;&rsaquo; <a href="Newtopic214.html">Регистр расчетов</a> &rsaquo;&rsaquo; <a href="Newtopic216.html">Практика</a> &rsaquo;&rsaquo; <a href="Newtopic230.html">Документы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic230.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic231.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic232.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">НачислениеЗарплаты</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Данный документ выполняет начисление зарплаты с учетом прогулов и премий</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem26.png"></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Данные</span><span class="rvts8">:</span></p>
+<p class="rvps10"><span class="rvts19">Реквилиты</span><span class="rvts8">: </span><span class="rvts20">Нет</span></p>
+<p class="rvps10"><span class="rvts8"><br/></span></p>
+<p class="rvps10"><span class="rvts19">Табличные части</span><span class="rvts8">:</span></p>
+<p class="rvps10"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts20">ТЧОсновныеНачисления</span></p>
+<p class="rvps12"><span class="rvts20">Сотрудник</span><span class="rvts8"> (СправочникСсылка.Сотрудники)</span></p>
+<p class="rvps12"><span class="rvts20">ВидыРасчета</span><span class="rvts8"> (ПланВидовРасчетаСсылка.ОсновныеНачисления)</span></p>
+<p class="rvps12"><span class="rvts20">ДатаНачала</span><span class="rvts8"> (Дата)</span></p>
+<p class="rvps12"><span class="rvts20">ДатаОкончания</span><span class="rvts8"> (Дата)</span></p>
+<p class="rvps12"><span class="rvts20">Размер</span><span class="rvts8"> (Число 15, 2)</span></p>
+<p class="rvps12"><span class="rvts8"><br/></span></p>
+<p class="rvps11"><span class="rvts8">ТЧДополнительныеНачисления</span></p>
+<p class="rvps12"><span class="rvts20">Сотрудник</span><span class="rvts8"> (СправочникСсылка.Сотрудники)</span></p>
+<p class="rvps12"><span class="rvts20">ВидРасчета</span><span class="rvts8"> (ПланВидовРасчетаСсылка.ДополнительныеНачисления)</span></p>
+<p class="rvps12"><span class="rvts20">ПроцентПремии</span><span class="rvts8"> (Число 10, 2)</span></p>
+<p class="rvps12"><span class="rvts20">БазовыйПериодНачало</span><span class="rvts8"> (Дата)</span></p>
+<p class="rvps12"><span class="rvts20">БазовыйПериодКонец</span><span class="rvts8"> (Дата)</span></p>
+<p class="rvps8"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem27.png"></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Движение</span><span class="rvts8">: </span></p>
+<p class="rvps10"><span class="rvts20">НачислениеЗарплаты</span></p>
+<p class="rvps10"><span class="rvts20">НачислениеПремий</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Формы</span><span class="rvts8">: </span></p>
+<p class="rvps10"><span class="rvts20">ФормаДокумента </span><span class="rvts8">(по умолчанию)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Модуль объекта</span><span class="rvts8">:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Процедура </span><span class="rvts15">ОбработкаПроведения</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">, </span><span class="rvts15">Режим</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ПериодРегистрации</span><span class="rvts14"> = </span><span class="rvts15">НачалоМесяца</span><span class="rvts14">(</span><span class="rvts15">Дата</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// РЕГИСТР: НачислениеЗарплаты</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеЗарплаты</span><span class="rvts14">.</span><span class="rvts15">Записывать</span><span class="rvts14"> = Истина;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеЗарплаты</span><span class="rvts14">.</span><span class="rvts15">Очистить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Для Каждого </span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14"> Из </span><span class="rvts15">ТЧОсновныеНачисления</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14"> = </span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеЗарплаты</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">Сторно</span><span class="rvts14"> = Ложь;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ВидРасчета</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14">.</span><span class="rvts15">ВидРасчета</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ПериодДействияНачало</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14">.</span><span class="rvts15">ДатаНачала</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ПериодДействияКонец</span><span class="rvts14"> = </span><span class="rvts15">КонецДня</span><span class="rvts14">(</span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14">.</span><span class="rvts15">ДатаОкончания</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ПериодРегистрации</span><span class="rvts14"> = </span><span class="rvts15">ПериодРегистрации</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">Сотрудник</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14">.</span><span class="rvts15">Сотрудник</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">//Движение.Сумма = 0; // будет рассчитана ниже</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">Оклад</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧОсновныеНачисления</span><span class="rvts14">.</span><span class="rvts15">Размер</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// РЕГИСТР: НачислениеПремий</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеПремий</span><span class="rvts14">.</span><span class="rvts15">Записывать</span><span class="rvts14"> = Истина;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеПремий</span><span class="rvts14">.</span><span class="rvts15">Очистить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Для Каждого </span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14"> Из </span><span class="rvts15">ТЧДополнительныеНачисления</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14"> = </span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеПремий</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">Сторно</span><span class="rvts14"> = Ложь;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ВидРасчета</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14">.</span><span class="rvts15">ВидРасчета</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">БазовыйПериодНачало</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14">.</span><span class="rvts15">БазовыйПериодНачало</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">БазовыйПериодКонец</span><span class="rvts14"> = </span><span class="rvts15">КонецДня</span><span class="rvts14">(</span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14">.</span><span class="rvts15">БазовыйПериодКонец</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ПериодРегистрации</span><span class="rvts14"> = </span><span class="rvts15">ПериодРегистрации</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">Сотрудник</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14">.</span><span class="rvts15">Сотрудник</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение</span><span class="rvts14">.</span><span class="rvts15">ПроцентПремии</span><span class="rvts14"> = </span><span class="rvts15">ТекСтрокаТЧДополнительныеНачисления</span><span class="rvts14">.</span><span class="rvts15">ПроцентПремии</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">Записать</span><span class="rvts14">(); </span><span class="rvts18">// Записываем движение</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// Рассчитать оклады с учетом прогулов</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">РасчетЗП</span><span class="rvts14">.</span><span class="rvts15">РассчитатьОклад</span><span class="rvts14">(</span><span class="rvts15">Ссылка</span><span class="rvts14">, </span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеЗарплаты</span><span class="rvts14">); </span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// Рассичать премии</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">РасчетЗП</span><span class="rvts14">.</span><span class="rvts15">РассчитатьПремию</span><span class="rvts14">(</span><span class="rvts15">Ссылка</span><span class="rvts14">, </span><span class="rvts15">Движения</span><span class="rvts14">.</span><span class="rvts15">НачислениеПремий</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// Перерасчет</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">РасчетЗП</span><span class="rvts14">.</span><span class="rvts15">Перерасчет</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,103 @@
+﻿<html>
+	
+<head>
+	<title>Текстурирование и сегментация объекта</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic37");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Текстурирование и сегментация объекта</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="ThreeJS.html">ThreeJS</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="ThreeJS.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Object3D.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic38.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">cubeGeometry</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">CubeGeometry</span><span class="rvts14">(300, 300, 300, 7, 7, 7); </span><span class="rvts17">// сегментация 7, 7, 7</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">cubeTexture</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">Texture</span><span class="rvts14">();</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">loader</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">ImageLoader</span><span class="rvts14">();</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">loader</span><span class="rvts14">.load(</span><span class="rvts20">'assets/texture.jpg'</span><span class="rvts14">, </span><span class="rvts15">function</span><span class="rvts14">(event){</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cubeTexture</span><span class="rvts14">.image = event;</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">cubeTexture</span><span class="rvts14">.needsUpdate = true;</span></p>
+<p class="rvps2"><span class="rvts14">});</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">cubeMaterial</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">MeshBasicMaterial</span><span class="rvts14">({map: </span><span class="rvts16">cubeTexture</span><span class="rvts14">, overdraw: true});</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">cube</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">Mesh</span><span class="rvts14">(</span><span class="rvts16">cubeGeometry</span><span class="rvts14">, </span><span class="rvts16">cubeMaterial</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">scene.add(</span><span class="rvts16">cube</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts17">// --------------------------------------------------------</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">sphereGeometry</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">SphereGeometry</span><span class="rvts14">(1300, 32, 32);</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">sphereTexture</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">Texture</span><span class="rvts14">();</span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">loader</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">ImageLoader</span><span class="rvts14">();</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">loader.load(</span><span class="rvts20">'assets/earthmap.jpg'</span><span class="rvts14">, </span><span class="rvts15">function</span><span class="rvts14">(event){</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">sphereTexture</span><span class="rvts14">.image = event;</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">sphereTexture</span><span class="rvts14">.needsUpdate = true;</span></p>
+<p class="rvps2"><span class="rvts14">});</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">sphereMaterial</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">MeshBasicMaterial</span><span class="rvts14">({map: </span><span class="rvts16">sphereTexture</span><span class="rvts14">, overdraw: true});</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> </span><span class="rvts16">sphere</span><span class="rvts14"> = </span><span class="rvts15">new</span><span class="rvts14"> THREE.</span><span class="rvts34">Mesh</span><span class="rvts14">(</span><span class="rvts16">sphereGeometry</span><span class="rvts14">, </span><span class="rvts16">sphereMaterial</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">scene.add(</span><span class="rvts16">sphere</span><span class="rvts14">);</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

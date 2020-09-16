@@ -1,0 +1,189 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Предопределенная процедура проведения документа. (ручная и автоматическая обработка)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic91");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Предопределенная процедура проведения документа. (ручная и автоматическая обработка)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic90.html">Операция</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic90.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic90.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic92.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">П</span><span class="rvts20">редопределенная процедура проведения документа. (ручная и автоматическая обработка)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ОбработкаПроведения</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts37">//условие определяющее в каком режиме находится документ для проведения.</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34">.</span><span class="rvts35">Вид</span><span class="rvts34">() = </span><span class="rvts36">"Операция"</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts42">// Ручная операция --------------------------------------------------------------------------------------------------------------------------</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Операция"</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">Новая</span><span class="rvts34">(); </span><span class="rvts37">// создание новой операции</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">ДатаОперации</span><span class="rvts34"> = </span><span class="rvts35">ДатаДок</span><span class="rvts34">;</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">НоваяПроводка</span><span class="rvts34">(); &nbsp;</span><span class="rvts37">//Создать новую проводку</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс6</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс8</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"81.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts37">// СуммаОперации - это общая сумма по всей операции.</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">СуммаОперации</span><span class="rvts34"> = Число(</span><span class="rvts35">глПолученоНаРуки</span><span class="rvts34">); </span><span class="rvts37">//получает значение переменной глобального модуля</span></p>
+<p class="rvps6"><span class="rvts37">// Сумма - это сумма вводимая в строку операции.</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34"> = Число(</span><span class="rvts35">глПолученоНаРуки</span><span class="rvts34">); </span><span class="rvts37">//получает значение переменной глобального модуля</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Содержание</span><span class="rvts34"> = </span><span class="rvts36">"Оплата труда"</span><span class="rvts34">;</span></p>
+<p class="rvps6"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps6"><span class="rvts37">//получить данные из табличной части документа:</span></p>
+<p class="rvps6"><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">(); </span><span class="rvts37">//Выбрать строки из табличной части этого документа</span></p>
+<p class="rvps6"><span class="rvts34">Пока </span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл </span><span class="rvts37">//Получить из выборки следующую строку табличной части документа.</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">НоваяПроводка</span><span class="rvts34">(); &nbsp;</span><span class="rvts37">//Создать новую проводку</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс6</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps9"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс8</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"81.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps9"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34"> = </span><span class="rvts35">Итого</span><span class="rvts34">; </span><span class="rvts37">// данные из поля табличной части "Итого"</span></p>
+<p class="rvps7"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">Иначе</span></p>
+<p class="rvps6"><span class="rvts42">// Автоматическоя операция --------------------------------------------------------------------------------------------------------------------------</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts38">НоваяПроводка</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс6</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс8</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"81.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">ДатаОперации</span><span class="rvts34"> = </span><span class="rvts35">ДатаДок</span><span class="rvts34">;</span></p>
+<p class="rvps6"><span class="rvts37">// СуммаОперации - это общая сумма по всей операции.</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">СуммаОперации</span><span class="rvts34"> = Число(</span><span class="rvts35">глПолученоНаРуки</span><span class="rvts34">); </span><span class="rvts37">//получает значение переменной глобального модуля</span></p>
+<p class="rvps6"><span class="rvts37">// Сумма - это сумма вводимая в строку операции.</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34"> = Число(</span><span class="rvts35">глПолученоНаРуки</span><span class="rvts34">); </span><span class="rvts37">//получает значение переменной глобального модуля</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Содержание</span><span class="rvts34"> = </span><span class="rvts36">"Оплата труда"</span><span class="rvts34">;</span></p>
+<p class="rvps6"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts38">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps6"><span class="rvts37">//получить данные из табличной части документа:</span></p>
+<p class="rvps6"><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">(); </span><span class="rvts37">//Выбрать строки из табличной части этого документа</span></p>
+<p class="rvps6"><span class="rvts34">Пока </span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл </span><span class="rvts37">//Получить из выборки следующую строку табличной части документа.</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts38">НоваяПроводка</span><span class="rvts34">(); &nbsp;</span><span class="rvts37">//Создать новую проводку</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс6</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps9"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">КлассПланаСчетов</span><span class="rvts34"> = Перечисление.</span><span class="rvts35">КлассПлСчЗП6Или8</span><span class="rvts34">.</span><span class="rvts35">Класс8</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"81.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps9"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.1"</span><span class="rvts34">, ПланыСчетов.</span><span class="rvts35">Основной</span><span class="rvts34">); </span><span class="rvts37">//СчетПоКоду - это поиск бухгалтерского счета по коду.</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34"> = </span><span class="rvts35">Итого</span><span class="rvts34">; </span><span class="rvts37">// данные из поля табличной части "Итого"</span></p>
+<p class="rvps7"><span class="rvts35">Операция</span><span class="rvts34">.</span><span class="rvts38">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

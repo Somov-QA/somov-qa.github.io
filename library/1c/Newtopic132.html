@@ -1,0 +1,144 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Методы оборотных регистров. Получение оборотов.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic132");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Методы оборотных регистров. Получение оборотов.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic131.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic133.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Методы оборотных регистров. Получение оборотов.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Дата</span><span class="rvts34">&gt;) </span><span class="rvts36">- Установить период выборки итогов оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Месяц</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">День</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">НомерНедели</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Месяц</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">НомерДекады</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Месяц</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">НомерКвартала</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Год</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">Итог</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерен1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерен2</span><span class="rvts34">&gt;...,&lt;</span><span class="rvts35">ИмяРесурса</span><span class="rvts34">&gt;) </span><span class="rvts36">- Возвращает значение итога заданного ресурса по ранее установленному периоду оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts35">Итоги</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерение1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерение2</span><span class="rvts34">&gt;...) </span><span class="rvts36">- Извлечь итоги всех ресурсов оборотного регистра по ранее установленному периоду оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts35">СводныйИтог</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерен1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерен2</span><span class="rvts34">&gt;...,&lt;</span><span class="rvts35">ИмяРесурса</span><span class="rvts34">&gt;)</span><span class="rvts36"> - Возвращает значение сводного итога заданного ресурса по ранее установленному периоду оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts35">СводныеИтоги</span><span class="rvts34">(&lt;</span><span class="rvts35">Измерение1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Измерение2</span><span class="rvts34">&gt;...) </span><span class="rvts36">- Извлечь сводные итоги всех ресурсов оборотного регистра по ранее установленному периоду оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts35">ИтогиПолучить</span><span class="rvts34">() </span><span class="rvts36">- Получить все ресурсы по регистру.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получение суммы и объема продаж товара по всем контрагентам.</span></p>
+<p class="rvps3"><span class="rvts37">// Задаем период, за который нас интересуют продажи, авгест 2009 года.</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">Продажи</span><span class="rvts34">.</span><span class="rvts38">ИспользоватьПериод</span><span class="rvts34">(</span><span class="rvts36">2009</span><span class="rvts34">,</span><span class="rvts36">8</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">Продажи</span><span class="rvts34">.</span><span class="rvts38">СводныеИтоги</span><span class="rvts34">(,</span><span class="rvts35">Товар</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Было продано: "</span><span class="rvts34"> + Регистр.</span><span class="rvts35">Продажи</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34"> + </span><span class="rvts36">" ед. товара &nbsp; на сумму: "</span><span class="rvts34"> + Регистр.</span><span class="rvts35">Продажи</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получим значение итога одного ресурса оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts38">Итог</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">, Контрагент, </span><span class="rvts36">"Количество"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получить все итоги регистров оборотного регистра.</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьПериод</span><span class="rvts34">(</span><span class="rvts35">ДатаДок</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts38">Итоги</span><span class="rvts34">(</span><span class="rvts35">Товар</span><span class="rvts34">, </span><span class="rvts35">Контрагент</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">КолВо</span><span class="rvts34"> = Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

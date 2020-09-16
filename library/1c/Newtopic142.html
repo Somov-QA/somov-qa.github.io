@@ -1,0 +1,154 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Создание слоев</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic142");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Создание слоев</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C77.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic141.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="OLEAutomation.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Создание слоев</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem.png"></p>
+<p class="rvps3"><span class="rvts36">1) Нажмите на кнопку </span><span class="rvts32">"Слои"</span><span class="rvts36">, панели инструментов "Редактор диалогов"</span></p>
+<p class="rvps3"><span class="rvts39">2) По умолчанию всегда присутствует один слой "Основной", добавьте свои слои и назовите их. (например Слой1, Слой2)</span></p>
+<p class="rvps3"><span class="rvts39">3) На форме элемента выделите нужные вам объекты и через контекстное меню </span><span class="rvts58">[Поместить] -&gt; [ИмяСлоя]</span></p>
+<p class="rvps3"><span class="rvts39">мы поместим эти объекты на один из слоев. (например Слой1)</span></p>
+<p class="rvps3"><span class="rvts39">4) Теперь выделите остальные объекты и точно так же через контекстное меню </span><span class="rvts58">[Поместить] -&gt; [ИмяСлоя]</span></p>
+<p class="rvps3"><span class="rvts39">поместим эти объекты на следующий слой. (например Слой2)</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">5) Нажмите на кнопку </span><span class="rvts32">"Слои"</span><span class="rvts36">, панели инструментов "Редактор диалогов", и так мы видим три колонки:</span></p>
+<p class="rvps3"><span class="rvts36">Первая колонка - отвечает за </span><span class="rvts32">отображение</span><span class="rvts36"> (глаз - если объект отображается)</span></p>
+<p class="rvps3"><span class="rvts36">Вторая колонка - показывает нам </span><span class="rvts32">активный</span><span class="rvts36"> слой (карандаш - если слой активен)</span></p>
+<p class="rvps3"><span class="rvts36">Третья колонка - </span><span class="rvts32">имя</span><span class="rvts36"> слоя.</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">нам нужно:</span></p>
+<p class="rvps3"><span class="rvts36">1. Сделать </span><span class="rvts57">активным</span><span class="rvts36"> слой "Основной"</span></p>
+<p class="rvps3"><span class="rvts36">2. Сделать </span><span class="rvts57">отображенным</span><span class="rvts36"> слой "Основной" и "Слой1"</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">6)Теперь мы опишем программно, в теле модуля элемента, </span><span class="rvts59">отображение</span><span class="rvts36"> слоев.</span></p>
+<p class="rvps3"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьЗакладки</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">//Установить режим использования закладок в форме (1-вкл. закладки) (2-выкл. закладки)</span></p>
+<p class="rvps3"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">Закладки</span><span class="rvts34">.</span><span class="rvts35">ДобавитьЗначение</span><span class="rvts34">(</span><span class="rvts36">"Слой1"</span><span class="rvts34">, </span><span class="rvts36">"Ф.И.О Сотрудника"</span><span class="rvts34">); </span><span class="rvts37">//Добавить значение в список (&lt;значение&gt;, &lt;строка&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">Закладки</span><span class="rvts34">.</span><span class="rvts35">ДобавитьЗначение</span><span class="rvts34">(</span><span class="rvts36">"Слой2"</span><span class="rvts34">, </span><span class="rvts36">"Данные сотрудника"</span><span class="rvts34">); </span><span class="rvts37">//Добавить значение в список (&lt;значение&gt;, &lt;строка&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьСлой</span><span class="rvts34">(</span><span class="rvts36">"Основной,Слой1"</span><span class="rvts34">, </span><span class="rvts36">2</span><span class="rvts34">); </span><span class="rvts37">//отображать слой (&lt;ИмяСлоя&gt; &lt;Режим&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">7)Теперь мы опишем программно, в теле модуля элемента, </span><span class="rvts59">работу</span><span class="rvts36"> слоев с помощью предопределенной процедуры.</span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ПриВыбореЗакладки</span><span class="rvts34">(</span><span class="rvts35">НомерЗакладки</span><span class="rvts34">, </span><span class="rvts35">ЗначениеЗакладки</span><span class="rvts34">)</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ЗначениеЗакладки</span><span class="rvts34"> = </span><span class="rvts36">"Слой1"</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьСлой</span><span class="rvts34">(</span><span class="rvts36">"Основной,Слой1"</span><span class="rvts34">, </span><span class="rvts36">2</span><span class="rvts34">); </span><span class="rvts37">//отображать слой "Основной" и "Слой1"</span></p>
+<p class="rvps5"><span class="rvts34">ИначеЕсли </span><span class="rvts35">ЗначениеЗакладки</span><span class="rvts34"> = </span><span class="rvts36">"Слой2"</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts48">Если Выбран() = 0 Тогда //если этот элемент не выбран из списка, а только создаётся</span></p>
+<p class="rvps7"><span class="rvts48">Если Вопрос("Записать контрагента?", "Да+Нет") = "Да" Тогда</span></p>
+<p class="rvps9"><span class="rvts48">Записать();</span></p>
+<p class="rvps7"><span class="rvts48">Иначе</span></p>
+<p class="rvps9"><span class="rvts48">СтатусВозврата(0); // Все отменить (уничтожить значения)</span></p>
+<p class="rvps9"><span class="rvts48">Возврат;</span></p>
+<p class="rvps7"><span class="rvts48">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts48">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts35">Форма</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьСлой</span><span class="rvts34">(</span><span class="rvts36">"Основной,Слой2"</span><span class="rvts34">, </span><span class="rvts36">2</span><span class="rvts34">); </span><span class="rvts37">//отображать слой "Основной" и "Слой2"</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

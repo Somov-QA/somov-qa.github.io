@@ -1,0 +1,108 @@
+﻿<html>
+	
+<head>
+	<title>Пространства имён</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Newtopic79");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Пространства имён</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="TypeScript.html">TypeScript</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="TypeScript.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic78.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="PixiJS.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">namespace</span><span class="rvts14"> Validation {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">export</span><span class="rvts14"> interface StringValidator {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;isAcceptable(s: string): boolean;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">const</span><span class="rvts14"> lettersRegexp = </span><span class="rvts21">/^[A-Za-z]+$/</span><span class="rvts14">;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">const</span><span class="rvts14"> numberRegexp = </span><span class="rvts21">/^[0-9]+$/</span><span class="rvts14">;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">export</span><span class="rvts14"> </span><span class="rvts15">class</span><span class="rvts14"> LettersOnlyValidator </span><span class="rvts15">implements</span><span class="rvts14"> StringValidator {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;isAcceptable(s: string) {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">return</span><span class="rvts14"> lettersRegexp.test(s);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">export</span><span class="rvts14"> </span><span class="rvts15">class</span><span class="rvts14"> ZipCodeValidator </span><span class="rvts15">implements</span><span class="rvts14"> StringValidator {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;isAcceptable(s: string) {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">return</span><span class="rvts14"> s.length === 5 &amp;&amp; numberRegexp.test(s);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">let</span><span class="rvts14"> strings = [</span><span class="rvts21">"Hello"</span><span class="rvts14">, </span><span class="rvts21">"98052"</span><span class="rvts14">, </span><span class="rvts21">"101"</span><span class="rvts14">];</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">let</span><span class="rvts14"> validators: { [s: string]: Validation.StringValidator; } = {};</span></p>
+<p class="rvps2"><span class="rvts14">validators["ZIP code"] = new Validation.ZipCodeValidator();</span></p>
+<p class="rvps2"><span class="rvts14">validators["Letters only"] = new Validation.LettersOnlyValidator();</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">for</span><span class="rvts14"> (</span><span class="rvts15">let</span><span class="rvts14"> s </span><span class="rvts15">of</span><span class="rvts14"> strings) {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;for (</span><span class="rvts15">var</span><span class="rvts14"> name </span><span class="rvts15">in</span><span class="rvts14"> validators) {</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts21">`"${ s }" - ${ validators[name].isAcceptable(s) ? "matches" : "does not match" } ${ name }`</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

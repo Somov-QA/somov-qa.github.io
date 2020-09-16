@@ -1,0 +1,169 @@
+﻿
+
+<html>
+	
+<head>
+	<title>OLE Automation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("OLEAutomation");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">OLE Automation</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C77.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic142.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="txt.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">OLE Automation</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts39">Перенос данных из одной базы данных в другую базу данных.</span></p>
+<p class="rvps3"><span class="rvts32">Перенос</span><span class="rvts36"> данных из одного </span><span class="rvts32">Справочника</span><span class="rvts36"> в другой</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ВыполнитьПереносДанных</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts37">//Создаем объект 1С:Предприятие7.7</span></p>
+<p class="rvps5"><span class="rvts35">V7</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"V77.Application"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts37">//Откраваем 1С:Предриятие7.7</span></p>
+<p class="rvps5"><span class="rvts35">Открыта</span><span class="rvts34"> = </span><span class="rvts35">V7</span><span class="rvts34">.</span><span class="rvts35">Initialize</span><span class="rvts34">(</span><span class="rvts35">V7</span><span class="rvts34">.</span><span class="rvts35">RMTrade</span><span class="rvts34">, </span><span class="rvts36">"/D"</span><span class="rvts34"> + </span><span class="rvts35">Адрес</span><span class="rvts34"> + </span><span class="rvts36">" /M /N"</span><span class="rvts34"> + </span><span class="rvts35">Пользователь</span><span class="rvts34"> + </span><span class="rvts36">" /P"</span><span class="rvts34"> + </span><span class="rvts35">Пароль</span><span class="rvts34">, </span><span class="rvts36">""</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">/D - Каталог информационной базы данных.</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">Адрес - это объект "Реквизит Диалога", в котором указан путь к каталогу базы данных</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">/M - программа запустится в МОНОПОЛЬНОМ режиме.</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">/N - имя пользователя.</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">Пользователь - это объект "Реквизит Диалога", в котором указано имя пользователя.</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">/P - пароль.</span></p>
+<p class="rvps5"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">Пароль - это объект "Реквизит Диалога", в котором указан пароль.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Открыта</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34"> Тогда </span><span class="rvts37">//проверка открытия программы 1С:Предприятие.</span></p>
+<p class="rvps6"><span class="rvts34">Предупреждение(</span><span class="rvts36">"Ошибка открытия информационной базы!"</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Возврат;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts37">// .................создаем объект "Справочник" в который </span><span class="rvts42">выгружаем</span><span class="rvts37"> данные. </span></p>
+<p class="rvps5"><span class="rvts35">Спр</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Справочник.ПолучательДанных"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts37">// ..............создаем объект "Справочник" из которого мы </span><span class="rvts42">получаем</span><span class="rvts37"> данные</span></p>
+<p class="rvps5"><span class="rvts35">ВнешнийСпр</span><span class="rvts34"> = </span><span class="rvts35">V7</span><span class="rvts34">.CreateObject(</span><span class="rvts36">"Справочник.Сотрудники"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts37">//Читаем все группы справочника</span></p>
+<p class="rvps5"><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">ВыборГруппы</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// 1 - значит выбирать группы</span></p>
+<p class="rvps5"><span class="rvts37">// Читаем все элементы справочника</span></p>
+<p class="rvps5"><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">ВыбратьЭлементы</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">); </span><span class="rvts37">// 1 - значит выбирать элементы с учетом иерархии</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЭлемент</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл /</span><span class="rvts37">/ цикл продолжается пока элемент выбран</span></p>
+<p class="rvps6"><span class="rvts37">//выгружаем данные.</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">ЭтоГруппа</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Тогда </span><span class="rvts37">// 1 - значит это Группа</span></p>
+<p class="rvps7"><span class="rvts37">//Создаем ГРУППУ</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">НоваяГруппа</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">Иначе</span></p>
+<p class="rvps7"><span class="rvts37">//Создаем ЭЛЕМЕНТ</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">Новый</span><span class="rvts34">();</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьДату</span><span class="rvts34">(РабочаяДата()); </span><span class="rvts37">//этот метод используется для </span><span class="rvts42">"Переодических"</span><span class="rvts37"> реквизитов справочника</span></p>
+<p class="rvps7"><span class="rvts37">//Идет перечень реквизитов, которые получают данные: </span></p>
+<p class="rvps7"><span class="rvts37">//СОВЕТ: При переносе данных из реквизитов "Код" = "Код" может произойти</span></p>
+<p class="rvps7"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">ошибка потери уникальности переносимого кода. </span></p>
+<p class="rvps7"><span class="rvts37">//</span><span class="rvts37"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts37">Поэтому лучше КОДЫ не переносить, пускай система создаёт их автоматически.</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> = </span><span class="rvts35">ВнешнийСпр</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts37">//..........</span></p>
+<p class="rvps7"><span class="rvts37">//..........</span></p>
+<p class="rvps7"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

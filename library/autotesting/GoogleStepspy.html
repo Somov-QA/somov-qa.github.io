@@ -1,0 +1,114 @@
+﻿
+
+<html>
+	
+<head>
+	<title>GoogleSteps.py</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GoogleStepspy");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GoogleSteps.py</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SeleniumPython.html">Selenium (Python)</a> &rsaquo;&rsaquo; <a href="PyCharm.html">Проект в PyCharm</a> &rsaquo;&rsaquo; <a href="Project1.html">Project</a> &rsaquo;&rsaquo; <a href="Support1.html">Support</a> &rsaquo;&rsaquo; <a href="StepObjects1.html">StepObjects</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="StepObjects1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="StepObjects1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Tests1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps5"><span class="rvts18">from </span><span class="rvts17">selenium </span><span class="rvts18">import </span><span class="rvts17">webdriver</span><br/><span class="rvts18">from </span><span class="rvts17">selenium.webdriver.common.by </span><span class="rvts18">import </span><span class="rvts17">By</span><br/><span class="rvts18">from </span><span class="rvts17">selenium.webdriver.common.keys </span><span class="rvts18">import </span><span class="rvts17">Keys</span><br/><span class="rvts18">from </span><span class="rvts17">Support.PageObjects.GooglePage </span><span class="rvts18">import </span><span class="rvts17">GooglePage</span><br/><span class="rvts17"></span><br/><span class="rvts18">class </span><span class="rvts17">GoogleSteps:</span><br/><span class="rvts17"> &nbsp; &nbsp;driver = </span><span class="rvts25">0</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts18">def </span><span class="rvts32">__init__</span><span class="rvts17">(</span><span class="rvts31">self</span><span class="rvts18">, </span><span class="rvts17">webdriver):</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts31">self</span><span class="rvts17">.driver = webdriver</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">def </span><span class="rvts22">setValueInSearch</span><span class="rvts17">(</span><span class="rvts31">self</span><span class="rvts18">, </span><span class="rvts17">value):</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;searchField = GooglePage.getInputSearch(</span><span class="rvts31">self</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;searchField.send_keys(value)</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;searchField.send_keys(Keys.ENTER)</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts18">def </span><span class="rvts22">getCountResultSearch</span><span class="rvts17">(</span><span class="rvts31">self</span><span class="rvts17">):</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;resultElements = GooglePage.getListResultsSearch(</span><span class="rvts31">self</span><span class="rvts17">)</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">return </span><span class="rvts33">len</span><span class="rvts17">(resultElements)</span></p>
+<p class="rvps5"><span class="rvts17"><br/></span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2020 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,157 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Для обращения к результатам бухгалтерского запроса используются такие атрибуты и функции</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic117");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Для обращения к результатам бухгалтерского запроса используются такие атрибуты и функции</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic100.html">Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic111.html">БухгалтерскиеИтоги</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic111.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic116.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic118.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Для обращения к результатам бухгалтерского запроса используются такие атрибуты и функции</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts37"> - текущий счет запроса</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;)</span><span class="rvts37"> - текущее субконто запроса.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорСчет</span><span class="rvts37"> - текущий кореспондирующий счет</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;) - </span><span class="rvts37">текущее корреспондирующее субконто запроса.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">Валюта</span><span class="rvts37"> - текущая валюта запроса.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">НачДата</span><span class="rvts37"> - начальная дата текущего периода.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КонДата</span><span class="rvts37"> - конечная дата текущего периода.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">Операция</span><span class="rvts37"> - текушая операция запроса.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Сальдо:</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНД</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;)</span><span class="rvts37"> - сальдо начальное дебетовое.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;) </span><span class="rvts37">- сальдо конечное дебетовое.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНК</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;) </span><span class="rvts37">- сальдо начальное кредитовое.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКК</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;)</span><span class="rvts37"> - сальдо конечное кредитовое.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Обороты:</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ДО</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;) </span><span class="rvts37">- дебетовый оборот по текущему счету, текущему субконто.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КО</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;)</span><span class="rvts37"> - кредитовый оборот по текущему счету, текущему субконто.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорДО</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;)</span><span class="rvts37"> - дебетовый оборот по текущему кор. счету, текущему кор. субконто.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорКО</span><span class="rvts34">(&lt;</span><span class="rvts35">типСумма</span><span class="rvts34">&gt;) </span><span class="rvts37">- кредитовый оборот по текущему кор. счету, текущему кор. субконто.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Развернутое сальдо по </span><span class="rvts32">субконто</span></p>
+<p class="rvps3"><span class="rvts35">СНДРС</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто2</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра2</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СНКРС</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто2</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра2</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СКДРС</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто2</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра2</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СККРС</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра1</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Субконто2</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипФильтра2</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts39">Развернутое сальдо по субсчетам</span></p>
+<p class="rvps3"><span class="rvts35">СНДР</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СНКР</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СКДР</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">СККР</span><span class="rvts34">(&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ТипСуммы</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Методы.</span></p>
+<p class="rvps3"><span class="rvts35">Субконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;</span><span class="rvts36">|</span><span class="rvts34">&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;) </span><span class="rvts37">//Возвращает значение субконто, соответствующее текущему итогу.</span></p>
+<p class="rvps3"><span class="rvts35">КорСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;|&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;) </span><span class="rvts37">//Возвращает значение корреспондирующего субконто, соответствующее текущему итогу.</span></p>
+<p class="rvps3"><span class="rvts35">ПредставлениеСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;|&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Краткое</span><span class="rvts34">&gt;) </span><span class="rvts37">//Возвращает cтроковое представление для субконто, соответствующего текущему итогу.</span></p>
+<p class="rvps3"><span class="rvts35">ПредставлениеКорСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;|&lt;</span><span class="rvts35">ВидСубконто</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Краткое</span><span class="rvts34">&gt;) </span><span class="rvts37">//Возвращает cтроковое представление для корреспондирующего субконто, соответствующего текущему итогу</span></p>
+<p class="rvps3"><span class="rvts35">ЭтоГруппа</span><span class="rvts34">() </span><span class="rvts37">//Определяет, является ли текущее значение группироки запроса по субконто группой или нет. Имеет смысл только для субконто типа ''справочник''.</span></p>
+<p class="rvps3"><span class="rvts35">ВыбранаПоДт</span><span class="rvts34">()</span><span class="rvts37"> //Определяет, выбран ли итог по дебету.</span></p>
+<p class="rvps3"><span class="rvts35">ВыбранаПоКт</span><span class="rvts34">() </span><span class="rvts37">//Определяет, выбран ли итог по кредиту</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

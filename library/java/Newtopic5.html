@@ -1,0 +1,112 @@
+﻿<html>
+	
+<head>
+	<title>Типы данных</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic5");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Типы данных</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Java.html">Java</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Java.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic11.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic15.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Типы данных</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Основные типы данных</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts16">byte</span><span class="rvts8"> (8 бит)</span></p>
+<p class="rvps3"><span class="rvts16">short</span><span class="rvts8"> (16 бит)</span></p>
+<p class="rvps3"><span class="rvts16">int</span><span class="rvts8"> (32 бит)</span></p>
+<p class="rvps3"><span class="rvts16">long</span><span class="rvts8"> (64 бит)</span></p>
+<p class="rvps3"><span class="rvts16">float</span><span class="rvts8"> (32 бит)</span></p>
+<p class="rvps3"><span class="rvts16">double</span><span class="rvts8"> (64 бит)</span></p>
+<p class="rvps3"><span class="rvts16">char</span><span class="rvts8"> (16 бит)</span></p>
+<p class="rvps3"><span class="rvts16">boolean</span><span class="rvts8"> (1 бит)</span></p>
+<p class="rvps3"><span class="rvts16">String</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts17">byte</span><span class="rvts8"> a;</span></p>
+<p class="rvps3"><span class="rvts17">short</span><span class="rvts8"> b = 32;</span></p>
+<p class="rvps3"><span class="rvts17">int</span><span class="rvts8"> i = 100;</span></p>
+<p class="rvps3"><span class="rvts17">int</span><span class="rvts8"> cOctl = 011;</span></p>
+<p class="rvps3"><span class="rvts17">int</span><span class="rvts8"> cHex = 0xCAFE;</span></p>
+<p class="rvps3"><span class="rvts17">long</span><span class="rvts8"> d = 123456789012345L;</span></p>
+<p class="rvps3"><span class="rvts17">float</span><span class="rvts8"> f = 3.1415926F;</span></p>
+<p class="rvps3"><span class="rvts17">double</span><span class="rvts8"> d = 1.23456789E-100;</span></p>
+<p class="rvps3"><span class="rvts17">char</span><span class="rvts8"> c = 'a';</span></p>
+<p class="rvps3"><span class="rvts17">char</span><span class="rvts8"> c = '\u0401';</span></p>
+<p class="rvps3"><span class="rvts17">char</span><span class="rvts8"> c = '\n';</span></p>
+<p class="rvps3"><span class="rvts17">boolean</span><span class="rvts8"> b = true;</span></p>
+<p class="rvps3"><span class="rvts17">int</span><span class="rvts8"> numbersData[] = {1,2,3,4,5,6,7,8,9,0};</span></p>
+<p class="rvps3"><span class="rvts17">String</span><span class="rvts8"> s1 = </span><span class="rvts14">new</span><span class="rvts8"> </span><span class="rvts17">String</span><span class="rvts8">();</span></p>
+<p class="rvps3"><span class="rvts17">String</span><span class="rvts8"> s2 = "text";</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

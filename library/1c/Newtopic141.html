@@ -1,0 +1,215 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Журнал расчетов</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic141");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Журнал расчетов</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic138.html">Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic138.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic140.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic142.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Журнал расчетов</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts36">1) </span><span class="rvts32">Журнал расчета</span><span class="rvts36"> - это средство для хранения записей расчета.</span></p>
+<p class="rvps3"><span class="rvts39">(для создания журнала расчета необходим справочник.)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">Определение</span><span class="rvts36"> и </span><span class="rvts32">изменение</span><span class="rvts36"> периода журнала расчетов</span></p>
+<p class="rvps3"><span class="rvts35">ЖР</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"ЖурналРасчетов.Зарплата"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Текущий период: "</span><span class="rvts34"> + </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">НачалоТекущегоПериода</span><span class="rvts34">() + </span><span class="rvts36">" - "</span><span class="rvts34"> + </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">КонецТекущегоПериода</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts35">НовыйПериод</span><span class="rvts34"> = </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">ПериодПоДате</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts37">// при смене периода не выполняем системные действия. (0)</span></p>
+<p class="rvps3"><span class="rvts34">Если</span><span class="rvts35"> ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьТекущийПериод</span><span class="rvts34">(</span><span class="rvts35">НовыйПериод</span><span class="rvts34">, </span><span class="rvts36">0</span><span class="rvts34">) = 1 Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Текущий период: "</span><span class="rvts34"> + </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">НачалоТекущегоПериода</span><span class="rvts34">() + </span><span class="rvts36">" - "</span><span class="rvts34"> + </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">КонецТекущегоПериода</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Ввод записи в журнал расчетов. (процедура </span><span class="rvts32">ВвестиРасчет</span><span class="rvts36">() доступна только в "модуле документа")</span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ОбработкаПроведения</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"ЖурналРасчетов.Зарплата"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = 1 Цикл</span></p>
+<p class="rvps6"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">ВвестиРасчет</span><span class="rvts34">(</span><span class="rvts35">ФИО</span><span class="rvts34">, ВидРасчета.</span><span class="rvts35">ОплатаПоОкладу</span><span class="rvts34">, </span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">, </span><span class="rvts35">Оклад</span><span class="rvts34">); &nbsp; &nbsp;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Еще один способ добавитьзапись в журнал расчетов.</span></p>
+<p class="rvps3"><span class="rvts35">ЖР</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"ЖурналРасчетов.Зарплата"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">Новая</span><span class="rvts34">(); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps5"><span class="rvts37">// перечень атрибутов.</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"Объект"</span><span class="rvts34">, </span><span class="rvts35">ФИО</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"ВидРасч"</span><span class="rvts34">, ВидРасчета.</span><span class="rvts35">ОплатаПоОкладу</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"Документ"</span><span class="rvts34">, </span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">());</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"РодительскийДокумент"</span><span class="rvts34">, </span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">());</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"ДатаНачала"</span><span class="rvts34">, </span><span class="rvts35">ДатаНач</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"ДатаОкончания",</span><span class="rvts34"> </span><span class="rvts35">ДатаКон</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"Результат"</span><span class="rvts34">, </span><span class="rvts35">Оклад</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"Фиксирована"</span><span class="rvts34">, </span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">УстановитьРеквизит</span><span class="rvts34">(</span><span class="rvts36">"Рассчитана"</span><span class="rvts34">, </span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">Записать</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Проведение расчета. (реализуется с помощью предопределенной процедуры </span><span class="rvts32">ПровестиРасчет</span><span class="rvts36">() в модуле "</span><span class="rvts32">ВидРасчета</span><span class="rvts36">")</span></p>
+<p class="rvps3"><span class="rvts34">Процедура </span><span class="rvts35">ПровестиРасчет</span><span class="rvts34">()</span></p>
+<p class="rvps5"><span class="rvts37">// Процедура выполняется при проведении расчета</span></p>
+<p class="rvps5"><span class="rvts35">Норма</span><span class="rvts34"> = Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">.</span><span class="rvts35">Дней</span><span class="rvts34">(НачМесяца(</span><span class="rvts35">ДатаНачала</span><span class="rvts34">), КонМесяца(</span><span class="rvts35">ДатаОкончания</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts35">Дни</span><span class="rvts34"> = Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">.</span><span class="rvts35">Дней</span><span class="rvts34">(</span><span class="rvts35">ДатаНачала</span><span class="rvts34">, </span><span class="rvts35">ДатаОкончания</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">Часы</span><span class="rvts34"> = Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">.</span><span class="rvts35">Часов</span><span class="rvts34">(</span><span class="rvts35">ДатаНачала</span><span class="rvts34">, </span><span class="rvts35">ДатаОкончания</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Норма</span><span class="rvts34"> &lt;&gt; </span><span class="rvts36">0</span><span class="rvts34"> тогда</span></p>
+<p class="rvps6"><span class="rvts37">// Величину оклада берем из документа.</span></p>
+<p class="rvps6"><span class="rvts35">Документ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьСтроки</span><span class="rvts34">();</span></p>
+<p class="rvps6"><span class="rvts34">Пока </span><span class="rvts35">Документ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСтроку</span><span class="rvts34">() = 1 Цикл</span></p>
+<p class="rvps7"><span class="rvts35">Результ</span><span class="rvts34"> = </span><span class="rvts35">Результ</span><span class="rvts34"> + </span><span class="rvts35">Дни</span><span class="rvts34"> / </span><span class="rvts35">Норма</span><span class="rvts34"> * </span><span class="rvts35">Документ</span><span class="rvts34">.</span><span class="rvts35">Оклад</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts38">Результат</span><span class="rvts34"> = </span><span class="rvts35">Результ</span><span class="rvts34">;</span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Запустить проведение расчета текущей записи можно двумя способами:</span></p>
+<p class="rvps3"><span class="rvts36">1. </span><span class="rvts32">В ручную</span><span class="rvts36"> (в журнале расчетов нажать кнопку "стрелочка" - расчитать запись.)</span></p>
+<p class="rvps3"><span class="rvts36">2. </span><span class="rvts32">Программно</span><span class="rvts36"> с помощью функции </span><span class="rvts35">ВыполнитьРасчет</span><span class="rvts34">()</span></p>
+<p class="rvps3"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">ВыбратьПериод</span><span class="rvts34">(</span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">НачалоТекущегоПериода</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗапись</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34"> = </span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">() Тогда</span></p>
+<p class="rvps6"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">ВыполнитьРасчет</span><span class="rvts34">();</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получим сумму </span><span class="rvts32">всех начислений</span><span class="rvts36"> по сотруднику.</span></p>
+<p class="rvps3"><span class="rvts35">ЖР</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"ЖурналРасчетов.Зарплата"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">ВыбратьЗаписи</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Сум</span><span class="rvts34"> = </span><span class="rvts36">0</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts38">ПолучитьЗапись</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">Объект</span><span class="rvts34"> &lt;&gt; </span><span class="rvts35">Сотрудник</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts34">Продолжить;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">ВидРасч</span><span class="rvts34">.</span><span class="rvts35">ВходитВГруппу</span><span class="rvts34">(ГруппаРасчетов.</span><span class="rvts35">ГруппаОплПоОкл</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Сум</span><span class="rvts34"> = </span><span class="rvts35">Сум</span><span class="rvts34"> + </span><span class="rvts35">ЖР</span><span class="rvts34">.</span><span class="rvts35">Результат</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сумма всех начислений сотрудника "</span><span class="rvts34"> + </span><span class="rvts35">Сотрудник</span><span class="rvts34"> + </span><span class="rvts36">" составила: &nbsp;"</span><span class="rvts34"> + </span><span class="rvts35">Сум</span><span class="rvts34">);</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">2) Использование </span><span class="rvts32">ЗАПРОСА</span><span class="rvts36"> при работе с записями </span><span class="rvts32">журнала расчетов</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получим сумму </span><span class="rvts32">всех начислений</span><span class="rvts36"> по сотруднику. (с использованием запроса.)</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts34"> = </span><span class="rvts36">"//{{ЗАПРОС(ЗапросПоНачислениям) </span></p>
+<p class="rvps3"><span class="rvts39">|Период С ДатаНач По ДатаКон;</span></p>
+<p class="rvps3"><span class="rvts39">|Объект = ЖурналРасчетов.Зарплата.Объект;</span></p>
+<p class="rvps3"><span class="rvts39">|ВидРасч = ЖурналРасчетов.Зарплата.ВидРасч;</span></p>
+<p class="rvps3"><span class="rvts39">|Результат = ЖурналРасчетов.Зарплата.Результат;</span></p>
+<p class="rvps3"><span class="rvts39">|Функция Сум = Сумма(Результат);</span></p>
+<p class="rvps3"><span class="rvts39">|Группировка Объект;</span></p>
+<p class="rvps3"><span class="rvts39">|Условие(ВидРасч.ВходитВГруппу(ГруппаРасчетов.ГруппаОплПоОкл)=1);</span></p>
+<p class="rvps3"><span class="rvts36">|"</span><span class="rvts34">; </span><span class="rvts37">//}}ЗАПРОС</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">) = </span><span class="rvts36">0</span><span class="rvts34"> Тогда </span></p>
+<p class="rvps5"><span class="rvts34">Возврат; </span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Группировка</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сумма всех начислений сотрудника "</span><span class="rvts34"> + </span><span class="rvts35">Сотрудник </span><span class="rvts34">+ </span><span class="rvts36">" составила: &nbsp;"</span><span class="rvts34"> + </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Сум</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

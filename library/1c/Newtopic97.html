@@ -1,0 +1,177 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Использование запроса для отбора данных из документов с последующей передачей их в &quot;Таблицу&quot;</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic97");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Использование запроса для отбора данных из документов с последующей передачей их в &quot;Таблицу&quot;</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic95.html">Таблица</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic95.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic96.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic98.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Использование запроса для отбора данных из документов с последующей передачей их в "Таблицу"</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Перем </span><span class="rvts35">Запрос</span><span class="rvts34">, </span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">, </span><span class="rvts35">таб</span><span class="rvts34">; </span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Контр</span><span class="rvts34">.</span><span class="rvts35">Выбран</span><span class="rvts34">()=0 Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Не выбран контрагент"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Возврат;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34">=СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ТекстЗапроса</span><span class="rvts41"> </span><span class="rvts34">=</span><span class="rvts36"> " //{{ЗАПРОС(Тест)</span></p>
+<p class="rvps3"><span class="rvts39">|Период с НачДата по КонДата;</span></p>
+<p class="rvps3"><span class="rvts39">|КонтрРН=Документ.РасходнаяНакладная.Контрагент;</span></p>
+<p class="rvps3"><span class="rvts39">|КонтрВН=Документ.ВозвратнаяНакладная.Контрагент;</span></p>
+<p class="rvps3"><span class="rvts39">|КонтрБВ=Документ.БанковскаяВыписка.Субконто;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|ДокРН=Документ.РасходнаяНакладная.ТекущийДокумент;</span></p>
+<p class="rvps3"><span class="rvts39">|ДокВН=Документ.ВозвратнаяНакладная.ТекущийДокумент;</span></p>
+<p class="rvps3"><span class="rvts39">|ДокБВ=Документ.БанковскаяВыписка.ТекущийДокумент;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|СуммаСНДСРН=Документ.РасходнаяНакладная.СуммаСНДС;</span></p>
+<p class="rvps3"><span class="rvts39">|СуммаСНДСВН=Документ.ВозвратнаяНакладная.СуммаСНДС;</span></p>
+<p class="rvps3"><span class="rvts39">|СуммаСНДСБВ=Документ.БанковскаяВыписка.СуммаСНДС;</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|функция СуммаРН=Сумма(СуммаСНДСРН);</span></p>
+<p class="rvps3"><span class="rvts39">|функция СуммаВН=Сумма(СуммаСНДСВН);</span></p>
+<p class="rvps3"><span class="rvts39">|функция СуммаБВ=Сумма(СуммаСНДСБВ);</span></p>
+<p class="rvps3"><span class="rvts39"><br/></span></p>
+<p class="rvps3"><span class="rvts39">|Группировка Документ;</span></p>
+<p class="rvps3"><span class="rvts39">|Условие (контрРН в контр);</span></p>
+<p class="rvps3"><span class="rvts36">|" </span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">)=</span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Возврат;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">таб</span><span class="rvts34">=СоздатьОбъект(</span><span class="rvts36">"Таблица"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">таб</span><span class="rvts34">.</span><span class="rvts35">ИсходнаяТаблица</span><span class="rvts34">(</span><span class="rvts36">"Таблица1"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ВывестиСекцию</span><span class="rvts34">(</span><span class="rvts36">"Заголовок"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Состояние(</span><span class="rvts36">"Заполнение выходной таблицы..."</span><span class="rvts34">); </span><span class="rvts37">// Вывести сообщение в строку состояния.</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Группировка</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл &nbsp; &nbsp;</span><span class="rvts37">// Обращаемся к греппировке Документ, то есть к перечню выбранных запросом документов</span></p>
+<p class="rvps5"><span class="rvts37">// определяем выводимые документы (Расходная накладная) (Банковская выписка) (Возвратная накладная) </span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокРН</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts42">// Правило!!! Сначала отправляем значение в ячейку с именем, а потом уже выводим секцию!</span></p>
+<p class="rvps6"><span class="rvts35">ДокументРН</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокРН</span><span class="rvts34">; &nbsp;</span><span class="rvts37">// ДокументРН - это имя ячейки с типом "Выражение", которая полечит Расходную накладную.</span></p>
+<p class="rvps6"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ВывестиСекцию</span><span class="rvts34">(</span><span class="rvts36">"рн"</span><span class="rvts34">); </span><span class="rvts37">// горизонтальная секция с именем "рн"</span><span class="rvts34"> &nbsp;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли; </span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокБВ</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts42">// Правило!!! Сначала отправляем значение в ячейку с именем, а потом уже выводим секцию!</span></p>
+<p class="rvps6"><span class="rvts35">ДокументБВ</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокБВ</span><span class="rvts34">; </span><span class="rvts37">// ДокументБВ - это имя ячейки с типом "Выражение", которая полечит Банковскую выписку.</span></p>
+<p class="rvps6"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ВывестиСекцию</span><span class="rvts34">(</span><span class="rvts36">"бв"</span><span class="rvts34">); </span><span class="rvts37">// горизонтальная секция с именем "бв" &nbsp;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли; </span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокВН</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts42">// Правило!!! Сначала отправляем значение в ячейку с именем, а потом уже выводим секцию!</span></p>
+<p class="rvps6"><span class="rvts35">ДокументВН</span><span class="rvts34"> = </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ДокВН</span><span class="rvts34">; </span><span class="rvts37">// ДокументВН - это имя ячейки с типом "Выражение", которая полечит Возвратную накладную.</span></p>
+<p class="rvps6"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ВывестиСекцию</span><span class="rvts34">(</span><span class="rvts36">"вн"</span><span class="rvts34">); </span><span class="rvts37">// горизонтальная секция с именем "вн"&nbsp;</span><span class="rvts34"> </span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts42">// Правило!!! Сначала отправляем значение в ячейку с именем, а потом уже выводим секцию!</span></p>
+<p class="rvps3"><span class="rvts35">СуммаД</span><span class="rvts34">=(</span><span class="rvts35">запрос</span><span class="rvts34">.</span><span class="rvts35">СуммаВН</span><span class="rvts34">+</span><span class="rvts35">запрос</span><span class="rvts34">.</span><span class="rvts35">СуммаБВ</span><span class="rvts34">); </span><span class="rvts37">// СуммаД - это имя ячейки с типом "Выражение", которая получает значение.</span></p>
+<p class="rvps3"><span class="rvts35">СуммаК</span><span class="rvts34">=</span><span class="rvts35">запрос</span><span class="rvts34">.</span><span class="rvts35">СуммаРН</span><span class="rvts34">; </span><span class="rvts37">// СуммаК - это имя ячейки с типом "Выражение", которая получает значение.</span></p>
+<p class="rvps3"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ВывестиСекцию</span><span class="rvts34">(</span><span class="rvts36">"Итого"</span><span class="rvts34">); </span><span class="rvts37">// горизонтальная секция "Итого".</span></p>
+<p class="rvps3"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">ТолькоПросмотр</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Таб</span><span class="rvts34">.</span><span class="rvts35">Показать</span><span class="rvts34">(</span><span class="rvts36">"Акт сверки взаиморасчетов"</span><span class="rvts34">,</span><span class="rvts36">""</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

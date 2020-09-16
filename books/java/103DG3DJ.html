@@ -1,0 +1,104 @@
+﻿<html>
+	
+<head>
+	<title>10. Отображение анимационных 3D моделей G3DJ формате</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "libGDX.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("103DG3DJ");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">10. Отображение анимационных 3D моделей G3DJ формате</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="libGDX5.html">Практика libGDX</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="libGDX5.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="9G3DJ.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="113D.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">1) Получаем объект в формате FBX и конвертируем его как описано в главе 8. Конвертирование FBX в G3DB/G3DJ</span></p>
+<p class="rvps3"><span class="rvts8">2) Скопируем в папку assets наш объект, файл объекта *.g3dj и файл текстуры *.png</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem30.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">3) Создаём новую папку testAnim3D и новый класс TestAnim3D интерфейс которого Screen</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem31.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">4) Класс TestAnim3D в конструкторе создаёт камеру, свет, привязываем событие вращения камерой.</span></p>
+<p class="rvps3"><span class="rvts8">C помощью G3dModelLoader читается файл объекта g3dj (формат json) и создаём экземпляр ModelInstance.</span></p>
+<p class="rvps3"><span class="rvts8">Чтобы воспроизвести анимацию нужно использовать AnimationController. Запуск анимации осуществляется методом setAnimation("Take 001", -1); в котором первый параметр это идентификатор анимации, а второй параметр это количество повторов (значение -1 означает постоянный повтор анимации)</span></p>
+<p class="rvps3"><span class="rvts8">О том как выбрать определённую часть анимации будет рассказано в следующей главе. </span><a class="rvts22" href="113D.html">11. Выбор диапазона 3D анимации</a></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps9"><span class="rvts24">package </span><span class="rvts25">com.mygdx.game.testAnim3D</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.Files</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.Gdx</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.Screen</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.GL20</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.PerspectiveCamera</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.Environment</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.Model</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.ModelBatch</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.ModelInstance</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.loader.G3dModelLoader</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.utils.AnimationController</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.graphics.g3d.utils.CameraInputController</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.badlogic.gdx.utils.JsonReader</span><span class="rvts24">;</span><br/><span class="rvts24">import </span><span class="rvts25">com.mygdx.game.MyGdxGame</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts29">/**</span><br/><span class="rvts29"> * Created by Cartish on 11.10.2016.</span><br/><span class="rvts29"> */</span><br/><span class="rvts29"></span><br/><span class="rvts24">public class </span><span class="rvts25">TestAmin3D </span><span class="rvts24">implements </span><span class="rvts25">Screen {</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts24">final </span><span class="rvts25">MyGdxGame </span><span class="rvts27">game</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">PerspectiveCamera </span><span class="rvts27">camera</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">ModelBatch </span><span class="rvts27">modelBatch</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">Model </span><span class="rvts27">model</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">ModelInstance </span><span class="rvts27">modelInstance</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">Environment </span><span class="rvts27">environment</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;private </span><span class="rvts25">AnimationController </span><span class="rvts27">controller</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp;public </span><span class="rvts25">CameraInputController </span><span class="rvts27">camController</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp;public </span><span class="rvts26">TestAmin3D</span><span class="rvts25">(</span><span class="rvts24">final </span><span class="rvts25">MyGdxGame myGdxGame) {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">game </span><span class="rvts25">= myGdxGame</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">PerspectiveCamera(</span><span class="rvts28">75</span><span class="rvts24">, </span><span class="rvts25">Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getWidth()</span><span class="rvts24">, </span><span class="rvts25">Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getHeight())</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.</span><span class="rvts27">position</span><span class="rvts25">.set(</span><span class="rvts28">0f</span><span class="rvts24">,</span><span class="rvts28">0f</span><span class="rvts24">,</span><span class="rvts28">1000f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.lookAt(</span><span class="rvts28">0f</span><span class="rvts24">,</span><span class="rvts28">0f</span><span class="rvts24">,</span><span class="rvts28">0f</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.</span><span class="rvts27">near </span><span class="rvts25">= </span><span class="rvts28">0.1f</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.</span><span class="rvts27">far </span><span class="rvts25">= </span><span class="rvts28">30000.0f</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.update()</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camController </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">CameraInputController(</span><span class="rvts27">camera</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">Gdx.</span><span class="rvts30">input</span><span class="rvts25">.setInputProcessor(</span><span class="rvts27">camController</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelBatch </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">ModelBatch()</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts33">// D3DJ ------------------------------------------------------</span><br/><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">G3dModelLoader modelLoader = </span><span class="rvts24">new </span><span class="rvts25">G3dModelLoader(</span><span class="rvts24">new </span><span class="rvts25">JsonReader())</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">model </span><span class="rvts25">= modelLoader.loadModel(Gdx.</span><span class="rvts30">files</span><span class="rvts25">.getFileHandle(</span><span class="rvts31">"anim3D/PIB_all_v06.g3dj"</span><span class="rvts24">, </span><span class="rvts25">Files.FileType.</span><span class="rvts30">Internal</span><span class="rvts25">))</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelInstance </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">ModelInstance(</span><span class="rvts27">model</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts33">// ------------------------------------------------------------</span><br/><span class="rvts33"></span><br/><span class="rvts33"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">environment </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">Environment()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">environment</span><span class="rvts25">.set(</span><span class="rvts24">new </span><span class="rvts25">ColorAttribute(ColorAttribute.</span><span class="rvts30">AmbientLight</span><span class="rvts24">, </span><span class="rvts28">0.8f</span><span class="rvts24">, </span><span class="rvts28">0.8f</span><span class="rvts24">, </span><span class="rvts28">0.8f</span><span class="rvts24">, </span><span class="rvts28">1.0f</span><span class="rvts25">))</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">controller </span><span class="rvts25">= </span><span class="rvts24">new </span><span class="rvts25">AnimationController(</span><span class="rvts27">modelInstance</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">controller</span><span class="rvts25">.setAnimation(</span><span class="rvts31">"Take 001"</span><span class="rvts24">, </span><span class="rvts25">-</span><span class="rvts28">1</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">show</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">render</span><span class="rvts25">(</span><span class="rvts24">float </span><span class="rvts25">delta) {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;Gdx.</span><span class="rvts30">gl</span><span class="rvts25">.glViewport(</span><span class="rvts28">0</span><span class="rvts24">, </span><span class="rvts28">0</span><span class="rvts24">, </span><span class="rvts25">Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getWidth()</span><span class="rvts24">, </span><span class="rvts25">Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getHeight())</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">Gdx.</span><span class="rvts30">gl</span><span class="rvts25">.glClearColor(</span><span class="rvts28">1</span><span class="rvts24">, </span><span class="rvts28">1</span><span class="rvts24">, </span><span class="rvts28">1</span><span class="rvts24">, </span><span class="rvts28">1</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">Gdx.</span><span class="rvts30">gl</span><span class="rvts25">.glClear(GL20.</span><span class="rvts30">GL_COLOR_BUFFER_BIT </span><span class="rvts25">| GL20.</span><span class="rvts30">GL_DEPTH_BUFFER_BIT</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">camera</span><span class="rvts25">.update()</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">controller</span><span class="rvts25">.update(Gdx.</span><span class="rvts30">graphics</span><span class="rvts25">.getDeltaTime())</span><span class="rvts24">;</span><br/><span class="rvts24"></span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelBatch</span><span class="rvts25">.begin(</span><span class="rvts27">camera</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelBatch</span><span class="rvts25">.render(</span><span class="rvts27">modelInstance</span><span class="rvts24">, </span><span class="rvts27">environment</span><span class="rvts25">)</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelBatch</span><span class="rvts25">.end()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">resize</span><span class="rvts25">(</span><span class="rvts24">int </span><span class="rvts25">width</span><span class="rvts24">, int </span><span class="rvts25">height) { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">pause</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">resume</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">hide</span><span class="rvts25">() { &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts32">@Override</span><br/><span class="rvts32"> &nbsp; &nbsp;</span><span class="rvts24">public void </span><span class="rvts26">dispose</span><span class="rvts25">() {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">modelBatch</span><span class="rvts25">.dispose()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">model</span><span class="rvts25">.dispose()</span><span class="rvts24">;</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts25">}</span><br/><span class="rvts25">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Если всё было сделано правильно в результате вы увидите анимацию кота.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem32.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">О том как выбрать определённую часть анимации будет рассказано в следующей главе. </span><a class="rvts22" href="113D.html">11. Выбор диапазона 3D</a><span class="rvts8"> анимации</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

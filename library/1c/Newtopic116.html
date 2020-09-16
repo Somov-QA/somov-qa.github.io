@@ -1,0 +1,150 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Обращение к результатам запроса</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic116");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Обращение к результатам запроса</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic100.html">Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic111.html">БухгалтерскиеИтоги</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic111.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic115.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic117.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Обращение к результатам запроса.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"> Для перебора группировок используются следующие функции.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьСчета</span><span class="rvts34">(&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">РазвСальдо</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьСчет</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьКорСчета</span><span class="rvts34">(&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьКорСчет</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Счет</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьВалюты</span><span class="rvts34">(&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">РазвСальдо</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Сортировка</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьВалюту</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Валюта</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьПериоды</span><span class="rvts34">(&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">РазвСальдо</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьПериод</span><span class="rvts34">(&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ДатаНачалаПериода</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Индекс</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">РазвСальдо</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Сортировка</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ОбратныйПорядок</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Индекс</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Значение</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ВыбратьКорСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Индекс</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагВсе</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ФлагДК</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Сортировка</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">ОбратныйПорядок</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts35">ПолучитьКорСубконто</span><span class="rvts34">(&lt;</span><span class="rvts35">Индекс</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Номер</span><span class="rvts34">&gt;,&lt;</span><span class="rvts35">Значение</span><span class="rvts34">&gt;)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">ПРИМЕР: Первый режим доступа к результатам запроса. </span><span class="rvts32">Перебор счетов</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ВыбратьСчет</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ПолучитьСчет</span><span class="rvts34">() = 1 Цикл</span></p>
+<p class="rvps5"><span class="rvts37">// …</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">ПРИМЕР: Второй режим доступа к результатам запроса. </span><span class="rvts32">Поиск</span><span class="rvts36"> в выборке счета по значению.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ПолучитьСчет</span><span class="rvts34">(,СчетПоКоду(</span><span class="rvts36">"28.1"</span><span class="rvts34">)) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда &nbsp;</span><span class="rvts37">// Поиск бухгалтерского счета по коду</span></p>
+<p class="rvps5"><span class="rvts37">// …</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

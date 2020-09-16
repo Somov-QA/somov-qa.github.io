@@ -1,0 +1,155 @@
+﻿
+
+<html>
+	
+<head>
+	<title>ДеревоЗначений</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic15");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">ДеревоЗначений</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic14.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic9.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Дерево значений</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Представляет собой дерево значений</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps3"><span class="rvts14">Процедура </span><span class="rvts15">ТестДеревоЗначений</span><span class="rvts14">()</span></p>
+<p class="rvps5"><span class="rvts15">ДеревоЗн</span><span class="rvts14"> = Новый </span><span class="rvts15">ДеревоЗначений</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts18">// Добавить колонки</span></p>
+<p class="rvps5"><span class="rvts15">ДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Колонки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts16">"Год"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts15">ДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Колонки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts8">"Месяц"</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts15">ДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Колонки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts16">"Факт"</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts18">// Добавить строки</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14"> = </span><span class="rvts15">ДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Строки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Год</span><span class="rvts14"> = </span><span class="rvts16">"2017"</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Месяц</span><span class="rvts14"> = </span><span class="rvts16">"Все месяцы"</span><span class="rvts14">;</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Факт</span><span class="rvts14"> = </span><span class="rvts16">100</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts18">// Вложенные строки (подченённая строка)</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗнП</span><span class="rvts14"> = </span><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Строки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗнП</span><span class="rvts14">.</span><span class="rvts15">Месяц</span><span class="rvts14"> = </span><span class="rvts16">"Янв"</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗнП</span><span class="rvts14"> = </span><span class="rvts15">СтрокаДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Строки</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps5"><span class="rvts15">СтрокаДеревоЗнП</span><span class="rvts14">.</span><span class="rvts15">Месяц</span><span class="rvts14"> = </span><span class="rvts16">"Фев"</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts18">// Обход дерева значений </span></p>
+<p class="rvps5"><span class="rvts15">ОбработатьДерево</span><span class="rvts14">(</span><span class="rvts15">ДеревоЗн</span><span class="rvts14">.</span><span class="rvts15">Строки</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts18">// Преобразование объекта в реквизит форма</span></p>
+<p class="rvps5"><span class="rvts15">ЗначениеВДанныеФормы</span><span class="rvts14">(</span><span class="rvts15">ДеревоЗн</span><span class="rvts14">, </span><span class="rvts15">ДеревоЗначенийНаФорме</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps3"><span class="rvts14">Процедура </span><span class="rvts15">ОбработатьДерево</span><span class="rvts14">(</span><span class="rvts15">Строки</span><span class="rvts14">)</span></p>
+<p class="rvps5"><span class="rvts14">Для каждого </span><span class="rvts15">СтрЗнач</span><span class="rvts14"> Из </span><span class="rvts15">Строки</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps6"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">СтрЗнач</span><span class="rvts14">.</span><span class="rvts15">Год</span><span class="rvts14"> + </span><span class="rvts16">":"</span><span class="rvts14"> + </span><span class="rvts15">СтрЗнач</span><span class="rvts14">.</span><span class="rvts15">Месяц</span><span class="rvts14">);</span></p>
+<p class="rvps6"><span class="rvts15">ОбработатьДерево</span><span class="rvts14">(</span><span class="rvts15">СтрЗнач</span><span class="rvts14">.</span><span class="rvts15">Строки</span><span class="rvts14">);</span></p>
+<p class="rvps5"><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

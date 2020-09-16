@@ -1,0 +1,127 @@
+﻿<html>
+	
+<head>
+	<title>Интерфейсы</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic23");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Интерфейсы</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Java.html">Java</a> &rsaquo;&rsaquo; <a href="Newtopic17.html">Классы</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic17.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic22.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Интерфейсы</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts14">interface</span><span class="rvts15"> IApple {</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">String</span><span class="rvts15"> red = </span><span class="rvts18">"red"</span><span class="rvts15">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">String</span><span class="rvts15"> yellow =</span><span class="rvts18"> "yellow"</span><span class="rvts15">;</span></p>
+<p class="rvps5"><span class="rvts17">String</span><span class="rvts15"> green = </span><span class="rvts18">"green"</span><span class="rvts15">;</span></p>
+<p class="rvps3"><span class="rvts15">}</span></p>
+<p class="rvps3"><span class="rvts15"><br/></span></p>
+<p class="rvps3"><span class="rvts14">interface</span><span class="rvts15"> ITangerine {</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">String</span><span class="rvts15"> orange = </span><span class="rvts18">"red"</span><span class="rvts15">;</span></p>
+<p class="rvps3"><span class="rvts15">}</span></p>
+<p class="rvps3"><span class="rvts15"><br/></span></p>
+<p class="rvps3"><span class="rvts14">interface</span><span class="rvts15"> IFruits </span><span class="rvts14">extends</span><span class="rvts15"> IApple, ITangerine &nbsp;{</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">String</span><span class="rvts15"> fruit1 = </span><span class="rvts18">"Apple"</span><span class="rvts15">;</span></p>
+<p class="rvps5"><span class="rvts17">String</span><span class="rvts15"> fruit2 = </span><span class="rvts18">"Tangerine"</span><span class="rvts15">;</span></p>
+<p class="rvps5"><span class="rvts14">void</span><span class="rvts15"> setFruit (</span><span class="rvts17">int</span><span class="rvts15"> number1, </span><span class="rvts17">int</span><span class="rvts15"> number2);</span></p>
+<p class="rvps5"><span class="rvts17">String</span><span class="rvts15"> getFruit();</span></p>
+<p class="rvps3"><span class="rvts15">}</span></p>
+<p class="rvps3"><span class="rvts15"><br/></span></p>
+<p class="rvps3"><span class="rvts14">class</span><span class="rvts15"> MyFruits </span><span class="rvts9">implements</span><span class="rvts15"> IFruits {</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">String</span><span class="rvts15"> name;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">public</span><span class="rvts15"> </span><span class="rvts14">String</span><span class="rvts15"> getFruit() {</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">return</span><span class="rvts15"> "Fruit: " + </span><span class="rvts14">this</span><span class="rvts15">.name;</span></p>
+<p class="rvps5"><span class="rvts15">}</span></p>
+<p class="rvps5"><span class="rvts15"><br/></span></p>
+<p class="rvps5"><span class="rvts14">public void</span><span class="rvts15"> setFruit (</span><span class="rvts17">int</span><span class="rvts15"> number1, </span><span class="rvts17">int</span><span class="rvts15"> number2){</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">switch</span><span class="rvts15">(number1){</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">case</span><span class="rvts15"> 0:</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts15">.name = </span><span class="rvts14">this</span><span class="rvts15">.fruit1;</span></p>
+<p class="rvps6"><span class="rvts14">break</span><span class="rvts15">;</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">case</span><span class="rvts15"> 1:</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts15">.name = </span><span class="rvts14">this</span><span class="rvts15">.fruit2;</span></p>
+<p class="rvps6"><span class="rvts14">break</span><span class="rvts15">;</span></p>
+<p class="rvps7"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">default</span><span class="rvts15">:</span></p>
+<p class="rvps7"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts15">.name = </span><span class="rvts14">this</span><span class="rvts15">.fruit1;</span></p>
+<p class="rvps7"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">break</span><span class="rvts15">;</span></p>
+<p class="rvps7"><span class="rvts15">}</span></p>
+<p class="rvps5"><span class="rvts15">}</span></p>
+<p class="rvps5"><span class="rvts15"><br/></span></p>
+<p class="rvps5"><span class="rvts14">public static void</span><span class="rvts15"> main (</span><span class="rvts17">String</span><span class="rvts15"> args[]){</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">MyFruits</span><span class="rvts15"> mf1 = </span><span class="rvts14">new</span><span class="rvts15"> </span><span class="rvts17">MyFruits</span><span class="rvts15">();</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">MyFruits</span><span class="rvts15">.setFruit(0, 2);</span></p>
+<p class="rvps5"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">System.out.println(</span><span class="rvts17">MyFruits</span><span class="rvts15">.getFruit());</span></p>
+<p class="rvps5"><span class="rvts15">}</span></p>
+<p class="rvps3"><span class="rvts15">}</span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

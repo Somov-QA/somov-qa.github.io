@@ -1,0 +1,212 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Примеры использования бухгалтерского запроса</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic123");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Примеры использования бухгалтерского запроса</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic100.html">Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic111.html">БухгалтерскиеИтоги</a> &rsaquo;&rsaquo; <a href="Newtopic122.html">Примеры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic122.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic122.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="4.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Примеры использования бухгалтерского запроса</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts54">1) Оборотно - сальдовая ведомость.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">); </span><span class="rvts37">// Выполнить отбор и расчет итогов по параметрам</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьСчета</span><span class="rvts34">(); </span><span class="rvts37">// Открывает выборку счетов, для которых были получены итоги.</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСчет</span><span class="rvts34">()=1 Цикл </span><span class="rvts37">// Получить из выборки следующий счет.</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts37">// СНД - возвращает дебетовое сальдо по счету на начало периода, </span></p>
+<p class="rvps5"><span class="rvts37">// СНК - возвращает кредитовое сальдо по счету на начало периода</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сальдо на начало по дебету: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">) + </span><span class="rvts36">" по кредиту: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНК</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts37">// СКД - возвращает дебетовое сальдо по счету на конец периода, </span></p>
+<p class="rvps5"><span class="rvts37">// СКК - возвращает кредитовое сальдо по счету на конец периода.</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сальдо на конец &nbsp;по дебету: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">) + </span><span class="rvts36">" по кредиту: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКК</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">2) Анализ счета.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">, </span><span class="rvts35">ВыбСчет</span><span class="rvts34">,,,</span><span class="rvts36">3</span><span class="rvts34">); </span><span class="rvts37">// 3 - это тип отбираемых итогов (остатки и обороты по счету в целом и обороты между счетами)</span></p>
+<p class="rvps3"><span class="rvts37">// или можно </span><span class="rvts42">БИ.ВыполнитьЗапрос(НачДата, КонДата, "28.1",,,3); </span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСчет</span><span class="rvts34">(,</span><span class="rvts35">ВыбСчет</span><span class="rvts34">)=</span><span class="rvts36">1</span><span class="rvts34"> Тогда &nbsp;</span><span class="rvts37">// или можно </span><span class="rvts42">Если БИ.ПолучитьСчет(,"28.1")=1 Тогда</span><span class="rvts37"> </span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Анализ счета: "</span><span class="rvts34"> + </span><span class="rvts35">ВыбСчет</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сальдо начальное по дебету: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">) + </span><span class="rvts36">" по кредиту: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНК</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">)); </span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps5"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьКорСчета</span><span class="rvts34">(); </span><span class="rvts37">// Открывает выборку корреспондирующих счетов, для которых были получены итоги.</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьКорСчет</span><span class="rvts34">()=</span><span class="rvts36">1</span><span class="rvts34"> Цикл </span><span class="rvts37">// Получить из выборки следующий корреспондирующий счет.</span></p>
+<p class="rvps6"><span class="rvts35">ТекКорСчет</span><span class="rvts34"> = </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорСчет</span><span class="rvts34">; </span><span class="rvts37">// Корреспондирующий счет</span></p>
+<p class="rvps6"><span class="rvts37">// КорДО - Возвращает дебетовый оборот между корреспонденциями</span></p>
+<p class="rvps6"><span class="rvts37">// КорКО - Возвращает кредитовый оборот между корреспонденциями</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Оборот по счетам: "</span><span class="rvts34"> + </span><span class="rvts35">ТекКорСчет </span><span class="rvts34">+ </span><span class="rvts36">" по дебету: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорДО</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">) + </span><span class="rvts36">" по кредиту: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорКО</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Сальдо конечное по дебету: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">) + </span><span class="rvts36">" по кредиту: "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКК</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">)); </span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">3) Оборотно сальдовая ведомость по счету. </span><span class="rvts36">(с детализацией по субконто)</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьСубконто</span><span class="rvts34">(</span><span class="rvts36">"Номенклатура"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">, </span><span class="rvts36">"41.1"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Товар"</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">Субконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">).</span><span class="rvts38">Наименование</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Остаток на начало равен "</span><span class="rvts34"> + Строка(</span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНД</span><span class="rvts34">(</span><span class="rvts36">"К"</span><span class="rvts34">)) + </span><span class="rvts36">"ед. на сумму "</span><span class="rvts34"> + Строка(</span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СНД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">)));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Остаток на конец равен "</span><span class="rvts34"> + Строка(</span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(</span><span class="rvts36">"К"</span><span class="rvts34">)) + </span><span class="rvts36">"ед. на сумму "</span><span class="rvts34"> + Строка(</span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">)));</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">4) Обороты между счетами с детализацией по субконто.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьСубконто</span><span class="rvts34">(</span><span class="rvts36">"Номенклатура"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ИспользоватьКорСубконто</span><span class="rvts34">(</span><span class="rvts36">"Номенклатура"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">, </span><span class="rvts36">"41.1"</span><span class="rvts34">,</span><span class="rvts36"> "60.1"</span><span class="rvts34">,,</span><span class="rvts36">3</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">Товар</span><span class="rvts34"> = </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">Субконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ВыбратьКорСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ПолучитьКорСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps6"><span class="rvts35">Поставщик</span><span class="rvts34"> = </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">КорСубконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Поставщик "</span><span class="rvts34"> + </span><span class="rvts35">Поставщик</span><span class="rvts34"> + </span><span class="rvts36">" поставил товар "</span><span class="rvts34"> + </span><span class="rvts35">Товар</span><span class="rvts34"> + </span><span class="rvts36">" на сумму "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">КорДО</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">5) Получение информации с валютного счет.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">, </span><span class="rvts36">"52"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ВыбратьВалюты</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ПолучитьВалюту</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"На счете имеется остаток "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">СКД</span><span class="rvts34">(</span><span class="rvts36">"В"</span><span class="rvts34">) + </span><span class="rvts36">" " </span><span class="rvts34">+ </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">Валюта</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">6) Промежуточные итоги.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts36">'01.01.2005'</span><span class="rvts34">,</span><span class="rvts36">'31.12.2005'</span><span class="rvts34">, </span><span class="rvts36">"41.1"</span><span class="rvts34">,,,,</span><span class="rvts36"> "Месяц"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ВыбратьПериод</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">ПолучитьПериод</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"За период с "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">НачДата</span><span class="rvts34"> + </span><span class="rvts36">" по " </span><span class="rvts34">+ </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">КонДата</span><span class="rvts34"> + </span><span class="rvts36">" поступило товара на сумму "</span><span class="rvts34"> + </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ДО</span><span class="rvts34">(</span><span class="rvts36">"С"</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts54">7) Извлечение проводок и операций.</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34"> = </span><span class="rvts35">СоздатьОбъект</span><span class="rvts34">(</span><span class="rvts36">"БухгалтерскиеИтоги"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыполнитьЗапрос</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">, </span><span class="rvts36">"66.4,66.44"</span><span class="rvts34">,</span><span class="rvts36"> "91.2"</span><span class="rvts34">,,,</span><span class="rvts36">"</span><span class="rvts32">Проводка</span><span class="rvts36">"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ВыбратьПериод</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПериод</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">Оп</span><span class="rvts34"> = </span><span class="rvts35">БИ</span><span class="rvts34">.</span><span class="rvts38">Операция</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts34">Если (</span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"91.2"</span><span class="rvts34">)) и (</span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.4"</span><span class="rvts34">)) или (</span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.44"</span><span class="rvts34">)) Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Договор</span><span class="rvts34"> = </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">3</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">Договор</span><span class="rvts34">.</span><span class="rvts35">ДатаОкончания</span><span class="rvts34"> &gt; </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">ДатаОперации</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps7"><span class="rvts35">ПечатьКлиент</span><span class="rvts34"> = </span><span class="rvts35">Договор</span><span class="rvts34">.</span><span class="rvts35">Заимодавец</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ПечатьАгент</span><span class="rvts34"> = </span><span class="rvts35">Договор</span><span class="rvts34">.</span><span class="rvts35">Агент</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ПечатьДоговор</span><span class="rvts34"> = </span><span class="rvts35">Договор</span><span class="rvts34">.</span><span class="rvts35">НомерДок</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ПечатьДата</span><span class="rvts34"> = </span><span class="rvts35">Договор</span><span class="rvts34">.</span><span class="rvts35">ДатаДок</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts35">ПечатьСумма</span><span class="rvts34"> = </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts34">Если </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34"> = СчетПоКоду(</span><span class="rvts36">"66.4"</span><span class="rvts34">) Тогда</span></p>
+<p class="rvps9"><span class="rvts35">ПечатьПроцент</span><span class="rvts34"> = </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">Сумма</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts34">Иначе</span></p>
+<p class="rvps9"><span class="rvts35">ПечатьПроцент</span><span class="rvts34"> = </span><span class="rvts35">Оп</span><span class="rvts34">.</span><span class="rvts35">ВалСумма</span><span class="rvts34">;</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

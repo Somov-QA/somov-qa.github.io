@@ -1,0 +1,168 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Приходная накладная</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic174");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Приходная накладная</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="185.html">1С Предприятие 8.3 - Регистры</a> &rsaquo;&rsaquo; <a href="Newtopic160.html">Регистр накопления</a> &rsaquo;&rsaquo; <a href="Newtopic166.html">Практика</a> &rsaquo;&rsaquo; <a href="Newtopic169.html">Документы</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic169.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic169.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic175.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">ПРИХОДНАЯ НАКЛАДНАЯ</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts19">Реквилиты</span><span class="rvts8">:</span></p>
+<p class="rvps10"><span class="rvts20">Контрагент</span><span class="rvts8">: СправочникСсылка.Контрагенты</span></p>
+<p class="rvps10"><span class="rvts20">СуммаДокумента</span><span class="rvts8">: Число (длина 15 точность2)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Табличные части</span><span class="rvts8">:</span></p>
+<p class="rvps10"><span class="rvts20">ТЧНоменклатура</span></p>
+<p class="rvps8"><span class="rvts20">Номенклатура</span><span class="rvts8">: СправочникСсылка.Номенклатура</span></p>
+<p class="rvps8"><span class="rvts20">Количество</span><span class="rvts8">: Число (длина 15 точность 3)</span></p>
+<p class="rvps8"><span class="rvts20">Цена</span><span class="rvts8">: Число (длина 15 точность 2)</span></p>
+<p class="rvps8"><span class="rvts20">Сумма</span><span class="rvts8">: Число (длина 15 точность 2)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Формы</span><span class="rvts8">:</span></p>
+<p class="rvps10"><span class="rvts20">ФормаДокумента</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Модуль формы</span><span class="rvts8">:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps3"><span class="rvts14">Процедура</span><span class="rvts15"> ТЧНоменклатураКоличествоПриИзменении</span><span class="rvts14">(</span><span class="rvts15">Элемент</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СтрокаТабличнойЧасти </span><span class="rvts14">=</span><span class="rvts15"> Элементы.ТЧНоменклатура.ТекущиеДанные</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Вычисления.РассчитатьСумму</span><span class="rvts14">(</span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps3"><span class="rvts14">Процедура</span><span class="rvts15"> ТЧНоменклатураЦенаПриИзменении</span><span class="rvts14">(</span><span class="rvts15">Элемент</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СтрокаТабличнойЧасти </span><span class="rvts14">=</span><span class="rvts15"> Элементы.ТЧНоменклатура.ТекущиеДанные</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Вычисления.РассчитатьСумму</span><span class="rvts14">(</span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts19">Модуль объекта</span><span class="rvts8">:</span></p>
+<p class="rvps3"><span class="rvts25"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Процедура</span><span class="rvts15"> ПередЗаписью</span><span class="rvts14">(</span><span class="rvts15">Отказ, РежимЗаписи, РежимПроведения</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СуммаДокумента </span><span class="rvts14">=</span><span class="rvts15"> ТЧНоменклатура.Итог</span><span class="rvts14">(</span><span class="rvts16">"Сумма"</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">Процедура</span><span class="rvts15"> ОбработкаПроведения</span><span class="rvts14">(</span><span class="rvts15">Отказ, Режим</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">//{{__КОНСТРУКТОР_ДВИЖЕНИЙ_РЕГИСТРОВ</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// Данный фрагмент построен конструктором.</span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// При повторном использовании конструктора, внесенные вручную изменения будут утеряны!!!</span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p class="rvps3"><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">// регистр Товар Приход</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движения.Товар.Записывать </span><span class="rvts14">= Истина;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Для Каждого</span><span class="rvts15"> ТекСтрокаТЧНоменклатура </span><span class="rvts14">Из</span><span class="rvts15"> ТЧНоменклатура </span><span class="rvts14">Цикл</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение </span><span class="rvts14">=</span><span class="rvts15"> Движения.Товар.Добавить</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение.ВидДвижения </span><span class="rvts14">=</span><span class="rvts15"> ВидДвиженияНакопления.Приход</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение.Период </span><span class="rvts14">=</span><span class="rvts15"> Дата</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение.Номенклатура </span><span class="rvts14">=</span><span class="rvts15"> ТекСтрокаТЧНоменклатура.Номенклатура</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Движение.Количество </span><span class="rvts14">=</span><span class="rvts15"> ТекСтрокаТЧНоменклатура.Количество</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts15"><br/></span></p>
+<p class="rvps3"><span class="rvts15"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts18">//}}__КОНСТРУКТОР_ДВИЖЕНИЙ_РЕГИСТРОВ</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

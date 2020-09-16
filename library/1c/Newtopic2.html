@@ -1,0 +1,128 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Директивы</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic2");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Директивы</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="1C83.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic17.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Директивы</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">&amp;НаКлиенте</span></p>
+<p class="rvps3"><span class="rvts8">Указывается на то, что процедура или функция выполняется на стороне клиента 1C, все переменные существуют лишь на время жизни клиентской части формы. Такой метод выполняется «у вас на компьютере», никак не затрагивая серверную часть. С клиента доступны все серверные функции.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">&amp;НаСервере</span></p>
+<p class="rvps3"><span class="rvts8">Выполняется на сервере, переменные существуют только на время серверного вызова. С сервера допустим вызов практически любых процедур, кроме клиентских. Если работа происходит в режиме тонкого клиента — вся работа происходит на сервере, а клиент получает лишь результат выполнения.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">&amp;НаСервереБезКонтекста</span></p>
+<p class="rvps3"><span class="rvts8">Это процедура выполняется на сервере, вне контекста формы. Т.е. процедура не имеет доступа к реквизитам формы, выполняется на сервере и возвращает желаемый результат. Хорошо подходит для получения статичных данных. Крайне рекомендуется к использованию для оптимизации клиент-серверного взаимодействия.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">&amp;НаКлиентеНаСервереБезКонтекста</span></p>
+<p class="rvps3"><span class="rvts8">Используется, когда к процедуре нужно обращаться и с клиента и с сервера. В остальном аналог &amp;НаСервереБезКонтекста.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">По умолчанию директива компиляции &amp;НаСервер</span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

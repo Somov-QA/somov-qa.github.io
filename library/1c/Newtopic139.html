@@ -1,0 +1,165 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Календарь</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic139");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Календарь</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic138.html">Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic138.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic138.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic140.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Календарь</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts39">1) При создании календаря настраиваются поля:</span></p>
+<p class="rvps3"><span class="rvts32">Стартовая дата</span><span class="rvts36"> - &nbsp;любой понедельник.</span></p>
+<p class="rvps3"><span class="rvts32">Длина дня</span><span class="rvts36"> - состоит как правило из 7-ми значений (7 дней) например:</span></p>
+<p class="rvps5"><span class="rvts39">8.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, понедельник.</span></p>
+<p class="rvps5"><span class="rvts39">8.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, вторник.</span></p>
+<p class="rvps5"><span class="rvts39">8.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, среда.</span></p>
+<p class="rvps5"><span class="rvts39">8.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, четверг.</span></p>
+<p class="rvps5"><span class="rvts39">8.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, пятница</span></p>
+<p class="rvps5"><span class="rvts39">0.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, субота (выходной)</span></p>
+<p class="rvps5"><span class="rvts39">0.00</span><span class="rvts39"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts39">восемь часов, воскресение (выходной)</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">2) Чтобы выполнить </span><span class="rvts56">автозаполнение</span><span class="rvts36"> календаря, нужно в 1С:Предприятие7.7 , в меню </span><span class="rvts32">Операции</span><span class="rvts36"> -&gt; </span><span class="rvts32">Календарь </span><span class="rvts36">(кнопка Автозаполнение)</span></p>
+<p class="rvps3"><span class="rvts39">Чтобы произвести ручное заполнение календаря нужно тутже выбрать день и ввести количество рабочих дней.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">3) Ввести празнечные дни можно в &nbsp;меню </span><span class="rvts32">Операции</span><span class="rvts36"> -&gt; </span><span class="rvts32">Праздники</span><span class="rvts36"> и задать "особые" дни.</span></p>
+<p class="rvps3"><span class="rvts36">тут указывается </span><span class="rvts32">дата </span><span class="rvts36">празднечного для , и </span><span class="rvts32">количество </span><span class="rvts36">рабочих часов в этот день.</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Но тогда в </span><span class="rvts56">автозаполнении</span><span class="rvts36"> календаря нужно установить флажок Учитывать праздники (эти праздники тоже </span><span class="rvts41">будут выделены красным)</span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">Заполнение</span><span class="rvts36"> календаря программным способом.</span></p>
+<p class="rvps3"><span class="rvts35">Календарь</span><span class="rvts34"> = Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts38">Автозаполнение</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">); </span><span class="rvts37">//Выполняет автозаполнение календаря в заданном периоде</span></p>
+<p class="rvps3"><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts38">ВыбратьДаты</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">); </span><span class="rvts37">//Открывает выборку записей календаря.</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts38">СледующаяДата</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">ТекДата</span><span class="rvts34"> = </span><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts35">Дата</span><span class="rvts34">; // получаем дату текущей строки календаря</span></p>
+<p class="rvps5"><span class="rvts35">ДеньНедели</span><span class="rvts34"> = НомерДняНедели(</span><span class="rvts35">ТекДата</span><span class="rvts34">); &nbsp;</span><span class="rvts37"> //Возвращает порядковый номер дня недели для заданной даты</span></p>
+<p class="rvps5"><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts38">УчитыватьПраздники</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">); &nbsp; &nbsp; &nbsp; &nbsp;//Учитывать праздники которые введены нами</span></p>
+<p class="rvps5"><span class="rvts34">Если (</span><span class="rvts35">ДеньНедели</span><span class="rvts34"> = </span><span class="rvts36">6</span><span class="rvts34">) или (</span><span class="rvts35">ДеньНедели</span><span class="rvts34"> = </span><span class="rvts36">7</span><span class="rvts34">) Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts36">"Значение"</span><span class="rvts34">, </span><span class="rvts36">0</span><span class="rvts34">); </span><span class="rvts37">//Установить значение атрибута по имени идентификатора</span></p>
+<p class="rvps5"><span class="rvts34">Иначе &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts37">// атрибуты (Дата - только чтение) и (Значение)</span></p>
+<p class="rvps6"><span class="rvts35">Календарь</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts36">"Значение"</span><span class="rvts34">, </span><span class="rvts36">8</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">получение</span><span class="rvts36"> данных из календаря. (Дней, Часов)</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Количество рабочих дней по календарю пятидневной рабочей недели за "</span><span class="rvts34"> + ДатаМесяц(</span><span class="rvts35">ДатаНач</span><span class="rvts34">) + </span><span class="rvts36">" месяц. :"</span><span class="rvts34"> + Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">.</span><span class="rvts38">Дней</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts34">Сообщить(</span><span class="rvts36">"Количество рабочих часов по календарю пятидневной рабочей недели за "</span><span class="rvts34"> + ДатаМесяц(</span><span class="rvts35">ДатаНач</span><span class="rvts34">) + </span><span class="rvts36">" месяц. :"</span><span class="rvts34"> + Календари.</span><span class="rvts35">Пятидневка</span><span class="rvts34">.</span><span class="rvts38">Часов</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: работа с объектом "</span><span class="rvts32">Праздники</span><span class="rvts36">"</span></p>
+<p class="rvps3"><span class="rvts35">Пр</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Праздники"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Новый</span><span class="rvts34">(</span><span class="rvts36">'23.02.2009'</span><span class="rvts34">,</span><span class="rvts36">0</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Новый</span><span class="rvts34">(</span><span class="rvts36">'07.03.2009'</span><span class="rvts34">,</span><span class="rvts36">4</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Новый</span><span class="rvts34">(</span><span class="rvts36">'08.03.2009'</span><span class="rvts34">,</span><span class="rvts36">0</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДаты</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">СледующаяДата</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Значение</span><span class="rvts34"> =</span><span class="rvts36"> 0 </span><span class="rvts34">Тогда</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Праздник "</span><span class="rvts34"> + </span><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Дата</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Иначе</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Предпразничный день "</span><span class="rvts34"> + </span><span class="rvts35">Пр</span><span class="rvts34">.</span><span class="rvts35">Дата</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

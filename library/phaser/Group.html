@@ -1,0 +1,144 @@
+﻿<html>
+	
+<head>
+	<title>Group</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Group");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Group</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser3.html">Phaser</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Phaser3.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Spritesheet.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Group1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Group</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Пример: Использование групп для построения колоды и стека в карточной игре Солитёр</span></p>
+<p class="rvps3"><span class="rvts8">иаграмма взаимодействия групп между собой и с другими объектами</span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">1. Объявление переменных: общая группа для колоды и стека, группа для колоды и колода.</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> stackAndDeckGroup:Phaser.Group;</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> deckGroup:Phaser.Group;</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> deck:CardDeck;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">2. Создание группы и их объекты</span></p>
+<p class="rvps3"><span class="rvts14">public</span><span class="rvts8"> create(): </span><span class="rvts14">void</span><span class="rvts8"> {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts17">//create deck and stack group</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">var</span><span class="rvts8"> cardsColNumInGroup:number = 7;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.stackAndDeckGroup = </span><span class="rvts14">this</span><span class="rvts8">.game.add.group();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">for</span><span class="rvts8"> (</span><span class="rvts14">var</span><span class="rvts8"> i:number = 0; i &lt; cardsColNumInGroup; i++) {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">let</span><span class="rvts8"> eachColGroup:Phaser.Group = </span><span class="rvts14">this</span><span class="rvts8">.game.add.group();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.stackAndDeckGroup.add(eachColGroup);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">let</span><span class="rvts8"> cardColBG:Phaser.Sprite = </span><span class="rvts14">this</span><span class="rvts8">.game.add.sprite(0, 0, Atlases.AllArts, </span><span class="rvts17">"back_square_02.png"</span><span class="rvts8">, eachColGroup);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">this</span><span class="rvts8">.setFrameAndAlpha(i, cardColBG);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eachColGroup.x = (cardColBG.width + </span><span class="rvts14">this</span><span class="rvts8">.cardsSpaceBetweenCol) * i;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts17">//create deck group</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deckGroup = </span><span class="rvts14">this</span><span class="rvts8">.game.add.group();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">var</span><span class="rvts8"> deckBG:Phaser.Sprite = </span><span class="rvts14">this</span><span class="rvts8">.game.add.sprite(0, 0, Atlases.AllArts, </span><span class="rvts15">"back_square_01.png"</span><span class="rvts8">, this.deckGroup);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deck = </span><span class="rvts14">new</span><span class="rvts8"> CardDeck(</span><span class="rvts14">this</span><span class="rvts8">.game, 0, 0, Atlases.AllArts, </span><span class="rvts15">"card_deck_00.png"</span><span class="rvts8">, </span><span class="rvts14">this</span><span class="rvts8">.deckGroup, </span><span class="rvts14">this</span><span class="rvts8">.cardFlipFrameList);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deck.setDeckFrame(24);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deck.inputEnabled = true;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deck.events.onInputUp.add(</span><span class="rvts14">this</span><span class="rvts8">.onClickDeck, </span><span class="rvts14">this</span><span class="rvts8">);</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">3. Построение/Обновление колоды и стека</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> updateDeck(deck:Fabrique.ICardObject[]):</span><span class="rvts14">void</span><span class="rvts8"> {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.deck.setDeckFrame(deck.length);</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts14">private</span><span class="rvts8"> updateDeckStack(deckStack:Fabrique.ICardObject[]):</span><span class="rvts14">void</span><span class="rvts8"> {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">var</span><span class="rvts8"> deckStackCol:any = </span><span class="rvts14">this</span><span class="rvts8">.stackAndDeckGroup.getAt(1);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">for</span><span class="rvts8">(</span><span class="rvts14">var</span><span class="rvts8"> row:number = 0; row &lt; deckStack.length; row++){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">var</span><span class="rvts8"> card:Card = </span><span class="rvts14">new</span><span class="rvts8"> Card(</span><span class="rvts14">this</span><span class="rvts8">.game, </span><span class="rvts14">this</span><span class="rvts8">.cardCorrectionX, </span><span class="rvts14">this</span><span class="rvts8">.cardCorrectionX, Atlases.Cards, deckStackCol, deckStack[row]);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts13">4. Описание объекта CardDeck </span></p>
+<p class="rvps3"><span class="rvts14">module</span><span class="rvts8"> Fabrique{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; </span><span class="rvts14">export class</span><span class="rvts8"> CardDeck </span><span class="rvts14">extends</span><span class="rvts8"> Phaser.Sprite {</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">private</span><span class="rvts8"> spriteGroup:Phaser.Group;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">constructor</span><span class="rvts8">(game:Phaser.Game, x:number, y:number, key:string, frame:string, group:any, cardFlipFrameList:string[]){</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">super</span><span class="rvts8">(game, x, y, key, frame);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.game = game;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.spriteGroup = group;</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.init();</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">private</span><span class="rvts8"> init():</span><span class="rvts14">void</span><span class="rvts8">{</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">this</span><span class="rvts8">.spriteGroup.add(this);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="rvts14">var</span><span class="rvts8"> bgSprite:any = </span><span class="rvts14">this</span><span class="rvts8">.spriteGroup.getAt(0);</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps3"><span class="rvts8"> &nbsp; &nbsp; &nbsp; }</span></p>
+<p class="rvps3"><span class="rvts8">}</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeniy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

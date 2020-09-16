@@ -1,0 +1,111 @@
+﻿<html>
+	
+<head>
+	<title>6. Смена экрана</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("6");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">6. Смена экрана</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="libGDX1.html">libGDX</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="libGDX1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="5.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="7Obj.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts6">Чтобы добавить сцену необходимо создать класс описанной ранее сцена и добавить её в классе Game с помощью метода setScreen()</span></p>
+<p class="rvps2"><span class="rvts6">package com.mygdx.game;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">import com.badlogic.gdx.Game;</span></p>
+<p class="rvps2"><span class="rvts6">import com.mygdx.game.menu.Menu;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">public class MyGdxGame extends Game {</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; public Menu menu;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"> @Override</span></p>
+<p class="rvps2"><span class="rvts6"> public void create () {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp;menu = new Menu(this);</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp;setScreen(menu);</span></p>
+<p class="rvps2"><span class="rvts6"> }</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">...</span></p>
+<p class="rvps2"><span class="rvts6">Чтобы сменить экран нужно иметь ссылку на основной класс Game и так же с помощью метода setScreen() заменить экран на новый.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">button.addListener(new ChangeListener() {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp;@Override</span></p>
+<p class="rvps2"><span class="rvts6"> public void changed (ChangeListener.ChangeEvent event, Actor actor) {</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;game.setScreen(new TestObj(game));</span></p>
+<p class="rvps2"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;dispose();</span></p>
+<p class="rvps2"><span class="rvts6"> }</span></p>
+<p class="rvps2"><span class="rvts6">});</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">В результате отобразится новый экран, а прежний будет уничтожен.</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

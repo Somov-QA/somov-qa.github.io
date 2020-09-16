@@ -1,0 +1,136 @@
+﻿
+
+<html>
+	
+<head>
+	<title>ПланыСчетов</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic110");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">ПланыСчетов</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic100.html">Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic109.html">ПланыСчетов</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic109.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic109.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic111.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">ПланыСчетов</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// Общее количество планов счетов созданных в конфигурации.</span></p>
+<p class="rvps3"><span class="rvts35">Кол</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts38">КоличествоЗначений</span><span class="rvts34">(); </span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// Позволяет определить план счетов, соответствующий номеру в списке планов счетов конфигурации</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоНом</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts38">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоНом</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts38">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts36">2</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// Позволяет определить план счетов, соответствующий заданному идентификатору</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоИд</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts38">ЗначениеПоИдентификатору</span><span class="rvts34">(</span><span class="rvts36">"Учебный"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоИд</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts38">ЗначениеПоИдентификатору</span><span class="rvts34">(</span><span class="rvts36">"Основной"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// Позволяет определить порядковый номер плана счетов среди планов счетов, созданных в конфигурации</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоИд_ПорНом</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts35">ЗначениеПоИдентификатору</span><span class="rvts34">(</span><span class="rvts36">"Учебный"</span><span class="rvts34">).</span><span class="rvts38">ПорядковыйНомер</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоИд_ПорНом</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts35">ЗначениеПоИдентификатору</span><span class="rvts34">(</span><span class="rvts36">"Основной"</span><span class="rvts34">).</span><span class="rvts38">ПорядковыйНомер</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">// Позволяет определить выбран ли соответствующий план счетов (1-выбран, 0-не выбран)</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоНом_Выб</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts35">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">).</span><span class="rvts38">Выбран</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">//Возвращает строку - идентификатор вида плана счетов как он задан в метаданных</span></p>
+<p class="rvps3"><span class="rvts35">ЗнПоНом_Ид</span><span class="rvts34"> = ПланыСчетов.</span><span class="rvts35">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">).</span><span class="rvts38">Идентификатор</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

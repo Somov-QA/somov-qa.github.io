@@ -1,0 +1,373 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Базовый пример работы react и redux</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("reactredux1");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Базовый пример работы react и redux</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ReactRedux.html">React &amp; Redux</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ReactRedux.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ReactRedux.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ReduxDevTools.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Базовый пример работы react и redux</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps21"><span class="rvts96">Установка </span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">1. Создайте файл </span><span class="rvts96">package.json</span></p>
+<p class="rvps22"><span class="rvts109">npm init -y</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">2. Установите </span><span class="rvts96">webpack</span></p>
+<p class="rvps22"><span class="rvts109">npm install -g webpack</span></p>
+<p class="rvps22"><span class="rvts109">npm install --save-dev webpack webpack-cli </span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">3. Установите </span><span class="rvts96">babel</span></p>
+<p class="rvps22"><span class="rvts109">npm install --save-dev babel-loader babel-core babel-preset-es2015 babel-preset-react babel-preset-env babel-preset-stage-0</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">4. Установите </span><span class="rvts96">react</span></p>
+<p class="rvps22"><span class="rvts109">npm install --save react react-dom</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">5. Установите </span><span class="rvts96">redux</span></p>
+<p class="rvps22"><span class="rvts109">npm install --save redux</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">6. Установите </span><span class="rvts96">react-redux</span></p>
+<p class="rvps22"><span class="rvts109">npm install --save react-redux</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts96">Сборка билда</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">1. Сборка билда</span></p>
+<p class="rvps22"><span class="rvts109">npx webpack --config webpack.config.js</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">2. Упрощенная сборка билда (если правило прописано в package.json)</span></p>
+<p class="rvps22"><span class="rvts109">"scripts": { &nbsp; </span></p>
+<p class="rvps22"><span class="rvts109"> &nbsp; &nbsp;"build": "npx webpack --config webpack.config.js" &nbsp;</span></p>
+<p class="rvps22"><span class="rvts109">},</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts89">команда для сборки</span></p>
+<p class="rvps22"><span class="rvts109">npm run build</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts96">Сервер</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">1. Установите и запуск простого сервера</span></p>
+<p class="rvps22"><span class="rvts109">npm install -g http-server </span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts89">запуск сервера (чтобы остановить нажмите Ctrl+C)</span></p>
+<p class="rvps22"><span class="rvts109">http-server</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps21"><span class="rvts89">Структура проекта:</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts96">[project]</span></p>
+<p class="rvps22"><span class="rvts89">|---- </span><span class="rvts96">[dist]</span></p>
+<p class="rvps22"><span class="rvts89"> &nbsp; &nbsp; &nbsp; |---- </span><span class="rvts96">index.html</span></p>
+<p class="rvps22"><span class="rvts89">|---- </span><span class="rvts96">[src]</span></p>
+<p class="rvps22"><span class="rvts89"> &nbsp; &nbsp; &nbsp; |---- </span><span class="rvts96">[components]</span></p>
+<p class="rvps22"><span class="rvts89"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|---- </span><span class="rvts96">mycomponent.js</span></p>
+<p class="rvps22"><span class="rvts89"> &nbsp; &nbsp; &nbsp; |---- </span><span class="rvts96">index.js</span></p>
+<p class="rvps22"><span class="rvts89">|---- </span><span class="rvts96">package.json</span></p>
+<p class="rvps22"><span class="rvts89">|---- </span><span class="rvts96">webpack.config.js</span></p>
+<p class="rvps34"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Описание файла: </span><span class="rvts96">package.json</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts105">{</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"name"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"connect_react_redux"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"version"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"1.0.0"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"description"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"Steck: React + Redux + Webpack + Babel"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"main"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"webpack.config.js"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"scripts"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts92">{</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"test"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"build"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"npx webpack --config webpack.config.js"</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts92">},</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"keywords"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts92">[],</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"author"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">""</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"license"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"ISC"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"devDependencies"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts92">{</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-core"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^6.26.3"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-loader"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^7.1.4"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-preset-env"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^1.6.1"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-preset-es2015"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^6.24.1"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-preset-react"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^6.24.1"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"babel-preset-stage-0"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^6.24.1"</span><span class="rvts92">,</span><span class="rvts108"> &nbsp; &nbsp;</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"webpack"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^4.6.0"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"webpack-cli"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^2.0.15"</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts92">},</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts149">"dependencies"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts92">{</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts149">"react"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^16.3.2"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts149">"react-dom"</span><span class="rvts92">: </span><span class="rvts155">"^16.3.2"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"react-redux"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^5.0.7"</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp; &nbsp;</span><span class="rvts149">"redux"</span><span class="rvts92">:</span><span class="rvts108"> </span><span class="rvts155">"^4.0.0"</span></p>
+<p class="rvps22"><span class="rvts108"> &nbsp;</span><span class="rvts92">}</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">После установки всех вышеперечисленных пакетов они будут записаны в package.json</span></p>
+<p class="rvps34"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Описание файла: </span><span class="rvts96">webpack.config.js</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> path = require(</span><span class="rvts94">'path'</span><span class="rvts92">);</span></p>
+<p class="rvps22"><span class="rvts92">module.exports = {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;entry: </span><span class="rvts94">'./src/index.js'</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;output: {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;path: path.resolve(__dirname, </span><span class="rvts94">'dist'</span><span class="rvts92">),</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;filename: </span><span class="rvts94">'bundle.js'</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;sourceMapFilename: </span><span class="rvts94">'bundle.map'</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;},</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;devtool: </span><span class="rvts94">'#source-map'</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;module: {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;rules: [</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;test: </span><span class="rvts94">/\.js$/</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;exclude: </span><span class="rvts94">/(node_modules)/</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;loader: </span><span class="rvts94">'babel-loader'</span><span class="rvts92">,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;query: {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;presets: [</span><span class="rvts94">'env'</span><span class="rvts92">, </span><span class="rvts94">'stage-0'</span><span class="rvts92">, </span><span class="rvts94">'react'</span><span class="rvts92">]</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;]</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;},</span></p>
+<p class="rvps22"><span class="rvts92">};</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">В конфиге прописан путь сборки всех скриптов и транспиляция кода с помощью Babel.</span></p>
+<p class="rvps34"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Описание файла: </span><span class="rvts96">index.html</span><span class="rvts89"> (в папке dist)</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts156">&lt;!</span><span class="rvts157">DOCTYPE</span><span class="rvts156"> html&gt;</span></p>
+<p class="rvps21"><span class="rvts156">&lt;</span><span class="rvts157">html</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts156">&lt;</span><span class="rvts157">head</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">meta</span><span class="rvts108"> </span><span class="rvts149">charset</span><span class="rvts92">=</span><span class="rvts155">"utf-8"</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">meta</span><span class="rvts108"> </span><span class="rvts149">name</span><span class="rvts92">=</span><span class="rvts155">"viewport"</span><span class="rvts108"> </span><span class="rvts149">content</span><span class="rvts92">=</span><span class="rvts155">"minimum-scale=1.0, width=device-width, </span></p>
+<p class="rvps37"><span class="rvts155">maximum-scale=1.0, user-scalable=no"</span><span class="rvts108"> </span><span class="rvts156">/&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">title</span><span class="rvts156">&gt;</span><span class="rvts92">React &amp; Redux Application</span><span class="rvts156">&lt;/</span><span class="rvts157">title</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">script</span><span class="rvts108"> </span><span class="rvts149">src</span><span class="rvts92">=</span><span class="rvts155">"https://unpkg.com/react@16/umd/react.development.js"</span><span class="rvts156">&gt;&lt;/</span><span class="rvts157">script</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">script</span><span class="rvts108"> </span><span class="rvts149">src</span><span class="rvts92">=</span><span class="rvts155">"https://unpkg.com/react-dom@16/umd/react-dom.development.js"</span><span class="rvts156">&gt;&lt;/</span><span class="rvts157">script</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts156">&lt;/</span><span class="rvts157">head</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts156">&lt;</span><span class="rvts157">body</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">div</span><span class="rvts108"> </span><span class="rvts149">id</span><span class="rvts92">=</span><span class="rvts155">"root"</span><span class="rvts156">&gt;&lt;/</span><span class="rvts157">div</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp;</span><span class="rvts156">&lt;</span><span class="rvts157">script</span><span class="rvts108"> </span><span class="rvts149">src</span><span class="rvts92">=</span><span class="rvts155">"bundle.js"</span><span class="rvts156">&gt;&lt;/</span><span class="rvts157">script</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts156">&lt;/</span><span class="rvts157">body</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts156">&lt;/</span><span class="rvts157">html</span><span class="rvts156">&gt;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Подключаются библиотеки React и Babel. В теле страницы вызывается основной скрипт.</span></p>
+<p class="rvps34"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Описание файла: </span><span class="rvts96">index.js</span><span class="rvts89"> (в папке src)</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts158">/**</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*</span><span class="rvts92"> </span><span class="rvts158">Импортируем</span><span class="rvts92"> </span><span class="rvts158">библиотеки</span><span class="rvts92"> </span><span class="rvts158">react</span><span class="rvts92"> </span><span class="rvts158">и</span><span class="rvts92"> </span><span class="rvts158">redux</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*/</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> React from </span><span class="rvts94">'react'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> ReactDOM from </span><span class="rvts94">'react-dom'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> { createStore } from </span><span class="rvts94">'redux'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> { Provider } from </span><span class="rvts94">'react-redux'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> MyComponent from </span><span class="rvts94">'./components/mycomponent'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts158">/**</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*</span><span class="rvts92"> </span><span class="rvts158">Хранилище</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*/</span></p>
+<p class="rvps22"><span class="rvts91">function</span><span class="rvts92"> playList(state = [], action) { </span><span class="rvts93">// функция редюсер (reducer)</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">if</span><span class="rvts92">(action.type === </span><span class="rvts94">'ADD_TRACK'</span><span class="rvts92">){</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> [</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...state,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;action.payload</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;];</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> state;</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> store = createStore(playList); &nbsp; &nbsp;</span><span class="rvts93">// создание хранилища</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts158">/**</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*</span><span class="rvts92"> </span><span class="rvts158">Визуализация</span><span class="rvts92"> </span><span class="rvts158">компонента</span><span class="rvts92"> </span><span class="rvts158">с</span><span class="rvts92"> </span><span class="rvts158">помощью</span><span class="rvts92"> </span><span class="rvts158">React.</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*</span><span class="rvts92"> </span><span class="rvts158">(в</span><span class="rvts92"> </span><span class="rvts158">провайдер</span><span class="rvts92"> </span><span class="rvts158">передаем</span><span class="rvts92"> </span><span class="rvts158">хранилище)</span></p>
+<p class="rvps22"><span class="rvts92"> </span><span class="rvts158">*/</span></p>
+<p class="rvps22"><span class="rvts92">ReactDOM.render(</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;&lt;Provider store={store}&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;MyComponent title=</span><span class="rvts94">"React"</span><span class="rvts92"> subtitle=</span><span class="rvts94">"Фреймворк от Facebook"/&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;&lt;/Provider&gt;,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;document.getElementById('</span><span class="rvts94">root')</span></p>
+<p class="rvps22"><span class="rvts92">);</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Импортируется иблиотеки React, Redux и модуль компонента. Описывается обработчик данных хранилища (редюсер). Создается хранилище. Компонент оборачивается в провайдер. Провайдер получает в качестве параметра наше хранилище. Теперь все элементы внутри провайдера имеют доступ к хранилищу через props.</span></p>
+<p class="rvps34"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Описание файла: </span><span class="rvts96">mycomponent.js</span><span class="rvts89"> (в папке src/components)</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> React, { Component } from </span><span class="rvts94">'react'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> { connect } from </span><span class="rvts94">'react-redux'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">class</span><span class="rvts92"> MyComponent </span><span class="rvts91">extends</span><span class="rvts92"> React.Component {</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;constructor(props) {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">super</span><span class="rvts92">(props);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;onButtonClick() {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts94">'ADD TRACK'</span><span class="rvts92">, </span><span class="rvts91">this</span><span class="rvts92">.trackInput.value);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">this</span><span class="rvts92">.props.onAddTrack(</span><span class="rvts91">this</span><span class="rvts92">.trackInput.value);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">this</span><span class="rvts92">.trackInput.value = </span><span class="rvts94">''</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;getInput(input) {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">this</span><span class="rvts92">.trackInput = input;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;render() {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts91">this</span><span class="rvts92">.props.testStore);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> (</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;h1&gt;{</span><span class="rvts91">this</span><span class="rvts92">.props.title}&lt;/h1&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;p&gt;{</span><span class="rvts91">this</span><span class="rvts92">.props.subtitle}&lt;/p&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;br /&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;input type=</span><span class="rvts94">"text"</span><span class="rvts92"> ref={</span><span class="rvts91">this</span><span class="rvts92">.getInput.bind(</span><span class="rvts91">this</span><span class="rvts92">)} </span><span class="rvts94">/&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;button onClick={</span><span class="rvts91">this</span><span class="rvts92">.onButtonClick.bind(</span><span class="rvts91">this</span><span class="rvts92">)}&gt;</span></p>
+<p class="rvps38"><span class="rvts92">Add track&lt;/button&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ul&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><span class="rvts91">this</span><span class="rvts92">.props.testStore.map((value, index) =&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;li key={index}&gt;{value}&lt;/li&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ul&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">export</span><span class="rvts92"> </span><span class="rvts91">default</span><span class="rvts92"> connect(</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;state =&gt; ({</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;testStore: state</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}),</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;dispatch =&gt; ({</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;onAddTrack: (trackName) =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts94">'ADD_TRACK'</span><span class="rvts92">, payload: trackName });</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;})</span></p>
+<p class="rvps22"><span class="rvts92">)(MyComponent);</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89">Функции </span><span class="rvts96">connect()</span><span class="rvts89"> позволяет установить свзять между React и Redux.</span></p>
+<p class="rvps21"><span class="rvts89">Более подробное описание стрекруты </span><span class="rvts96">connect</span><span class="rvts89"> приводится ниже</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> mapStateToProps = (state, ownProps) =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;testStore: state &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;};</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> mapDispatchToProps = (dispatch) =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;onAddTrack: (trackName) =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts94">'ADD_TRACK'</span><span class="rvts92">, payload: trackName });</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92">};</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">export</span><span class="rvts92"> </span><span class="rvts91">default</span><span class="rvts92"> connect(mapStateToProps, mapDispatchToProps)(MyComponent);</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">Функция </span><span class="rvts159">mapStateToProps</span><span class="rvts107"> – работает со state.</span></p>
+<p class="rvps21"><span class="rvts107">Функция </span><span class="rvts159">mapDispatchToProps</span><span class="rvts107"> — работает с данными хранилища.</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

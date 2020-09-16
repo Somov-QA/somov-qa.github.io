@@ -1,0 +1,221 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Создание формы выбора с передача данных в неё</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic237");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Создание формы выбора с передача данных в неё</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="186.html">1С Предприятие 8.3 - Практика</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="186.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="186.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="1C77.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Создание формы выбора с передача данных в неё</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">В форме документа на раквизите создать событие НачалоВыбора чтобы вызвать форму выбора элемента справочника</span></p>
+<p class="rvps3"><span class="rvts8">У документа есть табличная часть в которой находится "</span><span class="rvts16">ПоставщикиИПрайсы</span><span class="rvts15">"</span><span class="rvts8"> список прайсов которые необходимо передать в форму.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps3"><span class="rvts14">Функция </span><span class="rvts15">ПереченьПрайсов</span><span class="rvts14">()</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СЗПрайсы</span><span class="rvts14"> = Новый </span><span class="rvts15">СписокЗначений</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Для Каждого </span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14"> Из </span><span class="rvts15">Объект</span><span class="rvts14">.</span><span class="rvts15">ПоставщикиИПрайсы</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СЗПрайсы</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14">.</span><span class="rvts15">Прайс</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Возврат </span><span class="rvts15">СЗПрайсы</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14">КонецФункции</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаКлиенте</span></p>
+<p class="rvps3"><span class="rvts14">Процедура </span><span class="rvts15">ПланЗакупкиТоварНачалоВыбора</span><span class="rvts14">(</span><span class="rvts15">Элемент</span><span class="rvts14">, </span><span class="rvts15">ДанныеВыбора</span><span class="rvts14">, </span><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14"> = Ложь;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">// Список прайс листов</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СЗПрайсы</span><span class="rvts14"> = </span><span class="rvts15">ПереченьПрайсов</span><span class="rvts14">();</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">// Выбранная номенклатура</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14"> = </span><span class="rvts15">Элементы</span><span class="rvts14">.</span><span class="rvts15">ПланЗакупки</span><span class="rvts14">.</span><span class="rvts15">ТекущиеДанные</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ВыбраннаяНоменклатура</span><span class="rvts14"> = </span><span class="rvts15">СтрокаТабличнойЧасти</span><span class="rvts14">.</span><span class="rvts15">Номенклатура</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">// Прайс лист (по умолчанию)</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//СтрокаТаблицыЗначений &nbsp;= Объект.ПоставщикиИПрайсы.Получить(0);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//ПрайсЛисты = СтрокаТаблицыЗначений.Прайс;</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">// Подготовка параметров</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//ПараметрыДляФормы = Новый Структура("ПрайсЛисты", ПрайсЛисты);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ПараметрыДляФормы</span><span class="rvts14"> = Новый </span><span class="rvts15">Структура</span><span class="rvts14">(</span><span class="rvts8">"</span><span class="rvts28">СписокЗначенийПрайсы</span><span class="rvts8">"</span><span class="rvts14">, </span><span class="rvts15">СЗПрайсы</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ПараметрыДляФормы</span><span class="rvts14">.</span><span class="rvts15">Вставить</span><span class="rvts14">(</span><span class="rvts8">"</span><span class="rvts28">ВыбраннаяНоменклатура</span><span class="rvts8">"</span><span class="rvts14">, </span><span class="rvts15">ВыбраннаяНоменклатура</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">// Открытие формы выбора</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ФормаВыбора</span><span class="rvts14"> = </span><span class="rvts15">ПолучитьФорму</span><span class="rvts14">(</span><span class="rvts8">"Справочник.Товары.ФормаВыбора"</span><span class="rvts14">, </span><span class="rvts15">ПараметрыДляФормы</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ФормаВыбора</span><span class="rvts14">.</span><span class="rvts15">ВладелецФормы</span><span class="rvts14"> = </span><span class="rvts15">Элементы</span><span class="rvts14">.</span><span class="rvts15">ПланЗакупкиТовар</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">ФормаВыбора</span><span class="rvts14">.</span><span class="rvts15">Открыть</span><span class="rvts14">();</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Обработка полученных данных в форме выбора</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem34.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps3"><span class="rvts14">Процедура </span><span class="rvts15">ПриСозданииНаСервере</span><span class="rvts14">(</span><span class="rvts15">Отказ</span><span class="rvts14">, </span><span class="rvts15">СтандартнаяОбработка</span><span class="rvts14">)</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Список.Параметры.УстановитьЗначениеПараметра("ПрайсЛисты", Параметры.ПрайсЛисты);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Список.Параметры.УстановитьЗначениеПараметра("СписокЗначенийПрайсы", Параметры.СписокЗначенийПрайсы);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Сообщить(Параметры.ПрайсЛисты);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Сообщить(Параметры.ВыбраннаяНоменклатура);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Сообщить(Параметры.СписокЗначенийПрайсы);</span></p>
+<p class="rvps3"><span class="rvts27"></span><span class="rvts27"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts27">//Сообщить(Параметры.ВыбраннаяНоменклатура);</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">МассивПрайсов</span><span class="rvts14"> = Новый </span><span class="rvts15">Массив</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">Для Каждого </span><span class="rvts15">Прайс</span><span class="rvts14"> Из </span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts29">СписокЗначенийПрайсы</span><span class="rvts14"> Цикл</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">МассивПрайсов</span><span class="rvts14">.</span><span class="rvts15">Добавить</span><span class="rvts14">(</span><span class="rvts15">Прайс</span><span class="rvts14">.</span><span class="rvts15">Значение</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">НоменклатураНаименование</span><span class="rvts14"> = </span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts29">ВыбраннаяНоменклатура</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">НоменклатураКодТовара</span><span class="rvts14"> = </span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts15">ВыбраннаяНоменклатура</span><span class="rvts14">.</span><span class="rvts15">КодТовара</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">НоменклатураСерия</span><span class="rvts14"> = </span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts15">ВыбраннаяНоменклатура</span><span class="rvts14">.</span><span class="rvts15">Серия</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">НоменклатураАртикул</span><span class="rvts14"> = </span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts15">ВыбраннаяНоменклатура</span><span class="rvts14">.</span><span class="rvts15">Артикул</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Список</span><span class="rvts14">.</span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts15">УстановитьЗначениеПараметра</span><span class="rvts14">(</span><span class="rvts16">"МассивПрайсов"</span><span class="rvts14">, </span><span class="rvts15">МассивПрайсов</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Список</span><span class="rvts14">.</span><span class="rvts15">Параметры</span><span class="rvts14">.</span><span class="rvts15">УстановитьЗначениеПараметра</span><span class="rvts14">(</span><span class="rvts16">"НоменклатураНаименование"</span><span class="rvts14">, </span><span class="rvts16">"%"</span><span class="rvts14"> + </span><span class="rvts15">НоменклатураНаименование</span><span class="rvts14"> + "%");</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">НоменклатураНаименование</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">НоменклатураКодТовара</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">НоменклатураСерия</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">НоменклатураАртикул</span><span class="rvts14">);</span></p>
+<p class="rvps3"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Чтобы в форме выбораприменить полученные данные нужно:</span></p>
+<p class="rvps3"><span class="rvts8">1) Открыть форму выбора, выделить в окне реквизиты "Список" и перейти в его свойства.</span></p>
+<p class="rvps3"><span class="rvts8">2) В свойствах устанавливаем флаг на: ПроизвольныйЗапрос</span></p>
+<p class="rvps3"><span class="rvts8">3) Открываем настройки списка</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Оснаваная таблица: Справочник.товары</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Динамические считанные данные: Да</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">С помощью конструктора запросов описываем запрос</span><br/><span class="rvts8"></span><br/><span class="rvts15">ВЫБРАТЬ</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Ссылка </span><span class="rvts15">КАК</span><span class="rvts8"> Товар,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.ПометкаУдаления </span><span class="rvts15">КАК</span><span class="rvts8"> ПометкаУдаления,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Владелец </span><span class="rvts15">КАК</span><span class="rvts8"> Владелец,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Код </span><span class="rvts15">КАК</span><span class="rvts8"> Код,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Наименование </span><span class="rvts15">КАК</span><span class="rvts8"> Наименование,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.КодТовара </span><span class="rvts15">КАК</span><span class="rvts8"> КодТовара,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Серия </span><span class="rvts15">КАК</span><span class="rvts8"> Серия,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Артикул </span><span class="rvts15">КАК</span><span class="rvts8"> Артикул,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Производитель </span><span class="rvts15">КАК</span><span class="rvts8"> Производитель,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Цена </span><span class="rvts15">КАК</span><span class="rvts8"> Цена,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Предопределенный </span><span class="rvts15">КАК</span><span class="rvts8"> Предопределенный,</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.ИмяПредопределенныхДанных </span><span class="rvts15">КАК</span><span class="rvts8"> ИмяПредопределенныхДанных</span></p>
+<p class="rvps3"><span class="rvts15">ИЗ</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Справочник.Товары </span><span class="rvts15">КАК</span><span class="rvts8"> СправочникТовары</span></p>
+<p class="rvps3"><span class="rvts15">ГДЕ</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">СправочникТовары.Владелец </span><span class="rvts21">В</span><span class="rvts8">(</span><span class="rvts30">&amp;МассивПрайсов</span><span class="rvts8">)</span></p>
+<p class="rvps3"><span class="rvts8"></span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">И СправочникТовары.Наименование </span><span class="rvts21">ПОДОБНО</span><span class="rvts8"> </span><span class="rvts30">&amp;НоменклатураНаименование</span><br/><span class="rvts8"></span><br/><span class="rvts8"></span><br/><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy EBook and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

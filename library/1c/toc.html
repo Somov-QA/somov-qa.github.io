@@ -1,0 +1,3056 @@
+﻿
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>Help1C- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				
+					$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				
+			}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				var aNode = $("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId);
+				if (aNode) {
+					aNode.activateSilently();  
+				}
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			
+				<li><a href="#tab-toc">Contents</a></li>
+			
+				<li><a href="#tab-keywords">Index</a></li>
+			
+				<li><a href="#tab-search">Search</a></li>
+			
+		</ul>
+		
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				
+
+						<li class="folder" id="1" data="">
+							<a
+							href="1.html"
+							target="FrameMain">
+								Язык программирования 1С
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic5" data="icon: '8.png'">
+							<a
+							href="Newtopic5.html"
+							target="FrameMain">
+								Типы данных
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic3" data="icon: '8.png'">
+							<a
+							href="Newtopic3.html"
+							target="FrameMain">
+								Переменные
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic6" data="icon: '8.png'">
+							<a
+							href="Newtopic6.html"
+							target="FrameMain">
+								Условия
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic7" data="icon: '8.png'">
+							<a
+							href="Newtopic7.html"
+							target="FrameMain">
+								Циклы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic4" data="icon: '8.png'">
+							<a
+							href="Newtopic4.html"
+							target="FrameMain">
+								Процедуры
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic8" data="icon: '8.png'">
+							<a
+							href="Newtopic8.html"
+							target="FrameMain">
+								Функции
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic10" data="icon: '8.png'">
+							<a
+							href="Newtopic10.html"
+							target="FrameMain">
+								Массив
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic11" data="icon: '8.png'">
+							<a
+							href="Newtopic11.html"
+							target="FrameMain">
+								Стрктура
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic13" data="icon: '8.png'">
+							<a
+							href="Newtopic13.html"
+							target="FrameMain">
+								Соответствие
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic16" data="icon: '8.png'">
+							<a
+							href="Newtopic16.html"
+							target="FrameMain">
+								Перехват ошибок
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="184" data="">
+							<a
+							href="184.html"
+							target="FrameMain">
+								1С Предприятие 8.3 - Администрирование
+							</a>
+
+				</li>
+
+						<li class="folder" id="1C83" data="">
+							<a
+							href="1C83.html"
+							target="FrameMain">
+								1C Предприятие 8.3 - Общее
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic2" data="icon: '10.png'">
+							<a
+							href="Newtopic2.html"
+							target="FrameMain">
+								Директивы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic17" data="icon: '10.png'">
+							<a
+							href="Newtopic17.html"
+							target="FrameMain">
+								Модули
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic12" data="icon: '10.png'">
+							<a
+							href="Newtopic12.html"
+							target="FrameMain">
+								СписокЗначений
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic14" data="icon: '10.png'">
+							<a
+							href="Newtopic14.html"
+							target="FrameMain">
+								ТаблицаЗначений
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic15" data="icon: '10.png'">
+							<a
+							href="Newtopic15.html"
+							target="FrameMain">
+								ДеревоЗначений
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic9" data="icon: '10.png'">
+							<a
+							href="Newtopic9.html"
+							target="FrameMain">
+								Системные оповещения
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic18" data="icon: '10.png'">
+							<a
+							href="Newtopic18.html"
+							target="FrameMain">
+								Константы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic19" data="icon: '10.png'">
+							<a
+							href="Newtopic19.html"
+							target="FrameMain">
+								Справочники
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic20" data="icon: '10.png'">
+							<a
+							href="Newtopic20.html"
+							target="FrameMain">
+								Перечисления
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic21" data="icon: '10.png'">
+							<a
+							href="Newtopic21.html"
+							target="FrameMain">
+								Запрос
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic22" data="icon: '10.png'">
+							<a
+							href="Newtopic22.html"
+							target="FrameMain">
+								Документ
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic158" data="icon: '16.png'">
+							<a
+							href="Newtopic158.html"
+							target="FrameMain">
+								Разное
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="185" data="">
+							<a
+							href="185.html"
+							target="FrameMain">
+								1С Предприятие 8.3 - Регистры
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic160" data="">
+							<a
+							href="Newtopic160.html"
+							target="FrameMain">
+								Регистр накопления
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic161" data="icon: '16.png'">
+							<a
+							href="Newtopic161.html"
+							target="FrameMain">
+								Логика
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic166" data="">
+							<a
+							href="Newtopic166.html"
+							target="FrameMain">
+								Практика
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic167" data="icon: '4.png'">
+							<a
+							href="Newtopic167.html"
+							target="FrameMain">
+								Общие модули
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic171" data="icon: '34.png'">
+							<a
+							href="Newtopic171.html"
+							target="FrameMain">
+								Вычисления
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic168" data="icon: '4.png'">
+							<a
+							href="Newtopic168.html"
+							target="FrameMain">
+								Справочники
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic172" data="icon: '34.png'">
+							<a
+							href="Newtopic172.html"
+							target="FrameMain">
+								Номенклатура
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic173" data="icon: '34.png'">
+							<a
+							href="Newtopic173.html"
+							target="FrameMain">
+								Контрагенты
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic170" data="icon: '4.png'">
+							<a
+							href="Newtopic170.html"
+							target="FrameMain">
+								Регистры накопления
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic176" data="icon: '34.png'">
+							<a
+							href="Newtopic176.html"
+							target="FrameMain">
+								Товар
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic177" data="icon: '34.png'">
+							<a
+							href="Newtopic177.html"
+							target="FrameMain">
+								Прибыль
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic169" data="icon: '4.png'">
+							<a
+							href="Newtopic169.html"
+							target="FrameMain">
+								Документы
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic174" data="icon: '34.png'">
+							<a
+							href="Newtopic174.html"
+							target="FrameMain">
+								Приходная накладная
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic175" data="icon: '34.png'">
+							<a
+							href="Newtopic175.html"
+							target="FrameMain">
+								Расходная накладная
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic178" data="icon: '4.png'">
+							<a
+							href="Newtopic178.html"
+							target="FrameMain">
+								Отчеты
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic179" data="icon: '34.png'">
+							<a
+							href="Newtopic179.html"
+							target="FrameMain">
+								Остатки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic180" data="icon: '34.png'">
+							<a
+							href="Newtopic180.html"
+							target="FrameMain">
+								Прибыль
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic162" data="">
+							<a
+							href="Newtopic162.html"
+							target="FrameMain">
+								Регистр сведений
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic163" data="icon: '16.png'">
+							<a
+							href="Newtopic163.html"
+							target="FrameMain">
+								Логика
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic181" data="">
+							<a
+							href="Newtopic181.html"
+							target="FrameMain">
+								Практика
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic182" data="icon: '4.png'">
+							<a
+							href="Newtopic182.html"
+							target="FrameMain">
+								Общие модули
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic183" data="icon: '34.png'">
+							<a
+							href="Newtopic183.html"
+							target="FrameMain">
+								Вычисления
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic184" data="icon: '4.png'">
+							<a
+							href="Newtopic184.html"
+							target="FrameMain">
+								Справочники
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic185" data="icon: '34.png'">
+							<a
+							href="Newtopic185.html"
+							target="FrameMain">
+								Номенклатура
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic186" data="icon: '34.png'">
+							<a
+							href="Newtopic186.html"
+							target="FrameMain">
+								Контрагенты
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic190" data="icon: '4.png'">
+							<a
+							href="Newtopic190.html"
+							target="FrameMain">
+								Регистры сведений
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic191" data="icon: '34.png'">
+							<a
+							href="Newtopic191.html"
+							target="FrameMain">
+								Цены
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic187" data="icon: '4.png'">
+							<a
+							href="Newtopic187.html"
+							target="FrameMain">
+								Документы
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic188" data="icon: '34.png'">
+							<a
+							href="Newtopic188.html"
+							target="FrameMain">
+								Приходная накладная
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic189" data="icon: '34.png'">
+							<a
+							href="Newtopic189.html"
+							target="FrameMain">
+								Расходная накладная
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic164" data="">
+							<a
+							href="Newtopic164.html"
+							target="FrameMain">
+								Регистр бухгалтерии
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic165" data="icon: '16.png'">
+							<a
+							href="Newtopic165.html"
+							target="FrameMain">
+								Логика
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic192" data="">
+							<a
+							href="Newtopic192.html"
+							target="FrameMain">
+								Практика
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic193" data="icon: '4.png'">
+							<a
+							href="Newtopic193.html"
+							target="FrameMain">
+								Общие модули
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic194" data="icon: '34.png'">
+							<a
+							href="Newtopic194.html"
+							target="FrameMain">
+								Вычисления
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic195" data="icon: '4.png'">
+							<a
+							href="Newtopic195.html"
+							target="FrameMain">
+								Справочники
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic196" data="icon: '34.png'">
+							<a
+							href="Newtopic196.html"
+							target="FrameMain">
+								Номенклатура
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic197" data="icon: '34.png'">
+							<a
+							href="Newtopic197.html"
+							target="FrameMain">
+								Контрагенты
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic203" data="icon: '4.png'">
+							<a
+							href="Newtopic203.html"
+							target="FrameMain">
+								Планы видов характеристик
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic204" data="icon: '34.png'">
+							<a
+							href="Newtopic204.html"
+							target="FrameMain">
+								ВидСубконто
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic205" data="icon: '4.png'">
+							<a
+							href="Newtopic205.html"
+							target="FrameMain">
+								Планы счетов
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic206" data="icon: '34.png'">
+							<a
+							href="Newtopic206.html"
+							target="FrameMain">
+								Основной
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic201" data="icon: '4.png'">
+							<a
+							href="Newtopic201.html"
+							target="FrameMain">
+								Регистры бухгалтерии
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic202" data="icon: '34.png'">
+							<a
+							href="Newtopic202.html"
+							target="FrameMain">
+								Управленческий
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic198" data="icon: '4.png'">
+							<a
+							href="Newtopic198.html"
+							target="FrameMain">
+								Документы
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic199" data="icon: '34.png'">
+							<a
+							href="Newtopic199.html"
+							target="FrameMain">
+								Приходная накладная
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic200" data="icon: '34.png'">
+							<a
+							href="Newtopic200.html"
+							target="FrameMain">
+								Расходная накладная
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic207" data="icon: '4.png'">
+							<a
+							href="Newtopic207.html"
+							target="FrameMain">
+								Отчеты
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic208" data="icon: '34.png'">
+							<a
+							href="Newtopic208.html"
+							target="FrameMain">
+								ОборотноСальдоваяВедомость
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic214" data="">
+							<a
+							href="Newtopic214.html"
+							target="FrameMain">
+								Регистр расчетов
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic215" data="icon: '16.png'">
+							<a
+							href="Newtopic215.html"
+							target="FrameMain">
+								Логика
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic216" data="">
+							<a
+							href="Newtopic216.html"
+							target="FrameMain">
+								Практика
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic217" data="icon: '4.png'">
+							<a
+							href="Newtopic217.html"
+							target="FrameMain">
+								Общие модули
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic218" data="icon: '34.png'">
+							<a
+							href="Newtopic218.html"
+							target="FrameMain">
+								РасчетЗП
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic219" data="icon: '4.png'">
+							<a
+							href="Newtopic219.html"
+							target="FrameMain">
+								Справочники
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic220" data="icon: '34.png'">
+							<a
+							href="Newtopic220.html"
+							target="FrameMain">
+								Сотрудники
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic221" data="icon: '4.png'">
+							<a
+							href="Newtopic221.html"
+							target="FrameMain">
+								Регистры сведений
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic222" data="icon: '34.png'">
+							<a
+							href="Newtopic222.html"
+							target="FrameMain">
+								ГрафикРаботы
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic223" data="icon: '4.png'">
+							<a
+							href="Newtopic223.html"
+							target="FrameMain">
+								План видов расчетов
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic225" data="icon: '34.png'">
+							<a
+							href="Newtopic225.html"
+							target="FrameMain">
+								ОсновныеНачисления
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic226" data="icon: '34.png'">
+							<a
+							href="Newtopic226.html"
+							target="FrameMain">
+								ДополнительныеНачисления
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic227" data="icon: '4.png'">
+							<a
+							href="Newtopic227.html"
+							target="FrameMain">
+								Регистры расчета
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic228" data="icon: '34.png'">
+							<a
+							href="Newtopic228.html"
+							target="FrameMain">
+								НачислениеЗарплаты
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic229" data="icon: '34.png'">
+							<a
+							href="Newtopic229.html"
+							target="FrameMain">
+								НачислениеПремий
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic230" data="icon: '4.png'">
+							<a
+							href="Newtopic230.html"
+							target="FrameMain">
+								Документы
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic231" data="icon: '34.png'">
+							<a
+							href="Newtopic231.html"
+							target="FrameMain">
+								УтверждениеРабочегоГрафика
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic224" data="icon: '34.png'">
+							<a
+							href="Newtopic224.html"
+							target="FrameMain">
+								НачислениеЗарплаты
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic232" data="icon: '4.png'">
+							<a
+							href="Newtopic232.html"
+							target="FrameMain">
+								Отчеты
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic233" data="icon: '34.png'">
+							<a
+							href="Newtopic233.html"
+							target="FrameMain">
+								ПроверкаПерерасчета
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic234" data="icon: '34.png'">
+							<a
+							href="Newtopic234.html"
+							target="FrameMain">
+								НачисленияСотрудникам
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic235" data="icon: '34.png'">
+							<a
+							href="Newtopic235.html"
+							target="FrameMain">
+								ОтработанноеВремя
+							</a>
+
+				</li></ul></li></ul></li></ul></li></ul></li>
+
+						<li class="" id="183" data="">
+							<a
+							href="183.html"
+							target="FrameMain">
+								1С Предприятие 8.3 - Запросы
+							</a>
+
+				</li>
+
+						<li class="folder" id="186" data="">
+							<a
+							href="186.html"
+							target="FrameMain">
+								1С Предприятие 8.3 - Практика
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic237" data="icon: '16.png'">
+							<a
+							href="Newtopic237.html"
+							target="FrameMain">
+								Создание формы выбора с передача данных в неё
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="1C77" data="">
+							<a
+							href="1C77.html"
+							target="FrameMain">
+								1C Предприятие 7.7
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic26" data="">
+							<a
+							href="Newtopic26.html"
+							target="FrameMain">
+								Специальные
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic27" data="">
+							<a
+							href="Newtopic27.html"
+							target="FrameMain">
+								Агригатные типы данных
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic23" data="">
+							<a
+							href="Newtopic23.html"
+							target="FrameMain">
+								гл. Модуль
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic24" data="">
+							<a
+							href="Newtopic24.html"
+							target="FrameMain">
+								Предопределенная процедура происходящая в момент удаления документа.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic25" data="">
+							<a
+							href="Newtopic25.html"
+							target="FrameMain">
+								Предопределенная процедура происходит в момент начала работы системы.
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic28" data="">
+							<a
+							href="Newtopic28.html"
+							target="FrameMain">
+								Константа
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic29" data="">
+							<a
+							href="Newtopic29.html"
+							target="FrameMain">
+								Зададим начальные значения констант в предопределенной процедуре ГЛОБАЛЬНОГО Модуля.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic30" data="">
+							<a
+							href="Newtopic30.html"
+							target="FrameMain">
+								Работа с периодическими константами.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic31" data="">
+							<a
+							href="Newtopic31.html"
+							target="FrameMain">
+								Показать в агрегатном объекте &quot;Текст&quot; все не периодические константы.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic32" data="">
+							<a
+							href="Newtopic32.html"
+							target="FrameMain">
+								Показать историю периодических констант.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic33" data="">
+							<a
+							href="Newtopic33.html"
+							target="FrameMain">
+								Примеры
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic34" data="">
+							<a
+							href="Newtopic34.html"
+							target="FrameMain">
+								Справочник
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic35" data="">
+							<a
+							href="Newtopic35.html"
+							target="FrameMain">
+								Добавить новый элемент справочника. (для периодических реквизитов)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic36" data="">
+							<a
+							href="Newtopic36.html"
+							target="FrameMain">
+								Поиск элемента справочника.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic37" data="">
+							<a
+							href="Newtopic37.html"
+							target="FrameMain">
+								Создать новую группу справочника.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic38" data="">
+							<a
+							href="Newtopic38.html"
+							target="FrameMain">
+								Обработка элементов справочника.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic39" data="">
+							<a
+							href="Newtopic39.html"
+							target="FrameMain">
+								Событие наступает в момент выбора сотрудника в поле &quot;ФИО&quot; объекта &quot;Таблица значений&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic40" data="">
+							<a
+							href="Newtopic40.html"
+							target="FrameMain">
+								Предопределенная процедура &quot;Справочника&quot; при интерактивной записи элемента справочника.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic41" data="">
+							<a
+							href="Newtopic41.html"
+							target="FrameMain">
+								Получить значение из периодического реквизита &quot;Справочника&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic42" data="">
+							<a
+							href="Newtopic42.html"
+							target="FrameMain">
+								Загрузить историю периодического реквизита уже созданного элемента.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic43" data="">
+							<a
+							href="Newtopic43.html"
+							target="FrameMain">
+								Как получить ТИП,  ДЛИНУ,  ТОЧНОСТЬ  реквизита справочника?  Ответ прямо тут…
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic44" data="">
+							<a
+							href="Newtopic44.html"
+							target="FrameMain">
+								Чтобы определить периодический реквизит нужно
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic45" data="">
+							<a
+							href="Newtopic45.html"
+							target="FrameMain">
+								Документ
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic46" data="">
+							<a
+							href="Newtopic46.html"
+							target="FrameMain">
+								Обработка документа
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic47" data="">
+							<a
+							href="Newtopic47.html"
+							target="FrameMain">
+								Получить данные из реквизитов шапки внешнего документа
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic48" data="">
+							<a
+							href="Newtopic48.html"
+							target="FrameMain">
+								Получить данные из реквизитов табличной части документа
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic49" data="">
+							<a
+							href="Newtopic49.html"
+							target="FrameMain">
+								Получить данные из реквизитов шапки и реквизитов табличной части документа
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic50" data="">
+							<a
+							href="Newtopic50.html"
+							target="FrameMain">
+								Получить данные из табличной части своего же документа
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic51" data="">
+							<a
+							href="Newtopic51.html"
+							target="FrameMain">
+								Подбор товара для накладных из справочника &quot;Товары&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic53" data="">
+							<a
+							href="Newtopic53.html"
+							target="FrameMain">
+								Процедура которая наступает в момент выбора &quot;Товара&quot; в табличной части, или с помощью подбора
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic56" data="">
+							<a
+							href="Newtopic56.html"
+							target="FrameMain">
+								Настройка формы в режиме просмотра , и добавление в номер документа (строчного типа) букв
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic57" data="">
+							<a
+							href="Newtopic57.html"
+							target="FrameMain">
+								Вывести итоги по колонке табличной части документа. (при этом в реквизиту должен стоять флажок Итог по колонке)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic58" data="">
+							<a
+							href="Newtopic58.html"
+							target="FrameMain">
+								Можно при записи документа сразу заполнить некоторые реквизиты операции (если этот документ является Бухгалтерским учетом.)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic59" data="">
+							<a
+							href="Newtopic59.html"
+							target="FrameMain">
+								Номер документа с добавлением в него &quot;РН-&quot;
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic60" data="">
+							<a
+							href="Newtopic60.html"
+							target="FrameMain">
+								Перечисление
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic61" data="">
+							<a
+							href="Newtopic61.html"
+							target="FrameMain">
+								Доступ к перечислениям, по средствам присвоения их переменным.
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic62" data="">
+							<a
+							href="Newtopic62.html"
+							target="FrameMain">
+								Запросы
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic63" data="">
+							<a
+							href="Newtopic63.html"
+							target="FrameMain">
+								Группировка
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic64" data="">
+							<a
+							href="Newtopic64.html"
+							target="FrameMain">
+								Без Итогов
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic65" data="">
+							<a
+							href="Newtopic65.html"
+							target="FrameMain">
+								Упорядочить По
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic66" data="">
+							<a
+							href="Newtopic66.html"
+							target="FrameMain">
+								Без Упорядочивания
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic67" data="">
+							<a
+							href="Newtopic67.html"
+							target="FrameMain">
+								Без Группы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic82" data="">
+							<a
+							href="Newtopic82.html"
+							target="FrameMain">
+								Условия
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic83" data="">
+							<a
+							href="Newtopic83.html"
+							target="FrameMain">
+								Функции
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic84" data="">
+							<a
+							href="Newtopic84.html"
+							target="FrameMain">
+								Упорядочить по функциям
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic85" data="">
+							<a
+							href="Newtopic85.html"
+							target="FrameMain">
+								Использование граф отбора
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic86" data="">
+							<a
+							href="Newtopic86.html"
+							target="FrameMain">
+								Доступ к переменным запроса
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic87" data="">
+							<a
+							href="Newtopic87.html"
+							target="FrameMain">
+								Доступ к группировке запроса
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic88" data="">
+							<a
+							href="Newtopic88.html"
+							target="FrameMain">
+								Доступ к функциям
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic89" data="">
+							<a
+							href="Newtopic89.html"
+							target="FrameMain">
+								Пример:  запрос который выбирает документы опираясь на справочник
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic90" data="">
+							<a
+							href="Newtopic90.html"
+							target="FrameMain">
+								Операция
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic91" data="">
+							<a
+							href="Newtopic91.html"
+							target="FrameMain">
+								Предопределенная процедура проведения документа. (ручная и автоматическая обработка)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic92" data="">
+							<a
+							href="Newtopic92.html"
+							target="FrameMain">
+								Использование субконто в операции
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic93" data="">
+							<a
+							href="Newtopic93.html"
+							target="FrameMain">
+								Просмотр операций за заданный период
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic94" data="">
+							<a
+							href="Newtopic94.html"
+							target="FrameMain">
+								Пример работы с &quot;Планом счетов&quot;, &quot;Видом субконто&quot;, &quot;Операцией&quot;,  &quot;Проводками&quot; (создать операцию)
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic95" data="">
+							<a
+							href="Newtopic95.html"
+							target="FrameMain">
+								Таблица
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic96" data="">
+							<a
+							href="Newtopic96.html"
+							target="FrameMain">
+								Отправить на печать данные из &quot;Таблицы значений&quot; документа, в &quot;Таблицу&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic97" data="">
+							<a
+							href="Newtopic97.html"
+							target="FrameMain">
+								Использование запроса для отбора данных из документов с последующей передачей их в &quot;Таблицу&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic98" data="">
+							<a
+							href="Newtopic98.html"
+							target="FrameMain">
+								Динамическая обработка ячейки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic99" data="">
+							<a
+							href="Newtopic99.html"
+							target="FrameMain">
+								Способности ячейки. (Текст, Выражение, Шаблон)
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic100" data="">
+							<a
+							href="Newtopic100.html"
+							target="FrameMain">
+								Бухгалтерский учет. (&quot;Операция&quot; &quot;ВидыСубконто&quot; &quot;Счет&quot; &quot;ПланСчетов&quot; &quot;БухгалтерскиеИтоги&quot;)
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic101" data="">
+							<a
+							href="Newtopic101.html"
+							target="FrameMain">
+								ВидыСубконто
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic102" data="">
+							<a
+							href="Newtopic102.html"
+							target="FrameMain">
+								Определяем общее количество созданных видов субконто
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic103" data="">
+							<a
+							href="Newtopic103.html"
+							target="FrameMain">
+								Определяем вид субконто по номеру
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic104" data="">
+							<a
+							href="Newtopic104.html"
+							target="FrameMain">
+								Назначить для объекта &quot;Реквизит диалога&quot;, только обязательно с типом &quot;&lt;&lt;Неопределенный&gt;&gt;&quot;, тип &quot;ВидыСубконто&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic105" data="">
+							<a
+							href="Newtopic105.html"
+							target="FrameMain">
+								Устанавливаем или возвращаем вид субконто счета
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic106" data="">
+							<a
+							href="Newtopic106.html"
+							target="FrameMain">
+								Счет
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic107" data="">
+							<a
+							href="Newtopic107.html"
+							target="FrameMain">
+								Вывод списка всех счетов, из плана счетов
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic108" data="">
+							<a
+							href="Newtopic108.html"
+							target="FrameMain">
+								Создание нового счета, в плане счетов
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic109" data="">
+							<a
+							href="Newtopic109.html"
+							target="FrameMain">
+								ПланыСчетов
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic110" data="">
+							<a
+							href="Newtopic110.html"
+							target="FrameMain">
+								ПланыСчетов
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic111" data="">
+							<a
+							href="Newtopic111.html"
+							target="FrameMain">
+								БухгалтерскиеИтоги
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic112" data="">
+							<a
+							href="Newtopic112.html"
+							target="FrameMain">
+								Чтобы установить последний расчетный период
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic113" data="">
+							<a
+							href="Newtopic113.html"
+							target="FrameMain">
+								Работа с основными итогами.  Перечень функций работы с итогами
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic114" data="">
+							<a
+							href="Newtopic114.html"
+							target="FrameMain">
+								Работа с временными итогами
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic115" data="">
+							<a
+							href="Newtopic115.html"
+							target="FrameMain">
+								Работа в режиме запроса
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic116" data="">
+							<a
+							href="Newtopic116.html"
+							target="FrameMain">
+								Обращение к результатам запроса
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic117" data="">
+							<a
+							href="Newtopic117.html"
+							target="FrameMain">
+								Для обращения к результатам бухгалтерского запроса используются такие атрибуты и функции
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic118" data="">
+							<a
+							href="Newtopic118.html"
+							target="FrameMain">
+								Оборотно сальдовая ведомость
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic119" data="">
+							<a
+							href="Newtopic119.html"
+							target="FrameMain">
+								Анализ счета
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic120" data="">
+							<a
+							href="Newtopic120.html"
+							target="FrameMain">
+								Получить все Партии и их значения (цены) из Бухгалтерского итога в режиме запроса
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic121" data="">
+							<a
+							href="Newtopic121.html"
+							target="FrameMain">
+								Получить остаток товара по партии (ТекущаяПартия) из Бухгалтерского итога в режиме запроса
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic122" data="">
+							<a
+							href="Newtopic122.html"
+							target="FrameMain">
+								Примеры
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic123" data="">
+							<a
+							href="Newtopic123.html"
+							target="FrameMain">
+								Примеры использования бухгалтерского запроса
+							</a>
+
+				</li>
+
+						<li class="" id="4" data="">
+							<a
+							href="4.html"
+							target="FrameMain">
+								Пример использования запроса для получения бухгалтерских итогов с использованием 4-х субконто
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic124" data="">
+							<a
+							href="Newtopic124.html"
+							target="FrameMain">
+								Пример выбрать кореспондирующий счет
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic125" data="">
+							<a
+							href="Newtopic125.html"
+							target="FrameMain">
+								Пример получим произведенную оплату из бухгалтерских итогов по выбранным Расходным накладным и Банковским выпискам
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic126" data="">
+							<a
+							href="Newtopic126.html"
+							target="FrameMain">
+								Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic127" data="">
+							<a
+							href="Newtopic127.html"
+							target="FrameMain">
+								Регистры
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic128" data="">
+							<a
+							href="Newtopic128.html"
+							target="FrameMain">
+								Чтобы установить последний расчитанный период
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic129" data="">
+							<a
+							href="Newtopic129.html"
+							target="FrameMain">
+								Управление точкой актуальности
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic130" data="">
+							<a
+							href="Newtopic130.html"
+							target="FrameMain">
+								Запись движения по регистру
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic131" data="">
+							<a
+							href="Newtopic131.html"
+							target="FrameMain">
+								Методы регистров остатков. Получение остатков.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic132" data="">
+							<a
+							href="Newtopic132.html"
+							target="FrameMain">
+								Методы оборотных регистров. Получение оборотов.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic133" data="">
+							<a
+							href="Newtopic133.html"
+							target="FrameMain">
+								Временный расчет. (не зависимо от точки актуальности.)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic134" data="">
+							<a
+							href="Newtopic134.html"
+							target="FrameMain">
+								Получить приход и расход за выбранный период.  (атрибета - приход, расход)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic135" data="">
+							<a
+							href="Newtopic135.html"
+							target="FrameMain">
+								Общие методы регистров.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic136" data="">
+							<a
+							href="Newtopic136.html"
+							target="FrameMain">
+								Выполнение запросов по регистрам
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic137" data="">
+							<a
+							href="Newtopic137.html"
+							target="FrameMain">
+								Последовательности документов.
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic138" data="">
+							<a
+							href="Newtopic138.html"
+							target="FrameMain">
+								Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic139" data="">
+							<a
+							href="Newtopic139.html"
+							target="FrameMain">
+								Календарь
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic140" data="">
+							<a
+							href="Newtopic140.html"
+							target="FrameMain">
+								Виды расчетов и Группы расчетов
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic141" data="">
+							<a
+							href="Newtopic141.html"
+							target="FrameMain">
+								Журнал расчетов
+							</a>
+
+				</li></ul></li>
+
+						<li class="" id="Newtopic142" data="">
+							<a
+							href="Newtopic142.html"
+							target="FrameMain">
+								Создание слоев
+							</a>
+
+				</li>
+
+						<li class="" id="OLEAutomation" data="">
+							<a
+							href="OLEAutomation.html"
+							target="FrameMain">
+								OLE Automation
+							</a>
+
+				</li>
+
+						<li class="" id="txt" data="">
+							<a
+							href="txt.html"
+							target="FrameMain">
+								Перенос данных *.txt
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic143" data="">
+							<a
+							href="Newtopic143.html"
+							target="FrameMain">
+								Ввод документа на основании
+							</a>
+
+				</li>
+
+						<li class="" id="Xbase" data="">
+							<a
+							href="Xbase.html"
+							target="FrameMain">
+								Xbase
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic144" data="">
+							<a
+							href="Newtopic144.html"
+							target="FrameMain">
+								Поле со списком
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic145" data="">
+							<a
+							href="Newtopic145.html"
+							target="FrameMain">
+								Обработки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic146" data="">
+							<a
+							href="Newtopic146.html"
+							target="FrameMain">
+								Метаданные
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic147" data="">
+							<a
+							href="Newtopic147.html"
+							target="FrameMain">
+								Решение задач особого назначения
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic148" data="">
+							<a
+							href="Newtopic148.html"
+							target="FrameMain">
+								Произвольно полученные справочники, реквизиты справочника. (перенос групп и элементов)
+							</a>
+
+				</li>
+
+						<li class="folder" id="Newtopic149" data="">
+							<a
+							href="Newtopic149.html"
+							target="FrameMain">
+								Таблица Значений
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic150" data="">
+							<a
+							href="Newtopic150.html"
+							target="FrameMain">
+								Создаем колонки в &quot;Таблице значений&quot; имена которых присвоены из идентификаторов реквизитов справочника. (произвольно полученные реквизиты)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic151" data="">
+							<a
+							href="Newtopic151.html"
+							target="FrameMain">
+								Кнопкой &quot;Подбор&quot; мы в ручную выбираем элементы и заносим в таблицу значений (с произвольно полученными реквизитами)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic152" data="">
+							<a
+							href="Newtopic152.html"
+							target="FrameMain">
+								Автоматическое заполнение ,таблицы значений (с произвольно полученными реквизитами), всеми &quot;Группами&quot; и &quot;Элементами&quot;
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic153" data="">
+							<a
+							href="Newtopic153.html"
+							target="FrameMain">
+								Выгружаем все данные из Таблицы значений в текстовый файл.
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic154" data="">
+							<a
+							href="Newtopic154.html"
+							target="FrameMain">
+								Таблица Значений и периодические реквизиты в &quot;списке значений&quot;
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic155" data="">
+							<a
+							href="Newtopic155.html"
+							target="FrameMain">
+								Создаем колонки в &quot;Таблице значений&quot; имена которых присвоены из идентификаторов реквизитов справочника. (произвольно полученные реквизиты)
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic156" data="">
+							<a
+							href="Newtopic156.html"
+							target="FrameMain">
+								Загружаем все данные в Таблицу значений из текстового файла.
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic157" data="">
+							<a
+							href="Newtopic157.html"
+							target="FrameMain">
+								Читаем данные из &quot;Таблицы значений&quot; и по ним создаем &quot;Элементы&quot; и &quot;Группы&quot; справочника. Опираясь на (произвольно полученные реквизиты)
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic1" data="">
+							<a
+							href="Newtopic1.html"
+							target="FrameMain">
+								Базы данных
+							</a>
+
+				<ul>
+
+						<li class="folder" id="SQL" data="">
+							<a
+							href="SQL.html"
+							target="FrameMain">
+								SQL
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Newtopic68" data="">
+							<a
+							href="Newtopic68.html"
+							target="FrameMain">
+								Выборка данных
+							</a>
+
+				<ul>
+
+						<li class="" id="SELECT" data="icon: '16.png'">
+							<a
+							href="SELECT.html"
+							target="FrameMain">
+								SELECT - Инструкция
+							</a>
+
+				</li>
+
+						<li class="" id="DISTINCTALL" data="icon: '16.png'">
+							<a
+							href="DISTINCTALL.html"
+							target="FrameMain">
+								DISTINCT/ALL - Повторяющиеся строки
+							</a>
+
+				</li>
+
+						<li class="" id="WHERE" data="icon: '16.png'">
+							<a
+							href="WHERE.html"
+							target="FrameMain">
+								WHERE - Отбор строк.
+							</a>
+
+				</li>
+
+						<li class="" id="BETWEEN" data="icon: '16.png'">
+							<a
+							href="BETWEEN.html"
+							target="FrameMain">
+								BETWEEN  - Диапазон значений. 
+							</a>
+
+				</li>
+
+						<li class="" id="IN" data="icon: '16.png'">
+							<a
+							href="IN.html"
+							target="FrameMain">
+								IN - Множество
+							</a>
+
+				</li>
+
+						<li class="" id="LIKE" data="icon: '16.png'">
+							<a
+							href="LIKE.html"
+							target="FrameMain">
+								LIKE – Шаблон
+							</a>
+
+				</li>
+
+						<li class="" id="NULL" data="icon: '16.png'">
+							<a
+							href="NULL.html"
+							target="FrameMain">
+								NULL – Проверка на отсутствие значения
+							</a>
+
+				</li>
+
+						<li class="" id="ANDORNOT" data="icon: '16.png'">
+							<a
+							href="ANDORNOT.html"
+							target="FrameMain">
+								AND, OR, NOT – Составные условия отбора
+							</a>
+
+				</li>
+
+						<li class="" id="ORDERBY" data="icon: '16.png'">
+							<a
+							href="ORDERBY.html"
+							target="FrameMain">
+								ORDER BY  – Сортировка результата запроса
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic69" data="">
+							<a
+							href="Newtopic69.html"
+							target="FrameMain">
+								Объединение таблиц
+							</a>
+
+				<ul>
+
+						<li class="" id="UNION" data="icon: '16.png'">
+							<a
+							href="UNION.html"
+							target="FrameMain">
+								UNION – Объединение результатов нескольких запросов.
+							</a>
+
+				</li>
+
+						<li class="" id="ORDERBY1" data="icon: '16.png'">
+							<a
+							href="ORDERBY1.html"
+							target="FrameMain">
+								ORDER BY - Объединение и сортировка
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic70" data="icon: '16.png'">
+							<a
+							href="Newtopic70.html"
+							target="FrameMain">
+								Вложенные объединения
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic71" data="">
+							<a
+							href="Newtopic71.html"
+							target="FrameMain">
+								Соединения (Многотабличные запросы)
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic72" data="icon: '16.png'">
+							<a
+							href="Newtopic72.html"
+							target="FrameMain">
+								Простое соединение двух таблиц
+							</a>
+
+				</li>
+
+						<li class="" id="JOIN" data="icon: '16.png'">
+							<a
+							href="JOIN.html"
+							target="FrameMain">
+								JOIN — Внешнее соединение
+							</a>
+
+				</li>
+
+						<li class="" id="INNERJOIN" data="icon: '16.png'">
+							<a
+							href="INNERJOIN.html"
+							target="FrameMain">
+								INNER JOIN — соединение по равенству
+							</a>
+
+				</li>
+
+						<li class="" id="NATURALJOIN" data="icon: '16.png'">
+							<a
+							href="NATURALJOIN.html"
+							target="FrameMain">
+								NATURAL JOIN — естественное соединение
+							</a>
+
+				</li>
+
+						<li class="" id="USING" data="icon: '16.png'">
+							<a
+							href="USING.html"
+							target="FrameMain">
+								USING  — связанные столбцы
+							</a>
+
+				</li>
+
+						<li class="" id="AS" data="icon: '16.png'">
+							<a
+							href="AS.html"
+							target="FrameMain">
+								AS  — Псевдонимы таблиц
+							</a>
+
+				</li>
+
+						<li class="" id="FULL" data="icon: '16.png'">
+							<a
+							href="FULL.html"
+							target="FrameMain">
+								FULL  — Полное соединение
+							</a>
+
+				</li>
+
+						<li class="" id="LEFT" data="icon: '16.png'">
+							<a
+							href="LEFT.html"
+							target="FrameMain">
+								LEFT  — Левое соединение
+							</a>
+
+				</li>
+
+						<li class="" id="RIGHT" data="icon: '16.png'">
+							<a
+							href="RIGHT.html"
+							target="FrameMain">
+								RIGHT  — Правое соединение
+							</a>
+
+				</li>
+
+						<li class="" id="CROSS" data="icon: '16.png'">
+							<a
+							href="CROSS.html"
+							target="FrameMain">
+								CROSS  — Перекрёстные соединения
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic73" data="">
+							<a
+							href="Newtopic73.html"
+							target="FrameMain">
+								Итоговые запросы
+							</a>
+
+				<ul>
+
+						<li class="" id="SUM" data="icon: '16.png'">
+							<a
+							href="SUM.html"
+							target="FrameMain">
+								SUM  — Вычисляет сумму всех значений столбца
+							</a>
+
+				</li>
+
+						<li class="" id="AVG" data="icon: '16.png'">
+							<a
+							href="AVG.html"
+							target="FrameMain">
+								AVG  — Среднее значение всех значений столбца
+							</a>
+
+				</li>
+
+						<li class="" id="MIN" data="icon: '16.png'">
+							<a
+							href="MIN.html"
+							target="FrameMain">
+								MIN  — Меньшее значение в столбце
+							</a>
+
+				</li>
+
+						<li class="" id="MAX" data="icon: '16.png'">
+							<a
+							href="MAX.html"
+							target="FrameMain">
+								MAX  — Большее значение в столбце
+							</a>
+
+				</li>
+
+						<li class="" id="COUNT" data="icon: '16.png'">
+							<a
+							href="COUNT.html"
+							target="FrameMain">
+								COUNT  — Подсчет количества значений в столбце
+							</a>
+
+				</li>
+
+						<li class="" id="GROUPBY" data="icon: '16.png'">
+							<a
+							href="GROUPBY.html"
+							target="FrameMain">
+								GROUP BY  — Получение промежуточных итогов результатов запроса
+							</a>
+
+				</li>
+
+						<li class="" id="HAVING" data="icon: '16.png'">
+							<a
+							href="HAVING.html"
+							target="FrameMain">
+								HAVING  — Условия отбора групп
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic74" data="">
+							<a
+							href="Newtopic74.html"
+							target="FrameMain">
+								Подзапросы и выражения с запросами
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic75" data="icon: '16.png'">
+							<a
+							href="Newtopic75.html"
+							target="FrameMain">
+								Подчинённые запросы
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic76" data="icon: '16.png'">
+							<a
+							href="Newtopic76.html"
+							target="FrameMain">
+								Внешние ссылки
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic77" data="icon: '16.png'">
+							<a
+							href="Newtopic77.html"
+							target="FrameMain">
+								Условия отбора в подзапросах
+							</a>
+
+				</li>
+
+						<li class="" id="IN1" data="icon: '16.png'">
+							<a
+							href="IN1.html"
+							target="FrameMain">
+								IN - Проверка на принадлежность результатам подзапроса
+							</a>
+
+				</li>
+
+						<li class="" id="EXISTS" data="icon: '16.png'">
+							<a
+							href="EXISTS.html"
+							target="FrameMain">
+								EXISTS - Проверка на существование
+							</a>
+
+				</li>
+
+						<li class="" id="ANYALL" data="icon: '16.png'">
+							<a
+							href="ANYALL.html"
+							target="FrameMain">
+								ANY и ALL – Многократное сравнение
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic78" data="icon: '16.png'">
+							<a
+							href="Newtopic78.html"
+							target="FrameMain">
+								Вложенные подзапросы
+							</a>
+
+				</li>
+
+						<li class="" id="HAVING1" data="icon: '16.png'">
+							<a
+							href="HAVING1.html"
+							target="FrameMain">
+								HAVING  — Условия отбора в подзапросе
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic79" data="">
+							<a
+							href="Newtopic79.html"
+							target="FrameMain">
+								Выражения
+							</a>
+
+				<ul>
+
+						<li class="" id="CAST" data="icon: '16.png'">
+							<a
+							href="CAST.html"
+							target="FrameMain">
+								CAST  — Преобразованием типов
+							</a>
+
+				</li>
+
+						<li class="" id="CASE" data="icon: '16.png'">
+							<a
+							href="CASE.html"
+							target="FrameMain">
+								CASE  — Ограничение возможности принятия решения в выражении
+							</a>
+
+				</li>
+
+						<li class="" id="NULLIFNULL" data="icon: '16.png'">
+							<a
+							href="NULLIFNULL.html"
+							target="FrameMain">
+								NULLIF  — Вместо значение NULL назначается другое значение
+							</a>
+
+				</li>
+
+						<li class="" id="COALESCENULL" data="icon: '16.png'">
+							<a
+							href="COALESCENULL.html"
+							target="FrameMain">
+								COALESCE  — Удаление тех данных значение которых NULL
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic80" data="">
+							<a
+							href="Newtopic80.html"
+							target="FrameMain">
+								Работа с данными
+							</a>
+
+				<ul>
+
+						<li class="" id="INSERT1" data="icon: '16.png'">
+							<a
+							href="INSERT1.html"
+							target="FrameMain">
+								INSERT  — Добавление данных в таблицу
+							</a>
+
+				</li>
+
+						<li class="" id="DELETE1" data="icon: '16.png'">
+							<a
+							href="DELETE1.html"
+							target="FrameMain">
+								DELETE  — Удаление строки
+							</a>
+
+				</li>
+
+						<li class="" id="UPDATE1" data="icon: '16.png'">
+							<a
+							href="UPDATE1.html"
+							target="FrameMain">
+								UPDATE  — Обновление строки с данными
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic81" data="">
+							<a
+							href="Newtopic81.html"
+							target="FrameMain">
+								Целостность данных
+							</a>
+
+				<ul>
+
+						<li class="" id="RULE" data="icon: '16.png'">
+							<a
+							href="RULE.html"
+							target="FrameMain">
+								RULE  — Правило для столбца
+							</a>
+
+				</li>
+
+						<li class="" id="CHECK" data="icon: '16.png'">
+							<a
+							href="CHECK.html"
+							target="FrameMain">
+								CHECK  — Ограничение на значение столбца
+							</a>
+
+				</li>
+
+						<li class="" id="DOMAIN" data="icon: '16.png'">
+							<a
+							href="DOMAIN.html"
+							target="FrameMain">
+								DOMAIN  — Домены обобщают ограничения
+							</a>
+
+				</li>
+
+						<li class="" id="UNIQUE" data="icon: '16.png'">
+							<a
+							href="UNIQUE.html"
+							target="FrameMain">
+								UNIQUE  — Уникальность
+							</a>
+
+				</li></ul></li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic159" data="">
+							<a
+							href="Newtopic159.html"
+							target="FrameMain">
+								Бухгалтерский учет
+							</a>
+
+				<ul>
+
+						<li class="" id="FIFOLIFO" data="icon: '16.png'">
+							<a
+							href="FIFOLIFO.html"
+							target="FrameMain">
+								FIFO / LIFO - Учет запасов однородного товара
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic213" data="icon: '16.png'">
+							<a
+							href="Newtopic213.html"
+							target="FrameMain">
+								Рассчитать НДС
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic210" data="icon: '16.png'">
+							<a
+							href="Newtopic210.html"
+							target="FrameMain">
+								Себестоимость списания
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic211" data="icon: '16.png'">
+							<a
+							href="Newtopic211.html"
+							target="FrameMain">
+								Валовая прибыль
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic212" data="icon: '16.png'">
+							<a
+							href="Newtopic212.html"
+							target="FrameMain">
+								Рентабельность в процентах
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic209" data="">
+							<a
+							href="Newtopic209.html"
+							target="FrameMain">
+								Администрирование
+							</a>
+
+				<ul>
+
+						<li class="folder" id="WindowsServer" data="">
+							<a
+							href="WindowsServer.html"
+							target="FrameMain">
+								Windows Server - Администрирование
+							</a>
+
+				<ul>
+
+						<li class="folder" id="cmd" data="">
+							<a
+							href="cmd.html"
+							target="FrameMain">
+								cmd
+							</a>
+
+				<ul>
+
+						<li class="" id="ping" data="icon: '16.png'">
+							<a
+							href="ping.html"
+							target="FrameMain">
+								ping
+							</a>
+
+				</li>
+
+						<li class="" id="ipconfig" data="icon: '16.png'">
+							<a
+							href="ipconfig.html"
+							target="FrameMain">
+								ipconfig
+							</a>
+
+				</li></ul></li>
+
+						<li class="folder" id="Newtopic236" data="">
+							<a
+							href="Newtopic236.html"
+							target="FrameMain">
+								Выполнить
+							</a>
+
+				<ul>
+
+						<li class="" id="servicesmsc" data="icon: '16.png'">
+							<a
+							href="servicesmsc.html"
+							target="FrameMain">
+								services.msc
+							</a>
+
+				</li>
+
+						<li class="" id="gpeditmsc" data="icon: '16.png'">
+							<a
+							href="gpeditmsc.html"
+							target="FrameMain">
+								gpedit.msc
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="Linux" data="">
+							<a
+							href="Linux.html"
+							target="FrameMain">
+								Linux
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic52" data="icon: '16.png'">
+							<a
+							href="Newtopic52.html"
+							target="FrameMain">
+								Команды
+							</a>
+
+				</li>
+
+						<li class="" id="gdebiDEB" data="icon: '16.png'">
+							<a
+							href="gdebiDEB.html"
+							target="FrameMain">
+								Установка gdebi для DEB пакета
+							</a>
+
+				</li>
+
+						<li class="" id="SH" data="icon: '16.png'">
+							<a
+							href="SH.html"
+							target="FrameMain">
+								Установка SH пакетов
+							</a>
+
+				</li>
+
+						<li class="" id="GIT" data="icon: '16.png'">
+							<a
+							href="GIT.html"
+							target="FrameMain">
+								Установка GIT
+							</a>
+
+				</li>
+
+						<li class="" id="JavaJDKJRE" data="icon: '16.png'">
+							<a
+							href="JavaJDKJRE.html"
+							target="FrameMain">
+								Установка Java (JDK, JRE)
+							</a>
+
+				</li>
+
+						<li class="" id="NodeJS1" data="icon: '16.png'">
+							<a
+							href="NodeJS1.html"
+							target="FrameMain">
+								Установка NodeJS
+							</a>
+
+				</li>
+
+						<li class="" id="VSCode" data="icon: '16.png'">
+							<a
+							href="VSCode.html"
+							target="FrameMain">
+								Установка VSCode
+							</a>
+
+				</li>
+
+						<li class="" id="LAMP" data="icon: '16.png'">
+							<a
+							href="LAMP.html"
+							target="FrameMain">
+								Установка LAMP
+							</a>
+
+				</li>
+
+						<li class="" id="PhpMyAdmin" data="icon: '16.png'">
+							<a
+							href="PhpMyAdmin.html"
+							target="FrameMain">
+								Установка PhpMyAdmin
+							</a>
+
+				</li>
+
+						<li class="" id="DoubleCommander" data="icon: '16.png'">
+							<a
+							href="DoubleCommander.html"
+							target="FrameMain">
+								Установить Double Commander
+							</a>
+
+				</li></ul></li></ul></li>
+
+						<li class="folder" id="Newtopic" data="">
+							<a
+							href="Newtopic.html"
+							target="FrameMain">
+								Разное
+							</a>
+
+				<ul>
+
+						<li class="folder" id="Git1" data="">
+							<a
+							href="Git1.html"
+							target="FrameMain">
+								Git
+							</a>
+
+				<ul>
+
+						<li class="" id="Newtopic54" data="icon: '16.png'">
+							<a
+							href="Newtopic54.html"
+							target="FrameMain">
+								Основные команды
+							</a>
+
+				</li>
+
+						<li class="" id="Newtopic55" data="icon: '16.png'">
+							<a
+							href="Newtopic55.html"
+							target="FrameMain">
+								Рабочий процесс
+							</a>
+
+				</li></ul></li></ul></li>
+				
+				</ul>
+		</div>
+		
+		
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				
+				
+			</ul>
+		</div>
+		
+		
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		
+		
+	</div>
+    
+</body>
+
+</html>
+

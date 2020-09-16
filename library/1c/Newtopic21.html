@@ -1,0 +1,243 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Запрос</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic21");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Запрос</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic20.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic22.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Запрос</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Разрешено чтение данных, но недоступно изменение данных.</span></p>
+<p class="rvps3"><span class="rvts8">Физические таблицы - используются для работы с документами, справочниками и т.п.</span></p>
+<p class="rvps3"><span class="rvts8">Виртуальные таблицы - используются для регистров (обязательно использовать параметры)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Простой запрос из обработки</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps5"><span class="rvts21">&amp;НаСервере</span></p>
+<p class="rvps5"><span class="rvts14">Процедура </span><span class="rvts15">ЗапросНаСервер</span><span class="rvts14">()</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps6"><span class="rvts15">НЗапрос</span><span class="rvts14"> = Новый </span><span class="rvts15">Запрос</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts15">НЗапрос</span><span class="rvts14">.</span><span class="rvts15">Текст</span><span class="rvts14"> = </span><span class="rvts8">"ВЫБРАТЬ</span></p>
+<p class="rvps7"><span class="rvts8">|</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Номенклатура.Наименование</span></p>
+<p class="rvps7"><span class="rvts8">| ИЗ</span></p>
+<p class="rvps7"><span class="rvts8">|</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts8">Справочник.Номенклатура КАК Номенклатура"</span><span class="rvts14">;</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps6"><span class="rvts15">Результат</span><span class="rvts14"> = </span><span class="rvts15">НЗапрос</span><span class="rvts14">.</span><span class="rvts15">Выполнить</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts14">Если</span><span class="rvts15"> </span><span class="rvts14">(</span><span class="rvts15">Результат</span><span class="rvts14">.</span><span class="rvts15">Пустой</span><span class="rvts14">() = Ложь) Тогда</span></p>
+<p class="rvps7"><span class="rvts15">Выборка</span><span class="rvts14"> = </span><span class="rvts15">Результат</span><span class="rvts14">.</span><span class="rvts15">Выбрать</span><span class="rvts14">();</span></p>
+<p class="rvps7"><span class="rvts14">Пока </span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">Следующий</span><span class="rvts14">() Цикл</span></p>
+<p class="rvps9"><span class="rvts15">Сообщить</span><span class="rvts14">(</span><span class="rvts15">Выборка</span><span class="rvts14">.</span><span class="rvts15">Наименование</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts14">КонецЦикла;</span></p>
+<p class="rvps7"><span class="rvts14"><br/></span></p>
+<p class="rvps7"><span class="rvts15">ТЗ</span><span class="rvts14"> = </span><span class="rvts15">Результат</span><span class="rvts14">.</span><span class="rvts15">Выгрузить</span><span class="rvts14">();</span></p>
+<p class="rvps6"><span class="rvts14">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts14">КонецПроцедуры</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Текст запросов</span><span class="rvts8"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<div class="rvps3"><table width="100%" border="1" cellpadding="1" cellspacing="2" style="border-color: #000000; border-style: solid; border-spacing: 2px;">
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts20">Запрос</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts20">Описание</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> * </span><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Выбрать все поля из таблицы</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Номенклатура.Наименование </span><span class="rvts22">КАК</span><span class="rvts8"> Имя</span></p>
+<p class="rvps3"><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Назначить псевданим выбранному полю</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Номенклатура.Поставщик,</span></p>
+<p class="rvps3"><span class="rvts15">КОЛИЧЕСТВО</span><span class="rvts8">(</span><span class="rvts15">РАЗЛИЧНЫЕ</span><span class="rvts8"> Номенклатура.Ссылка)</span></p>
+<p class="rvps3"><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+<p class="rvps3"><span class="rvts22">СГРУППИРОВАТЬ ПО</span><span class="rvts8"> Номенклатура.Поставщик</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Группировка и суммирование</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">или </span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">КОЛИЧЕСТВО (Номенклатура.Цена)</span></p>
+<p class="rvps3"><span class="rvts8">МАКСИМУМ (Номенклатура.Цена)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts16"> </span><span class="rvts8">Номенклатура.Наименование</span></p>
+<p class="rvps3"><span class="rvts22">ИЗ</span><span class="rvts16"> </span><span class="rvts8">Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+<p class="rvps3"><span class="rvts22">ГДЕ</span><span class="rvts8"> (Номенклатура.Цена </span><span class="rvts22">&gt;</span><span class="rvts8"> 1000</span></p>
+<p class="rvps3"><span class="rvts22">И</span><span class="rvts8"> Номенклатура.Цена </span><span class="rvts22">&lt;</span><span class="rvts8"> 1000</span></p>
+<p class="rvps3"><span class="rvts22">ИЛИ</span><span class="rvts8"> Номенклатура.Цена = 0)</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Условие</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> Номенклатура.Наименование </span><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+<p class="rvps3"><span class="rvts22">ОБЪЕДИНИТЬ </span><span class="rvts15">ВСЕ</span></p>
+<p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> Контрагент.Наименование </span><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Контрагент </span><span class="rvts22">КАК</span><span class="rvts8"> Контрагент</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Объединение (можно не использовать ВСЕ)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> Номенклатура.Наименование </span><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+<p class="rvps3"><span class="rvts22">УПОРЯДОЧИТЬ ПО</span></p>
+<p class="rvps3"><span class="rvts8">Номенклатура.Цена </span><span class="rvts15">УБЫВ</span><span class="rvts8">,</span></p>
+<p class="rvps3"><span class="rvts8">Номенклатура.Наименование</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Упорядочивание</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">или АВТОУПОРЯДОЧИВАНИЕ</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts8"> </span></p>
+<p class="rvps3"><span class="rvts8">Номенклатура.Цена </span><span class="rvts22">КАК</span><span class="rvts8"> Цена</span></p>
+<p class="rvps3"><span class="rvts15">ВЫБОР КОГДА</span><span class="rvts8"> Цена &gt; 5000 </span><span class="rvts15">ТОГДА</span><span class="rvts8"> "Дорого" </span><span class="rvts15">ИНАЧЕ</span><span class="rvts8"> "Дешево"</span></p>
+<p class="rvps3"><span class="rvts15">КОНЕЦ</span><span class="rvts8"> </span><span class="rvts22">КАК</span><span class="rvts8"> Поле1</span></p>
+<p class="rvps3"><span class="rvts22">ИЗ</span><span class="rvts8"> Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Выбор</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span></p>
+<p class="rvps3"><span class="rvts22">ЗНАЧЕНИЕ</span><span class="rvts16">(Справочник.Склады.Основной)</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Значение</span></p>
+<p class="rvps3"><span class="rvts8">Предопределённые элементы или перечисления</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts22">ВЫБРАТЬ</span><span class="rvts16"> </span><span class="rvts8">Номенклатура.Наименование</span></p>
+<p class="rvps3"><span class="rvts22">ИЗ</span><span class="rvts16"> </span><span class="rvts8">Справочник.Номенклатура </span><span class="rvts22">КАК</span><span class="rvts8"> Номенклатура</span></p>
+<p class="rvps3"><span class="rvts22">ГДЕ</span><span class="rvts8"> Номенклатура.Поставщик = </span><span class="rvts23">&amp;Поставщик</span></p>
+</td>
+<td style="border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps3"><span class="rvts8">Передача параметров</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

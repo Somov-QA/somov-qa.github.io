@@ -1,0 +1,177 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Общие методы регистров.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic135");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Общие методы регистров.</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic134.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic136.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Общие методы регистров.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: отобразить в строке состояния </span><span class="rvts32">вид</span><span class="rvts36"> регистра.</span></p>
+<p class="rvps3"><span class="rvts34">Состояние (</span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">Вид</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: отобразим пользовательское </span><span class="rvts32">представление вида</span><span class="rvts36"> в строке состояния.</span></p>
+<p class="rvps3"><span class="rvts34">Состояние (</span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПредставлениеВида</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">назначим тип</span><span class="rvts36"> реквизиту регистра тип которого "Неопределенный"</span></p>
+<p class="rvps3"><span class="rvts34">Регистр.</span><span class="rvts35">ОборотТовара</span><span class="rvts34">.</span><span class="rvts35">НазначитьТип</span><span class="rvts34">(</span><span class="rvts36">"Товар"</span><span class="rvts34">, </span><span class="rvts36">"Справочник.Товары"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">установим</span><span class="rvts36"> значение </span><span class="rvts32">атрибута</span><span class="rvts36"> по имени идентификатора.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts36">"Сумма"</span><span class="rvts34">, </span><span class="rvts35">СуммаТов</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">получим</span><span class="rvts36"> значение </span><span class="rvts32">атрибута</span><span class="rvts36"> по идентификатору.</span></p>
+<p class="rvps3"><span class="rvts35">СуммаТов</span><span class="rvts34"> = </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(</span><span class="rvts36">"Сумма"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">выберим</span><span class="rvts36"> все </span><span class="rvts32">движения</span><span class="rvts36"> регистра в указанном периоде.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДвижения</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">,</span><span class="rvts35">ДатаКон</span><span class="rvts34">); </span><span class="rvts37">// применил в примере получения прихода и расхода.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: произведем </span><span class="rvts32">выбор</span><span class="rvts36"> всех </span><span class="rvts32">движений</span><span class="rvts36"> регистра по указанному</span><span class="rvts32"> документу</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДвиженияДокумента</span><span class="rvts34">(</span><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДвижение</span><span class="rvts34">() &gt; </span><span class="rvts36">0</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: установим </span><span class="rvts32">обратный порядок</span><span class="rvts36"> выборки движения документов.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ОбратныйПорядок</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДвиженияДокумента</span><span class="rvts34">(</span><span class="rvts35">Док</span><span class="rvts34">.</span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">()); </span><span class="rvts37">// или &nbsp;</span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДвижения</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">, </span><span class="rvts35">ДатаКон</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДвижение</span><span class="rvts34">() &gt; </span><span class="rvts36">0</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: выбираем следующее </span><span class="rvts32">движение</span><span class="rvts36"> регистра (применяется в цикле)</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДвижение</span><span class="rvts34">() &gt; </span><span class="rvts36">0</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получим значение </span><span class="rvts32">текущего документа</span><span class="rvts36">, который задал движение регистра.</span></p>
+<p class="rvps3"><span class="rvts35">Док</span><span class="rvts34"> = </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: получим значение </span><span class="rvts32">номера строки</span><span class="rvts36"> документа, которая задала движение регистра.</span></p>
+<p class="rvps3"><span class="rvts39">(если в модуле документа перед движением использовался метод </span><span class="rvts35">ПривязыватьСтроку</span><span class="rvts34">()</span><span class="rvts41">)</span></p>
+<p class="rvps3"><span class="rvts35">НомСтр</span><span class="rvts34"> = </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">НомерСтроки</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: произведем перебор текущих или временых остатков по регистру.</span></p>
+<p class="rvps3"><span class="rvts39">(при этом может использоваться фильтр </span><span class="rvts35">УстановитьФильтр</span><span class="rvts34">()</span><span class="rvts36">)</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьФильтр</span><span class="rvts34">(</span><span class="rvts35">Клиент</span><span class="rvts34">, );</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts38">ВыбратьИтоги</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: выбираем очередной остаток по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВыбратьИтоги</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts38">ПолучитьИтог</span><span class="rvts34">() = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">выгружаем</span><span class="rvts36"> все </span><span class="rvts32">итоги</span><span class="rvts36"> регистра с текущим фильтром.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьФильтр</span><span class="rvts34">(</span><span class="rvts35">Клиент</span><span class="rvts34">, );</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts38">ВыгрузитьИтоги</span><span class="rvts34">(</span><span class="rvts35">СписокЗнач</span><span class="rvts34">, </span><span class="rvts36">1</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: устанавливаем флаг участия регистра во </span><span class="rvts32">временном расчете</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">ВременныйРасчет</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">установим фильтр</span><span class="rvts36"> для оптимизации действий с регистром.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьФильтр</span><span class="rvts34">(</span><span class="rvts35">Клиент</span><span class="rvts34">, );</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: </span><span class="rvts32">установим значение фильтра</span><span class="rvts36"> для оптимизации расчетов.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьЗначениеФмльтра</span><span class="rvts34">(</span><span class="rvts36">"Товар"</span><span class="rvts34">, </span><span class="rvts35">ВыбГруппаТоваров</span><span class="rvts34">, </span><span class="rvts36">2</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

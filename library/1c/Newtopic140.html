@@ -1,0 +1,146 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Виды расчетов и Группы расчетов</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic140");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Виды расчетов и Группы расчетов</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic138.html">Расчет. (&quot;Календарь&quot; &quot;ВидыРасчетов&quot; &quot;Группы&quot; &quot;ЖкрналыРасчетов&quot; &quot;Запрос&quot;)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic138.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic139.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic141.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Виды расчетов и Группы расчетов</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts36">При создании "</span><span class="rvts32">Вида расчета</span><span class="rvts36">" можно настроить </span><span class="rvts32">вытеснения</span><span class="rvts36">… &nbsp; </span></p>
+<p class="rvps3"><span class="rvts36">и вхождение в группу (но это настраивается только при наличии группы)</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">При создании "</span><span class="rvts32">Группы расчетов</span><span class="rvts36">" определяются виды расчетов которые входят в эту группу.</span></p>
+<p class="rvps3"><span class="rvts50"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Перебор всех </span><span class="rvts57">Видов расчетов</span><span class="rvts36"> с учетом </span><span class="rvts57">Группы расчетов</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">Ном</span><span class="rvts34">=</span><span class="rvts36">1</span><span class="rvts34"> По Метаданные.</span><span class="rvts35">ВидРасчета</span><span class="rvts34">() Цикл</span></p>
+<p class="rvps5"><span class="rvts35">НазваниеВР</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">ВидРасчета</span><span class="rvts34">(</span><span class="rvts35">Ном</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ВР</span><span class="rvts34"> = ВидРасчета.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">НазваниеВР</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts38">ВходитВГруппу</span><span class="rvts34">(ГруппаРасчетов.</span><span class="rvts35">ГруппаОплПоОкл</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts37">// Код - это идентификатов.</span></p>
+<p class="rvps6"><span class="rvts37">// Наименование - это комментарий.</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Расчет "</span><span class="rvts34"> + </span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> + </span><span class="rvts36">" ("</span><span class="rvts34"> + </span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34"> + </span><span class="rvts36">") входит в группу "</span><span class="rvts34"> + ГруппаРасчетов.</span><span class="rvts35">ГруппаОплПоОкл</span><span class="rvts34">.</span><span class="rvts35">Наименование</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Определим виды расчета которые </span><span class="rvts57">вытесняются</span><span class="rvts36"> видом расчета "ОплатаПоОкладу" </span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">Ном</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По Метаданные.</span><span class="rvts35">ВидРасчета</span><span class="rvts34">() Цикл</span></p>
+<p class="rvps5"><span class="rvts35">НазваниеВР</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">ВидРасчета</span><span class="rvts34">(</span><span class="rvts35">Ном</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">ВР</span><span class="rvts34"> = ВидРасчета.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">НазваниеВР</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Если </span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts38">ВытесняетсяВидомРасчета</span><span class="rvts34">(ВидРасчета.</span><span class="rvts35">ОплатаПоОкладу</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда </span><span class="rvts37">//Определяет, вытесняется ли текущий вид расчета заданным видом расчета</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Вид расчета ("</span><span class="rvts34"> + </span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> + </span><span class="rvts36">") вытесняется видом расчета ("</span><span class="rvts34"> + ВидРасчета.</span><span class="rvts35">ОплатаПоОкладу</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34"> + </span><span class="rvts36">")"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Получить все виды расчета из </span><span class="rvts57">Группы расчетов</span></p>
+<p class="rvps3"><span class="rvts35">Группа</span><span class="rvts34"> = ГруппаРасчетов.</span><span class="rvts35">ГруппаОплПоОкл</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">Ном</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По </span><span class="rvts35">Группа</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">() Цикл</span></p>
+<p class="rvps5"><span class="rvts35">ВР</span><span class="rvts34"> = </span><span class="rvts35">Группа</span><span class="rvts34">.</span><span class="rvts35">ПолучитьРасчет</span><span class="rvts34">(</span><span class="rvts35">Ном</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts35">ВР</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

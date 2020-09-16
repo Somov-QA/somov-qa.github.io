@@ -1,0 +1,222 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Асинхронные екшены с помощью redux-thunk</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.4.1.404">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("reduxthunk");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Асинхронные екшены с помощью redux-thunk</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScript.html">JavaScript</a> &rsaquo;&rsaquo; <a href="ReactRedux.html">React &amp; Redux</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ReactRedux.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic102.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Angularjs.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts24">Асинхронные екшены с помощью redux-thunk</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps21"><span class="rvts89">Установка пакета redux-thunk</span></p>
+<p class="rvps22"><span class="rvts92">$ npm install redux-thunk --save</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">В папке </span><span class="rvts159">./src/reducers</span><span class="rvts107"> файл </span><span class="rvts164">index.js</span><span class="rvts107"> подключаем метод applyMiddleware и библиотеку redux-thunk. При создании хранилища вторым параметром передаем applyMiddleware(thunk)</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> { createStore, applyMiddleware } from </span><span class="rvts94">'redux'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> thunk from </span><span class="rvts94">'redux-thunk'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> store = createStore(reducer, applyMiddleware(thunk));</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">Необходимо создать папку </span><span class="rvts159">./src/actions</span><span class="rvts107"> и в ней файл </span><span class="rvts159">track.js</span><span class="rvts107"> (это action, он выполняет dispatch данных в хранилище по истечению таймера.)</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">var</span><span class="rvts92"> dataTracks = [</span><span class="rvts94">'Track #1'</span><span class="rvts92">, </span><span class="rvts94">'Track #2'</span><span class="rvts92">, </span><span class="rvts94">'Track #3'</span><span class="rvts92">, </span><span class="rvts94">'Track #4'</span><span class="rvts92">];</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">export</span><span class="rvts92"> </span><span class="rvts91">default</span><span class="rvts92"> </span><span class="rvts91">function</span><span class="rvts92"> asyncGetTracks (dispatch) {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> dispatch =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;setTimeout(() =&gt; {</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(</span><span class="rvts94">'I got tracks'</span><span class="rvts92">);</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts94">'GET_TRACKS'</span><span class="rvts92">, payload: dataTracks });</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;}, 2000)</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">В папке </span><span class="rvts159">./src/reducers</span><span class="rvts107"> изменим файл </span><span class="rvts164">tracks.js</span><span class="rvts107"> добавим обработку GET_TRACKS </span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">const</span><span class="rvts92"> initialState = [</span><span class="rvts94">'Track 1'</span><span class="rvts92">, </span><span class="rvts94">'Track 2'</span><span class="rvts92">];</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">export</span><span class="rvts92"> </span><span class="rvts91">default</span><span class="rvts92"> </span><span class="rvts91">function</span><span class="rvts92"> playList(state = initialState, action){</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">if</span><span class="rvts92">(action.type === </span><span class="rvts94">'ADD_TRACK'</span><span class="rvts92">){</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> [</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;...state,</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;action.payload</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;]</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span><span class="rvts91">else</span><span class="rvts92"> </span><span class="rvts91">if</span><span class="rvts92">(action.type === </span><span class="rvts94">'GET_TRACKS'</span><span class="rvts92">){</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> action.payload;</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps22"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> state;</span></p>
+<p class="rvps22"><span class="rvts92">}</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">В папке </span><span class="rvts159">./src/components</span><span class="rvts107"> изменим файл </span><span class="rvts164">TrackList.js</span><span class="rvts107"> добавим кнопку получания данных</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<div class="rvps3"><table border="0" cellpadding="0" cellspacing="0" style="border-width: 0px; border-spacing: 0px;">
+<tr valign="top">
+<td width="321" valign="top" style="padding: 0px;"><p class="rvps33"><img alt="" style="padding : 1px;" src="lib/NewItem13.png"></p>
+</td>
+<td width="321" valign="top" style="padding: 0px;"><p class="rvps33"><img alt="" style="padding : 1px;" src="lib/NewItem14.png"></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">Импортируем ранее созданый action находящийся в папке &nbsp;</span><span class="rvts159">./src/actions</span><span class="rvts107"> файл </span><span class="rvts159">track.js</span></p>
+<p class="rvps21"><span class="rvts107">В разделе визуализации добавляем кнопку с вызовом функции onGetTracks которая описана ниже в функции &nbsp;mapDispatchToProps</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts91">import</span><span class="rvts92"> React, { Component } from </span><span class="rvts94">'react'</span><span class="rvts92">;</span></p>
+<p class="rvps21"><span class="rvts91">import</span><span class="rvts92"> { connect } from </span><span class="rvts94">'react-redux'</span><span class="rvts92">;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts91">import</span><span class="rvts92"> asyncGetTracks from </span><span class="rvts94">'../actions/tracks'</span><span class="rvts92">;</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts91">class</span><span class="rvts92"> TrackList </span><span class="rvts91">extends</span><span class="rvts92"> Component {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;...</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;render() {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> (</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; </span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts94"> &nbsp; ...</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;br /&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;div&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;button onClick={</span><span class="rvts91">this</span><span class="rvts92">.props.onGetTracks}&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92">Получать асинхронно список треков</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts92">&lt;/button&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;);</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps21"><span class="rvts92">}</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts93">/* Получаем данные из хранилища */</span></p>
+<p class="rvps21"><span class="rvts91">const</span><span class="rvts92"> mapStateToProps = (state, ownProps) =&gt; {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;store: state</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;};</span></p>
+<p class="rvps21"><span class="rvts92">}</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts93">/* Обновляем данные в хранилище */</span></p>
+<p class="rvps21"><span class="rvts91">const</span><span class="rvts92"> mapDispatchToProps = (dispatch) =&gt; {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;</span><span class="rvts91">return</span><span class="rvts92"> {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;onAddTrack: (trackName) =&gt; {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts94">'ADD_TRACK'</span><span class="rvts92">, payload: trackName });</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;onAddList: (listName) =&gt; {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch({ type: </span><span class="rvts94">'ADD_LIST'</span><span class="rvts92">, payload: listName });</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;onGetTracks: () =&gt; {</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dispatch(asyncGetTracks(dispatch));</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
+<p class="rvps21"><span class="rvts92"> &nbsp; &nbsp;}</span></p>
+<p class="rvps21"><span class="rvts92">};</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts93">/* Соединяем компонент с хранилищем */</span></p>
+<p class="rvps21"><span class="rvts91">export</span><span class="rvts92"> </span><span class="rvts91">default</span><span class="rvts92"> connect(mapStateToProps, mapDispatchToProps)(TrackList);</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps21"><span class="rvts107">В файле </span><span class="rvts159">App.js</span><span class="rvts107"> импортируем наши компонент и добавяем их в render</span></p>
+<p class="rvps21"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> TrackList from </span><span class="rvts94">'./components/TrackList'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts91">import</span><span class="rvts92"> PriceFilter from </span><span class="rvts94">'./components/PriceFilter'</span><span class="rvts92">;</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p class="rvps22"><span class="rvts92">&lt;TrackList /&gt;</span></p>
+<p class="rvps22"><span class="rvts92">&lt;PriceFilter /&gt;</span></p>
+<p class="rvps22"><span class="rvts89"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Produce electronic books easily</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2018 by Somov. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,173 @@
+﻿<html>
+	
+<head>
+	<title>Таблицы</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic69");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Таблицы</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Lua.html">Lua</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Lua.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic68.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Newtopic70.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts14">weekdays = {</span><span class="rvts17">"Sunday"</span><span class="rvts14">, </span><span class="rvts17">"Monday"</span><span class="rvts14">, </span><span class="rvts17">"Tuesday"</span><span class="rvts14">, </span><span class="rvts17">"Wednesday"</span><span class="rvts14">, </span><span class="rvts17">"Thursday"</span><span class="rvts14">,</span><span class="rvts17"> "Friday"</span><span class="rvts14">, </span><span class="rvts17">"Saturday"</span><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts14">print(weekdays[1]) </span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">-- "Sunday"</span></p>
+<p class="rvps3"><span class="rvts14">print(weekdays[5]) </span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">-- "Thursday"</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Многомерные таблицы</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts14">moons = { Earth = { </span><span class="rvts17">"Moon"</span><span class="rvts14"> }, Uranus = { </span><span class="rvts17">"Puck"</span><span class="rvts14">,</span><span class="rvts17"> "Miranda"</span><span class="rvts14">, </span><span class="rvts17">"Ariel"</span><span class="rvts14">, </span><span class="rvts17">"Umbriel"</span><span class="rvts14">, </span><span class="rvts17">"Titania"</span><span class="rvts14">, </span><span class="rvts17">"Oberon"</span><span class="rvts14"> } }</span></p>
+<p class="rvps3"><span class="rvts14">print(moons.Uranus[3]) </span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">-- "Ariel"</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Парсинг таблиц</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts15">for</span><span class="rvts14"> key, value </span><span class="rvts15">in</span><span class="rvts14"> pairs(t) </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts14"> &nbsp; &nbsp;print(key, value)</span></p>
+<p class="rvps3"><span class="rvts15">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8">Парсинг таблиц</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts15">local</span><span class="rvts14"> field = {</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_0 = {1,1,1,1,1,1,1},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_1 = {1,1,1,1,1,1,1},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_2 = {2,2,2,2,2,2,2},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_3 = {3,3,3,3,3,3,3},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_4 = {4,4,4,4,4,4,4},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_5 = {5,5,5,5,5,5,5},</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">line_6 = {5,5,5,5,5,5,5}</span></p>
+<p class="rvps3"><span class="rvts14">}</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts15">for</span><span class="rvts14"> iKey, iValue </span><span class="rvts15">in</span><span class="rvts14"> pairs(field) </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">for</span><span class="rvts14"> jKey, jValue </span><span class="rvts15">in</span><span class="rvts14"> pairs(iValue) </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">print(jValue)</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">end</span></p>
+<p class="rvps3"><span class="rvts15">end</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Или другой способ</span></p>
+<p class="rvps3"><span class="rvts14"><br/></span></p>
+<p class="rvps3"><span class="rvts15">for</span><span class="rvts14"> i = 0, 6 </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">local</span><span class="rvts14"> jLength = #field[</span><span class="rvts17">"line_"</span><span class="rvts14"> .. i]</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">for</span><span class="rvts14"> j = 1, jLength </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">print(field[</span><span class="rvts17">"line_"</span><span class="rvts14"> .. i][j])</span></p>
+<p class="rvps5"><span class="rvts15">end</span></p>
+<p class="rvps3"><span class="rvts15">end</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts18">Наполнение таблиц данными</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19">table.insert - вставить значение</span></p>
+<p class="rvps3"><span class="rvts19">table.remove - удалить значение</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19">self.field = {}</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts15">local</span><span class="rvts19"> tableColor = {</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row1 = {1,2,5,4,1,3,2},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row2 = {1,3,4,3,3,5,3},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row3 = {2,2,4,2,1,4,5},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row4 = {3,3,1,1,5,4,3},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row5 = {4,3,2,1,4,1,4},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row6 = {5,5,3,3,2,3,1},</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">row7 = {5,5,1,4,2,1,2}</span></p>
+<p class="rvps3"><span class="rvts19">}</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts15">for</span><span class="rvts19"> col = 1, 7 </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">for</span><span class="rvts19"> row = 1, 7 </span><span class="rvts15">do</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">table.insert(self.field, {</span></p>
+<p class="rvps7"><span class="rvts19">value = tableColor[</span><span class="rvts17">"row"</span><span class="rvts19"> .. row][col], </span></p>
+<p class="rvps7"><span class="rvts19">col = col, </span></p>
+<p class="rvps7"><span class="rvts19">row = row</span></p>
+<p class="rvps6"><span class="rvts19">})</span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps3"><span class="rvts19"></span><span class="rvts19"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">end</span></p>
+<p class="rvps3"><span class="rvts15">end</span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts19">print(self.field[table.getn(self.field)].value)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">function</span><span class="rvts21"> init(</span><span class="rvts20">self</span><span class="rvts21">)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">self</span><span class="rvts21">.fieldPos = {}</span></p>
+<p class="rvps3"><span class="rvts21"><br/></span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">local</span><span class="rvts21"> pos = vmath.vector3()</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">for</span><span class="rvts21"> col = </span><span class="rvts22">1</span><span class="rvts21">, </span><span class="rvts22">7</span><span class="rvts21"> </span><span class="rvts20">do</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">for</span><span class="rvts21"> row = </span><span class="rvts22">1</span><span class="rvts21">, </span><span class="rvts22">7</span><span class="rvts21"> </span><span class="rvts20">do</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">pos.x = </span><span class="rvts22">100</span><span class="rvts21"> + (</span><span class="rvts22">80</span><span class="rvts21"> * col)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">pos.y = </span><span class="rvts22">700</span><span class="rvts21"> - (</span><span class="rvts22">80</span><span class="rvts21"> * row)</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21">pos.z = </span><span class="rvts22">0</span><span class="rvts21">.</span><span class="rvts22">1</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">local</span><span class="rvts21"> colRow = </span><span class="rvts23">"col"</span><span class="rvts21"> .. col .. </span><span class="rvts23">":row"</span><span class="rvts21"> .. row </span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">self</span><span class="rvts21">.fieldPos[colRow] = {x = pos.x, y = pos.y, z = pos.z}</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">end</span></p>
+<p class="rvps3"><span class="rvts21"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">end</span></p>
+<p class="rvps3"><span class="rvts20">end</span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts20"><br/></span></p>
+<p class="rvps3"><span class="rvts19"><br/></span></p>
+<p class="rvps3"><span class="rvts18"><br/></span></p>
+<p></p>
+<p class="rvps2"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="http://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

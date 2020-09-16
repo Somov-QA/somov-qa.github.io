@@ -1,0 +1,201 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Произвольно полученные справочники, реквизиты справочника. (перенос групп и элементов)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic148");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Произвольно полученные справочники, реквизиты справочника. (перенос групп и элементов)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic147.html">Решение задач особого назначения</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic147.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic147.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic149.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Произвольно полученные справочники, реквизиты справочника. (перенос групп и элементов)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">спр</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Справочник."</span><span class="rvts34"> + Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),</span><span class="rvts36">""</span><span class="rvts34">)));</span></p>
+<p class="rvps3"><span class="rvts35">СтрРекв</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Справочник</span><span class="rvts34">(Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),""))).</span><span class="rvts35">Реквизит</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">).</span><span class="rvts35">Идентификатор</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts35">Периодич</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Справочник</span><span class="rvts34">(Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),""))).</span><span class="rvts35">Реквизит</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">).</span><span class="rvts35">Периодический</span><span class="rvts34">;</span><span class="rvts37"> //0- не периодический , 1- периодический реквизит</span></p>
+<p class="rvps3"><span class="rvts35">Таблица.НоваяКолонка</span><span class="rvts34">(</span><span class="rvts35">СтрРекв</span><span class="rvts34">); /</span><span class="rvts37">/создаются колонки всех реквизитов существующих в выбранном справочнике.</span></p>
+<p class="rvps3"><span class="rvts35">ИД</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПараметрыКолонки</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">); </span><span class="rvts37">//идентификатор реквизита соответствует имени колонки</span></p>
+<p class="rvps3"><span class="rvts37">// Вставляем значение в таблицу значений из "Элемента" получив доступ к его реквизиту по Идентификатору (ИД)</span></p>
+<p class="rvps3"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">УстановитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СТР</span><span class="rvts34"> + 1, </span><span class="rvts35">ном</span><span class="rvts34">, Строка(</span><span class="rvts35">Элемент</span><span class="rvts34">.</span><span class="rvts35">получитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">ИД</span><span class="rvts34">)));</span></p>
+<p class="rvps3"><span class="rvts35">Список</span><span class="rvts34">.</span><span class="rvts35">ДобавитьЗначение</span><span class="rvts34">(</span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СТР</span><span class="rvts34">, </span><span class="rvts35">ИД</span><span class="rvts34">)); </span><span class="rvts37">// получаем значение из таблицы по идентификатору (ИД)</span><span class="rvts34"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts36"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Создание </span><span class="rvts32">колонок</span><span class="rvts36"> в "Таблице значений" имена которых соответствуют </span><span class="rvts32">идентификатору</span><span class="rvts36"> реквизита.</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = 1 По Метаданные.</span><span class="rvts35">Справочник</span><span class="rvts34">(Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),</span><span class="rvts36">""</span><span class="rvts34">))).</span><span class="rvts38">Реквизит</span><span class="rvts34">() Цикл </span></p>
+<p class="rvps5"><span class="rvts35">СтрРекв</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Справочник</span><span class="rvts34">(Строка(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">СправочникДляВыгрузки</span><span class="rvts34">.</span><span class="rvts35">ТекущаяСтрока</span><span class="rvts34">(),""))).</span><span class="rvts38">Реквизит</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">).</span><span class="rvts35">Идентификатор</span><span class="rvts34">;</span></p>
+<p class="rvps5"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">НоваяКолонка</span><span class="rvts34">(</span><span class="rvts35">СтрРекв</span><span class="rvts34">); </span><span class="rvts37">//создаются колонки всех реквизитов существующих в выбранном справочнике.</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts36"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Получим </span><span class="rvts32">идентификатор</span><span class="rvts36"> (ИД) реквизита из имен колонок таблицы значений (имя каждой колонки соответствует идентификатору реквизита)</span></p>
+<p class="rvps3"><span class="rvts35">Колонок</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">КоличествоКолонок</span><span class="rvts34">(); </span><span class="rvts37">//определим количество колонок</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">ном</span><span class="rvts34"> = 1 по </span><span class="rvts35">колонок</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ТекущаяКолонка</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts38">ИД</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьПараметрыКолонки</span><span class="rvts34">(</span><span class="rvts35">ном</span><span class="rvts34">); </span><span class="rvts37">//идентификатор реквизита</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">произвольный реквизит нового элемента справочника получает значение(Агр_Объект.ТекущийЭлемент())</span></p>
+<p class="rvps3"><span class="rvts36">и записывает его в реквизит(ИД) тип которого </span><span class="rvts32">"Справочник.Сотрудники"</span></p>
+<p class="rvps3"><span class="rvts35">Агр_Объект</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts32">"Справочник.Сотрудники"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts37">//осуществляем поиск в справочнике...</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Агр_Объект</span><span class="rvts34">.</span><span class="rvts35">НайтиПоНаименованию</span><span class="rvts34">(</span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">номерСтроки</span><span class="rvts34">,</span><span class="rvts35">ИД</span><span class="rvts34">), </span><span class="rvts36">0</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts37">//произвольный справочник получает значение(Агр_Объект.ТекущийЭлемент()) </span></p>
+<p class="rvps5"><span class="rvts37">//и записывает его в реквизит(ИД) тип которого "Справочник.Сотрудники"</span></p>
+<p class="rvps5"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">ИД</span><span class="rvts34">, </span><span class="rvts35">Агр_Объект</span><span class="rvts34">.</span><span class="rvts35">ТекущийЭлемент</span><span class="rvts34">());</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">произвольный реквизит нового элемента справочника получает значение(Агр_Объект.ТекущийДокумент())</span></p>
+<p class="rvps3"><span class="rvts36">и записывает его в реквизит(ИД) тип которого </span><span class="rvts32">"Документ.Договор"</span></p>
+<p class="rvps3"><span class="rvts35">Агр_Объект</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts32">"Документ.Договор"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts37">//осуществляем поиск документа...</span></p>
+<p class="rvps3"><span class="rvts35">Агр_Объект</span><span class="rvts34">.</span><span class="rvts35">ВыбратьДокументы</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Агр_Объект</span><span class="rvts34">.</span><span class="rvts35">ПолучитьДокумент</span><span class="rvts34">() &gt; </span><span class="rvts36">0</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если Строка(</span><span class="rvts35">Агр_Объект</span><span class="rvts34">) = Строка(</span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">номерСтроки</span><span class="rvts34">, </span><span class="rvts35">ИД</span><span class="rvts34">)) Тогда</span></p>
+<p class="rvps6"><span class="rvts37">// произвольный реквизит нового элемента справочника получает значение(Агр_Объект.ТекущийДокумент()) </span></p>
+<p class="rvps6"><span class="rvts37">// и записывает его в реквизит(ИД) тип которого "Документ.Договор"</span></p>
+<p class="rvps6"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">ИД</span><span class="rvts34">, </span><span class="rvts35">Агр_Объект</span><span class="rvts34">.</span><span class="rvts35">ТекущийДокумент</span><span class="rvts34">());</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">произвольный реквизит нового элемента справочника получает значение(Агр_Объект.ТекущийДокумент())</span></p>
+<p class="rvps3"><span class="rvts36">и записывает его в реквизит(ИД) тип которого </span><span class="rvts32">"Перечисление..."</span></p>
+<p class="rvps3"><span class="rvts37">//осуществляем поиск перечисления</span></p>
+<p class="rvps3"><span class="rvts35">ДлинаСт</span><span class="rvts34"> = СтрДлина(</span><span class="rvts35">СТипов</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">н</span><span class="rvts34">)); </span><span class="rvts37">//определим длину строки списка значений номер которой(н) и значение (например: </span><span class="rvts42">"Перечисление.ВидыТорговли"</span><span class="rvts37">)</span></p>
+<p class="rvps3"><span class="rvts35">ИД_Перечисления</span><span class="rvts34"> = Прав(</span><span class="rvts35">СТипов</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">н</span><span class="rvts34">), </span><span class="rvts35">ДлинаСт</span><span class="rvts34"> - </span><span class="rvts36">13</span><span class="rvts34">); </span><span class="rvts37">//сократим строку списка и получим </span><span class="rvts42">"ВидыТорговли"</span></p>
+<p class="rvps3"><span class="rvts35">ПредставлениеП</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">номерСтроки</span><span class="rvts34">, </span><span class="rvts35">ИД</span><span class="rvts34">); </span><span class="rvts37">//получим значение представления которое записано в таблице значений.</span></p>
+<p class="rvps3"><span class="rvts35">КвоЗначений</span><span class="rvts34"> = </span><span class="rvts35">Перечисление</span><span class="rvts34">.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(Строка(</span><span class="rvts35">ИД_Перечисления</span><span class="rvts34">)).</span><span class="rvts35">КоличествоЗначений</span><span class="rvts34">();</span><span class="rvts37"> //определим количество значений в</span><span class="rvts42"> "Представление.ВидыТорговли"</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Объект</span><span class="rvts34"> = Метаданные.</span><span class="rvts35">Перечисление</span><span class="rvts34">(); </span><span class="rvts37">//получаем общее количество всех представлений.</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">нПер</span><span class="rvts34"> = 1 По </span><span class="rvts35">Объект</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если Строка(</span><span class="rvts35">Метаданные</span><span class="rvts34">.</span><span class="rvts35">Перечисление</span><span class="rvts34">(</span><span class="rvts35">нПер</span><span class="rvts34">).</span><span class="rvts35">Идентификатор</span><span class="rvts34">) = </span><span class="rvts35">ИД_Перечисления</span><span class="rvts34"> Тогда </span><span class="rvts37">// находим представление (например: </span><span class="rvts42">"ВидыТорговли"</span><span class="rvts37">)</span></p>
+<p class="rvps6"><span class="rvts34">Для </span><span class="rvts35">нПерЗн</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По </span><span class="rvts35">КвоЗначений</span><span class="rvts34"> Цикл </span><span class="rvts37">//просматриваем все значения найденного представления.</span></p>
+<p class="rvps7"><span class="rvts37">// находим значение представления которое соответствует значению (ПредставлениеП)</span></p>
+<p class="rvps7"><span class="rvts34">Если Строка(Метаданные.</span><span class="rvts35">Перечисление</span><span class="rvts34">(</span><span class="rvts35">нПер</span><span class="rvts34">).</span><span class="rvts35">Значение</span><span class="rvts34">(</span><span class="rvts35">нПерЗн</span><span class="rvts34">).</span><span class="rvts35">Представление</span><span class="rvts34">) = </span><span class="rvts35">ПредставлениеП</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps9"><span class="rvts37">//получаем идентификатор найденного значения перечисления.</span></p>
+<p class="rvps9"><span class="rvts35">Знач_Перечисления</span><span class="rvts34"> = Строка(Метаданные.</span><span class="rvts35">Перечисление</span><span class="rvts34">(</span><span class="rvts35">нПер</span><span class="rvts34">).</span><span class="rvts35">Значение</span><span class="rvts34">(</span><span class="rvts35">нПерЗн</span><span class="rvts34">).</span><span class="rvts35">Идентификатор</span><span class="rvts34">);</span></p>
+<p class="rvps7"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps6"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Спр</span><span class="rvts34">.УстановитьАтрибут(</span><span class="rvts35">ИД</span><span class="rvts34">, </span><span class="rvts35">Перечисление</span><span class="rvts34">.</span><span class="rvts35">ПолучитьАтрибут</span><span class="rvts34">(Строка(</span><span class="rvts35">ИД_Перечисления</span><span class="rvts34">)).</span><span class="rvts35">ЗначениеПоИдентификатору</span><span class="rvts34">(Строка(</span><span class="rvts35">Знач_Перечисления</span><span class="rvts34">)));</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">произвольный реквизит нового элемента справочника получает значение(Агр_Объект.ТекущийДокумент())</span></p>
+<p class="rvps3"><span class="rvts36">и записывает его в реквизит(ИД) тип которого </span><span class="rvts32">"ВидСубконто"</span></p>
+<p class="rvps3"><span class="rvts37">//осуществляем поиск субконто</span></p>
+<p class="rvps3"><span class="rvts35">СинонимС</span><span class="rvts34"> = </span><span class="rvts35">ТЗ</span><span class="rvts34">.</span><span class="rvts35">ПолучитьЗначение</span><span class="rvts34">(</span><span class="rvts35">номСтр</span><span class="rvts34">, </span><span class="rvts35">ИД</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">КвоЗначений</span><span class="rvts34"> = ВидыСубконто.</span><span class="rvts35">КоличествоЗначений</span><span class="rvts34">();</span></p>
+<p class="rvps3"><span class="rvts34">Для </span><span class="rvts35">нСуб</span><span class="rvts34"> = 1 По </span><span class="rvts35">КвоЗначений</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps5"><span class="rvts34">Если Строка(ВидыСубконто.</span><span class="rvts35">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts35">нСуб</span><span class="rvts34">)) = </span><span class="rvts35">СинонимС</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps6"><span class="rvts35">Спр</span><span class="rvts34">.</span><span class="rvts35">УстановитьАтрибут</span><span class="rvts34">(</span><span class="rvts35">ИД</span><span class="rvts34">, ВидыСубконто.</span><span class="rvts35">ЗначениеПоНомеру</span><span class="rvts34">(</span><span class="rvts35">нСуб</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

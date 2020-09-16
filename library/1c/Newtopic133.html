@@ -1,0 +1,136 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Временный расчет. (не зависимо от точки актуальности.)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic133");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Временный расчет. (не зависимо от точки актуальности.)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic132.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic134.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Временный расчет. (не зависимо от точки актуальности.)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts35">ВременныйРасчет</span><span class="rvts34">();</span><span class="rvts37"> &nbsp;</span><span class="rvts36">- Установить флаг участия регистра во временном расчете</span></p>
+<p class="rvps3"><span class="rvts34">РассчитатьРегистрыНа(&lt;</span><span class="rvts35">Дата</span><span class="rvts34">&gt;); </span><span class="rvts36">- Рассчитать все регистры с установленным флагом временного расчета на начало события</span></p>
+<p class="rvps3"><span class="rvts34">РассчитатьРегистрыПо(&lt;</span><span class="rvts35">Дата</span><span class="rvts34">&gt;); </span><span class="rvts36">- Рассчитать все регистры с установленным флагом временного расчета на конец события</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">!!! Обязательным является проверка актуальности итогов в момент проведения </span><span class="rvts32">расходных документов</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts36">Используется только в </span><span class="rvts32">модуле документа</span><span class="rvts36"> , процедура </span><span class="rvts35">ОбработкаПроведения</span><span class="rvts34">()</span></p>
+<p class="rvps3"><span class="rvts34"><br/></span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">ИтогиАктуальны</span><span class="rvts34">() = </span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts37">// делаем временный расчет.</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts35"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: Узнаем остатки на начало выбранного периода.</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Регистр.ОстаткиТоваров"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts38">ВременныйРасчет</span><span class="rvts34">();</span><span class="rvts37"> //Установить флаг участия регистра во временном расчете</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">УстановитьЗначениеФильтра</span><span class="rvts34">(</span><span class="rvts36">"Склад"</span><span class="rvts34">,</span><span class="rvts35">Склады</span><span class="rvts34">); </span><span class="rvts37">// "Склад" - это идентификатор измерения регистра, а Склады - это реквизит диалога с типом Справочник.Склады</span></p>
+<p class="rvps3"><span class="rvts45">РассчитатьРегистрыНа</span><span class="rvts34">(</span><span class="rvts35">ДатаНач</span><span class="rvts34">); </span><span class="rvts37">// Рассчитать все регистры с установленным флагом временного расчета на начало события</span></p>
+<p class="rvps3"><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">СводныеОстатки</span><span class="rvts34">(</span><span class="rvts35">спрТовар</span><span class="rvts34">.</span><span class="rvts35">ТекущийЭлемент</span><span class="rvts34">()); </span><span class="rvts37">// Извлечь сводные ресурсы по регистру.</span></p>
+<p class="rvps3"><span class="rvts35">Остаток </span><span class="rvts34">= </span><span class="rvts35">Рег</span><span class="rvts34">.</span><span class="rvts35">Количество</span><span class="rvts34">; </span><span class="rvts37">// Количество - это ресурс регистра.</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Чтобы получить остатки на конец выбранного периода нужно заменить только одну строчку:</span></p>
+<p class="rvps3"><span class="rvts45">РассчитатьРегистрыПо</span><span class="rvts34">(</span><span class="rvts35">ДатаКон</span><span class="rvts34">); </span><span class="rvts37">// Рассчитать все регистры с установленным флагом временного расчета на конец события</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

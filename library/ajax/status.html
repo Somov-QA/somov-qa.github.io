@@ -1,0 +1,102 @@
+﻿<html>
+	
+<head>
+	<title>Свойство status</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("status");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Свойство status</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic1.html">Ответ</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Newtopic1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Newtopic1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="onreadystatechange.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts11">Свойство status</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6">С помощью свойства status Вы можете узнать код ответа на Ваш запрос.</span></p>
+<p class="rvps2"><span class="rvts6">Код 200 означает - запрос обработан успешно, код 404 означает - страница не существует.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts14">xhttp = </span><span class="rvts15">new</span><span class="rvts14"> XMLHttpRequest();</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.onreadystatechange = </span><span class="rvts15">function</span><span class="rvts14">()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps5"><span class="rvts15">if</span><span class="rvts14"> (xhttp.readyState == 4 &amp;&amp; xhttp.status == 200)</span></p>
+<p class="rvps5"><span class="rvts14">{</span></p>
+<p class="rvps6"><span class="rvts15">alert</span><span class="rvts14">(</span><span class="rvts16">"OK!"</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts14">}</span></p>
+<p class="rvps7"><span class="rvts15">else if</span><span class="rvts14">(xhttp.status == 404)</span></p>
+<p class="rvps7"><span class="rvts14">{</span></p>
+<p class="rvps7"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">alert</span><span class="rvts14">(</span><span class="rvts16">"Error 404"</span><span class="rvts14">);</span></p>
+<p class="rvps7"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.open(</span><span class="rvts16">"GET"</span><span class="rvts14">, </span><span class="rvts16">"testfile.php"</span><span class="rvts14">, </span><span class="rvts15">true</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">xhttp.send();</span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,142 @@
+﻿<html>
+	
+<head>
+	<title>Attributes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Attributes");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Attributes</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptDOM.html">JavaScript DOM</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptDOM.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Element.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Events.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Attributes</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">В HTML DOM объект Attr представляет атрибут HTML.</span></p>
+<p class="rvps2"><span class="rvts18">Атрибут HTML всегда принадлежит к HTML-элементу.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">Attr</span><span class="rvts18"> Object.</span></p>
+<p class="rvps2"><span class="rvts18">В HTML DOM объект Attr представляет атрибут HTML.</span></p>
+<p class="rvps2"><span class="rvts18">Атрибут HTML всегда принадлежит к HTML-элементу.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts20">NamedNodeMap</span><span class="rvts18"> Object.</span></p>
+<p class="rvps2"><span class="rvts18">В HTML DOM объект NamedNodeMap представляет собой неупорядоченный инкассации элементов узлов атрибутов.</span></p>
+<p class="rvps2"><span class="rvts18">Узлы в NamedNodeMap можно обращаться по имени или по индексу (номер).</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Свойства и методы</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts18">attr.</span><span class="rvts20">isId</span><span class="rvts18"> - Возвращает истину, если атрибут имеет тип Id, в противном случае она возвращает ложь</span></p>
+<p class="rvps2"><span class="rvts18">attr.</span><span class="rvts20">name</span><span class="rvts18"> - Возвращает имя атрибута</span></p>
+<p class="rvps2"><span class="rvts18">attr.</span><span class="rvts20">value</span><span class="rvts18"> - Устанавливает или возвращает значение атрибута</span></p>
+<p class="rvps2"><span class="rvts18">attr.</span><span class="rvts20">specified</span><span class="rvts18"> - Возвращает истину, если был указан атрибут, в противном случае она возвращает ложь</span></p>
+<p class="rvps2"><span class="rvts18">&nbsp;</span></p>
+<p class="rvps2"><span class="rvts18">nodemap.</span><span class="rvts7">getNamedItem</span><span class="rvts18">() - Возвращает указанный узел атрибута из NamedNodeMap</span></p>
+<p class="rvps2"><span class="rvts18">nodemap.</span><span class="rvts7">item</span><span class="rvts18">() - Возвращает узел атрибута по указанному индексу в NamedNodeMap</span></p>
+<p class="rvps2"><span class="rvts18">nodemap.</span><span class="rvts20">length</span><span class="rvts18"> - Возвращает количество узлов атрибутов в NamedNodeMap</span></p>
+<p class="rvps2"><span class="rvts18">nodemap.</span><span class="rvts7">removeNamedItem</span><span class="rvts18">() - Удаляет указанный узел атрибута</span></p>
+<p class="rvps2"><span class="rvts18">nodemap.</span><span class="rvts7">setNamedItem</span><span class="rvts18">() - Устанавливает заданный узел атрибута (по имени)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps8"><span class="rvts18">DOM 4 </span><span class="rvts27">Внимание!</span></p>
+<p class="rvps8"><span class="rvts18">В W3C DOM ядро, Attr (атрибут) объект наследует все свойства и методы из объекта Node.</span></p>
+<p class="rvps8"><span class="rvts18">В DOM 4, объект Attr больше не наследует от Node.</span></p>
+<p class="rvps8"><span class="rvts18">Для будущего качества кода, вы должны избегать использования свойств и методов объекта узла на объекты атрибутов:</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps8"><span class="rvts18">attr.appendChild() - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.attributes - Атрибуты не имеют атрибутов</span></p>
+<p class="rvps8"><span class="rvts18">attr.baseURI - использовать вместо document.baseURI</span></p>
+<p class="rvps8"><span class="rvts18">attr.childNodes - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.cloneNode() - Получить или установить вместо attr.value</span></p>
+<p class="rvps8"><span class="rvts18">attr.firstChild - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.hasAttributes() - Атрибуты не имеют атрибутов</span></p>
+<p class="rvps8"><span class="rvts18">attr.hasChildNodes - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.insertBefore() - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.isEqualNode() - не делает никакого смысла</span></p>
+<p class="rvps8"><span class="rvts18">attr.isSameNode() - не делает никакого смысла</span></p>
+<p class="rvps8"><span class="rvts18">attr.isSupported() - всегда верно</span></p>
+<p class="rvps8"><span class="rvts18">attr.lastChild - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.nextSibling - Атрибуты не имеют братьев и сестер</span></p>
+<p class="rvps8"><span class="rvts18">attr.nodeName - Используйте attr.name вместо</span></p>
+<p class="rvps8"><span class="rvts18">attr.nodeType - Это всегда 2 (ATTRIBUTE_NODE)</span></p>
+<p class="rvps8"><span class="rvts18">attr.nodeValue - Используйте attr.value вместо</span></p>
+<p class="rvps8"><span class="rvts18">attr.normalize() - Атрибуты не могут быть нормализованы</span></p>
+<p class="rvps8"><span class="rvts18">attr.ownerDocument - Это всегда ваш HTML-документ</span></p>
+<p class="rvps8"><span class="rvts18">attr.ownerElement - Это HTML-элемент, который вы использовали для доступа к атрибуту</span></p>
+<p class="rvps8"><span class="rvts18">attr.parentNode - Это HTML-элемент, который вы использовали для доступа к атрибуту</span></p>
+<p class="rvps8"><span class="rvts18">attr.previousSibling - Атрибуты не имеют братьев и сестер</span></p>
+<p class="rvps8"><span class="rvts18">attr.removeChild - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.replaceChild - Атрибуты не имеют дочерних узлов</span></p>
+<p class="rvps8"><span class="rvts18">attr.textContent - Используйте attr.value вместо</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var div = document.getElementById("divID");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for(var i = 0; i &lt; div.attributes.length; i++){</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log("Div:", div.attributes[i].name, "value:", div.attributes[i].value);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log("getNamedItem", div.attributes.getNamedItem('name').value);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log("item[0]", div.attributes.item(0).nodeName);</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;div.attributes.removeNamedItem("name");</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var newItem = document.createAttribute("class");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;newItem.value = "democlass"</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;div.attributes.setNamedItem(newItem);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;div </span><span class="rvts23">name=</span><span class="rvts24">"divName" </span><span class="rvts23">id=</span><span class="rvts24">"divID"</span><span class="rvts22">&gt;&lt;/div&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

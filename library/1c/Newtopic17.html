@@ -1,0 +1,170 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Модули</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic17");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Модули</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C83.html">1C Предприятие 8.3 - Общее</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="1C83.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic2.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic12.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts13">Модули</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts20">Модуль приложения (НаКлиенте)</span><span class="rvts8"> - предназначен для обработки событий интерактивного запуска и завершения работы, так же перехват внешних событий от оборудования. Не сработает в режиме com-соединения. Модуль выполняется на клиенте.</span></p>
+<p class="rvps3"><span class="rvts8">В данном модуле можно размещать разделы:</span></p>
+<p class="rvps3"><span class="rvts8">- раздел объявления переменных, </span></p>
+<p class="rvps3"><span class="rvts8">- раздел описания произвольных процедур и функций</span></p>
+<p class="rvps3"><span class="rvts8">- раздел основной программы</span></p>
+<p class="rvps3"><span class="rvts8">Не рекомендуется использовать "экспортные" переменные, процедуры и функции так как это замедлит запуск системы.</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; контекстное меню </span><span class="rvts15">[Открыть модуль управляемого приложения]</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; контекстное меню </span><span class="rvts15">[Открыть модуль обычного приложения]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль внешнего соединения (НаСервере)</span><span class="rvts8"> - предназначен для обработки событий запуска и завершения в режиме com-соединения. Модуль компилируется на сервере.</span></p>
+<p class="rvps3"><span class="rvts8">Возможно описывать экспортные переменные и экспортные методы.</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; контекстное меню </span><span class="rvts15">[Открыть модуль внешнего соединения]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль сеанса (НаСервере) </span><span class="rvts8">- нужен для того, чтобы инициализировать параметры сеанса. Всегда исполняется в привилегированном режиме. Модуль компилируется на сервере.</span></p>
+<p class="rvps3"><span class="rvts8">- только раздел описания процедур и функций</span></p>
+<p class="rvps3"><span class="rvts8">- нет раздела описания переменных </span></p>
+<p class="rvps3"><span class="rvts8">- нет раздела основной программы </span></p>
+<p class="rvps3"><span class="rvts8">- нельзя описывать "экспортные" переменные и методы.</span></p>
+<p class="rvps3"><span class="rvts8">Параметры сеанса — это быстрые глобальные переменные, значения которых доступны в любом месте конфигурации.</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; контекстное меню </span><span class="rvts15">[Открыть модуль сеанса]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Общие модули (НаКлиенте, НаСервере)</span><span class="rvts8"> - описание общих алгоритмов.</span></p>
+<p class="rvps3"><span class="rvts8">- только раздел описания процедур и функций</span></p>
+<p class="rvps3"><span class="rvts8">- описание экспортынх процедуры и функции</span></p>
+<p class="rvps3"><span class="rvts8">- глобальная переменная: параметры сеанса, экспортные переменные модуля приложения.</span></p>
+<p class="rvps3"><span class="rvts19">Директивы</span><span class="rvts8"> компиляции указываются в свойствах модуля.</span></p>
+<p class="rvps3"><span class="rvts19">Глобальный</span><span class="rvts8"> - объявленные в данном модуле экспортные методы будут доступны из вне напрямую.</span></p>
+<p class="rvps3"><span class="rvts19">Вызов сервера</span><span class="rvts8"> - позволяет на клиенте вызвать методы которые имеют серверную директиву.</span></p>
+<p class="rvps3"><span class="rvts19">Привилегированный</span><span class="rvts8"> - предоставляет полные права доступа</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Общие] </span><span class="rvts8">-&gt; </span><span class="rvts15">[Общие Модули]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль формы (НаКлиенте, НаСервере) </span><span class="rvts8">- обработка действий пользователя.</span></p>
+<p class="rvps3"><span class="rvts8">Каждая процедура и функция должны иметь директиву компиляции.</span></p>
+<p class="rvps3"><span class="rvts8">- раздел объявления переменных, </span></p>
+<p class="rvps3"><span class="rvts8">- раздел описания произвольных процедур и функций</span></p>
+<p class="rvps3"><span class="rvts8">- раздел основной программы</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Спр, Док, и т.п.] </span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяОбъекта] &nbsp;</span><span class="rvts8">-&gt; </span><span class="rvts15">[Формы] &nbsp;</span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяФормы] &nbsp;</span><span class="rvts8">-&gt; закладка "Модуль"</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль Объекта (НаСервере)</span><span class="rvts8"> - предназначен для обработки стандартных событий справочников, документов, планов счетов, и др. Можно выполнять проверку корректности заполнения данных при записи. Модуль компилируется на сервере.</span></p>
+<p class="rvps3"><span class="rvts8">- раздел объявления переменных, </span></p>
+<p class="rvps3"><span class="rvts8">- раздел описания произвольных процедур и функций</span></p>
+<p class="rvps3"><span class="rvts8">- раздел основной программы</span></p>
+<p class="rvps3"><span class="rvts8">- описание "экспортных" переменных и методов. (расширяют класс объекта)</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Спр, Док, и т.п.] </span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяОбъекта] &nbsp;</span><span class="rvts8">-&gt; контекстное меню </span><span class="rvts15">[Открыть модуль объекта]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль менеджера значений (НаСервере)</span><span class="rvts8"> - предназначен для констант</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Константы] </span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяКонстанты] &nbsp;</span><span class="rvts8">-&gt; контекстное меню </span><span class="rvts15">[Открыть модуль менеджера значений]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль набора записей (НаСервере)</span><span class="rvts8"> - предназначен для регистра</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Регистры...] </span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяРегистра] &nbsp;</span><span class="rvts8">-&gt; контекстное меню </span><span class="rvts15">[Открыть модуль набора аписей]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts20">Модуль менеджера (НаКлиенте, НаСервере)</span><span class="rvts8"> - описываются методы для таких объектов как справочники, документы, регистры и пр.</span></p>
+<p class="rvps3"><span class="rvts15">[Конфигурация]</span><span class="rvts8"> -&gt; </span><span class="rvts15">[Спр, Док, и т.п.] </span><span class="rvts8">-&gt; </span><span class="rvts15">[ИмяОбъекта] &nbsp;</span><span class="rvts8">-&gt; контекстное меню </span><span class="rvts15">[Открыть модуль менеджера]</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

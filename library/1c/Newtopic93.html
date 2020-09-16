@@ -1,0 +1,133 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Просмотр операций за заданный период</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic93");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Просмотр операций за заданный период</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic90.html">Операция</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic90.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic92.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic94.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Просмотр операций за заданный период</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">Опер</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Операция"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">ВыбратьОперации</span><span class="rvts34">(</span><span class="rvts35">НачДата</span><span class="rvts34">, </span><span class="rvts35">КонДата</span><span class="rvts34">); </span><span class="rvts37">// Открывает выборку операций за период</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">ПолучитьОперацию</span><span class="rvts34">() = 1 Цикл </span><span class="rvts37">//выбирает очередную операцию из выборки</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"Операция: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Документ</span><span class="rvts34">.</span><span class="rvts35">НомерДок</span><span class="rvts34"> + </span><span class="rvts36">" от "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">ДатаОперации</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">ВыбратьПроводки</span><span class="rvts34">(); </span><span class="rvts37">// Открывает выборку проводок текущей операции</span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts38">ПолучитьПроводку</span><span class="rvts34">() = 1 Цикл </span><span class="rvts37">// Получить проводку из выборки</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Дт: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Дт 1: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Дт 2: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">2</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Дт 3: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Дебет</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">3</span><span class="rvts34">));</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Кт: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Счет</span><span class="rvts34">.</span><span class="rvts35">Код</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Кт 1: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Кт 2: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">2</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"Субконто Кт 3: "</span><span class="rvts34"> + </span><span class="rvts35">Опер</span><span class="rvts34">.</span><span class="rvts35">Кредит</span><span class="rvts34">.</span><span class="rvts35">Субконто</span><span class="rvts34">(</span><span class="rvts36">3</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create help files for the Qt Help Framework</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

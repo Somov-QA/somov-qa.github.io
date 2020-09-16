@@ -1,0 +1,128 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Получить данные из реквизитов табличной части документа</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic48");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Получить данные из реквизитов табличной части документа</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic45.html">Документ</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic45.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic47.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic49.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Получить данные из реквизитов табличной части документа</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts35">ДокПремия</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Документ.Премия"</span><span class="rvts34">); </span><span class="rvts37">//объект агр. типа данных Документ</span></p>
+<p class="rvps3"><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts38">ВыбратьДокументы</span><span class="rvts34">(НачМесяца(</span><span class="rvts35">ДатаДок</span><span class="rvts34">), КонМесяца(</span><span class="rvts35">ДатаДок</span><span class="rvts34">)); </span><span class="rvts37">//выбираем документ "Премия" из диапазона дат, для получения номера этого документа.</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts38">НайтиПоНомеру</span><span class="rvts34">(</span><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts35">НомерДок</span><span class="rvts34">, </span><span class="rvts35">ДатаДок</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Тогда </span><span class="rvts37">//находим документ по номеру.</span></p>
+<p class="rvps5"><span class="rvts35">КолСтрокТабличнойЧастиДок</span><span class="rvts34"> = </span><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts38">КоличествоСтрок</span><span class="rvts34">(); </span><span class="rvts37">//определяем количество строк табличной части данного документа "Премия"</span></p>
+<p class="rvps5"><span class="rvts34">Для </span><span class="rvts35">н</span><span class="rvts34"> = </span><span class="rvts36">1</span><span class="rvts34"> По </span><span class="rvts35">КолСтрокТабличнойЧастиДок</span><span class="rvts34"> Цикл </span><span class="rvts37">//читаем строки табличной части документа</span></p>
+<p class="rvps6"><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts38">ПолучитьСтроку</span><span class="rvts34">(); </span><span class="rvts37">//получить следующую строку табличной части</span></p>
+<p class="rvps6"><span class="rvts35">Сотрудник</span><span class="rvts34"> = </span><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts35">Сотрудник</span><span class="rvts34">; </span><span class="rvts37">//получить значение из реквизита табличной части. (Сотрудники)</span></p>
+<p class="rvps6"><span class="rvts34">Если </span><span class="rvts35">НаименованиеФИО</span><span class="rvts34"> = </span><span class="rvts35">Сотрудник</span><span class="rvts34"> Тогда </span><span class="rvts37">//если "ФИО" совпадает со значением табличной части документа "Премия" Сотрудник тогда...</span></p>
+<p class="rvps7"><span class="rvts35">Премия</span><span class="rvts34"> = </span><span class="rvts35">ДокПремия</span><span class="rvts34">.</span><span class="rvts35">РазмерПремии</span><span class="rvts34">; </span><span class="rvts37">//получаем значение размер премия.</span></p>
+<p class="rvps6"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,279 @@
+﻿<html>
+	
+<head>
+	<title>Events</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Events");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Events</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="JavaScriptDOM.html">JavaScript DOM</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScriptDOM.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Attributes.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Style.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts19">DOM Events</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts18">HTML DOM события позволяют JavaScript регистрировать различные обработчики событий элементов в HTML-документе.</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Mouse Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onclick</span><span class="rvts18"> - Событие происходит, когда пользователь нажимает на элемент</span></p>
+<p class="rvps2"><span class="rvts20">oncontextmenu</span><span class="rvts18"> - Событие происходит, когда щелчке правой кнопкой мыши на элементе, чтобы открыть контекстное меню</span></p>
+<p class="rvps2"><span class="rvts20">ondblclick</span><span class="rvts18"> - Событие происходит, когда пользователь дважды щелкает на элементе</span></p>
+<p class="rvps2"><span class="rvts20">onmousedown</span><span class="rvts18"> - Событие происходит, когда пользователь нажимает кнопку мыши на элементе</span></p>
+<p class="rvps2"><span class="rvts20">onmouseenter</span><span class="rvts18"> - Событие происходит, когда указатель перемещается на элемент</span></p>
+<p class="rvps2"><span class="rvts20">onmouseleave</span><span class="rvts18"> - Событие происходит, когда указатель перемещается из элемента</span></p>
+<p class="rvps2"><span class="rvts20">onmousemove</span><span class="rvts18"> - Событие происходит, когда указатель перемещается в то время как он находится над элементом</span></p>
+<p class="rvps2"><span class="rvts20">onmouseover</span><span class="rvts18"> - Событие происходит, когда указатель перемещается на элемент, или на одном из своих детей</span></p>
+<p class="rvps2"><span class="rvts20">onmouseout</span><span class="rvts18"> - Событие происходит, когда пользователь перемещает указатель мыши из элемента, или из одного из своих детей</span></p>
+<p class="rvps2"><span class="rvts20">onmouseup</span><span class="rvts18"> - Событие происходит, когда пользователь отпускает кнопку мыши над элементом</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Keyboard Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onkeydown</span><span class="rvts18"> - Событие происходит, когда пользователь нажимает клавишу</span></p>
+<p class="rvps2"><span class="rvts20">onkeypress</span><span class="rvts18"> - Событие происходит, когда пользователь нажимает клавишу</span></p>
+<p class="rvps2"><span class="rvts20">onkeyup</span><span class="rvts18"> - Событие происходит, когда пользователь отпускает клавишу</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Frame/Object Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onabort</span><span class="rvts18"> - Событие происходит, когда загрузка ресурса была прервана</span></p>
+<p class="rvps2"><span class="rvts20">onbeforeunload</span><span class="rvts18"> - Событие происходит до того, как документ собирается быть выгружен</span></p>
+<p class="rvps2"><span class="rvts20">onerror</span><span class="rvts18"> - Событие происходит, когда возникает ошибка при загрузке внешнего файла</span></p>
+<p class="rvps2"><span class="rvts20">onhashchange</span><span class="rvts18"> - Событие происходит, когда произошло изменения в анкерной части URL</span></p>
+<p class="rvps2"><span class="rvts20">onload</span><span class="rvts18"> - Событие происходит, когда объект загружен</span></p>
+<p class="rvps2"><span class="rvts20">onpageshow</span><span class="rvts18"> - Событие происходит, когда пользователь переходит на веб-страницу</span></p>
+<p class="rvps2"><span class="rvts20">onpagehide</span><span class="rvts18"> - Событие происходит, когда пользователь покидает веб-страницы</span></p>
+<p class="rvps2"><span class="rvts20">onresize</span><span class="rvts18"> - Событие происходит, когда вид документа изменен</span></p>
+<p class="rvps2"><span class="rvts20">onscroll</span><span class="rvts18"> - Событие происходит, когда полоса прокрутки Элементом в настоящее время прокручивается</span></p>
+<p class="rvps2"><span class="rvts20">onunload</span><span class="rvts18"> - Событие происходит один раз страница разгрузил (для &lt;body&gt;)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Form Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onblur</span><span class="rvts18"> - Событие происходит, когда элемент теряет фокус</span></p>
+<p class="rvps2"><span class="rvts20">onchange</span><span class="rvts18"> - событие возникает, когда содержание элемента формы, выбор, или проверяемого состояния изменились (для &lt;input&gt;, &lt;keygen&gt;, &lt;select&gt;, и &lt;textarea&gt;)</span></p>
+<p class="rvps2"><span class="rvts20">onfocus</span><span class="rvts18"> - Событие происходит, когда элемент получает фокус</span></p>
+<p class="rvps2"><span class="rvts20">onfocusin</span><span class="rvts18"> - Событие происходит, когда элемент собирается получить фокус</span></p>
+<p class="rvps2"><span class="rvts20">onfocusout</span><span class="rvts18"> - Событие происходит, когда элемент собирается потерять фокус</span></p>
+<p class="rvps2"><span class="rvts20">oninput</span><span class="rvts18"> - Событие происходит, когда элемент получает ввод данных пользователем</span></p>
+<p class="rvps2"><span class="rvts20">oninvalid</span><span class="rvts18"> - Событие происходит, когда элемент является недействительным</span></p>
+<p class="rvps2"><span class="rvts20">onreset</span><span class="rvts18"> - Событие происходит, когда форма сбрасывается</span></p>
+<p class="rvps2"><span class="rvts20">onsearch</span><span class="rvts18"> - Событие происходит, когда пользователь пишет что-то в поле поиска (для &lt;input="search"&gt;)</span></p>
+<p class="rvps2"><span class="rvts20">onselect</span><span class="rvts18"> - Событие происходит после того, как пользователь выбирает некоторый текст (для &lt;input&gt; и &lt;textarea&gt;)</span></p>
+<p class="rvps2"><span class="rvts20">onsubmit</span><span class="rvts18"> - Событие происходит, когда форма была отправлена</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Drag Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">ondrag</span><span class="rvts18"> - Событие происходит, когда элемент перетаскивается</span></p>
+<p class="rvps2"><span class="rvts20">ondragend</span><span class="rvts18"> - Событие происходит, когда пользователь завершает перетаскивание элемент</span></p>
+<p class="rvps2"><span class="rvts20">ondragenter</span><span class="rvts18"> - Событие происходит, когда тащили элемент попадает в цель снижения</span></p>
+<p class="rvps2"><span class="rvts20">ondragleave</span><span class="rvts18"> - Событие происходит, когда тащили элемент покидает цель снижения</span></p>
+<p class="rvps2"><span class="rvts20">ondragover</span><span class="rvts18"> - Событие происходит, когда тащили элемент над целевым объектом перетаскивания</span></p>
+<p class="rvps2"><span class="rvts20">ondragstart</span><span class="rvts18"> - Событие происходит, когда пользователь начинает перетаскивать элемент</span></p>
+<p class="rvps2"><span class="rvts20">ondrop</span><span class="rvts18"> - Событие происходит, когда тащили элемент падает на цель перетаскивания</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Clipboard Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">oncopy</span><span class="rvts18"> - Событие происходит, когда пользователь копирует содержимое элемента</span></p>
+<p class="rvps2"><span class="rvts20">oncut</span><span class="rvts18"> - Событие происходит, когда пользователь обрезает содержимое элемента</span></p>
+<p class="rvps2"><span class="rvts20">onpaste</span><span class="rvts18"> - Событие происходит, когда пользователь вставляет некоторое содержание в элементе</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Print Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onafterprint</span><span class="rvts18"> - Событие происходит, когда страница начала печати, или если окно печати диалог был закрыт</span></p>
+<p class="rvps2"><span class="rvts20">onbeforeprint</span><span class="rvts18"> - Событие происходит, когда страница о печатаемых</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Media Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onabort</span><span class="rvts18"> - Событие происходит, когда нагрузка в СМИ прерывается</span></p>
+<p class="rvps2"><span class="rvts20">oncanplay</span><span class="rvts18"> - Событие происходит, когда браузер может начать воспроизведение носителя (когда он буферном достаточно, чтобы начать)</span></p>
+<p class="rvps2"><span class="rvts20">oncanplaythrough</span><span class="rvts18"> - Событие происходит, когда браузер может воспроизводить через средства массовой информации без остановки для буферизации</span></p>
+<p class="rvps2"><span class="rvts20">ondurationchange</span><span class="rvts18"> - Событие происходит, когда длительность СМИ изменяется</span></p>
+<p class="rvps2"><span class="rvts20">onemptied</span><span class="rvts18"> - Событие происходит, когда что-то плохое происходит, и медиа-файл вдруг недоступен (например, неожиданно разъединяет)</span></p>
+<p class="rvps2"><span class="rvts20">onended</span><span class="rvts18"> - Событие происходит, когда носитель имеет достигают конца (полезно для сообщений типа "спасибо за прослушивание")</span></p>
+<p class="rvps2"><span class="rvts20">onerror</span><span class="rvts18"> - Событие происходит, когда произошла ошибка во время загрузки медиа-файла</span></p>
+<p class="rvps2"><span class="rvts20">onloadeddata</span><span class="rvts18"> - Событие происходит, когда носители данных загружается</span></p>
+<p class="rvps2"><span class="rvts20">onloadedmetadata</span><span class="rvts18"> - Событие происходит, когда мета-данные (например, размеров и продолжительности) загружаются</span></p>
+<p class="rvps2"><span class="rvts20">onloadstart</span><span class="rvts18"> - Событие происходит, когда браузер начинает искать для указанного средства массовой информации</span></p>
+<p class="rvps2"><span class="rvts20">onpause</span><span class="rvts18"> - Событие происходит, когда СМИ приостановлена ​​либо пользователем, либо программно</span></p>
+<p class="rvps2"><span class="rvts20">onplay</span><span class="rvts18"> - Событие происходит, когда было запущено СМИ или больше не приостановлена</span></p>
+<p class="rvps2"><span class="rvts20">onplaying</span><span class="rvts18"> - Событие происходит, когда среда играет после того, как был остановлен или остановлен для буферизации 3</span></p>
+<p class="rvps2"><span class="rvts20">onprogress</span><span class="rvts18"> - Событие происходит, когда браузер находится в процессе получения мультимедийных данных (загрузка носителя)</span></p>
+<p class="rvps2"><span class="rvts20">onratechange</span><span class="rvts18"> - Событие происходит, когда скорость воспроизведения СМИ изменяется</span></p>
+<p class="rvps2"><span class="rvts20">onseeked</span><span class="rvts18"> - Событие происходит, когда пользователь заканчивает перемещение / пропуск в новую позицию в средствах массовой информации</span></p>
+<p class="rvps2"><span class="rvts20">onseeking</span><span class="rvts18"> - Событие происходит, когда пользователь начинает движение / пропуск в новую позицию в средствах массовой информации</span></p>
+<p class="rvps2"><span class="rvts20">onstalled</span><span class="rvts18"> - Событие происходит, когда браузер пытается получить мультимедийные данные, но данные не доступны</span></p>
+<p class="rvps2"><span class="rvts20">onsuspend</span><span class="rvts18"> - Событие происходит, когда браузер намеренно не получать мультимедийные данные</span></p>
+<p class="rvps2"><span class="rvts20">ontimeupdate</span><span class="rvts18"> - Событие происходит, когда позиция воспроизведения изменилась (например, когда пользователь быстро вперед к другой точке в средствах массовой информации)</span></p>
+<p class="rvps2"><span class="rvts20">onvolumechange</span><span class="rvts18"> - Событие происходит, когда объем средств массовой информации изменилось (включает в себя установку громкости на "немой")</span></p>
+<p class="rvps2"><span class="rvts20">onwaiting</span><span class="rvts18"> - Событие происходит, когда СМИ приостановлена, но ожидается возобновление (например, когда носитель делает паузу в буфер больше данных)</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Animation Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">animationend</span><span class="rvts18"> - Событие происходит, когда CSS анимация завершена</span></p>
+<p class="rvps2"><span class="rvts20">animationiteration</span><span class="rvts18"> - Событие происходит, когда CSS анимация повторяется</span></p>
+<p class="rvps2"><span class="rvts20">animationstart</span><span class="rvts18"> - Событие происходит, когда начал CSS-анимации</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Transition Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">transitionend</span><span class="rvts18"> - Событие происходит, когда переход завершен CSS</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Server-Sent Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onerror</span><span class="rvts18"> - Событие происходит при возникновении ошибки с источником событий</span></p>
+<p class="rvps2"><span class="rvts20">onmessage</span><span class="rvts18"> - Событие происходит, когда сообщение получено через источник событий</span></p>
+<p class="rvps2"><span class="rvts20">onopen</span><span class="rvts18"> - Событие происходит, когда соединение с источником событий открыт</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Misc Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">onmessage</span><span class="rvts18"> - Событие происходит, когда сообщение получено через или от объекта (WebSocket, Web Worker, Event Source or a child frame or a parent window)</span></p>
+<p class="rvps2"><span class="rvts20">onmousewheel</span><span class="rvts18"> - </span><span class="rvts26">устаревший</span><span class="rvts18">. Используйте событие onwheel вместо</span></p>
+<p class="rvps2"><span class="rvts20">ononline</span><span class="rvts18"> - Событие происходит, когда браузер начинает работать в режиме онлайн</span></p>
+<p class="rvps2"><span class="rvts20">onoffline</span><span class="rvts18"> - Событие происходит, когда браузер начинает работать в автономном режиме</span></p>
+<p class="rvps2"><span class="rvts20">onpopstate</span><span class="rvts18"> - Событие происходит при изменении истории окна</span></p>
+<p class="rvps2"><span class="rvts20">onshow</span><span class="rvts18"> - Событие происходит, когда элемент &lt;menu&gt; отображается в виде контекстного меню</span></p>
+<p class="rvps2"><span class="rvts20">onstorage</span><span class="rvts18"> - Событие происходит, когда область Web Storage обновляется</span></p>
+<p class="rvps2"><span class="rvts20">ontoggle</span><span class="rvts18"> - Событие происходит, когда пользователь открывает или закрывает элемент &lt;details&gt;</span></p>
+<p class="rvps2"><span class="rvts20">onwheel</span><span class="rvts18"> - Событие происходит, когда колесо мыши катится вверх или вниз над элементом</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Touch Events</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">ontouchcancel</span><span class="rvts18"> - Событие происходит, когда прикосновение прерывается</span></p>
+<p class="rvps2"><span class="rvts20">ontouchend</span><span class="rvts18"> - Событие происходит, когда палец удаляется с сенсорным экраном</span></p>
+<p class="rvps2"><span class="rvts20">ontouchmove</span><span class="rvts18"> - Событие происходит, когда палец тащили по экрану</span></p>
+<p class="rvps2"><span class="rvts20">ontouchstart</span><span class="rvts18"> - Событие происходит, когда палец помещают на сенсорном экране</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">Event Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps8"><span class="rvts18">Константы:</span></p>
+<p class="rvps8"><span class="rvts20">CAPTURING_PHASE</span><span class="rvts18"> - Текущая фаза событие является фаза захвата (1)</span></p>
+<p class="rvps8"><span class="rvts20">AT_TARGET</span><span class="rvts18"> - Текущее событие в целевой фазе, т.е. она оценивается на цели события (2)</span></p>
+<p class="rvps8"><span class="rvts20">BUBBLING_PHASE</span><span class="rvts18"> - Текущая фаза событие является фаза восходящей цепочки (3)</span></p>
+<p class="rvps8"><span class="rvts18"><br/></span></p>
+<p class="rvps8"><span class="rvts18">Свойства:</span></p>
+<p class="rvps8"><span class="rvts20">bubbles</span><span class="rvts18"> - Возвращает ли не конкретное событие является событием восходящей цепочки</span></p>
+<p class="rvps8"><span class="rvts20">cancelable</span><span class="rvts18"> - Возвращает или не может быть его действие по умолчанию предотвратили событие</span></p>
+<p class="rvps8"><span class="rvts20">currentTarget</span><span class="rvts18"> - Возвращает элемент, событие слушателей вызвал событие</span></p>
+<p class="rvps8"><span class="rvts20">defaultPrevented</span><span class="rvts18"> - Возвращает был ли или не вызывается метод preventDefault() для события</span></p>
+<p class="rvps8"><span class="rvts20">eventPhase</span><span class="rvts18"> - Возвращает какой фазе потока событий, в настоящее время оценивается</span></p>
+<p class="rvps8"><span class="rvts20">isTrusted</span><span class="rvts18"> - Возвращает ли или не является доверенным событие</span></p>
+<p class="rvps8"><span class="rvts20">target</span><span class="rvts18"> - Возвращает элемент, который вызвал событие</span></p>
+<p class="rvps8"><span class="rvts20">timeStamp</span><span class="rvts18"> - Возвращает время (в миллисекундах относительно эпохи), на котором был создан событие</span></p>
+<p class="rvps8"><span class="rvts20">type</span><span class="rvts18"> - Возвращает имя события</span></p>
+<p class="rvps8"><span class="rvts20">view</span><span class="rvts18"> - Возвращает ссылку на объект Window, где случилась событие</span></p>
+<p class="rvps8"><span class="rvts18"><br/></span></p>
+<p class="rvps8"><span class="rvts18">Методы:</span></p>
+<p class="rvps8"><span class="rvts7">preventDefault</span><span class="rvts20">()</span><span class="rvts18"> - Отменяет событие, если оно отменяемый, а это означает, что действие по умолчанию, которое принадлежит к событию не произойдет</span></p>
+<p class="rvps8"><span class="rvts7">stopImmediatePropagation</span><span class="rvts20">() </span><span class="rvts18">- Предотвращает других слушателей одного и того же события от призыва</span></p>
+<p class="rvps8"><span class="rvts7">stopPropagation</span><span class="rvts20">()</span><span class="rvts18"> - предотвращает дальнейшее распространение события во время потока событий</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">MouseEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">altKey</span><span class="rvts18"> - Возвращает клавишу Alt, была ли нажата клавиша "ALT", когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">button</span><span class="rvts18"> - Возвращает, какая кнопка мыши была нажата, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">buttons</span><span class="rvts18"> - Возвращает какие кнопки мыши были нажаты, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">clientX</span><span class="rvts18"> - Возвращает горизонтальную координату указателя мыши, относительно текущего окна, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">clientY</span><span class="rvts18"> - Возвращает вертикальную координату указателя мыши, относительно текущего окна, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">ctrlKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "CTRL", когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">detail</span><span class="rvts18"> - Возвращает число, указывающее, сколько раз была нажата мышь</span></p>
+<p class="rvps2"><span class="rvts20">metaKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "META", когда событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">pageX</span><span class="rvts18"> - Возвращает горизонтальной координаты курсора мыши, по отношению к документу, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">pageY</span><span class="rvts18"> - Возвращает вертикальную координату указателя мыши, по отношению к документу, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">relatedTarget</span><span class="rvts18"> - Возвращает элемент, связанный с элементом, вызвавшего событие мыши</span></p>
+<p class="rvps2"><span class="rvts20">screenX</span><span class="rvts18"> - Возвращает горизонтальной координаты курсора мыши, по отношению к экрану, когда событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">screenY</span><span class="rvts18"> - Возвращает вертикальную координату указателя мыши, по отношению к экрану, когда событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">shiftKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "SHIFT", когда событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">which</span><span class="rvts18"> - Возвращающий какая кнопка мыши была нажата, когда событие мыши было вызвано</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">KeyboardEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">altKey</span><span class="rvts18"> - Возвращает клавишу Alt, была ли нажата клавиша "ALT", когда ключ событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">ctrlKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "CTRL", когда ключ событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">charCode</span><span class="rvts18"> - Возвращает код символа Unicode ключа, инициировавшего событие OnKeyPress</span></p>
+<p class="rvps2"><span class="rvts20">key</span><span class="rvts18"> - возвращает ключ значение ключа, представленного события</span></p>
+<p class="rvps2"><span class="rvts20">keyCode</span><span class="rvts18"> - Возвращает скан-кода код символа Unicode ключа, инициировавшего событие OnKeyPress или код ключа Unicode ключа, инициировавшего OnKeyDown или OnKeyUp событие</span></p>
+<p class="rvps2"><span class="rvts20">location</span><span class="rvts18"> - Возвращает расположение клавиши на клавиатуре или устройства</span></p>
+<p class="rvps2"><span class="rvts20">metaKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "мета", когда ключ событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">shiftKey</span><span class="rvts18"> - Возвращает ли нажата клавиша "SHIFT", когда ключ событие было вызвано</span></p>
+<p class="rvps2"><span class="rvts20">which</span><span class="rvts18"> - Возвращает код символа Unicode ключа, инициировавшего событие OnKeyPress или код ключа Unicode ключа, инициировавшего OnKeyDown или OnKeyUp событие</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">HashChangeEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">newURL</span><span class="rvts18"> - Возвращает URL документа, после того, как хэш был изменен</span></p>
+<p class="rvps2"><span class="rvts20">oldURL</span><span class="rvts18"> - Возвращает URL документа, до того, как хэш был изменен</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">PageTransitionEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">persisted</span><span class="rvts18"> - Возвращает был ли веб-страницы кэшируются браузером</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">FocusEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">relatedTarget</span><span class="rvts18"> - Возвращает элемент, связанный с элементом, вызвавшего событие</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">AnimationEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">animationName</span><span class="rvts18"> - Возвращает имя анимации</span></p>
+<p class="rvps2"><span class="rvts20">elapsedTime</span><span class="rvts18"> - Возвращает количество секунд анимации было работает</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">TransitionEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">propertyName</span><span class="rvts18"> - Возвращает имя свойства CSS, связанное с переходом</span></p>
+<p class="rvps2"><span class="rvts20">elapsedTime</span><span class="rvts18"> - Возвращает количество секунд переход был запущен</span></p>
+<p class="rvps2"><span class="rvts18"><br/></span></p>
+<p class="rvps2"><span class="rvts21">WheelEvent Object</span><span class="rvts18">:</span></p>
+<p class="rvps2"><span class="rvts20">deltaX</span><span class="rvts18"> - Возвращает горизонтальную величину прокрутки колеса мыши (ось х)</span></p>
+<p class="rvps2"><span class="rvts20">deltaY</span><span class="rvts18"> - Возвращает вертикальное количество прокрутки колеса мыши (ось у)</span></p>
+<p class="rvps2"><span class="rvts20">deltaZ</span><span class="rvts18"> - Возвращает количество прокрутки колеса мыши для оси</span></p>
+<p class="rvps2"><span class="rvts20">deltaMode</span><span class="rvts18"> - Возвращает число, представляющее собой единицу измерения для значений дельта (пикселей, линий или страниц)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps7"><span class="rvts22">&lt;!DOCTYPE </span><span class="rvts23">html</span><span class="rvts22">&gt;</span><br/><span class="rvts22">&lt;html&gt;</span><br/><span class="rvts22">&lt;head&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;title&gt;&lt;/title&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;meta </span><span class="rvts23">charset=</span><span class="rvts24">"utf-8" </span><span class="rvts22">/&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;style </span><span class="rvts23">type=</span><span class="rvts24">"text/css"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">html, body {</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;border: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;padding: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;margin: 0;</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts22">&lt;/style&gt;</span><br/><span class="rvts22"></span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;script </span><span class="rvts23">type=</span><span class="rvts24">"text/javascript"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts25">function onLoad()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var event = new Event("click");</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myButton.dispatchEvent(event);</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"></span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;function onClick()</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;{</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alert('Нажата кнопка!');</span><br/><span class="rvts25"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br/><span class="rvts25"> &nbsp; &nbsp;</span><span class="rvts22">&lt;/script&gt;</span><br/><span class="rvts22">&lt;/head&gt;</span><br/><span class="rvts22">&lt;body </span><span class="rvts23">onload=</span><span class="rvts24">"onLoad()"</span><span class="rvts22">&gt;</span><br/><span class="rvts22"> &nbsp; &nbsp;&lt;button </span><span class="rvts23">id=</span><span class="rvts24">"myButton" </span><span class="rvts23">onclick=</span><span class="rvts24">"onClick()"</span><span class="rvts22">&gt;</span><span class="rvts25">Автоклик</span><span class="rvts22">&lt;/button&gt;</span><br/><span class="rvts22">&lt;/body&gt;</span><br/><span class="rvts22">&lt;/html&gt;</span></p>
+<p class="rvps7"><span class="rvts22"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/help-authoring-tool">Free help authoring tool</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2015 by Evgeniy Somov. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,144 @@
+﻿<html>
+	
+<head>
+	<title>Button (button + atlas)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "Dev.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Buttonbuttonatlas");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Button (button + atlas)</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Phaser.html">Phaser</a> &rsaquo;&rsaquo; <a href="JavaScript1.html">JavaScript</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="JavaScript1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Tween.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Buttonatlasframes.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts15">var</span><span class="rvts14"> game;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> onInit()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts14">game = </span><span class="rvts15">new</span><span class="rvts14"> Phaser.Game(860, 730, Phaser.CANVAS, </span><span class="rvts20">''</span><span class="rvts14">, { preload: preload, create: create, update: update, render: render });</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">window.addEventListener(</span><span class="rvts20">"load"</span><span class="rvts14">, onInit, false);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> preload()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;game.load.atlas(</span><span class="rvts20">'dice_1_atlas'</span><span class="rvts14">, </span><span class="rvts20">'assets/dice_1_atlas.png'</span><span class="rvts14">, </span><span class="rvts20">'assets/dice_1_atlas.json'</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> create()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">for</span><span class="rvts14">(</span><span class="rvts15">var</span><span class="rvts14"> i = 0; i &lt; 7; i++)</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;{ &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;game.add.sprite(20 + (120 * i), 625, 'box');</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts15">var</span><span class="rvts14"> button = game.add.</span><span class="rvts34">button</span><span class="rvts14">(40 + (120 * i), 650, </span><span class="rvts20">'dice_1_atlas'</span><span class="rvts14">, onButtonDiceClick, </span><span class="rvts16">this</span><span class="rvts14">, 0, 0, 0);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.animations.add(</span><span class="rvts20">'dice_1_atlas'</span><span class="rvts14">, Phaser.Animation.generateFrameNames(</span><span class="rvts20">'dice'</span><span class="rvts14">, 0, 10, </span><span class="rvts20">''</span><span class="rvts14">, 2), 15, true);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.onInputOver.add(onButtonDiceOver, </span><span class="rvts16">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.onInputOut.add(onButtonDiceOut, </span><span class="rvts16">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.onInputUp.add(onButtonDiceUp, </span><span class="rvts16">this</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.frameName = "</span><span class="rvts6">dice01</span><span class="rvts14">";</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// имя фрейма</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;button.inputEnabled = true;</span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">// флаг активности кнопки (разрешаем нажать)</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;}</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> onButtonDiceUp(event) </span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> onButtonDiceOver(event) </span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;event.animations.play(</span><span class="rvts20">'dice_1_atlas'</span><span class="rvts14">);</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> onButtonDiceOut(event) </span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;event.animations.stop();</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">if</span><span class="rvts14"> (event.frame === 10) event.frame = 12;</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;</span><span class="rvts15">else</span><span class="rvts14"> event.frame = 10;</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> onButtonDiceClick (event) </span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp; &nbsp;event.kill();</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> update()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"></span><span class="rvts14"> &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts15">function</span><span class="rvts14"> render()</span></p>
+<p class="rvps2"><span class="rvts14">{</span></p>
+<p class="rvps2"><span class="rvts14"> &nbsp;</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts14">}</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p></p>
+<p class="rvps4"><span class="rvts12">Created with the Personal Edition of HelpNDoc: </span><a class="rvts13" href="http://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by Somov Evgeiy. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

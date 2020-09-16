@@ -1,0 +1,212 @@
+﻿
+
+<html>
+	
+<head>
+	<title>Выполнение запросов по регистрам</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic136");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Выполнение запросов по регистрам</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="1C77.html">1C Предприятие 7.7</a> &rsaquo;&rsaquo; <a href="Newtopic126.html">Оперативный учет. (&quot;Регистр&quot; &quot;Запрос&quot; &quot;Документ&quot; &quot;Последовательность&quot; &quot;ТочкаАктуальности&quot;)</a> &rsaquo;&rsaquo; <a href="Newtopic127.html">Регистры</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic127.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Newtopic135.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Newtopic137.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts20">Выполнение запросов по регистрам</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Использование функций в запросе по регистрам:</span></p>
+<p class="rvps3"><span class="rvts36">Для регистра типа "</span><span class="rvts32">Обороты</span><span class="rvts36">" используется только функция </span><span class="rvts32">Сумма(&lt;внутр_перем&gt;);</span></p>
+<p class="rvps3"><span class="rvts36">Для регистра типа "</span><span class="rvts32">Остатки</span><span class="rvts36">" используются функции :</span></p>
+<p class="rvps5"><span class="rvts40">НачОст(&lt;внутр_перем&gt;);</span></p>
+<p class="rvps5"><span class="rvts40">Приход(&lt;внутр_перем&gt;);</span></p>
+<p class="rvps5"><span class="rvts40">Расход(&lt;внутр_перем&gt;);</span></p>
+<p class="rvps5"><span class="rvts40">КонОст(&lt;внутр_перем&gt;);</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: &nbsp;использования запроса для </span><span class="rvts57">оборотного</span><span class="rvts36"> регистра.</span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts32">""</span><span class="rvts45">;</span></p>
+<p class="rvps3"><span class="rvts37">// установка периода запроса.</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">ДатаКон</span><span class="rvts34"> &gt;= ПолучитьДатуТА() Тогда</span></p>
+<p class="rvps5"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"Период С ДатаНач;"</span><span class="rvts45">;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"конечная дата &gt;= точки актуальности"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Иначе</span></p>
+<p class="rvps5"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"Период С ДатаНач По ДатаКон;"</span><span class="rvts45">;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"конечная дата &lt; точки актуальности"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">//текст запроса по продажам.</span></p>
+<p class="rvps3"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"</span></p>
+<p class="rvps3"><span class="rvts39">|Товар = Регистр.ОборотТовара.Товар;</span></p>
+<p class="rvps3"><span class="rvts39">|Контрагент = Регистр.ОборотТовара.Контрагенты;</span></p>
+<p class="rvps3"><span class="rvts39">|Сумма = Регистр.ОборотТовара.Сумма;</span></p>
+<p class="rvps3"><span class="rvts39">|Количество = Регистр.ОборотТовара.Количество;</span></p>
+<p class="rvps3"><span class="rvts39">|Группировка Товар Без Групп;</span></p>
+<p class="rvps3"><span class="rvts39">|Группировка Контрагент Без Групп;</span></p>
+<p class="rvps3"><span class="rvts39">|Функция ОборотСум = </span><span class="rvts40">Сумма</span><span class="rvts39">(Сумма); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<p class="rvps3"><span class="rvts39">|Функция ОборотКол = </span><span class="rvts40">Сумма</span><span class="rvts39">(Количество);</span></p>
+<p class="rvps3"><span class="rvts39">|"</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts37">// Если ошибка в запросе, то выход из процедуры</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">) = </span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Возврат;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">//читаем запрос.</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Группировка</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл </span></p>
+<p class="rvps5"><span class="rvts34">Пока </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Группировка</span><span class="rvts34">(</span><span class="rvts36">2</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Товар</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Контрагент</span><span class="rvts34">);</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"СУММА:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ОборотСум</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"КОЛИЧЕСТВО:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ОборотКол</span><span class="rvts34">));</span></p>
+<p class="rvps6"><span class="rvts34">Сообщить(</span><span class="rvts36">"----------------------------------------"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts36">Пример: использование запроса для регистра </span><span class="rvts57">остатки</span><span class="rvts36">.</span></p>
+<p class="rvps3"><span class="rvts35">Запрос</span><span class="rvts34"> = СоздатьОбъект(</span><span class="rvts36">"Запрос"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts32">""</span><span class="rvts45">;</span></p>
+<p class="rvps3"><span class="rvts37">// установка периода запроса.</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">ДатаКон</span><span class="rvts34"> &gt;= ПолучитьДатуТА() Тогда</span></p>
+<p class="rvps5"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"Период С ДатаНач;"</span><span class="rvts45">;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"конечная дата &gt;= точки актуальности"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">Иначе</span></p>
+<p class="rvps5"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"Период С ДатаНач По ДатаКон;"</span><span class="rvts45">;</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"конечная дата &lt; точки актуальности"</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts34"><br/></span></p>
+<p class="rvps3"><span class="rvts37">//текст запроса по продажам.</span></p>
+<p class="rvps3"><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> = </span><span class="rvts38">ТекстЗапроса</span><span class="rvts45"> + </span><span class="rvts32">"</span></p>
+<p class="rvps3"><span class="rvts39">|Товар = Регистр.ОстаткиТоваров.Товар;</span></p>
+<p class="rvps3"><span class="rvts39">|Склады = Регистр.ОстаткиТоваров.Склад;</span></p>
+<p class="rvps3"><span class="rvts39">|Сумма = Регистр.ОстаткиТоваров.Сумма;</span></p>
+<p class="rvps3"><span class="rvts39">|Количество = Регистр.ОстаткиТоваров.Количество;</span></p>
+<p class="rvps3"><span class="rvts39">|Условие(Склады в Склад);</span></p>
+<p class="rvps3"><span class="rvts39">|Группировка Товар Без Групп;</span></p>
+<p class="rvps3"><span class="rvts39">|Функция ПриходСум = </span><span class="rvts40">Приход</span><span class="rvts39">(Сумма);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция РасходСум = </span><span class="rvts40">Расход</span><span class="rvts39">(Сумма);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция ПриходКол = Приход(Количество);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция РасходКол = Расход(Количество);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция НачОстКол = </span><span class="rvts40">НачОст</span><span class="rvts39">(Количество);</span></p>
+<p class="rvps3"><span class="rvts39">|Функция КонОстКол = </span><span class="rvts40">КонОст</span><span class="rvts39">(Количество);</span></p>
+<p class="rvps3"><span class="rvts39">|"</span><span class="rvts34">;</span></p>
+<p class="rvps3"><span class="rvts37">// Если ошибка в запросе, то выход из процедуры</span></p>
+<p class="rvps3"><span class="rvts34">Если </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Выполнить</span><span class="rvts34">(</span><span class="rvts35">ТекстЗапроса</span><span class="rvts34">) = </span><span class="rvts36">0</span><span class="rvts34"> Тогда</span></p>
+<p class="rvps5"><span class="rvts34">Возврат;</span></p>
+<p class="rvps3"><span class="rvts34">КонецЕсли;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p class="rvps3"><span class="rvts37">//читаем запрос.</span></p>
+<p class="rvps3"><span class="rvts34">Пока </span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Группировка</span><span class="rvts34">(</span><span class="rvts36">1</span><span class="rvts34">) = </span><span class="rvts36">1</span><span class="rvts34"> Цикл </span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">Товар</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"ОСТАТОК НА НАЧАЛО:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">НачОстКол</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"----------------------------------------"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"ПРИХОД СУММА:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ПриходСум</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"ПРИХОД КОЛИЧЕСТВО:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">ПриходКол</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"----------------------------------------"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"РАСХОД СУММА:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">РасходСум</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"РАСХОД КОЛИЧЕСТВО:"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">РасходКол</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"----------------------------------------"</span><span class="rvts34">);</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">"ОСТАТОК НА КОНЕЦ :"</span><span class="rvts34"> + Строка(</span><span class="rvts35">Запрос</span><span class="rvts34">.</span><span class="rvts35">КонОстКол</span><span class="rvts34">));</span></p>
+<p class="rvps5"><span class="rvts34">Сообщить(</span><span class="rvts36">" &nbsp; "</span><span class="rvts34">);</span></p>
+<p class="rvps3"><span class="rvts34">КонецЦикла;</span></p>
+<p class="rvps3"><span class="rvts33"><br/></span></p>
+<p></p>
+<p class="rvps2" style="clear: both;"><span class="rvts6">Created with the Personal Edition of HelpNDoc: </span><a class="rvts7" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2017 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
