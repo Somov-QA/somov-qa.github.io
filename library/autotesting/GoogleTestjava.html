@@ -1,0 +1,113 @@
+﻿
+
+<html>
+	
+<head>
+	<title>GoogleTest.java</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 5.9.0.711">
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("GoogleTestjava");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">GoogleTest.java</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="SelenideJava.html">Selenide (Java)</a> &rsaquo;&rsaquo; <a href="IntelliJIDEA1.html">Проект в IntelliJ IDEA</a> &rsaquo;&rsaquo; <a href="Project2.html">Project</a> &rsaquo;&rsaquo; <a href="src1.html">src</a> &rsaquo;&rsaquo; <a href="test1.html">test</a> &rsaquo;&rsaquo; <a href="java2.html">java</a> &rsaquo;&rsaquo; <a href="tests2.html">tests</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="tests2.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="tests2.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="pomxml1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps5"><span class="rvts18">package </span><span class="rvts17">tests</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">import static </span><span class="rvts17">com.codeborne.selenide.Selenide.*</span><span class="rvts18">;</span><br/><span class="rvts18">import static </span><span class="rvts17">com.codeborne.selenide.Condition.*</span><span class="rvts18">;</span><br/><span class="rvts18">import static </span><span class="rvts17">com.codeborne.selenide.Selectors.*</span><span class="rvts18">;</span><br/><span class="rvts18">import static </span><span class="rvts17">com.codeborne.selenide.CollectionCondition.*</span><span class="rvts18">;</span><br/><span class="rvts18">import static </span><span class="rvts17">org.openqa.selenium.support.ui.ExpectedConditions.</span><span class="rvts19">titleIs</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">import </span><span class="rvts17">com.codeborne.selenide.Configuration</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">com.codeborne.selenide.ElementsCollection</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.apache.hc.core5.util.Asserts</span><span class="rvts18">;</span><br/><span class="rvts18">import </span><span class="rvts17">org.junit.jupiter.api.</span><span class="rvts24">Test</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">import </span><span class="rvts17">support.StepsObject.GoogleSteps</span><span class="rvts18">;</span><br/><span class="rvts18"></span><br/><span class="rvts18">public class </span><span class="rvts17">GoogleTest {</span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@Test</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts18">void </span><span class="rvts22">testSearch1</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;Configuration.</span><span class="rvts21">startMaximized </span><span class="rvts17">= </span><span class="rvts18">true;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">open</span><span class="rvts17">(</span><span class="rvts20">"https://www.google.com/"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">element</span><span class="rvts17">(</span><span class="rvts19">byName</span><span class="rvts17">(</span><span class="rvts20">"q"</span><span class="rvts17">)).setValue(</span><span class="rvts20">"GeForce 1650"</span><span class="rvts17">).pressEnter()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">//ElementsCollection list = elements("#search .g").shouldHave(size(9));</span><br/><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">elements</span><span class="rvts17">(</span><span class="rvts20">"#search .g"</span><span class="rvts17">).shouldHave(</span><span class="rvts19">sizeGreaterThanOrEqual</span><span class="rvts17">(</span><span class="rvts25">6</span><span class="rvts17">))</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.first().shouldHave(</span><span class="rvts19">text</span><span class="rvts17">(</span><span class="rvts20">"Игровая видеокарта GeForce GTX 1650 | NVIDIA"</span><span class="rvts17">))</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.find(</span><span class="rvts20">".r&gt;a"</span><span class="rvts17">).click()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">Wait</span><span class="rvts17">().until(</span><span class="rvts19">titleIs</span><span class="rvts17">(</span><span class="rvts20">"Игровая видеокарта GeForce GTX 1650 | NVIDIA"</span><span class="rvts17">))</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17"></span><br/><span class="rvts17"> &nbsp; &nbsp;</span><span class="rvts24">@Test</span><br/><span class="rvts24"> &nbsp; &nbsp;</span><span class="rvts18">void </span><span class="rvts22">testSearch2</span><span class="rvts17">() {</span><br/><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts19">open</span><span class="rvts17">(</span><span class="rvts20">"https://www.google.com/"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">GoogleSteps tester = </span><span class="rvts18">new </span><span class="rvts17">GoogleSteps()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">tester.searchValue(</span><span class="rvts20">"Radeon RX 5500"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;int </span><span class="rvts17">amount = &nbsp;tester.getCountResultSearch()</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts17">Asserts.</span><span class="rvts19">check</span><span class="rvts17">((amount &gt; </span><span class="rvts25">0</span><span class="rvts17">)</span><span class="rvts18">, </span><span class="rvts20">"Error: amount is 0"</span><span class="rvts17">)</span><span class="rvts18">;</span><br/><span class="rvts18"> &nbsp; &nbsp;</span><span class="rvts17">}</span><br/><span class="rvts17">}</span></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2020 by Somov Evgeniy. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
