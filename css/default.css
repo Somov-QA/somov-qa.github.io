@@ -451,6 +451,12 @@ footer {
 	padding: 1em;
 }
 
+#download-image {
+	margin-left: auto;
+    margin-right: auto;
+    width: 35em
+}
+
 #contacts {
 	display: block;
 	position: relative;
