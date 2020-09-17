@@ -38,7 +38,7 @@ a:hover {
 	display: block;
 	width: 100%;
 	min-height: 100%;
-	background: url('../img/background1.jpg') no-repeat center center fixed;
+	background: url('../img/background2.jpg') no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -49,15 +49,15 @@ a:hover {
 /** -- MENU -- **/
 .menu{
     overflow: hidden;
-    position:relative;
+    position:fixed;
     border-bottom: 1px solid #999999;
     padding: 5px 5px 5px 5px;
     width: 100%;
     height: 50px;
-    top: -1%;
     z-index: 10000;
     list-style-type: none;
     text-align: right;
+    background-color: rgba(58, 68, 74, 0.8);
 }
 
 .menu li {
@@ -162,15 +162,8 @@ a:hover {
 
 /** -- HEADER -- **/
 header{
+	background: url('../img/background1.jpg') no-repeat center center fixed;
     height: calc(100vh);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#143F64), to(#467095));
-    background-image: linear-gradient(to bottom, #143F64 0%, #467095 100%);
-    
-    /*
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#1E458C), to(#FFFFFF));
-    background-image: linear-gradient(to bottom, #1E458C 80%, #FFFFFF 100%);
-    */
-    opacity: 0.6;
     overflow: hidden;
 }
 
@@ -179,19 +172,35 @@ header{
 	text-align: center;
 	color: #FFF;
 	display: inline-block;
-	height: 60px;
-	width: 400px;
+	height: 360px;
+	width: 600px;
 	top: calc(45vh);
 	left: 50%;
-	margin-left: -200px;
+	margin-left: -300px;
+	margin-top: -30px;
+	z-index: 1;
+	background-color: rgba(69, 76, 82, 0.8);
+	border-radius: 15%;
+}
+
+#headerTitleAndLogo2 {
+	position: absolute;
+	text-align: center;
+	color: #FFF;
+	display: inline-block;
+	height: 360px;
+	width: 600px;
+	top: calc(45vh);
+	left: 50%;
+	margin-left: -300px;
 	margin-top: -30px;
 	z-index: 1;
 }
 
 #title {
 	position: relative;
-	top: 150px;
-	opacity: 0;
+	top: 210px;
+	opacity: 1;
 	font-weight: bold;
 	font-family: "Arial", sens-serif;
 	font-size: 30px;
@@ -208,30 +217,30 @@ header{
 }
 
 #logo {
-	opacity: 0;
+	opacity: 1;
 	text-transform: uppercase;
 	text-align: center;
 	display: inline-block;
 	position: absolute;
-	top: -100px;
-	left: 20%;
+	top: -80px;
+	left: 25%;
 }
 
 #logo img{
-	border: 0px solid black;
+	border: 25px solid rgba(69, 76, 82, 0.2);
 	border-radius:100% 100% 100% 100%;
 }
 
 #info {
 	position: relative;
-	top: 200px;
-	opacity: 0;
+	top: 250px;
+	opacity: 1;
 	text-align: center;
 	color: #FFF;
 	display: inline-block;
 	height: 150px;
 	width: 500px;
-	left: 0%;
+	left: 3%;
 	margin-left: -43px;
 	margin-top: -43px;
 }
@@ -248,6 +257,11 @@ header{
 }
 
 @media screen and (max-width: 800px){
+	header{
+		background: none;
+    	height: calc(100vh);
+    	overflow: hidden;
+	}
 	#headerTitleAndLogo{
 		width: 100%;
 		left: 0;
@@ -256,7 +270,7 @@ header{
     	z-index: -1;
 	}
 	#logo{
-		top: -120px;
+		top: -150px;
 		left: 0;
 		width: 100%;
 	}
@@ -311,11 +325,7 @@ section {
 
 .section-transparent {
 	min-height: 400px;
-	/*
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
-    */
-    opacity: 0.7;
+	opacity: 0.7;
     overflow: hidden;
 }
 
@@ -407,22 +417,6 @@ footer {
     text-align: left;
 }
 
-/*
-.footer-menu:after {
-	display: block;
-	content: '';
-	width: 100%;
-	height: 1px;
-	margin: 0.7em 0 1em 0;
-	border-radius: 2px;
-	background-color: #dddddd;
-	background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-	background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-}
-*/
-
 .footer-menu li {
     display: inline-block;
     padding-top: 20px;
@@ -455,22 +449,6 @@ footer {
 #about, #about-image, #services, #services-image, #technology, #technology-image, #download, #download-image {
 	position: relative;
 	padding: 1em;
-}
-
-#about, #technology{
-	left: -100%;
-}
-
-#about-image, #technology-image{
-	left: 200%;
-}
-
-#services, #download{
-	left: 200%;
-}
-
-#services-image, #download-image{
-	left: -100%;
 }
 
 #contacts {
@@ -620,8 +598,6 @@ footer {
 ul {
     display: block;
     list-style-type: disc;
-    /*margin-block-start: 1em;
-    margin-block-end: 1em;*/
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
