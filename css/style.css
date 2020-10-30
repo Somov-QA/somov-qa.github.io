@@ -38,7 +38,7 @@ a{
 
 a:link {
   color: #154088;
-  border-bottom: 1px dashed; 
+  /*border-bottom: 1px dashed; */
 }
 a:visited {
   color: #154088;
@@ -187,7 +187,10 @@ header{
     position: relative;
     top: 30%;
     float: right;
-    background-color: rgba(34, 34, 34, 0.7);
+    /*background-color: rgba(34, 34, 34, 0.7);*/
+    /*background-color: rgba(30, 60, 100, 0.8);*/
+    /*background-color: rgba(30, 30, 50, 0.8);*/
+    background: linear-gradient(to left, rgba(22, 22, 22, 0.9), rgba(30, 30, 50, 0.7));
     color: #FFFFFF;
     width: 90%;
     padding: 10px;
@@ -469,7 +472,7 @@ header{
 
 .single-description {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 15px;
     min-width: 75%;
 }
 
