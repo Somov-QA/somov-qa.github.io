@@ -187,7 +187,9 @@ header{
     position: relative;
     top: 30%;
     float: right;
-    background-color: rgba(34, 34, 34, 0.7);
+    /*background-color: rgba(34, 34, 34, 0.7);*/
+    /*background-color: rgba(30, 60, 100, 0.8);*/
+    background-color: rgba(30, 30, 50, 0.8);
     color: #FFFFFF;
     width: 90%;
     padding: 10px;
