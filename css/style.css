@@ -38,7 +38,7 @@ a{
 
 a:link {
   color: #154088;
-  border-bottom: 1px dashed; 
+  /*border-bottom: 1px dashed; */
 }
 a:visited {
   color: #154088;
@@ -472,7 +472,7 @@ header{
 
 .single-description {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 15px;
     min-width: 75%;
 }
 
