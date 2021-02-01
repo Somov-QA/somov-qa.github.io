@@ -461,6 +461,10 @@ header{
     max-width: 100%;
 }
 
+.image-not-rounding{
+    max-width: 90%;
+}
+
 .single-icon {
     display: inline-block;
     width: 64px;
