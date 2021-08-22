@@ -1,160 +1,352 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="SHORTCUT ICON" href="./img/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="./css/style.css" />
-	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="./js/script.js"></script>
-	<title>Сомов Евгений Павлович | QA Engineer</title>
+	<title>Сомов Евгений Павлович | Automation QA Engineer | Game Developer HTML5</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+	<meta name="keywords" content="Somov Evgeniy, Сомов Евгений Павлович, game developer, automation qa engineer, gamedev, testing, QA, автоматизированное тестирование, automation testing, бесплатно, freeware, soft, Phaser, PixiJS" />
+	<meta name="description" content="Сомов Евгений Павлович - Автоматизация тестирования Selenium Appium Codeception Selenide, Cucember и разработка html5 игр на дфижке Phaser или PixiJS" />
+	<link rel="stylesheet" href="./css/default.css" />
+	<link href="./img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 </head>
 <body>
-	<!-- MENU -->
-	<nav>
-		<div class="menu-wrapper">
-			<label class="menu-button" for="menuCheck"><img src="./img/menu.png" atl="Menu"></label>
-			<input type="checkbox" name="menu-check" id="menuCheck">
-			<ul class="menu">
-				<li><a href="index.html">Обо мне</a></li>
-				<li><a href="portfolio.html">Портфолио</a></li>
-				<li><a href="testing-main.html">Тестирование</a></li>
-				<li><a href="auto-main.html">Автоматизация</a></li>
-				<li><a href="soft.html" id="selectPage">Софт</a></li>
-				<li><a href="lib.html">Библиотека</a></li>
-				<li><a href="contact.html">Контакты</a></li>
-			</ul>
+	<div class="main-wrapper">
+		<div id="image-zoom" class="image-zoom image-zoom-hidden">
+			<div id="image-zoom-image" class="image-zoom-image"></div>
 		</div>
-	</nav>
 
-	<!-- HEADER -->
-	<header>
-		<div id="backgroundImage"></div>
-		<div class="header-profession">
-			<div class="header-greeting">
-				<div class="header-photo">
-					<img src="./img/foto.png" alt="Somov Evgeniy - Foto" class="my-foto">
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo" />
+					</a>
 				</div>
-				<div class="header-description">
-					Добро пожаловать на сайт. 
-					<br>Меня зовут <b>Сомов Евгений Павлович</b>, моя профессия Middle Manual / Automation QA Engineer.
-					<br>Я специалист в области QA/QC тестирования программного обеспечения. 
-					<br>В данное время занимаю должность <b>Automation QA Engineer</b>
-					<br>В свободное время от работы веду активную работу и продвижение собственного проекта <a href="https://somovstudio.github.io/" target="_blank">Somov Studio</a>
+				<div class="menu">
+					<nav>
+						<a href="index.html">Обо мне</a>
+						<a href="experience.html">Опыт работы</a>
+						<a href="portfolio.html">Портфолио</a>
+						<a href="soft.html" id="menu-item-selected">Разработки</a>
+						<a href="autotesting.html">Автоматизация</a>
+						<a href="lib.html">Библиотека</a>
+						<a href="contact.html">Контакты</a>
+					</nav>
+				</div>
+				<div class="section-clear"></div>
+				<div class="preview">
+					<div class="preview-image">
+						<img src="img/image1.png" alt="soft" id="soft" />
+					</div>
+					<div id="description" class="preview-description">
+						<h3>Общая информация:</h3>
+						<br>
+						<div class="block">
+							<b>ФИО:</b> Сомов Евгений Павлович
+							<br><b>Дата рождения:</b> 11.01.1984
+							<br><b>Образование:</b> высшее 
+							<br><b>Специальность:</b> компьютерная инженерия 
+							<br><b>Место работы:</b> компания <a href="https://zionec.ru" target="_blank"><b>Zionec</b></a>
+							<br><b>Должность:</b> Automation QA Engineer.
+							<br><br>
+							<form action="./pdf/resume-somov-e-p.pdf" target="_blank">
+							<input type="submit" value="Скачать резюме" class="button">
+							</form>
+						</div>
+						<br>
+						<h3>Специализация:</h3>
+						<div>
+							<ul>
+								<li>Автоматизированное тестирование (Selenium, Appium)</li>
+								<li>Разработчик HTML5 игр (Phaser, PixiJS)</li>
+							</ul>
+						</div>
+						<br>
+						<p>
+							<br>Собственный проект: <a href="https://catfishstudio.github.io/" target="_blank">Catfish Studio</a>
+						</p>
+						</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<!-- CONTENT -->
-	<section class="section-start">
-		<div class="page-title">Софт</div>
-		<div class="content">
-			<h2 class="title-black">Программное обеспечение:</h2>
-			<div class="content-left"><div class="block">
-				<img src="img/projects/fast_adb.png" alt="Fast ADB" class="image-rounding">
-			</div></div>
-			<div class="content-right"><div class="block">
-				<img src="img/projects/fastadb_logo.png" alt="FastADB">
-				<br><br><a href="https://github.com/SomovStudio/FastADB/" target="_blank">FastADB</a>
-				<br>
-				<br>
-				<div class="block">
-					Данная программа позволяет работать с Android Debug Bridge более удобно и быстрее. С помощью этой программы вы легко сможете снимать логи и скриншоты с устройства, устанавливать и удалять приложения, производить стресс-тестирвоание, и многое другое.
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<h2>Разработки</h2>
 				</div>
-			</div></div>
-
-			<div class="content-left"><div class="block">
-				<img src="img/projects/detect_gaym.png" alt="Star Wars" class="image-rounding">
-			</div></div>
-			<div class="content-right"><div class="block">
-				<img src="img/projects/detect_gaym_logo.png" alt="DetectGaYm">
-				<br><br><a href="https://github.com/SomovStudio/DetectGaYm/" target="_blank">DetectGaYm</a>
-				<br>
-				<br>
-				<div class="block">
-					Программа тестирования событий Google analytics и Yandex metrika.<br>
-					Данная программа позволяет проверить события Google analytics и Yandex metrika в момент отправки данных из web форм. Для создания автотестов в json формате встроен удобном редакторе который так же позволяет легко их воспроизводить. Программа портативная и кроссплатформенная.
+				<div class="container-right">
+					<h4>Программы для тестирования</h4>
 				</div>
-			</div></div>
+			</div>
+		</section>
 
-			<div class="content-left"><div class="block">
-				<img src="img/projects/test_sitemap.png" alt="Star Wars" class="image-rounding">
-			</div></div>
-			<div class="content-right"><div class="block">
-				<img src="img/projects/test_sitemap_logo.png" alt="TestSitemap">
-				<br><br><a href="https://github.com/SomovStudio/TestSitemap/" target="_blank">TestSitemap</a>
-				<br>
-				<br>
-				<div class="block">
-					Программа предназначена для тестирования ссылок прописанных в файле sitemap.<br>
-					Программа циклично проходит по всем ссылкам и получает статус страницы. Если статус не равен 200 (успешно) данная ссылка попадет в список ошибок.
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/fast_adb.png" alt="FastADB" class="portfolio-img">
+					</div>
 				</div>
-			</div></div>
-
-			<div class="content-left"><div class="block">
-				<img src="img/projects/search_site_content.png" alt="Star Wars" class="image-rounding">
-			</div></div>
-			<div class="content-right"><div class="block">
-				<img src="img/projects/search_site_content_logo.png" alt="SearchSiteContent">
-				<br><br><a href="https://github.com/SomovStudio/SearchSiteContent" target="_blank">SearchSiteContent</a>
-				<br>
-				<br>
-				<div class="block">
-					Программа для выполнения поиска заданного контента на страницах сайта.
+				<div class="container-right">
+					<img src="img/soft/fastadb_logo.png" alt="FastADB">
+					<div class="list">
+						<p>
+							Программа FastADB позволяет работать с Android Debug Bridge более удобно и быстрее. С помощью этой программы вы легко сможете снимать логи и скриншоты с устройства, устанавливать и удалять приложения, производить стресс-тестирование, и многое другое.
+						</p>
+						<br>
+						Архив приложения "FastADB"
+						<form action="https://github.com/SomovStudio/FastADB/archive/1.1.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Приложениию "FastADB" на GitHub
+						<form action="https://github.com/SomovStudio/FastADB/" target="_blank">
+							<input type="submit" value="перейти" class="button2">
+						</form>
+					</div>
 				</div>
-			</div></div>
+			</div>
+		</section>
 
-			<div class="content-left"><div class="block">
-				<img src="img/projects/jfeditor.png" alt="Json File Editor" class="image-rounding">
-			</div></div>
-			<div class="content-right"><div class="block">
-				<img src="img/projects/jfeditor_logo.png" alt="JsonFileEditor">
-				<br><br><a href="https://github.com/SomovStudio/JsonFileEditor/" target="_blank">JsonFileEditor</a>
-				<br>
-				<br>
-				<div class="block">
-					Программа предназначена для редактирования json файлов. 
-					В данной программе используется дерево объектов для навигации, текстовое поле для общего представления содержания файла, таблица для непосредственного редактирования данных в json файле.
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/detect_gaym.png" alt="DetectGaYm" class="portfolio-img">
+					</div>
 				</div>
-			</div></div>
-			
-		</div>
-	</section>
+				<div class="container-right">
+					<img src="img/soft/detect_gaym_logo.png" alt="DetectGaYm">
+					<div class="list">
+						<p>
+							Программа тестирования событий Google analytics и Yandex metrika.
+							Данная программа позволяет проверить события Google analytics и Yandex metrika в момент отправки данных из web форм. Для создания автотестов в json формате встроен удобном редакторе который так же позволяет легко их воспроизводить. Программа портативная и кроссплатформенная.
+						</p>
+						<br>
+					Архив программы "DetectGaYm"
+					<form action="https://github.com/SomovStudio/DetectGaYm/archive/1.0.1.zip">
+						<input type="submit" value="Скачать" class="button2">
+					</form>
+					<br>
+					Программа "DetectGaYm" на GitHub
+					<form action="https://github.com/SomovStudio/DetectGaYm/" target="_blank">
+						<input type="submit" value="Перейти" class="button2">
+					</form>
+					<br>
+					Официальная страница с документацией и видео
+					<form action="https://somovstudio.github.io/detect-gaym/" target="_blank">
+						<input type="submit" value="Перейти" class="button2">
+					</form>
+					</div>
+				</div>
+			</div>
+		</section>
 
-	<!-- FOOTER -->
-	<footer>
-		<table id="tableIcons">
-			<tr>
-				<td><a href="https://github.com/Somov-QA" class="link-icons" target="_blank">
-						<img src="img/icons/git.png" alt="GitHub" class="icons">
-					</a>
-				</td>
-				<td>
-					<a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" class="link-icons" target="_blank">
-						<img src="img/icons/youtube.png" alt="email" class="icons">
-					</a>
-				</td>
-				<td>
-					<a href="https://www.facebook.com/somov.e.p/" class="link-icons" target="_blank">
-						<img src="img/icons/f.png" alt="facebook" class="icons">
-					</a>
-				</td>
-				<td>
-					<a href="mailto:somov@i.ua" class="link-icons" target="_blank">
-						<img src="img/icons/em.png" alt="email" class="icons">
-					</a>
-				</td>
-				<td>
-					<a href="mailto:somov.studio@gmail.com" class="link-icons" target="_blank">
-						<img src="img/icons/g+.png" alt="Google" class="icons">
-					</a>
-				</td>
-			</tr>
-		</table>
-		<div class="footer-author">
-			<h5>2021 © Сомов Евгений Павлович</h5>
-		</div>
-	</footer>
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/test_sitemap.png" alt="FastADB" class="portfolio-img">
+					</div>
+				</div>
+				<div class="container-right">
+					<img src="img/soft/test_sitemap_logo.png" alt="TestSitemap">
+					<div class="list">
+						<p>
+							Программа предназначена для тестирования ссылок прописанных в файле sitemap.
+							Программа циклично проходит по всем ссылкам и получает статус страницы. Если статус не равен 200 (успешно) данная ссылка попадет в список ошибок.
+						</p>
+						<br>
+						Архив приложения "TestSitemap"
+						<form action="https://github.com/SomovStudio/TestSitemap/archive/refs/tags/1.2.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Приложениию "TestSitemap" на GitHub
+						<form action="https://github.com/SomovStudio/TestSitemap/" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/search_site_content.png" alt="Search Site Content" class="portfolio-img">
+					</div>
+				</div>
+				<div class="container-right">
+					<img src="img/soft/search_site_content_logo.png" alt="Search Site Content">
+					<div class="list">
+						<p>
+							Программа для выполнения поиска заданного контента на страницах сайта.
+						</p>
+						<br>
+						Архив приложения "SearchSiteContent"
+						<form action="https://github.com/SomovStudio/SearchSiteContent/archive/refs/tags/1.2.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Приложениию "SearchSiteContent" на GitHub
+						<form action="https://github.com/SomovStudio/SearchSiteContent" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+
+				</div>
+				<div class="container-right">
+					<h4>Программы для разных задач</h4>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/jfeditor.png" alt="Json File Editor" class="portfolio-img">
+					</div>
+				</div>
+				<div class="container-right">
+					<img src="img/soft/jfeditor_logo.png" alt="Json File Editor">
+					<div class="list">
+						<p>
+							Программа предназначена для редактирования json файлов. В данной программе используется дерево объектов для навигации, текстовое поле для общего представления содержания файла, таблица для непосредственного редактирования данных в json файле.
+						</p>
+						<br>
+						Архив приложения "JsonFileEditor"
+						<form action="https://github.com/SomovStudio/JsonFileEditor/archive/refs/tags/1.3.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Приложениию "JsonFileEditor" на GitHub
+						<form action="https://github.com/SomovStudio/JsonFileEditor/" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/aggregator.png" alt="Aggregator" class="portfolio-img">
+					</div>
+				</div>
+				<div class="container-right">
+					<img src="img/soft/author.png" alt="Aggregator">
+					<div class="list">
+						<p>
+							Программное решение "Агрегатор" поможет вам в работе над большим количеством прайс-листов с дальнейшим составлением плана закупок, формированием и отправкой заказов поставщикам.
+						</p>
+						<br>
+						Приложениию "Агрегатор" на GitHub
+						<form action="https://github.com/SomovStudio/Aggregator" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+						<br>
+						Установщик программы "Агрегатор"
+						<form action="https://somovstudio.github.io/download/aggregator/Setup.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Архив программы "Агрегатор"
+						<form action="https://somovstudio.github.io/download/aggregator/Aggregator.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Официальная страница с документацией и видео
+						<form action="https://somovstudio.github.io/aggregator.html" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-light" id="work">
+			<div class="container">
+				<div class="container-left">
+					<div>
+						<img src="img/soft/rapid.png" alt="Rapid" class="portfolio-img">
+					</div>
+				</div>
+				<div class="container-right">
+					<img src="img/soft/author.png" alt="Rapid">
+					<div class="list">
+						<p>
+							Бухгалтерская программа "Rapid Sales" предназначена для учета продаж товаров со склада. Учет ведется по нескольким направлениям: бухгалтерский учет и складской учет. Так же в программе доступно формирование отчетов, таких как остатки ТМЦ, оборотно сальдовая ведомость по счету, по контрагентам, по торговым представителям.
+						</p>
+						<br>
+						Архив приложения "Rapid"
+						<form action="https://github.com/SomovStudio/RapidSales/archive/1.0.zip">
+							<input type="submit" value="Скачать" class="button2">
+						</form>
+						<br>
+						Приложениию "Rapid" на GitHub
+						<form action="https://github.com/SomovStudio/RapidSales/" target="_blank">
+							<input type="submit" value="Перейти" class="button2">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section-footer">
+			<div class="container">
+				<div id="contact">
+					<div id="author">
+						<div class="author-line">
+							<img src="img/author.png" alt="Somov Evgeniy" />
+							<p>
+								<br>Site: <a href="https://somov-qa.github.io/" target="_blank">Сомов Евгений Павлович</a>
+								<br>Facebook: <a href="https://www.facebook.com/somov.e.p/" target="_blank">Сомов Евгений Павлович</a>
+							</p>
+						</div>
+						<div class="author-line">
+							<img src="img/mail.png" alt="mail" />
+							<p class="text-align-left">
+								<br>Skype: <a href="skype:evgen_catfish">evgen_catfish</a>
+								<br>Email: <a href="mailto:somov.studio@gmail.com">somov.studio@gmail.com</a>
+							</p>
+						</div>
+						<div class="author-line">
+							<img src="img/globe.png" alt="globe" />
+							<p class="text-align-center">
+								<br>
+								<br>Украина, г. Луганск
+							</p>
+						</div>
+						<div class="author-line">
+							<img src="img/youtube.png" alt="Somov Evgeniy" />
+							<p class="text-align-center">
+								<br>
+								<br><a href="https://www.youtube.com/channel/UCqLSl-QwQTuRAbdb8sPaRcQ" target="_blank">Канал на Youtube</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<br><div class="copy-right-text">Copyright © 2021 Сомов Евгений Павлович. All Rights Reserved.</div><br>
+		</footer>
+	</div>
+	
 </body>
 </html>
