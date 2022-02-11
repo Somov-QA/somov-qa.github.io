@@ -676,6 +676,12 @@ footer{
   border-bottom: .0em dashed;
 }
 
+.link-select{
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 @media screen and (max-width: 500px){
     #tableIcons td{
         width:5%;
