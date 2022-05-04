@@ -544,6 +544,16 @@ header{
     border-bottom-right-radius: 25px;
 }
 
+.table-certificates {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-certificates td {
+    text-align: center;
+}
+
 .section-clear {
     clear: both;
 }
