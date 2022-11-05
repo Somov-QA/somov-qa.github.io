@@ -173,6 +173,16 @@ header {
 	width: 70%;
 }
 
+.menu ul {
+	list-style-type: none;
+}
+
+.menu li {
+	display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .menu nav a {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -194,29 +204,6 @@ header {
 
 .menu a:hover {
   color: #D111E2;
-  text-decoration: underline;
-}
-
-.menu2 {
-	float: right;
-}
-
-.menu2 nav a {
-	padding-left: 5px;
-	padding-right: 15px;
-}
-
-.menu2 a {
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
-.menu2 a:hover {
-  color: #FC1B1B;
   text-decoration: underline;
 }
 
@@ -425,7 +412,6 @@ section{
 }
 
 .portfolio-img {
-	/*border: 5px solid #6C3483;*/
 	border-radius: 15px;
 }
 
@@ -541,6 +527,14 @@ footer {
 }
 
 @media screen and (max-width: 500px){
+	.menu{
+    	float: none;
+    	width: 95%;
+    }
+    .menu li{
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    }
     .contant-iframe-video{
         min-width: 60px;
         min-height: 15px;
@@ -571,8 +565,15 @@ footer {
 	}
 
 	.menu {
-		margin-top: 4%;
+		margin-top: 10%;
+		float: none;
+    	width: 95%;
 	}
+
+	.menu li{
+    	padding-top: 5px;
+    	padding-bottom: 15px;
+    }
 
 	.preview-image {
 		text-align: center;
