@@ -170,24 +170,30 @@ header {
 
 .menu {
 	float: right;
+	width: 70%;
 }
 
 .menu nav a {
-	padding-left: 5px;
+	padding-left: 15px;
 	padding-right: 15px;
 }
 
 .menu a {
-  color: #EFEFEF;
-  text-decoration: none;
-  /*text-transform: uppercase;*/
-  font-weight: bold;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #5F3880;
+	/*border-radius: 20px;*/
+	background-color: #5F3880;
+	box-shadow: 0 0 10px rgba(25,35,75,0.5);
+	color: #EFEFEF;
+	text-decoration: none;
+	font-weight: bold;
+	/*background-color: transparent;*/
+	-webkit-text-decoration-skip: objects;
 }
 
 .menu a:hover {
-  color: #FC1B1B;
+  color: #D111E2;
   text-decoration: underline;
 }
 
@@ -215,12 +221,12 @@ header {
 }
 
 #menu-item-selected {
-	color: #FC1B1B;
+	color: #D111E2;
   	text-decoration: underline;
 }
 
 .preview {
-	margin: 5% 5%;
+	margin: 2% 5%;
 }
 
 .preview-image {
