@@ -182,20 +182,16 @@ header {
 }
 
 .menu nav a {
-	font-weight: 700;
+	font-weight: 600;
 	color: #EEEEEE;
 	text-decoration: none;
 	padding: .8em 1em calc(.8em + 3px);
-	/*background: rgb(108,52,131);*/
 	background-color: #4B0082;
-	/*box-shadow: 0 -3px rgb(27,79,114) inset;*/
 	box-shadow: 0 -3px #E6E6FA inset;
 	transition: 0.2s;
 }
 
 .menu nav a:hover { 
-	/*background: rgb(27,79,114); */
-	/*text-decoration: underline;*/
 	background-color: #E6E6FA;
 	color: rgb(27,79,114);
 }
@@ -222,7 +218,7 @@ header {
 	background-color: #41427A;
 	color: #FFC0CB;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 200;
 	-webkit-text-decoration-skip: objects;
 }
 
@@ -278,6 +274,14 @@ header {
 
 .list ul li{
 	padding-top: 5px;
+}
+
+.list a{
+	padding-right: 5px;
+}
+
+.list img{
+	padding-right: 5px;
 }
 
 .list-autotests {
