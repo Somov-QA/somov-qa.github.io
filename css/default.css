@@ -284,6 +284,12 @@ header {
 	padding-right: 5px;
 }
 
+.list-item {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+}
+
 .list-autotests {
 	border-left: 2px dotted #CCCCCC;
 	list-style-type: none;
