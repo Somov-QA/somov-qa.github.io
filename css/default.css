@@ -370,6 +370,18 @@ section{
 	color: #EEEEEE;
 }
 
+.section-dark a {
+  color: #66AFFF;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.section-dark a:hover {
+  color: #FC1B1B;
+  text-decoration: underline;
+}
+
 .section-light {
 	background: #FFFFFF;
 	color:#222222;
