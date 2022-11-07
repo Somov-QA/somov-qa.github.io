@@ -676,8 +676,11 @@ footer {
 	}
 
 	.menu li{
-    	padding-top: 5px;
-    	padding-bottom: 15px;
+    	padding-bottom: 30px;
+    }
+
+    .menu2 li{
+    	padding-bottom: 25px;
     }
 
 	.preview-image {
