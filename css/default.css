@@ -196,6 +196,11 @@ header {
 	color: rgb(27,79,114);
 }
 
+#menu-selected {
+	background-color: #E6E6FA;
+	color: rgb(27,79,114);
+}
+
 .menu2 {
 	float: right;
 	margin-top: 4%;
