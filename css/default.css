@@ -282,13 +282,17 @@ header {
 }
 
 .list img{
-	padding-right: 5px;
+	/*padding-right: 5px;*/
 }
 
 .list-item {
 	margin: 0 auto;
 	display: inline-block;
 	text-align: center;
+}
+
+.list-item img {
+	border-radius: 5px;
 }
 
 .list-autotests {
