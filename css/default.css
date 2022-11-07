@@ -603,15 +603,23 @@ footer {
     border-bottom-right-radius: 25px;
 }
 
-#bunnerHat {
-	padding: 10px;
-	background-color: #6B3483;
-	border: 5px solid #663581;
-	border-radius: 25px;
-	color: #EEEEEE;
+#BunnerHat img{
+	float: right;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
-/* adaptive  */
+.bunner-content {
+	padding: 20px;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/* == adaptive ===============================================  */
 
 @media screen and (max-width: 500px){
 	.menu{
