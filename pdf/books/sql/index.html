@@ -1,0 +1,1174 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="generator" content="HelpNDoc Personal Edition 7.7.0.519">
+	<title>SQL</title>
+	<style type="text/css">
+	/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+}
+span.rvts7
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts8
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts9
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts10, span.rvts10
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts11 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts12, span.rvts12 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts13
+{
+}
+span.rvts14
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ background-color: #ffffff;
+}
+span.rvts15
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+}
+span.rvts16
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ color: #0000ff;
+ background-color: #ffffff;
+}
+span.rvts17
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ background-color: #ffffff;
+}
+span.rvts18
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts19
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-style: italic;
+ background-color: #ffffff;
+}
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+ color: #0000ff;
+ background-color: #ffffff;
+}
+span.rvts21
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-style: italic;
+}
+span.rvts22
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+}
+span.rvts23
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-weight: bold;
+}
+span.rvts24
+{
+ font-size: 14pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ background-color: #ffffff;
+}
+span.rvts25
+{
+ font-size: 12pt;
+}
+span.rvts26
+{
+ background-color: #ffffff;
+}
+span.rvts27
+{
+ font-size: 14pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ font-style: italic;
+ background-color: #ffffff;
+}
+span.rvts28
+{
+ font-size: 12pt;
+ font-family: 'Courier New', 'Courier', monospace;
+ background-color: #ffffff;
+}
+span.rvts29
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts30
+{
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts31
+{
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts32
+{
+ color: #0000ff;
+}
+span.rvts33
+{
+ color: #000000;
+}
+span.rvts34
+{
+ font-weight: bold;
+ color: #000000;
+ text-decoration: underline;
+}
+span.rvts35
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+}
+.rvps3
+{
+ text-align: center;
+}
+.rvps4 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps5
+{
+ margin: 0px 0px 0px 47px;
+}
+.rvps6
+{
+ border-color: #000000;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ padding: 0px 0px 3px 0px;
+ margin: 0px 0px 0px 46px;
+}
+.rvps7
+{
+ margin: 0px 0px 0px 24px;
+}
+.rvps8
+{
+ margin: 0px 0px 0px 142px;
+}
+.rvps9
+{
+ margin: 0px 0px 8px 0px;
+}
+.rvps10
+{
+ margin: 0px 0px 8px 47px;
+}
+.rvps11
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps12
+{
+ background: #ffffff;
+}
+/* ========== Lists ========== */
+.list0 {text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;}
+.list1 {text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside;}
+
+
+	
+
+		body {
+			align-items: stretch;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+		.toc {
+			height: 100vh;
+			flex: 0 0 25%;
+			overflow: auto;
+		}
+
+		.content {
+			height: 100vh;
+			overflow: auto;
+		}
+
+		.toc-inner, .content-inner {
+			margin: 1em;
+		}
+
+		.toc-inner a {
+			display: block;
+			padding: 0.5em 0 0.5em 0;
+			text-decoration: none;
+			color: #000;
+			font-size: 11pt;
+			font-family: 'Segoe UI';
+		}
+
+		.toc-inner a:hover {
+			background-color: #ddd;
+		}
+
+		.toc-inner a.toclevel-2 { padding-left: 1em }
+		.toc-inner a.toclevel-3 { padding-left: 2em }
+		.toc-inner a.toclevel-4 { padding-left: 3em }
+		.toc-inner a.toclevel-5 { padding-left: 4em }
+		.toc-inner a.toclevel-6 { padding-left: 5em }
+		.toc-inner a.toclevel-7 { padding-left: 6em }
+		.toc-inner a.toclevel-8 { padding-left: 7em }
+		.toc-inner a.toclevel-9 { padding-left: 8em }
+	
+
+	.copyright {
+		font-style: italic;
+		padding-top: 20px;
+	}
+
+	</style>
+</head>
+
+<body>
+	
+	<div class="toc">
+		<div class="toc-inner">
+			<a href="#Newtopic68" class="toclevel-1">Выборка данных</a><a href="#SELECT" class="toclevel-2">SELECT - Инструкция</a><a href="#DISTINCTALL" class="toclevel-2">DISTINCT/ALL - Повторяющиеся строки</a><a href="#WHERE" class="toclevel-2">WHERE - Отбор строк.</a><a href="#BETWEEN" class="toclevel-2">BETWEEN  - Диапазон значений. </a><a href="#IN" class="toclevel-2">IN - Множество</a><a href="#LIKE" class="toclevel-2">LIKE – Шаблон</a><a href="#NULL" class="toclevel-2">NULL – Проверка на отсутствие значения</a><a href="#ANDORNOT" class="toclevel-2">AND, OR, NOT – Составные условия отбора</a><a href="#ORDERBY" class="toclevel-2">ORDER BY  – Сортировка результата запроса</a><a href="#Newtopic69" class="toclevel-1">Объединение таблиц</a><a href="#UNION" class="toclevel-2">UNION – Объединение результатов нескольких запросов.</a><a href="#ORDERBY1" class="toclevel-2">ORDER BY - Объединение и сортировка</a><a href="#Newtopic70" class="toclevel-2">Вложенные объединения</a><a href="#Newtopic71" class="toclevel-1">Соединения (Многотабличные запросы)</a><a href="#Newtopic72" class="toclevel-2">Простое соединение двух таблиц</a><a href="#JOIN" class="toclevel-2">JOIN — Внешнее соединение</a><a href="#INNERJOIN" class="toclevel-2">INNER JOIN — соединение по равенству</a><a href="#NATURALJOIN" class="toclevel-2">NATURAL JOIN — естественное соединение</a><a href="#USING" class="toclevel-2">USING  — связанные столбцы</a><a href="#AS" class="toclevel-2">AS  — Псевдонимы таблиц</a><a href="#FULL" class="toclevel-2">FULL  — Полное соединение</a><a href="#LEFT" class="toclevel-2">LEFT  — Левое соединение</a><a href="#RIGHT" class="toclevel-2">RIGHT  — Правое соединение</a><a href="#CROSS" class="toclevel-2">CROSS  — Перекрёстные соединения</a><a href="#Newtopic73" class="toclevel-1">Итоговые запросы</a><a href="#SUM" class="toclevel-2">SUM  — Вычисляет сумму всех значений столбца</a><a href="#AVG" class="toclevel-2">AVG  — Среднее значение всех значений столбца</a><a href="#MIN" class="toclevel-2">MIN  — Меньшее значение в столбце</a><a href="#MAX" class="toclevel-2">MAX  — Большее значение в столбце</a><a href="#COUNT" class="toclevel-2">COUNT  — Подсчет количества значений в столбце</a><a href="#GROUPBY" class="toclevel-2">GROUP BY  — Получение промежуточных итогов результатов запроса</a><a href="#HAVING" class="toclevel-2">HAVING  — Условия отбора групп</a><a href="#Newtopic74" class="toclevel-1">Подзапросы и выражения с запросами</a><a href="#Newtopic75" class="toclevel-2">Подчинённые запросы</a><a href="#Newtopic76" class="toclevel-2">Внешние ссылки</a><a href="#Newtopic77" class="toclevel-2">Условия отбора в подзапросах</a><a href="#IN1" class="toclevel-2">IN - Проверка на принадлежность результатам подзапроса</a><a href="#EXISTS" class="toclevel-2">EXISTS - Проверка на существование</a><a href="#ANYALL" class="toclevel-2">ANY и ALL – Многократное сравнение</a><a href="#Newtopic78" class="toclevel-2">Вложенные подзапросы</a><a href="#HAVING1" class="toclevel-2">HAVING  — Условия отбора в подзапросе</a><a href="#Newtopic79" class="toclevel-1">Выражения</a><a href="#CAST" class="toclevel-2">CAST  — Преобразованием типов</a><a href="#CASE" class="toclevel-2">CASE  — Ограничение возможности принятия решения в выражении</a><a href="#NULLIFNULL" class="toclevel-2">NULLIF  — Вместо значение NULL назначается другое значение</a><a href="#COALESCENULL" class="toclevel-2">COALESCE  — Удаление тех данных значение которых NULL</a><a href="#Newtopic80" class="toclevel-1">Работа с данными</a><a href="#INSERT1" class="toclevel-2">INSERT  — Добавление данных в таблицу</a><a href="#DELETE1" class="toclevel-2">DELETE  — Удаление строки</a><a href="#UPDATE1" class="toclevel-2">UPDATE  — Обновление строки с данными</a><a href="#Newtopic81" class="toclevel-1">Целостность данных</a><a href="#RULE" class="toclevel-2">RULE  — Правило для столбца</a><a href="#CHECK" class="toclevel-2">CHECK  — Ограничение на значение столбца</a><a href="#DOMAIN" class="toclevel-2">DOMAIN  — Домены обобщают ограничения</a><a href="#UNIQUE" class="toclevel-2">UNIQUE  — Уникальность</a><a href="#Newtopic" class="toclevel-1">[Кратко]</a><a href="#SELECT1" class="toclevel-2">SELECT</a><a href="#INSERT" class="toclevel-2">INSERT</a><a href="#UPDATE" class="toclevel-2">UPDATE</a><a href="#DELETE" class="toclevel-2">DELETE</a><a href="#Newtopic1" class="toclevel-2">Получение итоговых результатов</a><a href="#Newtopic2" class="toclevel-2">Сортировка результата запроса</a><a href="#Newtopic3" class="toclevel-2">Многотабличные запросы</a><a href="#Newtopic4" class="toclevel-2">Объединение таблиц</a><a href="#Newtopic5" class="toclevel-2">Использование вложенных запросов</a><a href="#Newtopic6" class="toclevel-2">Работа с базой данных</a>	
+		</div>
+	</div>
+	
+
+    <div class="content">
+		<div class="content-inner">
+			<a name="Newtopic68"></a><h1>Выборка данных</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Create HTML Help, DOC, PDF and print manuals from 1 single source</a></p>
+<a name="SELECT"></a><h2>SELECT - Инструкция</h2>
+<p class="rvps2"><span class="rvts14">SELECT - </span><span class="rvts15">Инструкция</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps5"><span class="rvts18">SELECT ALL/DISTINCT</span><span class="rvts22"> </span><span class="rvts21">элементы</span><span class="rvts22">&nbsp;</span></p>
+<p class="rvps5"><span class="rvts18">FROM</span><span class="rvts22"> </span><span class="rvts21">таблицы</span></p>
+<p class="rvps5"><span class="rvts18">WHERE</span><span class="rvts22"> </span><span class="rvts21">условие отбора</span></p>
+<p class="rvps5"><span class="rvts18">GROUP</span><span class="rvts23"> BY</span><span class="rvts22"> </span><span class="rvts21">столбец для группирования</span></p>
+<p class="rvps5"><span class="rvts18">HAVING</span><span class="rvts22"> </span><span class="rvts21">условие отбора</span></p>
+<p class="rvps6"><span class="rvts20">ORDER BY</span><span class="rvts17"> </span><span class="rvts19">условие сортировки</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Выбрать все строки из таблицы</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> * </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Вычисляемые столбцы. (в столбцах можно производить вычисления.)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> (elem1 – elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Использование констант. (текстовая константа.)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps5"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, 'my text', elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+<a name="DISTINCTALL"></a><h2>DISTINCT/ALL - Повторяющиеся строки</h2>
+<p class="rvps2"><span class="rvts14">Повторяющиеся строки.</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">DISTINCT – удаляет повторяющиеся строки</span></p>
+<p class="rvps2"><span class="rvts24">ALL – оставляет повторяющиеся строки (по умолчанию)</span></p>
+<p class="rvps5"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT DISTINCT</span><span class="rvts17"> elem1, elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT ALL</span><span class="rvts17"> elem1, elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+<a name="WHERE"></a><h2>WHERE - Отбор строк.</h2>
+<p class="rvps2"><span class="rvts14">WHERE - Отбор строк. (условие отбора строк)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> (elem2 &gt; 100);</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> (elem2 = elem3);</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> (elem2 &lt; '2006-01-01');</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> (elem2 &lt; (elem3 * 2));</span></p>
+<p class="rvps2"><span class="rvts25"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+<a name="BETWEEN"></a><h2>BETWEEN  - Диапазон значений. </h2>
+<p class="rvps2"><span class="rvts14">BETWEEN &nbsp;- Диапазон значений. (проверка на принадлежность)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem_date&nbsp;</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">BETWEEN</span><span class="rvts17"> '2007-01-01' </span><span class="rvts16">AND</span><span class="rvts17"> '2007-12-31';</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2&nbsp;</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">NOT</span><span class="rvts17"> </span><span class="rvts16">BETWEEN</span><span class="rvts17"> 200.00 </span><span class="rvts16">AND</span><span class="rvts17"> 1000.00;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2&nbsp;</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">BETWEEN</span><span class="rvts17"> (elem3 * 2) </span><span class="rvts16">AND</span><span class="rvts17"> (elem3 * 4);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+<a name="IN"></a><h2>IN - Множество</h2>
+<p class="rvps2"><span class="rvts14">IN - Множество (проверка наличия во множестве)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">IN</span><span class="rvts17"> (10, 20, 30);</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">IN</span><span class="rvts17"> ('Moscow', 'London');</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem_date&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">IN</span><span class="rvts17"> ('2008-01-04', '2009-01-11');</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Web Help generator</a></p>
+<a name="LIKE"></a><h2>LIKE – Шаблон</h2>
+<p class="rvps2"><span class="rvts14">LIKE – Шаблон (проверка на соответствие шаблону)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2 </span><span class="rvts16">LIKE</span><span class="rvts17"> '%text%';</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2 </span><span class="rvts16">LIKE</span><span class="rvts17"> '$text%' </span><span class="rvts16">ESCAPE</span><span class="rvts17"> '$';</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
+<a name="NULL"></a><h2>NULL – Проверка на отсутствие значения</h2>
+<p class="rvps2"><span class="rvts14">NULL – Проверка на отсутствие значения</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2 </span><span class="rvts16">IS NULL</span><span class="rvts17">;</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2 </span><span class="rvts16">IS NOT NULL</span><span class="rvts17">;</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+<a name="ANDORNOT"></a><h2>AND, OR, NOT – Составные условия отбора</h2>
+<p class="rvps2"><span class="rvts14">AND, OR, NOT – Составные условия отбора</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> (elem2 </span><span class="rvts16">IN</span><span class="rvts17"> (10,20,30))&nbsp;</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">OR</span><span class="rvts17"> (elem3 </span><span class="rvts16">IS NULL</span><span class="rvts17"> </span><span class="rvts16">AND</span><span class="rvts17"> elem3 &gt; 100);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpauthoringsoftware.com">Benefits of a Help Authoring Tool</a></p>
+<a name="ORDERBY"></a><h2>ORDER BY  – Сортировка результата запроса</h2>
+<p class="rvps2"><span class="rvts14">ORDER BY &nbsp;– Сортировка результата запроса</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">ASC – сортировка по возрастанию (по умолчанию)</span></p>
+<p class="rvps2"><span class="rvts24">DESC – сортировать по убыванию</span></p>
+<p class="rvps2"><span class="rvts24"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">ORDER BY</span><span class="rvts17"> elem2 </span><span class="rvts16">DESC</span><span class="rvts17">;</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> (elem1 - elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">ORDER BY</span><span class="rvts17"> (elem1 - elem2) </span><span class="rvts16">DESC</span><span class="rvts17">;</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+<a name="Newtopic69"></a><h1>Объединение таблиц</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpauthoringsoftware.com">What is a Help Authoring tool?</a></p>
+<a name="UNION"></a><h2>UNION – Объединение результатов нескольких запросов.</h2>
+<p class="rvps2"><span class="rvts14">UNION – Объединение результатов нескольких запросов.&nbsp;</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14">(DISTINCT по умолчанию)</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1_1, elem1_2 FROM table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem1_2 &gt; 10</span></p>
+<p class="rvps2"><span class="rvts16">UNION</span><span class="rvts17"> </span><span class="rvts16">ALL</span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem2_1, elem2_2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2_2 &lt; 10</span></p>
+<p class="rvps8"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
+<a name="ORDERBY1"></a><h2>ORDER BY - Объединение и сортировка</h2>
+<p class="rvps2"><span class="rvts14">Объединение и сортировка</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1_1, elem1_2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem1_2 &gt; 10</span></p>
+<p class="rvps2"><span class="rvts16">UNION ALL</span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem2_1, elem2_2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2_2 &lt; 10</span></p>
+<p class="rvps2"><span class="rvts16">ORDER BY</span><span class="rvts17"> 1, 2;</span></p>
+<p class="rvps2"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+<a name="Newtopic70"></a><h2>Вложенные объединения</h2>
+<p class="rvps2"><span class="rvts14">Вложенные объединения</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> * </span><span class="rvts16">FROM</span><span class="rvts17"> table1&nbsp;</span></p>
+<p class="rvps2"><span class="rvts16">UNION</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> * </span><span class="rvts16">FROM</span><span class="rvts17"> table2&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">UNION</span><span class="rvts17">&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> * </span><span class="rvts16">FROM</span><span class="rvts17"> table3);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Produce online help for Qt applications</a></p>
+<a name="Newtopic71"></a><h1>Соединения (Многотабличные запросы)</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+<a name="Newtopic72"></a><h2>Простое соединение двух таблиц</h2>
+<p class="rvps9"><span class="rvts27">Простое соединение двух таблиц (предок-потомок)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT table1.elem1, table2.elem1 FROM table1, table2&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">WHERE (table1.elem2 = table2.elem2)</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">iPhone web sites made easy</a></p>
+<a name="JOIN"></a><h2>JOIN — Внешнее соединение</h2>
+<p class="rvps9"><span class="rvts27">JOIN — Внешнее соединение (без join соединение внутренее)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT table1.elem2 FROM table1&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">JOIN table2 ON table1.elem1 = table2.elem1&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28">WHERE table1.elem3 &gt; 100;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free EBook and documentation generator</a></p>
+<a name="INNERJOIN"></a><h2>INNER JOIN — соединение по равенству</h2>
+<p class="rvps9"><span class="rvts27">INNER JOIN — соединение по равенству</span></p>
+<p class="rvps10"><span class="rvts28">SELECT table1.elem2 FROM table1&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">INNER JOIN table2 ON table1.elem1 = table2.elem1&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28">WHERE table1.elem3 &gt; 100;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+<a name="NATURALJOIN"></a><h2>NATURAL JOIN — естественное соединение</h2>
+<p class="rvps9"><span class="rvts27">NATURAL JOIN — естественное соединение&nbsp;</span></p>
+<p class="rvps10"><span class="rvts27">(связанные столбцы имеют одни и те же имена в обоих таблицах)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT elem1, elem2 FROM table1 NATURAL JOIN table2;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+<a name="USING"></a><h2>USING  — связанные столбцы</h2>
+<p class="rvps9"><span class="rvts27">USING &nbsp;— связанные столбцы (можно явно указать связанные столбцы)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT elem2 FROM table1 JOIN table2</span></p>
+<p class="rvps10"><span class="rvts28">USING (table1.elem1, table2.elem1);</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Easy to use tool to create HTML Help files and Help web sites</a></p>
+<a name="AS"></a><h2>AS  — Псевдонимы таблиц</h2>
+<p class="rvps9"><span class="rvts27">AS &nbsp;— Псевдонимы таблиц</span></p>
+<p class="rvps10"><span class="rvts28">SELECT t1.elem2, t2.elem2&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">FROM table1 AS t1, table2 AS t2</span></p>
+<p class="rvps10"><span class="rvts28">WHERE &nbsp;t1.elem1 = t2.elem1;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+<a name="FULL"></a><h2>FULL  — Полное соединение</h2>
+<p class="rvps9"><span class="rvts27">FULL &nbsp;— Полное соединение (выводит все строки из обеих таблиц)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT * FROM table1&nbsp;</span></p>
+<p class="rvps10"><span class="rvts28"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts28">FULL OUTER JOIN table2</span></p>
+<p class="rvps10"><span class="rvts28">ON table1.elem2 = table2.elem2</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+<a name="LEFT"></a><h2>LEFT  — Левое соединение</h2>
+<p class="rvps9"><span class="rvts27">LEFT &nbsp;— Левое соединение&nbsp;</span></p>
+<p class="rvps10"><span class="rvts27">(все строки из левой таблицы, и связанные строки из правой таблицы)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT * FROM table1 LEFT OUTER JOIN table2</span></p>
+<p class="rvps10"><span class="rvts28">ON table1.elem1 = table2.elem1;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+<a name="RIGHT"></a><h2>RIGHT  — Правое соединение</h2>
+<p class="rvps9"><span class="rvts27">RIGHT &nbsp;— Правое соединение&nbsp;</span></p>
+<p class="rvps10"><span class="rvts27">(все строки из правой таблицы, и связанные строки из левой таблицы)</span></p>
+<p class="rvps10"><span class="rvts28">SELECT * FROM table1 RIGHT OUTER JOIN table2</span></p>
+<p class="rvps10"><span class="rvts28">ON table1.elem1 = table2.elem1;</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+<a name="CROSS"></a><h2>CROSS  — Перекрёстные соединения</h2>
+<p class="rvps9"><span class="rvts27">CROSS &nbsp;— Перекрёстные соединения</span></p>
+<p class="rvps10"><span class="rvts28">SELECT * FROM table1 CROSS JOIN table2</span></p>
+<p class="rvps10"><span class="rvts29"></span><span class="rvts35"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Easily create iPhone documentation</a></p>
+<a name="Newtopic73"></a><h1>Итоговые запросы</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+<a name="SUM"></a><h2>SUM  — Вычисляет сумму всех значений столбца</h2>
+<p class="rvps2"><span class="rvts14">SUM &nbsp;— Вычисляет сумму всех значений столбца</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">SUM</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+<a name="AVG"></a><h2>AVG  — Среднее значение всех значений столбца</h2>
+<p class="rvps2"><span class="rvts14">AVG &nbsp;— Среднее значение всех значений столбца</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">AVG</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Web Help sites</a></p>
+<a name="MIN"></a><h2>MIN  — Меньшее значение в столбце</h2>
+<p class="rvps2"><span class="rvts14">MIN &nbsp;— Меньшее значение в столбце</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">MIN</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Free iPhone documentation generator</a></p>
+<a name="MAX"></a><h2>MAX  — Большее значение в столбце</h2>
+<p class="rvps2"><span class="rvts14">MAX &nbsp;— Большее значение в столбце</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">MAX</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+<a name="COUNT"></a><h2>COUNT  — Подсчет количества значений в столбце</h2>
+<p class="rvps2"><span class="rvts14">COUNT &nbsp;— Подсчет количества значений в столбце</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">COUNT</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Подсчет количества строк в таблице</span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">COUNT</span><span class="rvts17">(*) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Удаление повторяющихся строк</span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">COUNT</span><span class="rvts17">(</span><span class="rvts16">DISTINCT</span><span class="rvts17"> elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+<a name="GROUPBY"></a><h2>GROUP BY  — Получение промежуточных итогов результатов запроса</h2>
+<p class="rvps2"><span class="rvts14">GROUP BY &nbsp;— Получение промежуточных итогов результатов запроса</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, </span><span class="rvts16">AVG</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">GROUP BY</span><span class="rvts17"> elem1</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Несколько столбцов группировки</span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, elem2, </span><span class="rvts16">AVG</span><span class="rvts17">(elem3) </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">GROUP BY</span><span class="rvts17"> elem1, elem2</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create CHM Help documents</a></p>
+<a name="HAVING"></a><h2>HAVING  — Условия отбора групп</h2>
+<p class="rvps2"><span class="rvts14">HAVING &nbsp;— Условия отбора групп</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, </span><span class="rvts16">AVG</span><span class="rvts17">(elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">GROUP BY</span><span class="rvts17"> elem1</span></p>
+<p class="rvps2"><span class="rvts16">HAVING</span><span class="rvts17"> </span><span class="rvts16">SUM</span><span class="rvts17">(elem2) &gt; 3000.00;</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+<a name="Newtopic74"></a><h1>Подзапросы и выражения с запросами</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Qt Help documentation generator</a></p>
+<a name="Newtopic75"></a><h2>Подчинённые запросы</h2>
+<p class="rvps2"><span class="rvts14">Подчинённые запросы выступают в качестве части предложения WHERE или HAVING</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1, table1.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1&nbsp;</span></p>
+<p class="rvps2"><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 &gt; (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">SUM</span><span class="rvts17">(table2.elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 = 10</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts24">Правила:</span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;">
+ <li style="margin-left: 0px" class="rvps11"><span class="rvts24">В большинстве случаев результаты подзапросов всегда состоят из одного столбца. (в запросе всегда указывается только один элемент списка выбора)</span></li>
+</ol>
+<p class="rvps11"><span class="rvts24"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;">
+ <li value="2" style="margin-left: 0px" class="rvps11"><span class="rvts24">ORDER BY используется в подзапросах крайне редко, его использование отрицательно сказывается на производительности.</span></li>
+</ol>
+<p class="rvps11"><span class="rvts24"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside;">
+ <li value="3" style="margin-left: 0px" class="rvps11"><span class="rvts24">Имена столбцов в подзапросе могут ссылаться на столбцы таблиц главного запроса. (внешние ссылки)</span></li>
+</ol>
+<p class="rvps2"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+<a name="Newtopic76"></a><h2>Внешние ссылки</h2>
+<p class="rvps2"><span class="rvts14">Внешние ссылки (коррелированный запрос)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Часто в теле подзапроса требуется сослаться на значение столбца в текущей строке главного запроса.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1, table1.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps2"><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 &gt; (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> </span><span class="rvts16">SUM</span><span class="rvts17">(table2.elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table2&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 = table1.elem1</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EPub generator</a></p>
+<a name="Newtopic77"></a><h2>Условия отбора в подзапросах</h2>
+<p class="rvps2"><span class="rvts14">Условия отбора в подзапросах (сравнение с результатом подзапроса)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Значение выражения сравнивают с одним значением которое возвращает подзапрос.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 &gt; (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 = 10</span></p>
+<p class="rvps2"><span class="rvts17">);</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create EBooks</a></p>
+<a name="IN1"></a><h2>IN - Проверка на принадлежность результатам подзапроса</h2>
+<p class="rvps2"><span class="rvts14">IN - Проверка на принадлежность результатам подзапроса</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Значение выражения проверяется на равенство одному из множества значений, которые возвращаются подзапросом.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 </span><span class="rvts16">IN</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> &nbsp;table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 &lt; 100</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts22"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create HTML Help documents</a></p>
+<a name="EXISTS"></a><h2>EXISTS - Проверка на существование</h2>
+<p class="rvps2"><span class="rvts14">EXISTS - Проверка на существование</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Проверяется наличие строки в таблице результатов подзапроса.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE EXISTS</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> &nbsp;table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 &gt; 500</span></p>
+<p class="rvps2"><span class="rvts17">);</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+<a name="ANYALL"></a><h2>ANY и ALL – Многократное сравнение</h2>
+<p class="rvps2"><span class="rvts14">ANY и ALL – Многократное сравнение</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts24">Значение выражения сравнивается с каждым из множеств значений, которые возвращаются подзапросом.</span></p>
+<p class="rvps2"><span class="rvts24">ANY – есть ли хоть одно совпадение из столбцов данных</span></p>
+<p class="rvps2"><span class="rvts24">ALL – все значения должны совпадать с столбцом данных.</span></p>
+<p class="rvps2"><span class="rvts13"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem1 &lt; </span><span class="rvts16">ANY</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> &nbsp;table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem1 &lt; 10</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+<a name="Newtopic78"></a><h2>Вложенные подзапросы</h2>
+<p class="rvps2"><span class="rvts14">Вложенные подзапросы</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 </span><span class="rvts16">IN</span><span class="rvts17"> (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem2 </span><span class="rvts16">IN</span><span class="rvts17"> (</span></p>
+<p class="rvps11"><span class="rvts16">SELECT</span><span class="rvts17"> table3.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table3 </span><span class="rvts16">WHERE</span><span class="rvts17"> table3.elem2 &lt; 10</span></p>
+<p class="rvps7"><span class="rvts17">)</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+<a name="HAVING1"></a><h2>HAVING  — Условия отбора в подзапросе</h2>
+<p class="rvps2"><span class="rvts14">HAVING &nbsp;— Условия отбора в подзапросе</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1, </span><span class="rvts16">AVG</span><span class="rvts17">(table2.elem1) </span><span class="rvts16">FROM</span><span class="rvts17"> table1, table2</span></p>
+<p class="rvps2"><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 = table2.elem2</span></p>
+<p class="rvps2"><span class="rvts16">GROUP BY</span><span class="rvts17"> table1.elem1</span></p>
+<p class="rvps2"><span class="rvts16">HAVING AVG</span><span class="rvts17">(table2.elem1) &gt; (</span></p>
+<p class="rvps7"><span class="rvts16">SELECT AVG</span><span class="rvts17">(table3.elem2) </span><span class="rvts16">FROM</span><span class="rvts17"> table3</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts22"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Help documents</a></p>
+<a name="Newtopic79"></a><h1>Выражения</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpauthoringsoftware.com">News and information about help authoring tools and software</a></p>
+<a name="CAST"></a><h2>CAST  — Преобразованием типов</h2>
+<p class="rvps2"><span class="rvts14">CAST &nbsp;— Преобразованием типов</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1</span></p>
+<p class="rvps7"><span class="rvts16">CAST</span><span class="rvts17">(elem2 </span><span class="rvts16">AS CHAR</span><span class="rvts17">), </span><span class="rvts16">CAST</span><span class="rvts17">(elem3 </span><span class="rvts16">AS CHAR</span><span class="rvts17">)</span></p>
+<p class="rvps2"><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem2 = </span><span class="rvts16">CAST</span><span class="rvts17">('2017' </span><span class="rvts16">AS INTEGER</span><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Full-featured multi-format Help generator</a></p>
+<a name="CASE"></a><h2>CASE  — Ограничение возможности принятия решения в выражении</h2>
+<p class="rvps2"><span class="rvts14">CASE &nbsp;— Ограничение возможности принятия решения в выражении (аналог условия)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1,</span></p>
+<p class="rvps7"><span class="rvts16">CASE</span><span class="rvts17">&nbsp;</span></p>
+<p class="rvps11"><span class="rvts16">WHEN</span><span class="rvts17"> elem2 &gt; 1000 </span><span class="rvts16">THEN</span><span class="rvts17"> 'A'</span></p>
+<p class="rvps11"><span class="rvts16">WHEN</span><span class="rvts17"> elem2 &gt; 5000 </span><span class="rvts16">THEN</span><span class="rvts17"> 'B'</span></p>
+<p class="rvps11"><span class="rvts16">ELSE</span><span class="rvts17"> 'C'</span></p>
+<p class="rvps7"><span class="rvts16">END AS</span><span class="rvts17"> elem2_case</span></p>
+<p class="rvps2"><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> table1.elem1, table2.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table1, table2</span></p>
+<p class="rvps2"><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem2 =&nbsp;</span></p>
+<p class="rvps2"><span class="rvts16">CASE</span></p>
+<p class="rvps7"><span class="rvts16">WHEN</span><span class="rvts17"> (table2.elem2 </span><span class="rvts16">IS NOT NULL</span><span class="rvts17">) </span><span class="rvts16">THEN</span><span class="rvts17"> table.elem2</span></p>
+<p class="rvps2"><span class="rvts16">END</span></p>
+<p class="rvps2"><span class="rvts22"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, elem2,</span></p>
+<p class="rvps7"><span class="rvts16">CASE</span><span class="rvts17"> elem3</span></p>
+<p class="rvps11"><span class="rvts16">WHEN</span><span class="rvts17"> 11 </span><span class="rvts16">THEN</span><span class="rvts17"> 'A'</span></p>
+<p class="rvps11"><span class="rvts16">WHEN</span><span class="rvts17"> 12 </span><span class="rvts16">THEN</span><span class="rvts17"> 'B'</span></p>
+<p class="rvps7"><span class="rvts16">END AS</span><span class="rvts17"> elem3_case</span></p>
+<p class="rvps2"><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+<a name="NULLIFNULL"></a><h2>NULLIF  — Вместо значение NULL назначается другое значение</h2>
+<p class="rvps2"><span class="rvts14">NULLIF &nbsp;— Вместо значение NULL назначается другое значение</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem3 = </span><span class="rvts16">NULLIF</span><span class="rvts17">(elem4, 0);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Easy EPub and documentation editor</a></p>
+<a name="COALESCENULL"></a><h2>COALESCE  — Удаление тех данных значение которых NULL</h2>
+<p class="rvps2"><span class="rvts14">COALESCE &nbsp;— Удаление тех данных значение которых NULL</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">SELECT</span><span class="rvts17"> elem1, </span><span class="rvts16">COALESCE</span><span class="rvts17">(elem2, elem3, 0.00) </span><span class="rvts16">FROM</span><span class="rvts17"> table1;</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Generate Kindle eBooks with ease</a></p>
+<a name="Newtopic80"></a><h1>Работа с данными</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/iphone-website-generation">Create iPhone web-based documentation</a></p>
+<a name="INSERT1"></a><h2>INSERT  — Добавление данных в таблицу</h2>
+<p class="rvps2"><span class="rvts14">INSERT &nbsp;— Добавление данных в таблицу (добавляем одну строку записи)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">INSERT</span><span class="rvts17"> </span><span class="rvts16">INTO</span><span class="rvts17"> table1 (elem1, elem2, elem3)&nbsp;</span></p>
+<p class="rvps2"><span class="rvts16">VALUE</span><span class="rvts17"> ('text', 150.00, '2017-01-01');</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Добавление сразу нескольких строк одним запросом</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">INSERT</span><span class="rvts17"> </span><span class="rvts16">INTO</span><span class="rvts17"> table1 (elem1, elem2, elem3)&nbsp;</span></p>
+<p class="rvps2"><span class="rvts16">VALUE</span><span class="rvts17"> (10, 10, 10), (20, 20, 20), (30, 30, 30);</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Многострочная инструкция обеспечивает извлечение строк из одной таблицы и добавление из в другую таблицу</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">INSERT</span><span class="rvts17"> </span><span class="rvts16">INTO</span><span class="rvts17"> table1 (table1.elem1, table.1.elem2)&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem1, table2.elem2 </span><span class="rvts16">FROM</span><span class="rvts17"> table2&nbsp;</span></p>
+<p class="rvps7"><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem3_date &lt; '2008-01-01';</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Produce Kindle eBooks easily</a></p>
+<a name="DELETE1"></a><h2>DELETE  — Удаление строки</h2>
+<p class="rvps2"><span class="rvts14">DELETE &nbsp;— Удаление строки</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">DELETE</span><span class="rvts17"> </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem1 = 10;&nbsp;</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Удалить все строки в таблице</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">DELETE</span><span class="rvts17"> </span><span class="rvts16">FROM</span><span class="rvts17"> table1</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Использовать подзапрос в удалении</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">DELETE</span><span class="rvts17"> </span><span class="rvts16">FROM</span><span class="rvts17"> table1 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem1 = (</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem2 = 10</span></p>
+<p class="rvps2"><span class="rvts17">);</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/help-authoring-tool">Single source CHM, PDF, DOC and HTML Help creation</a></p>
+<a name="UPDATE1"></a><h2>UPDATE  — Обновление строки с данными</h2>
+<p class="rvps2"><span class="rvts14">UPDATE &nbsp;— Обновление строки с данными</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 </span><span class="rvts16">SET</span><span class="rvts17"> elem2 = 'text', elem3 = 150.00 </span><span class="rvts16">WHERE</span><span class="rvts17"> elem1 = 10;&nbsp;</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Обновление всех строк</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 </span><span class="rvts16">SET</span><span class="rvts17"> elem2 = 'text';&nbsp;</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">Использование подзапроса в обновлении</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">UPDATE</span><span class="rvts17"> table1 SET table1.elem2 = 2000 </span><span class="rvts16">WHERE</span><span class="rvts17"> table1.elem1 </span><span class="rvts16">IN</span><span class="rvts17"> (</span></p>
+<p class="rvps2"><span class="rvts17"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts16">SELECT</span><span class="rvts17"> table2.elem1 </span><span class="rvts16">FROM</span><span class="rvts17"> table2 </span><span class="rvts16">WHERE</span><span class="rvts17"> table2.elem2 &gt; 100</span></p>
+<p class="rvps2"><span class="rvts17">);</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Qt Help documentation made easy</a></p>
+<a name="Newtopic81"></a><h1>Целостность данных</h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+<a name="RULE"></a><h2>RULE  — Правило для столбца</h2>
+<p class="rvps2"><span class="rvts14">RULE &nbsp;— Правило для столбца (условие на значение)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">CREATE</span><span class="rvts17"> </span><span class="rvts16">RULE</span><span class="rvts17"> elem2 </span><span class="rvts16">AS @VALUE</span><span class="rvts17"> </span><span class="rvts16">BETWEEN</span><span class="rvts17"> 0.00 </span><span class="rvts16">AND</span><span class="rvts17"> 5000.00</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+<a name="CHECK"></a><h2>CHECK  — Ограничение на значение столбца</h2>
+<p class="rvps2"><span class="rvts14">CHECK &nbsp;— Ограничение на значение столбца</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">CREATE</span><span class="rvts17"> </span><span class="rvts16">TABLE</span><span class="rvts17"> table1 (</span></p>
+<p class="rvps7"><span class="rvts17">elem1 </span><span class="rvts16">INTEGER NOT NULL CHECK</span><span class="rvts17">(elem1 </span><span class="rvts16">BETWEEN</span><span class="rvts17"> 101 </span><span class="rvts16">AND</span><span class="rvts17"> 199),</span></p>
+<p class="rvps7"><span class="rvts17">elem2 </span><span class="rvts16">INTEGER CHECK</span><span class="rvts17">(elem2 &gt;= 1000),</span></p>
+<p class="rvps7"><span class="rvts17">elem3 </span><span class="rvts16">DECIMAL</span><span class="rvts17">(9,2) </span><span class="rvts16">CHECK</span><span class="rvts17">(elem3 &gt;= 10.5),</span></p>
+<p class="rvps7"><span class="rvts17">...</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-help-files-for-the-qt-help-framework">Create cross-platform Qt Help files</a></p>
+<a name="DOMAIN"></a><h2>DOMAIN  — Домены обобщают ограничения</h2>
+<p class="rvps2"><span class="rvts14">DOMAIN &nbsp;— Домены обобщают ограничения, и позволяют применять одно и тоже</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts14">ограничение для различных столбцов</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">CREATE</span><span class="rvts17"> </span><span class="rvts16">DOMAIN</span><span class="rvts17"> VALID_MY_ELEM </span><span class="rvts16">INTEGER</span><span class="rvts17"> </span><span class="rvts16">CHECK</span><span class="rvts17">(</span><span class="rvts16">VALUE</span><span class="rvts17"> </span><span class="rvts16">BETWEEN</span><span class="rvts17"> 1 </span><span class="rvts16">AND</span><span class="rvts17"> 99);</span></p>
+<p class="rvps2"><span class="rvts30"><br/></span></p>
+<p class="rvps2"><span class="rvts14">после создания домена его можно использовать как тип для колонки</span></p>
+<p class="rvps2"><span class="rvts14"><br/></span></p>
+<p class="rvps2"><span class="rvts16">CREATE TABLE</span><span class="rvts17"> table1 (elem1 VALID_MY_ELEM, ...</span></p>
+<p class="rvps5"><span class="rvts13"></span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free Web Help generator</a></p>
+<a name="UNIQUE"></a><h2>UNIQUE  — Уникальность</h2>
+<p class="rvps2"><span class="rvts14">UNIQUE &nbsp;— Уникальность</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts26"><br/></span></p>
+<p class="rvps2"><span class="rvts16">CREATE</span><span class="rvts17"> </span><span class="rvts16">TABLE</span><span class="rvts17"> table1 (</span></p>
+<p class="rvps7"><span class="rvts17">elem1 </span><span class="rvts16">VARCHAR</span><span class="rvts17">(25),</span></p>
+<p class="rvps7"><span class="rvts17">elem2 </span><span class="rvts16">VARCHAR</span><span class="rvts17">(50),</span></p>
+<p class="rvps2"><span class="rvts16">UNIQUE</span><span class="rvts17">(elem1, elem2));</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Generate EPub eBooks with ease</a></p>
+<a name="Newtopic"></a><h1>[Кратко]</h1>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Free EPub producer</a></p>
+<a name="SELECT1"></a><h2>SELECT</h2>
+<p class="rvps12"><span class="rvts31">Выбрать информацию всех полей из таблицы</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Выбрать информацию указанных полей из таблицы</span></p>
+<p class="rvps12"><span class="rvts32">SELECT Поле1, Поле2, ПолеN FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">DISTINCT - устраняет повторяющиеся значения.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT DISTINCT Поле1, Поле2 FORM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">ALL - покажет все записи даже те которые повторяются</span></p>
+<p class="rvps12"><span class="rvts32">SELECT ALL Поле1, Поле2 FORM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Отбор строк по условию</span></p>
+<p class="rvps12"><span class="rvts32">SELECT Поле1, Поле2 FROM ИмяТаблицы WHERE (Поле1 = Значение)</span></p>
+<p class="rvps12"><span class="rvts33">Реляционные операторы</span></p>
+<p class="rvps12"><span class="rvts33">= &nbsp; &nbsp;равный чему-либо;</span></p>
+<p class="rvps12"><span class="rvts33">&gt; &nbsp; &nbsp;больше чем;</span></p>
+<p class="rvps12"><span class="rvts33">&lt; &nbsp; &nbsp;меньше чем;</span></p>
+<p class="rvps12"><span class="rvts33">&gt;= &nbsp; &nbsp;больше чем или равно;</span></p>
+<p class="rvps12"><span class="rvts33">&lt;= &nbsp; &nbsp;меньше чем или равно;</span></p>
+<p class="rvps12"><span class="rvts33">&lt;&gt; &nbsp; &nbsp;не равно;</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (text = 'Значение')</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (num = 100)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (num &gt; 100)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (num &lt; 100)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (num &gt;= 100)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (num &lt;= 100)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (myDate = 05/12/2012)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Стандартный булевый оператор &nbsp;AND(И).</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE ( Поле1 = 100 AND Поле2 = 'Значение' )</span></p>
+<p class="rvps12"><span class="rvts31">Стандартный булевый оператор OR (ИЛИ)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE( Поле1 = 100 OR Поле2 = 'Значение' )</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Стандартный булевый оператор NOT (НЕ) отрецание.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT( Поле1 = 100 AND Поле2 = 'Значение' )</span></p>
+<p class="rvps12"><span class="rvts31">Отбор значений в которые не входят указанные значения</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT IN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле IN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT BETWEEN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле BETWEEN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT LIKE ('Знач%')</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле LIKE ('%нач%')</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT ИмяПоле IS NULL</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле NOT NULL)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE ИмяПоле NOT IN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор IN определяет набор значений с помощью списка.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле IN ('Значение1', 'Значение2')</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле IN (100, 200)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле IN (17.00, 25.50)</span></p>
+<p class="rvps12"><span class="rvts31">Отбор значений в которые не входят указанные значения</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT IN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле IN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор BETWEEN определяет диапазон значений</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле BETWEEN 3000 AND 5000)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле BETWEEN 'к' AND 'с')</span></p>
+<p class="rvps12"><span class="rvts31">Отбор значений которые на входят в диапазон</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT BETWEEN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле BETWEEN (2000, 2001)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор LIKE ищед подстроки (применяется только к полям типа CHAR)</span></p>
+<p class="rvps12"><span class="rvts31">_ &nbsp; &nbsp;Символ подчёркивания заменяет любой одиночный символ</span></p>
+<p class="rvps12"><span class="rvts31">% &nbsp; &nbsp;Знак процента заменяет последовательность любого числа символом.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле LIKE 'Знач%')</span></p>
+<p class="rvps12"><span class="rvts31">Отбор значений которые не соответствуют значению условия</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE Поле NOT LIKE ('Знач%')</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT Поле LIKE ('%нач%')</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор IS различает неверное и неизвестное значение. (ключевое слово NULL)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле IS NULL)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE NOT ИмяПоле IS NULL</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ИмяПоле NOT NULL)</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE ИмяПоле NOT IN (2000, 2001)</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+<a name="INSERT"></a><h2>INSERT</h2>
+<p class="rvps12"><span class="rvts34">Добавление новой записи в таблицу</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">INSERT INTO ИмяТаблицы (Поле1, ПолеN) VALUES (Значение, Значение)</span></p>
+<p class="rvps12"><span class="rvts32">INSERT INTO ИмяТаблицы (Поле1, ПолеN) VALUES (1500, 'Текст')</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Easily create Qt Help files</a></p>
+<a name="UPDATE"></a><h2>UPDATE</h2>
+<p class="rvps12"><span class="rvts34">Внесение изменений в запись таблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">UPDATE ИмяТаблицы SET Поле1 = Значение, Поле2 = Значение</span></p>
+<p class="rvps12"><span class="rvts32">WHERE ПолеID = Значение</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free EPub and documentation generator</a></p>
+<a name="DELETE"></a><h2>DELETE</h2>
+<p class="rvps12"><span class="rvts34">Удалить запись в таблице</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">DELETE * FROM ИмяТаблицы WHERE ПолеИдентификатор = Значение</span></p>
+<p class="rvps12"><span class="rvts32">DELETE * FROM ИмяТаблицы WHERE id = 13</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Write eBooks for the Kindle</a></p>
+<a name="Newtopic1"></a><h2>Получение итоговых результатов</h2>
+<p class="rvps12"><span class="rvts34">Получение итоговых результатов</span></p>
+<p class="rvps12"><span class="rvts31"><br/></span></p>
+<p class="rvps12"><span class="rvts33">COUNT - Производит подсчет количества строк или NULL значений полей, которые выбрал запрос.</span></p>
+<p class="rvps12"><span class="rvts33">SUM - рассчитывает арифметическую сумму всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts33">AVG - производит усреднение всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts33">MAX - находит и возвращает наибольшее из всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts33">MIN - находит и возвращает наименьшее из всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">COUNT - Производит подсчет количества строк или NULL значений полей, которые выбрал запрос.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT COUNT (*) FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">SELECT COUNT (DISTINCT ИмяПоля) FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">SELECT COUNT (ALL ИмяПоля) FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts31"><br/></span></p>
+<p class="rvps12"><span class="rvts31">MAX - находит и возвращает наибольшее из всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT MAX (ИмяПоля * 2) FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">MIN - находит и возвращает наименьшее из всех выбранных значений данного поля.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT MIN (ИмяПоля) FROM ИмяТаблицы GROUP BY ИмяПоля</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор GROUP BY - позволяет групировать результат запроса.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы GROUP BY Поля1, Поле2</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы WHERE (ПолеDate = 10/06/2012) GROUP BY ИмяПоля</span></p>
+<p class="rvps12"><span class="rvts31"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор HAVING отбирает все значения входящие в условие</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы GROUP BY ИмяПоля HAVING MIN (ИмяПоля)&lt; Значение</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы GROUP BY Num HAVING MIN (Num)&lt; 5</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/create-epub-ebooks">Full-featured EBook editor</a></p>
+<a name="Newtopic2"></a><h2>Сортировка результата запроса</h2>
+<p class="rvps12"><span class="rvts34">Сортировка результата запроса.</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33">ASC &nbsp; &nbsp;- сортирует по возрастанию</span></p>
+<p class="rvps12"><span class="rvts33">DESC &nbsp; &nbsp;- сортирует по убыванию</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Можно указать значение по кторому нужно сортировать прямо в запросе.</span></p>
+<p class="rvps12"><span class="rvts33">SELECT ИмяПоля1, ИмяПоля2, 'Значение' FROM ИмяТаблицы GROUP BY ИмяПоля.</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор ASC сортирует по возростанию.</span></p>
+<p class="rvps12"><span class="rvts31">Оператор ORDER BY позволяет сортировать вывод запроса согласно значениям.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы ORDER BY ИмяПоля ASC</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор ASC сортирует по убыванию.</span></p>
+<p class="rvps12"><span class="rvts31">Оператор ORDER BY позволяет сортировать вывод запроса согласно значениям.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы ORDER BY ИмяПоля ASC</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор UNION объединяет вывод двух и более SQL запросов</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы UNION SELECT * FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE ИмяПоля BETWEEN 'к' AND 'с'</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;UNION</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;SELECT * FROM ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp; &nbsp; &nbsp;WHERE ИмяПоля BETWEEN 'к' AND 'с'</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+<a name="Newtopic3"></a><h2>Многотабличные запросы</h2>
+<p class="rvps12"><span class="rvts34">Многотабличные запросы.</span></p>
+<p class="rvps12"><span class="rvts31"><br/></span></p>
+<p class="rvps12"><span class="rvts31">При обращении можно указать несколько таблиц, а к полям обращаться через точку.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле &lt; Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;AND Таблица1.Поле BETWEEN 'к' AND 'с'</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Full-featured Documentation generator</a></p>
+<a name="Newtopic4"></a><h2>Объединение таблиц</h2>
+<p class="rvps12"><span class="rvts34">Объединение таблиц.</span></p>
+<p class="rvps12"><span class="rvts34"><br/></span></p>
+<p class="rvps12"><span class="rvts33">Объединение вместе двух покий одиночной таюлицы.</span></p>
+<p class="rvps12"><span class="rvts33">Чтобы ссылаться к столбцам внутри запроса, необходимо иметь два различных имени для этой таблицы.</span></p>
+<p class="rvps12"><span class="rvts33">Это можно сделать с помощью определения временных имён, называемых "псевдонимами".</span></p>
+<p class="rvps12"><span class="rvts33">Объединение одной таблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Псевдоним1.Поле, Псевдоним2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM ИмяТаблицы Псевдоним1,</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp; &nbsp; &nbsp;ИмяТаблицы Псевдоним2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Псевдоним1.Поле = Псевдоним2.Поле</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33">ИмяТаблицы - это одна и та же таблица.</span></p>
+<p class="rvps12"><span class="rvts33">-----------------------------------------------------------------</span></p>
+<p class="rvps12"><span class="rvts31">Объединение разных таблиц</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле = Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Внешнее объединение (иногда внутреннее объединение)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле *= Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32"><br/></span></p>
+<p class="rvps12"><span class="rvts32">SELECT Таблица1.Поле, Таблица2.Поле</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;FROM Таблица1, Таблица2</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;WHERE Таблица1.Поле *=* Таблица2.Поле</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Easy CHM and documentation editor</a></p>
+<a name="Newtopic5"></a><h2>Использование вложенных запросов</h2>
+<p class="rvps12"><span class="rvts34">Использование вложенных запросов.</span></p>
+<p class="rvps12"><span class="rvts34"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Вложенный запрос вывода значений двух различных таблиц.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM Таблица1</span></p>
+<p class="rvps12"><span class="rvts32">WHERE Поле =</span></p>
+<p class="rvps12"><span class="rvts32">&nbsp; &nbsp;(SELECT Поле1, Поле2 FROM Таблица2 WHERE Поле2 = 'Значение');</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">EXISTS - берет подзапрос как аргумент и оцениват его как истину, если он осуществляет любой вывод, или как ложный, если он не делает этого.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM Таблица WHERE Таблица.Поле = Значение</span></p>
+<p class="rvps12"><span class="rvts32">AND EXISTS (SELECT * FROM Таблица WHERE Таблица.Поле = Значение)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">SOME и ANY определяет вывод в подзапросе</span></p>
+<p class="rvps12"><span class="rvts33">Эти операторы берут все значения, выведенные подзапросом и оценимает их как верные, если любое из них равняется условию запроса.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM Таблица1 WHERE Поле = ANY</span></p>
+<p class="rvps12"><span class="rvts32">(SELECT Поле1 FROM Таблица2)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">ALL определяет вывод в подзапросе</span></p>
+<p class="rvps12"><span class="rvts33">Очень эффективно используется со значением неравенства &lt;&gt; &nbsp;возвращая все значения которые не равны условию.</span></p>
+<p class="rvps12"><span class="rvts32">SELECT * FROM Таблица WHERE Поле &lt;&gt; ALL</span></p>
+<p class="rvps12"><span class="rvts32">(SELECT Поле FROM Таблица WHERE ПолеДата = 10/06/2012)</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com">Free CHM Help documentation generator</a></p>
+<a name="Newtopic6"></a><h2>Работа с базой данных</h2>
+<p class="rvps12"><span class="rvts33">CREATE - создает базу данных</span></p>
+<p class="rvps12"><span class="rvts33">DROP - удалить базу данных</span></p>
+<p class="rvps12"><span class="rvts33">ALTER - изменить определение базы данных.</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Создать базу данных</span></p>
+<p class="rvps12"><span class="rvts32">CREATE DATABASE ИмяБазы ON Файл1, Файл2</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Создать таблицу</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы(Поле Тип Размер)</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL UNIQUE,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER,</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 CHAR (20),</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 CHAT (100),</span></p>
+<p class="rvps12"><span class="rvts32">ПолеДата DATE)</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL PRIMARY KEY,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER,</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 CHAR (20),</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 CHAT (100),</span></p>
+<p class="rvps12"><span class="rvts32">ПолеДата DATE)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Изменить таблицу</span></p>
+<p class="rvps12"><span class="rvts32">ALTER TABLE ИмяТаблицы ADD ИмяПоля Тип Размер</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Удаление таблицы</span></p>
+<p class="rvps12"><span class="rvts32">DROP TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Создать индекс</span></p>
+<p class="rvps12"><span class="rvts32">CREATE INDEX ИмяИндекса ON ИмяТаблицы (ИмяПоля)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Создание уникального (не содержащего повторов значений) индексов</span></p>
+<p class="rvps12"><span class="rvts32">CREATE UNIQUE INDEX ИмяИндекса ON ИмяТаблицы (ИмяПоля)</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL UNIQUE,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER,</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 CHAR (20),</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 CHAT (100))</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Установка первичного ключа</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL PRIMARY KEY,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER,</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 CHAR (20),</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 CHAT (100),</span></p>
+<p class="rvps12"><span class="rvts32">ПолеДата DATE)</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Оператор CHECK проверяет вводимые в таблицу значение до того, как оно будет сохранено.</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL PRIMARY KEY,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER CHECK (Поле1 =&lt; 25)</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 INTEGER NOT NULL,</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 INTEGER NOT NULL,</span></p>
+<p class="rvps12"><span class="rvts32">ПолеДата DATE,</span></p>
+<p class="rvps12"><span class="rvts32">UNIQUE (Поле2, Поле3))</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Установка значения по умолчанию</span></p>
+<p class="rvps12"><span class="rvts32">CREATE TABLE ИмяТаблицы</span></p>
+<p class="rvps12"><span class="rvts32">(ПолеID INTEGER NOT NULL PRIMARY KEY,</span></p>
+<p class="rvps12"><span class="rvts32">Поле1 INTEGER CHECK (Поле1 =&lt; 25) DEFAULT = 5</span></p>
+<p class="rvps12"><span class="rvts32">Поле2 INTEGER NOT NULL,</span></p>
+<p class="rvps12"><span class="rvts32">Поле3 INTEGER NOT NULL,</span></p>
+<p class="rvps12"><span class="rvts32">ПолеДата DATE,</span></p>
+<p class="rvps12"><span class="rvts32">UNIQUE (Поле2, Поле3))</span></p>
+<p class="rvps12"><span class="rvts33"><br/></span></p>
+<p class="rvps12"><span class="rvts31">Синоним - это альтернативное имя для таблицы.</span></p>
+<p class="rvps12"><span class="rvts32">CREATE SYNONYM ИмяТаблицы FOR Пользователь.ИмяТаблицы</span><span class="rvts6"></span></p>
+<p class="rvps4" style="clear: both;"><span class="rvts11">Created with the Personal Edition of HelpNDoc: </span><a class="rvts12" href="https://www.helpndoc.com/feature-tour">Full-featured Help generator</a></p>
+
+			
+			<p class="copyright">
+				Copyright &copy; 2018 by Somov Evgeniy. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+		
+</body>
+</html>
+
