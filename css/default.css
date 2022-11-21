@@ -91,6 +91,25 @@ iframe {
 	
 }
 
+#button-up {
+	position: fixed;
+	right: 2%;
+    bottom: 5%;
+}
+
+#button-up a {
+	display: block;
+	min-width: 57px;
+	max-width: 57px;
+	min-height: 59px;
+	max-height: 59px;
+	background:url("../img/totop1.png") no-repeat 0 0;
+}
+
+#button-up a:hover {
+	background:url("../img/totop2.png") no-repeat 0 0;
+}
+
 .main-wrapper {
     width: 75%;
     margin: 0 auto;
