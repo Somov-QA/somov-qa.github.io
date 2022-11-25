@@ -91,6 +91,13 @@ iframe {
 	
 }
 
+textarea {
+	display: inline-table;
+    height: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
 #button-up {
 	position: fixed;
 	right: 2%;
