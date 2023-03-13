@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<title>Somov Studio: GIT</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/default.css" />
+</head>
+<body>
+	<div class="content-left">
+		<h2>GIT команды</h2>
+		<div class="content-left">
+			<p>
+				<button id="button1">Клонировать репозиторий (Repository->Clone)</button>
+			</p>
+			<p>
+				<button id="button2">Состояния репозитория (Status)</button>
+			</p>
+
+			<hr>
+			
+			<p>
+				<button id="button3">Текущая ветка (Branches)</button>
+			</p>
+			<p>
+				<button id="button4">Добавление ветки (Add Branch)</button>
+			</p>
+			<p>
+				<button id="button5">Переключиться в ветку (Checkout)</button>
+			</p>
+			<p>
+				<button id="button6">Слияние веток (Merge)</button>
+			</p>
+			<p>
+				<button id="button7">Удаление ветки (Delete)</button>
+			</p>
+
+			<hr>
+
+			<p>
+				<button id="button8">Отменить все изменения всех файлов (Reset)</button>
+			</p>
+
+			<hr>
+
+			<p>
+				<button id="button9">Применить изменения всех файлов (Add)</button>
+			</p>
+			<p>
+				<button id="button10">Выполнить коммит изменений (Commit)</button>
+			</p>
+
+			<hr>
+
+			<p>
+				<button id="button11">Отправить коммит (Push)</button>
+			</p>
+			<p>
+				<button id="button12">Получить все изменения (Pull)</button>
+			</p>
+
+
+		</div>
+		<div class="content-right">
+			<p>
+				<textarea id="command">Нажмите на команду</textarea>
+			</p>
+		</div>
+	</div>
+
+	<div class="content-right">
+		<h3>Инструкция:</h3>
+		<p>
+			<b>1. Добавить репозиторий (Add or Create...)</b>
+			<br/>$ git clone https://...git
+			<br/>$ git remote add origin https://...git
+		</p>
+		<p>
+			<b>2. Состояния наблюдаемого репозитория</b>
+			<br/>$ git status
+		</p>
+		<p>
+			<b>3. Список всех веток (определить текущую ветку)</b>
+			<br/>git branch
+		</p>
+		<p>
+			<b>4. Добавление ветки (Add Branch...)</b>
+			<br/>$ git branch MyNewBranch
+		</p>
+		<p>
+			<b>5. Переключение между веток</b>
+			<br/>$ git checkout MyNewBranch
+			<br/>$ git checkout master
+		</p>
+		<p>
+			<b>6. Слитие ветки (Merge...)</b>
+			<br/>Сначала нужно переключиться в ветку master, 
+			<br/>а потом слить вертку MyNewBranch, в этом случае ветка MyNewBranch будет слита в ветку master
+			<br/>$ git merge MyNewBranch
+		</p>
+		<p>
+			<b>7. Удаление ветки (Delete...)</b>
+			<br/>$ git branch -d MyNewBranch
+		</p>
+		<p>
+			<b>8. Отменить изменение файла (Discard...)</b>
+			<br/>$ git checkout -- file.txt
+		</p>
+		<p>
+			<b>9. Отметить все изменения</b>
+			<br/>$ git reset --hard
+		</p>
+		<p>
+			<b>10. Добавить изменения</b>
+			<br/>$ git add -A
+		</p>	
+		<p>
+			<b>11. Закомитить правки (Commit...)</b>
+			<br/>$ git commit -m “текст комментария”
+		</p>
+		<p>
+			<b>12. Отправить комит (Push)</b>
+			<br/>$ git push origin MyNewBranch
+			<br/>$ git push origin master
+		</p>
+		<p>
+			<b>13. Получить комит (Pull)</b>
+			<br/>$ git pull origin
+		</p>
+	</div>
+
+	<script type="text/javascript" src="./src/script.js"></script>
+</body>
+</html>
