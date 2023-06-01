@@ -781,14 +781,15 @@ footer {
 
 #PoemsBody {
 	background-image: url(../img/poems/poems-body.jpg);
-	text-align: center;
+	text-align: left;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 12pt;
 	font-style: italic;
 	max-width: 423px;
 	min-width: 423px;
-	max-height: 500px;
 	min-height: 500px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 #PoemsFooter {
