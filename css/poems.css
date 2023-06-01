@@ -76,11 +76,13 @@ div {
 }
 
 a {
-  color: #8C9168;
+  color: #45544B;
   text-decoration: none;
+  font: 12pt serif;
   font-weight: bold;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  cursor: pointer;
 }
 
 a:hover {
@@ -769,6 +771,8 @@ footer {
 	background-image: url(../img/poems/poems-head.jpg);
 	padding-top: 35px;
 	text-align: center;
+	font: 16pt serif;
+  	font-weight: bold;
 	max-width: 423px;
 	min-width: 423px;
 	max-height: 134px;
@@ -778,14 +782,28 @@ footer {
 #PoemsBody {
 	background-image: url(../img/poems/poems-body.jpg);
 	text-align: center;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 12pt;
+	font-style: italic;
+	max-width: 423px;
+	min-width: 423px;
+	max-height: 500px;
+	min-height: 500px;
 }
 
 #PoemsFooter {
 	background-image: url(../img/poems/poems-footer.jpg);
 	padding-top: 50px;
 	text-align: center;
+	font: 10pt sans-serif;
 	max-width: 423px;
 	min-width: 423px;
 	max-height: 101px;
 	min-height: 101px;
+}
+
+.poems-list{
+	color: #89A5A6;
+	font: italic 12pt sans-serif;
+	font-size: small;
 }
