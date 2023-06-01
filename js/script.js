@@ -3,6 +3,7 @@
 	var header = document.getElementById('PoemsHead');
 	var body = document.getElementById('PoemsBody');
 	var footer = document.getElementById('PoemsFooter');
+
 	var poemF1 = document.getElementById('PoemF1');
 	var poemF2 = document.getElementById('PoemF2');
 	var poemF3 = document.getElementById('PoemF3');
@@ -14,6 +15,32 @@
 	var poemF9 = document.getElementById('PoemF9');
 	var poemF10 = document.getElementById('PoemF10');
 
+	var poemR1 = document.getElementById('PoemR1');
+	var poemR2 = document.getElementById('PoemR2');
+	var poemR3 = document.getElementById('PoemR3');
+	var poemR4 = document.getElementById('PoemR4');
+	var poemR5 = document.getElementById('PoemR5');
+	var poemR6 = document.getElementById('PoemR6');
+	var poemR7 = document.getElementById('PoemR7');
+	var poemR8 = document.getElementById('PoemR8');
+	var poemR9 = document.getElementById('PoemR9');
+	var poemR10 = document.getElementById('PoemR10');
+	var poemR11 = document.getElementById('PoemR11');
+	var poemR12 = document.getElementById('PoemR12');
+	var poemR13 = document.getElementById('PoemR13');
+	var poemR14 = document.getElementById('PoemR14');
+	var poemR15 = document.getElementById('PoemR15');
+	var poemR16 = document.getElementById('PoemR16');
+	var poemR17 = document.getElementById('PoemR17');
+	var poemR18 = document.getElementById('PoemR18');
+	var poemR19 = document.getElementById('PoemR19');
+	var poemR20 = document.getElementById('PoemR20');
+	var poemR21 = document.getElementById('PoemR21');
+	var poemR22 = document.getElementById('PoemR22');
+	var poemR23 = document.getElementById('PoemR23');
+	var poemR24 = document.getElementById('PoemR24');
+	var poemR25 = document.getElementById('PoemR25');
+
 /*
 	poem1.addEventListener('click', function(){
 		alert("OK");
@@ -23,6 +50,7 @@
 	});
 */
 
+	/* Фантастика */
 	poemF1.addEventListener('click', function(){
 		header.innerText = "Виртуальный мир";
 		body.innerText = "Остановилось время для меня\nИ я застрял в нем навсегда\nНо жизнь других я чувствую\nКак время их течёт я слушаю\nИ жизнь других со стороны\nВсегда идёт по одному пути.\nИ так легко, взять предсказать\nСобытий жизни чьих-то угадать\nНо не прочесть свою судьбу\nКак будто в пустоту смотрю.\nИ только виртуальный мир живой\nОн всех всегда зовёт с собой\nГотовый дать всем людям то\nЧего в реальности нам не дано.";
@@ -82,5 +110,54 @@
 		body.innerText = "Могу закрыть свои глаза,\nИ улететь под небеса,\nЗабыть о том что на земле,\nНикто не вспомнит обо мне.\n\nИ оторваться так легко,\nПодняться в небо высоко,\nИ больше, больше никогда,\nНе опускать свои глаза.\n\nИ я забуду обо всём,\nДа если б знали вы о том,\nКак надоела мне земля,\nИ я её покинул навсегда.";
 		footer.innerText = "(опубликовано 10.04.2017 08:44)";
 	});
+
+	/* Романтика */ 
+	poemR1.addEventListener('click', function(){
+		header.innerText = "Разочарование";
+		body.innerText = "Любил ли ты когда-нибудь?\nСебе признайся, честным будь.\nТебе любить природой не дано.\nИнстинктов чувство лишено.\n\nДа ты хотел любить как все,\nНо в жизни всё намного проще,\nВ ней нет любви и не жалей,\nЧто у людей, любовь как у зверей.\n\nИ пусть естественный отбор,\nЖизнь продолжает до тех пор,\nПока любви сплошной позор,\nНе остановит шар земной.";
+		footer.innerText = "(опубликовано 31.05.2023 10:16)";
+	});
+
+	poemR2.addEventListener('click', function(){
+		header.innerText = "Письмо";
+		body.innerText = "Я начинаю забывать\nМне больше не о чем писать,\nВ душе такая пустота\nИ прошлое забыто навсегда.\n\nКогда же всё произошло?\nУже не вспомню этого.\nРасстались мы уже давно,\nИ время навсегда ушло.\n\nПишу последнее письмо,\nХотя без адреса оно,\nЯ не отправил бы его,\nТы не узнаешь ничего.";
+		footer.innerText = "(опубликовано 14.11.2022 09:44)";
+	});
+
+	poemR3.addEventListener('click', function(){
+		header.innerText = "Жизнь бессмысленна";
+		body.innerText = "Пиши что можешь написать,\nО чем душе так хочется кричать,\nКакой же смысл всё молчать,\nИ жить как будто вечно спать.\nДовольно, хватит, жизнь пуста,\nИ не имела смысла никогда,\nДа безразличен мир земной,\nВсегда он был для всех чужой.\n\nБыть может сами виноваты,\nПорою даже в чем-то рады,\nНе знаем жизни мы иной,\nИ нет согласия с собой.\n\nИ сколько вёсла не гребли,\nМы по течению все плыли,\nО чем-то думали, грустили,\nИ жизнь вот так свою прожили.";
+		footer.innerText = "(опубликовано 30.07.2021 10:18)";
+	});
+
+	poemR4.addEventListener('click', function(){
+		header.innerText = "Совсем забыл тебя";
+		body.innerText = "Да я совсем забыл тебя,\nИ прошлое покинуло меня,\nВсё будто как рукой сняло,\nТакого счастья не было давно,\n\nЯ наконец-то осознал,\nИ связь с тобою разорвал,\nВедь между нами никогда,\nНичего и не было всегда.\n\nВся память выдумка моя,\nИ рядом не было тебя,\nК тебе не прикасался я,\nТвоя душа чужая для меня.\n\nНа фото общее смотрю,\nИ ничего не чувствую,\nТы стала для меня как все,\nИ где-то там стоишь в толпе.";
+		footer.innerText = "(опубликовано 26.02.2021 09:48)";
+	});
+
+	poemR5.addEventListener('click', function(){
+		header.innerText = "Конец игры";
+		body.innerText = "Мир тот что помнил ты вчера,\nТы не увидишь никогда,\nТого что было больше нет,\nПрими реальность вот совет.\n\nВы жили ради удовольствия,\nВам было все дозволена,\nИ вы совсем не знали мер,\nВы утомили этот мир.\n\nВам жизнь отпущена была,\nНа ветер пущена она,\nВы меркантильностью своей,\nУже достали мир - поверь.\n\nВаших желаний храм величен,\nНо мир увы не безграничен,\nИ рано, поздно, так и быть,\nЗа всё приходится платить.";
+		footer.innerText = "(опубликовано 06.04.2020 21:06)";
+	});
+
+	poemR6.addEventListener('click', function(){
+		header.innerText = "Пришел конец";
+		body.innerText = "Я заблудился, потерял себя,\nНе вижу будущего я,\nНет ничего, там впереди,\nЯ не хочу туда идти.\n\nЯ просто больше не могу,\nИ ничего я не хочу,\nЯ сплю, а вовсе не живу,\nОт этого сума схожу.\n\nКак надоел мне этот свет,\nВ нем каждый день покоя нет,\nЯ чувствую себя везде чужим,\nИ я всегда, всегда один.\n\nИ нету сил, жить продолжать,\nОстановиться и сказать:\n\"пришел конец\", и осознать,\nПора мир этот покидать.\n\nМне стало просто все равно,\nСудьбы что вовсе не дано,\nЧто одиночество одно,\nИ умер я уже давно.";
+		footer.innerText = "(опубликовано 03.02.2020 23:57)";
+	});
+
+	poemR7.addEventListener('click', function(){
+		header.innerText = "Просто ждал тебя";
+		body.innerText = "Я так устал искать себя,\nУстал всё время ждать тебя,\nИ слышать каждый раз ответ,\nИз тишины пустой совет.\n\nДа я смирился и поник,\nИ к боли я давно привык,\nВся жизнь моя зашла в тупик,\nКонец давно уже возник.\n\nВсё продолжая как-то жить,\nИ где-то там в душе любить,\nЯ лишь обманывал себя,\nИ просто ждал тебя.";
+		footer.innerText = "(опубликовано 03.02.2020 18:14)";
+	});
+
+
+
+
+
+
 
 }());
