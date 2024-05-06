@@ -16,10 +16,70 @@ body {
 .main-wrapper {
     width: 75%;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
+/* == МЕНЮ ===================================================  */
+
+.menu{
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 50px;
+	max-height: 50px;
+	text-align: center;
+}
+
+.menu-item {
+	display: inline-block;
+	background-color: #AFAA97;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 15px;
+	margin-left: 15px;
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 25px;
+	max-height: 25px;
+}
+
+.menu-item-selected {
+	background-color: #59554A;
+	color: #CFC9AF;
+}
+
+.menu-item:hover {
+	background-color: #59554A;
+	color: #CFC9AF;
+}
+
+/* == МЕНЮ ===================================================  */
+
+
 /* == ПАНЕЛЬ ФАЙЛОВ ==========================================  */
+#PanelFilesA {
+
+}
+
+#PanelFilesB {
+	display: none;
+}
+
+#PanelFilesC {
+	display: none;
+}
+
+#PanelFilesD {
+	display: none;
+}
+
+#PanelFilesE {
+	display: none;
+}
+
+#PanelFilesF {
+	display: none;
+}
 
 .panel-files {
 	display: inline-block;
@@ -96,6 +156,7 @@ body {
 }
 
 .file-description-date {
+	font-weight: normal;
 	float: right;
 	padding-right: 5px;
 }
