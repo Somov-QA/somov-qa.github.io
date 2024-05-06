@@ -3,17 +3,18 @@
 <head>
 	<title>SYSTEM</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="./css/default.css" />
 	<link href="./img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery.min.js"></script>
 </head>
 <body>
 	<div class="menu">
-			<span class="menu-item menu-item-selected">A</span>
-			<span class="menu-item">B</span>
-			<span class="menu-item">C</span>
-			<span class="menu-item">D</span>
-			<span class="menu-item">E</span>
-			<span class="menu-item">F</span>
+			<span class="menu-item" id="MenuA">A</span>
+			<span class="menu-item" id="MenuB">B</span>
+			<span class="menu-item" id="MenuC">C</span>
+			<span class="menu-item" id="MenuD">D</span>
+			<span class="menu-item" id="MenuE">E</span>
+			<span class="menu-item" id="MenuF">F</span>
 		</div>
 	<div class="main-wrapper">
 		<div class="panel-files" id="PanelFilesA">
@@ -109,7 +110,7 @@
 		<div class="panel-files" id="PanelFilesB">
 			<div class="file">
 				<div class="file-row"></div>
-				<span class="file-text">A.01</span>
+				<span class="file-text">B.01</span>
 				<div class="file-description">
 					<div class="file-description-title">
 						Заголовок
@@ -120,7 +121,7 @@
 			</div>
 			<div class="file">
 				<div class="file-row"></div>
-				<span class="file-text">A.02</span>
+				<span class="file-text">B.02</span>
 				<div class="file-description">
 					<div class="file-description-title">
 						Заголовок
@@ -131,5 +132,8 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- SCRIPTS -->
+	<script src="./js/main.js"></script>
 </body>
 </html>

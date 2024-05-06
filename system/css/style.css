@@ -57,27 +57,7 @@ body {
 
 
 /* == ПАНЕЛЬ ФАЙЛОВ ==========================================  */
-#PanelFilesA {
-
-}
-
-#PanelFilesB {
-	display: none;
-}
-
-#PanelFilesC {
-	display: none;
-}
-
-#PanelFilesD {
-	display: none;
-}
-
-#PanelFilesE {
-	display: none;
-}
-
-#PanelFilesF {
+#PanelFilesA, #PanelFilesB, #PanelFilesC, #PanelFilesD, #PanelFilesE, #PanelFilesF {
 	display: none;
 }
 
@@ -90,7 +70,6 @@ body {
 	max-width: 100%;
 	min-height: 100%;
 	max-height: 100%;
-	
 }
 
 .file {
