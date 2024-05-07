@@ -1,4 +1,8 @@
-(function(){
+$.fn.MessageBox = function(msg) {
+    alert(msg);
+};
+
+$(document).ready(function(){
 	var menuA = $("#MenuA");
 	var menuB = $("#MenuB");
 	var menuC = $("#MenuC");
@@ -72,4 +76,11 @@
 		window.show();
 	});
 
-}());
+	$.fn.ReadFile = function(filename) {
+        alert(filename);
+        $.get(filename, function(txt){
+        	window.text(txt);
+        });
+    };
+    
+});
