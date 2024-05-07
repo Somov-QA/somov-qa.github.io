@@ -13,6 +13,8 @@
 	var panelE = $("#PanelFilesE");
 	var panelF = $("#PanelFilesF");
 
+	var window = $("#window");
+
 	function ResetMenu(){
 		panelA.hide();
 		menuA.removeClass("menu-item-selected");
@@ -32,36 +34,42 @@
 		ResetMenu();
 		panelA.show();
 		menuA.addClass("menu-item-selected");
+		window.show();
 	});
 
 	menuB.click(function(){
 		ResetMenu();
 		panelB.show();
 		menuB.addClass("menu-item-selected");
+		window.show();
 	});
 
 	menuC.click(function(){
 		ResetMenu();
 		panelC.show();
 		menuC.addClass("menu-item-selected");
+		window.show();
 	});
 
 	menuD.click(function(){
 		ResetMenu();
 		panelD.show();
 		menuD.addClass("menu-item-selected");
+		window.show();
 	});
 
 	menuE.click(function(){
 		ResetMenu();
 		panelE.show();
 		menuE.addClass("menu-item-selected");
+		window.show();
 	});
 
 	menuF.click(function(){
 		ResetMenu();
 		panelF.show();
 		menuF.addClass("menu-item-selected");
+		window.show();
 	});
 
 }());
