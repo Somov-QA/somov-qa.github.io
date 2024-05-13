@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Encryption</title>
+	<meta charset="UTF-8">
+	<link href="./img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var key = $("#key");
+			var btnEncrypt = $("#btnEncrypt");
+			var btnDecrypt = $("#btnDecrypt");
+			var textEncrypt = $("#textEncrypt");
+			var textDecrypt = $("#textDecrypt");
+			var resultEncrypt = $("#resultEncrypt");
+			var resulttextDecrypt = $("#resulttextDecrypt");
+
+			btnEncrypt.click(function(){
+				alert(textEncrypt.val());
+			});
+
+			btnDecrypt.click(function(){
+				alert(textDecrypt.val());
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<table>
+			<tr>
+				<td><br>Ключ:</td>
+				<td><input id="key" value="key" style="width: 200px; height: 25px;"></td>
+			</tr>
+			<tr>
+				<td><textarea id="textEncrypt" style="width: 500px; height: 350px;">text</textarea></td>
+				<td><textarea id="textDecrypt" style="width: 500px; height: 350px;">text</textarea></td>
+			</tr>
+			<tr>
+				<td><button id="btnEncrypt" style="cursor: pointer">Зашифровать</button></td>
+				<td><button id="btnDecrypt" style="cursor: pointer">Расшифровать</button></td>
+			</tr>
+			<tr>
+				<td><br><br>Результат:</td>
+				<td><br><br>Результат:</td>
+			</tr>
+			<tr>
+				<td><textarea id="resultEncrypt" style="width: 500px; height: 350px;"></textarea></td>
+				<td><textarea id="resulttextDecrypt" style="width: 500px; height: 350px;"></textarea></td>
+			</tr>
+		</table>
+		
+	</div>
+</body>
+</html>
