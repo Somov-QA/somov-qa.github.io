@@ -17,11 +17,24 @@
 			var resulttextDecrypt = $("#resulttextDecrypt");
 
 			btnEncrypt.click(function(){
-				alert(textEncrypt.val());
+				var str = textEncrypt.val();
+				alert(str);
+				//textDecrypt.val(textEncrypt.val().charCodeAt(0));
+				//textDecrypt.val(textEncrypt.val().codePointAt(0));
+
+				var values = [];
+				for (let i = 0; i < str.length; i++) {
+  					console.log(str.codePointAt(i).toString(16));
+  					values[i] = str.codePointAt(i).toString(16);
+				}
+				console.log(values);
+				textDecrypt.val(values);
 			});
 
 			btnDecrypt.click(function(){
 				alert(textDecrypt.val());
+				/*textEncrypt.val(textDecrypt.val().charAt());*/
+				textEncrypt.val(textDecrypt.val().toString(16));
 			});
 		});
 	</script>
