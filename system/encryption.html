@@ -17,24 +17,34 @@
 			var resulttextDecrypt = $("#resulttextDecrypt");
 
 			btnEncrypt.click(function(){
-				var str = textEncrypt.val();
-				alert(str);
 				//textDecrypt.val(textEncrypt.val().charCodeAt(0));
 				//textDecrypt.val(textEncrypt.val().codePointAt(0));
 
-				var values = [];
+				let str = textEncrypt.val();
+				let values = [];
 				for (let i = 0; i < str.length; i++) {
   					console.log(str.codePointAt(i).toString(16));
   					values[i] = str.codePointAt(i).toString(16);
 				}
 				console.log(values);
-				textDecrypt.val(values);
+
+				let k =0;
+				values.forEach(function(item, i, arr){
+					console.log(i + " : " + item);
+					console.log(key.val().codePointAt(k));
+					values[i] = i + key.val().codePointAt(k);
+					console.log(values[i]);
+					k++;
+					if (k >= key.val().length) k = 0;
+				});
+
+				resultEncrypt.val(values);
 			});
 
 			btnDecrypt.click(function(){
-				alert(textDecrypt.val());
-				/*textEncrypt.val(textDecrypt.val().charAt());*/
-				textEncrypt.val(textDecrypt.val().toString(16));
+				//textEncrypt.val(textDecrypt.val().charAt());
+				//textEncrypt.val(textDecrypt.val().toString(16));
+
 			});
 		});
 	</script>
