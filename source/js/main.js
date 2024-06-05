@@ -28,24 +28,26 @@ $(document).ready(function(){
 		window_content.hide("slow");
 
 		menu.removeClass("start-menu");
-
+		$(".menu-item").removeClass("start-menu-item");
+		$(".menu-item-text").removeClass("start-menu-item-text");
+		
 		panelA.hide("slow");
-		menuA.removeClass("start-menu-item");
+		menuA.removeClass("start-menu-item-img-a");
 		menuA.removeClass("menu-item-selected");
 		panelB.hide("slow");
-		menuB.removeClass("start-menu-item");
+		menuB.removeClass("start-menu-item-img-b");
 		menuB.removeClass("menu-item-selected");
 		panelC.hide("slow");
-		menuC.removeClass("start-menu-item");
+		menuC.removeClass("start-menu-item-img-c");
 		menuC.removeClass("menu-item-selected");
 		panelD.hide("slow");
-		menuD.removeClass("start-menu-item");
+		menuD.removeClass("start-menu-item-img-d");
 		menuD.removeClass("menu-item-selected");
 		panelE.hide("slow");
-		menuE.removeClass("start-menu-item");
+		menuE.removeClass("start-menu-item-img-e");
 		menuE.removeClass("menu-item-selected");
 		panelF.hide("slow");
-		menuF.removeClass("start-menu-item");
+		menuF.removeClass("start-menu-item-img-f");
 		menuF.removeClass("menu-item-selected");
 	}
 

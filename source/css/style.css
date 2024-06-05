@@ -32,11 +32,6 @@ body {
 	text-align: center;
 }
 
-.start-menu {
-	position: absolute;
-	top: 40%;
-}
-
 .menu-item {
 	display: inline-block;
 	background-color: #00d4ff;
@@ -54,12 +49,6 @@ body {
 	box-shadow: 3px 3px #00B3DB;
 }
 
-.start-menu-item{
-	min-height: 100px;
-	max-height: 100px;
-	padding-top: 55px;
-}
-
 .menu-item-text {
 	position: relative;
 	top: 9px;
@@ -74,6 +63,58 @@ body {
 .menu-item:hover {
 	background-color: #009fe0;
 	color: #00EDFF;
+}
+
+.start-menu {
+	position: absolute;
+	top: 40%;
+}
+
+.start-menu-item{
+	min-height: 100px;
+	max-height: 100px;
+	padding-top: 55px;
+}
+
+.start-menu-item-img-a{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-img-b{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-img-c{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-img-d{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-img-e{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-img-f{
+	background-image: url('../img/site.png');
+	background-repeat: no-repeat;
+	background-position: 50% 35%
+}
+
+.start-menu-item-text{
+	position: relative;
+	top: 40px;
 }
 
 /* == МЕНЮ ===================================================  */
