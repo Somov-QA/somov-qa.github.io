@@ -22,69 +22,67 @@ $(document).ready(function(){
 	var window_content = $("#window_content");
 
 	function ResetMenu(){
-		panelA.hide();
+		window.hide("slow");
+		window_title.hide("slow");
+		window_content.hide("slow");
+		panelA.hide("slow");
 		menuA.removeClass("menu-item-selected");
-		panelB.hide();
+		panelB.hide("slow");
 		menuB.removeClass("menu-item-selected");
-		panelC.hide();
+		panelC.hide("slow");
 		menuC.removeClass("menu-item-selected");
-		panelD.hide();
+		panelD.hide("slow");
 		menuD.removeClass("menu-item-selected");
-		panelE.hide();
+		panelE.hide("slow");
 		menuE.removeClass("menu-item-selected");
-		panelF.hide();
+		panelF.hide("slow");
 		menuF.removeClass("menu-item-selected");
 	}
 
 	menuA.click(function(){
 		ResetMenu();
-		panelA.show();
+		panelA.show("slow");
 		menuA.addClass("menu-item-selected");
 	});
 
 	menuB.click(function(){
 		ResetMenu();
-		panelB.show();
+		panelB.show("slow");
 		menuB.addClass("menu-item-selected");
-		window.show();
 	});
 
 	menuC.click(function(){
 		ResetMenu();
-		panelC.show();
+		panelC.show("slow");
 		menuC.addClass("menu-item-selected");
-		window.show();
 	});
 
 	menuD.click(function(){
 		ResetMenu();
-		panelD.show();
+		panelD.show("slow");
 		menuD.addClass("menu-item-selected");
-		window.show();
 	});
 
 	menuE.click(function(){
 		ResetMenu();
-		panelE.show();
+		panelE.show("slow");
 		menuE.addClass("menu-item-selected");
-		window.show();
 	});
 
 	menuF.click(function(){
 		ResetMenu();
-		panelF.show();
+		panelF.show("slow");
 		menuF.addClass("menu-item-selected");
-		window.show();
 	});
 
 	$.fn.ReadFile = function(filename) {
-		window.show();
+		window.show("slow");
 		window_title.show();
 		window_content.show();
 		
         $.get(filename, function(txt){
         	window_content.html(txt);
-        	window.show();
+        	window.show("slow");
 			window_title.show();
 			window_content.show();
         });
