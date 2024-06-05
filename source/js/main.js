@@ -26,17 +26,26 @@ $(document).ready(function(){
 		window.hide("slow");
 		window_title.hide("slow");
 		window_content.hide("slow");
+
+		menu.removeClass("start-menu");
+
 		panelA.hide("slow");
+		menuA.removeClass("start-menu-item");
 		menuA.removeClass("menu-item-selected");
 		panelB.hide("slow");
+		menuB.removeClass("start-menu-item");
 		menuB.removeClass("menu-item-selected");
 		panelC.hide("slow");
+		menuC.removeClass("start-menu-item");
 		menuC.removeClass("menu-item-selected");
 		panelD.hide("slow");
+		menuD.removeClass("start-menu-item");
 		menuD.removeClass("menu-item-selected");
 		panelE.hide("slow");
+		menuE.removeClass("start-menu-item");
 		menuE.removeClass("menu-item-selected");
 		panelF.hide("slow");
+		menuF.removeClass("start-menu-item");
 		menuF.removeClass("menu-item-selected");
 	}
 
@@ -44,42 +53,36 @@ $(document).ready(function(){
 		ResetMenu();
 		panelA.show("slow");
 		menuA.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	menuB.click(function(){
 		ResetMenu();
 		panelB.show("slow");
 		menuB.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	menuC.click(function(){
 		ResetMenu();
 		panelC.show("slow");
 		menuC.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	menuD.click(function(){
 		ResetMenu();
 		panelD.show("slow");
 		menuD.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	menuE.click(function(){
 		ResetMenu();
 		panelE.show("slow");
 		menuE.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	menuF.click(function(){
 		ResetMenu();
 		panelF.show("slow");
 		menuF.addClass("menu-item-selected");
-		menu.removeClass("start_menu");
 	});
 
 	$.fn.ReadFile = function(filename) {

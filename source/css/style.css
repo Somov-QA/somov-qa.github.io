@@ -32,9 +32,9 @@ body {
 	text-align: center;
 }
 
-.start_menu {
+.start-menu {
 	position: absolute;
-	top: 45%;
+	top: 40%;
 }
 
 .menu-item {
@@ -43,6 +43,7 @@ body {
 	color: #FFFFFF;
 	cursor: pointer;
 	text-align: center;
+	font-weight: bold;
 	padding-top: 5px;
 	margin-top: 15px;
 	margin-left: 15px;
@@ -53,6 +54,12 @@ body {
 	box-shadow: 3px 3px #00B3DB;
 }
 
+.start-menu-item{
+	min-height: 100px;
+	max-height: 100px;
+	padding-top: 55px;
+}
+
 .menu-item-text {
 	position: relative;
 	top: 9px;
@@ -61,7 +68,7 @@ body {
 .menu-item-selected {
 	background-color: #009fe0;
 	color: #00EDFF;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .menu-item:hover {
