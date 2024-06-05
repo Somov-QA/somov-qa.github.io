@@ -3,6 +3,7 @@ $.fn.MessageBox = function(msg) {
 };
 
 $(document).ready(function(){
+	var menu = $("#Menu");
 	var menuA = $("#MenuA");
 	var menuB = $("#MenuB");
 	var menuC = $("#MenuC");
@@ -43,36 +44,42 @@ $(document).ready(function(){
 		ResetMenu();
 		panelA.show("slow");
 		menuA.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	menuB.click(function(){
 		ResetMenu();
 		panelB.show("slow");
 		menuB.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	menuC.click(function(){
 		ResetMenu();
 		panelC.show("slow");
 		menuC.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	menuD.click(function(){
 		ResetMenu();
 		panelD.show("slow");
 		menuD.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	menuE.click(function(){
 		ResetMenu();
 		panelE.show("slow");
 		menuE.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	menuF.click(function(){
 		ResetMenu();
 		panelF.show("slow");
 		menuF.addClass("menu-item-selected");
+		menu.removeClass("start_menu");
 	});
 
 	$.fn.ReadFile = function(filename) {

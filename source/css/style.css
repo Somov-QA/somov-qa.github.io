@@ -24,12 +24,17 @@ body {
 
 /* == МЕНЮ ===================================================  */
 
-.menu{
+#Menu{
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 50px;
 	max-height: 50px;
 	text-align: center;
+}
+
+.start_menu {
+	position: absolute;
+	top: 45%;
 }
 
 .menu-item {
