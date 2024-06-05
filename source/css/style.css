@@ -1,0 +1,215 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* https://cssgradient.io/ colors #00d4ff #009fe0 */
+    background: rgb(0,212,255);
+	background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,159,224,1) 76%);
+	background-image: url('../img/background.jpg');
+	color: #000;	
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+/* == МЕНЮ ===================================================  */
+
+.menu{
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 50px;
+	max-height: 50px;
+	text-align: center;
+}
+
+.menu-item {
+	display: inline-block;
+	background-color: #00d4ff;
+	color: #FFFFFF;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 15px;
+	margin-left: 15px;
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 40px;
+	max-height: 40px;
+}
+
+.menu-item-text {
+	position: relative;
+	top: 9px;
+}
+
+.menu-item-selected {
+	background-color: #009fe0;
+	color: #00EDFF;
+	font-weight: bold;
+}
+
+.menu-item:hover {
+	background-color: #009fe0;
+	color: #00EDFF;
+}
+
+/* == МЕНЮ ===================================================  */
+
+/* == ОКНО ===================================================  */
+#window {
+	position: absolute;
+	left: 50%;
+	min-width: 45%;
+	max-width: 45%;
+	min-height: 80%;
+	max-height: 80%;
+	z-index: 1000;
+	display: none;
+}
+
+#window_title{
+	padding: 5px;
+	background-color: #009fe0;
+	color: #FFFFFF;
+	display: none;
+}
+
+#window_content {
+	position: absolute;
+	border: solid;
+	border-color: #00B3DB;
+	border-width: 2px;
+	box-shadow: 3px 3px #00B3DB;
+	background-color: rgba(250, 250, 250, 0.8);
+	color: #4D493D;
+	font-family: Arial, Helvetica, sans-serif;
+	scrollbar-width: thin;
+  	scrollbar-color: #007CAD #00B3DB;
+  	overflow: scroll;
+	padding: 10px;
+	margin-top: 2px;
+	min-height: 80%;
+	max-height: 80%;
+	min-width: 97%;
+	max-width: 97%;
+	z-index: 1000;
+	display: none;
+}
+
+
+
+/* == ОКНО ===================================================  */
+
+
+/* == ПАНЕЛЬ ФАЙЛОВ ==========================================  */
+#PanelFilesA, #PanelFilesB, #PanelFilesC, #PanelFilesD, #PanelFilesE, #PanelFilesF {
+	display: none;
+}
+
+.panel-files {
+	display: inline-block;
+	background-image: url('../img/left_line.png');
+	background-repeat: repeat-y;
+	padding-left: 50px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+.file {
+	background-image: url('../img/file.png');
+	margin: 10px;
+	min-width: 57px;
+	max-width: 57px;
+	min-height: 73px;
+	max-height: 73px;
+}
+
+.file-row {
+	background-image: url('../img/left_line_row.png');
+	background-repeat: no-repeat;
+	position: relative;
+	visibility: hidden;
+	min-width: 33px;
+	max-width: 33px;
+	min-height: 24px;
+	max-height: 24px;
+	left: -50px;
+	top: 25px;
+}
+
+.file:hover{
+	background-image: url('../img/file2.png');
+}
+
+.file:hover .file-row {
+	visibility: visible;
+}
+
+.file-text {
+	position: relative;
+	top: -23px;
+	margin-right: 10%;
+    border-style: ridge;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 57px;
+	min-height: 73px;
+	color: #514E3F;
+	font-weight: bold;
+	font-style: normal;
+	font-family: serif;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.file-description{
+	position: relative;
+	top: -95px;
+	left: 80px;
+	min-width: 500px;
+	max-width: 500px;
+	min-height: 73px;
+	max-height: 73px;
+}
+
+.file-description-title {
+	background-color: #00d4ff;
+	font-weight: bold;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 15px;
+}
+
+.file-description-date {
+	font-weight: normal;
+	float: right;
+	padding-right: 5px;
+}
+
+.file-description-text {
+	margin-top: 2px;
+	background-color: rgba(255, 255, 255, 0.8);
+	min-height: 40px;
+	max-height: 40px;
+	padding: 5px;
+}
+
+.file:hover .file-description-title {
+	background-color: #009fe0;
+	color: #FFFFFF
+}
+
+/* == ПАНЕЛЬ ФАЙЛОВ ==========================================  */
