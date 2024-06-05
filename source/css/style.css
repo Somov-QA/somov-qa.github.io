@@ -50,6 +50,7 @@ body {
 	max-width: 250px;
 	min-height: 40px;
 	max-height: 40px;
+	box-shadow: 3px 3px #00B3DB;
 }
 
 .menu-item-text {
