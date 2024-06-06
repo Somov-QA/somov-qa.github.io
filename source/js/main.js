@@ -22,7 +22,7 @@ $(document).ready(function(){
 	var window_title = $("#window_title");
 	var window_content = $("#window_content");
 
-	function ResetMenu(){
+	function ResetMenu() {
 		window.hide("slow");
 		window_title.hide("slow");
 		window_content.hide("slow");
@@ -49,6 +49,10 @@ $(document).ready(function(){
 		panelF.hide("slow");
 		menuF.removeClass("start-menu-item-img-f");
 		menuF.removeClass("menu-item-selected");
+	}
+
+	function ResetFiles() {
+		$(".file-image-hover").removeClass("file-image-hover");
 	}
 
 	menuA.click(function(){
@@ -88,12 +92,15 @@ $(document).ready(function(){
 	});
 
 	$.fn.ReadFile = function(filename) {
+		ResetFiles();
+		this.addClass("file-image-hover");
 		window.show("slow");
 		window_title.show();
 		window_content.show();
 		
         $.get(filename, function(txt){
         	window_content.html(txt);
+        	this.addClass("file-image-hover");
         	window.show("slow");
 			window_title.show();
 			window_content.show();

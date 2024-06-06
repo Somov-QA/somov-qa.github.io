@@ -8,8 +8,7 @@ body {
 	
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* https://cssgradient.io/ colors #00d4ff #009fe0 */
-    background: rgb(0,212,255);
+    background: rgb(0,212,255); /* https://cssgradient.io/ colors #00d4ff #009fe0 */
 	background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,159,224,1) 76%);
 	background-image: url('../img/background.jpg');
 	color: #000;	
@@ -201,6 +200,10 @@ body {
 	max-height: 24px;
 	left: -50px;
 	top: 25px;
+}
+
+.file-image-hover{
+	background-image: url('../img/file2.png');
 }
 
 .file:hover{
