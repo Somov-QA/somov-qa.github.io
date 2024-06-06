@@ -64,6 +64,15 @@ body {
 	color: #00EDFF;
 }
 
+.start-logo {
+	background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: 90% 100%;
+    min-height: 100px;
+    max-height: 100px;
+    position: relative;
+}
+
 .start-menu {
 	position: absolute;
 	top: 40%;

@@ -28,6 +28,7 @@ $(document).ready(function(){
 		window_content.hide("slow");
 
 		menu.removeClass("start-menu");
+		$(".start-logo").removeClass("start-logo");
 		$(".menu-item").removeClass("start-menu-item");
 		$(".menu-item-text").removeClass("start-menu-item-text");
 		
@@ -49,6 +50,8 @@ $(document).ready(function(){
 		panelF.hide("slow");
 		menuF.removeClass("start-menu-item-img-f");
 		menuF.removeClass("menu-item-selected");
+
+		ResetFiles();
 	}
 
 	function ResetFiles() {
