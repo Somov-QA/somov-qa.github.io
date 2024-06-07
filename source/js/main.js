@@ -56,6 +56,8 @@ $(document).ready(function(){
 
 	function ResetFiles() {
 		$(".file-image-hover").removeClass("file-image-hover");
+		window_content.html("...");
+		window_title.html("...");
 	}
 
 	menuA.click(function(){
@@ -94,17 +96,21 @@ $(document).ready(function(){
 		menuF.addClass("menu-item-selected");
 	});
 
-	$.fn.ReadFile = function(filename) {
+	$.fn.ReadFile = function(filename, title) {
 		ResetFiles();
-		this.addClass("file-image-hover");
-		window.show("slow");
-		window_title.show();
-		window_content.show();
+
+
+		this.addClass("file-image-hover"); 	// для теста
+		window.show("slow");				// для теста
+		window_title.html(title);			// для теста
+		window_title.show();				// для теста
+		window_content.show();				// для теста
 		
         $.get(filename, function(txt){
         	window_content.html(txt);
         	this.addClass("file-image-hover");
         	window.show("slow");
+        	window_title.html(title);
 			window_title.show();
 			window_content.show();
         });
