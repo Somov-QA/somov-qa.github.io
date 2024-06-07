@@ -24,8 +24,6 @@ $(document).ready(function(){
 
 	function ResetMenu() {
 		window.hide("slow");
-		window_title.hide("slow");
-		window_content.hide("slow");
 
 		menu.removeClass("start-menu");
 		$(".start-logo").removeClass("start-logo");
@@ -99,20 +97,11 @@ $(document).ready(function(){
 	$.fn.ReadFile = function(filename, title) {
 		ResetFiles();
 		this.addClass("file-image-hover");
-
-		/*
-		window.show("slow");				// для теста
-		window_title.html(title);			// для теста
-		window_title.show();				// для теста
-		window_content.show();				// для теста
-		*/
 		
         $.get(filename, function(txt){
-        	window_content.html(txt);
-        	window.show("slow");
         	window_title.html(title);
-			window_title.show();
-			window_content.show();
+        	window_content.html(txt);
+			window.show("slow");
         });
     };
     
