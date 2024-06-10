@@ -19,6 +19,7 @@ $(document).ready(function(){
 	var panelF = $("#PanelFilesF");
 
 	var window = $("#window");
+	window.hide();
 	var window_title = $("#window_title");
 	var window_content = $("#window_content");
 
