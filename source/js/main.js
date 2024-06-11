@@ -18,13 +18,13 @@ $(document).ready(function(){
 	var panelE = $("#PanelFilesE");
 	var panelF = $("#PanelFilesF");
 
-	var window = $("#window");
-	window.hide();
+	var window_form = $("#window");
+	window_form.hide();
 	var window_title = $("#window_title");
 	var window_content = $("#window_content");
 
 	function ResetMenu() {
-		window.hide("slow");
+		window_form.hide("slow");
 
 		menu.removeClass("start-menu");
 		$(".start-logo").removeClass("start-logo");
@@ -90,9 +90,10 @@ $(document).ready(function(){
 	});
 
 	menuF.click(function(){
-		ResetMenu();
-		panelF.show("slow");
-		menuF.addClass("menu-item-selected");
+		//ResetMenu();
+		//panelF.show("slow");
+		//menuF.addClass("menu-item-selected");
+		window.open("about.html", "_self");
 	});
 
 	$.fn.ReadFile = function(filename, title) {
@@ -102,7 +103,7 @@ $(document).ready(function(){
         $.get(filename, function(txt){
         	window_title.html(title);
         	window_content.html(txt);
-			window.show("slow");
+			window_form.show("slow");
         });
     };
     
