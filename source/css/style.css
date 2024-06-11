@@ -192,6 +192,14 @@ body {
 	display: none;
 }
 
+#PanelFilesB {
+	max-height: 650px;
+	/*overflow: scroll;*/
+	overflow-y: scroll;
+	scrollbar-width: thin;
+  scrollbar-color: #007CAD #00B3DB;
+}
+
 .panel-files {
 	display: inline-block;
 	background-image: url('../img/left_line.png');
@@ -261,8 +269,8 @@ body {
 	top: -95px;
 	left: 80px;
 	width: 80%;
-	min-width: 90%;
-	max-width: 90%;
+	min-width: 89%;
+	max-width: 89%;
 	min-height: 73px;
 	max-height: 73px;
 }
@@ -316,6 +324,12 @@ body {
 		min-height: 450px;
 		max-height: 450px;
 	}
+
+	#PanelFilesB {
+		/*overflow: scroll;*/
+		overflow-y: scroll;
+		max-height: 450px;
+	}
 }
 
 @media screen and (max-width: 1300px){
@@ -338,6 +352,12 @@ body {
 
 	#window_content {
 		min-height: 100%;
+		max-height: 100%;
+	}
+
+	#PanelFilesB {
+		overflow: visible;
+		ьшт-height: 100%;
 		max-height: 100%;
 	}
 }
@@ -377,5 +397,11 @@ body {
 
 	.file-description-title{
 		overflow: hidden;
+	}
+
+	#PanelFilesB {
+		overflow: visible;
+		ьшт-height: 100%;
+		max-height: 100%;
 	}
 }
