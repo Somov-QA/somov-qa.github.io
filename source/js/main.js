@@ -90,9 +90,6 @@ $(document).ready(function(){
 	});
 
 	menuF.click(function(){
-		//ResetMenu();
-		//panelF.show("slow");
-		//menuF.addClass("menu-item-selected");
 		window.open("about.html", "_self");
 	});
 
