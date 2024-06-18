@@ -3,7 +3,7 @@
 <head>
 	<title>Encryption</title>
 	<meta charset="UTF-8">
-	<script src="./source/js/jquery.min.js"></script>
+	<script src="./js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			var key = $("#key");
@@ -17,18 +17,25 @@
 			btnEncrypt.click(function(){
 				let str = textEncrypt.val();
 				let values = [];
+				let j = 0;
 				for (let i = 0; i < str.length; i++) {
-  					values[i] = str.charCodeAt(i);
+  					//values[i] = str.charCodeAt(i);
+					values[i] = str.charCodeAt(i) * key.val().charCodeAt(j);
+					j++;
+					if (j == key.val().length) j = 0;
 				}
 				resultEncrypt.val(values);
 			});
 
 			btnDecrypt.click(function(){
 				var values = textDecrypt.val().split(",");
-				console.log(values);
 				var str = "";
+				let j = 0;
 				for (let i = 0; i < values.length; i++) {
-  					str = str + values[i];
+  					//str = str + String.fromCharCode(values[i]);
+  					str = str + String.fromCharCode(values[i] / key.val().charCodeAt(j));
+  					j++;
+					if (j == key.val().length) j = 0;
 				}
 				resultTextDecrypt.val(str);
 			});
@@ -98,7 +105,7 @@
 			</tr>
 			<tr>
 				<td><textarea id="textEncrypt" style="width: 500px; height: 350px;">text</textarea></td>
-				<td><textarea id="textDecrypt" style="width: 500px; height: 350px;">116,101,120,116</textarea></td>
+				<td><textarea id="textDecrypt" style="width: 500px; height: 350px;"></textarea></td>
 			</tr>
 			<tr>
 				<td><button id="btnEncrypt" style="cursor: pointer">Зашифровать</button></td>
