@@ -77,9 +77,7 @@ $(document).ready(function(){
 	});
 
 	$.fn.ReadFile = function(filename) {
-        alert(filename);
         $.get(filename, function(txt){
-        	/*window.text(txt);*/
         	window.html(txt);
         });
     };
