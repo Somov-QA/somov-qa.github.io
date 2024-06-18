@@ -1,3 +1,4 @@
+https://somov-qa.github.io/about.html
 https://somov-qa.github.io/autotesting.html
 https://somov-qa.github.io/autotesting-adb.html
 https://somov-qa.github.io/autotesting-airtest.html
