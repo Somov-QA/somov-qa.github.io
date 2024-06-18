@@ -104,4 +104,25 @@ $(document).ready(function(){
         });
     };
     
+    $.fn.DecryptFile = function(filename, title) {
+		ResetFiles();
+		this.addClass("file-image-hover");
+
+		let key = prompt('Введите ключ', '')
+		
+        $.get(filename, function(txt){
+        	let values = txt.split(",");
+			let text = "";
+			let j = 0;
+			for (let i = 0; i < values.length; i++) {
+				text = text + String.fromCharCode(values[i] / key.charCodeAt(j));
+				j++;
+				if (j == key.length) j = 0;
+			}
+        	window_title.html(title);
+        	window_content.html(text);
+			window_form.show("slow");
+        });
+    };
+
 });
