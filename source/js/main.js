@@ -97,7 +97,7 @@ $(document).ready(function(){
 		ResetFiles();
 		this.addClass("file-image-hover");
 		
-        $.get(filename, function(txt){
+        $.get('./source/files/' + filename, function(txt){
         	window_title.html(title);
         	window_content.html(txt);
 			window_form.show("slow");
@@ -110,7 +110,7 @@ $(document).ready(function(){
 
 		let key = prompt('Введите ключ', '')
 		
-        $.get(filename, function(txt){
+        $.get('./source/files/' + filename, function(txt){
         	let values = txt.split(",");
 			let text = "";
 			let j = 0;
