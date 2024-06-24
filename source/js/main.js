@@ -103,7 +103,7 @@ $(document).ready(function(){
 			window_form.show("slow");
         });
     };
-    
+
     $.fn.DecryptFile = function(filename, title) {
 		ResetFiles();
 		this.addClass("file-image-hover");
@@ -123,6 +123,10 @@ $(document).ready(function(){
         	window_content.html(text);
 			window_form.show("slow");
         });
+    };
+
+    $.fn.ReadFilePDF = function(filename, title) {
+		window.open('./source/files/' + filename, "_blank");
     };
 
 });
