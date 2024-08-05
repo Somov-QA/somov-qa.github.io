@@ -219,6 +219,7 @@ body {
 	margin: 10px;
 	min-height: 73px;
 	max-height: 73px;
+	cursor: pointer;
 }
 
 .file-row {
@@ -257,17 +258,14 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 57px;
-  max-width: 450px;
-  width: 450px;
+  max-width: 57px;
 	min-height: 73px;
 	max-height: 73px;
 	color: #514E3F;
 	font-weight: bold;
 	font-style: normal;
 	font-family: serif;
-	cursor: pointer;
 	text-decoration: none;
-	z-index: 1000;
 }
 
 .file-description{

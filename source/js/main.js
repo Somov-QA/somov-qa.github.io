@@ -97,9 +97,9 @@ $(document).ready(function(){
 
 	$.fn.ReadFile = function(filename, title) {
 		ResetFiles();
-		this.parent().addClass("file-image-hover");
-		this.parent().find(".file-description-title").addClass("file-description-title-hover");
-		this.parent().find(".file-description-text").addClass("file-description-text-hover");
+		this.addClass("file-image-hover");
+		this.find(".file-description-title").addClass("file-description-title-hover");
+		this.find(".file-description-text").addClass("file-description-text-hover");
 
         $.get('./source/files/' + filename, function(txt){
         	window_title.html(title);
@@ -110,9 +110,9 @@ $(document).ready(function(){
 
     $.fn.DecryptFile = function(filename, title) {
 		ResetFiles();
-		this.parent().addClass("file-image-hover");
-		this.parent().find(".file-description-title").addClass("file-description-title-hover");
-		this.parent().find(".file-description-text").addClass("file-description-text-hover");
+		this.addClass("file-image-hover");
+		this.find(".file-description-title").addClass("file-description-title-hover");
+		this.find(".file-description-text").addClass("file-description-text-hover");
 
 		let key = prompt('Введите ключ', '')
 		
