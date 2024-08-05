@@ -257,7 +257,10 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 57px;
+  max-width: 450px;
+  width: 450px;
 	min-height: 73px;
+	max-height: 73px;
 	color: #514E3F;
 	font-weight: bold;
 	font-style: normal;
