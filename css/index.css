@@ -150,7 +150,7 @@ li {
 }
 
 li::before {
-  color: #5792E0;
+  color: #6C3483;
   content: "●"; /* https://www.symbolcopy.com/circle-symbol.html */
   padding-right: 10px;
 }
@@ -197,11 +197,14 @@ li::before {
 }
 
 .side-title-name {
-	background-color: #5792E0;
+	background-color: #6C3483;
 	color: #FFFFFF;
 	padding: 5px 5px 5px 5px;
 	min-width: 150px;
 	max-width: 150px;
+	background-image: -moz-linear-gradient(0deg, #1B4F72 0%, #6C3483 100%);
+	background-image: -webkit-linear-gradient(0deg, #1B4F72 0%, #6C3483 100%);
+	background-image: -ms-linear-gradient(0deg, #1B4F72 0%, #6C3483 100%);
 }
 
 .side-title-line {
@@ -214,7 +217,7 @@ li::before {
 {
   content: '';
   border-style: solid;
-  border-color: #5792E0;
+  border-color: #6C3483;
   border-width: 1px;
   display: block;
 }
