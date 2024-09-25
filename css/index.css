@@ -175,6 +175,12 @@ li {
   padding-right: 10px;
 }
 
+.list-type-с li::before {
+  color: #6C3483;
+  content: "▸";
+  padding-right: 10px;
+}
+
 
 .main-wrapper {
   width: 75%;
