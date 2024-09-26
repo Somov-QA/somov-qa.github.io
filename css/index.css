@@ -311,6 +311,15 @@ table {
 	color: black;
 }
 
+.text-link {
+	display: inline-block;
+	color: #814AFF;
+}
+
+.text-link-black {
+	display: inline-block;
+	color:#222222;
+}
 
 
 /* == Mobile =================================================== */
