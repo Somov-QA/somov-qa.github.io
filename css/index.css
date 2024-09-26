@@ -321,5 +321,11 @@ table {
 	color:#222222;
 }
 
+.text-link-white {
+	display: inline-block;
+	font-weight: bold;
+	color: #EEE;
+}
+
 
 /* == Mobile =================================================== */
