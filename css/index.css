@@ -358,6 +358,12 @@ form {
 }
 
 /* == Mobile =================================================== */
+@media screen and (width: 1440px){
+	.main-wrapper{
+		width: 95%;
+	}
+}
+
 @media screen and (max-width: 1150px){
 	.side-left{
 		display: none;

@@ -121,9 +121,11 @@ textarea {
     width: 75%;
     margin: 0 auto;
     margin-top: 6rem;
+    /*
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
 	-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
 	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.5);
+	*/
 }
 
 .image-zoom {
@@ -757,5 +759,11 @@ footer {
 		padding: 30px;
 		text-align: center;
 		min-width: 100%;
+	}
+}
+
+@media screen and (width: 1440px){
+	.main-wrapper{
+		width: 95%;
 	}
 }
