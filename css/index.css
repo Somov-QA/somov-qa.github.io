@@ -358,7 +358,7 @@ form {
 }
 
 /* == Mobile =================================================== */
-@media screen and (width: 1440px){
+@media screen and (max-width: 1440px){
 	.main-wrapper{
 		width: 95%;
 	}
