@@ -1,0 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+  background: rgb(101,122,127);
+	background: radial-gradient(circle, rgba(101,122,127,1) 0%, rgba(18,64,77,1) 76%);
+	background-image: url('../img/background.jpg');
+	background-size: 100%;
+	color: #000;	
+	font-family: monospace;
+	font-size: 16px;
+}
+
