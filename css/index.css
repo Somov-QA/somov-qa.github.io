@@ -331,7 +331,7 @@ form {
 }
 
 .button {
-  width: 150px;
+  width: 165px;
   height: 33px;
   cursor: pointer;
   border: 0;
@@ -342,7 +342,7 @@ form {
 }
 
 .button:hover {
-  width: 150px;
+  width: 165px;
   height: 33px;
   cursor:pointer;
   border: 0;
