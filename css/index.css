@@ -321,6 +321,10 @@ table {
 	width: 80%;
 }
 
+.column-border {
+	border-bottom: 1px solid gray;
+}
+
 .text-company {
 	display: inline-block;
 	font-weight: bold;
