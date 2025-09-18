@@ -76,128 +76,13 @@
 			</div>
 			<div class="side-right">
 				<div class="side-panel-left">
-					<div class="side-title">
-						<span class="side-title-name">Админка (кэш)</span>
-						<span class="side-title-line"></span>
-					</div>
-					<p>
-						<table>
-							<tr>
-								<td class="column-date">Очистка файлов кеша</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/cache.php?lang=ru</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									Настройки > Настройки продукта > Автокеширование
-								</td>
-							</tr>
-						</table>
-					</p>
-					
-					<div class="side-title">
-						<span class="side-title-name">Админка (почта)</span>
-						<span class="side-title-line"></span>
-					</div>
-					<p>
-						<table>
-							<tr>
-								<td class="column-date">Шаблоны писем</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/message_admin.php?lang=ru</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									Настройки > Настройки продукта > Почтовые и СМС события > Почтовые шаблоны
-								</td>
-							</tr>
-							<tr>
-								<td class="column-date">Проверить отправляемых письма</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/perfmon_table.php?lang=ru&table_name=b_event</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									Настройки > Производительность > Таблицы
-								</td>
-							</tr>
-						</table>
-					</p>
-
-					<div class="side-title">
-						<span class="side-title-name">Админка (заказы)</span>
-						<span class="side-title-line"></span>
-					</div>
-					<p>
-						<table>
-							<tr>
-								<td class="column-date">Монитор производительности: b_sale_order_payment</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/perfmon_table.php?lang=ru&table_name=b_sale_order_payment</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<br>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="column-date">Таблицы в базе данных</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/perfmon_tables.php?lang=ru#b_sale_order</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<br>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="column-date">Монитор производительности: b_sale_order</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/perfmon_table.php?lang=ru&table_name=b_sale_order</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<br>
-								</td>
-							</tr>
-						</table>
-					</p>
-
-					
 
 					<div class="side-title">
 						<span class="side-title-name">Админка</span>
 						<span class="side-title-line"></span>
 					</div>
 					<p>
-						<table>
-							<tr>
-								<td class="column-date">...</td>
-								<td class="column-name">
-									<div class="text-post">/bitrix/admin/</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									...
-								</td>
-							</tr>
-						</table>
+						<table id="table_bitrix_admin"></table>
 					</p>
 
 				</div>
@@ -298,6 +183,7 @@
 			<div class="copy-right-text">Copyright © 2013 - 2025 Сомов Евгений Павлович. All Rights Reserved.</div><br>
 		</footer>
 	</div>
-	
+	<!-- SCRIPTS -->
+	<script src="./js/bitrix.js"></script>
 </body>
 </html>

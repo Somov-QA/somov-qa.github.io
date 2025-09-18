@@ -93,7 +93,7 @@
 		content += '<td class="column-border">' + values[2] + '</td>';
 		content += '</tr>';
 	}
-	table.innerHTML = '<table id="table_soft_online">' + content + '</table>';
+	table.innerHTML = '<table id="table_soft_autotests">' + content + '</table>';
 
 	// Разработка
 	table = document.getElementById('table_soft_develop');
@@ -110,6 +110,6 @@
 		content += '<td class="column-border">' + values[2] + '</td>';
 		content += '</tr>';
 	}
-	table.innerHTML = '<table id="table_soft_online">' + content + '</table>';
+	table.innerHTML = '<table id="table_soft_develop">' + content + '</table>';
 
 }());
