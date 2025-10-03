@@ -1,0 +1,44 @@
+body{
+	padding: 5px;
+	color: #CCC;
+	background-color: #22252A;
+}
+
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+	width: 100%;
+	min-height: 250px;
+	max-height: 100%;
+	background-color: #EEE;
+}
+
+input {
+	margin: 2px;
+	padding: 4px;
+	width: 100px;
+	border: 2px inset gray;
+}
+
+button {
+	min-width: 250px;
+	max-width: 250px;
+	width: 250px;
+	min-height: 35px;
+	max-height: 35px;
+	height: 35px;
+}
+
+#data{
+	padding: 15px;
+	min-width: 95%;
+	max-width: 95%;
+	width: 95%;
+	min-height: 300px;
+	max-height: 100%;
+	background-color: #303942;
+}
+
+#Energy1, #Energy2 {
+	color: red;
+}
