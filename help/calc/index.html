@@ -9,66 +9,90 @@
 <body>
 	<div id="data">
 		<h2>РАСЧЕТ КАМУНАЛЬНЫХ УСЛУГИ</h2>
-		<h4>1. Содержание жилого помещения для МКД</h4>
-		<p>
-			Тариф: <input value="1046.15" id="Mkd"> р.<br>
-			Кол-во: <input value="1" id="MkdCount">
-		</p>
-		<hr>
-		<h4>2. Холодное водоснабжение</h4>
-		<p>
-			Тариф: <input value="49.15" id="RateColdWater1">*<input value="12.09" id="RateColdWater2"> = <input value="0" id="RateColdWater3"> р.<br>
-			Кол-во: <input value="1" id="RateColdWaterCount">
-		</p>
-		<hr>
-		<h4>3. Водоотведение</h4>
-		<p>
-			Тариф: <input value="29.23" id="Water1">*<input value="12.09" id="Water2"> = <input value="0" id="Water3"> р.<br>
-			Кол-во: <input value="1" id="WaterCount">
-		</p>
-		<hr>
-		<h4>4. Теплоснабжение</h4>
-		<p>
-			Тариф: <input value="2000" id="Warm"> р.<br>
-			Кол-во: <input value="1" id="WarmCount">
-		</p>
-		<hr>
-		<h4>5. Вывоз ТБО</h4>
-		<p>
-			Тариф: <input value="0" id="Tbo"> р.<br>
-			Кол-во: <input value="1" id="TboCount">
-		</p>
-		<hr>
-		<h4>6. Энергосбыт</h4>
-		<p>
-			Последнее показание счетчика: <input value="42453" id="Energy1"><br>
-			Текущее показание счетчика: <input value="42917" id="Energy2"><br>
-			При <input value="100" id="Energy3">кВт равно <input value="300" id="Energy4"> р.<br>
-			Тариф: <input value="0" id="Energy5"> р.<br>
-			Кол-во: <input value="1" id="EnergyCount">
-		</p>
-		<hr>
-		<h4>7. Газ ЧМНГ</h4>
-		<p>
-			Тариф: <input value="273" id="Gas"> р.<br>
-			Кол-во: <input value="1" id="GasCount">
-		</p>
-		<hr>
-		<h4>8. Домофон</h4>
-		<p>
-			Тариф: <input value="75" id="Itercom"> р.<br>
-			Кол-во: <input value="1" id="ItercomCount">
-		</p>
-		<hr>
-		<h4>9. Стационарная связь</h4>
-		<p>
-			Тариф: <input value="217" id="Phone"> р.<br>
-			Кол-во: <input value="1" id="PhoneCount">
-		</p>
-		<hr>
-		<p><button id="BtnCalculate">Рассчитать</button></p>
+		<div class="tile">
+			<h4>1. Содержание жилого помещения для МКД</h4>
+			<p>
+				Тариф: <input value="1046.15" id="Mkd"> р.<br>
+				Кол-во: <input value="1" id="MkdCount" class="amount">
+			</p>
+		</div>
+		
+		<div class="tile">
+			<h4>2. Холодное водоснабжение</h4>
+			<p>
+				Тариф: <input value="49.15" id="ColdWater1">*<input value="12.09" id="ColdWater2"> = <input value="0" id="ColdWater3"> р.<br>
+				Кол-во: <input value="1" id="ColdWaterCount" class="amount"><br><br>
+				<button id="BtnColdWater">Пересчитать</button>
+			</p>
+		</div>
 
-		<p><textarea id="Result">Результат вычислений...</textarea></p>
+		<div class="tile">
+			<h4>3. Водоотведение</h4>
+			<p>
+				Тариф: <input value="29.23" id="Water1">*<input value="12.09" id="Water2"> = <input value="0" id="Water3"> р.<br>
+				Кол-во: <input value="1" id="WaterCount" class="amount"><br><br>
+				<button id="BtnWater">Пересчитать</button>
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>4. Теплоснабжение</h4>
+			<p>
+				Тариф: <input value="2000" id="Warm"> р.<br>
+				Кол-во: <input value="1" id="WarmCount" class="amount">
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>5. Вывоз ТБО</h4>
+			<p>
+				Тариф: <input value="0" id="Tbo"> р.<br>
+				Кол-во: <input value="1" id="TboCount" class="amount">
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>6. Энергосбыт</h4>
+			<p>
+				Последнее показание счетчика: <input value="42453" id="Energy1"> кВт<br>
+				Текущее показание счетчика: <input value="42917" id="Energy2"> кВт<br>
+				Разница составила <input value="42917" id="Energy6"> кВт<br>
+				При <input value="100" id="Energy3">кВт равно <input value="300" id="Energy4"> р.<br>
+				Тариф: <input value="0" id="Energy5"> р.<br>
+				Кол-во: <input value="1" id="EnergyCount" class="amount"><br><br>
+				<button id="BtnEnergy">Пересчитать</button>
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>7. Газ ЧМНГ</h4>
+			<p>
+				Тариф: <input value="273" id="Gas"> р.<br>
+				Кол-во: <input value="1" id="GasCount" class="amount">
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>8. Домофон</h4>
+			<p>
+				Тариф: <input value="75" id="Itercom"> р.<br>
+				Кол-во: <input value="1" id="ItercomCount" class="amount">
+			</p>
+		</div>
+
+		<div class="tile">
+			<h4>9. Стационарная связь</h4>
+			<p>
+				Тариф: <input value="217" id="Phone"> р.<br>
+				Кол-во: <input value="1" id="PhoneCount" class="amount">
+			</p>
+		</div>
+
+
+		<div class="tile">
+			<p><textarea id="Result">Нажмите кнопку "Расчитать"...</textarea></p>
+			<p><button id="BtnCalculate">Расчитать</button> <button id="BtnClear">Очистить</button></p>
+		</div>
 	</div>
 	<script type="text/javascript" src="./src/script.js"></script>
 </body>
