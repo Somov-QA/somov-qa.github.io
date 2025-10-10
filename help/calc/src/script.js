@@ -36,41 +36,41 @@
 
 	function main()
 	{
-		ColdWater3.value = ColdWater1.value * ColdWater2.value;
-		Water3.value = Water1.value * Water2.value;
-		Energy6.value = (Energy2.value - Energy1.value);
-		Energy5.value = ((Energy2.value - Energy1.value) / Energy3.value) * Energy4.value;
+		ColdWater3.value = Math.round(Math.ceil(ColdWater1.value * ColdWater2.value));
+		Water3.value = Math.round(Math.ceil(Water1.value * Water2.value));
+		Energy6.value = Math.round(Math.ceil(Energy2.value - Energy1.value));
+		Energy5.value = Math.round(Math.ceil((Energy6.value / Energy3.value) * Energy4.value));
 	}
 
 	main();
 
 	BtnCalculate.addEventListener('click', function(){
 		let total = 0;
-		ColdWater3.value = ColdWater1.value * ColdWater2.value;
-		Water3.value = Water1.value * Water2.value;
-		Energy6.value = (Energy2.value - Energy1.value);
-		Energy5.value = ((Energy2.value - Energy1.value) / Energy3.value) * Energy4.value;
+		ColdWater3.value = Math.round(Math.ceil(ColdWater1.value * ColdWater2.value));
+		Water3.value = Math.round(Math.ceil(Water1.value * Water2.value));
+		Energy6.value = Math.round(Math.ceil(Energy2.value - Energy1.value));
+		Energy5.value = Math.round(Math.ceil((Energy6.value / Energy3.value) * Energy4.value));
 		Result.value = "РАСЧЕТ КАМУНАЛЬНЫХ УСЛУГИ";
 		Result.value += "\n=================================================";
-		Result.value += "\nСодержание жилого помещения для МКД: " + (MKD.value * MKDCount.value);
-		Result.value += "\nХолодное водоснабжение: " + (ColdWater3.value * ColdWaterCount.value);
-		Result.value += "\nВодоотведение: " + (Water3.value * WaterCount.value);
-		Result.value += "\nТеплоснабжение: " + (Warm.value * WarmCount.value);
-		Result.value += "\nВывоз ТБО: " + (Tbo.value * TboCount.value);
-		Result.value += "\nЭнергосбыт: " + (Energy5.value * EnergyCount.value);
-		Result.value += "\nГаз ЧМНГ: " + (Gas.value * GasCount.value);
-		Result.value += "\nДомофон: " + (Itercom.value * ItercomCount.value);
-		Result.value += "\nСтационарная связь: " + (Phone.value * PhoneCount.value);
+		Result.value += "\nСодержание жилого помещения для МКД: " + Math.round(Math.ceil(MKD.value * MKDCount.value));
+		Result.value += "\nХолодное водоснабжение: " + Math.round(Math.ceil(ColdWater3.value * ColdWaterCount.value));
+		Result.value += "\nВодоотведение: " + Math.round(Math.ceil(Water3.value * WaterCount.value));
+		Result.value += "\nТеплоснабжение: " + Math.round(Math.ceil(Warm.value * WarmCount.value));
+		Result.value += "\nВывоз ТБО: " + Math.round(Math.ceil(Tbo.value * TboCount.value));
+		Result.value += "\nЭнергосбыт: " + Math.round(Math.ceil(Energy5.value * EnergyCount.value));
+		Result.value += "\nГаз ЧМНГ: " + Math.round(Math.ceil(Gas.value * GasCount.value));
+		Result.value += "\nДомофон: " + Math.round(Math.ceil(Itercom.value * ItercomCount.value));
+		Result.value += "\nСтационарная связь: " + Math.round(Math.ceil(Phone.value * PhoneCount.value));
 		Result.value += "\n=================================================";
-		total += (MKD.value * MKDCount.value);
-		total += (ColdWater3.value * ColdWaterCount.value);
-		total += (Water3.value * WaterCount.value);
-		total += (Warm.value * WarmCount.value);
-		total += (Tbo.value * TboCount.value);
-		total += (Energy5.value * EnergyCount.value);
-		total += (Gas.value * GasCount.value);
-		total += (Itercom.value * ItercomCount.value);
-		total += (Phone.value * PhoneCount.value);
+		total += Math.round(Math.ceil(MKD.value * MKDCount.value));
+		total += Math.round(Math.ceil(ColdWater3.value * ColdWaterCount.value));
+		total += Math.round(Math.ceil(Water3.value * WaterCount.value));
+		total += Math.round(Math.ceil(Warm.value * WarmCount.value));
+		total += Math.round(Math.ceil(Tbo.value * TboCount.value));
+		total += Math.round(Math.ceil(Energy5.value * EnergyCount.value));
+		total += Math.round(Math.ceil(Gas.value * GasCount.value));
+		total += Math.round(Math.ceil(Itercom.value * ItercomCount.value));
+		total += Math.round(Math.ceil(Phone.value * PhoneCount.value));
 		Result.value += "\nВсего к оплате: " + total;
 		Result.value += "\n=================================================";
 	});
@@ -80,16 +80,16 @@
 	});
 
 	BtnColdWater.addEventListener('click', function(){
-		ColdWater3.value = ColdWater1.value * ColdWater2.value;
+		ColdWater3.value = Math.round(ColdWater1.value * ColdWater2.value);
 	});
 
 	BtnWater.addEventListener('click', function(){
-		Water3.value = Water1.value * Water2.value;
+		Water3.value = Math.round(Water1.value * Water2.value);
 	});
 
 	BtnEnergy.addEventListener('click', function(){
-		Energy6.value = (Energy2.value - Energy1.value);
-		Energy5.value = ((Energy2.value - Energy1.value) / Energy3.value) * Energy4.value;
+		Energy6.value = Math.round(Energy2.value - Energy1.value);
+		Energy5.value = Math.round((Energy6.value / Energy3.value) * Energy4.value);
 	});
 
 }());
