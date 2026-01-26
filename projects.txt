@@ -9,6 +9,8 @@ Evelux 			https://evelux.ru/
 ЭТП МГ			https://etpmicro.ru/
 Erickson		https://erickson.ru/
 BauResurs OSMO	
+ТПК Вариант		https://super-splav.ru/
+Bulros			https://bulros.ru/
 
 
 -----------------------------------------------
@@ -26,3 +28,11 @@ My Nano World		https://www.nanoreality.com/
 Eternal Enemies		https://ilogos.biz/
 Booba Cheese Rush	https://ilogos.biz/case/booba-candy-adventure/
 Cosmos Invictus		https://ilogos.biz/case/cosmos-invictus/
+
+-----------------------------------------------
+
+ВЫГРУЗКИ В БИРИКС ИЗ ИНФОКЛИНИК (FIREBIRD)
+===============================================
+BCArbat (БЦ Арбат)
+IONClinic
+BestClinic
