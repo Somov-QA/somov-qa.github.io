@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Шпаргалка по Playwright | Методы автоматизации</title>
+    <title>Шпаргалка по Playwright | Методы автоматизации + параметры CLI</title>
     <style>
         * {
             margin: 0;
@@ -271,7 +271,7 @@
 <div class="header">
     <div class="container">
         <h1>🎭 Шпаргалка по Playwright</h1>
-        <p>Встроенные методы автоматизации браузера | Класс Page, локаторы, ожидания, действия</p>
+        <p>Встроенные методы автоматизации браузера | Класс Page, локаторы, ожидания, действия + параметры CLI тестов</p>
     </div>
 </div>
 
@@ -290,6 +290,7 @@
             <li><a href="#events">События</a></li>
             <li><a href="#tips">Полезные приёмы</a></li>
             <li><a href="#table">Таблица методов</a></li>
+            <li><a href="#cli-params">Параметры CLI</a></li>
         </ul>
     </div>
 
@@ -500,8 +501,51 @@ const context = await browser.newContext({ storageState: 'state.json' });</code>
         <p>Полный список методов доступен в <a href="https://playwright.dev/docs/api/class-page" target="_blank">официальной документации Playwright</a>.</p>
     </section>
 
+    <!-- НОВЫЙ РАЗДЕЛ: Параметры командной строки playwright test -->
+    <section id="cli-params">
+        <h2>⚙️ Параметры командной строки <code>playwright test</code></h2>
+        <p>Список наиболее полезных флагов для запуска автотестов Playwright Test Runner. Используются как <code>npx playwright test --параметр</code> или <code>npm test -- --параметр</code>.</p>
+        <div class="compact-table">
+            <table>
+                <thead>
+                    <tr><th>Параметр</th><th>Описание</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>--help</code></td><td>Показать справку по всем командам.</td></tr>
+                    <tr><td><code>--config / -c &lt;file&gt;</code></td><td>Путь к конфигурационному файлу (по умолчанию <code>playwright.config.ts</code>).</td></tr>
+                    <tr><td><code>--workers / -j &lt;число&gt;</code></td><td>Количество параллельных процессов. <code>1</code> отключает параллелизацию.</td></tr>
+                    <tr><td><code>--project &lt;имя&gt;</code></td><td>Запустить только указанные проекты (браузеры: <code>chromium</code>, <code>firefox</code>, <code>webkit</code>, <code>all</code>).</td></tr>
+                    <tr><td><code>--reporter &lt;тип&gt;</code></td><td>Формат отчёта: <code>line</code>, <code>dot</code>, <code>json</code>, <code>junit</code>, <code>html</code>.</td></tr>
+                    <tr><td><code>--headed</code></td><td>Запуск браузера с графическим интерфейсом (не headless).</td></tr>
+                    <tr><td><code>--timeout &lt;мс&gt;</code></td><td>Таймаут на один тест (в миллисекундах).</td></tr>
+                    <tr><td><code>--global-timeout &lt;мс&gt;</code></td><td>Максимальное время на выполнение всех тестов.</td></tr>
+                    <tr><td><code>--retries &lt;число&gt;</code></td><td>Количество повторных прогонов упавших тестов.</td></tr>
+                    <tr><td><code>--trace &lt;on|off|retain-on-failure&gt;</code></td><td>Сбор трейса (трассировки) для каждого теста.</td></tr>
+                    <tr><td><code>--screenshot &lt;on|off|only-on-failure&gt;</code></td><td>Создание скриншотов страницы.</td></tr>
+                    <tr><td><code>--video &lt;on|off|retain-on-failure&gt;</code></td><td>Запись видео прохождения теста.</td></tr>
+                    <tr><td><code>--max-failures &lt;число&gt;</code></td><td>Остановить прогон после указанного количества проваленных тестов.</td></tr>
+                    <tr><td><code>--shard &lt;x/y&gt;</code></td><td>Разделить тесты на части (например, <code>--shard=1/3</code>).</td></tr>
+                    <tr><td><code>--output &lt;папка&gt;</code></td><td>Папка для артефактов (скриншоты, видео, трейсы).</td></tr>
+                    <tr><td><code>--repeat-each &lt;N&gt;</code></td><td>Запустить каждый тест <code>N</code> раз подряд.</td></tr>
+                    <tr><td><code>--grep / -g &lt;рег.выражение&gt;</code></td><td>Запустить тесты, чьё название или тег совпадает с шаблоном.</td></tr>
+                    <tr><td><code>--grep-invert &lt;рег.выражение&gt;</code></td><td>Запустить тесты, которые НЕ совпадают с шаблоном.</td></tr>
+                    <tr><td><code>--forbid-only</code></td><td>Запретить использование <code>test.only</code> (полезно для CI).</td></tr>
+                    <tr><td><code>--last-failed</code></td><td>Перезапустить только упавшие тесты из последнего запуска.</td></tr>
+                    <tr><td><code>--debug</code></td><td>Открыть Playwright Inspector (включает <code>--headed --timeout 0</code>).</td></tr>
+                    <tr><td><code>--ui</code></td><td>Запустить интерактивный UI-режим с визуальным трекингом.</td></tr>
+                    <tr><td><code>--slowmo &lt;мс&gt;</code></td><td>Замедлить выполнение действий на указанное число миллисекунд.</td></tr>
+                    <tr><td><code>--ignore-snapshots</code></td><td>Игнорировать несовпадения визуальных снимков (snapshots).</td></tr>
+                    <tr><td><code>--list</code></td><td>Вывести список всех тестов в формате JSON без их выполнения.</td></tr>
+                    <tr><td><code>--fail-on-flaky-tests</code></td><td>Завершить процесс с ошибкой, если есть нестабильные (flaky) тесты.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Пример использования: <code>npx playwright test --headed --grep "login" --workers 2</code>.<br>
+        Полный список параметров: <a href="https://playwright.dev/docs/test-cli" target="_blank">официальная документация CLI</a>.</p>
+    </section>
+
     <footer>
-        <p>🎭 Шпаргалка по Playwright — основные методы автоматизации браузера. Цветовая схема: #6C3483 · #1B4F72</p>
+        <p>🎭 Шпаргалка по Playwright — основные методы автоматизации браузера + параметры запуска тестов. Цветовая схема: #6C3483 · #1B4F72</p>
         <p style="margin-top: 8px;">Актуально для Playwright версии 1.40+. Все примеры проверены в среде Node.js.</p>
     </footer>
 </div>
