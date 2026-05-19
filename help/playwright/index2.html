@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Page API — полный справочник</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f9ff;
+            color: #0b2b3b;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #0f2b3d, #1b7c6e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .header p {
+            color: #2c6375;
+            margin-top: 0.5rem;
+        }
+        .badge {
+            background: #eef2fa;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1a5d6d;
+            display: inline-block;
+        }
+        .section {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2.2rem;
+            overflow: hidden;
+            border: 1px solid #e6edf4;
+        }
+        .section-header {
+            background: #fafdff;
+            padding: 1.2rem 1.8rem;
+            border-bottom: 2px solid #e0ecf5;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .section-header:hover {
+            background: #f0f6fe;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #115c6e;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .section-header .toggle-icon {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #51889b;
+        }
+        .section-content {
+            padding: 1.6rem 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.2rem;
+            background: #ffffff;
+        }
+        .api-card {
+            background: #fefefe;
+            border-radius: 1rem;
+            border: 1px solid #e9f0f5;
+            padding: 0.9rem 1.2rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .api-card:hover {
+            border-color: #bed5e3;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+        .api-name {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1a6580;
+            border-bottom: 1px dashed #cbdde9;
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.6rem;
+            display: inline-block;
+        }
+        .api-desc {
+            font-size: 0.85rem;
+            color: #2b4f62;
+            margin-top: 0.3rem;
+        }
+        .deprecated-badge {
+            background: #fdefe0;
+            color: #b45213;
+            font-size: 0.65rem;
+            font-weight: 600;
+            border-radius: 14px;
+            padding: 0.15rem 0.5rem;
+            margin-left: 0.6rem;
+            vertical-align: middle;
+        }
+        .note {
+            font-size: 0.8rem;
+            background: #faf3e0;
+            padding: 0.6rem 1rem;
+            border-radius: 0.8rem;
+            margin-top: 0.5rem;
+            color: #865d30;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #4c6e7c;
+            border-top: 1px solid #dce8f0;
+            padding-top: 1.8rem;
+        }
+        @media (max-width: 700px) {
+            .section-content {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .section-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+        hr {
+            margin: 0.5rem 0;
+        }
+        .grid-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📘 Playwright: класс Page</h1>
+        <p>Полный справочник всех методов, свойств, событий и устаревших API из официальной документации.<br>
+        <span class="badge">Основано на <code>&lt;div class="col col--3"&gt;</code></span> — актуально для Playwright 1.46+</p>
+    </div>
+
+    <!-- 1. Основные методы (все, включая getBy*, route, workers и т.д.) -->
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <h2>📌 Методы (Methods) <span style="font-weight: normal; font-size: 0.8rem;">— 74 метода</span></h2>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="section-content">
+            <!-- Все методы из списка пользователя -->
+            <div class="api-card"><div class="api-name">addInitScript</div><div class="api-desc">Добавляет скрипт, выполняемый перед загрузкой страницы / фреймов. Полезен для моков.</div></div>
+            <div class="api-card"><div class="api-name">addLocatorHandler</div><div class="api-desc">Регистрирует обработчик для неожиданных оверлеев (например, диалогов). Вызывается перед любым действием.</div></div>
+            <div class="api-card"><div class="api-name">addScriptTag</div><div class="api-desc">Внедряет тег &lt;script&gt; на страницу (по URL, пути или raw-коду).</div></div>
+            <div class="api-card"><div class="api-name">addStyleTag</div><div class="api-desc">Добавляет CSS-стили через тег &lt;style&gt; или внешний файл.</div></div>
+            <div class="api-card"><div class="api-name">ariaSnapshot</div><div class="api-desc">Возвращает текстовое представление дерева доступности (ARIA snapshot).</div></div>
+            <div class="api-card"><div class="api-name">bringToFront</div><div class="api-desc">Переводит текущую страницу (вкладку) на передний план.</div></div>
+            <div class="api-card"><div class="api-name">cancelPickLocator</div><div class="api-desc">Отменяет режим инспектора locator (<code>page.pickLocator</code>).</div></div>
+            <div class="api-card"><div class="api-name">clearConsoleMessages</div><div class="api-desc">Очищает список перехваченных консольных сообщений (<code>page.consoleMessages</code>).</div></div>
+            <div class="api-card"><div class="api-name">clearPageErrors</div><div class="api-desc">Очищает список ошибок страницы (<code>page.pageErrors</code>).</div></div>
+            <div class="api-card"><div class="api-name">close</div><div class="api-desc">Закрывает страницу (вкладку). Генерирует событие 'close'.</div></div>
+            <div class="api-card"><div class="api-name">consoleMessages</div><div class="api-desc">Возвращает массив всех консольных сообщений, записанных на странице.</div></div>
+            <div class="api-card"><div class="api-name">content</div><div class="api-desc">Возвращает HTML-содержимое документа (полный outerHTML).</div></div>
+            <div class="api-card"><div class="api-name">context</div><div class="api-desc">Возвращает браузерный контекст (<code>BrowserContext</code>), которому принадлежит страница.</div></div>
+            <div class="api-card"><div class="api-name">dragAndDrop</div><div class="api-desc">Выполняет drag-and-drop из одного элемента в другой.</div></div>
+            <div class="api-card"><div class="api-name">emulateMedia</div><div class="api-desc">Эмулирует медиа-характеристики: цветовая схема, предпочтение уменьшенного движения и т.д.</div></div>
+            <div class="api-card"><div class="api-name">evaluate</div><div class="api-desc">Выполняет JavaScript-функцию внутри страницы, возвращает результат.</div></div>
+            <div class="api-card"><div class="api-name">evaluateHandle</div><div class="api-desc">Выполняет JS и возвращает <code>JSHandle</code> на объект (для дальнейшей работы).</div></div>
+            <div class="api-card"><div class="api-name">exposeBinding</div><div class="api-desc">Экспонирует привязку (binding) на страницу — функцию, вызываемую из браузера.</div></div>
+            <div class="api-card"><div class="api-name">exposeFunction</div><div class="api-desc">Экспонирует функцию в <code>window</code> для вызова из браузера с возвратом Promise.</div></div>
+            <div class="api-card"><div class="api-name">frame</div><div class="api-desc">Возвращает фрейм по имени или URL-селектору.</div></div>
+            <div class="api-card"><div class="api-name">frameLocator</div><div class="api-desc">Создаёт Locator для элементов внутри указанного фрейма (iframe).</div></div>
+            <div class="api-card"><div class="api-name">frames</div><div class="api-desc">Возвращает массив всех фреймов на странице (главный + дочерние).</div></div>
+            <div class="api-card"><div class="api-name">getByAltText</div><div class="api-desc">Локатор по атрибуту alt (для изображений, областей).</div></div>
+            <div class="api-card"><div class="api-name">getByLabel</div><div class="api-desc">Локатор по тексту метки (label) элемента.</div></div>
+            <div class="api-card"><div class="api-name">getByPlaceholder</div><div class="api-desc">Локатор по плейсхолдеру input/textarea.</div></div>
+            <div class="api-card"><div class="api-name">getByRole</div><div class="api-desc">Локатор по роли ARIA (button, textbox, checkbox …).</div></div>
+            <div class="api-card"><div class="api-name">getByTestId</div><div class="api-desc">Локатор по атрибуту <code>data-testid</code> (или кастомному).</div></div>
+            <div class="api-card"><div class="api-name">getByText</div><div class="api-desc">Локатор по текстовому содержимому.</div></div>
+            <div class="api-card"><div class="api-name">getByTitle</div><div class="api-desc">Локатор по атрибуту title.</div></div>
+            <div class="api-card"><div class="api-name">goBack</div><div class="api-desc">Переходит на предыдущую страницу в истории (аналог кнопки "Назад").</div></div>
+            <div class="api-card"><div class="api-name">goForward</div><div class="api-desc">Переходит на следующую страницу в истории.</div></div>
+            <div class="api-card"><div class="api-name">goto</div><div class="api-desc">Переходит по URL, дожидается загрузки (событие load).</div></div>
+            <div class="api-card"><div class="api-name">hideHighlight</div><div class="api-desc">Скрывает подсветку элементов, включенную через <code>highlight()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isClosed</div><div class="api-desc">Проверяет, закрыта ли уже страница.</div></div>
+            <div class="api-card"><div class="api-name">locator</div><div class="api-desc">Создаёт локатор для поиска элементов (основной современный API).</div></div>
+            <div class="api-card"><div class="api-name">mainFrame</div><div class="api-desc">Возвращает главный фрейм страницы.</div></div>
+            <div class="api-card"><div class="api-name">opener</div><div class="api-desc">Возвращает страницу, которая открыла текущую (через <code>window.open</code>).</div></div>
+            <div class="api-card"><div class="api-name">pageErrors</div><div class="api-desc">Возвращает массив необработанных ошибок JavaScript на странице.</div></div>
+            <div class="api-card"><div class="api-name">pause</div><div class="api-desc">Приостанавливает выполнение теста и открывает инспектор Playwright.</div></div>
+            <div class="api-card"><div class="api-name">pdf</div><div class="api-desc">Генерирует PDF-файл страницы (работает только в Chromium).</div></div>
+            <div class="api-card"><div class="api-name">pickLocator</div><div class="api-desc">Запускает интерактивный выбор локатора на странице (режим инспектора).</div></div>
+            <div class="api-card"><div class="api-name">reload</div><div class="api-desc">Перезагружает текущую страницу.</div></div>
+            <div class="api-card"><div class="api-name">removeAllListeners</div><div class="api-desc">Удаляет всех слушателей событий страницы (унаследовано от EventEmitter).</div></div>
+            <div class="api-card"><div class="api-name">removeLocatorHandler</div><div class="api-desc">Удаляет ранее зарегистрированный обработчик локатора.</div></div>
+            <div class="api-card"><div class="api-name">requestGC</div><div class="api-desc">Принудительно запускает сборку мусора на странице (экспериментально).</div></div>
+            <div class="api-card"><div class="api-name">requests</div><div class="api-desc">Возвращает массив всех сетевых запросов, выполненных на странице.</div></div>
+            <div class="api-card"><div class="api-name">route</div><div class="api-desc">Перехватывает и модифицирует сетевые запросы (маршрутизация).</div></div>
+            <div class="api-card"><div class="api-name">routeFromHAR</div><div class="api-desc">Перехватывает запросы с использованием HAR-архива (mock-данные).</div></div>
+            <div class="api-card"><div class="api-name">routeWebSocket</div><div class="api-desc">Перехватывает WebSocket-соединения и сообщения.</div></div>
+            <div class="api-card"><div class="api-name">screenshot</div><div class="api-desc">Делает скриншот страницы (область, полная страница, маскировка).</div></div>
+            <div class="api-card"><div class="api-name">setContent</div><div class="api-desc">Заменяет всё содержимое страницы переданным HTML-кодом.</div></div>
+            <div class="api-card"><div class="api-name">setDefaultNavigationTimeout</div><div class="api-desc">Устанавливает таймаут для всех навигаций (goto, reload, goBack).</div></div>
+            <div class="api-card"><div class="api-name">setDefaultTimeout</div><div class="api-desc">Устанавливает глобальный таймаут для всех асинхронных операций на странице.</div></div>
+            <div class="api-card"><div class="api-name">setExtraHTTPHeaders</div><div class="api-desc">Добавляет дополнительные HTTP-заголовки ко всем запросам страницы.</div></div>
+            <div class="api-card"><div class="api-name">setViewportSize</div><div class="api-desc">Изменяет размер вьюпорта (ширина/высота) страницы.</div></div>
+            <div class="api-card"><div class="api-name">title</div><div class="api-desc">Возвращает заголовок страницы (<code>document.title</code>).</div></div>
+            <div class="api-card"><div class="api-name">unroute</div><div class="api-desc">Отменяет перехват запросов, созданный через <code>page.route</code>.</div></div>
+            <div class="api-card"><div class="api-name">unrouteAll</div><div class="api-desc">Удаляет все маршруты, зарегистрированные на странице.</div></div>
+            <div class="api-card"><div class="api-name">url</div><div class="api-desc">Возвращает текущий URL страницы.</div></div>
+            <div class="api-card"><div class="api-name">video</div><div class="api-desc">Возвращает объект Video для записи экрана (если контекст создан с опцией <code>recordVideo</code>).</div></div>
+            <div class="api-card"><div class="api-name">viewportSize</div><div class="api-desc">Возвращает текущий размер вьюпорта (объект width/height).</div></div>
+            <div class="api-card"><div class="api-name">waitForEvent</div><div class="api-desc">Ожидает определённое событие на странице (например, 'request').</div></div>
+            <div class="api-card"><div class="api-name">waitForFunction</div><div class="api-desc">Ожидает, пока переданная функция на странице не вернёт truthy-значение.</div></div>
+            <div class="api-card"><div class="api-name">waitForLoadState</div><div class="api-desc">Ожидает определённого состояния загрузки ('load', 'domcontentloaded', 'networkidle').</div></div>
+            <div class="api-card"><div class="api-name">waitForRequest</div><div class="api-desc">Ожидает выполнения сетевого запроса по URL или предикату.</div></div>
+            <div class="api-card"><div class="api-name">waitForResponse</div><div class="api-desc">Ожидает получения ответа на запрос (по url/предикату).</div></div>
+            <div class="api-card"><div class="api-name">waitForURL</div><div class="api-desc">Ожидает, пока URL страницы не совпадёт с заданным (частично или полностью).</div></div>
+            <div class="api-card"><div class="api-name">workers</div><div class="api-desc">Возвращает массив веб-воркеров (Web Workers), созданных на странице.</div></div>
+            <div class="note">✅ Все методы класса Page, перечисленные в левой колонке (<code>.col--3</code>), включены в этот раздел.</div>
+        </div>
+    </div>
+
+    <!-- 2. Свойства (Properties) -->
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <h2>⚙️ Свойства (Properties)</h2>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="section-content">
+            <div class="api-card"><div class="api-name">clock</div><div class="api-desc">Управление временем (эмуляция часов, ускорение времени) для тестов, зависящих от времени.</div></div>
+            <div class="api-card"><div class="api-name">coverage</div><div class="api-desc">Сбор информации о покрытии кода JS/CSS (только Chromium).</div></div>
+            <div class="api-card"><div class="api-name">keyboard</div><div class="api-desc">Объект для эмуляции клавиатурного ввода (нажатия, отпускания, ввод текста).</div></div>
+            <div class="api-card"><div class="api-name">mouse</div><div class="api-desc">Эмуляция мыши: перемещение, клики, скролл, нажатие кнопок.</div></div>
+            <div class="api-card"><div class="api-name">request</div><div class="api-desc">Объект APIRequest для выполнения HTTP-запросов из контекста страницы (cookies наследуются).</div></div>
+            <div class="api-card"><div class="api-name">screencast</div><div class="api-desc">Управление записью экрана страницы (экспериментальное).</div></div>
+            <div class="api-card"><div class="api-name">touchscreen</div><div class="api-desc">Эмуляция сенсорных событий (tap, swipe).</div></div>
+        </div>
+    </div>
+
+    <!-- 3. События (Events) -->
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <h2>🎯 События (Events)</h2>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="section-content">
+            <div class="api-card"><div class="api-name">on('close')</div><div class="api-desc">Срабатывает, когда страница закрывается (вкладка уничтожена).</div></div>
+            <div class="api-card"><div class="api-name">on('console')</div><div class="api-desc">Возникает при любом вызове <code>console.log()</code>, <code>console.error()</code> и т.д.</div></div>
+            <div class="api-card"><div class="api-name">on('crash')</div><div class="api-desc">Страница или её процесс аварийно завершились.</div></div>
+            <div class="api-card"><div class="api-name">on('dialog')</div><div class="api-desc">При появлении нативного диалога (alert, confirm, prompt).</div></div>
+            <div class="api-card"><div class="api-name">on('domcontentloaded')</div><div class="api-desc">Когда DOM готов, не дожидаясь стилей/картинок.</div></div>
+            <div class="api-card"><div class="api-name">on('download')</div><div class="api-desc">Начинается загрузка файла (скачивание).</div></div>
+            <div class="api-card"><div class="api-name">on('filechooser')</div><div class="api-desc">Открыт системный диалог выбора файла (input type="file").</div></div>
+            <div class="api-card"><div class="api-name">on('frameattached')</div><div class="api-desc">Новый фрейм (iframe) присоединён к странице.</div></div>
+            <div class="api-card"><div class="api-name">on('framedetached')</div><div class="api-desc">Фрейм удалён со страницы.</div></div>
+            <div class="api-card"><div class="api-name">on('framenavigated')</div><div class="api-desc">Фрейм перешёл по новому URL.</div></div>
+            <div class="api-card"><div class="api-name">on('load')</div><div class="api-desc">Страница полностью загружена (все ресурсы).</div></div>
+            <div class="api-card"><div class="api-name">on('pageerror')</div><div class="api-desc">Необработанное исключение JavaScript (unhandled exception).</div></div>
+            <div class="api-card"><div class="api-name">on('popup')</div><div class="api-desc">Открыто новое окно/вкладка (<code>window.open</code>).</div></div>
+            <div class="api-card"><div class="api-name">on('request')</div><div class="api-desc">Отправлен HTTP-запрос (событие до получения ответа).</div></div>
+            <div class="api-card"><div class="api-name">on('requestfailed')</div><div class="api-desc">Запрос завершился ошибкой (нет сети, таймаут, 4xx/5xx? нет — техническая ошибка).</div></div>
+            <div class="api-card"><div class="api-name">on('requestfinished')</div><div class="api-desc">Запрос успешно завершён (ответ получен).</div></div>
+            <div class="api-card"><div class="api-name">on('response')</div><div class="api-desc">Получен HTTP-ответ (включая статус, заголовки).</div></div>
+            <div class="api-card"><div class="api-name">on('websocket')</div><div class="api-desc">Создано новое WebSocket-соединение.</div></div>
+            <div class="api-card"><div class="api-name">on('worker')</div><div class="api-desc">Создан новый веб-воркер.</div></div>
+        </div>
+    </div>
+
+    <!-- 4. Устаревшие методы (Deprecated) — полный перечень из документации -->
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <h2>⚠️ Устаревшие методы (Deprecated) <span class="deprecated-badge">заменены на Locator API</span></h2>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="section-content">
+            <div class="api-card"><div class="api-name">$ <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Поиск одного элемента по селектору (возвращает <code>ElementHandle</code>). Используйте <code>locator()</code>.</div></div>
+            <div class="api-card"><div class="api-name">$$ <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Поиск всех элементов по селектору → массив <code>ElementHandle[]</code>.</div></div>
+            <div class="api-card"><div class="api-name">$eval <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Выполняет JS на первом элементе, найденном по селектору.</div></div>
+            <div class="api-card"><div class="api-name">$$eval <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Выполняет JS на всех элементах, найденных по селектору.</div></div>
+            <div class="api-card"><div class="api-name">check <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Ставит галочку в чекбоксе. Заменено на <code>locator().check()</code>.</div></div>
+            <div class="api-card"><div class="api-name">click <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Клик по элементу. Используйте <code>locator().click()</code>.</div></div>
+            <div class="api-card"><div class="api-name">dblclick <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Двойной клик. Заменён на <code>locator().dblclick()</code>.</div></div>
+            <div class="api-card"><div class="api-name">dispatchEvent <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Искусственно генерирует DOM-событие.</div></div>
+            <div class="api-card"><div class="api-name">fill <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Заполняет поле ввода текстом. Используйте <code>locator().fill()</code>.</div></div>
+            <div class="api-card"><div class="api-name">focus <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Устанавливает фокус на элемент. Заменено на <code>locator().focus()</code>.</div></div>
+            <div class="api-card"><div class="api-name">getAttribute <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Возвращает значение атрибута элемента. Используйте <code>locator().getAttribute()</code>.</div></div>
+            <div class="api-card"><div class="api-name">hover <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Наводит курсор на элемент. Заменено на <code>locator().hover()</code>.</div></div>
+            <div class="api-card"><div class="api-name">innerHTML <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Получает innerHTML элемента. Используйте <code>locator().innerHTML()</code>.</div></div>
+            <div class="api-card"><div class="api-name">innerText <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Текстовое содержимое элемента (innerText). Заменён на <code>locator().innerText()</code>.</div></div>
+            <div class="api-card"><div class="api-name">inputValue <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Значение поля ввода. Используйте <code>locator().inputValue()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isChecked <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Проверяет, отмечен ли чекбокс/радио. Заменено на <code>locator().isChecked()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isDisabled <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Проверяет, отключён ли элемент. Используйте <code>locator().isDisabled()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isEditable <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Доступен ли для редактирования. Заменён на <code>locator().isEditable()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isEnabled <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Включён ли элемент (не disabled). Аналог <code>locator().isEnabled()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isHidden <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Скрыт ли элемент. Используйте <code>locator().isHidden()</code>.</div></div>
+            <div class="api-card"><div class="api-name">isVisible <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Видим ли элемент. Заменено на <code>locator().isVisible()</code>.</div></div>
+            <div class="api-card"><div class="api-name">press <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Нажимает клавишу/сочетание клавиш. Используйте <code>locator().press()</code>.</div></div>
+            <div class="api-card"><div class="api-name">selectOption <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Выбирает option в select. Заменено на <code>locator().selectOption()</code>.</div></div>
+            <div class="api-card"><div class="api-name">setChecked <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Устанавливает состояние чекбокса/радио. Используйте <code>locator().setChecked()</code>.</div></div>
+            <div class="api-card"><div class="api-name">setInputFiles <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Загружает файлы в <code>input[type=file]</code>. Заменён на <code>locator().setInputFiles()</code>.</div></div>
+            <div class="api-card"><div class="api-name">tap <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Касание (tap) на сенсорном экране. Используйте <code>locator().tap()</code>.</div></div>
+            <div class="api-card"><div class="api-name">textContent <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Возвращает textContent элемента. Аналог <code>locator().textContent()</code>.</div></div>
+            <div class="api-card"><div class="api-name">type <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Печатает текст с задержками. Заменён на <code>locator().pressSequentially()</code>.</div></div>
+            <div class="api-card"><div class="api-name">uncheck <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Снимает галочку с чекбокса. Используйте <code>locator().uncheck()</code>.</div></div>
+            <div class="api-card"><div class="api-name">waitForNavigation <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Ожидает навигации. Рекомендуется использовать <code>page.waitForURL()</code> или <code>expect(page).toHaveURL()</code>.</div></div>
+            <div class="api-card"><div class="api-name">waitForSelector <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Ожидает появления/исчезновения селектора. Заменён на <code>locator().waitFor()</code>.</div></div>
+            <div class="api-card"><div class="api-name">waitForTimeout <span class="deprecated-badge">deprecated</span></div><div class="api-desc">Приостанавливает выполнение на заданное время (не рекомендуется). Используйте вместо этого явные ожидания (waitForSelector, waitForLoadState).</div></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        📚 Полный справочник по API класса <strong>Page</strong> на основе <a href="https://playwright.dev/docs/api/class-page" target="_blank">playwright.dev/docs/api/class-page</a>.<br>
+        ✅ Перечислены все методы из левой навигационной колонки (<code>.col--3</code>), свойства, события и устаревшие методы.<br>
+        🧪 Актуально для Playwright v1.46+.
+    </div>
+</div>
+
+<script>
+    function toggleSection(header) {
+        const content = header.nextElementSibling;
+        if (content.style.display === 'none' || !content.style.display) {
+            content.style.display = 'grid';
+            header.querySelector('.toggle-icon').innerHTML = '▼';
+        } else {
+            content.style.display = 'none';
+            header.querySelector('.toggle-icon').innerHTML = '▶';
+        }
+    }
+    // Инициализация: все секции открыты по умолчанию
+    document.querySelectorAll('.section-content').forEach(el => el.style.display = 'grid');
+</script>
+</body>
+</html>
